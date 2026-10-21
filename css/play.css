@@ -10,6 +10,8 @@ body.play.shake { animation: pshake .35s; }
 #netbar { display: none; background: var(--orange); color: var(--ink); text-align: center; padding: 6px; font-size: 20px; }
 #netbar.on { display: block; }
 #netbar span { animation: blink 1.4s infinite; }
+.mini-btn { background: var(--ink); color: var(--white); border: 3px solid #000; padding: 6px 14px; font-size: 20px; margin-top: 10px; }
+#netbar .mini-btn { margin: 6px auto 0; display: block; font-size: 17px; padding: 3px 10px; }
 #netbar small { display: block; font-size: 15px; opacity: .85; }
 
 #me { display: flex; align-items: center; gap: 10px; padding: 8px 12px calc(8px); padding-top: max(8px, env(safe-area-inset-top)); background: rgba(0,0,0,.35); border-bottom: 4px solid var(--me, var(--g3)); }

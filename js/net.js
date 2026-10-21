@@ -250,6 +250,7 @@
     connect(code) {
       this.code = code.toUpperCase();
       this.stopped = false;
+      this.retry = 0;
       this._open();
     }
 
