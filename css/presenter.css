@@ -1,0 +1,34 @@
+/* =========================================================================
+ * PIXEL QUIZ ARENA - Télécommande du présentateur
+ * ========================================================================= */
+body.presenter { background: radial-gradient(circle at 50% 0, var(--plum), var(--ink) 70%); }
+#phead { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; padding-top: max(10px, env(safe-area-inset-top)); background: rgba(0,0,0,.4); border-bottom: 4px solid var(--yellow); }
+#phead b { font-family: var(--font-title); font-size: 12px; color: var(--yellow); }
+#phead span { font-family: var(--font-title); font-size: 14px; background: var(--yellow); color: var(--ink); padding: 4px 8px; }
+.presenter #screen { gap: 10px; }
+.pwarn { font-size: 19px; background: rgba(65,166,246,.2); border: 2px dashed var(--sky); padding: 6px; }
+.pinfo { font-size: 26px; color: var(--cyan); text-align: center; }
+.pcard { background: var(--white); color: var(--ink); border: 4px solid #000; padding: 10px; display: flex; flex-direction: column; gap: 6px; }
+.pmeta { font-size: 19px; color: var(--g2); }
+.pplayers .pmeta { color: var(--g1); }
+.pquestion { font-size: 28px; line-height: 1.05; }
+.pclues { margin: 0; padding-left: 24px; font-size: 22px; color: var(--g2); }
+.pclues li.on { color: var(--ink); font-weight: bold; }
+.pchs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; font-size: 22px; }
+.pchs .ok { background: var(--lime); }
+.panswer { font-family: var(--font-title); font-size: 15px; background: var(--lime); padding: 8px; border: 3px solid #000; line-height: 1.4; }
+.paccept { font-size: 19px; color: var(--g2); }
+.panec { font-size: 22px; background: #fff3d4; padding: 6px; border-left: 6px solid var(--orange); }
+.ppending { background: var(--yellow); color: var(--ink); border: 4px solid #000; padding: 10px; font-size: 26px; display: flex; flex-direction: column; gap: 8px; animation: pulse 1s infinite; }
+.pvalid { display: flex; gap: 8px; }
+.pvalid button { flex: 1; font-family: var(--font-title); font-size: 16px; padding: 16px 4px; border: 4px solid #000; color: var(--white); }
+.pvalid .ok { background: var(--green); } .pvalid .ko { background: var(--red2); }
+.pbtns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pbtns button { background: var(--blue); border: 4px solid #000; font-size: 24px; padding: 12px 4px; box-shadow: 0 4px 0 #000; }
+.pbtns button.main { grid-column: 1 / -1; background: var(--red2); font-family: var(--font-title); font-size: 14px; padding: 18px; }
+.pplayers { display: flex; flex-direction: column; gap: 4px; }
+.pp { display: flex; align-items: center; gap: 4px; background: var(--ink); border-left: 6px solid var(--oc); padding: 2px 4px; }
+.pp.off { opacity: .5; }
+.ppn { flex: 1; font-size: 22px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pps { font-family: var(--font-title); font-size: 12px; color: var(--yellow); width: 60px; text-align: right; }
+.pp button { background: var(--g3); border: 2px solid #000; font-size: 18px; padding: 4px 6px; }

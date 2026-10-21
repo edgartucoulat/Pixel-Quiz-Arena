@@ -1,0 +1,1337 @@
+[
+ {
+  "id": "act-001",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "qcm",
+  "difficulte": 1,
+  "question": "Quel virus a provoqué une pandémie mondiale et des confinements en 2020 ?",
+  "choix": [
+   "Le SARS-CoV-2",
+   "Le virus Ebola",
+   "Le virus H1N1",
+   "Le virus Zika"
+  ],
+  "reponse": "Le SARS-CoV-2",
+  "anecdote": "La maladie qu'il provoque a été baptisée Covid-19, pour « coronavirus disease 2019 ».",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-002",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Qui a été élu président des États-Unis en novembre 2020 ?",
+  "choix": [
+   "Joe Biden",
+   "Donald Trump",
+   "Bernie Sanders",
+   "Barack Obama"
+  ],
+  "reponse": "Joe Biden",
+  "anecdote": "À 78 ans lors de son investiture, il est devenu le président le plus âgé jamais investi, record battu par Trump en 2025.",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-003",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel pays la Russie a-t-elle envahi le 24 février 2022 ?",
+  "choix": [
+   "L'Ukraine",
+   "La Géorgie",
+   "La Moldavie",
+   "La Pologne"
+  ],
+  "reponse": "L'Ukraine",
+  "anecdote": "C'est la plus grande guerre en Europe depuis 1945.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-004",
+  "categorie": "Actualité",
+  "sous_theme": "Royauté",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Quelle reine est morte le 8 septembre 2022, après 70 ans de règne ?",
+  "choix": [
+   "Elizabeth II",
+   "Margrethe II",
+   "Beatrix",
+   "Silvia"
+  ],
+  "reponse": "Elizabeth II",
+  "anecdote": "Son règne est le plus long de l'histoire britannique ; elle avait reçu 15 Premiers ministres.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-005",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel pays a remporté la Coupe du monde de football au Qatar, en décembre 2022 ?",
+  "choix": [
+   "L'Argentine",
+   "La France",
+   "Le Maroc",
+   "La Croatie"
+  ],
+  "reponse": "L'Argentine",
+  "anecdote": "La finale contre la France, 3-3 puis tirs au but, est souvent citée comme la plus belle de l'histoire.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-006",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quelle entreprise a lancé l'agent conversationnel ChatGPT en novembre 2022 ?",
+  "choix": [
+   "OpenAI",
+   "Google",
+   "Microsoft",
+   "Meta"
+  ],
+  "reponse": "OpenAI",
+  "anecdote": "Il a atteint 100 millions d'utilisateurs en deux mois environ, un record à l'époque.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-007",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel milliardaire a racheté Twitter en octobre 2022 ?",
+  "choix": [
+   "Elon Musk",
+   "Jeff Bezos",
+   "Mark Zuckerberg",
+   "Bill Gates"
+  ],
+  "reponse": "Elon Musk",
+  "anecdote": "Le rachat a coûté environ 44 milliards de dollars ; il l'a renommé X en juillet 2023.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-008",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel nouveau nom l'entreprise Facebook a-t-elle pris en octobre 2021 ?",
+  "choix": [
+   "Meta",
+   "Alphabet",
+   "Horizon",
+   "Oculus"
+  ],
+  "reponse": "Meta",
+  "anecdote": "Le nom fait référence au « métavers », un univers virtuel sur lequel l'entreprise misait gros.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-009",
+  "categorie": "Actualité",
+  "sous_theme": "Séries",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quelle série sud-coréenne de Netflix est devenue un phénomène mondial en 2021 ?",
+  "choix": [
+   "Squid Game",
+   "Kingdom",
+   "Sweet Home",
+   "Crash Landing on You"
+  ],
+  "reponse": "Squid Game",
+  "anecdote": "Son créateur a mis plus de dix ans à la faire produire ; elle a été vue plus d'1,6 milliard d'heures en un mois.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-010",
+  "categorie": "Actualité",
+  "sous_theme": "Espace",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel télescope spatial, successeur de Hubble, a été lancé le 25 décembre 2021 ?",
+  "choix": [
+   "James Webb",
+   "Kepler",
+   "Spitzer",
+   "Euclid"
+  ],
+  "reponse": "James Webb",
+  "anecdote": "Il observe dans l'infrarouge et se trouve à 1,5 million de km de la Terre.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-011",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle équipe a remporté l'Euro de football disputé en 2021 ?",
+  "choix": [
+   "L'Italie",
+   "L'Angleterre",
+   "L'Espagne",
+   "Le Portugal"
+  ],
+  "reponse": "L'Italie",
+  "anecdote": "La finale s'est jouée à Wembley, et l'Italie l'a emporté aux tirs au but.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-012",
+  "categorie": "Actualité",
+  "sous_theme": "Royauté",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Qui a été couronné roi du Royaume-Uni le 6 mai 2023 ?",
+  "choix": [
+   "Charles III",
+   "William V",
+   "George VII",
+   "Édouard IX"
+  ],
+  "reponse": "Charles III",
+  "anecdote": "Il avait 74 ans, ce qui fait de lui le souverain britannique le plus âgé jamais couronné.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-013",
+  "categorie": "Actualité",
+  "sous_theme": "Espace",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel pays a posé une sonde près du pôle Sud de la Lune en août 2023, une première ?",
+  "choix": [
+   "L'Inde",
+   "La Chine",
+   "Le Japon",
+   "Les États-Unis"
+  ],
+  "reponse": "L'Inde",
+  "anecdote": "La mission s'appelait Chandrayaan-3. L'Inde est le 4e pays à réussir un alunissage.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-014",
+  "categorie": "Actualité",
+  "sous_theme": "Société",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "À quel âge la réforme des retraites de 2023 a-t-elle reculé l'âge légal de départ en France ?",
+  "choix": [
+   "64 ans",
+   "63 ans",
+   "65 ans",
+   "67 ans"
+  ],
+  "reponse": "64 ans",
+  "anecdote": "Il était auparavant de 62 ans. La réforme a été adoptée via l'article 49.3.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-015",
+  "categorie": "Actualité",
+  "sous_theme": "Cinéma",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel film de Christopher Nolan a remporté l'Oscar du meilleur film en 2024 ?",
+  "choix": [
+   "Oppenheimer",
+   "Barbie",
+   "Tenet",
+   "Killers of the Flower Moon"
+  ],
+  "reponse": "Oppenheimer",
+  "anecdote": "Sa sortie le même jour que Barbie, en 2023, avait lancé le phénomène « Barbenheimer ».",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-016",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Qui est devenu en janvier 2024 le plus jeune Premier ministre de la Ve République ?",
+  "choix": [
+   "Gabriel Attal",
+   "Jordan Bardella",
+   "Laurent Fabius",
+   "Édouard Philippe"
+  ],
+  "reponse": "Gabriel Attal",
+  "anecdote": "Il avait 34 ans, battant le record de Laurent Fabius (37 ans en 1984).",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-017",
+  "categorie": "Actualité",
+  "sous_theme": "Société",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel droit la France a-t-elle inscrit dans sa Constitution en mars 2024, une première mondiale ?",
+  "choix": [
+   "La liberté de recourir à l'IVG",
+   "Le droit au logement",
+   "Le droit à l'eau",
+   "Le droit au vote à 16 ans"
+  ],
+  "reponse": "La liberté de recourir à l'IVG",
+  "anecdote": "Le Congrès réuni à Versailles a voté à 780 voix contre 72.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-018",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle décision Emmanuel Macron a-t-il annoncée le soir des élections européennes de juin 2024 ?",
+  "choix": [
+   "La dissolution de l'Assemblée nationale",
+   "Sa démission",
+   "Un référendum",
+   "Le report des JO"
+  ],
+  "reponse": "La dissolution de l'Assemblée nationale",
+  "anecdote": "Les législatives anticipées ont eu lieu les 30 juin et 7 juillet 2024.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-019",
+  "categorie": "Actualité",
+  "sous_theme": "Patrimoine",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel monument parisien a rouvert ses portes en décembre 2024, cinq ans après un incendie ?",
+  "choix": [
+   "Notre-Dame de Paris",
+   "Le Panthéon",
+   "La Sainte-Chapelle",
+   "Le Sacré-Cœur"
+  ],
+  "reponse": "Notre-Dame de Paris",
+  "anecdote": "Environ 2 000 chênes ont été abattus pour reconstruire la charpente à l'identique.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-020",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Qui a été nommé Premier ministre en septembre 2024, avant d'être renversé par une motion de censure en décembre 2024 ?",
+  "choix": [
+   "Michel Barnier",
+   "François Bayrou",
+   "Bernard Cazeneuve",
+   "Xavier Bertrand"
+  ],
+  "reponse": "Michel Barnier",
+  "anecdote": "Son gouvernement est le plus court de la Ve République, avec environ trois mois.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-021",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel dirigeant syrien a été renversé en décembre 2024 ?",
+  "choix": [
+   "Bachar el-Assad",
+   "Mouammar Kadhafi",
+   "Hosni Moubarak",
+   "Saddam Hussein"
+  ],
+  "reponse": "Bachar el-Assad",
+  "anecdote": "Sa famille dirigeait la Syrie depuis 1971 ; il s'est réfugié en Russie.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-022",
+  "categorie": "Actualité",
+  "sous_theme": "JO 2024",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quelle chanteuse a clôturé la cérémonie d'ouverture des JO de Paris 2024 depuis la tour Eiffel ?",
+  "choix": [
+   "Céline Dion",
+   "Aya Nakamura",
+   "Lady Gaga",
+   "Juliette Armanet"
+  ],
+  "reponse": "Céline Dion",
+  "anecdote": "Elle a chanté « L'Hymne à l'amour » d'Édith Piaf, sa première apparition sur scène depuis 2020.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-023",
+  "categorie": "Actualité",
+  "sous_theme": "Religion",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel pape est mort le 21 avril 2025, le lundi de Pâques ?",
+  "choix": [
+   "François",
+   "Benoît XVI",
+   "Jean-Paul II",
+   "Pie XII"
+  ],
+  "reponse": "François",
+  "anecdote": "Premier pape sud-américain, il avait été élu en 2013.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-024",
+  "categorie": "Actualité",
+  "sous_theme": "Religion",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel nom a choisi le pape élu le 8 mai 2025 ?",
+  "choix": [
+   "Léon XIV",
+   "Jean XXIV",
+   "Pie XIII",
+   "Benoît XVII"
+  ],
+  "reponse": "Léon XIV",
+  "anecdote": "Robert Francis Prevost est le premier pape né aux États-Unis.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-025",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel club a remporté la Ligue des champions en mai 2025, pour la première fois de son histoire ?",
+  "choix": [
+   "Le Paris Saint-Germain",
+   "L'Inter Milan",
+   "Arsenal",
+   "Le Bayern Munich"
+  ],
+  "reponse": "Le Paris Saint-Germain",
+  "anecdote": "Il a battu l'Inter 5-0 en finale, le plus large écart de l'histoire pour une finale.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-026",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel joueur français a remporté le Ballon d'or 2025 ?",
+  "choix": [
+   "Ousmane Dembélé",
+   "Kylian Mbappé",
+   "Michael Olise",
+   "Désiré Doué"
+  ],
+  "reponse": "Ousmane Dembélé",
+  "anecdote": "Il succède à Karim Benzema, dernier Français lauréat en 2022.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-027",
+  "categorie": "Actualité",
+  "sous_theme": "Faits divers",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Dans quel musée des bijoux de la Couronne ont-ils été volés en octobre 2025 ?",
+  "choix": [
+   "Le Louvre",
+   "Le musée d'Orsay",
+   "Le château de Versailles",
+   "Le Petit Palais"
+  ],
+  "reponse": "Le Louvre",
+  "anecdote": "Les voleurs ont utilisé un monte-charge pour atteindre la galerie d'Apollon, et ont agi en quelques minutes.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-028",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Qui a été nommé Premier ministre en septembre 2025, après la chute du gouvernement Bayrou ?",
+  "choix": [
+   "Sébastien Lecornu",
+   "Gérald Darmanin",
+   "Catherine Vautrin",
+   "Bruno Retailleau"
+  ],
+  "reponse": "Sébastien Lecornu",
+  "anecdote": "Il a démissionné en octobre 2025 avant d'être reconduit quatre jours plus tard.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-029",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quels pays ont été touchés par une panne d'électricité géante le 28 avril 2025 ?",
+  "choix": [
+   "L'Espagne et le Portugal",
+   "La France et la Belgique",
+   "L'Italie et la Grèce",
+   "L'Allemagne et l'Autriche"
+  ],
+  "reponse": "L'Espagne et le Portugal",
+  "anecdote": "Des dizaines de millions d'habitants ont été privés de courant pendant plusieurs heures.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-030",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Qui est devenue en octobre 2025 la première femme Première ministre du Japon ?",
+  "choix": [
+   "Sanae Takaichi",
+   "Yuriko Koike",
+   "Seiko Noda",
+   "Renhō"
+  ],
+  "reponse": "Sanae Takaichi",
+  "anecdote": "Admiratrice de Margaret Thatcher, elle a pris la tête du Parti libéral-démocrate.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-031",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Qui est devenu Premier ministre du Canada en mars 2025 ?",
+  "choix": [
+   "Mark Carney",
+   "Pierre Poilievre",
+   "Chrystia Freeland",
+   "Justin Trudeau"
+  ],
+  "reponse": "Mark Carney",
+  "anecdote": "Ancien gouverneur de la Banque du Canada puis de la Banque d'Angleterre, il a succédé à Justin Trudeau.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-032",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Qui est devenu chancelier fédéral d'Allemagne en mai 2025 ?",
+  "choix": [
+   "Friedrich Merz",
+   "Olaf Scholz",
+   "Robert Habeck",
+   "Markus Söder"
+  ],
+  "reponse": "Friedrich Merz",
+  "anecdote": "Fait inédit, il n'a été élu qu'au second tour de vote au Bundestag.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-033",
+  "categorie": "Actualité",
+  "sous_theme": "Prix Nobel",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quelle opposante vénézuélienne a reçu le prix Nobel de la paix 2025 ?",
+  "choix": [
+   "María Corina Machado",
+   "Juan Guaidó",
+   "Lilian Tintori",
+   "Delcy Rodríguez"
+  ],
+  "reponse": "María Corina Machado",
+  "anecdote": "Interdite de se présenter à l'élection présidentielle de 2024, elle vivait cachée au Venezuela.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-034",
+  "categorie": "Actualité",
+  "sous_theme": "Sport",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel pays a accueilli les Jeux olympiques d'hiver en février 2026 ?",
+  "choix": [
+   "L'Italie",
+   "La France",
+   "La Suisse",
+   "L'Autriche"
+  ],
+  "reponse": "L'Italie",
+  "anecdote": "Les épreuves ont été réparties entre Milan, Cortina d'Ampezzo et d'autres sites des Alpes italiennes.",
+  "annee_reference": 2026
+ },
+ {
+  "id": "act-035",
+  "categorie": "Actualité",
+  "sous_theme": "Sport",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Combien d'équipes participent à la Coupe du monde de football 2026, une première ?",
+  "choix": [
+   "48",
+   "32",
+   "40",
+   "64"
+  ],
+  "reponse": "48",
+  "anecdote": "Le tournoi est organisé pour la première fois par trois pays : les États-Unis, le Canada et le Mexique.",
+  "annee_reference": 2026
+ },
+ {
+  "id": "act-036",
+  "categorie": "Actualité",
+  "sous_theme": "Littérature",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quelle écrivaine française a reçu le prix Nobel de littérature en 2022 ?",
+  "choix": [
+   "Annie Ernaux",
+   "Marie NDiaye",
+   "Leïla Slimani",
+   "Amélie Nothomb"
+  ],
+  "reponse": "Annie Ernaux",
+  "anecdote": "Elle est la première Française à recevoir ce prix, 17e femme au total.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-037",
+  "categorie": "Actualité",
+  "sous_theme": "Démographie",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "En quel mois de 2022 la population mondiale a-t-elle franchi les 8 milliards, selon l'ONU (numéro du mois) ?",
+  "reponse": 11,
+  "unite": "mois",
+  "tolerance": 1,
+  "bornes": [
+   1,
+   12
+  ],
+  "anecdote": "L'ONU a fixé symboliquement la date au 15 novembre 2022.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-038",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Pour combien de milliards de dollars Elon Musk a-t-il racheté Twitter en 2022 ?",
+  "reponse": 44,
+  "unite": "milliards de $",
+  "tolerance": 4,
+  "bornes": [
+   1,
+   150
+  ],
+  "anecdote": "Il avait tenté de renoncer au rachat avant d'être rattrapé par un procès.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-039",
+  "categorie": "Actualité",
+  "sous_theme": "Espace",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "À combien de kilomètres de la Terre se trouve le télescope James Webb, lancé en 2021 ?",
+  "reponse": 1500000,
+  "unite": "km",
+  "tolerance": 200000,
+  "bornes": [
+   1000,
+   10000000
+  ],
+  "anecdote": "Il orbite autour du point de Lagrange L2, où il reste aligné avec la Terre et le Soleil.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-040",
+  "categorie": "Actualité",
+  "sous_theme": "Société",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "À combien d'euros brut par heure le SMIC a-t-il été fixé au 1er janvier 2025 ?",
+  "reponse": 11.88,
+  "unite": "€",
+  "tolerance": 0.3,
+  "bornes": [
+   5,
+   20
+  ],
+  "anecdote": "Cela représente environ 1 802 € brut par mois pour un temps plein.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-041",
+  "categorie": "Actualité",
+  "sous_theme": "JO 2024",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Combien d'athlètes ont participé aux Jeux olympiques de Paris 2024 (environ) ?",
+  "reponse": 10500,
+  "unite": "athlètes",
+  "tolerance": 800,
+  "bornes": [
+   1000,
+   30000
+  ],
+  "anecdote": "Pour la première fois, il y avait autant de places pour les femmes que pour les hommes.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-042",
+  "categorie": "Actualité",
+  "sous_theme": "Patrimoine",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de chênes ont environ été utilisés pour reconstruire la charpente de Notre-Dame, rouverte en 2024 ?",
+  "reponse": 2000,
+  "unite": "chênes",
+  "tolerance": 500,
+  "bornes": [
+   100,
+   10000
+  ],
+  "anecdote": "Les arbres venaient de forêts publiques et privées de toute la France.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-043",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de voix ont voté pour l'inscription de l'IVG dans la Constitution, au Congrès en 2024 ?",
+  "reponse": 780,
+  "unite": "voix",
+  "tolerance": 40,
+  "bornes": [
+   100,
+   925
+  ],
+  "anecdote": "Il fallait une majorité des trois cinquièmes des suffrages exprimés.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-044",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Combien de buts le PSG a-t-il marqués en finale de la Ligue des champions 2025 ?",
+  "reponse": 5,
+  "unite": "buts",
+  "tolerance": 0,
+  "bornes": [
+   0,
+   12
+  ],
+  "anecdote": "Désiré Doué, 19 ans, a marqué deux buts et délivré une passe décisive.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-045",
+  "categorie": "Actualité",
+  "sous_theme": "Royauté",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien d'années a duré le règne d'Elizabeth II, morte en 2022 ?",
+  "reponse": 70,
+  "unite": "ans",
+  "tolerance": 2,
+  "bornes": [
+   10,
+   100
+  ],
+  "anecdote": "Elle était devenue reine en 1952, à 25 ans, lors d'un voyage au Kenya.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-046",
+  "categorie": "Actualité",
+  "sous_theme": "Espace",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de jours Thomas Pesquet a-t-il passés à bord de l'ISS lors de sa mission Alpha de 2021 ?",
+  "reponse": 199,
+  "unite": "jours",
+  "tolerance": 15,
+  "bornes": [
+   30,
+   500
+  ],
+  "anecdote": "Il est devenu le premier Français à commander la station spatiale pendant cette mission.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-047",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Quel âge avait Donald Trump lors de son investiture en janvier 2025 ?",
+  "reponse": 78,
+  "unite": "ans",
+  "tolerance": 1,
+  "bornes": [
+   40,
+   100
+  ],
+  "anecdote": "Il est le président le plus âgé jamais investi aux États-Unis.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-048",
+  "categorie": "Actualité",
+  "sous_theme": "Société",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de jours a duré le premier confinement en France, en 2020 ?",
+  "reponse": 55,
+  "unite": "jours",
+  "tolerance": 5,
+  "bornes": [
+   10,
+   150
+  ],
+  "anecdote": "Il a commencé le 17 mars et pris fin le 11 mai 2020.",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-049",
+  "categorie": "Actualité",
+  "sous_theme": "Faits divers",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de minutes environ a duré le vol des bijoux au Louvre en octobre 2025 ?",
+  "reponse": 7,
+  "unite": "minutes",
+  "tolerance": 2,
+  "bornes": [
+   1,
+   60
+  ],
+  "anecdote": "Huit pièces ont été emportées, dont un diadème de l'impératrice Eugénie ; sa couronne a été abandonnée dans la fuite.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-050",
+  "categorie": "Actualité",
+  "sous_theme": "Cyclisme",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de Tours de France Tadej Pogačar avait-il remportés après celui de 2025 ?",
+  "reponse": 4,
+  "unite": "Tours",
+  "tolerance": 0,
+  "bornes": [
+   0,
+   10
+  ],
+  "anecdote": "Il avait déjà gagné en 2020, 2021 et 2024.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-051",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien de pays étaient membres de l'OTAN après l'adhésion de la Suède en 2024 ?",
+  "reponse": 32,
+  "unite": "pays",
+  "tolerance": 2,
+  "bornes": [
+   10,
+   60
+  ],
+  "anecdote": "La Finlande avait rejoint l'Alliance un an plus tôt, en avril 2023.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-052",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de jours Liz Truss est-elle restée Première ministre du Royaume-Uni en 2022 ?",
+  "reponse": 49,
+  "unite": "jours",
+  "tolerance": 5,
+  "bornes": [
+   1,
+   200
+  ],
+  "anecdote": "Un tabloïd a filmé en direct une laitue pour voir si elle tiendrait plus longtemps qu'elle. La laitue a gagné.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-053",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quelle personnalité de l'actualité 2022 suis-je ?",
+  "reponse": "Volodymyr Zelensky",
+  "reponses_acceptees": [
+   "Zelensky",
+   "Zelenski",
+   "Volodymyr Zelenski"
+  ],
+  "indices": [
+   "J'ai été humoriste et acteur",
+   "J'ai joué un professeur devenu président dans une série",
+   "J'ai refusé de quitter Kyiv en février 2022",
+   "Je suis le président de l'Ukraine"
+  ],
+  "anecdote": "Sa série s'appelait « Serviteur du peuple », nom repris ensuite par son parti.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-054",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quelle personnalité de l'actualité 2023 suis-je ?",
+  "reponse": "Javier Milei",
+  "reponses_acceptees": [
+   "Milei"
+  ],
+  "indices": [
+   "Je suis économiste",
+   "J'ai brandi une tronçonneuse en meeting",
+   "J'ai des chiens clonés",
+   "J'ai été élu président de l'Argentine en 2023"
+  ],
+  "anecdote": "Il a promis de « tronçonner » les dépenses de l'État et de supprimer de nombreux ministères.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-055",
+  "categorie": "Actualité",
+  "sous_theme": "Espace",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quelle personnalité de l'actualité 2021 suis-je ?",
+  "reponse": "Thomas Pesquet",
+  "reponses_acceptees": [
+   "Pesquet"
+  ],
+  "indices": [
+   "J'ai été pilote de ligne chez Air France",
+   "J'ai joué du saxophone dans l'espace",
+   "J'ai été commandant de l'ISS en 2021",
+   "Je suis astronaute français"
+  ],
+  "anecdote": "Ses photos de la Terre prises depuis l'ISS ont été suivies par des millions de personnes.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-056",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quelle personnalité de l'actualité 2024 suis-je ?",
+  "reponse": "Kamala Harris",
+  "reponses_acceptees": [
+   "Harris"
+  ],
+  "indices": [
+   "J'ai été procureure générale de Californie",
+   "Ma mère était chercheuse, venue d'Inde",
+   "J'ai remplacé Joe Biden comme candidate en juillet 2024",
+   "J'étais vice-présidente des États-Unis"
+  ],
+  "anecdote": "Elle a été la première femme vice-présidente des États-Unis, de 2021 à 2025.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-057",
+  "categorie": "Actualité",
+  "sous_theme": "Religion",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quelle personnalité de l'actualité 2025 suis-je ?",
+  "reponse": "Léon XIV",
+  "reponses_acceptees": [
+   "Leon XIV",
+   "Robert Prevost",
+   "Robert Francis Prevost"
+  ],
+  "indices": [
+   "Je suis né à Chicago",
+   "J'ai été missionnaire au Pérou, dont j'ai pris la nationalité",
+   "J'ai été élu le 8 mai 2025",
+   "Je suis le premier pape américain"
+  ],
+  "anecdote": "Il est membre de l'ordre de Saint-Augustin, comme le moine Martin Luther en son temps.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-058",
+  "categorie": "Actualité",
+  "sous_theme": "Sport",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quelle personnalité de l'actualité 2024 suis-je ?",
+  "reponse": "Léon Marchand",
+  "reponses_acceptees": [
+   "Marchand"
+  ],
+  "indices": [
+   "Je suis né à Toulouse",
+   "Mes parents étaient tous deux nageurs olympiques",
+   "Je m'entraîne aux États-Unis avec Bob Bowman",
+   "J'ai gagné 4 titres olympiques à Paris en 2024"
+  ],
+  "anecdote": "Bob Bowman était aussi l'entraîneur de Michael Phelps.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-059",
+  "categorie": "Actualité",
+  "sous_theme": "Littérature",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quelle personnalité de l'actualité 2022 suis-je ?",
+  "reponse": "Annie Ernaux",
+  "reponses_acceptees": [
+   "Ernaux"
+  ],
+  "indices": [
+   "J'ai grandi en Normandie, dans un café-épicerie",
+   "J'ai écrit « La Place » sur mon père",
+   "J'ai écrit « Les Années »",
+   "J'ai reçu le prix Nobel de littérature en 2022"
+  ],
+  "anecdote": "Ses parents tenaient un café-épicerie à Yvetot.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-060",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quelle personnalité de l'actualité 2025 suis-je ?",
+  "reponse": "Robert Badinter",
+  "reponses_acceptees": [
+   "Badinter"
+  ],
+  "indices": [
+   "J'ai été avocat",
+   "J'ai défendu Patrick Henry et évité sa condamnation à mort",
+   "J'ai porté l'abolition de la peine de mort en 1981",
+   "Je suis entré au Panthéon en octobre 2025"
+  ],
+  "anecdote": "Il était mort en février 2024, à 95 ans.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-061",
+  "categorie": "Actualité",
+  "sous_theme": "Sport",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quelle personnalité de l'actualité 2025 suis-je ?",
+  "reponse": "Ousmane Dembélé",
+  "reponses_acceptees": [
+   "Dembélé",
+   "Dembele"
+  ],
+  "indices": [
+   "Je suis né à Vernon, en Normandie",
+   "J'ai joué à Dortmund puis à Barcelone",
+   "J'ai gagné la Ligue des champions avec le PSG",
+   "J'ai reçu le Ballon d'or 2025"
+  ],
+  "anecdote": "Il est capable de tirer aussi bien du pied droit que du pied gauche.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-062",
+  "categorie": "Actualité",
+  "sous_theme": "Science",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Quel objet de l'actualité 2025 suis-je ?",
+  "reponse": "3I/ATLAS",
+  "reponses_acceptees": [
+   "ATLAS",
+   "3I ATLAS",
+   "La comète 3I/ATLAS"
+  ],
+  "indices": [
+   "J'ai été découvert au Chili en juillet 2025",
+   "Je ne fais que traverser le système solaire",
+   "Je suis le troisième objet interstellaire jamais repéré",
+   "Je suis une comète venue d'un autre système stellaire"
+  ],
+  "anecdote": "Avant elle, seuls ‘Oumuamua (2017) et la comète Borisov (2019) avaient été identifiés.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-063",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quelle personnalité de l'actualité 2024 suis-je ?",
+  "reponse": "François Bayrou",
+  "reponses_acceptees": [
+   "Bayrou"
+  ],
+  "indices": [
+   "J'ai été professeur de lettres",
+   "J'ai été maire de Pau",
+   "J'ai fondé le MoDem",
+   "J'ai été nommé Premier ministre en décembre 2024"
+  ],
+  "anecdote": "Il est tombé en septembre 2025 après avoir sollicité lui-même la confiance de l'Assemblée.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-064",
+  "categorie": "Actualité",
+  "sous_theme": "Tech",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Quelle personnalité de l'actualité 2023 suis-je ?",
+  "reponse": "Sam Altman",
+  "reponses_acceptees": [
+   "Altman"
+  ],
+  "indices": [
+   "J'ai abandonné mes études à Stanford",
+   "J'ai présidé l'incubateur Y Combinator",
+   "J'ai été renvoyé puis réintégré en cinq jours en novembre 2023",
+   "Je dirige OpenAI"
+  ],
+  "anecdote": "Près de 700 salariés d'OpenAI avaient menacé de démissionner pour obtenir son retour.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-065",
+  "categorie": "Actualité",
+  "sous_theme": "Sport",
+  "type": "vf",
+  "difficulte": 2,
+  "question": "Vrai ou faux : les JO de Tokyo, prévus en 2020, ont eu lieu en 2021.",
+  "reponse": "Vrai",
+  "anecdote": "Ils ont pourtant gardé le nom « Tokyo 2020 », et se sont déroulés presque sans public.",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-066",
+  "categorie": "Actualité",
+  "sous_theme": "Espace",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : en 2020, SpaceX est devenue la première entreprise privée à envoyer des astronautes vers l'ISS.",
+  "reponse": "Vrai",
+  "anecdote": "La mission Demo-2, partie le 30 mai 2020, transportait Bob Behnken et Doug Hurley.",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-067",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : en 2022, Emmanuel Macron a été réélu face à Marine Le Pen.",
+  "reponse": "Vrai",
+  "anecdote": "Comme en 2017, le second tour les opposait ; il l'a emporté avec environ 58,5 % des voix.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-068",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : la Suède a rejoint l'OTAN en 2024.",
+  "reponse": "Vrai",
+  "anecdote": "Elle était neutre depuis plus de 200 ans ; la guerre en Ukraine l'a poussée à adhérer en mars 2024.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-069",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : en 2023, Lionel Messi a signé à l'Inter Miami.",
+  "reponse": "Vrai",
+  "anecdote": "Le club est copropriété de David Beckham. Les ventes d'abonnements à la ligue ont explosé après son arrivée.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-070",
+  "categorie": "Actualité",
+  "sous_theme": "Faits divers",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : en 2023, le submersible Titan a implosé en tentant de rejoindre l'épave du Titanic.",
+  "reponse": "Vrai",
+  "anecdote": "Les cinq passagers sont morts. L'appareil était piloté à l'aide d'une manette de jeu vidéo.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-071",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "vf",
+  "difficulte": 3,
+  "question": "Vrai ou faux : Donald Trump a été investi pour un second mandat en janvier 2025.",
+  "reponse": "Vrai",
+  "anecdote": "Il est le deuxième président, après Grover Cleveland, à effectuer deux mandats non consécutifs.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-072",
+  "categorie": "Actualité",
+  "sous_theme": "Eurovision",
+  "type": "vf",
+  "difficulte": 9,
+  "question": "Vrai ou faux : la France a remporté l'Eurovision 2021.",
+  "reponse": "Faux",
+  "anecdote": "Barbara Pravi a terminé 2e avec « Voilà », derrière les Italiens de Måneskin.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-073",
+  "categorie": "Actualité",
+  "sous_theme": "Patrimoine",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel monument parisien de la Belle Époque a vu passer la flamme et les anneaux olympiques en 2024 ?",
+  "reponse": "La tour Eiffel",
+  "reponses_acceptees": [
+   "Tour Eiffel"
+  ],
+  "anecdote": "Les médailles de Paris 2024 contenaient chacune un morceau de fer d'origine de la tour Eiffel.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-074",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel est le nouveau nom de Twitter depuis juillet 2023 ?",
+  "reponse": "X",
+  "reponses_acceptees": [
+   "X.com"
+  ],
+  "anecdote": "L'oiseau bleu, logo historique, a été remplacé par un X noir et blanc.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-075",
+  "categorie": "Actualité",
+  "sous_theme": "Société",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel nom donne-t-on depuis 2020 à la maladie causée par le coronavirus SARS-CoV-2 ?",
+  "reponse": "Covid-19",
+  "reponses_acceptees": [
+   "Covid",
+   "Covid 19",
+   "Coronavirus"
+  ],
+  "anecdote": "L'OMS l'a officiellement baptisée le 11 février 2020.",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-076",
+  "categorie": "Actualité",
+  "sous_theme": "Cinéma",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel film sur une poupée célèbre a été le plus gros succès de l'année 2023 au cinéma ?",
+  "reponse": "Barbie",
+  "reponses_acceptees": [
+   "Barbie le film"
+  ],
+  "anecdote": "Réalisé par Greta Gerwig, il a dépassé 1,4 milliard de dollars de recettes.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-077",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel pays d'Amérique centrale a adopté le bitcoin comme monnaie légale en 2021, une première ?",
+  "reponse": "Le Salvador",
+  "reponses_acceptees": [
+   "Salvador",
+   "El Salvador"
+  ],
+  "anecdote": "Le pays a fait marche arrière partiellement en 2025, sous la pression du FMI.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-078",
+  "categorie": "Actualité",
+  "sous_theme": "Climat",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel cyclone a dévasté Mayotte en décembre 2024 ?",
+  "reponse": "Chido",
+  "reponses_acceptees": [
+   "Le cyclone Chido"
+  ],
+  "anecdote": "C'était le cyclone le plus violent à frapper l'archipel depuis près d'un siècle.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-079",
+  "categorie": "Actualité",
+  "sous_theme": "Eurovision",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel pays a remporté l'Eurovision 2025 avec la chanson « Wasted Love » ?",
+  "reponse": "L'Autriche",
+  "reponses_acceptees": [
+   "Autriche"
+  ],
+  "anecdote": "Le chanteur JJ est aussi contre-ténor et chante à l'Opéra de Vienne.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-080",
+  "categorie": "Actualité",
+  "sous_theme": "Espace",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel est le nom de la mission indienne qui s'est posée près du pôle Sud lunaire en 2023 ?",
+  "reponse": "Chandrayaan-3",
+  "reponses_acceptees": [
+   "Chandrayaan 3",
+   "Chandrayaan"
+  ],
+  "anecdote": "Chandrayaan signifie « vaisseau lunaire » en sanskrit. L'Inde l'a réussi pour environ 75 millions de dollars.",
+  "annee_reference": 2023
+ }
+]

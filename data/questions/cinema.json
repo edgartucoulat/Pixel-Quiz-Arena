@@ -1,0 +1,1255 @@
+[
+ {
+  "id": "cin-001",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films cultes",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Dans quel film entend-on la réplique « Je suis ton père » ?",
+  "choix": [
+   "L'Empire contre-attaque",
+   "Le Retour du Jedi",
+   "Un nouvel espoir",
+   "La Menace fantôme"
+  ],
+  "reponse": "L'Empire contre-attaque",
+  "anecdote": "En version originale, Dark Vador ne dit pas « Luke, je suis ton père » mais « Non, je suis ton père »."
+ },
+ {
+  "id": "cin-002",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "qcm",
+  "difficulte": 1,
+  "question": "Quel studio a produit Toy Story, le premier long métrage entièrement en images de synthèse ?",
+  "choix": [
+   "Pixar",
+   "DreamWorks",
+   "Blue Sky",
+   "Illumination"
+  ],
+  "reponse": "Pixar",
+  "anecdote": "Sorti en 1995, le film a demandé quatre ans de travail pour 81 minutes d'animation."
+ },
+ {
+  "id": "cin-003",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Qui a réalisé Jurassic Park ?",
+  "choix": [
+   "Steven Spielberg",
+   "James Cameron",
+   "George Lucas",
+   "Ridley Scott"
+  ],
+  "reponse": "Steven Spielberg",
+  "anecdote": "Le rugissement du T-rex mélange des cris d'éléphanteau, de tigre et d'alligator."
+ },
+ {
+  "id": "cin-004",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Cinéma français",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel film français a réuni le plus de spectateurs en salle en France ?",
+  "choix": [
+   "Bienvenue chez les Ch'tis",
+   "Intouchables",
+   "La Grande Vadrouille",
+   "Astérix et Obélix : Mission Cléopâtre"
+  ],
+  "reponse": "Bienvenue chez les Ch'tis",
+  "anecdote": "Sorti en 2008, il a dépassé les 20 millions d'entrées, juste derrière Titanic tous films confondus."
+ },
+ {
+  "id": "cin-005",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Oscars",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel film détient, avec Ben-Hur et Titanic, le record de 11 Oscars ?",
+  "choix": [
+   "Le Seigneur des anneaux : Le Retour du roi",
+   "Avatar",
+   "Forrest Gump",
+   "La La Land"
+  ],
+  "reponse": "Le Seigneur des anneaux : Le Retour du roi",
+  "anecdote": "Il a gagné dans les 11 catégories où il était nommé, un record absolu."
+ },
+ {
+  "id": "cin-006",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel acteur a remporté l'Oscar du meilleur acteur pour The Revenant ?",
+  "choix": [
+   "Leonardo DiCaprio",
+   "Tom Hardy",
+   "Matthew McConaughey",
+   "Eddie Redmayne"
+  ],
+  "reponse": "Leonardo DiCaprio",
+  "anecdote": "C'était sa cinquième nomination comme acteur, en 2016. Il a mangé un vrai foie de bison cru pour une scène."
+ },
+ {
+  "id": "cin-007",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Comment s'appelle le cow-boy de Toy Story ?",
+  "choix": [
+   "Woody",
+   "Buzz",
+   "Andy",
+   "Jessie"
+  ],
+  "reponse": "Woody",
+  "anecdote": "Il devait au départ être une marionnette de ventriloque au caractère méchant."
+ },
+ {
+  "id": "cin-008",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Dans quelle ville se déroule la série Breaking Bad ?",
+  "choix": [
+   "Albuquerque",
+   "Las Vegas",
+   "Phoenix",
+   "El Paso"
+  ],
+  "reponse": "Albuquerque",
+  "anecdote": "Le tournage devait se passer à Riverside en Californie, mais les avantages fiscaux du Nouveau-Mexique ont tout changé."
+ },
+ {
+  "id": "cin-009",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel est le nom de famille de la famille principale des Simpson ?",
+  "choix": [
+   "Simpson",
+   "Griffin",
+   "Flanders",
+   "Bouvier"
+  ],
+  "reponse": "Simpson",
+  "anecdote": "Matt Groening a donné aux personnages les prénoms de sa propre famille : son père s'appelait Homer."
+ },
+ {
+  "id": "cin-010",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films cultes",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel est le nom du vaisseau de Han Solo ?",
+  "choix": [
+   "Le Faucon Millenium",
+   "L'Étoile noire",
+   "Le Destroyer",
+   "L'Enterprise"
+  ],
+  "reponse": "Le Faucon Millenium",
+  "anecdote": "Il a fait le raid de Kessel « en moins de 12 parsecs », une unité de distance et non de temps."
+ },
+ {
+  "id": "cin-011",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel réalisateur a signé Le Fabuleux Destin d'Amélie Poulain ?",
+  "choix": [
+   "Jean-Pierre Jeunet",
+   "Luc Besson",
+   "Michel Gondry",
+   "Jacques Audiard"
+  ],
+  "reponse": "Jean-Pierre Jeunet",
+  "anecdote": "Le rôle avait été écrit pour Emily Watson, qui ne parlait pas assez bien français."
+ },
+ {
+  "id": "cin-012",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Cinéma français",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Dans quel film Louis de Funès et Bourvil traversent-ils la France occupée ?",
+  "choix": [
+   "La Grande Vadrouille",
+   "Le Corniaud",
+   "Rabbi Jacob",
+   "La Folie des grandeurs"
+  ],
+  "reponse": "La Grande Vadrouille",
+  "anecdote": "Sorti en 1966, il est resté le plus gros succès français en salle pendant plus de 40 ans."
+ },
+ {
+  "id": "cin-013",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Oscars",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel film sud-coréen a remporté l'Oscar du meilleur film en 2020 ?",
+  "choix": [
+   "Parasite",
+   "Old Boy",
+   "Le Bon, la Brute et le Cinglé",
+   "Burning"
+  ],
+  "reponse": "Parasite",
+  "anecdote": "C'est le premier film non anglophone à remporter cet Oscar en 92 ans d'histoire."
+ },
+ {
+  "id": "cin-014",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Comment s'appelle le continent principal de Game of Thrones ?",
+  "choix": [
+   "Westeros",
+   "Essos",
+   "Mordor",
+   "Narnia"
+  ],
+  "reponse": "Westeros",
+  "anecdote": "Sa forme rappelle la Grande-Bretagne et l'Irlande, retournées et accolées."
+ },
+ {
+  "id": "cin-015",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Musique de film",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel compositeur a écrit la musique de Star Wars ?",
+  "choix": [
+   "John Williams",
+   "Hans Zimmer",
+   "Ennio Morricone",
+   "Howard Shore"
+  ],
+  "reponse": "John Williams",
+  "anecdote": "Il a aussi signé les musiques des Dents de la mer, d'E.T., d'Indiana Jones et des premiers Harry Potter."
+ },
+ {
+  "id": "cin-016",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Musique de film",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel compositeur italien est célèbre pour les westerns de Sergio Leone ?",
+  "choix": [
+   "Ennio Morricone",
+   "Nino Rota",
+   "Riz Ortolani",
+   "Luis Bacalov"
+  ],
+  "reponse": "Ennio Morricone",
+  "anecdote": "Il a reçu un Oscar d'honneur en 2007 puis un Oscar compétitif en 2016 pour Les Huit Salopards."
+ },
+ {
+  "id": "cin-017",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Dans Le Roi lion, comment s'appelle l'oncle de Simba ?",
+  "choix": [
+   "Scar",
+   "Mufasa",
+   "Rafiki",
+   "Zazu"
+  ],
+  "reponse": "Scar",
+  "anecdote": "Son nom signifie « cicatrice » en anglais, à cause de la marque sur son œil gauche."
+ },
+ {
+  "id": "cin-018",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films cultes",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Dans Matrix, quelle pilule Neo avale-t-il ?",
+  "choix": [
+   "La rouge",
+   "La bleue",
+   "La verte",
+   "La blanche"
+  ],
+  "reponse": "La rouge",
+  "anecdote": "La pilule bleue l'aurait renvoyé à sa vie normale, sans rien savoir de la Matrice."
+ },
+ {
+  "id": "cin-019",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel acteur incarne Jack Sparrow dans Pirates des Caraïbes ?",
+  "choix": [
+   "Johnny Depp",
+   "Orlando Bloom",
+   "Brad Pitt",
+   "Jude Law"
+  ],
+  "reponse": "Johnny Depp",
+  "anecdote": "Il s'est inspiré de Keith Richards, qui a ensuite joué son père dans la saga."
+ },
+ {
+  "id": "cin-020",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Cinéma français",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel film de Jean-Luc Godard est sorti en 1960 avec Jean-Paul Belmondo ?",
+  "choix": [
+   "À bout de souffle",
+   "Pierrot le Fou",
+   "Le Mépris",
+   "Alphaville"
+  ],
+  "reponse": "À bout de souffle",
+  "anecdote": "Godard a tourné caméra à l'épaule, et a inventé des coupes brutales devenues célèbres : les « jump cuts »."
+ },
+ {
+  "id": "cin-021",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Sagas",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Combien de films compte la saga principale Harry Potter ?",
+  "choix": [
+   "8",
+   "7",
+   "6",
+   "9"
+  ],
+  "reponse": "8",
+  "anecdote": "Le dernier livre a été découpé en deux films, sortis en 2010 et 2011."
+ },
+ {
+  "id": "cin-022",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Histoire du cinéma",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel est le titre du premier film projeté publiquement par les frères Lumière ?",
+  "choix": [
+   "La Sortie de l'usine Lumière à Lyon",
+   "L'Arrivée d'un train en gare de La Ciotat",
+   "L'Arroseur arrosé",
+   "Le Repas de bébé"
+  ],
+  "reponse": "La Sortie de l'usine Lumière à Lyon",
+  "anecdote": "La séance a eu lieu le 28 décembre 1895 au Grand Café, à Paris."
+ },
+ {
+  "id": "cin-023",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Histoire du cinéma",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel cinéaste français a réalisé Le Voyage dans la Lune en 1902 ?",
+  "choix": [
+   "Georges Méliès",
+   "Louis Lumière",
+   "Charles Pathé",
+   "Léon Gaumont"
+  ],
+  "reponse": "Georges Méliès",
+  "anecdote": "Ancien illusionniste, il a inventé de nombreux trucages comme la substitution et la surimpression."
+ },
+ {
+  "id": "cin-024",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Dans quelle série suit-on des enfants à Hawkins face au « Monde à l'envers » ?",
+  "choix": [
+   "Stranger Things",
+   "Dark",
+   "The OA",
+   "Les Goonies"
+  ],
+  "reponse": "Stranger Things",
+  "anecdote": "Le personnage d'Eleven doit son nom au chiffre 11 tatoué sur son poignet."
+ },
+ {
+  "id": "cin-025",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Oscars",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel film est le premier à avoir remporté l'Oscar du meilleur film, en 1929 ?",
+  "choix": [
+   "Les Ailes",
+   "Metropolis",
+   "Le Chanteur de jazz",
+   "L'Aurore"
+  ],
+  "reponse": "Les Ailes",
+  "anecdote": "Ce film muet sur des pilotes de la Première Guerre mondiale est sorti en 1927."
+ },
+ {
+  "id": "cin-026",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films cultes",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Dans quel film Bill Murray revit-il sans cesse la même journée ?",
+  "choix": [
+   "Un jour sans fin",
+   "Retour vers le futur",
+   "Edge of Tomorrow",
+   "Click"
+  ],
+  "reponse": "Un jour sans fin",
+  "anecdote": "Le jour en question est le 2 février, le « jour de la marmotte » aux États-Unis."
+ },
+ {
+  "id": "cin-027",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Sagas",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Dans Retour vers le futur, quelle voiture sert de machine à remonter le temps ?",
+  "choix": [
+   "Une DeLorean",
+   "Une Ford Mustang",
+   "Une Chevrolet Camaro",
+   "Une Porsche 911"
+  ],
+  "reponse": "Une DeLorean",
+  "anecdote": "Elle doit atteindre 88 miles par heure, soit environ 141 km/h, pour voyager dans le temps."
+ },
+ {
+  "id": "cin-028",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel réalisateur a signé Pulp Fiction et Kill Bill ?",
+  "choix": [
+   "Quentin Tarantino",
+   "Robert Rodriguez",
+   "Martin Scorsese",
+   "Guy Ritchie"
+  ],
+  "reponse": "Quentin Tarantino",
+  "anecdote": "Il a travaillé dans un vidéoclub avant de devenir réalisateur, ce qui a forgé sa culture cinéma."
+ },
+ {
+  "id": "cin-029",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel studio japonais a produit Le Voyage de Chihiro ?",
+  "choix": [
+   "Ghibli",
+   "Toei",
+   "Madhouse",
+   "Sunrise"
+  ],
+  "reponse": "Ghibli",
+  "anecdote": "Le film a remporté l'Oscar du meilleur film d'animation en 2003."
+ },
+ {
+  "id": "cin-030",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Combien de saisons compte la série Friends ?",
+  "choix": [
+   "10",
+   "8",
+   "9",
+   "12"
+  ],
+  "reponse": "10",
+  "anecdote": "Chacun des six acteurs touchait un million de dollars par épisode lors des deux dernières saisons."
+ },
+ {
+  "id": "cin-031",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Super-héros",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel est le vrai nom de Spider-Man ?",
+  "choix": [
+   "Peter Parker",
+   "Bruce Wayne",
+   "Clark Kent",
+   "Tony Stark"
+  ],
+  "reponse": "Peter Parker",
+  "anecdote": "Il a été créé en 1962 par Stan Lee et Steve Ditko."
+ },
+ {
+  "id": "cin-032",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Super-héros",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Dans quelle ville vit Batman ?",
+  "choix": [
+   "Gotham City",
+   "Metropolis",
+   "Star City",
+   "Central City"
+  ],
+  "reponse": "Gotham City",
+  "anecdote": "Le nom « Gotham » était à l'origine un surnom moqueur de New York, donné par l'écrivain Washington Irving."
+ },
+ {
+  "id": "cin-033",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quelle actrice française a remporté l'Oscar pour La Môme ?",
+  "choix": [
+   "Marion Cotillard",
+   "Juliette Binoche",
+   "Audrey Tautou",
+   "Isabelle Huppert"
+  ],
+  "reponse": "Marion Cotillard",
+  "anecdote": "Elle est la seule actrice à avoir gagné cet Oscar pour un rôle joué en français, en 2008."
+ },
+ {
+  "id": "cin-034",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Cinéma français",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Dans Les Visiteurs, quel est le nom du valet de Godefroy de Montmirail ?",
+  "choix": [
+   "Jacquouille la Fripouille",
+   "Jacquart",
+   "Gaston",
+   "Jean-Pierre"
+  ],
+  "reponse": "Jacquouille la Fripouille",
+  "anecdote": "Christian Clavier joue à la fois Jacquouille et son descendant Jacquart."
+ },
+ {
+  "id": "cin-035",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Festivals",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quelle récompense est décernée au meilleur film à la Mostra de Venise ?",
+  "choix": [
+   "Le Lion d'or",
+   "La Palme d'or",
+   "L'Ours d'or",
+   "Le Léopard d'or"
+  ],
+  "reponse": "Le Lion d'or",
+  "anecdote": "La Mostra, créée en 1932, est le plus ancien festival de cinéma du monde."
+ },
+ {
+  "id": "cin-036",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Festivals",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Dans quelle ville se déroule le plus célèbre festival de cinéma français ?",
+  "choix": [
+   "Cannes",
+   "Nice",
+   "Deauville",
+   "Paris"
+  ],
+  "reponse": "Cannes",
+  "anecdote": "La Palme d'or remplace le « Grand Prix du Festival » depuis 1955."
+ },
+ {
+  "id": "cin-037",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Box-office",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "En quelle année est sorti le film Titanic de James Cameron ?",
+  "reponse": 1997,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1960,
+   2020
+  ],
+  "anecdote": "Le tournage a coûté plus cher que la construction du vrai Titanic, même en tenant compte de l'inflation."
+ },
+ {
+  "id": "cin-038",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Histoire du cinéma",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "En quelle année a eu lieu la première projection publique payante des frères Lumière ?",
+  "reponse": 1895,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1850,
+   1950
+  ],
+  "anecdote": "33 spectateurs étaient présents ce soir-là, au salon indien du Grand Café."
+ },
+ {
+  "id": "cin-039",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Box-office",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de dollars Avatar a-t-il rapportés dans le monde, en milliards ?",
+  "reponse": 2.9,
+  "unite": "milliards de $",
+  "tolerance": 0.15,
+  "bornes": [
+   0.5,
+   5
+  ],
+  "anecdote": "C'est le plus gros succès de l'histoire du cinéma, devant Avengers : Endgame."
+ },
+ {
+  "id": "cin-040",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien d'épisodes compte la série Game of Thrones ?",
+  "reponse": 73,
+  "unite": "épisodes",
+  "tolerance": 3,
+  "bornes": [
+   10,
+   200
+  ],
+  "anecdote": "La série s'étale sur huit saisons, de 2011 à 2019."
+ },
+ {
+  "id": "cin-041",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films cultes",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de minutes dure la version cinéma du Seigneur des anneaux : Le Retour du roi ?",
+  "reponse": 201,
+  "unite": "minutes",
+  "tolerance": 8,
+  "bornes": [
+   90,
+   300
+  ],
+  "anecdote": "La version longue en DVD dépasse 4 heures, soit plus de 250 minutes."
+ },
+ {
+  "id": "cin-042",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Super-héros",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "En quelle année est sorti le premier film Iron Man du Marvel Cinematic Universe ?",
+  "reponse": 2008,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1980,
+   2025
+  ],
+  "anecdote": "Robert Downey Jr. a improvisé la réplique finale « Je suis Iron Man », qui a changé toute la saga."
+ },
+ {
+  "id": "cin-043",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Oscars",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien d'Oscars en compétition Walt Disney a-t-il remportés ?",
+  "reponse": 22,
+  "unite": "Oscars",
+  "tolerance": 2,
+  "bornes": [
+   1,
+   40
+  ],
+  "anecdote": "Il détient le record absolu, avec 59 nominations à son nom."
+ },
+ {
+  "id": "cin-044",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Sagas",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "En quelle année est sorti le premier film Star Wars ?",
+  "reponse": 1977,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1950,
+   2010
+  ],
+  "anecdote": "Les producteurs y croyaient si peu que George Lucas a négocié les droits des produits dérivés à la place d'un gros salaire."
+ },
+ {
+  "id": "cin-045",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Histoire du cinéma",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En quelle année est sorti Le Chanteur de jazz, premier long métrage parlant ?",
+  "reponse": 1927,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1890,
+   1960
+  ],
+  "anecdote": "Le film est surtout muet : seules quelques chansons et répliques sont sonorisées."
+ },
+ {
+  "id": "cin-046",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Cinéma français",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de spectateurs Intouchables a-t-il réunis en France, en millions ?",
+  "reponse": 19.4,
+  "unite": "millions",
+  "tolerance": 1,
+  "bornes": [
+   2,
+   40
+  ],
+  "anecdote": "Le film a aussi été un succès mondial avec plus de 50 millions d'entrées."
+ },
+ {
+  "id": "cin-047",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année est sorti Blanche-Neige et les Sept Nains de Disney ?",
+  "reponse": 1937,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1900,
+   1980
+  ],
+  "anecdote": "Surnommé « la folie de Disney » avant sa sortie, il est devenu un triomphe et a financé les studios de Burbank."
+ },
+ {
+  "id": "cin-048",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films cultes",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "En quelle année est sorti Jurassic Park ?",
+  "reponse": 1993,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1970,
+   2015
+  ],
+  "anecdote": "Sur environ 15 minutes de dinosaures à l'écran, seules 4 environ sont en images de synthèse ; le reste, ce sont des animatroniques."
+ },
+ {
+  "id": "cin-049",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Oscars",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien mesure une statuette des Oscars, en centimètres ?",
+  "reponse": 34,
+  "unite": "cm",
+  "tolerance": 2,
+  "bornes": [
+   10,
+   80
+  ],
+  "anecdote": "Elle pèse environ 3,85 kg et représente un chevalier tenant une épée, debout sur une bobine de film."
+ },
+ {
+  "id": "cin-050",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "En quelle année la série Les Simpson a-t-elle été diffusée pour la première fois ?",
+  "reponse": 1989,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1960,
+   2010
+  ],
+  "anecdote": "Avant d'avoir leur série, les Simpson apparaissaient depuis 1987 dans de courtes séquences du Tracey Ullman Show."
+ },
+ {
+  "id": "cin-051",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de films James Bond Sean Connery a-t-il tournés dans la série officielle ?",
+  "reponse": 6,
+  "unite": "films",
+  "tolerance": 1,
+  "bornes": [
+   1,
+   15
+  ],
+  "anecdote": "Il en a tourné un septième, Jamais plus jamais, en 1983, hors de la série officielle d'Eon."
+ },
+ {
+  "id": "cin-052",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Box-office",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "En quelle année est sorti le film Avengers : Endgame ?",
+  "reponse": 2019,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   2000,
+   2025
+  ],
+  "anecdote": "Il a été brièvement le plus gros succès de l'histoire, avant qu'Avatar ne reprenne la tête grâce à une ressortie."
+ },
+ {
+  "id": "cin-053",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Qui suis-je ?",
+  "reponse": "Shrek",
+  "reponses_acceptees": [
+   "Shrek l'ogre"
+  ],
+  "indices": [
+   "Je vis dans un marais",
+   "Mon meilleur ami est un âne bavard",
+   "J'ai épousé la princesse Fiona",
+   "Je suis un ogre vert"
+  ],
+  "anecdote": "Le nom vient du mot yiddish « shreck », qui signifie « peur »."
+ },
+ {
+  "id": "cin-054",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Qui suis-je ?",
+  "reponse": "Jean Dujardin",
+  "reponses_acceptees": [
+   "Dujardin"
+  ],
+  "indices": [
+   "J'ai commencé dans une série courte sur un couple",
+   "J'ai joué l'agent OSS 117",
+   "J'ai été Brice de Nice",
+   "J'ai gagné l'Oscar pour The Artist"
+  ],
+  "anecdote": "Il est le premier acteur français à avoir reçu l'Oscar du meilleur acteur, en 2012."
+ },
+ {
+  "id": "cin-055",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Qui suis-je ?",
+  "reponse": "Indiana Jones",
+  "reponses_acceptees": [
+   "Indy",
+   "Henry Jones"
+  ],
+  "indices": [
+   "J'ai peur des serpents",
+   "Je suis professeur d'archéologie",
+   "Je porte un chapeau et un fouet",
+   "Harrison Ford m'incarne"
+  ],
+  "anecdote": "Le personnage devait s'appeler Indiana Smith ; « Indiana » était le nom du chien de George Lucas."
+ },
+ {
+  "id": "cin-056",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Qui suis-je ?",
+  "reponse": "Alfred Hitchcock",
+  "reponses_acceptees": [
+   "Hitchcock"
+  ],
+  "indices": [
+   "On m'a surnommé le maître du suspense",
+   "J'apparais brièvement dans la plupart de mes films",
+   "J'ai réalisé Psychose et Les Oiseaux",
+   "Je suis un réalisateur britannique installé à Hollywood"
+  ],
+  "anecdote": "Il n'a jamais gagné l'Oscar du meilleur réalisateur malgré cinq nominations."
+ },
+ {
+  "id": "cin-057",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Qui suis-je ?",
+  "reponse": "Hannibal Lecter",
+  "reponses_acceptees": [
+   "Hannibal",
+   "Lecter"
+  ],
+  "indices": [
+   "Je suis psychiatre",
+   "J'apprécie la musique de Bach",
+   "On me fait porter un masque lors de mes transferts",
+   "Anthony Hopkins m'a incarné dans Le Silence des agneaux"
+  ],
+  "anecdote": "Anthony Hopkins n'apparaît qu'environ 16 minutes à l'écran, mais a remporté l'Oscar du meilleur acteur."
+ },
+ {
+  "id": "cin-058",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quelle est cette série ?",
+  "reponse": "La Casa de Papel",
+  "reponses_acceptees": [
+   "Casa de Papel",
+   "Money Heist"
+  ],
+  "indices": [
+   "Je viens d'Espagne",
+   "Mes personnages portent des noms de villes",
+   "Mes braqueurs portent des masques de Dalí",
+   "On braque la Fabrique nationale de la monnaie"
+  ],
+  "anecdote": "La série devait s'arrêter après deux saisons, avant que Netflix ne la relance."
+ },
+ {
+  "id": "cin-059",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Qui suis-je ?",
+  "reponse": "Charlie Chaplin",
+  "reponses_acceptees": [
+   "Chaplin",
+   "Charlot"
+  ],
+  "indices": [
+   "Je suis né à Londres",
+   "J'ai cofondé United Artists",
+   "J'ai parodié Hitler dans un de mes films",
+   "On m'appelle Charlot en France"
+  ],
+  "anecdote": "Il a fini sa vie en Suisse, après avoir été interdit de retour aux États-Unis en 1952."
+ },
+ {
+  "id": "cin-060",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel est ce film ?",
+  "reponse": "Le Monde de Nemo",
+  "reponses_acceptees": [
+   "Nemo",
+   "Finding Nemo"
+  ],
+  "indices": [
+   "Je suis un film Pixar",
+   "Mon héros a une nageoire plus petite que l'autre",
+   "Un père traverse l'océan avec une amie qui perd la mémoire",
+   "Mon héros est un poisson-clown"
+  ],
+  "anecdote": "Les ventes de poissons-clowns ont explosé après le film, au point d'inquiéter les biologistes."
+ },
+ {
+  "id": "cin-061",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Qui suis-je ?",
+  "reponse": "Stanley Kubrick",
+  "reponses_acceptees": [
+   "Kubrick"
+  ],
+  "indices": [
+   "J'ai commencé comme photographe pour le magazine Look",
+   "Je refaisais parfois une scène plus de 100 fois",
+   "J'ai adapté un roman de Stephen King",
+   "J'ai réalisé 2001 : l'Odyssée de l'espace"
+  ],
+  "anecdote": "Pour Shining, une scène avec Shelley Duvall aurait été tournée 127 fois."
+ },
+ {
+  "id": "cin-062",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Qui suis-je ?",
+  "reponse": "Harry Potter",
+  "reponses_acceptees": [
+   "Harry",
+   "Potter"
+  ],
+  "indices": [
+   "J'ai dormi dans un placard sous l'escalier",
+   "Je joue attrapeur au Quidditch",
+   "J'ai une cicatrice en forme d'éclair",
+   "Je suis le « Survivant »"
+  ],
+  "anecdote": "Daniel Radcliffe a usé environ 160 paires de lunettes pendant les huit films."
+ },
+ {
+  "id": "cin-063",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Cinéma français",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Qui suis-je ?",
+  "reponse": "Agnès Varda",
+  "reponses_acceptees": [
+   "Varda"
+  ],
+  "indices": [
+   "J'ai été photographe officielle du festival d'Avignon",
+   "On m'a surnommée la grand-mère de la Nouvelle Vague",
+   "J'ai réalisé Cléo de 5 à 7",
+   "J'ai coréalisé Visages Villages avec JR"
+  ],
+  "anecdote": "Elle a reçu un Oscar d'honneur en 2017, la première réalisatrice à en recevoir un."
+ },
+ {
+  "id": "cin-064",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quelle est cette série ?",
+  "reponse": "Kaamelott",
+  "reponses_acceptees": [
+   "Kaamelott"
+  ],
+  "indices": [
+   "Je suis née d'un court métrage",
+   "Mes premiers épisodes duraient trois minutes et demie",
+   "Un de mes héros dit souvent « C'est pas faux »",
+   "Je parodie la légende du roi Arthur"
+  ],
+  "anecdote": "Alexandre Astier en est le créateur, le réalisateur, l'acteur principal et le compositeur."
+ },
+ {
+  "id": "cin-065",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "vf",
+  "difficulte": 2,
+  "question": "Vrai ou faux : Mickey Mouse a d'abord failli s'appeler Mortimer.",
+  "reponse": "Vrai",
+  "anecdote": "C'est la femme de Walt Disney, Lillian, qui aurait trouvé « Mortimer » trop pompeux."
+ },
+ {
+  "id": "cin-066",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films cultes",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : dans Psychose, le sang de la scène de la douche était du sirop de chocolat.",
+  "reponse": "Vrai",
+  "anecdote": "En noir et blanc, le sirop Bosco rendait mieux à l'écran que du faux sang."
+ },
+ {
+  "id": "cin-067",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : Arnold Schwarzenegger a été gouverneur de Californie.",
+  "reponse": "Vrai",
+  "anecdote": "Il a gouverné de 2003 à 2011, sans jamais toucher son salaire de gouverneur."
+ },
+ {
+  "id": "cin-068",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Oscars",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : Leonardo DiCaprio a gagné un Oscar pour Titanic.",
+  "reponse": "Faux",
+  "anecdote": "Le film a gagné 11 Oscars, mais DiCaprio n'était même pas nommé."
+ },
+ {
+  "id": "cin-069",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Sagas",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : la saga James Bond a été lancée au cinéma avec James Bond 007 contre Dr No.",
+  "reponse": "Vrai",
+  "anecdote": "Sorti en 1962, le film a coûté environ un million de dollars seulement."
+ },
+ {
+  "id": "cin-070",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Histoire du cinéma",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : le premier film en couleur date des années 1950.",
+  "reponse": "Faux",
+  "anecdote": "Des procédés de couleur existaient dès les années 1900. Le Technicolor trichrome a été utilisé dès 1932."
+ },
+ {
+  "id": "cin-071",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "vf",
+  "difficulte": 3,
+  "question": "Vrai ou faux : Homer Simpson travaille dans une centrale nucléaire.",
+  "reponse": "Vrai",
+  "anecdote": "Il est inspecteur de la sécurité au secteur 7G, un comble vu sa maladresse."
+ },
+ {
+  "id": "cin-072",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "vf",
+  "difficulte": 9,
+  "question": "Vrai ou faux : Tom Hanks a remporté deux Oscars du meilleur acteur consécutifs.",
+  "reponse": "Vrai",
+  "anecdote": "Pour Philadelphia (1994) puis Forrest Gump (1995), un exploit égalé seulement par Spencer Tracy."
+ },
+ {
+  "id": "cin-073",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Comment s'appelle la petite sirène de Disney ?",
+  "reponse": "Ariel",
+  "reponses_acceptees": [
+   "Ariel la petite sirène"
+  ],
+  "anecdote": "Dans le conte original d'Andersen, la sirène n'a pas de nom et se transforme en écume."
+ },
+ {
+  "id": "cin-074",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel est le nom de l'extraterrestre qui veut « téléphone maison » ?",
+  "reponse": "E.T.",
+  "reponses_acceptees": [
+   "ET",
+   "E T",
+   "L'extraterrestre"
+  ],
+  "anecdote": "Sa voix a notamment été faite par une femme âgée et fumeuse, Pat Welsh."
+ },
+ {
+  "id": "cin-075",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films cultes",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment s'appelle le requin dans Les Dents de la mer, surnommé par l'équipe de tournage ?",
+  "reponse": "Bruce",
+  "reponses_acceptees": [
+   "Bruce le requin"
+  ],
+  "anecdote": "Le requin mécanique portait le nom de l'avocat de Spielberg. Il tombait si souvent en panne qu'il est très peu montré."
+ },
+ {
+  "id": "cin-076",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel est le nom du robot ménager héros d'un film Pixar de 2008 ?",
+  "reponse": "WALL-E",
+  "reponses_acceptees": [
+   "Wall E",
+   "Walle"
+  ],
+  "anecdote": "Son nom signifie « Waste Allocation Load Lifter : Earth-class »."
+ },
+ {
+  "id": "cin-077",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Sagas",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel est le prénom de l'agent 007 ?",
+  "reponse": "James",
+  "reponses_acceptees": [
+   "James Bond"
+  ],
+  "anecdote": "Ian Fleming a pris le nom d'un ornithologue américain, auteur d'un guide des oiseaux des Caraïbes."
+ },
+ {
+  "id": "cin-078",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel réalisateur a signé Le Grand Bleu et Léon ?",
+  "reponse": "Luc Besson",
+  "reponses_acceptees": [
+   "Besson"
+  ],
+  "anecdote": "Le Grand Bleu est devenu un film culte en France, avec plus de 9 millions d'entrées."
+ },
+ {
+  "id": "cin-079",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Dans Twin Peaks, quel est le prénom de la jeune femme assassinée ?",
+  "reponse": "Laura",
+  "reponses_acceptees": [
+   "Laura Palmer"
+  ],
+  "anecdote": "La question « Qui a tué Laura Palmer ? » a passionné les téléspectateurs du monde entier en 1990."
+ },
+ {
+  "id": "cin-080",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment s'appelle le maître Jedi vert qui parle à l'envers ?",
+  "reponse": "Yoda",
+  "reponses_acceptees": [
+   "Maître Yoda"
+  ],
+  "anecdote": "Il était animé par Frank Oz, aussi marionnettiste de Miss Piggy dans le Muppet Show."
+ }
+]

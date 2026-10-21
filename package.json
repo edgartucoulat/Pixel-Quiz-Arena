@@ -1,0 +1,11 @@
+{
+  "name": "pixel-quiz-arena",
+  "version": "1.0.0",
+  "description": "Jeu télé rétro de culture générale, multijoueur en temps réel (site statique, WebRTC).",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "validate": "node scripts/validate-questions.js"
+  },
+  "license": "MIT"
+}

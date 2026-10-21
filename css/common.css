@@ -1,0 +1,85 @@
+/* =========================================================================
+ * PIXEL QUIZ ARENA - Styles communs (palette "Sweetie 16", polices pixel)
+ * ========================================================================= */
+:root {
+  --ink: #1a1c2c;
+  --plum: #5d275d;
+  --red: #b13e53;
+  --red2: #e43b44;
+  --orange: #ef7d57;
+  --yellow: #ffcd75;
+  --lime: #a7f070;
+  --green: #38b764;
+  --teal: #257179;
+  --navy: #29366f;
+  --blue: #3b5dc9;
+  --sky: #41a6f6;
+  --cyan: #73eff7;
+  --white: #f4f4f4;
+  --g1: #94b0c2;
+  --g2: #566c86;
+  --g3: #333c57;
+  --pink: #b55088;
+  --font-title: 'Press Start 2P', 'Courier New', monospace;
+  --font-text: 'VT323', 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--font-text);
+  font-size: 22px;
+  -webkit-font-smoothing: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button { font-family: inherit; color: inherit; cursor: pointer; }
+.pix { image-rendering: pixelated; image-rendering: crisp-edges; }
+
+/* Boîte façon interface 16-bit : bordure sombre + reflets intérieurs */
+.panel {
+  background: var(--g3);
+  border: 4px solid var(--ink);
+  box-shadow: inset -4px -4px 0 rgba(0, 0, 0, .35), inset 4px 4px 0 rgba(255, 255, 255, .12), 0 6px 0 rgba(0, 0, 0, .45);
+}
+
+.big-btn {
+  font-family: var(--font-title);
+  font-size: 20px;
+  padding: 18px 28px;
+  background: var(--red2);
+  color: var(--white);
+  border: 4px solid var(--ink);
+  box-shadow: inset -5px -5px 0 rgba(0, 0, 0, .35), inset 5px 5px 0 rgba(255, 255, 255, .25), 0 6px 0 var(--ink);
+  text-shadow: 3px 3px 0 var(--ink);
+  transition: transform .05s;
+}
+.big-btn:hover { filter: brightness(1.1); }
+.big-btn:active { transform: translateY(4px); box-shadow: inset -5px -5px 0 rgba(0, 0, 0, .35), inset 5px 5px 0 rgba(255, 255, 255, .25), 0 2px 0 var(--ink); }
+.big-btn.alt { background: var(--blue); }
+.big-btn.green { background: var(--green); }
+.big-btn.disabled, .big-btn:disabled { filter: grayscale(.8) brightness(.7); }
+
+.logo { font-family: var(--font-title); display: flex; flex-direction: column; align-items: center; gap: 6px; line-height: 1; }
+.logo span { display: block; text-shadow: 4px 4px 0 var(--ink), 8px 8px 0 rgba(0, 0, 0, .3); }
+.logo span:nth-child(1) { color: var(--yellow); font-size: 1.6em; }
+.logo span:nth-child(2) { color: var(--cyan); font-size: 2.2em; }
+.logo span:nth-child(3) { color: var(--red2); font-size: 1.6em; letter-spacing: .2em; }
+
+/* Effet écran cathodique (optionnel) */
+#crt-overlay { display: none; }
+body.crt #crt-overlay {
+  display: block; position: fixed; inset: 0; pointer-events: none; z-index: 9999;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, .18) 3px, rgba(0, 0, 0, 0) 4px),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, .45) 100%);
+  animation: flicker 6s infinite;
+}
+@keyframes flicker { 0%, 100% { opacity: 1; } 50% { opacity: .92; } 52% { opacity: 1; } }
+
+@keyframes popIn { 0% { transform: scale(.3); opacity: 0; } 70% { transform: scale(1.12); opacity: 1; } 100% { transform: scale(1); } }
+@keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes wobble { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
