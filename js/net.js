@@ -35,6 +35,14 @@
         opts.secure = qs.get('peersecure') ? qs.get('peersecure') === '1' : opts.port === 443;
         // Tests locaux : pas besoin de STUN/TURN.
         opts.config = { iceServers: [] };
+      } else {
+        // Serveurs PeerJS par défaut + un TURN sur le port 443 (TCP/TLS), souvent le seul
+        // qui passe sur un réseau d'entreprise.
+        opts.config = { iceServers: [
+          { urls: 'stun:stun.l.google.com:19302' },
+          { urls: ['turn:eu-0.turn.peerjs.com:3478', 'turn:us-0.turn.peerjs.com:3478'], username: 'peerjs', credential: 'peerjsp' },
+          { urls: ['turn:openrelay.metered.ca:443?transport=tcp', 'turns:openrelay.metered.ca:443?transport=tcp'], username: 'openrelayproject', credential: 'openrelayproject' },
+        ] };
       }
       return opts;
     },
@@ -50,6 +58,20 @@
       const s = out.toString();
       return s ? '&' + s : '';
     },
+  };
+
+  /* Diagnostic réseau affiché à l'écran : état de PeerJS et de chaque relais. */
+  PQA.netDiag = { peer: 'wait', relays: {} };
+  PQA.setDiag = function (key, value) {
+    if (key === 'peer') PQA.netDiag.peer = value;
+    else PQA.netDiag.relays[key] = value;
+    if (PQA.onNetDiag) PQA.onNetDiag();
+  };
+  PQA.netDiagText = function () {
+    const icon = { ok: '✔', ko: '✖', wait: '⏳', absent: '✔ (salle absente)', direct: '✔ mais liaison directe bloquée' };
+    const d = PQA.netDiag;
+    const relays = Object.entries(d.relays).map(([h, v]) => h + ' ' + (icon[v] || v)).join(' · ');
+    return 'PeerJS ' + (icon[d.peer] || d.peer) + (relays ? ' | Relais : ' + relays : '');
   };
 
   PQA.randomCode = function () {
@@ -108,6 +130,7 @@
         peer.on('open', () => {
           clearTimeout(timer);
           opened = true;
+          PQA.setDiag('peer', 'ok');
           this.peer = peer;
           this._wire(peer);
           resolve(code);
@@ -123,7 +146,7 @@
             setTimeout(() => this._startPeer(retryCode, attempt + 1).then(resolve, reject), retryCode ? 2500 : 50);
           } else if (attempt < 2 && err.type !== 'browser-incompatible') {
             setTimeout(() => this._startPeer(preferredCode, attempt + 1).then(resolve, reject), 1500);
-          } else reject(err);
+          } else { PQA.setDiag('peer', 'ko'); reject(err); }
         });
       });
     }
@@ -250,9 +273,15 @@
       this.peer = peer;
       let gotConn = false;
       // Serveur PeerJS muet : on passe au relais.
-      setTimeout(() => { if (this.peer === peer && !gotConn) this._fail(); }, 9000);
+      setTimeout(() => {
+        if (this.peer !== peer || gotConn) return;
+        // Salle trouvée mais le canal WebRTC ne s'ouvre pas (pare-feu, NAT strict).
+        if (PQA.netDiag.peer === 'ok') PQA.setDiag('peer', 'direct');
+        this._fail();
+      }, 9000);
       peer.on('open', () => {
         if (this.peer !== peer) return;
+        PQA.setDiag('peer', 'ok');
         const conn = peer.connect(PQA.config.peerPrefix + this.code, { serialization: 'json', reliable: true });
         this.conn = conn;
         conn.on('open', () => {
@@ -272,6 +301,7 @@
       });
       peer.on('error', (err) => {
         if (this.peer !== peer) return;
+        PQA.setDiag('peer', err.type === 'peer-unavailable' ? 'absent' : 'ko');
         // Salle introuvable sur PeerJS : le plateau est peut-être joignable par le relais.
         this._fail(err.type === 'peer-unavailable');
       });

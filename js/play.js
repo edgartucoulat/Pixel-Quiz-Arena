@@ -36,11 +36,15 @@
     try { localStorage.setItem(STORE, JSON.stringify({ room: state.room, token: state.token, name: state.name, avatar: state.avatar })); } catch (e) {}
   }
 
+  let netStatus = 'idle';
+  PQA.onNetDiag = () => net && net.h.onStatus(netStatus);
   const net = new PQA.ClientNet({
     getHello: () => ({ t: 'hello', role: 'player', token: state.token, name: state.name, avatar: state.avatar, v: 1 }),
     onStatus(s) {
+      netStatus = s;
       const txt = { connecting: '⏳ Connexion au plateau...', reconnecting: '🔄 Reconnexion...', noroom: '❓ Salle introuvable : vérifie le code (nouvelle tentative...)', connected: '' }[s] || '';
-      $('#netbar').textContent = txt;
+      // Diagnostic sous le message, pour savoir quel canal passe ou bloque.
+      $('#netbar').innerHTML = txt ? '<span>' + PQA.esc(txt) + '</span><small>' + PQA.esc(PQA.netDiagText()) + '</small>' : '';
       $('#netbar').classList.toggle('on', !!txt);
     },
     onMessage(m) {

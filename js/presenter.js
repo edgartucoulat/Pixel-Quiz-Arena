@@ -11,11 +11,15 @@
   let room = (qs.get('room') || localStorage.getItem('pqa_presenter_room') || '').toUpperCase();
   let view = null, deadline = 0, total = 0;
 
+  let netStatus = 'idle';
+  PQA.onNetDiag = () => net && net.h.onStatus(netStatus);
   const net = new PQA.ClientNet({
     getHello: () => ({ t: 'hello', role: 'presenter' }),
     onStatus(s) {
+      netStatus = s;
       const txt = { connecting: '⏳ Connexion au plateau...', reconnecting: '🔄 Reconnexion...', noroom: '❓ Salle introuvable (nouvelle tentative...)' }[s] || '';
-      $('#netbar').textContent = txt;
+      // Diagnostic sous le message, pour savoir quel canal passe ou bloque.
+      $('#netbar').innerHTML = txt ? '<span>' + PQA.esc(txt) + '</span><small>' + PQA.esc(PQA.netDiagText()) + '</small>' : '';
       $('#netbar').classList.toggle('on', !!txt);
     },
     onMessage(m) {

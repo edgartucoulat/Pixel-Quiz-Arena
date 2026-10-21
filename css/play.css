@@ -8,7 +8,9 @@ body.play.shake { animation: pshake .35s; }
 @keyframes pshake { 25% { transform: translateX(-8px); } 50% { transform: translateX(8px); } 75% { transform: translateX(-4px); } }
 
 #netbar { display: none; background: var(--orange); color: var(--ink); text-align: center; padding: 6px; font-size: 20px; }
-#netbar.on { display: block; animation: blink 1.4s infinite; }
+#netbar.on { display: block; }
+#netbar span { animation: blink 1.4s infinite; }
+#netbar small { display: block; font-size: 15px; opacity: .85; }
 
 #me { display: flex; align-items: center; gap: 10px; padding: 8px 12px calc(8px); padding-top: max(8px, env(safe-area-inset-top)); background: rgba(0,0,0,.35); border-bottom: 4px solid var(--me, var(--g3)); }
 #me:empty { display: none; }

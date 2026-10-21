@@ -49,6 +49,14 @@
     }
 
     connect(timeout = 8000) {
+      // Nom court du broker pour le diagnostic (broker.emqx.io -> emqx)
+      let name = this.url;
+      try { const u = new URL(this.url), parts = u.hostname.split('.'); name = /^[\d.]+$|^localhost$/.test(u.hostname) ? u.host : parts[parts.length - 2] || parts[0]; } catch (e) {}
+      if (!PQA.netDiag.relays[name] || PQA.netDiag.relays[name] !== 'ok') PQA.setDiag(name, 'wait');
+      return this._connect(timeout).then((m) => { PQA.setDiag(name, 'ok'); return m; }, (e) => { PQA.setDiag(name, 'ko'); throw e; });
+    }
+
+    _connect(timeout) {
       return new Promise((resolve, reject) => {
         let ws;
         try { ws = new WebSocket(this.url, ['mqtt']); } catch (e) { return reject(e); }
