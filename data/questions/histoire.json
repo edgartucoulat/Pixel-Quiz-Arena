@@ -4,7 +4,7 @@
   "categorie": "Histoire",
   "sous_theme": "Antiquité",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Quelle merveille du monde antique est la seule encore debout aujourd'hui ?",
   "choix": [
    "La pyramide de Khéops",
@@ -20,7 +20,7 @@
   "categorie": "Histoire",
   "sous_theme": "Moyen Âge",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Combien de temps a réellement duré la guerre de Cent Ans ?",
   "choix": [
    "116 ans",
@@ -36,7 +36,7 @@
   "categorie": "Histoire",
   "sous_theme": "Insolite",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Combien de temps a duré la guerre anglo-zanzibarite de 1896, la plus courte de l'histoire ?",
   "choix": [
    "Environ 40 minutes",
@@ -50,25 +50,9 @@
  {
   "id": "his-004",
   "categorie": "Histoire",
-  "sous_theme": "Rois de France",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quel roi de France a été surnommé le Roi-Soleil ?",
-  "choix": [
-   "Louis XIV",
-   "Louis XIII",
-   "Louis XV",
-   "François Ier"
-  ],
-  "reponse": "Louis XIV",
-  "anecdote": "Il dansait lui-même dans les ballets de la cour : son surnom vient d'un rôle d'Apollon, dieu du Soleil, qu'il tenait à 15 ans."
- },
- {
-  "id": "his-005",
-  "categorie": "Histoire",
   "sous_theme": "Égypte ancienne",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quel pharaon a fait construire le temple d'Abou Simbel ?",
   "choix": [
    "Ramsès II",
@@ -80,11 +64,11 @@
   "anecdote": "Dans les années 1960, le temple a été découpé en blocs et remonté 65 mètres plus haut pour échapper aux eaux du lac Nasser."
  },
  {
-  "id": "his-006",
+  "id": "his-005",
   "categorie": "Histoire",
   "sous_theme": "Révolution française",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quelle reine était surnommée « Madame Déficit » ?",
   "choix": [
    "Marie-Antoinette",
@@ -96,11 +80,11 @@
   "anecdote": "Montée à l'échafaud, elle aurait marché sur le pied du bourreau et lui aurait dit : « Monsieur, je vous demande excuse. »"
  },
  {
-  "id": "his-007",
+  "id": "his-006",
   "categorie": "Histoire",
   "sous_theme": "Rome antique",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Quel empereur romain aurait voulu faire de son cheval un consul ?",
   "choix": [
    "Caligula",
@@ -112,11 +96,11 @@
   "anecdote": "Le cheval s'appelait Incitatus et disposait, selon Suétone, d'une écurie de marbre et d'une mangeoire en ivoire."
  },
  {
-  "id": "his-008",
+  "id": "his-007",
   "categorie": "Histoire",
   "sous_theme": "Première Guerre mondiale",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Où a été signé l'armistice du 11 novembre 1918 ?",
   "choix": [
    "Dans un wagon, en forêt de Compiègne",
@@ -128,11 +112,11 @@
   "anecdote": "En 1940, Hitler a exigé que la France signe sa capitulation dans ce même wagon, au même endroit."
  },
  {
-  "id": "his-009",
+  "id": "his-008",
   "categorie": "Histoire",
   "sous_theme": "Monde arabe",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 7,
   "question": "Quelle est la plus ancienne université encore en activité au monde selon l'UNESCO ?",
   "choix": [
    "Al Quaraouiyine, à Fès",
@@ -144,11 +128,11 @@
   "anecdote": "Elle a été fondée en 859 par une femme, Fatima al-Fihri, fille d'un riche marchand."
  },
  {
-  "id": "his-010",
+  "id": "his-009",
   "categorie": "Histoire",
   "sous_theme": "Grandes découvertes",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Qui a terminé, en 1522, le premier tour du monde à la voile après la mort de Magellan ?",
   "choix": [
    "Juan Sebastián Elcano",
@@ -160,11 +144,11 @@
   "anecdote": "Sur près de 240 marins partis en 1519 sur cinq navires, seuls 18 sont revenus, à bord du Victoria."
  },
  {
-  "id": "his-011",
+  "id": "his-010",
   "categorie": "Histoire",
   "sous_theme": "Byzance",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle ville était la capitale de l'Empire byzantin ?",
   "choix": [
    "Constantinople",
@@ -176,11 +160,11 @@
   "anecdote": "Elle s'appelait à l'origine Byzance et porte aujourd'hui le nom d'Istanbul."
  },
  {
-  "id": "his-012",
+  "id": "his-011",
   "categorie": "Histoire",
   "sous_theme": "Antiquité",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Quel peuple a fondé Marseille vers 600 av. J.-C. ?",
   "choix": [
    "Des Grecs de Phocée",
@@ -192,11 +176,11 @@
   "anecdote": "C'est pour cela que Marseille est surnommée la « cité phocéenne ». La ville s'appelait alors Massalia."
  },
  {
-  "id": "his-013",
+  "id": "his-012",
   "categorie": "Histoire",
   "sous_theme": "Rois de France",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 7,
   "question": "Combien de temps aurait duré le « règne » de Louis XIX en 1830 ?",
   "choix": [
    "Une vingtaine de minutes",
@@ -208,27 +192,11 @@
   "anecdote": "Le temps qu'il signe à son tour l'abdication, juste après celle de son père Charles X."
  },
  {
-  "id": "his-014",
-  "categorie": "Histoire",
-  "sous_theme": "France contemporaine",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Qui a été le premier président de la Ve République ?",
-  "choix": [
-   "Charles de Gaulle",
-   "Georges Pompidou",
-   "René Coty",
-   "Vincent Auriol"
-  ],
-  "reponse": "Charles de Gaulle",
-  "anecdote": "René Coty, dernier président de la IVe République, lui a cédé la place en janvier 1959."
- },
- {
-  "id": "his-015",
+  "id": "his-013",
   "categorie": "Histoire",
   "sous_theme": "Napoléon",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle bataille de 1815 a mis fin aux Cent-Jours de Napoléon ?",
   "choix": [
    "Waterloo",
@@ -240,11 +208,11 @@
   "anecdote": "C'est à Waterloo que le général Cambronne aurait lancé son célèbre « mot de cinq lettres »."
  },
  {
-  "id": "his-016",
+  "id": "his-014",
   "categorie": "Histoire",
   "sous_theme": "Amériques",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quelle civilisation a bâti la cité de Machu Picchu ?",
   "choix": [
    "Les Incas",
@@ -256,11 +224,11 @@
   "anecdote": "La cité n'a été révélée au monde qu'en 1911, par l'explorateur américain Hiram Bingham."
  },
  {
-  "id": "his-017",
+  "id": "his-015",
   "categorie": "Histoire",
   "sous_theme": "Grandes découvertes",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Quel traité de 1494 a partagé le Nouveau Monde entre l'Espagne et le Portugal ?",
   "choix": [
    "Le traité de Tordesillas",
@@ -272,11 +240,11 @@
   "anecdote": "C'est à cause de ce traité qu'on parle aujourd'hui portugais au Brésil."
  },
  {
-  "id": "his-018",
+  "id": "his-016",
   "categorie": "Histoire",
   "sous_theme": "Femmes dans l'histoire",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Qui a été la première femme inhumée au Panthéon pour ses propres mérites ?",
   "choix": [
    "Marie Curie",
@@ -288,11 +256,11 @@
   "anecdote": "Avant elle, Sophie Berthelot y avait été inhumée en 1907, mais uniquement pour accompagner son mari."
  },
  {
-  "id": "his-019",
+  "id": "his-017",
   "categorie": "Histoire",
   "sous_theme": "Rois de France",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 8,
   "question": "Quel roi de France est mort en 1498 après s'être cogné la tête contre le linteau d'une porte ?",
   "choix": [
    "Charles VIII",
@@ -304,11 +272,11 @@
   "anecdote": "Il se rendait au château d'Amboise pour assister à une partie de jeu de paume."
  },
  {
-  "id": "his-020",
+  "id": "his-018",
   "categorie": "Histoire",
   "sous_theme": "Moyen Âge",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quelle langue parlait la cour d'Angleterre après la conquête normande de 1066 ?",
   "choix": [
    "Le français",
@@ -320,11 +288,11 @@
   "anecdote": "C'est pourquoi la devise de la monarchie britannique est toujours « Dieu et mon droit », en français."
  },
  {
-  "id": "his-021",
+  "id": "his-019",
   "categorie": "Histoire",
   "sous_theme": "Antiquité",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quel général carthaginois a traversé les Alpes avec des éléphants ?",
   "choix": [
    "Hannibal",
@@ -336,11 +304,11 @@
   "anecdote": "Il serait parti d'Espagne avec 37 éléphants : la quasi-totalité est morte au cours de la campagne."
  },
  {
-  "id": "his-022",
+  "id": "his-020",
   "categorie": "Histoire",
   "sous_theme": "États-Unis",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 7,
   "question": "Dans quelle ville George Washington a-t-il prêté serment comme premier président des États-Unis, en 1789 ?",
   "choix": [
    "New York",
@@ -352,11 +320,11 @@
   "anecdote": "La ville de Washington n'existait pas encore : le gouvernement ne s'y est installé qu'en 1800."
  },
  {
-  "id": "his-023",
+  "id": "his-021",
   "categorie": "Histoire",
   "sous_theme": "Droits des femmes",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Quel pays a été le premier à accorder le droit de vote aux femmes au niveau national, en 1893 ?",
   "choix": [
    "La Nouvelle-Zélande",
@@ -368,11 +336,11 @@
   "anecdote": "La France ne l'a accordé qu'en 1944, 51 ans plus tard."
  },
  {
-  "id": "his-024",
+  "id": "his-022",
   "categorie": "Histoire",
   "sous_theme": "Antiquité",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel peuple a inventé l'écriture cunéiforme ?",
   "choix": [
    "Les Sumériens",
@@ -384,11 +352,11 @@
   "anecdote": "Elle est apparue en Mésopotamie il y a plus de 5 000 ans, d'abord pour tenir des comptes de céréales et de bétail."
  },
  {
-  "id": "his-025",
+  "id": "his-023",
   "categorie": "Histoire",
   "sous_theme": "Rois de France",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quel roi a promulgué l'édit de Nantes, qui accordait la liberté de culte aux protestants, en 1598 ?",
   "choix": [
    "Henri IV",
@@ -400,11 +368,11 @@
   "anecdote": "Il a été révoqué en 1685 par son petit-fils, Louis XIV."
  },
  {
-  "id": "his-026",
+  "id": "his-024",
   "categorie": "Histoire",
   "sous_theme": "Italie",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Quelle ville était surnommée « la Sérénissime » ?",
   "choix": [
    "Venise",
@@ -416,43 +384,11 @@
   "anecdote": "La République de Venise a duré plus de mille ans, jusqu'à sa conquête par Bonaparte en 1797."
  },
  {
-  "id": "his-027",
-  "categorie": "Histoire",
-  "sous_theme": "Seconde Guerre mondiale",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quel pays l'Allemagne a-t-elle envahi le 1er septembre 1939, déclenchant la Seconde Guerre mondiale ?",
-  "choix": [
-   "La Pologne",
-   "La France",
-   "La Belgique",
-   "La Tchécoslovaquie"
-  ],
-  "reponse": "La Pologne",
-  "anecdote": "La France et le Royaume-Uni ont déclaré la guerre à l'Allemagne deux jours plus tard."
- },
- {
-  "id": "his-028",
-  "categorie": "Histoire",
-  "sous_theme": "Japon",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Comment appelait-on les guerriers japonais au service des seigneurs ?",
-  "choix": [
-   "Les samouraïs",
-   "Les ninjas",
-   "Les shoguns",
-   "Les geishas"
-  ],
-  "reponse": "Les samouraïs",
-  "anecdote": "La rébellion de Satsuma, dernier grand soulèvement samouraï en 1877, a inspiré le film « Le Dernier Samouraï »."
- },
- {
-  "id": "his-029",
+  "id": "his-025",
   "categorie": "Histoire",
   "sous_theme": "Chine",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Sous quelle dynastie a été construite la Cité interdite de Pékin ?",
   "choix": [
    "Les Ming",
@@ -464,11 +400,11 @@
   "anecdote": "Achevée en 1420, elle compterait selon la légende 9 999 pièces, une de moins que le palais céleste."
  },
  {
-  "id": "his-030",
+  "id": "his-026",
   "categorie": "Histoire",
   "sous_theme": "Grandes découvertes",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quel navigateur portugais a ouvert la route maritime vers l'Inde en 1498 ?",
   "choix": [
    "Vasco de Gama",
@@ -480,11 +416,11 @@
   "anecdote": "Bartolomeu Dias avait franchi le cap de Bonne-Espérance dix ans plus tôt, en 1488."
  },
  {
-  "id": "his-031",
+  "id": "his-027",
   "categorie": "Histoire",
   "sous_theme": "Russie",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quelle impératrice a régné sur la Russie de 1762 à 1796 ?",
   "choix": [
    "Catherine II",
@@ -496,27 +432,11 @@
   "anecdote": "« La Grande Catherine » était allemande de naissance : elle s'appelait Sophie d'Anhalt-Zerbst."
  },
  {
-  "id": "his-032",
-  "categorie": "Histoire",
-  "sous_theme": "États-Unis",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quelle guerre a opposé le Nord et le Sud des États-Unis de 1861 à 1865 ?",
-  "choix": [
-   "La guerre de Sécession",
-   "La guerre d'Indépendance",
-   "La guerre de 1812",
-   "La guerre du Mexique"
-  ],
-  "reponse": "La guerre de Sécession",
-  "anecdote": "Elle a fait plus de 600 000 morts, davantage que toute autre guerre de l'histoire américaine."
- },
- {
-  "id": "his-033",
+  "id": "his-028",
   "categorie": "Histoire",
   "sous_theme": "Napoléon",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Qui a posé la couronne sur la tête de Napoléon lors de son sacre en 1804 ?",
   "choix": [
    "Napoléon lui-même",
@@ -528,11 +448,11 @@
   "anecdote": "Le pape s'est contenté de bénir la cérémonie. Napoléon a ensuite couronné Joséphine, la scène peinte par David."
  },
  {
-  "id": "his-034",
+  "id": "his-029",
   "categorie": "Histoire",
   "sous_theme": "Antiquité",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Quel peuple a fondé la ville de Carthage ?",
   "choix": [
    "Les Phéniciens",
@@ -544,27 +464,11 @@
   "anecdote": "Selon la légende, la reine Didon obtint autant de terre qu'une peau de bœuf pouvait en couvrir... et la découpa en fines lanières."
  },
  {
-  "id": "his-035",
-  "categorie": "Histoire",
-  "sous_theme": "Moyen Âge",
-  "type": "qcm",
-  "difficulte": 3,
-  "question": "Quelle épidémie a tué entre un tiers et la moitié des Européens au XIVe siècle ?",
-  "choix": [
-   "La peste noire",
-   "La grippe espagnole",
-   "Le choléra",
-   "La variole"
-  ],
-  "reponse": "La peste noire",
-  "anecdote": "Elle est arrivée en Europe en 1347, à bord de navires génois venus de Caffa, en Crimée."
- },
- {
-  "id": "his-036",
+  "id": "his-030",
   "categorie": "Histoire",
   "sous_theme": "États-Unis",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quel pays a acheté l'Alaska à la Russie en 1867 ?",
   "choix": [
    "Les États-Unis",
@@ -576,11 +480,11 @@
   "anecdote": "Prix : 7,2 millions de dollars, environ 2 cents l'acre. La presse se moqua de cette « folie de Seward »."
  },
  {
-  "id": "his-037",
+  "id": "his-031",
   "categorie": "Histoire",
   "sous_theme": "Angleterre",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Combien d'épouses le roi Henri VIII d'Angleterre a-t-il eues ?",
   "choix": [
    "Six",
@@ -592,11 +496,11 @@
   "anecdote": "Les écoliers anglais retiennent leur sort ainsi : « divorcée, décapitée, morte ; divorcée, décapitée, survivante »."
  },
  {
-  "id": "his-038",
+  "id": "his-032",
   "categorie": "Histoire",
   "sous_theme": "Royaume-Uni",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quel souverain a régné le plus longtemps sur le Royaume-Uni ?",
   "choix": [
    "Elizabeth II",
@@ -608,11 +512,11 @@
   "anecdote": "Elle a régné 70 ans et 214 jours, de 1952 à 2022, et a connu 15 Premiers ministres britanniques."
  },
  {
-  "id": "his-039",
+  "id": "his-033",
   "categorie": "Histoire",
   "sous_theme": "Amériques",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quel peuple a fondé Tenochtitlan, la ville sur laquelle a été bâtie Mexico ?",
   "choix": [
    "Les Aztèques",
@@ -624,11 +528,11 @@
   "anecdote": "La ville était construite sur un lac : par endroits, Mexico s'enfonce encore de plusieurs dizaines de centimètres par an."
  },
  {
-  "id": "his-040",
+  "id": "his-034",
   "categorie": "Histoire",
   "sous_theme": "France contemporaine",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Sous quel président la peine de mort a-t-elle été abolie en France, en 1981 ?",
   "choix": [
    "François Mitterrand",
@@ -640,27 +544,11 @@
   "anecdote": "La dernière exécution en France a eu lieu en 1977, à Marseille. La loi a été portée par Robert Badinter."
  },
  {
-  "id": "his-041",
-  "categorie": "Histoire",
-  "sous_theme": "États-Unis",
-  "type": "qcm",
-  "difficulte": 3,
-  "question": "Dans quelle ville John F. Kennedy a-t-il été assassiné en 1963 ?",
-  "choix": [
-   "Dallas",
-   "Houston",
-   "Washington",
-   "Chicago"
-  ],
-  "reponse": "Dallas",
-  "anecdote": "Son assassin présumé, Lee Harvey Oswald, a lui-même été abattu deux jours plus tard par Jack Ruby, en direct à la télévision."
- },
- {
-  "id": "his-042",
+  "id": "his-035",
   "categorie": "Histoire",
   "sous_theme": "Chine",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel empereur chinois s'est fait enterrer avec une armée de soldats en terre cuite ?",
   "choix": [
    "Qin Shi Huang",
@@ -672,27 +560,11 @@
   "anecdote": "L'armée compte environ 8 000 soldats, et aucun n'aurait exactement le même visage."
  },
  {
-  "id": "his-043",
-  "categorie": "Histoire",
-  "sous_theme": "Seconde Guerre mondiale",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quelle ville a été frappée par la première bombe atomique utilisée en temps de guerre ?",
-  "choix": [
-   "Hiroshima",
-   "Nagasaki",
-   "Tokyo",
-   "Kyoto"
-  ],
-  "reponse": "Hiroshima",
-  "anecdote": "Kyoto figurait sur la liste des cibles, mais en a été retirée à la demande du secrétaire américain à la Guerre, qui connaissait la ville."
- },
- {
-  "id": "his-044",
+  "id": "his-036",
   "categorie": "Histoire",
   "sous_theme": "Francs",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quel roi des Francs a été baptisé à Reims vers l'an 500 ?",
   "choix": [
    "Clovis",
@@ -704,11 +576,11 @@
   "anecdote": "Le prénom Louis vient de Clovis (Hlodowig) : la France a eu des rois Louis jusqu'à Louis XVIII."
  },
  {
-  "id": "his-045",
+  "id": "his-037",
   "categorie": "Histoire",
   "sous_theme": "États-Unis",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Quel métier Al Capone affichait-il sur sa carte de visite ?",
   "choix": [
    "Marchand de meubles d'occasion",
@@ -720,11 +592,11 @@
   "anecdote": "Il n'a jamais été condamné pour ses crimes mafieux... mais pour fraude fiscale, en 1931."
  },
  {
-  "id": "his-046",
+  "id": "his-038",
   "categorie": "Histoire",
   "sous_theme": "Art et histoire",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "En quelle année la Joconde a-t-elle été volée au Louvre ?",
   "reponse": 1911,
   "unite": "année",
@@ -736,27 +608,11 @@
   "anecdote": "Picasso a été interrogé par la police. Le voleur, un vitrier italien, l'avait cachée deux ans dans sa chambre."
  },
  {
-  "id": "his-047",
-  "categorie": "Histoire",
-  "sous_theme": "Guerre froide",
-  "type": "fourchette",
-  "difficulte": 2,
-  "question": "En quelle année le mur de Berlin est-il tombé ?",
-  "reponse": 1989,
-  "unite": "année",
-  "tolerance": 0,
-  "bornes": [
-   1945,
-   2010
-  ],
-  "anecdote": "L'ouverture a été annoncée par erreur, lors d'une conférence de presse, par un dirigeant est-allemand mal briefé."
- },
- {
-  "id": "his-048",
+  "id": "his-039",
   "categorie": "Histoire",
   "sous_theme": "Rois de France",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Combien d'années a duré le règne de Louis XIV ?",
   "reponse": 72,
   "unite": "ans",
@@ -768,43 +624,11 @@
   "anecdote": "Devenu roi à 4 ans, il a régné de 1643 à 1715 : un record pour un roi de France."
  },
  {
-  "id": "his-049",
-  "categorie": "Histoire",
-  "sous_theme": "Révolution française",
-  "type": "fourchette",
-  "difficulte": 1,
-  "question": "En quelle année a eu lieu la prise de la Bastille ?",
-  "reponse": 1789,
-  "unite": "année",
-  "tolerance": 0,
-  "bornes": [
-   1650,
-   1900
-  ],
-  "anecdote": "Ce jour-là, la forteresse ne détenait que sept prisonniers."
- },
- {
-  "id": "his-050",
-  "categorie": "Histoire",
-  "sous_theme": "Transports",
-  "type": "fourchette",
-  "difficulte": 3,
-  "question": "En quelle année le Titanic a-t-il coulé ?",
-  "reponse": 1912,
-  "unite": "année",
-  "tolerance": 0,
-  "bornes": [
-   1850,
-   1960
-  ],
-  "anecdote": "Il transportait environ 2 200 personnes, mais ses canots ne pouvaient en accueillir que 1 178."
- },
- {
-  "id": "his-051",
+  "id": "his-040",
   "categorie": "Histoire",
   "sous_theme": "Rome antique",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 3,
   "question": "En quelle année Jules César a-t-il été assassiné ? (négatif = avant J.-C.)",
   "reponse": -44,
   "unite": "année",
@@ -816,11 +640,11 @@
   "anecdote": "Il a été poignardé 23 fois, le jour des ides de mars, en pleine séance du Sénat."
  },
  {
-  "id": "his-052",
+  "id": "his-041",
   "categorie": "Histoire",
   "sous_theme": "Moyen Âge",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "En quelle année Jeanne d'Arc a-t-elle été brûlée vive à Rouen ?",
   "reponse": 1431,
   "unite": "année",
@@ -832,11 +656,11 @@
   "anecdote": "Elle avait 19 ans. Réhabilitée en 1456, elle n'a été canonisée qu'en 1920."
  },
  {
-  "id": "his-053",
+  "id": "his-042",
   "categorie": "Histoire",
   "sous_theme": "Rome antique",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "En quelle année Rome a-t-elle été fondée, selon la tradition ? (négatif = avant J.-C.)",
   "reponse": -753,
   "unite": "année",
@@ -848,11 +672,11 @@
   "anecdote": "Les Romains comptaient les années « ab Urbe condita », c'est-à-dire depuis la fondation de la ville."
  },
  {
-  "id": "his-054",
+  "id": "his-043",
   "categorie": "Histoire",
   "sous_theme": "Russie",
   "type": "fourchette",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "En quelle année a eu lieu la révolution russe d'Octobre ?",
   "reponse": 1917,
   "unite": "année",
@@ -864,7 +688,7 @@
   "anecdote": "Elle s'est en fait déroulée en novembre selon notre calendrier : la Russie utilisait encore le calendrier julien."
  },
  {
-  "id": "his-055",
+  "id": "his-044",
   "categorie": "Histoire",
   "sous_theme": "Moyen Âge",
   "type": "fourchette",
@@ -880,11 +704,11 @@
   "anecdote": "Commencée sous Louis VII, la cathédrale n'a été achevée que sous Philippe VI, vers 1345."
  },
  {
-  "id": "his-056",
+  "id": "his-045",
   "categorie": "Histoire",
   "sous_theme": "Première Guerre mondiale",
   "type": "fourchette",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "En quelle année a été signé le traité de Versailles ?",
   "reponse": 1919,
   "unite": "année",
@@ -896,11 +720,11 @@
   "anecdote": "Il a été signé dans la galerie des Glaces, là même où l'Empire allemand avait été proclamé en 1871."
  },
  {
-  "id": "his-057",
+  "id": "his-046",
   "categorie": "Histoire",
   "sous_theme": "France",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "En quelle année l'esclavage a-t-il été définitivement aboli dans les colonies françaises ?",
   "reponse": 1848,
   "unite": "année",
@@ -912,7 +736,7 @@
   "anecdote": "Une première abolition, votée en 1794, avait été annulée par Napoléon Bonaparte en 1802."
  },
  {
-  "id": "his-058",
+  "id": "his-047",
   "categorie": "Histoire",
   "sous_theme": "Napoléon",
   "type": "fourchette",
@@ -928,27 +752,11 @@
   "anecdote": "La légende du « petit caporal » vient d'une confusion entre pouces français et anglais, et de la propagande britannique."
  },
  {
-  "id": "his-059",
-  "categorie": "Histoire",
-  "sous_theme": "Seconde Guerre mondiale",
-  "type": "fourchette",
-  "difficulte": 2,
-  "question": "En quelle année a eu lieu le débarquement de Normandie ?",
-  "reponse": 1944,
-  "unite": "année",
-  "tolerance": 0,
-  "bornes": [
-   1900,
-   2000
-  ],
-  "anecdote": "Le nom de code de l'opération était Overlord ; la phase maritime s'appelait Neptune."
- },
- {
-  "id": "his-060",
+  "id": "his-048",
   "categorie": "Histoire",
   "sous_theme": "Moyen Âge",
   "type": "fourchette",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "En quelle année Charlemagne a-t-il été couronné empereur ?",
   "reponse": 800,
   "unite": "année",
@@ -960,11 +768,11 @@
   "anecdote": "Il a été couronné à Rome par le pape Léon III, le jour de Noël."
  },
  {
-  "id": "his-061",
+  "id": "his-049",
   "categorie": "Histoire",
   "sous_theme": "Rois de France",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "En quelle année Hugues Capet est-il devenu roi des Francs ?",
   "reponse": 987,
   "unite": "année",
@@ -976,11 +784,11 @@
   "anecdote": "Ses descendants, les Capétiens et leurs branches, ont régné sur la France jusqu'en 1848."
  },
  {
-  "id": "his-062",
+  "id": "his-050",
   "categorie": "Histoire",
   "sous_theme": "Révolution française",
   "type": "fourchette",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "En quelle année Louis XVI a-t-il été guillotiné ?",
   "reponse": 1793,
   "unite": "année",
@@ -992,11 +800,11 @@
   "anecdote": "Il a été exécuté le 21 janvier sur la place de la Révolution, l'actuelle place de la Concorde."
  },
  {
-  "id": "his-063",
+  "id": "his-051",
   "categorie": "Histoire",
   "sous_theme": "Napoléon",
   "type": "fourchette",
-  "difficulte": 9,
+  "difficulte": 7,
   "question": "Combien de soldats environ composaient la Grande Armée au départ de la campagne de Russie, en 1812 ?",
   "reponse": 600000,
   "unite": "soldats",
@@ -1008,27 +816,11 @@
   "anecdote": "Seule une petite fraction est revenue de Russie, décimée par les combats, le froid et la faim."
  },
  {
-  "id": "his-064",
-  "categorie": "Histoire",
-  "sous_theme": "Grandes découvertes",
-  "type": "fourchette",
-  "difficulte": 2,
-  "question": "En quelle année Christophe Colomb a-t-il atteint l'Amérique pour la première fois ?",
-  "reponse": 1492,
-  "unite": "année",
-  "tolerance": 0,
-  "bornes": [
-   1300,
-   1700
-  ],
-  "anecdote": "Il est mort convaincu d'avoir atteint les Indes, d'où le nom d'« Indiens » donné aux Amérindiens."
- },
- {
-  "id": "his-065",
+  "id": "his-052",
   "categorie": "Histoire",
   "sous_theme": "Byzance",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "En quelle année Constantinople est-elle tombée aux mains des Ottomans ?",
   "reponse": 1453,
   "unite": "année",
@@ -1040,11 +832,11 @@
   "anecdote": "Cette date est souvent utilisée pour marquer la fin du Moyen Âge."
  },
  {
-  "id": "his-066",
+  "id": "his-053",
   "categorie": "Histoire",
   "sous_theme": "Antiquité",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Cléopâtre",
   "reponses_acceptees": [
@@ -1059,32 +851,11 @@
   "anecdote": "Elle descendait de Ptolémée, un général macédonien d'Alexandre le Grand."
  },
  {
-  "id": "his-067",
-  "categorie": "Histoire",
-  "sous_theme": "Moyen Âge",
-  "type": "indices",
-  "difficulte": 2,
-  "question": "Qui suis-je ?",
-  "reponse": "Jeanne d'Arc",
-  "reponses_acceptees": [
-   "Jeanne",
-   "La Pucelle",
-   "La Pucelle d'Orléans"
-  ],
-  "indices": [
-   "Je suis morte à 19 ans",
-   "J'entendais des voix depuis l'âge de 13 ans",
-   "J'ai fait sacrer un roi à Reims",
-   "On m'appelle la Pucelle d'Orléans"
-  ],
-  "anecdote": "Elle ne savait ni lire ni écrire, mais a signé quelques lettres de son prénom."
- },
- {
-  "id": "his-068",
+  "id": "his-054",
   "categorie": "Histoire",
   "sous_theme": "Gaule",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Vercingétorix",
   "reponses_acceptees": [
@@ -1099,11 +870,11 @@
   "anecdote": "Aucun portrait fiable n'existe : sa moustache et son casque ailé sont une invention du XIXe siècle."
  },
  {
-  "id": "his-069",
+  "id": "his-055",
   "categorie": "Histoire",
   "sous_theme": "Grandes découvertes",
   "type": "indices",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Marco Polo",
   "reponses_acceptees": [
@@ -1118,32 +889,11 @@
   "anecdote": "Certains historiens doutent qu'il soit vraiment allé en Chine : il ne mentionne ni la Grande Muraille ni le thé."
  },
  {
-  "id": "his-070",
-  "categorie": "Histoire",
-  "sous_theme": "Égypte ancienne",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Qui suis-je ?",
-  "reponse": "Toutânkhamon",
-  "reponses_acceptees": [
-   "Toutankhamon",
-   "Tutankhamon",
-   "Toutankamon"
-  ],
-  "indices": [
-   "Je suis devenu pharaon vers l'âge de 9 ans",
-   "Je suis mort vers 19 ans",
-   "Mon tombeau a été découvert en 1922 par Howard Carter",
-   "Mon masque funéraire en or est mondialement célèbre"
-  ],
-  "anecdote": "Son tombeau contenait plus de 5 000 objets, dont des gants, des jeux de société et des sous-vêtements."
- },
- {
-  "id": "his-071",
+  "id": "his-056",
   "categorie": "Histoire",
   "sous_theme": "Moyen Âge",
   "type": "indices",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel est cet objet ?",
   "reponse": "La tapisserie de Bayeux",
   "reponses_acceptees": [
@@ -1160,11 +910,11 @@
   "anecdote": "On y voit passer une comète : celle de Halley, visible en 1066."
  },
  {
-  "id": "his-072",
+  "id": "his-057",
   "categorie": "Histoire",
   "sous_theme": "Rome antique",
   "type": "indices",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Spartacus",
   "reponses_acceptees": [
@@ -1179,11 +929,11 @@
   "anecdote": "Environ 6 000 rebelles ont été crucifiés sur près de 200 km, entre Capoue et Rome."
  },
  {
-  "id": "his-073",
+  "id": "his-058",
   "categorie": "Histoire",
   "sous_theme": "Asie",
   "type": "indices",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Gengis Khan",
   "reponses_acceptees": [
@@ -1200,11 +950,11 @@
   "anecdote": "Une étude génétique estime qu'environ 0,5 % des hommes de la planète descendraient de lui."
  },
  {
-  "id": "his-074",
+  "id": "his-059",
   "categorie": "Histoire",
   "sous_theme": "Moyen Âge",
   "type": "indices",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Qui suis-je ?",
   "reponse": "Aliénor d'Aquitaine",
   "reponses_acceptees": [
@@ -1221,11 +971,11 @@
   "anecdote": "Elle a vécu environ 80 ans, un âge exceptionnel au XIIe siècle."
  },
  {
-  "id": "his-075",
+  "id": "his-060",
   "categorie": "Histoire",
   "sous_theme": "Amériques",
   "type": "indices",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quel est ce navire ?",
   "reponse": "Le Mayflower",
   "reponses_acceptees": [
@@ -1240,11 +990,11 @@
   "anecdote": "Des dizaines de millions de personnes descendraient aujourd'hui de ses 102 passagers."
  },
  {
-  "id": "his-076",
+  "id": "his-061",
   "categorie": "Histoire",
   "sous_theme": "Afrique",
   "type": "indices",
-  "difficulte": 9,
+  "difficulte": 6,
   "question": "Qui suis-je ?",
   "reponse": "Mansa Moussa",
   "reponses_acceptees": [
@@ -1261,11 +1011,11 @@
   "anecdote": "Il aurait distribué tant d'or en Égypte que sa valeur y aurait chuté pendant plusieurs années."
  },
  {
-  "id": "his-077",
+  "id": "his-062",
   "categorie": "Histoire",
   "sous_theme": "Révolution française",
   "type": "indices",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Qui suis-je ?",
   "reponse": "Olympe de Gouges",
   "reponses_acceptees": [
@@ -1281,51 +1031,11 @@
   "anecdote": "Elle y écrivait : « La femme a le droit de monter sur l'échafaud ; elle doit avoir également celui de monter à la tribune. »"
  },
  {
-  "id": "his-078",
-  "categorie": "Histoire",
-  "sous_theme": "Guerre froide",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Qu'est-ce que c'est ?",
-  "reponse": "Le mur de Berlin",
-  "reponses_acceptees": [
-   "Mur de Berlin",
-   "Berliner Mauer"
-  ],
-  "indices": [
-   "On a commencé à me construire en une nuit, le 13 août 1961",
-   "Je mesurais environ 155 km",
-   "On m'appelait le « mur de la honte »",
-   "Je suis tombé le 9 novembre 1989"
-  ],
-  "anecdote": "Au moins 140 personnes sont mortes en essayant de le franchir."
- },
- {
-  "id": "his-079",
-  "categorie": "Histoire",
-  "sous_theme": "Rome antique",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Quelle est cette ville ?",
-  "reponse": "Pompéi",
-  "reponses_acceptees": [
-   "Pompei",
-   "Pompeii"
-  ],
-  "indices": [
-   "J'ai été ensevelie en l'an 79",
-   "On m'a redécouverte au XVIIIe siècle",
-   "Les moulages de mes habitants figés sont célèbres",
-   "Le Vésuve m'a détruite"
-  ],
-  "anecdote": "On y a retrouvé des graffitis : déclarations d'amour, insultes et même publicités électorales."
- },
- {
-  "id": "his-080",
+  "id": "his-063",
   "categorie": "Histoire",
   "sous_theme": "Préhistoire",
   "type": "indices",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Quel est ce lieu ?",
   "reponse": "Lascaux",
   "reponses_acceptees": [
@@ -1340,111 +1050,111 @@
   "anecdote": "Fermée au public depuis 1963 pour la protéger, elle se visite grâce à des répliques fidèles."
  },
  {
-  "id": "his-081",
+  "id": "his-064",
   "categorie": "Histoire",
   "sous_theme": "Antiquité",
   "type": "vf",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Vrai ou faux : Cléopâtre a vécu plus près de nous dans le temps que de la construction de la pyramide de Khéops.",
   "reponse": "Vrai",
   "anecdote": "Environ 2 500 ans la séparent de Khéops, contre environ 2 000 ans de notre époque."
  },
  {
-  "id": "his-082",
+  "id": "his-065",
   "categorie": "Histoire",
   "sous_theme": "Vikings",
   "type": "vf",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Vrai ou faux : les Vikings portaient des casques à cornes au combat.",
   "reponse": "Faux",
   "anecdote": "C'est une invention du XIXe siècle, popularisée par les costumes d'un opéra de Wagner en 1876."
  },
  {
-  "id": "his-083",
+  "id": "his-066",
   "categorie": "Histoire",
   "sous_theme": "Moyen Âge",
   "type": "vf",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "Vrai ou faux : au Moyen Âge, les savants pensaient que la Terre était plate.",
   "reponse": "Faux",
   "anecdote": "Sa rondeur était connue depuis l'Antiquité : Ératosthène avait même estimé sa circonférence vers 240 av. J.-C."
  },
  {
-  "id": "his-084",
+  "id": "his-067",
   "categorie": "Histoire",
   "sous_theme": "Insolite",
   "type": "vf",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Vrai ou faux : l'université d'Oxford est plus ancienne que l'Empire aztèque.",
   "reponse": "Vrai",
   "anecdote": "On y enseigne depuis 1096, alors que Tenochtitlan, la capitale aztèque, n'a été fondée qu'en 1325."
  },
  {
-  "id": "his-085",
+  "id": "his-068",
   "categorie": "Histoire",
   "sous_theme": "Égypte ancienne",
   "type": "vf",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Vrai ou faux : les pyramides d'Égypte ont été construites par des esclaves.",
   "reponse": "Faux",
   "anecdote": "Les fouilles du village des bâtisseurs montrent des ouvriers nourris, soignés et enterrés avec honneur près des pyramides."
  },
  {
-  "id": "his-086",
+  "id": "his-069",
   "categorie": "Histoire",
   "sous_theme": "Révolution française",
   "type": "vf",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Vrai ou faux : Marie-Antoinette a dit « Qu'ils mangent de la brioche ! ».",
   "reponse": "Faux",
   "anecdote": "La phrase apparaît dans les Confessions de Rousseau, écrites alors qu'elle n'était qu'une enfant en Autriche."
  },
  {
-  "id": "his-087",
+  "id": "his-070",
   "categorie": "Histoire",
   "sous_theme": "Rome antique",
   "type": "vf",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Vrai ou faux : Jules César était empereur romain.",
   "reponse": "Faux",
   "anecdote": "Il fut dictateur. Le premier empereur fut son fils adoptif Octave, devenu Auguste."
  },
  {
-  "id": "his-088",
+  "id": "his-071",
   "categorie": "Histoire",
   "sous_theme": "Rome antique",
   "type": "vf",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Vrai ou faux : la plupart des combats de gladiateurs se terminaient par la mort d'un combattant.",
   "reponse": "Faux",
   "anecdote": "Les gladiateurs coûtaient cher à former et à nourrir : le perdant était souvent épargné."
  },
  {
-  "id": "his-089",
+  "id": "his-072",
   "categorie": "Histoire",
   "sous_theme": "XXe siècle",
   "type": "vf",
-  "difficulte": 9,
+  "difficulte": 6,
   "question": "Vrai ou faux : le Japon et la Russie n'ont jamais signé de traité de paix après la Seconde Guerre mondiale.",
   "reponse": "Vrai",
   "anecdote": "Le blocage porte sur les îles Kouriles du Sud, occupées par l'URSS en 1945 et revendiquées par le Japon."
  },
  {
-  "id": "his-090",
+  "id": "his-073",
   "categorie": "Histoire",
   "sous_theme": "Moyen Âge",
   "type": "vf",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Vrai ou faux : le Moyen Âge a duré environ mille ans.",
   "reponse": "Vrai",
   "anecdote": "On le fait traditionnellement commencer en 476, avec la chute de l'Empire romain d'Occident."
  },
  {
-  "id": "his-091",
+  "id": "his-074",
   "categorie": "Histoire",
   "sous_theme": "Rois de France",
   "type": "libre",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "Quel roi de France était surnommé « le Bien-Aimé » ?",
   "reponse": "Louis XV",
   "reponses_acceptees": [
@@ -1454,11 +1164,11 @@
   "anecdote": "Le surnom date de 1744, quand il a guéri d'une grave maladie à Metz. Il est pourtant mort très impopulaire."
  },
  {
-  "id": "his-092",
+  "id": "his-075",
   "categorie": "Histoire",
   "sous_theme": "Rome antique",
   "type": "libre",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quel empereur romain a fait construire un mur de 117 km en Grande-Bretagne ?",
   "reponse": "Hadrien",
   "reponses_acceptees": [
@@ -1468,24 +1178,11 @@
   "anecdote": "George R. R. Martin a raconté que ce mur lui avait inspiré le Mur de Game of Thrones."
  },
  {
-  "id": "his-093",
-  "categorie": "Histoire",
-  "sous_theme": "États-Unis",
-  "type": "libre",
-  "difficulte": 3,
-  "question": "Quel président américain a fait abolir l'esclavage par le 13e amendement ?",
-  "reponse": "Abraham Lincoln",
-  "reponses_acceptees": [
-   "Lincoln"
-  ],
-  "anecdote": "Il était aussi un redoutable lutteur : il figure au Hall of Fame de la lutte américaine."
- },
- {
-  "id": "his-094",
+  "id": "his-076",
   "categorie": "Histoire",
   "sous_theme": "Grandes découvertes",
   "type": "libre",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel était le nom du plus grand navire de Christophe Colomb lors de son premier voyage ?",
   "reponse": "Santa María",
   "reponses_acceptees": [
@@ -1495,11 +1192,11 @@
   "anecdote": "Il s'est échoué le soir de Noël 1492, au large de l'île d'Hispaniola."
  },
  {
-  "id": "his-095",
+  "id": "his-077",
   "categorie": "Histoire",
   "sous_theme": "Antiquité",
   "type": "libre",
-  "difficulte": 9,
+  "difficulte": 6,
   "question": "Quel peuple a creusé la cité de Pétra, en Jordanie ?",
   "reponse": "Les Nabatéens",
   "reponses_acceptees": [
@@ -1510,25 +1207,11 @@
   "anecdote": "Le monument Al-Khazneh apparaît dans « Indiana Jones et la Dernière Croisade »."
  },
  {
-  "id": "his-096",
-  "categorie": "Histoire",
-  "sous_theme": "Moyen Âge",
-  "type": "libre",
-  "difficulte": 3,
-  "question": "Quel surnom portait le roi Richard Ier d'Angleterre ?",
-  "reponse": "Cœur de Lion",
-  "reponses_acceptees": [
-   "Coeur de Lion",
-   "Richard Coeur de Lion"
-  ],
-  "anecdote": "Ce roi d'Angleterre parlait surtout français et n'a passé qu'environ six mois de son règne dans son royaume."
- },
- {
-  "id": "his-097",
+  "id": "his-078",
   "categorie": "Histoire",
   "sous_theme": "Antiquité",
   "type": "libre",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle cité grecque était célèbre pour l'éducation militaire très dure de ses enfants ?",
   "reponse": "Sparte",
   "reponses_acceptees": [
@@ -1538,39 +1221,11 @@
   "anecdote": "Le mot « laconique » vient de la Laconie, région de Sparte, dont les habitants étaient réputés pour leurs réponses très brèves."
  },
  {
-  "id": "his-098",
-  "categorie": "Histoire",
-  "sous_theme": "Renaissance",
-  "type": "libre",
-  "difficulte": 2,
-  "question": "Quelle bataille, gagnée par François Ier, a eu lieu en 1515 ?",
-  "reponse": "Marignan",
-  "reponses_acceptees": [
-   "La bataille de Marignan"
-  ],
-  "anecdote": "C'est peut-être la date la plus connue des écoliers français. La bataille a duré deux jours."
- },
- {
-  "id": "his-099",
-  "categorie": "Histoire",
-  "sous_theme": "Sciences et histoire",
-  "type": "libre",
-  "difficulte": 4,
-  "question": "Quel savant a été jugé par l'Inquisition en 1633 pour avoir affirmé que la Terre tourne autour du Soleil ?",
-  "reponse": "Galilée",
-  "reponses_acceptees": [
-   "Galileo",
-   "Galileo Galilei",
-   "Galilee"
-  ],
-  "anecdote": "L'Église ne l'a officiellement réhabilité qu'en 1992, sous Jean-Paul II."
- },
- {
-  "id": "his-100",
+  "id": "his-079",
   "categorie": "Histoire",
   "sous_theme": "Russie",
   "type": "libre",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Comment s'appelait le dernier tsar de Russie ?",
   "reponse": "Nicolas II",
   "reponses_acceptees": [
@@ -1578,5 +1233,440 @@
    "Nicolas deux"
   ],
   "anecdote": "Il était le cousin germain du roi George V d'Angleterre, auquel il ressemblait de façon troublante."
+ },
+ {
+  "id": "his-080",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel roi de France a été surnommé « le Hutin » ?",
+  "choix": [
+   "Louis X",
+   "Philippe V",
+   "Charles IV",
+   "Jean Ier"
+  ],
+  "reponse": "Louis X",
+  "anecdote": "« Hutin » signifie querelleur. Son fils posthume, Jean Ier, n'a vécu que cinq jours, en 1316."
+ },
+ {
+  "id": "his-081",
+  "categorie": "Histoire",
+  "sous_theme": "Révolution française",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel mois du calendrier révolutionnaire se situe entre vendémiaire et frimaire ?",
+  "choix": [
+   "Brumaire",
+   "Germinal",
+   "Thermidor",
+   "Nivôse"
+  ],
+  "reponse": "Brumaire",
+  "anecdote": "Le coup d'État du 18 brumaire an VIII (9 novembre 1799) a porté Bonaparte au pouvoir."
+ },
+ {
+  "id": "his-082",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle bataille navale de 31 av. J.-C. a scellé la défaite de Marc Antoine et de Cléopâtre ?",
+  "choix": [
+   "Actium",
+   "Salamine",
+   "Lépante",
+   "Mylae"
+  ],
+  "reponse": "Actium",
+  "anecdote": "Le vainqueur, Octavien, devient Auguste, premier empereur romain, en 27 av. J.-C."
+ },
+ {
+  "id": "his-083",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel traité de 843 a partagé l'empire carolingien entre les trois petits-fils de Charlemagne ?",
+  "choix": [
+   "Le traité de Verdun",
+   "Le traité de Meerssen",
+   "Le traité de Saint-Clair-sur-Epte",
+   "Le traité d'Aix-la-Chapelle"
+  ],
+  "reponse": "Le traité de Verdun",
+  "anecdote": "Lothaire, Louis le Germanique et Charles le Chauve se partagent l'empire : on y voit souvent l'acte de naissance de la France et de l'Allemagne."
+ },
+ {
+  "id": "his-084",
+  "categorie": "Histoire",
+  "sous_theme": "Égypte ancienne",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel pharaon a fait bâtir la pyramide à degrés de Saqqarah, la plus ancienne d'Égypte ?",
+  "choix": [
+   "Djéser",
+   "Snéfrou",
+   "Khéphren",
+   "Mykérinos"
+  ],
+  "reponse": "Djéser",
+  "anecdote": "Son architecte, Imhotep, a été divinisé après sa mort."
+ },
+ {
+  "id": "his-085",
+  "categorie": "Histoire",
+  "sous_theme": "IIIe République",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel président de la République est tombé d'un train de nuit, en pyjama, en 1920 ?",
+  "choix": [
+   "Paul Deschanel",
+   "Alexandre Millerand",
+   "Gaston Doumergue",
+   "Raymond Poincaré"
+  ],
+  "reponse": "Paul Deschanel",
+  "anecdote": "Recueilli par un garde-barrière à qui il affirmait être le président, il a démissionné quelques mois plus tard."
+ },
+ {
+  "id": "his-086",
+  "categorie": "Histoire",
+  "sous_theme": "Époque moderne",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quelle bataille navale de 1571 a vu la Sainte Ligue vaincre la flotte ottomane ?",
+  "choix": [
+   "Lépante",
+   "Preveza",
+   "Navarin",
+   "Aboukir"
+  ],
+  "reponse": "Lépante",
+  "anecdote": "Cervantes y a perdu l'usage de sa main gauche, ce qui lui vaudra le surnom de « manchot de Lépante »."
+ },
+ {
+  "id": "his-087",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Lequel des quatre empereurs de l'an 69 a régné le moins longtemps ?",
+  "choix": [
+   "Othon",
+   "Galba",
+   "Vitellius",
+   "Vespasien"
+  ],
+  "reponse": "Othon",
+  "anecdote": "Othon s'est donné la mort après environ trois mois de règne, à la suite de sa défaite à Bédriac."
+ },
+ {
+  "id": "his-088",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "De quelle cité de Mésopotamie le roi Gilgamesh était-il le souverain ?",
+  "choix": [
+   "Uruk",
+   "Ur",
+   "Babylone",
+   "Ninive"
+  ],
+  "reponse": "Uruk",
+  "anecdote": "L'Épopée de Gilgamesh, qui raconte déjà un déluge, est l'un des plus anciens récits littéraires connus."
+ },
+ {
+  "id": "his-089",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel souverain a été couronné en 962 premier empereur du Saint-Empire romain germanique ?",
+  "choix": [
+   "Otton Ier",
+   "Charlemagne",
+   "Henri l'Oiseleur",
+   "Frédéric Barberousse"
+  ],
+  "reponse": "Otton Ier",
+  "anecdote": "Il avait arrêté les Hongrois à la bataille du Lechfeld, en 955."
+ },
+ {
+  "id": "his-090",
+  "categorie": "Histoire",
+  "sous_theme": "Guerres de Religion",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel roi de France a été poignardé par le moine Jacques Clément en 1589 ?",
+  "choix": [
+   "Henri III",
+   "Henri IV",
+   "Charles IX",
+   "François II"
+  ],
+  "reponse": "Henri III",
+  "anecdote": "Il est mort à Saint-Cloud ; avec lui s'éteint la dynastie des Valois et Henri de Navarre devient Henri IV."
+ },
+ {
+  "id": "his-091",
+  "categorie": "Histoire",
+  "sous_theme": "Entre-deux-guerres",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel président du Conseil a signé les accords de Munich pour la France en 1938 ?",
+  "choix": [
+   "Édouard Daladier",
+   "Léon Blum",
+   "Paul Reynaud",
+   "Camille Chautemps"
+  ],
+  "reponse": "Édouard Daladier",
+  "anecdote": "Acclamé à son retour, il aurait murmuré : « Ah, les cons ! S'ils savaient… »."
+ },
+ {
+  "id": "his-092",
+  "categorie": "Histoire",
+  "sous_theme": "Époque moderne",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Dans quelle ville a eu lieu la défenestration de 1618 qui a déclenché la guerre de Trente Ans ?",
+  "choix": [
+   "Prague",
+   "Vienne",
+   "Dresde",
+   "Cracovie"
+  ],
+  "reponse": "Prague",
+  "anecdote": "Les deux représentants de l'empereur, jetés par une fenêtre du château, ont survécu à leur chute."
+ },
+ {
+  "id": "his-093",
+  "categorie": "Histoire",
+  "sous_theme": "XIXe siècle",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel traité de 1842 a mis fin à la première guerre de l'opium et cédé Hong Kong au Royaume-Uni ?",
+  "choix": [
+   "Le traité de Nankin",
+   "Le traité de Tientsin",
+   "Le traité de Shimonoseki",
+   "Le traité de Pékin"
+  ],
+  "reponse": "Le traité de Nankin",
+  "anecdote": "Hong Kong n'a été rétrocédé à la Chine qu'en 1997, 155 ans plus tard."
+ },
+ {
+  "id": "his-094",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année a eu lieu la bataille de Bouvines ?",
+  "reponse": 1214,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1000,
+   1500
+  ],
+  "anecdote": "Philippe Auguste y bat l'empereur Otton IV et ses alliés, un dimanche de juillet."
+ },
+ {
+  "id": "his-095",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année est mort Alexandre le Grand ? (négatif = avant J.-C.)",
+  "reponse": -323,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   -600,
+   0
+  ],
+  "anecdote": "Il meurt à Babylone à 32 ans : ses généraux, les diadoques, se partagent son empire."
+ },
+ {
+  "id": "his-096",
+  "categorie": "Histoire",
+  "sous_theme": "IIIe République",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de jours a duré la Commune de Paris, en 1871 ?",
+  "reponse": 72,
+  "unite": "jours",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   365
+  ],
+  "anecdote": "Du 18 mars au 28 mai 1871 ; elle s'achève par la « Semaine sanglante »."
+ },
+ {
+  "id": "his-097",
+  "categorie": "Histoire",
+  "sous_theme": "Époque moderne",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En quelle année ont été signés les traités de Westphalie, qui mettent fin à la guerre de Trente Ans ?",
+  "reponse": 1648,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1450,
+   1800
+  ],
+  "anecdote": "Ils fondent l'idée moderne d'États souverains égaux : on parle encore de « système westphalien »."
+ },
+ {
+  "id": "his-098",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel roi de Lydie, à la richesse légendaire, aurait fait frapper les premières pièces d'or pur ?",
+  "reponse": "Crésus",
+  "reponses_acceptees": [
+   "Cresus"
+  ],
+  "anecdote": "D'où l'expression « riche comme Crésus ». Il a été vaincu par le Perse Cyrus vers 546 av. J.-C."
+ },
+ {
+  "id": "his-099",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment s'appelait le cheval d'Alexandre le Grand ?",
+  "reponse": "Bucéphale",
+  "reponses_acceptees": [
+   "Bucephale"
+  ],
+  "anecdote": "Son nom signifie « tête de bœuf ». Alexandre a fondé une ville, Bucéphalie, en son honneur."
+ },
+ {
+  "id": "his-100",
+  "categorie": "Histoire",
+  "sous_theme": "XXe siècle",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment s'appelait le dernier empereur de Chine ?",
+  "reponse": "Puyi",
+  "reponses_acceptees": [
+   "Pu Yi",
+   "Pou-Yi"
+  ],
+  "anecdote": "Empereur à 2 ans en 1908, il a fini jardinier au jardin botanique de Pékin sous le régime communiste."
+ },
+ {
+  "id": "his-101",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel stratège athénien a mené les Grecs à la victoire à Marathon, en 490 av. J.-C. ?",
+  "reponse": "Miltiade",
+  "reponses_acceptees": [
+   "Miltiades"
+  ],
+  "anecdote": "Il avait convaincu les autres stratèges d'attaquer les Perses sans attendre les renforts spartiates."
+ },
+ {
+  "id": "his-102",
+  "categorie": "Histoire",
+  "sous_theme": "Époque moderne",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel ministre de Louis XIV a fondé la Compagnie des Indes orientales en 1664 ?",
+  "reponse": "Colbert",
+  "reponses_acceptees": [
+   "Jean-Baptiste Colbert"
+  ],
+  "anecdote": "Contrôleur général des finances, il a aussi développé la marine et les manufactures, comme celle des Gobelins."
+ },
+ {
+  "id": "his-103",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : Jeanne d'Arc n'a été canonisée qu'au XXe siècle.",
+  "reponse": "Vrai",
+  "anecdote": "Réhabilitée dès 1456, elle n'a été canonisée qu'en 1920 par Benoît XV, près de cinq siècles après sa mort."
+ },
+ {
+  "id": "his-104",
+  "categorie": "Histoire",
+  "sous_theme": "XIXe siècle",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : Louis-Napoléon Bonaparte a été le premier président de la République française élu au suffrage universel.",
+  "reponse": "Vrai",
+  "anecdote": "Élu en décembre 1848 avec environ 74 % des voix, il prend le pouvoir par un coup d'État en 1851."
+ },
+ {
+  "id": "his-105",
+  "categorie": "Histoire",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Qui suis-je ?",
+  "reponse": "Talleyrand",
+  "reponses_acceptees": [
+   "Charles-Maurice de Talleyrand",
+   "Talleyrand-Périgord"
+  ],
+  "indices": [
+   "J'ai été évêque d'Autun",
+   "J'ai servi la Révolution, Napoléon puis Louis XVIII",
+   "On m'a surnommé « le Diable boiteux »",
+   "J'ai représenté la France au congrès de Vienne"
+  ],
+  "anecdote": "Napoléon l'aurait traité de « merde dans un bas de soie »."
+ },
+ {
+  "id": "his-106",
+  "categorie": "Histoire",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Qui suis-je ?",
+  "reponse": "Soliman le Magnifique",
+  "reponses_acceptees": [
+   "Soliman",
+   "Suleiman",
+   "Suleiman le Magnifique"
+  ],
+  "indices": [
+   "J'ai assiégé Vienne en 1529",
+   "J'ai été l'allié de François Ier",
+   "Mes sujets m'appelaient « le Législateur »",
+   "Sultan ottoman, j'ai régné 46 ans"
+  ],
+  "anecdote": "C'est le plus long règne de l'histoire de l'Empire ottoman, de 1520 à 1566."
+ },
+ {
+  "id": "his-107",
+  "categorie": "Histoire",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Qui suis-je ?",
+  "reponse": "Toussaint Louverture",
+  "reponses_acceptees": [
+   "Louverture",
+   "Toussaint-Louverture"
+  ],
+  "indices": [
+   "Je suis né esclave à Saint-Domingue",
+   "J'ai été général au service de la République française",
+   "J'ai été arrêté par traîtrise sur ordre de Bonaparte",
+   "Je suis mort au fort de Joux, dans le Jura, en 1803"
+  ],
+  "anecdote": "Haïti a proclamé son indépendance quelques mois après sa mort, le 1er janvier 1804."
  }
 ]

@@ -122,6 +122,8 @@ body[data-screen="choices"] .you-buzzed ~ * {}
 .pr-vis { position: relative; height: 22px; background: var(--g3); border: 3px solid #000; }
 #pr-band { position: absolute; top: 0; bottom: 0; background: var(--me, var(--sky)); }
 .pr-row { display: flex; align-items: center; gap: 8px; }
+.pr-big { display: flex; align-items: baseline; justify-content: center; gap: 8px; font-size: 26px; }
+.pr-big input { width: 70%; font-family: var(--font-text); font-size: 44px; text-align: center; padding: 4px; border: 3px solid #000; background: var(--white); color: var(--ink); user-select: text; -webkit-user-select: text; }
 .pr-row label { font-family: var(--font-title); font-size: 10px; width: 46px; }
 .pr-row input[type=range] { flex: 1; height: 40px; accent-color: var(--yellow); }
 .pr-row input:not([type]) , .pr-row input[inputmode] { width: 110px; font-family: var(--font-text); font-size: 24px; padding: 4px; border: 3px solid #000; background: var(--white); color: var(--ink); user-select: text; -webkit-user-select: text; }

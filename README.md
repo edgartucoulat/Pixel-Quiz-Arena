@@ -33,7 +33,7 @@ son score. Si le plateau est rechargé, il propose de **reprendre la partie**.
 ### Les manches
 
 - 🎡 **Thème Mystère** : la roue choisit le thème, chacun choisit son niveau de 1 à 10.
-- 📏 **La Fourchette** : encadre la réponse avec deux curseurs, la fourchette la plus serrée gagne.
+- 📏 **La Fourchette** : donne une seule valeur et vise pile. Réponse exacte = 400 pts, puis les points baissent avec l’écart (le plus proche gagne un bonus de 50 pts, trop loin = 0).
 - 🔔 **Buzzer à indices** : les indices tombent un par un, plus tu buzzes tôt, plus tu gagnes.
 - 4️⃣ **Le 4 à la suite** : 4 bonnes réponses d'affilée en 40 secondes.
 - ⚡ **QCM éclair** : tout le monde répond en même temps, avec un bonus de rapidité.
@@ -177,7 +177,7 @@ Selon le type :
 |---|---|
 | `qcm` | `choix` : 4 propositions distinctes, dont la `reponse` |
 | `vf` | `reponse` : `"Vrai"` ou `"Faux"` |
-| `fourchette` | `reponse` numérique, `unite` (`"année"` pour une date, négatif = av. J.-C.), `tolerance`, `bornes` : `[min, max]` des curseurs |
+| `fourchette` | `reponse` numérique, `unite` (`"année"` pour une date, négatif = av. J.-C.), `tolerance` (écart encore compté « pile », plafonné à 2 % de la réponse), `bornes` : `[min, max]` du curseur, qui servent aussi d’échelle pour noter l’écart |
 | `indices` | `indices` : 3 à 5 indices du plus dur au plus facile, `reponses_acceptees` |
 | `libre` | `reponses_acceptees` : variantes acceptées (les accents, articles et petites fautes sont tolérés automatiquement) |
 

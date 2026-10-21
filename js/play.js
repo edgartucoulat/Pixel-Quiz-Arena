@@ -190,7 +190,7 @@
     },
     locked(v) {
       const pick = v.choices && v.picked != null ? v.choices.list.find((c) => c.i === v.picked) : null;
-      const range = v.picked && typeof v.picked === 'object' ? `${PQA.fmtVal(v.picked.min, v.unite)} – ${PQA.fmtVal(v.picked.max, v.unite)}` : '';
+      const range = v.type === 'fourchette' && typeof v.picked === 'number' ? PQA.fmtVal(v.picked, v.unite) : '';
       return { key: 'locked' + v.qid + v.msg, html: `${timerBar()}<div class="wait"><div class="lock-icon">🔒</div><div class="wtitle">${esc(v.msg)}</div>${pick ? `<div class="picked-txt c${pick.i}">${esc(pick.text)}</div>` : ''}${range ? `<div class="picked-txt">${range}</div>` : ''}</div>` };
     },
     choices(v) {
@@ -295,9 +295,10 @@
     result(v) {
       const c = v.correct;
       const head = c === true ? `<div class="res-ok">✔ BRAVO !</div><div class="res-pts">+${fmt(v.pts)}</div>` : c === false ? `<div class="res-ko">${v.none ? '⏱ Trop tard !' : '✖ RATÉ !'}</div>` : '<div class="wtitle">Réponse :</div>';
+      const guess = v.guess ? `<div class="wmsg">Ta réponse : <b>${esc(v.guess)}</b>${v.exact ? ' · 🎯 PILE !' : v.gap ? ' · écart : ' + esc(v.gap) : ''}</div>` : '';
       return {
-        key: 'result' + v.phase + c + v.pts + v.answer,
-        html: `<div class="wait result ${c === true ? 'good' : c === false ? 'bad' : ''}">${head}<div class="res-answer">${esc(v.answer)}</div>${v.anecdote ? `<div class="res-anec">💡 ${esc(v.anecdote)}</div>` : ''}</div>`,
+        key: 'result' + v.phase + c + v.pts + v.answer + (v.guess || ''),
+        html: `<div class="wait result ${c === true ? 'good' : c === false ? 'bad' : ''}">${head}<div class="res-answer">${esc(v.answer)}</div>${guess}${v.anecdote ? `<div class="res-anec">💡 ${esc(v.anecdote)}</div>` : ''}</div>`,
       };
     },
     end(v) {
@@ -312,7 +313,7 @@
     },
   };
 
-  /* ---- Fourchette : deux curseurs mini / maxi ---- */
+  /* ---- Fourchette : une seule valeur, il faut viser pile ---- */
   function niceStep(raw) {
     const p = Math.pow(10, Math.floor(Math.log10(raw)));
     const n = raw / p;
@@ -335,39 +336,29 @@
       key: 'range' + v.qid,
       html: `${timerBar()}<div class="pq"><div class="pq-text">${esc(v.question)}</div>
         <div class="prange">
-          <div class="pr-vis"><div id="pr-band"></div></div>
-          <div class="pr-row"><label>MINI</label><input type="range" id="r-min" min="0" max="${SL}" value="${SL * 0.25}"><input id="n-min" inputmode="decimal"></div>
-          <div class="pr-row"><label>MAXI</label><input type="range" id="r-max" min="0" max="${SL}" value="${SL * 0.75}"><input id="n-max" inputmode="decimal"></div>
-          <div class="pr-fine"><button data-f="min" data-d="-1">mini −</button><button data-f="min" data-d="1">mini +</button><button data-f="max" data-d="-1">maxi −</button><button data-f="max" data-d="1">maxi +</button></div>
-          <div class="pr-sum" id="pr-sum"></div>
-          <div class="hint">Plus ta fourchette est serrée, plus tu gagnes... si elle contient la réponse !${v.unite ? ' Unité : <b>' + esc(v.unite) + '</b>' : ''}</div>
+          <div class="pr-big"><input id="n-val" inputmode="decimal"><span>${v.unite && v.unite !== 'année' ? esc(v.unite) : ''}</span></div>
+          <div class="pr-row"><input type="range" id="r-val" min="0" max="${SL}" value="${SL / 2}"></div>
+          <div class="pr-fine"><button data-d="-10">−−</button><button data-d="-1">−</button><button data-d="1">+</button><button data-d="10">++</button></div>
+          <div class="hint">Vise pile ! Plus tu es proche de la réponse, plus tu marques.${v.unite ? ' Unité : <b>' + esc(v.unite) + '</b>' : ''}</div>
           <button class="big-btn green" id="btn-range">VALIDER</button>
         </div></div>`,
       after() {
-        const rmin = $('#r-min'), rmax = $('#r-max'), nmin = $('#n-min'), nmax = $('#n-max');
-        let vals = { min: toVal(Number(rmin.value)), max: toVal(Number(rmax.value)) };
+        const rv = $('#r-val'), nv = $('#n-val');
+        let val = toVal(Number(rv.value));
         const show = (from) => {
-          if (vals.min > vals.max) { if (from === 'min') vals.max = vals.min; else vals.min = vals.max; }
-          const raw = (x) => (v.unite === 'année' ? String(x) : fmt(x).replace(/[\u202f\u00a0]/g, ' '));
-          if (from !== 'nmin') nmin.value = raw(vals.min);
-          if (from !== 'nmax') nmax.value = raw(vals.max);
-          rmin.value = toSl(vals.min); rmax.value = toSl(vals.max);
-          const a = toSl(vals.min) / SL * 100, b = toSl(vals.max) / SL * 100;
-          $('#pr-band').style.cssText = `left:${a}%;width:${Math.max(1, b - a)}%`;
-          $('#pr-sum').innerHTML = `Entre <b>${PQA.fmtVal(vals.min, v.unite, false)}</b> et <b>${PQA.fmtVal(vals.max, v.unite, false)}</b> ${v.unite === 'année' ? '' : esc(v.unite || '')}`;
+          if (from !== 'num') nv.value = v.unite === 'année' ? String(val) : fmt(val).replace(/[\u202f\u00a0]/g, ' ');
+          rv.value = toSl(val);
         };
-        rmin.oninput = () => { vals.min = toVal(Number(rmin.value)); show('min'); };
-        rmax.oninput = () => { vals.max = toVal(Number(rmax.value)); show('max'); };
+        rv.oninput = () => { val = toVal(Number(rv.value)); show(); };
         const parse = (s) => Number(String(s).replace(/\s/g, '').replace(',', '.'));
-        nmin.onchange = () => { const x = parse(nmin.value); if (isFinite(x)) vals.min = Math.max(lo, Math.min(hi, x)); show('min'); };
-        nmax.onchange = () => { const x = parse(nmax.value); if (isFinite(x)) vals.max = Math.max(lo, Math.min(hi, x)); show('max'); };
+        nv.oninput = () => { const x = parse(nv.value); if (isFinite(x) && nv.value.trim() !== '') { val = x; show('num'); } };
+        nv.onchange = () => { const x = parse(nv.value); if (isFinite(x)) val = x; show(); };
         $$('.pr-fine button').forEach((b) => (b.onclick = () => {
-          const f = b.dataset.f;
-          const st = log ? Math.max(step, Math.pow(10, Math.floor(Math.log10(Math.max(1, vals[f]))) - 1)) : step;
-          vals[f] = Math.max(lo, Math.min(hi, Number((vals[f] + st * Number(b.dataset.d)).toFixed(6))));
-          show(f); PQA.vibrate(8);
+          const st = log ? Math.max(step, Math.pow(10, Math.floor(Math.log10(Math.max(1, Math.abs(val)))) - 1)) : step;
+          val = Number((val + st * Number(b.dataset.d)).toFixed(6));
+          show(); PQA.vibrate(8);
         }));
-        $('#btn-range').onclick = () => { net.send({ t: 'answer', value: { min: vals.min, max: vals.max } }); PQA.vibrate(40); };
+        $('#btn-range').onclick = () => { const x = parse(nv.value); if (isFinite(x)) val = x; net.send({ t: 'answer', value: val }); PQA.vibrate(40); };
         show();
       },
     };
