@@ -453,7 +453,8 @@
       const clues = d.indices.map((c, i) => `<li class="${i < shown ? 'on' : ''} ${i === q.clue && !revealed ? 'cur' : ''}"><span class="cn">${i + 1}</span>${i < shown ? esc(c) : '? ? ?'}</li>`).join('');
       const cur = b.current && g.players[b.current];
       const banner = revealed ? '' : cur ? `<div class="buzz-banner" style="--pc:${cur.color}">${avatarImg(cur, 'buzz', 'tiny')} ${esc(cur.name)} a buzzé !${q.pending ? ' <small>(validation...)</small>' : ''}</div>`
-        : `<div class="buzz-open">🔔 Buzzers ouverts · ${pts} pts</div>`;
+        : b.readyAt && performance.now() < b.readyAt ? `<div class="buzz-open wait">⏳ Lisez bien… buzz trop tôt = bloqué 2 s</div>`
+        : `<div class="buzz-open">🔔 Buzzers ouverts · ${pts} pts · raté = −100</div>`;
       const winner = revealed && Object.keys(q.results).find((pid) => q.results[pid].correct);
       return {
         key: (revealed ? 'r' : 'q') + q.id,
@@ -479,6 +480,7 @@
           <div class="hp"><div class="hp-fill" style="width:${r.hp[p.id]}%"></div><span>${r.hp[p.id]} PV</span></div>
         </div>`;
       const banner = revealed ? '' : cur ? `<div class="buzz-banner" style="--pc:${cur.color}">${esc(cur.name)} répond !${cur.local ? ` <small>(${cur.key === 'a' ? 'touches 1-4' : 'touches 7-0'})</small>` : ''}</div>`
+        : q.buzz.readyAt && performance.now() < q.buzz.readyAt ? `<div class="buzz-open wait">⏳ Lisez bien… buzz trop tôt = bloqué 2 s</div>`
         : `<div class="buzz-open">🔔 Buzzez ! ${g.settings.localDuel ? '<small>(touches A et L)</small>' : ''}</div>`;
       const hit = r.lastHit && revealed && q.results[r.lastHit.from] ? `<div class="dmg-pop">-${r.lastHit.dmg}${r.lastHit.crit ? ' CRITIQUE !' : ''}</div>` : '';
       return {
