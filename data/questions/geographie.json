@@ -1503,5 +1503,311 @@
    "Vaduz"
   ],
   "anecdote": "La principauté n'a pas d'aéroport, et le prince vit dans le château qui domine la ville."
+ },
+ {
+  "id": "geo-099",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle est la capitale du Vietnam ?",
+  "reponse": "Hanoï",
+  "reponses_acceptees": [
+   "Hanoi"
+  ],
+  "anecdote": "Son nom signifie « en deçà du fleuve », le fleuve Rouge."
+ },
+ {
+  "id": "geo-100",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle est la capitale du Pakistan ?",
+  "reponse": "Islamabad",
+  "reponses_acceptees": [
+   "Islamabâd"
+  ],
+  "anecdote": "Construite dans les années 1960, elle a remplacé Karachi comme capitale."
+ },
+ {
+  "id": "geo-101",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle est la capitale de la Mongolie ?",
+  "reponse": "Oulan-Bator",
+  "reponses_acceptees": [
+   "Oulan Bator",
+   "Ulaanbaatar",
+   "Ulan Bator"
+  ],
+  "anecdote": "C'est la capitale la plus froide du monde en moyenne annuelle."
+ },
+ {
+  "id": "geo-102",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quelle est la capitale du Laos ?",
+  "reponse": "Vientiane",
+  "reponses_acceptees": [
+   "Viangchan"
+  ],
+  "anecdote": "Elle est bâtie sur la rive gauche du Mékong, face à la Thaïlande."
+ },
+ {
+  "id": "geo-103",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle est la capitale du Turkménistan ?",
+  "reponse": "Achgabat",
+  "reponses_acceptees": [
+   "Ashgabat",
+   "Achkhabad",
+   "Ashkhabad"
+  ],
+  "anecdote": "La ville détient le record du plus grand nombre de bâtiments revêtus de marbre blanc."
+ },
+ {
+  "id": "geo-104",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle est la capitale des Comores ?",
+  "reponse": "Moroni",
+  "reponses_acceptees": [
+   "Moroni Comores"
+  ],
+  "anecdote": "Elle se trouve sur la Grande Comore, au pied du volcan Karthala."
+ },
+ {
+  "id": "geo-105",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle est la capitale de l'Éthiopie ?",
+  "reponse": "Addis-Abeba",
+  "reponses_acceptees": [
+   "Addis Abeba",
+   "Addis Ababa"
+  ],
+  "anecdote": "Son nom signifie « nouvelle fleur » en amharique ; elle abrite le siège de l'Union africaine."
+ },
+ {
+  "id": "geo-106",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle est la capitale du Kenya ?",
+  "reponse": "Nairobi",
+  "reponses_acceptees": [
+   "Nairobie"
+  ],
+  "anecdote": "Un parc national, où vivent lions et girafes, s'étend aux portes de la ville."
+ },
+ {
+  "id": "geo-107",
+  "categorie": "Géographie",
+  "sous_theme": "Fleuves",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel fleuve traverse Londres ?",
+  "reponse": "La Tamise",
+  "reponses_acceptees": [
+   "Tamise",
+   "Thames"
+  ],
+  "anecdote": "Il a été déclaré « biologiquement mort » dans les années 1950, avant d'être dépollué."
+ },
+ {
+  "id": "geo-108",
+  "categorie": "Géographie",
+  "sous_theme": "Fleuves",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel fleuve se jette dans l'Atlantique à Lisbonne ?",
+  "reponse": "Le Tage",
+  "reponses_acceptees": [
+   "Tage",
+   "Tejo"
+  ],
+  "anecdote": "C'est le plus long fleuve de la péninsule Ibérique."
+ },
+ {
+  "id": "geo-109",
+  "categorie": "Géographie",
+  "sous_theme": "Fleuves",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Sur quel fleuve se trouve Bagdad ?",
+  "reponse": "Le Tigre",
+  "reponses_acceptees": [
+   "Tigre",
+   "Tigris"
+  ],
+  "anecdote": "Avec l'Euphrate, il délimite la Mésopotamie, « le pays entre les fleuves »."
+ },
+ {
+  "id": "geo-110",
+  "categorie": "Géographie",
+  "sous_theme": "Montagnes",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel est le plus haut sommet des Alpes ?",
+  "reponse": "Le mont Blanc",
+  "reponses_acceptees": [
+   "Mont Blanc",
+   "Mont-Blanc"
+  ],
+  "anecdote": "Sa hauteur exacte varie de quelques mètres selon l'épaisseur de sa calotte de glace."
+ },
+ {
+  "id": "geo-111",
+  "categorie": "Géographie",
+  "sous_theme": "Montagnes",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel est le plus haut sommet d'Amérique du Sud ?",
+  "reponse": "L'Aconcagua",
+  "reponses_acceptees": [
+   "Aconcagua"
+  ],
+  "anecdote": "Il culmine à près de 7 000 m, en Argentine."
+ },
+ {
+  "id": "geo-112",
+  "categorie": "Géographie",
+  "sous_theme": "Îles",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Outre l'Indonésie et Brunei, quel pays occupe une partie de l'île de Bornéo ?",
+  "reponse": "La Malaisie",
+  "reponses_acceptees": [
+   "Malaisie"
+  ],
+  "anecdote": "Bornéo est la troisième plus grande île du monde."
+ },
+ {
+  "id": "geo-113",
+  "categorie": "Géographie",
+  "sous_theme": "Pays",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel pays a pour capitale Tbilissi ?",
+  "reponse": "La Géorgie",
+  "reponses_acceptees": [
+   "Georgie"
+  ],
+  "anecdote": "Le pays revendique certaines des plus anciennes traces de vinification au monde."
+ },
+ {
+  "id": "geo-114",
+  "categorie": "Géographie",
+  "sous_theme": "Pays",
+  "type": "indices",
+  "difficulte": 2,
+  "question": "Quel pays suis-je ?",
+  "reponse": "Le Japon",
+  "reponses_acceptees": [
+   "Japon"
+  ],
+  "indices": [
+   "Mon plus haut sommet est un volcan de 3 776 m",
+   "Mon parlement s'appelle la Diète",
+   "Mon drapeau est un disque rouge sur fond blanc",
+   "Ma capitale est Tokyo"
+  ],
+  "anecdote": "Son nom local, Nippon, signifie « origine du soleil »."
+ },
+ {
+  "id": "geo-115",
+  "categorie": "Géographie",
+  "sous_theme": "Pays",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel pays suis-je ?",
+  "reponse": "La Bolivie",
+  "reponses_acceptees": [
+   "Bolivie"
+  ],
+  "indices": [
+   "J'ai perdu mon accès à la mer à la fin du XIXe siècle",
+   "J'abrite le plus grand désert de sel du monde",
+   "J'ai deux capitales : La Paz et Sucre",
+   "Je porte le nom de Simón Bolívar"
+  ],
+  "anecdote": "Le pays entretient pourtant toujours une marine, sur le lac Titicaca."
+ },
+ {
+  "id": "geo-116",
+  "categorie": "Géographie",
+  "sous_theme": "Pays",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel pays suis-je ?",
+  "reponse": "La Norvège",
+  "reponses_acceptees": [
+   "Norvege"
+  ],
+  "indices": [
+   "Je ne fais pas partie de l'Union européenne",
+   "J'ai découvert du pétrole en mer du Nord en 1969",
+   "Le cap Nord se trouve sur mon territoire",
+   "Mes côtes sont découpées de fjords"
+  ],
+  "anecdote": "Son fonds souverain, alimenté par le pétrole, est le plus important du monde."
+ },
+ {
+  "id": "geo-117",
+  "categorie": "Géographie",
+  "sous_theme": "Régions",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quelle région suis-je ?",
+  "reponse": "La Corse",
+  "reponses_acceptees": [
+   "Corse"
+  ],
+  "indices": [
+   "Mon point culminant est le monte Cinto",
+   "Le sentier GR20 me traverse du nord au sud",
+   "Je compte deux départements",
+   "Napoléon est né dans ma ville d'Ajaccio"
+  ],
+  "anecdote": "On la surnomme « l'île de Beauté »."
+ },
+ {
+  "id": "geo-118",
+  "categorie": "Géographie",
+  "sous_theme": "Fleuves",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Quelle est la longueur de la Seine, en kilomètres ?",
+  "reponse": 777,
+  "unite": "km",
+  "tolerance": 20,
+  "bornes": [
+   200,
+   2000
+  ],
+  "anecdote": "Elle prend sa source sur le plateau de Langres, en Côte-d'Or."
+ },
+ {
+  "id": "geo-119",
+  "categorie": "Géographie",
+  "sous_theme": "Frontières",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : la Russie et les États-Unis ne sont séparés que d'environ 4 km, dans le détroit de Béring.",
+  "reponse": "Vrai",
+  "anecdote": "Cet écart sépare les deux îles Diomède, l'une russe, l'autre américaine."
  }
 ]

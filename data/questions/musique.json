@@ -1155,5 +1155,444 @@
   "question": "Vrai ou faux : Jean-Sébastien Bach et Haendel sont nés la même année.",
   "reponse": "Vrai",
   "anecdote": "Tous deux sont nés en 1685, à moins de 150 km l'un de l'autre, mais ne se sont jamais rencontrés."
+ },
+ {
+  "id": "mus-076",
+  "categorie": "Musique",
+  "sous_theme": "Chanson française",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel chanteur belge a écrit et chanté « Ne me quitte pas » ?",
+  "reponse": "Jacques Brel",
+  "reponses_acceptees": [
+   "Brel"
+  ],
+  "anecdote": "Il l'a écrite en 1959, après sa rupture avec la chanteuse Suzanne Gabriello."
+ },
+ {
+  "id": "mus-077",
+  "categorie": "Musique",
+  "sous_theme": "Chanson française",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle chanteuse surnommée « la Môme » a chanté « La Vie en rose » ?",
+  "reponse": "Édith Piaf",
+  "reponses_acceptees": [
+   "Piaf",
+   "Edith Piaf"
+  ],
+  "anecdote": "Son vrai nom était Édith Giovanna Gassion."
+ },
+ {
+  "id": "mus-078",
+  "categorie": "Musique",
+  "sous_theme": "Chanson française",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Qui a écrit et chanté « Le Sud » en 1975 ?",
+  "reponse": "Nino Ferrer",
+  "reponses_acceptees": [
+   "Ferrer"
+  ],
+  "anecdote": "Il regrettait que ce tube éclipse le reste de son œuvre, plus jazz et rock."
+ },
+ {
+  "id": "mus-079",
+  "categorie": "Musique",
+  "sous_theme": "Chanson française",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle chanteuse a sorti « Dernière danse » en 2013 ?",
+  "reponse": "Indila",
+  "reponses_acceptees": [
+   "Adila Sedraïa"
+  ],
+  "anecdote": "Le clip, tourné dans les rues de Paris, a dépassé le milliard de vues sur YouTube."
+ },
+ {
+  "id": "mus-080",
+  "categorie": "Musique",
+  "sous_theme": "Rap",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel duo de rappeurs frères a tourné le clip « Au DD » au sommet de la tour Eiffel ?",
+  "reponse": "PNL",
+  "reponses_acceptees": [
+   "Peace N Lovés",
+   "Peace N Loves"
+  ],
+  "anecdote": "Les deux frères, Ademo et N.O.S, ont grandi aux Tarterêts, à Corbeil-Essonnes."
+ },
+ {
+  "id": "mus-081",
+  "categorie": "Musique",
+  "sous_theme": "Rap",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel rappeur a sorti l'album « Ipséité » en 2017 ?",
+  "reponse": "Damso",
+  "reponses_acceptees": [
+   "William Kalubi"
+  ],
+  "anecdote": "Il est né à Kinshasa avant de grandir à Bruxelles."
+ },
+ {
+  "id": "mus-082",
+  "categorie": "Musique",
+  "sous_theme": "Rock",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel groupe britannique a sorti l'album « OK Computer » en 1997 ?",
+  "reponse": "Radiohead",
+  "reponses_acceptees": [
+   "Radio Head"
+  ],
+  "anecdote": "Il est souvent cité parmi les meilleurs albums de l'histoire du rock."
+ },
+ {
+  "id": "mus-083",
+  "categorie": "Musique",
+  "sous_theme": "Rock",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel groupe australien a sorti « Highway to Hell » en 1979 ?",
+  "reponse": "AC/DC",
+  "reponses_acceptees": [
+   "ACDC",
+   "AC DC"
+  ],
+  "anecdote": "Son chanteur, Bon Scott, est mort quelques mois plus tard, en février 1980."
+ },
+ {
+  "id": "mus-084",
+  "categorie": "Musique",
+  "sous_theme": "Rock",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel guitariste de Led Zeppelin a composé le riff de « Whole Lotta Love » ?",
+  "reponse": "Jimmy Page",
+  "reponses_acceptees": [
+   "Page"
+  ],
+  "anecdote": "Avant le groupe, il était l'un des musiciens de studio les plus demandés de Londres."
+ },
+ {
+  "id": "mus-085",
+  "categorie": "Musique",
+  "sous_theme": "Jazz",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle chanteuse surnommée « Lady Day » a interprété « Strange Fruit » en 1939 ?",
+  "reponse": "Billie Holiday",
+  "reponses_acceptees": [
+   "Holiday"
+  ],
+  "anecdote": "La chanson dénonçait les lynchages de Noirs dans le sud des États-Unis."
+ },
+ {
+  "id": "mus-086",
+  "categorie": "Musique",
+  "sous_theme": "Jazz",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel trompettiste surnommé « Satchmo » a chanté « What a Wonderful World » ?",
+  "reponse": "Louis Armstrong",
+  "reponses_acceptees": [
+   "Armstrong",
+   "Satchmo"
+  ],
+  "anecdote": "Sorti en 1967, le titre est d'abord passé inaperçu aux États-Unis."
+ },
+ {
+  "id": "mus-087",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel compositeur norvégien a écrit « Dans l'antre du roi de la montagne » ?",
+  "reponse": "Edvard Grieg",
+  "reponses_acceptees": [
+   "Grieg"
+  ],
+  "anecdote": "Le morceau fait partie de la musique de scène de « Peer Gynt », la pièce d'Ibsen."
+ },
+ {
+  "id": "mus-088",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel compositeur finlandais a écrit le poème symphonique « Finlandia » ?",
+  "reponse": "Jean Sibelius",
+  "reponses_acceptees": [
+   "Sibelius"
+  ],
+  "anecdote": "Censurée par les autorités russes, l'œuvre a été jouée sous d'autres titres."
+ },
+ {
+  "id": "mus-089",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel compositeur anglais a écrit la suite « Les Planètes », achevée en 1916 ?",
+  "reponse": "Gustav Holst",
+  "reponses_acceptees": [
+   "Holst"
+  ],
+  "anecdote": "Pluton, découverte en 1930, n'y a donc pas sa place."
+ },
+ {
+  "id": "mus-090",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel compositeur autrichien a écrit l'opéra « Wozzeck », créé en 1925 ?",
+  "reponse": "Alban Berg",
+  "reponses_acceptees": [
+   "Berg"
+  ],
+  "anecdote": "Élève d'Arnold Schoenberg, il s'est inspiré d'une pièce de Georg Büchner."
+ },
+ {
+  "id": "mus-091",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel compositeur a créé « Le Sacre du printemps » à Paris, en 1913 ?",
+  "reponse": "Igor Stravinsky",
+  "reponses_acceptees": [
+   "Stravinsky",
+   "Stravinski",
+   "Strawinsky"
+  ],
+  "anecdote": "La première, au théâtre des Champs-Élysées, a déclenché un chahut mémorable."
+ },
+ {
+  "id": "mus-092",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel compositeur français a écrit « Vingt Regards sur l'Enfant-Jésus » ?",
+  "reponse": "Olivier Messiaen",
+  "reponses_acceptees": [
+   "Messiaen"
+  ],
+  "anecdote": "Ornithologue passionné, il a transcrit des centaines de chants d'oiseaux."
+ },
+ {
+  "id": "mus-093",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "De quel instrument joue le célèbre musicien Yo-Yo Ma ?",
+  "choix": [
+   "Le violoncelle",
+   "Le violon",
+   "L'alto",
+   "La contrebasse"
+  ],
+  "reponse": "Le violoncelle",
+  "anecdote": "Né à Paris en 1955, il a joué lors de l'investiture de Barack Obama."
+ },
+ {
+  "id": "mus-094",
+  "categorie": "Musique",
+  "sous_theme": "Instruments",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "À combien de hertz est fixé le la de référence qui sert à accorder les instruments ?",
+  "reponse": 440,
+  "unite": "Hz",
+  "tolerance": 5,
+  "bornes": [
+   100,
+   1000
+  ],
+  "anecdote": "Cette norme a été adoptée lors d'une conférence internationale à Londres, en 1939."
+ },
+ {
+  "id": "mus-095",
+  "categorie": "Musique",
+  "sous_theme": "Rock",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année les Rolling Stones ont-ils été fondés ?",
+  "reponse": 1962,
+  "unite": "année",
+  "tolerance": 1,
+  "bornes": [
+   1940,
+   2000
+  ],
+  "anecdote": "Leur nom vient d'une chanson de Muddy Waters, « Rollin' Stone »."
+ },
+ {
+  "id": "mus-096",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de symphonies sont attribuées à Joseph Haydn ?",
+  "reponse": 104,
+  "unite": "symphonies",
+  "tolerance": 4,
+  "bornes": [
+   20,
+   200
+  ],
+  "anecdote": "On le surnomme « le père de la symphonie »."
+ },
+ {
+  "id": "mus-097",
+  "categorie": "Musique",
+  "sous_theme": "Chanson française",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quelle chanteuse suis-je ?",
+  "reponse": "Dalida",
+  "reponses_acceptees": [
+   "Iolanda Gigliotti"
+  ],
+  "indices": [
+   "Je suis née au Caire en 1933",
+   "J'ai été élue Miss Égypte",
+   "J'ai chanté « Paroles, paroles » avec Alain Delon",
+   "J'ai chanté « Gigi l'amoroso » et « Laissez-moi danser »"
+  ],
+  "anecdote": "Une place de Montmartre porte son nom, avec son buste."
+ },
+ {
+  "id": "mus-098",
+  "categorie": "Musique",
+  "sous_theme": "Pop",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel artiste suis-je ?",
+  "reponse": "Michael Jackson",
+  "reponses_acceptees": [
+   "Jackson",
+   "MJ"
+  ],
+  "indices": [
+   "J'ai débuté avec mes frères chez Motown",
+   "J'ai popularisé le moonwalk",
+   "Mon album « Thriller » est le plus vendu de l'histoire",
+   "On me surnomme le « roi de la pop »"
+  ],
+  "anecdote": "Il a été le premier artiste noir diffusé en boucle sur MTV."
+ },
+ {
+  "id": "mus-099",
+  "categorie": "Musique",
+  "sous_theme": "Chanson française",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel chanteur suis-je ?",
+  "reponse": "Claude François",
+  "reponses_acceptees": [
+   "Cloclo",
+   "Francois"
+  ],
+  "indices": [
+   "Je suis né à Ismaïlia, en Égypte",
+   "Mes danseuses s'appelaient les Clodettes",
+   "J'ai coécrit la version originale de « My Way »",
+   "On me surnommait Cloclo"
+  ],
+  "anecdote": "Il est mort électrocuté dans sa salle de bains en 1978."
+ },
+ {
+  "id": "mus-100",
+  "categorie": "Musique",
+  "sous_theme": "Rap",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quel rappeur suis-je ?",
+  "reponse": "MC Solaar",
+  "reponses_acceptees": [
+   "Solaar",
+   "Claude M'Barali"
+  ],
+  "indices": [
+   "Je suis né à Dakar",
+   "J'ai grandi en région parisienne",
+   "Mon premier album s'appelle « Qui sème le vent récolte le tempo »",
+   "J'ai chanté « Caroline » et « Bouge de là »"
+  ],
+  "anecdote": "Son album « Prose Combat », sorti en 1994, est un classique du rap français."
+ },
+ {
+  "id": "mus-101",
+  "categorie": "Musique",
+  "sous_theme": "Jazz",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quelle chanteuse suis-je ?",
+  "reponse": "Nina Simone",
+  "reponses_acceptees": [
+   "Simone",
+   "Eunice Waymon"
+  ],
+  "indices": [
+   "Je rêvais d'être pianiste classique",
+   "J'ai été refusée par le Curtis Institute de Philadelphie",
+   "J'ai chanté « Mississippi Goddam » pour les droits civiques",
+   "J'ai chanté « My Baby Just Cares for Me »"
+  ],
+  "anecdote": "Elle a passé ses dernières années à Carry-le-Rouet, près de Marseille."
+ },
+ {
+  "id": "mus-102",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quel compositeur suis-je ?",
+  "reponse": "Érik Satie",
+  "reponses_acceptees": [
+   "Satie",
+   "Erik Satie"
+  ],
+  "indices": [
+   "Je suis né à Honfleur en 1866",
+   "J'ai été pianiste au cabaret du Chat noir",
+   "J'ai intitulé une pièce « Véritables préludes flasques »",
+   "J'ai composé les « Gymnopédies »"
+  ],
+  "anecdote": "Sa pièce « Vexations » doit être jouée 840 fois de suite."
+ },
+ {
+  "id": "mus-103",
+  "categorie": "Musique",
+  "sous_theme": "Rock",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel groupe suis-je ?",
+  "reponse": "Téléphone",
+  "reponses_acceptees": [
+   "Telephone"
+  ],
+  "indices": [
+   "Je suis un groupe français fondé en 1976",
+   "Mon chanteur s'appelle Jean-Louis Aubert",
+   "J'ai chanté « Cendrillon »",
+   "J'ai chanté « Un autre monde »"
+  ],
+  "anecdote": "Le groupe s'est séparé en 1986, au sommet de son succès."
+ },
+ {
+  "id": "mus-104",
+  "categorie": "Musique",
+  "sous_theme": "Rock",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : Jimi Hendrix était gaucher.",
+  "reponse": "Vrai",
+  "anecdote": "Il jouait souvent sur des guitares de droitier retournées et recordées."
  }
 ]

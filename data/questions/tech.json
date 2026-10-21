@@ -550,5 +550,286 @@
   ],
   "reponse": "Charles Babbage",
   "anecdote": "Elle n'a jamais été construite de son vivant, faute de financement et de précision mécanique."
+ },
+ {
+  "id": "tec-037",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel inventeur américain a déposé plus de 1 000 brevets, dont celui du phonographe ?",
+  "reponse": "Thomas Edison",
+  "reponses_acceptees": [
+   "Edison"
+  ],
+  "anecdote": "Il a fondé un laboratoire de recherche à Menlo Park, dans le New Jersey."
+ },
+ {
+  "id": "tec-038",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Qui a déposé le brevet du téléphone en 1876 ?",
+  "reponse": "Graham Bell",
+  "reponses_acceptees": [
+   "Bell",
+   "Alexander Graham Bell"
+  ],
+  "anecdote": "Il l'a déposé quelques heures avant son concurrent Elisha Gray."
+ },
+ {
+  "id": "tec-039",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel Italien a réalisé la première liaison radio transatlantique, en 1901 ?",
+  "reponse": "Guglielmo Marconi",
+  "reponses_acceptees": [
+   "Marconi"
+  ],
+  "anecdote": "Il a partagé le prix Nobel de physique en 1909."
+ },
+ {
+  "id": "tec-040",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel langage de programmation, créé en 1995 par Brendan Eich, anime les pages web ?",
+  "reponse": "JavaScript",
+  "reponses_acceptees": [
+   "Javascript",
+   "JS"
+  ],
+  "anecdote": "Il aurait été conçu en une dizaine de jours seulement."
+ },
+ {
+  "id": "tec-041",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel cofondateur d'Apple a conçu seul l'ordinateur Apple I ?",
+  "reponse": "Steve Wozniak",
+  "reponses_acceptees": [
+   "Wozniak",
+   "Woz"
+  ],
+  "anecdote": "On le surnomme « Woz », et il a quitté Apple dès 1985."
+ },
+ {
+  "id": "tec-042",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel étudiant de Harvard a lancé Facebook en 2004 ?",
+  "reponse": "Mark Zuckerberg",
+  "reponses_acceptees": [
+   "Zuckerberg"
+  ],
+  "anecdote": "Le site était au départ réservé aux étudiants de son université."
+ },
+ {
+  "id": "tec-043",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Télécoms",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel terminal télématique français a été définitivement débranché le 30 juin 2012 ?",
+  "reponse": "Le Minitel",
+  "reponses_acceptees": [
+   "Minitel"
+  ],
+  "anecdote": "On y accédait aux services en tapant des codes comme le 3615."
+ },
+ {
+  "id": "tec-044",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel ingénieur écossais a fait la première démonstration publique de la télévision, en 1926 ?",
+  "reponse": "John Logie Baird",
+  "reponses_acceptees": [
+   "Baird",
+   "Logie Baird"
+  ],
+  "anecdote": "Son système était mécanique, à base de disques perforés."
+ },
+ {
+  "id": "tec-045",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel navigateur web, créé en 1993, a popularisé le Web auprès du grand public ?",
+  "reponse": "Mosaic",
+  "reponses_acceptees": [
+   "NCSA Mosaic"
+  ],
+  "anecdote": "Son principal développeur a ensuite cofondé Netscape."
+ },
+ {
+  "id": "tec-046",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment appelle-t-on une unité de 8 bits ?",
+  "reponse": "Un octet",
+  "reponses_acceptees": [
+   "Octet",
+   "Byte"
+  ],
+  "anecdote": "Un kilooctet vaut 1 000 octets ; un kibioctet en vaut 1 024."
+ },
+ {
+  "id": "tec-047",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel savant grec aurait crié « Eurêka ! » dans son bain ?",
+  "reponse": "Archimède",
+  "reponses_acceptees": [
+   "Archimede"
+  ],
+  "anecdote": "Il venait de comprendre comment mesurer le volume d'une couronne."
+ },
+ {
+  "id": "tec-048",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel ingénieur allemand a donné son nom à un moteur, breveté en 1892 ?",
+  "reponse": "Rudolf Diesel",
+  "reponses_acceptees": [
+   "Diesel"
+  ],
+  "anecdote": "Il a disparu en mer en 1913, lors d'une traversée de la Manche."
+ },
+ {
+  "id": "tec-049",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "indices",
+  "difficulte": 2,
+  "question": "Quel inventeur suis-je ?",
+  "reponse": "Léonard de Vinci",
+  "reponses_acceptees": [
+   "Vinci",
+   "Leonard de Vinci",
+   "De Vinci"
+  ],
+  "indices": [
+   "J'ai dessiné une machine volante à vis",
+   "J'ai rédigé mes carnets en écriture inversée",
+   "J'ai fini ma vie au Clos Lucé, à Amboise",
+   "J'ai peint « La Joconde »"
+  ],
+  "anecdote": "Il était l'hôte du roi François Ier, qui l'admirait beaucoup."
+ },
+ {
+  "id": "tec-050",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quelle entreprise suis-je ?",
+  "reponse": "Google",
+  "reponses_acceptees": [
+   "Gogle"
+  ],
+  "indices": [
+   "J'ai été fondée dans un garage en 1998",
+   "Mon nom vient d'un nombre : 10 puissance 100",
+   "J'ai racheté YouTube en 2006",
+   "Je suis le moteur de recherche le plus utilisé au monde"
+  ],
+  "anecdote": "Le nombre 10 puissance 100 s'appelle un « gogol », en anglais « googol »."
+ },
+ {
+  "id": "tec-051",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel inventeur suis-je ?",
+  "reponse": "Gutenberg",
+  "reponses_acceptees": [
+   "Johannes Gutenberg"
+  ],
+  "indices": [
+   "Je suis né à Mayence",
+   "J'ai mis au point des caractères mobiles en métal",
+   "J'ai imprimé une Bible vers 1455",
+   "On me crédite de l'invention de l'imprimerie en Europe"
+  ],
+  "anecdote": "Il est mort ruiné : son associé avait récupéré son atelier."
+ },
+ {
+  "id": "tec-052",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quel inventeur suis-je ?",
+  "reponse": "Roland Moreno",
+  "reponses_acceptees": [
+   "Moreno"
+  ],
+  "indices": [
+   "Je suis né au Caire en 1945",
+   "J'ai été journaliste avant d'être inventeur",
+   "J'ai déposé mon brevet en 1974",
+   "J'ai inventé la carte à puce"
+  ],
+  "anecdote": "Il avait aussi conçu une machine à tirer à pile ou face, le « Matapof »."
+ },
+ {
+  "id": "tec-053",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Aviation",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "En quelle année les frères Wright ont-ils réussi le premier vol motorisé ?",
+  "reponse": 1903,
+  "unite": "année",
+  "tolerance": 1,
+  "bornes": [
+   1850,
+   1950
+  ],
+  "anecdote": "À Kitty Hawk, le premier vol a duré douze secondes."
+ },
+ {
+  "id": "tec-054",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année le code QR a-t-il été inventé, par la société japonaise Denso Wave ?",
+  "reponse": 1994,
+  "unite": "année",
+  "tolerance": 1,
+  "bornes": [
+   1960,
+   2015
+  ],
+  "anecdote": "Il servait d'abord à suivre les pièces détachées dans les usines Toyota."
+ },
+ {
+  "id": "tec-055",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Robotique",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : le mot « robot » vient du tchèque.",
+  "reponse": "Vrai",
+  "anecdote": "Il a été popularisé en 1920 par la pièce « R.U.R. » de Karel Čapek."
  }
 ]

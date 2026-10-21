@@ -883,5 +883,152 @@
   ],
   "reponse": "Le tunnel de base du Saint-Gothard",
   "anecdote": "Inauguré en Suisse en 2016, il mesure 57 km."
+ },
+ {
+  "id": "rec-057",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Géographie",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel est le plus grand océan du monde ?",
+  "reponse": "Le Pacifique",
+  "reponses_acceptees": [
+   "Pacifique",
+   "Ocean Pacifique"
+  ],
+  "anecdote": "Il couvre à lui seul près d'un tiers de la surface de la Terre."
+ },
+ {
+  "id": "rec-058",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Géographie",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel est le plus haut volcan actif d'Europe ?",
+  "reponse": "L'Etna",
+  "reponses_acceptees": [
+   "Etna"
+  ],
+  "anecdote": "Ses coulées de lave ont détruit une partie de Catane en 1669."
+ },
+ {
+  "id": "rec-059",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel est l'animal terrestre le plus rapide ?",
+  "reponse": "Le guépard",
+  "reponses_acceptees": [
+   "Guepard"
+  ],
+  "anecdote": "Il dépasse les 100 km/h, mais seulement sur quelques centaines de mètres."
+ },
+ {
+  "id": "rec-060",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Architecture",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel gratte-ciel de Dubaï est le plus haut bâtiment du monde depuis 2010 ?",
+  "reponse": "Burj Khalifa",
+  "reponses_acceptees": [
+   "Khalifa",
+   "Burj Dubai"
+  ],
+  "anecdote": "Il devait s'appeler Burj Dubaï, avant d'être renommé en l'honneur du président des Émirats."
+ },
+ {
+  "id": "rec-061",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Géographie",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel est le plus grand lac d'Afrique ?",
+  "reponse": "Le lac Victoria",
+  "reponses_acceptees": [
+   "Victoria",
+   "Lac Victoria"
+  ],
+  "anecdote": "Il est partagé entre l'Ouganda, le Kenya et la Tanzanie."
+ },
+ {
+  "id": "rec-062",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Géographie",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle est la plus grande île de la Méditerranée ?",
+  "reponse": "La Sicile",
+  "reponses_acceptees": [
+   "Sicile"
+  ],
+  "anecdote": "Elle n'est séparée de la péninsule italienne que par le détroit de Messine, large d'environ 3 km."
+ },
+ {
+  "id": "rec-063",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Animaux",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de mètres peut mesurer une baleine bleue adulte, au maximum ?",
+  "reponse": 30,
+  "unite": "m",
+  "tolerance": 2,
+  "bornes": [
+   10,
+   80
+  ],
+  "anecdote": "Son cœur a la taille d'une petite voiture."
+ },
+ {
+  "id": "rec-064",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Géographie",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel lieu suis-je ?",
+  "reponse": "Le lac Titicaca",
+  "reponses_acceptees": [
+   "Titicaca",
+   "Lac Titicaca"
+  ],
+  "indices": [
+   "Je me trouve à plus de 3 800 m d'altitude",
+   "Je suis partagé entre le Pérou et la Bolivie",
+   "Des îles flottantes en roseaux sont posées sur mes eaux",
+   "Je suis souvent présenté comme le plus haut lac navigable du monde"
+  ],
+  "anecdote": "Les îles flottantes sont construites par le peuple uros."
+ },
+ {
+  "id": "rec-065",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Animaux",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel animal suis-je ?",
+  "reponse": "Le faucon pèlerin",
+  "reponses_acceptees": [
+   "Faucon pelerin",
+   "Faucon"
+  ],
+  "indices": [
+   "Je niche parfois sur les cathédrales et les gratte-ciel",
+   "Je chasse d'autres oiseaux en plein vol",
+   "Je dépasse 300 km/h en piqué",
+   "Je suis l'animal le plus rapide du monde"
+  ],
+  "anecdote": "Il a failli disparaître à cause d'un insecticide, le DDT."
+ },
+ {
+  "id": "rec-066",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Records",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : mesuré depuis le centre de la Terre, l'Everest est le sommet le plus éloigné.",
+  "reponse": "Faux",
+  "anecdote": "C'est le Chimborazo, en Équateur, grâce au renflement de la Terre au niveau de l'équateur."
  }
 ]

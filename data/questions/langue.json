@@ -902,5 +902,135 @@
   "question": "Vrai ou faux : le pluriel de « chacal » est « chacals ».",
   "reponse": "Vrai",
   "anecdote": "Comme bal, carnaval, festival, récital ou régal, il fait exception à la règle du pluriel en -aux."
+ },
+ {
+  "id": "lan-059",
+  "categorie": "Langue française",
+  "sous_theme": "Vocabulaire",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Comment qualifie-t-on une personne qui parle couramment deux langues ?",
+  "reponse": "Bilingue",
+  "reponses_acceptees": [
+   "Bilingual"
+  ],
+  "anecdote": "Au-delà de deux, on parle de personne trilingue, puis polyglotte."
+ },
+ {
+  "id": "lan-060",
+  "categorie": "Langue française",
+  "sous_theme": "Vocabulaire",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment appelle-t-on un sigle qui se prononce comme un mot, comme « ovni » ou « Unesco » ?",
+  "reponse": "Un acronyme",
+  "reponses_acceptees": [
+   "Acronyme"
+  ],
+  "anecdote": "À l'inverse, « SNCF » s'épelle lettre par lettre : c'est un simple sigle."
+ },
+ {
+  "id": "lan-061",
+  "categorie": "Langue française",
+  "sous_theme": "Vocabulaire",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment appelle-t-on la peur des araignées ?",
+  "reponse": "L'arachnophobie",
+  "reponses_acceptees": [
+   "Arachnophobie"
+  ],
+  "anecdote": "Le mot vient du grec « arakhnê », l'araignée."
+ },
+ {
+  "id": "lan-062",
+  "categorie": "Langue française",
+  "sous_theme": "Vocabulaire",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment appelle-t-on un mot de sens contraire à un autre, comme « chaud » et « froid » ?",
+  "reponse": "Un antonyme",
+  "reponses_acceptees": [
+   "Antonyme",
+   "Contraire"
+  ],
+  "anecdote": "Un mot de même sens, lui, est un synonyme."
+ },
+ {
+  "id": "lan-063",
+  "categorie": "Langue française",
+  "sous_theme": "Ponctuation",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel signe de ponctuation est formé d'un point placé au-dessus d'une virgule ?",
+  "reponse": "Le point-virgule",
+  "reponses_acceptees": [
+   "Point virgule",
+   "Point-virgule"
+  ],
+  "anecdote": "On l'attribue à l'imprimeur vénitien Alde Manuce, à la fin du XVe siècle."
+ },
+ {
+  "id": "lan-064",
+  "categorie": "Langue française",
+  "sous_theme": "Vocabulaire",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment appelle-t-on l'étude des noms de lieux ?",
+  "reponse": "La toponymie",
+  "reponses_acceptees": [
+   "Toponymie"
+  ],
+  "anecdote": "L'étude des noms de personnes s'appelle l'anthroponymie."
+ },
+ {
+  "id": "lan-065",
+  "categorie": "Langue française",
+  "sous_theme": "Orthographe",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment s'appelle le petit trait qui relie les mots dans « arc-en-ciel » ?",
+  "reponse": "Le trait d'union",
+  "reponses_acceptees": [
+   "Trait d'union",
+   "Tiret"
+  ],
+  "anecdote": "Les rectifications de 1990 l'ont supprimé dans certains mots, comme « portemonnaie »."
+ },
+ {
+  "id": "lan-066",
+  "categorie": "Langue française",
+  "sous_theme": "Expressions",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Complétez l'expression : « Il pleut des… »",
+  "reponse": "Cordes",
+  "reponses_acceptees": [
+   "Des cordes"
+  ],
+  "anecdote": "Les Anglais disent, eux, qu'il pleut « des chats et des chiens »."
+ },
+ {
+  "id": "lan-067",
+  "categorie": "Langue française",
+  "sous_theme": "Vocabulaire",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment appelle-t-on un collectionneur de timbres ?",
+  "reponse": "Un philatéliste",
+  "reponses_acceptees": [
+   "Philateliste"
+  ],
+  "anecdote": "Le mot a été inventé en 1864 par le collectionneur français Georges Herpin."
+ },
+ {
+  "id": "lan-068",
+  "categorie": "Langue française",
+  "sous_theme": "Orthographe",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : le mot « oiseau » contient les cinq voyelles a, e, i, o et u.",
+  "reponse": "Vrai",
+  "anecdote": "C'est le plus court mot français à toutes les contenir."
  }
 ]
