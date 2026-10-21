@@ -35,11 +35,11 @@
     finale: { bpm: 140, key: 62, scale: 'major', prog: [0, 4, 5, 3], seed: 21, drums: 'disco', bass: 'octave' },
     round_mystere: { bpm: 112, key: 57, scale: 'dorian', prog: [0, 3, 0, 6], seed: 5, drums: 'half', bass: 'pulse' },
     round_fourchette: { bpm: 120, key: 62, scale: 'mixolydian', prog: [0, 6, 3, 0], seed: 7, drums: 'shuffle', bass: 'octave' },
-    round_indices: { bpm: 126, key: 64, scale: 'minor', prog: [0, 5, 2, 6], seed: 9, drums: 'drive', bass: 'pulse' },
+    round_sprint: { bpm: 126, key: 64, scale: 'minor', prog: [0, 5, 2, 6], seed: 9, drums: 'drive', bass: 'pulse' },
     round_quatre: { bpm: 150, key: 60, scale: 'major', prog: [0, 4, 5, 4], seed: 13, drums: 'drive', bass: 'octave' },
     round_eclair: { bpm: 144, key: 67, scale: 'major', prog: [0, 3, 4, 3], seed: 15, drums: 'disco', bass: 'octave' },
     round_table: { bpm: 108, key: 58, scale: 'major', prog: [0, 5, 1, 4], seed: 17, drums: 'soft', bass: 'walk' },
-    round_echelle: { bpm: 118, key: 55, scale: 'minor', prog: [0, 5, 6, 4], seed: 19, drums: 'epic', bass: 'half' },
+    round_champions: { bpm: 118, key: 55, scale: 'minor', prog: [0, 5, 6, 4], seed: 19, drums: 'epic', bass: 'half' },
     round_duel: { bpm: 160, key: 57, scale: 'minor', prog: [0, 0, 5, 6], seed: 23, drums: 'drive', bass: 'pulse' },
     suspense: { bpm: 100, key: 57, scale: 'minor', suspense: true, flex: true },
   };

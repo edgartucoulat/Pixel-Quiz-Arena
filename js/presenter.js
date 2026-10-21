@@ -78,7 +78,7 @@
     const phaseBtns = [];
     if (v.phase === 'question') phaseBtns.push(['reveal', '👁 Révéler'], ['skip', '⏭ Passer']);
     if (v.q && v.q.indices && v.phase === 'question') phaseBtns.push(['clue', '➕ Indice suivant']);
-    if (['intro', 'reveal', 'leaderboard', 'ladder', 'cell', 'qresult', 'ko', 'wheel'].includes(v.phase)) phaseBtns.push(['next', v.phase === 'reveal' ? '▶ Question suivante' : '▶ Suivant']);
+    if (['intro', 'reveal', 'leaderboard', 'faceoff', 'champion', 'cell', 'qresult', 'ko', 'wheel'].includes(v.phase)) phaseBtns.push(['next', v.phase === 'reveal' ? '▶ Question suivante' : '▶ Suivant']);
     if (v.phase !== 'lobby') phaseBtns.push(['pause', v.paused ? '▶ Reprendre' : '⏸ Pause']);
     html += `<div class="pbtns">${phaseBtns.map(([c, l]) => `<button data-c="${c}" class="${c === 'next' ? 'main' : ''}">${l}</button>`).join('')}</div>`;
     html += `<div class="pplayers"><div class="pmeta">Points (bonus / malus)</div>${v.players.map((p) => `<div class="pp ${p.connected ? '' : 'off'}" style="--oc:${p.color}">

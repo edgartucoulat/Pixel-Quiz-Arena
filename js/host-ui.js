@@ -235,7 +235,7 @@
 
     renderControls() {
       const g = this.g;
-      const canNext = ['intro', 'reveal', 'leaderboard', 'ladder', 'cell', 'qresult', 'ko', 'wheel', 'question'].includes(g.phase);
+      const canNext = ['intro', 'reveal', 'leaderboard', 'faceoff', 'champion', 'cell', 'qresult', 'ko', 'wheel', 'question'].includes(g.phase);
       patch($('#controls'), `
         ${canNext ? `<button class="ctl" data-act="next" title="Espace">${g.phase === 'question' ? '⏭ Révéler' : '▶ Suivant'}</button>` : ''}
         ${g.phase !== 'lobby' && g.phase !== 'end' ? `<button class="ctl" data-act="pause" title="P">${g.paused ? '▶ Reprendre' : '⏸ Pause'}</button>` : ''}
@@ -256,11 +256,13 @@
         if (q && q.buzz && q.buzz.current === p.id) { pose = 'buzz'; cls += ' buzzing'; }
         if (q && q.buzz && q.buzz.locked.includes(p.id)) badge += '<i title="Bloqué">🔒</i>';
         if (q && q.kind === 'all' && g.phase === 'question' && q.answers[p.id]) badge += '<i class="ok">✔</i>';
-        if (q && q.kind === 'ladder' && g.phase === 'question' && q.answers[p.id]) badge += '<i class="ok">✔</i>';
-        if ((g.phase === 'reveal') && q && q.results[p.id] && !g.revealPending) { pose = q.results[p.id].correct ? 'happy' : q.results[p.id].none ? 'idle' : 'sad'; }
+        if (g.phase === 'reveal' && q && q.results[p.id]) { pose = q.results[p.id].correct ? 'happy' : q.results[p.id].none ? 'idle' : 'sad'; }
         if (g.phase === 'end' && g.ranking()[0] === p) pose = 'happy';
         const cur = g.round && (g.phase === 'level' || g.phase === 'board' || g.phase === 'target' || g.phase === 'qpick' || (g.phase === 'question' && q && (q.kind === 'single' || q.kind === 'quatre'))) && (g.round.player === p.id);
         if (cur) cls += ' turn';
+        const fin = g.round && g.round.type === 'champions' && g.round.finalists;
+        if (fin && fin.includes(p.id)) { cls += ' turn'; badge += '<i>⚔️</i>'; }
+        if (g.champion === p.id) badge += '<i>👑</i>';
         if (g.isFrozen(p)) badge += '<i>🧊</i>';
         if (p.double) badge += '<i>✖️2</i>';
         if (p.streak >= 3) badge += `<i class="fire">🔥x${g.multiplier(p)}</i>`;
@@ -314,7 +316,6 @@
         <div class="set-row"><label>Équipes</label>${seg('teams', [[0, 'Chacun pour soi'], [2, '2'], [3, '3'], [4, '4']], s.teams)}${s.teams ? '<button class="mini" data-act="shuffleteams">🔀 Mélanger</button>' : ''}</div>
         <div class="set-row"><label>Manches</label><div class="chips">${PQA.ROUND_ORDER.map((r) => `<button data-act="round" data-val="${r}" class="${s.rounds.includes(r) ? 'on' : ''}">${PQA.ROUNDS[r].icon} ${esc(PQA.ROUNDS[r].short)}</button>`).join('')}</div></div>
         <div class="set-row"><label>Durée</label>${seg('length', [['court', 'Courte'], ['normal', 'Normale'], ['long', 'Longue']], s.length)}</div>
-        <div class="set-row"><label>Finale</label>${seg('finale', [['solo', 'Le leader seul'], ['duo', 'Face-à-face des 2 premiers']], s.finale)}</div>
         <div class="set-row"><label>Coups bas</label>${seg('cards', [['1', '🃏 Oui'], ['0', 'Non']], s.cards ? '1' : '0')}</div>`}
         <div class="set-row small"><label>Questions</label><span>${g.bank.length} au total · ${g.seen.size} déjà vues sur cet écran</span><button class="mini" data-act="resetseen">Oublier</button></div>`;
       const n = g.activePlayers().length;
@@ -389,7 +390,7 @@
       const g = this.g;
       const items = Object.keys(q.results).map((pid) => ({ p: g.players[pid], r: q.results[pid], a: q.answers[pid] })).filter((x) => x.p);
       if (!items.length) return '';
-      const libre = q.data.type === 'libre' || q.data.type === 'indices';
+      const libre = q.typed || q.data.type === 'libre' || q.data.type === 'indices';
       return `<div class="results">${items.map(({ p, r, a }) => {
         const txt = libre && a && a.text ? `« ${esc(a.text)} »` : libre && r.wrongAnswer ? `« ${esc(r.wrongAnswer)} »` : '';
         const ov = libre && q.kind === 'single' && a && !g.irl ? ` data-act="override" data-pid="${p.id}" title="Cliquer pour corriger la validation"` : '';
@@ -401,8 +402,7 @@
     r_question() {
       const g = this.g, q = g.q, r = g.round;
       if (!q) return this.r_wait();
-      if (q.kind === 'buzz') return r.type === 'duel' ? this.duelQ(false) : this.indicesQ(false);
-      if (q.kind === 'ladder') return this.ladderView(false);
+      if (q.kind === 'buzz') return r.type === 'duel' ? this.duelQ(false) : this.buzzQ(false);
       if (q.kind === 'quatre') return this.quatreQ();
       const d = q.data;
       const single = q.kind === 'single' ? g.players[q.answerers[0]] : null;
@@ -440,8 +440,7 @@
       const g = this.g, q = g.q, r = g.round;
       if (!q) return this.r_wait();
       if (r.type === 'duel') return this.duelQ(true);
-      if (q.kind === 'ladder') return this.ladderView(true);
-      if (q.kind === 'buzz') return this.indicesQ(true);
+      if (q.kind === 'buzz') return this.buzzQ(true);
       const d = q.data;
       if (d.type === 'fourchette') return this.fourchetteReveal();
       const answerBox = d.type === 'libre' ? `<div class="answer-big">✔ ${esc(d.reponse)}</div>` : '';
@@ -500,28 +499,31 @@
       };
     }
 
-    /* ---- Buzzer à indices ---- */
-    indicesQ(revealed) {
-      const g = this.g, q = g.q, d = q.data, b = q.buzz;
-      const n = d.indices.length;
+    /* ---- Buzzer : Sprint (sans indices) et Duel des champions (indices) ---- */
+    buzzQ(revealed) {
+      const g = this.g, q = g.q, d = q.data, b = q.buzz, r = g.round;
+      const champ = r.type === 'champions';
+      const n = d.indices ? d.indices.length : 0;
       const shown = revealed ? n : q.clue + 1;
-      const pts = Math.round((300 * (n - q.clue)) / n / 10) * 10;
-      const clues = d.indices.map((c, i) => `<li class="${i < shown ? 'on' : ''} ${i === q.clue && !revealed ? 'cur' : ''}"><span class="cn">${i + 1}</span>${i < shown ? esc(c) : '? ? ?'}</li>`).join('');
+      const clues = n ? d.indices.map((c, i) => `<li class="${i < shown ? 'on' : ''} ${i === q.clue && !revealed ? 'cur' : ''}"><span class="cn">${i + 1}</span>${i < shown ? esc(c) : '? ? ?'}</li>`).join('') : '';
       const cur = b.current && g.players[b.current];
-      const banner = revealed ? '' : cur ? `<div class="buzz-banner" style="--pc:${cur.color}">${avatarImg(cur, 'buzz', 'tiny')} ${esc(cur.name)} a buzzé !${q.pending ? ' <small>(validation...)</small>' : ''}</div>`
+      const how = g.irl ? 'réponse à voix haute' : 'réponse à taper';
+      const banner = revealed ? '' : cur ? `<div class="buzz-banner" style="--pc:${cur.color}">${avatarImg(cur, 'buzz', 'tiny')} ${esc(cur.name)} a buzzé !${q.pending ? ' <small>(validation...)</small>' : ` <small>(${how})</small>`}</div>`
         : b.readyAt && performance.now() < b.readyAt ? `<div class="buzz-open wait">⏳ Lisez bien… buzz trop tôt = bloqué 2 s</div>`
-        : `<div class="buzz-open">🔔 Buzzers ouverts · ${pts} pts · raté = −100</div>`;
+        : champ ? `<div class="buzz-open">🔔 Buzzers ouverts · une erreur laisse la main à l’adversaire</div>`
+        : `<div class="buzz-open">🔔 Buzzers ouverts · bonne réponse +200 · raté = −100</div>`;
       const winner = revealed && Object.keys(q.results).find((pid) => q.results[pid].correct);
       return {
         key: (revealed ? 'r' : 'q') + q.id,
-        html: `<div class="indices">
+        html: `<div class="indices ${champ ? 'duel champions' : 'sprint'}">
+          ${champ ? '<div class="duel-top" id="duel-top"></div>' : ''}
           ${this.qHeader(q)}
           <div class="q-text">${esc(d.question)}</div>
-          <ol class="clues" id="clues"></ol>
+          ${n ? '<ol class="clues" id="clues"></ol>' : `<div class="q-libre">✍️ Pas de choix : buzzez, puis ${how} !</div>`}
           <div id="buzz-state"></div>
           ${revealed ? `<div class="answer-big">✔ ${esc(d.reponse)}</div><div id="q-results"></div>${g.irl ? this.anecdoteHTML(q) : ''}` : ''}
         </div>`,
-        parts: { clues, 'buzz-state': banner, ...(revealed ? { 'q-results': winner || Object.keys(q.results).length ? this.resultsHTML(q) : '<div class="status">Personne n’a trouvé !</div>' } : {}) },
+        parts: { ...(n ? { clues } : {}), ...(champ ? { 'duel-top': this.championsTop() } : {}), 'buzz-state': banner, ...(revealed ? { 'q-results': winner || Object.keys(q.results).length ? this.resultsHTML(q) : '<div class="status">Personne n’a trouvé !</div>' } : {}) },
       };
     }
 
@@ -598,22 +600,22 @@
       };
     }
 
-    /* ---- Table des Savoirs ---- */
+    /* ---- Cases mystères : thème et valeur cachés jusqu'au choix ---- */
     boardHTML() {
       const r = this.g.round;
-      const head = Array.from({ length: r.cols }, (_, x) => { const c = r.cells.find((c) => c.x === x); return `<div class="bh">${c.icon}<br>${esc(c.cat)}</div>`; }).join('');
       const cells = r.cells.map((c) => {
         const cur = r.cell && r.cell.i === c.i;
-        return `<div class="bc ${c.used ? 'used' : ''} ${cur ? 'cur' : ''}">${c.used ? (cur ? '' : '✓') : '?'}</div>`;
+        const open = c.used ? `<span class="bc-icon">${c.icon}</span><small>${c.special === 'piege' ? '💣' : c.special === 'double' ? '✖️2' : c.special === 'vol' ? '🦹' : c.value}</small>` : `<span class="bc-num">${c.i + 1}</span><small>?</small>`;
+        return `<div class="bc mystery ${c.used ? 'used' : ''} ${cur ? 'cur' : ''}">${open}</div>`;
       }).join('');
-      return `<div class="board" style="--cols:${r.cols}">${head}${cells}</div>`;
+      return `<div class="board" style="--cols:${r.cols}">${cells}</div>`;
     }
     r_board() {
       const g = this.g, r = g.round, p = g.players[r.player];
       return {
         key: 'board',
         html: `<div class="table-wrap"><div id="board"></div><div class="board-turn" id="board-turn"></div></div>`,
-        parts: { board: this.boardHTML(), 'board-turn': p ? `${avatarImg(p, 'idle', 'tiny')} <b style="color:${p.color}">${esc(p.name)}</b> choisit une case sur son téléphone` : '' },
+        parts: { board: this.boardHTML(), 'board-turn': p ? `${avatarImg(p, 'idle', 'tiny')} <b style="color:${p.color}">${esc(p.name)}</b> choisit une case mystère sur son téléphone` : '' },
       };
     }
     r_cell() {
@@ -622,6 +624,7 @@
         : c.special === 'double' ? `<div class="cell-sp dbl">✖️2 CASE DOUBLE !</div><div class="cell-val">${r.cellValue} pts</div>`
         : c.special === 'vol' ? `<div class="cell-sp vol">🦹 VOL DE POINTS !</div><div class="cell-val">${c.value} pts à voler</div>`
         : `<div class="cell-val">${c.value} pts</div>`;
+      // La case s'ouvre : on découvre enfin le thème et la valeur.
       return {
         key: 'cell' + c.i,
         html: `<div class="table-wrap"><div id="board"></div><div class="cell-card ${c.special || ''}"><div class="cell-cat">${c.icon} ${esc(c.cat)}</div>${special}</div></div>`,
@@ -638,9 +641,9 @@
       const g = this.g, r = g.round, p = g.players[r.player];
       return {
         key: 'qpick' + r.n,
-        html: `<div class="quatre-pick"><div class="turn-banner" style="--pc:${p.color}">${avatarImg(p, 'idle', 'tiny')} ${esc(p.name)} choisit son thème</div>
-          <div class="themes">${r.themes.map((t) => `<div class="theme">${t.icon}<span>${esc(t.name)}</span></div>`).join('')}</div>
-          <div class="status">40 secondes pour enchaîner 4 bonnes réponses d’affilée !</div></div>`,
+        html: `<div class="quatre-pick"><div class="turn-banner" style="--pc:${p.color}">${avatarImg(p, 'idle', 'tiny')} ${esc(p.name)} choisit son thème (${g.rankOf(p)}${g.rankOf(p) === 1 ? 'er' : 'e'} du classement)</div>
+          <div class="themes">${r.themes.map((t) => `<div class="theme ${t.by ? 'taken' : ''}">${t.icon}<span>${esc(t.name)}</span>${t.by ? `<small>pris par ${esc(g.name(t.by))}</small>` : ''}</div>`).join('')}<div class="theme mystery">❓<span>Thème mystère</span></div></div>
+          <div class="status">40 secondes pour enchaîner 4 bonnes réponses d’affilée ! Un thème pris n’est plus disponible.</div></div>`,
       };
     }
     quatreQ() {
@@ -649,7 +652,7 @@
       return {
         key: 'quatre' + q.id,
         html: `<div class="quatre">
-          <div class="turn-banner" style="--pc:${p.color}">${avatarImg(p, 'idle', 'tiny')} ${esc(p.name)} · ${esc(r.cat)}</div>
+          <div class="turn-banner" style="--pc:${p.color}">${avatarImg(p, 'idle', 'tiny')} ${esc(p.name)} · ${r.mystery ? '❓ ' : ''}${esc(r.cat)}</div>
           <div class="q4-meter" id="q4-meter"></div>
           <div class="q-text">${esc(q.data.question)}</div>
           ${this.choicesHTML(q, false)}
@@ -668,66 +671,29 @@
       };
     }
 
-    /* ---- Finale : l'Échelle ---- */
-    ladderHTML() {
-      const g = this.g, r = g.round;
-      return `<div class="ladder">${PQA.LADDER.map((v, i) => {
-        const here = r.climbers.filter((c) => c.step === i + 1).map((c) => g.players[c.id]).filter(Boolean);
-        return `<div class="rung ${i === PQA.LADDER_SAFE ? 'safe' : ''} ${i === 9 ? 'top' : ''}"><span class="rn">${i + 1}</span><span class="rv">${fmt(v)}</span>${here.map((p) => avatarImg(p, 'happy', 'tiny')).join('')}</div>`;
-      }).reverse().join('')}<div class="rung ground">${r.climbers.filter((c) => c.step === 0).map((c) => avatarImg(g.players[c.id], 'idle', 'tiny')).join('')} Départ</div></div>`;
-    }
-    climbersHTML() {
-      const g = this.g, r = g.round;
-      return r.climbers.map((c) => {
-        const p = g.players[c.id];
-        const st = c.status === 'out' ? '❌ Éliminé' : c.status === 'stopped' ? '✋ Arrêté' : c.status === 'top' ? '🏆 Sommet' : c.answer != null ? '🔒 Réponse verrouillée' : '🤔 Réfléchit...';
-        const j = (k, icon, label) => `<span class="jk ${c.jokers[k] ? '' : 'used'}" title="${label}">${icon}</span>`;
-        return `<div class="climber" style="--pc:${p.color}">${avatarImg(p, 'idle', 'tiny')}<b>${esc(p.name)}</b> <span class="cst">${st}</span>
-          <span class="jokers">${j('fifty', '½', '50/50')}${j('public', '👥', 'Avis du public')}${j('friend', '📞', 'Appel à un ami')}</span>
-          <span class="bank">${c.banked ? '+' + c.banked : c.step ? fmt(PQA.LADDER[c.step - 1]) : ''}</span></div>`;
-      }).join('');
-    }
-    ladderView(revealed) {
+    /* ---- Duel des champions ---- */
+    championsTop() {
       const g = this.g, r = g.round, q = g.q;
-      const solo = r.climbers.length === 1;
-      const hidden = solo && r.climbers[0].hidden ? r.climbers[0].hidden : [];
-      let extra = '';
-      if (r.vote) {
-        if (r.vote.open) extra = `<div class="joker-panel">👥 Le public vote... (${Object.keys(r.vote.votes).length}/${r.vote.voters.length})</div>`;
-        else { const tot = r.vote.dist.reduce((a, b) => a + b, 0) || 1; extra = `<div class="joker-panel"><b>👥 Avis du public</b><div class="vote-bars">${r.vote.dist.map((n, i) => `<div class="vb"><div class="vbf" style="height:${(n / tot) * 100}%"></div><span>${LETTERS[i]} ${Math.round((n / tot) * 100)}%</span></div>`).join('')}</div></div>`; }
-      }
-      if (r.friend && !r.friend.done) extra += `<div class="joker-panel">📞 Appel à <b>${esc(g.name(r.friend.id))}</b> : il a la question sur son téléphone, écoutez-le !</div>`;
-      const suspense = revealed && g.revealPending;
-      const step = Math.max(0, ...r.climbers.filter((c) => q.answerers.includes(c.id)).map((c) => c.step - (revealed && !suspense && q.results[c.id] && q.results[c.id].correct ? 1 : 0)));
-      return {
-        key: (revealed ? 'r' : 'q') + q.id + (suspense ? 's' : ''),
-        html: `<div class="ladder-wrap">
-          <div id="ladder"></div>
-          <div class="ladder-q">
-            <div class="q-head"><span class="cat">🪜 Marche ${step + 1} · ${fmt(PQA.LADDER[Math.min(9, step)])} pts</span>${diffBar(q.data.difficulte)}</div>
-            <div class="q-text">${esc(q.data.question)}</div>
-            <div id="ladder-choices"></div>
-            <div id="ladder-extra"></div>
-            <div id="climbers"></div>
-            ${revealed && !suspense && g.irl ? this.anecdoteHTML(q) : ''}
-          </div>
-        </div>`,
-        parts: { ladder: this.ladderHTML(), 'ladder-choices': this.choicesHTML(q, revealed && !suspense, hidden), 'ladder-extra': extra, climbers: this.climbersHTML() },
+      const side = (id, cls) => {
+        const p = g.players[id];
+        const pose = q && q.buzz && q.buzz.current === id ? 'buzz' : q && q.revealed && q.results[id] ? (q.results[id].correct ? 'happy' : 'sad') : 'idle';
+        const stars = Array.from({ length: r.target }, (_, i) => `<i class="${i < r.hits[id] ? 'on' : ''}">★</i>`).join('');
+        return `<div class="fighter ${cls}" style="--pc:${p.color}">${avatarImg(p, pose, 'fav')}<div class="fname">${esc(p.name)}</div><div class="champ-stars">${stars}</div></div>`;
       };
+      return side(r.finalists[0], 'left') + '<div class="vs">VS</div>' + side(r.finalists[1], 'right');
     }
-    r_ladder() {
+    r_faceoff() {
       const g = this.g, r = g.round;
       return {
-        key: 'ladder-intro',
-        html: `<div class="ladder-wrap"><div id="ladder"></div><div class="ladder-q"><div class="intro-name">🪜 La grande finale</div>
-          <div class="intro-desc">${r.climbers.map((c) => esc(g.name(c.id))).join(' et ')} ${r.climbers.length > 1 ? 'vont' : 'va'} tenter de gravir les 10 marches. Palier assuré à la marche ${PQA.LADDER_SAFE + 1}. Jokers : ½ 50/50 · 👥 avis du public · 📞 appel à un ami.</div>
-          <div id="climbers"></div></div></div>`,
-        parts: { ladder: this.ladderHTML(), climbers: this.climbersHTML() },
+        key: 'faceoff',
+        html: `<div class="duel champions"><div class="intro-name">⚔️ Duel des champions</div><div class="duel-top" id="duel-top"></div>
+          <div class="intro-desc">Les indices tombent un à un : buzzez dès que vous savez, puis tapez la réponse. Le premier à ${r.target} bonnes réponses remporte la partie !</div></div>`,
+        parts: { 'duel-top': this.championsTop() },
       };
     }
-    r_ladderEnd() {
-      const g = this.g, r = g.round;
-      return { key: 'ladder-end', html: `<div class="ladder-wrap"><div id="ladder"></div><div class="ladder-q"><div class="intro-name">Fin de l’ascension !</div><div id="climbers"></div></div></div>`, parts: { ladder: this.ladderHTML(), climbers: this.climbersHTML() } };
+    r_champion() {
+      const g = this.g, w = g.players[g.champion];
+      return { key: 'champion', html: `<div class="ko"><div class="ko-text champ">👑</div>${w ? avatarImg(w, 'happy', 'huge') + `<div class="ko-win" style="color:${w.color}">${esc(w.name)} remporte le Duel des champions et la partie !</div>` : ''}</div>` };
     }
 
     /* ---- Classement entre les manches ---- */
@@ -753,7 +719,7 @@
     r_end() {
       const g = this.g;
       const rk = g.ranking();
-      const podium = [rk[1], rk[0], rk[2]].map((p, i) => p ? `<div class="podium-step s${[2, 1, 3][i]}" style="--pc:${p.color}">${avatarImg(p, i === 1 ? 'happy' : 'idle', 'big')}<div class="ps-name">${esc(p.name)}</div><div class="ps-block"><span>${[2, 1, 3][i]}</span><small>${fmt(p.score)}</small></div></div>` : '<div class="podium-step empty"></div>').join('');
+      const podium = [rk[1], rk[0], rk[2]].map((p, i) => p ? `<div class="podium-step s${[2, 1, 3][i]}" style="--pc:${p.color}">${avatarImg(p, i === 1 ? 'happy' : 'idle', 'big')}<div class="ps-name">${p.id === g.champion ? '👑 ' : ''}${esc(p.name)}</div><div class="ps-block"><span>${[2, 1, 3][i]}</span><small>${fmt(p.score)}</small></div></div>` : '<div class="podium-step empty"></div>').join('');
       const titles = rk.map((p) => { const t = g.titles && g.titles[p.id]; return t ? `<div class="title-row" style="--pc:${p.color}"><b>${esc(p.name)}</b> <span class="tt">« ${esc(t.title)} »</span> <small>${esc(t.desc)}</small></div>` : ''; }).join('');
       const team = g.settings.teams ? (() => { const t = g.teamScores()[0]; return `<div class="team-win" style="--pc:${t.color}">Victoire de l’équipe des ${esc(t.name)} ! (${fmt(t.score)} pts)</div>`; })() : '';
       return {
@@ -839,8 +805,9 @@
         case 'drumroll': sfx.drumroll(2); break;
         case 'wheel': break;
         case 'leaderboard': music.sting('round'); this.audience.cheer(0.6); break;
-        case 'ladder': music.sting('round'); this.audience.cheer(1); break;
-        case 'joker': sfx.card(); break;
+        case 'faceoff': music.sting('round'); sfx.whoosh(); this.audience.cheer(1); break;
+        case 'champHit': sfx.hit(); this.shake(2); if (p) this.bigText('★ ' + p.name, p.color); break;
+        case 'champion': sfx.drumroll(1); setTimeout(() => { sfx.victory(); this.confetti(180); this.audience.cheer(1); }, 1100); break;
         case 'hit': sfx.hit(); this.shake(d.crit ? 3 : 2); this.flash('#e43b44'); break;
         case 'ko': sfx.ko(); this.shake(3); setTimeout(() => { sfx.victory(); this.confetti(150); }, 1200); break;
         case 'end': sfx.drumroll(1.2); setTimeout(() => { sfx.victory(); this.confetti(200); this.audience.cheer(1); }, 1300); break;

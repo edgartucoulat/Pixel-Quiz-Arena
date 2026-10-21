@@ -20,20 +20,24 @@
   const pickOne = (arr) => arr[rand(arr.length)];
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
-  const ROUND_ORDER = ['mystere', 'fourchette', 'indices', 'quatre', 'eclair', 'table', 'echelle'];
+  // Ordre de l'émission : le Sprint ouvre, le Duel des champions conclut toujours.
+  const ROUND_ORDER = ['sprint', 'mystere', 'eclair', 'table', 'quatre', 'fourchette', 'champions'];
   PQA.ROUND_ORDER = ROUND_ORDER;
+  const DEFAULT_ROUNDS = ['sprint', 'table', 'quatre', 'fourchette', 'champions'];
 
   // Nombre de questions / tours par manche selon la durée choisie.
   const LENGTH = {
-    court: { eclair: 5, fourchette: 3, indices: 4, mystereTurns: 1, table: [3, 3], quatre: 2 },
-    normal: { eclair: 8, fourchette: 5, indices: 6, mystereTurns: 1, table: [4, 3], quatre: 3 },
-    long: { eclair: 12, fourchette: 7, indices: 8, mystereTurns: 2, table: [4, 4], quatre: 4 },
+    // table : [colonnes, lignes] de cases mystères ; quatre : nombre max de joueurs ;
+    // champions : bonnes réponses pour remporter le duel final.
+    court: { sprint: 10, eclair: 5, fourchette: 3, mystereTurns: 1, table: [3, 3], quatre: 4, champions: 3 },
+    normal: { sprint: 10, eclair: 8, fourchette: 5, mystereTurns: 1, table: [4, 3], quatre: 6, champions: 3 },
+    long: { sprint: 10, eclair: 12, fourchette: 7, mystereTurns: 2, table: [4, 4], quatre: 10, champions: 3 },
   };
 
   const TIMES = {
     eclair: 15000, fourchette: 30000, single: 25000, singleLibre: 35000,
     level: 20000, buzzAnswer: 15000, buzzAnswerIRL: 20000, clue: 6500, afterLastClue: 9000,
-    ladder: 60000, vote: 15000, friend: 30000, quatre: 40000, board: 25000, target: 15000,
+    sprint: 12000, quatre: 40000, board: 25000, target: 15000, theme: 20000,
     duelBuzz: 15000, duelAnswer: 8000,
   };
 
@@ -48,6 +52,25 @@
   };
   /** Temps de lecture avant l'ouverture des buzzers, selon la longueur du texte. */
   const readTime = (text) => clamp(String(text || '').length * 35, 1500, 4000);
+  const SPRINT_POINTS = 200;
+
+  /* Le Sprint se joue sans choix : questions libres, plus les QCM dont la
+   * réponse se tape facilement et dont l'énoncé ne dépend pas des choix. */
+  const NEEDS_CHOICES = /\b(ces|parmi|suivante?s?|intrus|lequel|laquelle|lesquel(le)?s|ci-dessous|quelle proposition)\b/i;
+  const sprintable = (q) => q.type === 'libre' || (q.type === 'qcm' && String(q.reponse).length <= 22 && String(q.reponse).split(/\s+/).length <= 3
+    && !NEEDS_CHOICES.test(q.question) && !/^(oui|non|aucun|aucune|tous|toutes)\b/i.test(q.reponse));
+  /** Version « réponse à taper » d'une question : un QCM devient une question libre. */
+  function asTyped(q) {
+    if (q.type !== 'qcm') return q;
+    const acc = (q.reponses_acceptees || []).slice();
+    const num = String(q.reponse).match(/^(\d[\d\s.,]*?)\s*[^\d\s.,]/); // « 116 ans » : « 116 » suffit
+    if (num) acc.push(num[1].trim());
+    const paren = String(q.reponse).replace(/\s*\(.*?\)\s*/g, ' ').trim(); // « Paris (France) » -> « Paris »
+    if (paren && paren !== q.reponse) acc.push(paren);
+    const out = { ...q, type: 'libre', reponses_acceptees: acc };
+    delete out.choix;
+    return out;
+  }
 
   class Game {
     constructor(bank, categories, hooks) {
@@ -60,9 +83,8 @@
       this.settings = {
         mode: 'virtual', // virtual | irl | duel
         teams: 0, // 0 = sans équipes, sinon 2 à 4
-        rounds: ['mystere', 'fourchette', 'indices', 'eclair', 'table', 'echelle'],
+        rounds: DEFAULT_ROUNDS.slice(),
         length: 'normal',
-        finale: 'solo', // solo | duo
         cards: true,
         localDuel: false,
       };
@@ -95,12 +117,18 @@
     connectedPlayers() { return this.activePlayers().filter((p) => p.connected || p.local); }
     name(pid) { return this.players[pid] ? this.players[pid].name : '?'; }
 
-    /** Classement (par score décroissant). */
+    /** Classement (par score décroissant). Le vainqueur du Duel des champions passe devant tout le monde. */
     ranking() {
-      return this.activePlayers().slice().sort((a, b) => b.score - a.score || a.joinedAt - b.joinedAt);
+      const r = this.activePlayers().slice().sort((a, b) => b.score - a.score || a.joinedAt - b.joinedAt);
+      if (this.champion && this.players[this.champion]) {
+        const top = [this.champion, this.runnerUp].map((id) => this.players[id]).filter((p) => p && !p.spectator);
+        return top.concat(r.filter((p) => !top.includes(p)));
+      }
+      return r;
     }
     rankOf(p) {
       const r = this.ranking();
+      if (this.champion) return r.indexOf(p) + 1;
       // Ex-aequo : même rang
       const i = r.findIndex((x) => x.score === p.score);
       return i + 1;
@@ -112,7 +140,9 @@
         const members = this.activePlayers().filter((p) => p.team === t);
         out.push({ team: t, name: PQA.TEAM_NAMES[t], color: PQA.PALETTE.team[t], score: members.reduce((s, p) => s + p.score, 0), members: members.map((p) => p.id) });
       }
-      return out.sort((a, b) => b.score - a.score);
+      // L'équipe du champion gagne l'émission.
+      const champ = this.champion && this.players[this.champion];
+      return out.sort((a, b) => (champ ? (b.team === champ.team) - (a.team === champ.team) : 0) || b.score - a.score);
     }
 
     /* ---- Jobs et chrono (pausables par le présentateur) ---- */
@@ -216,7 +246,7 @@
         colorIdx, color: PQA.PALETTE.player[colorIdx], team: 0, score: 0, connected: true, joinedAt: Date.now(),
         streak: 0, bestStreak: 0, cards: [], frozenUntil: 0, mirror: false, mirrorQ: null, double: false, stolenBy: null,
         rtt: 120, local: false, spectator: this.phase !== 'lobby' && false,
-        stats: { correct: 0, wrong: 0, answered: 0, buzzWins: 0, wrongBuzz: 0, fastest: null, fourchette: 0, cardsUsed: 0, hardCorrect: 0, worstRank: 1, ladder: 0, ladderStop: false, points: 0 },
+        stats: { correct: 0, wrong: 0, answered: 0, buzzWins: 0, wrongBuzz: 0, fastest: null, fourchette: 0, cardsUsed: 0, hardCorrect: 0, worstRank: 1, points: 0 },
         fxSeq: 0,
       };
       this.players[id] = p;
@@ -380,8 +410,10 @@
       } else {
         if (this.activePlayers().length < 1) return 'Il faut au moins 1 joueur.';
         this.rounds = ROUND_ORDER.filter((r) => this.settings.rounds.includes(r));
-        if (!this.rounds.length) return 'Choisis au moins une manche.';
+        if (this.activePlayers().length < 2) this.rounds = this.rounds.filter((r) => r !== 'champions');
+        if (!this.rounds.length) return this.settings.rounds.includes('champions') ? 'Il faut 2 joueurs pour le Duel des champions.' : 'Choisis au moins une manche.';
       }
+      this.champion = this.runnerUp = null;
       if (this.settings.teams) this.activePlayers().forEach((p) => p.team >= this.settings.teams && this.autoTeam(p));
       this.activePlayers().forEach((p) => { p.score = 0; p.streak = 0; p.cards = []; });
       this.roundIdx = -1;
@@ -412,11 +444,12 @@
       this.clearJobs();
       const t = this.round.type;
       const L = LENGTH[this.settings.length];
-      if (t === 'eclair' || t === 'fourchette' || t === 'indices') { this.round.total = L[t]; this.nextSimple(); }
+      if (t === 'eclair' || t === 'fourchette') { this.round.total = L[t]; this.nextSimple(); }
+      else if (t === 'sprint') { this.round.total = L.sprint; this.round.cats = []; this.sprintNext(); }
       else if (t === 'mystere') { this.round.turns = []; for (let i = 0; i < L.mystereTurns; i++) this.round.turns.push(...this.turnOrder()); this.round.total = this.round.turns.length; this.mystereNext(); }
       else if (t === 'table') this.tableStart(L.table);
       else if (t === 'quatre') this.quatreStart(L.quatre);
-      else if (t === 'echelle') this.ladderStart();
+      else if (t === 'champions') this.championsStart(L.champions);
       else if (t === 'duel') this.duelStart();
       this.changed();
     }
@@ -453,17 +486,16 @@
         case 'reveal': return this.afterReveal();
         case 'leaderboard': return this.nextRound();
         case 'question': return this.forceReveal();
-        case 'ladder': return this.ladderQuestion();
         case 'cell': return this.tableAfterCell();
         case 'qresult': return this.quatreNextPlayer();
-        case 'ko': return this.endGame();
+        case 'faceoff': return this.championsNext();
+        case 'ko': case 'champion': return this.endGame();
         case 'wheel': return this.mystereLevel();
         default: return;
       }
     }
     forceReveal() {
       if (this.phase !== 'question' || !this.q) return;
-      if (this.q.kind === 'ladder') return this.ladderReveal();
       if (this.q.kind === 'quatre') return this.quatreEnd();
       this.reveal();
     }
@@ -472,9 +504,9 @@
     /**
      * Prépare une question. kind :
      *  'all'    : tout le monde répond (QCM éclair, Fourchette)
-     *  'single' : un seul joueur répond (Thème Mystère, Table, 4 à la suite)
-     *  'buzz'   : premier qui buzze (Indices, Duel)
-     *  'ladder' : le ou les finalistes (Échelle)
+     *  'single' : un seul joueur répond (Thème Mystère, Cases mystères)
+     *  'quatre' : le joueur du 4 à la suite enchaîne les questions
+     *  'buzz'   : premier qui buzze (Sprint, Duel des champions, Duel)
      */
     makeQ(data, kind, answerers, extra = {}) {
       const q = { data, kind, answerers, answers: {}, results: {}, startedAt: now(), id: ++this.nextId, ...extra };
@@ -508,7 +540,6 @@
       if (!q || !p || this.phase !== 'question') return;
       if (this.isFrozen(p)) return this.hooks.send(pid, { t: 'fx', fx: 'frozen' });
       if (q.kind === 'buzz') return this.buzzAnswer(pid, value);
-      if (q.kind === 'ladder') return this.ladderAnswer(pid, value);
       if (q.kind === 'quatre') return this.quatreAnswer(pid, value);
       if (!q.answerers.includes(pid) || q.answers[pid]) return;
       const t = now() - q.startedAt;
@@ -634,23 +665,23 @@
       const t = this.round.type;
       if (t === 'mystere') return this.mystereNext();
       if (t === 'table') return this.tableNextTurn();
-      if (t === 'echelle') return this.ladderAfterReveal();
+      if (t === 'sprint') return this.sprintNext();
+      if (t === 'champions') return this.championsNext();
       if (t === 'duel') return this.duelNext();
       this.nextSimple();
     }
 
-    /* ---- Manches "simples" : QCM éclair, Fourchette, Indices ---- */
+    /* ---- Manches "simples" : QCM éclair, Fourchette ---- */
     nextSimple() {
       const r = this.round;
       if (r.n >= r.total) return this.endRound();
-      const types = r.type === 'eclair' ? ['qcm', 'vf'] : r.type === 'fourchette' ? ['fourchette'] : ['indices'];
+      const types = r.type === 'eclair' ? ['qcm', 'vf'] : ['fourchette'];
       // Difficulté qui monte doucement au fil de la manche.
       const diff = clamp(Math.round(3 + (r.n / Math.max(1, r.total - 1)) * 6 + (Math.random() * 2 - 1)), 2, 10);
       const data = this.pickQuestion({ types, diff });
       if (!data) return this.endRound();
       r.n++;
       const everyone = this.activePlayers().map((p) => p.id);
-      if (r.type === 'indices') return this.startIndices(data, everyone);
       const q = this.makeQ(data, 'all', everyone);
       q.duration = r.type === 'eclair' ? TIMES.eclair + Math.min(8000, data.question.length * 40) : TIMES.fourchette;
       this.startTimer(q.duration, () => this.reveal());
@@ -704,15 +735,34 @@
       this.fx('drumroll');
     }
 
-    /* ---- Buzzer (Indices et Duel) ---- */
-    startIndices(data, everyone) {
-      const q = this.makeQ(data, 'buzz', everyone);
+    /* ---- Le Sprint : 10 questions au buzzer, thèmes au hasard, réponse à taper ---- */
+    sprintNext() {
+      const r = this.round;
+      if (r.n >= r.total) return this.endRound();
+      const diff = clamp(Math.round(2 + (r.n / Math.max(1, r.total - 1)) * 5 + (Math.random() * 2 - 1)), 1, 9);
+      // Un thème différent à chaque question (on évite les 4 derniers).
+      const recent = r.cats.slice(-4);
+      const pick = (types) => this.pickQuestion({ types, diff, exclude: (q) => !sprintable(q) || recent.includes(q.categorie) })
+        || this.pickQuestion({ types, diff, exclude: (q) => !sprintable(q) });
+      const data = (Math.random() < 0.6 && pick(['libre'])) || pick(['libre', 'qcm']);
+      if (!data) return this.endRound();
+      r.n++;
+      r.cats.push(data.categorie);
+      this.startBuzz(asTyped(data), this.activePlayers().map((p) => p.id));
+    }
+
+    /* ---- Buzzer (Sprint, Duel des champions, Duel) ---- */
+    /** Question au buzzer avec réponse à taper (ou à l'oral en mode IRL), avec ou sans indices. */
+    startBuzz(data, answerers) {
+      const q = this.makeQ(data, 'buzz', answerers);
+      q.typed = true;
       q.clue = 0;
-      q.buzz = { open: true, locked: [], current: null, pending: [], readyAt: now() + readTime(data.question + ' ' + data.indices[0]) };
+      q.buzz = { open: true, locked: [], current: null, pending: [], readyAt: now() + readTime(data.question + (data.indices ? ' ' + data.indices[0] : '')) };
       this.after(q.buzz.readyAt - now(), () => this.changed());
       this.fx('question');
       this.say('question', {}, 'neutral');
-      this.scheduleClue(q);
+      if (data.indices) this.scheduleClue(q);
+      else this.startTimer(TIMES.sprint + (q.buzz.readyAt - now()), () => this.buzzTimeout());
       this.changed();
     }
     scheduleClue(q) {
@@ -769,20 +819,21 @@
       // Le chrono de la question est mis en pause pendant que le joueur répond.
       q.savedTimer = this.timer ? { left: this.timerLeft(), onEnd: this.timer.onEnd, total: this.timer.total } : null;
       // Réponse orale en mode IRL : le présentateur garde la main sur le temps.
-      const dur = this.irl && q.data.type === 'indices' ? TIMES.buzzAnswerIRL : q.data.type === 'indices' ? BUZZ.answerText : BUZZ.answer;
+      const dur = this.answerTime(q);
       this.startTimer(dur, () => this.resolveBuzz(win.pid, false, true));
       this.fx('buzz', { pid: win.pid });
       this.hooks.send(win.pid, { t: 'fx', fx: 'buzzwin' });
       this.say('firstBuzz', { name: p.name }, 'surprised');
       this.changed();
     }
+    answerTime(q) { return q.typed ? (this.irl ? TIMES.buzzAnswerIRL : BUZZ.answerText) : BUZZ.answer; }
     buzzAnswer(pid, value) {
       const q = this.q;
       if (q.buzz.current !== pid || q.buzzAnswered) return;
       const p = this.players[pid];
       p.stats.answered++;
       q.answers[pid] = { value, t: now() - q.startedAt, text: typeof value === 'string' ? value.slice(0, 60) : undefined };
-      if (this.irl && q.data.type === 'indices') { q.pending = { pid, text: q.answers[pid].text }; this.changed(); return; }
+      if (this.irl && q.typed) { q.pending = { pid, text: q.answers[pid].text }; this.changed(); return; }
       this.resolveBuzz(pid, this.evaluate(q, value));
     }
     resolveBuzz(pid, ok, timeout) {
@@ -793,10 +844,9 @@
       q.buzz.current = null;
       if (ok) {
         if (this.round.type === 'duel') return this.duelHit(pid);
-        const n = q.data.indices.length;
-        const base = Math.round((300 * (n - q.clue)) / n / 10) * 10;
-        const r = this.scoreCorrect(p, base, { diff: q.data.difficulte });
-        q.results[pid] = { correct: true, pts: r.pts, mult: r.mult, clue: q.clue + 1 };
+        if (this.round.type === 'champions') return this.championsHit(pid);
+        const r = this.scoreCorrect(p, SPRINT_POINTS, { diff: q.data.difficulte });
+        q.results[pid] = { correct: true, pts: r.pts, mult: r.mult };
         this.say('correct', { name: p.name, pts: r.pts }, 'happy');
         return this.reveal();
       }
@@ -808,10 +858,12 @@
       if (this.round.type === 'duel') {
         pts = -BUZZ.duelPenalty;
         this.round.hp[pid] = Math.max(0, this.round.hp[pid] - BUZZ.duelPenalty);
+      } else if (this.round.type === 'champions') {
+        pts = 0; // en finale, l'erreur laisse simplement la main à l'adversaire
       } else {
         p.score -= BUZZ.penalty;
       }
-      this.fx('points', { pid, pts });
+      if (pts) this.fx('points', { pid, pts });
       q.results[pid] = { correct: false, pts, wrongAnswer: q.answers[pid] && q.answers[pid].text, timeout: !!timeout };
       delete q.answers[pid];
       this.fx('wrong', { pid });
@@ -880,20 +932,25 @@
       this.changed();
     }
 
-    /* ---- Table des Savoirs ---- */
+    /* ---- Cases mystères : thème, valeur et surprise cachés jusqu'au choix ---- */
     tableStart([cols, rows]) {
       const types = ['qcm', 'vf', 'libre'];
-      const cats = PQA.shuffle(this.categories.map((c) => c.name).filter((c) => this.countAvailable(types, c) >= rows)).slice(0, cols);
+      const n0 = cols * rows;
+      const cats = this.categories.map((c) => c.name).filter((c) => this.countAvailable(types, c) >= 2);
+      // Thèmes tirés au hasard (le moins de doublons possible), valeurs mélangées.
+      let deck = [];
+      while (deck.length < n0 && cats.length) deck = deck.concat(PQA.shuffle(cats));
+      const values = PQA.shuffle(Array.from({ length: n0 }, (_, i) => [100, 200, 300, 400][i % 4]));
       const cells = [];
-      for (let y = 0; y < rows; y++) for (let x = 0; x < cats.length; x++) {
-        cells.push({ i: cells.length, x, y, cat: cats[x], icon: this.catIcon(cats[x]), value: (y + 1) * 100 + (Math.random() < 0.3 ? 100 : 0), special: null, used: false });
+      for (let i = 0; i < n0 && deck.length; i++) {
+        cells.push({ i, x: i % cols, y: Math.floor(i / cols), cat: deck[i], icon: this.catIcon(deck[i]), value: values[i], special: null, used: false });
       }
       // Cases spéciales cachées
       const n = cells.length;
       const specials = PQA.shuffle(['piege', 'double', 'vol', ...(n >= 12 ? ['piege', 'double', 'vol'] : [])]);
       PQA.shuffle(cells).slice(0, specials.length).forEach((c, i) => (c.special = specials[i]));
       const r = this.round;
-      r.cells = cells; r.cols = cats.length; r.rows = rows;
+      r.cells = cells; r.cols = cols; r.rows = rows;
       r.turns = this.turnOrder();
       r.turn = 0;
       r.total = n;
@@ -969,8 +1026,8 @@
       const r = this.round;
       const v = r.cell.value;
       const diff = v <= 100 ? 3 : v <= 200 ? 5 : v <= 300 ? 7 : v <= 400 ? 8 : 10;
-      const data = this.pickQuestion({ types: ['qcm', 'vf', 'libre'], cat: r.cell.cat, diff });
-      if (!data) return this.tableNextTurn();
+      const data = this.pickQuestion({ types: ['qcm', 'vf', 'libre'], cat: r.cell.cat, diff }) || this.pickQuestion({ types: ['qcm', 'vf', 'libre'], diff });
+      if (!data) { this.phase = 'cell'; return this.tableNextTurn(); }
       const q = this.makeQ(data, 'single', [r.player]);
       q.duration = data.type === 'libre' ? TIMES.singleLibre : TIMES.single;
       this.startTimer(q.duration, () => this.reveal());
@@ -984,9 +1041,14 @@
     /* ---- 4 à la suite ---- */
     quatreStart(n) {
       const r = this.round;
-      r.queue = this.ranking().filter((p) => p.connected || p.local).slice(0, n).reverse().map((p) => p.id); // du moins bon au meilleur
+      r.queue = this.ranking().filter((p) => p.connected || p.local).slice(0, n).map((p) => p.id); // le 1er du classement choisit en premier
       if (!r.queue.length) return this.endRound();
       r.total = r.queue.length;
+      // Une liste de thèmes commune : un thème pris n'est plus disponible pour les suivants.
+      const types = ['qcm', 'vf'];
+      const cats = PQA.shuffle(this.categories.map((c) => c.name).filter((c) => this.countAvailable(types, c) >= 8));
+      r.themes = cats.slice(0, clamp(r.queue.length + 2, 4, 9)).map((c) => ({ name: c, icon: this.catIcon(c), by: null }));
+      r.spare = cats.slice(r.themes.length); // réserve du thème mystère
       this.quatreNextPlayer(true);
     }
     quatreNextPlayer(first) {
@@ -996,21 +1058,37 @@
       if (!r.queue.length) return this.endRound();
       r.player = r.queue.shift();
       r.n++;
-      const types = ['qcm', 'vf'];
-      r.themes = PQA.shuffle(this.categories.map((c) => c.name).filter((c) => this.countAvailable(types, c) >= 8)).slice(0, 4).map((c) => ({ name: c, icon: this.catIcon(c) }));
+      if (!this.players[r.player]) return this.quatreNextPlayer(true);
       r.run = null;
+      r.mystery = false;
       this.q = null;
       this.phase = 'qpick';
-      this.startTimer(TIMES.target, () => this.quatreTheme(r.player, rand(r.themes.length)));
+      this.say('quatrePick', { name: this.name(r.player) }, 'neutral');
+      this.startTimer(TIMES.theme, () => this.quatreTheme(r.player, 'mystere'));
       this.changed();
     }
+    /** Choix du thème : un index de la liste, ou 'mystere' (thème libre tiré au hasard et révélé après). */
     quatreTheme(pid, idx) {
       const r = this.round;
-      if (this.phase !== 'qpick' || pid !== r.player || !r.themes[idx]) return;
-      r.cat = r.themes[idx].name;
+      if (this.phase !== 'qpick' || pid !== r.player) return;
+      let theme;
+      if (idx === 'mystere' || idx === -1) {
+        const pool = r.themes.filter((t) => !t.by).map((t) => t.name).concat(r.spare);
+        if (!pool.length) return;
+        const name = pickOne(pool);
+        theme = r.themes.find((t) => t.name === name);
+        if (!theme) { r.spare = r.spare.filter((c) => c !== name); theme = { name, icon: this.catIcon(name), by: null }; r.themes.push(theme); }
+        r.mystery = true;
+      } else {
+        theme = r.themes[idx];
+        if (!theme || theme.by) return;
+      }
+      theme.by = pid;
+      r.cat = theme.name;
       r.run = { streak: 0, best: 0, correct: 0, done: false, last: null };
       this.stopTimer();
       this.fx('select');
+      if (r.mystery) this.say('quatreMystery', { cat: r.cat, name: this.name(pid) }, 'surprised');
       this.phase = 'question';
       this.startTimer(TIMES.quatre, () => this.quatreEnd());
       this.quatreQuestion();
@@ -1069,170 +1147,59 @@
       this.changed();
     }
 
-    /* ---- Finale : l'Échelle ---- */
-    ladderStart() {
+    /* ---- Duel des champions : les 2 meilleurs, au buzzer à indices. Le vainqueur gagne l'émission. ---- */
+    championsStart(target) {
       const r = this.round;
       const rk = this.ranking().filter((p) => p.connected || p.local);
-      const n = this.settings.finale === 'duo' && rk.length >= 3 ? 2 : 1;
-      r.climbers = rk.slice(0, n).map((p) => ({ id: p.id, step: 0, status: 'active', jokers: { fifty: true, public: true, friend: true }, hidden: [], banked: 0 }));
-      if (!r.climbers.length) return this.endRound();
-      r.total = 10;
-      this.phase = 'ladder';
-      this.fx('ladder');
-      if (this.auto) this.after(4500, () => this.ladderQuestion());
+      if (rk.length < 2) return this.endRound();
+      r.finalists = rk.slice(0, 2).map((p) => p.id);
+      r.hits = { [r.finalists[0]]: 0, [r.finalists[1]]: 0 };
+      r.target = target;
+      r.max = target * 4; // garde-fou si personne ne trouve
+      r.total = 0;
+      this.phase = 'faceoff';
+      this.fx('faceoff');
+      this.say('championsIntro', { a: this.name(r.finalists[0]), b: this.name(r.finalists[1]), n: target }, 'surprised');
+      if (this.auto) this.after(7000, () => this.championsNext());
       this.changed();
     }
-    activeClimbers() { return this.round.climbers.filter((c) => c.status === 'active'); }
-    ladderQuestion() {
+    championsNext() {
       const r = this.round;
-      if (this.phase !== 'ladder' && this.phase !== 'reveal') return;
+      if (this.phase !== 'faceoff' && this.phase !== 'reveal') return;
       this.clearJobs();
-      const active = this.activeClimbers();
-      if (!active.length) return this.ladderFinish();
-      const step = Math.max(...active.map((c) => c.step));
-      if (step >= 10) return this.ladderFinish();
-      const data = this.pickQuestion({ types: ['qcm'], diff: step + 1, diffMin: Math.max(1, step - 1), diffMax: Math.min(10, step + 3) });
-      if (!data) return this.ladderFinish();
-      active.forEach((c) => { c.hidden = []; c.answer = null; });
-      r.vote = null; r.friend = null;
-      const q = this.makeQ(data, 'ladder', active.map((c) => c.id));
-      q.duration = TIMES.ladder;
-      this.startTimer(q.duration, () => this.ladderReveal());
-      this.fx('question');
-      this.changed();
+      const [a, b] = r.finalists;
+      if (r.hits[a] >= r.target || r.hits[b] >= r.target || r.n >= r.max) return this.championsEnd();
+      const diff = clamp(4 + r.n, 4, 9);
+      const data = this.pickQuestion({ types: ['indices'], diff })
+        || this.pickQuestion({ types: ['libre', 'qcm'], diff, exclude: (q) => !sprintable(q) });
+      if (!data) return this.championsEnd();
+      r.n++;
+      this.startBuzz(asTyped(data), r.finalists.slice());
     }
-    climber(pid) { return this.round && this.round.climbers && this.round.climbers.find((c) => c.id === pid); }
-    ladderAnswer(pid, value) {
-      const c = this.climber(pid);
-      const q = this.q;
-      if (!c || c.status !== 'active' || c.answer != null || !q.answerers.includes(pid)) return;
-      const v = Number(value);
-      if (c.hidden.includes(v)) return;
-      c.answer = v;
-      q.answers[pid] = { value: v };
-      this.fx('lock', { pid });
-      if (this.activeClimbers().filter((x) => q.answerers.includes(x.id)).every((x) => x.answer != null)) {
-        this.clearJobs();
-        this.after(400, () => this.ladderReveal());
-      }
-      this.changed();
+    championsHit(pid) {
+      const r = this.round, q = this.q, p = this.players[pid];
+      r.hits[pid]++;
+      p.streak++; p.stats.correct++; p.bestStreak = Math.max(p.bestStreak, p.streak);
+      q.results[pid] = { correct: true, pts: 0, hit: true };
+      this.fx('champHit', { pid });
+      const left = r.target - r.hits[pid];
+      if (left <= 0) this.say('championsMatch', { name: p.name }, 'surprised');
+      else if (left === 1) this.say('championsBall', { name: p.name }, 'surprised');
+      else this.say('correct', { name: p.name, pts: '' }, 'happy');
+      this.reveal();
     }
-    ladderStop(pid) {
-      const c = this.climber(pid);
-      if (!c || c.status !== 'active' || c.step === 0 || this.phase !== 'question' || c.answer != null) return;
-      c.status = 'stopped';
-      c.banked = PQA.LADDER[c.step - 1];
-      this.players[pid].stats.ladderStop = true;
-      this.say('ladderStop', { name: this.name(pid) }, 'smug');
-      if (!this.activeClimbers().some((x) => this.q.answerers.includes(x.id) && x.answer == null)) this.ladderReveal();
-      this.changed();
-    }
-    joker(pid, kind, arg) {
-      const c = this.climber(pid);
-      const q = this.q;
-      if (!c || c.status !== 'active' || !q || q.kind !== 'ladder' || this.phase !== 'question' || !c.jokers[kind]) return;
+    championsEnd() {
       const r = this.round;
-      if (kind === 'fifty') {
-        const wrong = PQA.shuffle(q.choices.map((_, i) => i).filter((i) => i !== q.correctIdx));
-        c.hidden = wrong.slice(0, 2);
-        this.say('joker5050', {}, 'smug');
-      } else if (kind === 'public') {
-        const voters = this.connectedPlayers().filter((p) => !this.climber(p.id)).map((p) => p.id);
-        if (!voters.length) return this.hooks.send(pid, { t: 'toast', text: 'Pas de public disponible !' });
-        r.vote = { voters, votes: {}, open: true, end: now() + TIMES.vote };
-        this.after(TIMES.vote, () => this.closeVote());
-        this.say('jokerPublic', {}, 'happy');
-      } else if (kind === 'friend') {
-        const friend = this.players[arg];
-        if (!friend || this.climber(arg) || !(friend.connected || friend.local)) return;
-        r.friend = { id: arg, from: pid, end: now() + TIMES.friend };
-        this.after(TIMES.friend, () => { if (r.friend) r.friend.done = true; });
-        this.say('jokerFriend', { name: friend.name }, 'happy');
-      }
-      c.jokers[kind] = false;
-      if (this.timer) this.timer.end += kind === 'fifty' ? 0 : 10000; // un peu de temps en plus
-      this.fx('joker', { pid, kind });
-      this.changed();
-    }
-    vote(pid, idx) {
-      const v = this.round && this.round.vote;
-      if (!v || !v.open || !v.voters.includes(pid)) return;
-      v.votes[pid] = Number(idx);
-      if (v.voters.every((id) => id in v.votes)) this.closeVote();
-      this.changed();
-    }
-    closeVote() {
-      const v = this.round && this.round.vote;
-      if (!v || !v.open) return;
-      v.open = false;
-      v.dist = this.q.choices.map(() => 0);
-      Object.values(v.votes).forEach((i) => v.dist[i] != null && v.dist[i]++);
-      this.fx('pop');
-      this.changed();
-    }
-    ladderReveal() {
-      const q = this.q;
-      if (!q || q.revealed || q.kind !== 'ladder') return;
-      q.revealed = true;
-      this.clearJobs();
-      this.stopTimer();
-      if (this.round.vote && this.round.vote.open) this.closeVote();
-      this.phase = 'reveal';
-      this.fx('drumroll');
-      // Suspense : on attend le roulement de tambour avant de juger.
-      this.revealPending = true;
-      this.after(2200, () => {
-        this.revealPending = false;
-        const winners = [];
-        for (const c of this.round.climbers) {
-          if (!q.answerers.includes(c.id) || c.status !== 'active') continue;
-          const p = this.players[c.id];
-          if (c.answer === q.correctIdx) {
-            c.step++;
-            p.stats.correct++; p.streak++; p.bestStreak = Math.max(p.bestStreak, p.streak);
-            p.stats.ladder = Math.max(p.stats.ladder, c.step);
-            q.results[c.id] = { correct: true, pts: PQA.LADDER[c.step - 1] };
-            winners.push(c.id);
-            this.hooks.send(c.id, { t: 'fx', fx: 'good' });
-            if (c.step >= 10) { c.status = 'top'; c.banked = PQA.LADDER[9]; }
-          } else {
-            c.status = 'out';
-            c.banked = c.step > PQA.LADDER_SAFE ? PQA.LADDER[PQA.LADDER_SAFE] : 0;
-            this.scoreWrong(p);
-            q.results[c.id] = { correct: false, pts: 0 };
-            this.hooks.send(c.id, { t: 'fx', fx: 'wrong' });
-          }
-        }
-        if (q.choices) { q.dist = q.choices.map(() => 0); Object.values(q.answers).forEach((a) => q.dist[a.value] != null && q.dist[a.value]++); }
-        const top = this.round.climbers.find((c) => c.status === 'top');
-        this.fx('reveal', { winners, losers: q.answerers.filter((id) => !winners.includes(id)) });
-        if (top) this.say('ladderTop', { name: this.name(top.id) }, 'surprised');
-        else if (winners.length) {
-          const c = this.climber(winners[0]);
-          this.say(c.step === PQA.LADDER_SAFE + 1 ? 'ladderSafe' : 'ladderStep', { n: c.step }, 'happy');
-        } else if (q.answerers.length) this.say('ladderFail', {}, 'sad');
-        if (q.data.anecdote) this.after(2500, () => this.say('anecdote', { text: q.data.anecdote }, 'wink'));
-        if (this.auto) this.after(this.revealDelay(q), () => this.afterReveal());
-        this.changed();
-      });
-      this.changed();
-    }
-    ladderAfterReveal() {
-      if (this.activeClimbers().length) return this.ladderQuestion();
-      this.ladderFinish();
-    }
-    ladderFinish() {
-      const r = this.round;
-      if (r.finished) return;
-      r.finished = true;
-      for (const c of r.climbers) {
-        if (c.status === 'active') { c.status = 'stopped'; c.banked = c.step ? PQA.LADDER[c.step - 1] : 0; }
-        const p = this.players[c.id];
-        if (p && c.banked) { p.score += c.banked; p.stats.points += c.banked; this.fx('points', { pid: c.id, pts: c.banked }); }
-      }
+      this.clearJobs(); this.stopTimer();
       this.q = null;
-      this.phase = 'ladderEnd';
-      this.after(6000, () => this.endRound());
+      const [a, b] = r.finalists.map((id) => this.players[id]);
+      const winner = r.hits[a.id] !== r.hits[b.id] ? (r.hits[a.id] > r.hits[b.id] ? a : b) : (a.score >= b.score ? a : b);
+      this.champion = winner.id;
+      this.runnerUp = (winner === a ? b : a).id;
+      this.phase = 'champion';
+      this.fx('champion', { pid: winner.id });
+      this.say('championsWin', { name: winner.name }, 'happy');
+      if (this.auto) this.after(7000, () => this.endGame());
       this.changed();
     }
 
@@ -1312,6 +1279,8 @@
       const rk = this.ranking();
       const last = rk[rk.length - 1];
       const C = [
+        { t: 'Champion des champions', d: 'A remporté le Duel des champions', s: (p) => (p.id === this.champion ? 1 : 0), min: 1 },
+        { t: 'Finaliste d’honneur', d: 'A tenu tête jusqu’au Duel des champions', s: (p) => (p.id === this.runnerUp ? 1 : 0), min: 1 },
         { t: 'Encyclopédie sur pattes', d: 'Le plus de bonnes réponses', s: (p) => p.stats.correct, min: 3 },
         { t: 'Sniper des fourchettes', d: 'Le plus souvent au plus près de la réponse', s: (p) => p.stats.fourchette, min: 1 },
         { t: 'Gâchette la plus rapide de l’Ouest', d: 'Buzz le plus rapide', s: (p) => (p.stats.fastest != null ? 100000 - p.stats.fastest : 0), min: 1 },
@@ -1319,8 +1288,6 @@
         { t: 'Machiavel de salon', d: 'Le plus de coups bas joués', s: (p) => p.stats.cardsUsed, min: 1 },
         { t: 'Le Phénix', d: 'La plus belle remontée', s: (p) => p.stats.worstRank - this.rankOf(p), min: 2 },
         { t: 'Série en béton armé', d: 'La plus longue série', s: (p) => p.bestStreak, min: 4 },
-        { t: 'Alpiniste de l’extrême', d: 'Le plus haut sur l’Échelle', s: (p) => p.stats.ladder, min: 3 },
-        { t: 'Prudent comme un notaire', d: 'S’est arrêté sur l’Échelle', s: (p) => (p.stats.ladderStop ? 1 : 0), min: 1 },
         { t: 'Roi du hasard', d: 'Des questions dures réussies... avec une réussite globale douteuse', s: (p) => (p.stats.hardCorrect >= 1 && p.stats.correct / Math.max(1, p.stats.correct + p.stats.wrong) < 0.5 ? 10 + p.stats.hardCorrect : 0), min: 1 },
         { t: 'Cerveau des questions impossibles', d: 'Le plus de questions très dures réussies', s: (p) => p.stats.hardCorrect, min: 2 },
       ];
@@ -1354,9 +1321,6 @@
         case 'pick': return this.tablePick(pid, m.value);
         case 'target': return this.tableTarget(pid, m.value);
         case 'theme': return this.quatreTheme(pid, m.value);
-        case 'joker': return this.joker(pid, m.kind, m.arg);
-        case 'stop': return this.ladderStop(pid);
-        case 'vote': return this.vote(pid, m.value);
         case 'card': return this.useCard(pid, m.card, m.target);
         case 'profile': return this.updateProfile(pid, m);
       }
@@ -1420,21 +1384,22 @@
           else { v.screen = 'wait'; v.title = r.cat; v.msg = this.name(r.player) + ' choisit son niveau...'; }
           break;
         case 'board':
-          if (r.player === pid) { v.screen = 'pick'; v.cells = r.cells.map((c) => ({ i: c.i, icon: c.icon, cat: c.cat, used: c.used })); v.cols = r.cols; withTimer(); }
-          else { v.screen = 'wait'; v.title = 'Table des Savoirs'; v.msg = this.name(r.player) + ' choisit une case...'; }
+          if (r.player === pid) { v.screen = 'pick'; v.cells = r.cells.map((c) => ({ i: c.i, used: c.used, icon: c.used ? c.icon : null })); v.cols = r.cols; withTimer(); }
+          else { v.screen = 'wait'; v.title = 'Cases mystères'; v.msg = this.name(r.player) + ' choisit une case...'; }
           break;
-        case 'cell': v.screen = 'wait'; v.title = r.cell.special === 'piege' ? '💣 PIÈGE !' : r.cell.special === 'double' ? '✖️2 DOUBLE !' : r.cell.special === 'vol' ? '🦹 VOL !' : r.cell.cat; v.msg = r.cell.value + ' points'; break;
+        case 'cell': v.screen = 'wait'; v.title = r.cell.special === 'piege' ? '💣 PIÈGE !' : r.cell.special === 'double' ? '✖️2 DOUBLE !' : r.cell.special === 'vol' ? '🦹 VOL !' : r.cell.icon + ' ' + r.cell.cat; v.msg = r.cell.special === 'piege' ? '−' + r.trapLoss + ' points pour ' + this.name(r.player) : r.cell.cat + ' · ' + r.cellValue + ' points'; break;
         case 'target':
           if (r.player === pid) { v.screen = 'target'; v.title = 'Qui veux-tu voler ?'; v.targets = v.others; v.action = 'target'; withTimer(); }
           else { v.screen = 'wait'; v.title = '🦹 Vol de points'; v.msg = this.name(r.player) + ' choisit sa victime...'; }
           break;
         case 'qpick':
-          if (r.player === pid) { v.screen = 'themes'; v.themes = r.themes; withTimer(); }
+          if (r.player === pid) { v.screen = 'themes'; v.themes = r.themes.map((t) => ({ name: t.name, icon: t.icon, by: t.by ? this.name(t.by) : null })); withTimer(); }
           else { v.screen = 'wait'; v.title = '4 à la suite'; v.msg = this.name(r.player) + ' choisit son thème...'; }
           break;
         case 'qresult': v.screen = 'wait'; v.title = r.run.won ? '4 À LA SUITE !' : 'Fin du chrono'; v.msg = this.name(r.player) + ' : meilleure série ' + r.run.best + '/4'; break;
-        case 'ladder': v.screen = 'wait'; v.title = 'Finale : l’Échelle'; v.msg = r.climbers.map((c) => this.name(c.id)).join(' et ') + ' en finale !'; break;
-        case 'ladderEnd': v.screen = 'wait'; v.title = 'Fin de l’ascension'; v.msg = r.climbers.map((c) => this.name(c.id) + ' : +' + c.banked).join(' · '); break;
+        case 'faceoff': v.screen = 'wait'; v.title = '⚔️ Duel des champions';
+          v.msg = r.finalists.includes(pid) ? 'Tu es en finale ! Le premier à ' + r.target + ' bonnes réponses gagne la partie.' : this.name(r.finalists[0]) + ' contre ' + this.name(r.finalists[1]) + ' : le vainqueur gagne la partie !'; break;
+        case 'champion': v.screen = 'wait'; v.title = '👑 ' + this.name(this.champion); v.msg = this.champion === pid ? 'Tu remportes le Duel des champions et la partie !' : this.name(this.champion) + ' remporte le Duel des champions !'; break;
         case 'ko': v.screen = 'wait'; v.title = 'K.O. !'; v.msg = r.winner === pid ? 'Tu as gagné le duel !' : this.name(r.winner) + ' gagne le duel'; break;
         case 'end': {
           v.screen = 'end';
@@ -1444,7 +1409,7 @@
           if (this.settings.teams) { const ts = this.teamScores(); v.teamRank = ts.findIndex((x) => x.team === p.team) + 1; v.winnerTeam = ts[0].name; }
           break;
         }
-        case 'reveal': result(); if (r.type === 'echelle' && this.revealPending) { v.screen = 'wait'; v.title = 'Suspense...'; v.msg = '🥁'; } break;
+        case 'reveal': result(); break;
         case 'question': this.questionView(p, v, withTimer); break;
         default: v.screen = 'wait';
       }
@@ -1472,10 +1437,16 @@
       if (q.kind === 'buzz') {
         const b = q.buzz;
         if (b.current === pid) {
-          if (d.type === 'indices') { v.screen = this.irl ? 'oral' : 'text'; if (q.pending) { v.screen = 'locked'; v.msg = 'Le présentateur valide...'; } return; }
-          v.screen = 'choices'; v.choices = this.choicesFor(p, q); v.buzzed = true; return;
+          v.buzzed = true;
+          if (q.typed) { v.screen = this.irl ? 'oral' : 'text'; if (q.pending) { v.screen = 'locked'; v.msg = 'Le présentateur valide...'; } return; }
+          v.screen = 'choices'; v.choices = this.choicesFor(p, q); return;
         }
-        if (!q.answerers.includes(pid)) { v.screen = 'wait'; v.title = 'Duel'; v.msg = 'Regarde l’écran !'; return; }
+        if (!q.answerers.includes(pid)) {
+          v.screen = 'wait';
+          if (r.type === 'champions') { const [a, b] = r.finalists; v.title = '⚔️ Duel des champions'; v.msg = this.name(a) + ' ' + r.hits[a] + ' – ' + r.hits[b] + ' ' + this.name(b); }
+          else { v.title = 'Duel'; v.msg = 'Regarde l’écran !'; }
+          return;
+        }
         v.screen = 'buzzer';
         v.buzz = b.locked.includes(pid) ? 'locked' : b.current ? 'other'
           : p.buzzBlockedUntil && now() < p.buzzBlockedUntil ? 'blocked' : b.readyAt && now() < b.readyAt ? 'early' : 'open';
@@ -1483,27 +1454,10 @@
         if (d.indices) v.clue = d.indices[q.clue];
         const duel = this.round.type === 'duel';
         v.penalty = duel ? BUZZ.duelPenalty + ' PV' : BUZZ.penalty;
-        v.answerSecs = (this.irl && d.type === 'indices' ? TIMES.buzzAnswerIRL : d.type === 'indices' ? BUZZ.answerText : BUZZ.answer) / 1000;
+        v.answerSecs = this.answerTime(q) / 1000;
+        if (r.type === 'champions') { v.penalty = 0; v.cat = 'Duel des champions · ' + r.hits[pid] + '/' + r.target; }
+        else if (q.typed) v.cat = this.catIcon(d.categorie) + ' ' + d.categorie;
         return;
-      }
-      if (q.kind === 'ladder') {
-        const c = this.climber(pid);
-        if (c && q.answerers.includes(pid)) {
-          if (c.status !== 'active') { v.screen = 'wait'; v.title = 'Tu t’arrêtes ici'; v.msg = '+' + c.banked + ' points assurés'; return; }
-          v.screen = 'ladder';
-          v.choices = this.choicesFor(p, q, c.hidden);
-          v.step = c.step; v.ladder = PQA.LADDER; v.safe = PQA.LADDER_SAFE;
-          v.jokers = c.jokers; v.picked = c.answer; v.canStop = c.step > 0 && c.answer == null;
-          v.friends = this.connectedPlayers().filter((x) => !this.climber(x.id)).map((x) => ({ id: x.id, name: x.name, color: x.color }));
-          const rv = this.round.vote;
-          if (rv && !rv.open) v.voteDist = rv.dist;
-          return;
-        }
-        const rv = this.round.vote;
-        if (rv && rv.open && rv.voters.includes(pid)) { v.screen = 'vote'; v.choices = this.choicesFor(p, q); v.voted = rv.votes[pid]; return; }
-        const f = this.round.friend;
-        if (f && f.id === pid && !f.done) { v.screen = 'friend'; v.from = this.name(f.from); v.choices = this.choicesFor(p, q); v.friendEnd = Math.max(0, f.end - now()); return; }
-        v.screen = 'wait'; v.title = 'Finale'; v.msg = 'Encourage ' + q.answerers.map((id) => this.name(id)).join(' et ') + ' !';
       }
     }
     answerText(q) {
@@ -1525,7 +1479,7 @@
         const d = q.data;
         v.q = { question: d.question, type: d.type, categorie: d.categorie, difficulte: d.difficulte, answer: this.answerText(q), accepted: d.reponses_acceptees || [], anecdote: d.anecdote, choices: q.choices, correctIdx: q.correctIdx, indices: d.indices, clue: q.clue, revealed: !!q.revealed };
         if (q.pending) v.pending = { pid: q.pending.pid, name: this.name(q.pending.pid), text: q.pending.text };
-        if (q.kind === 'buzz' && q.buzz.current) v.pending = v.pending || { pid: q.buzz.current, name: this.name(q.buzz.current), text: this.irl && d.type === 'indices' ? '(répond à l’oral)' : null, oral: this.irl && d.type === 'indices' };
+        if (q.kind === 'buzz' && q.buzz.current) v.pending = v.pending || { pid: q.buzz.current, name: this.name(q.buzz.current), text: this.irl && q.typed ? '(répond à l’oral)' : null, oral: this.irl && q.typed };
         if (q.kind === 'single' && this.irl && d.type === 'libre' && !q.revealed) {
           const pid = q.answerers[0];
           v.pending = { pid, name: this.name(pid), text: '(répond à l’oral)', oral: true };
@@ -1535,6 +1489,9 @@
       }
       if (r && this.phase === 'level') v.info = this.name(r.player) + ' choisit son niveau (' + r.cat + ')';
       if (r && this.phase === 'board') v.info = this.name(r.player) + ' choisit une case';
+      if (r && this.phase === 'qpick') v.info = this.name(r.player) + ' choisit son thème';
+      if (r && this.phase === 'faceoff') v.info = 'Duel des champions : ' + this.name(r.finalists[0]) + ' contre ' + this.name(r.finalists[1]);
+      if (r && r.type === 'champions' && r.hits) v.info = (v.info ? v.info + ' · ' : '') + r.finalists.map((id) => this.name(id) + ' ' + r.hits[id]).join(' – ') + ' (premier à ' + r.target + ')';
       return v;
     }
 
@@ -1542,7 +1499,7 @@
     snapshot() {
       return {
         v: 1, at: Date.now(), code: this.code, settings: this.settings, order: this.order, roundIdx: this.roundIdx, rounds: this.rounds, phase: this.phase,
-        players: this.playerList().map((p) => ({ ...p, connected: false })), used: Array.from(this.used), nextId: this.nextId,
+        players: this.playerList().map((p) => ({ ...p, connected: false })), used: Array.from(this.used), nextId: this.nextId, champion: this.champion, runnerUp: this.runnerUp,
       };
     }
     restore(s) {
@@ -1552,13 +1509,18 @@
       s.players.forEach((p) => (this.players[p.id] = { ...p, frozenUntil: 0, connected: !!p.local }));
       this.used = new Set(s.used);
       this.nextId = s.nextId + 1;
-      this.rounds = s.rounds;
-      if (s.phase === 'lobby' || !s.rounds) { this.phase = 'lobby'; this.changed(); return; }
-      if (s.phase === 'end') { this.roundIdx = s.rounds.length; this.endGame(); return; }
+      // Anciennes sauvegardes : manches disparues (Échelle, Indices) retirées.
+      this.settings.rounds = (this.settings.rounds || []).filter((t) => ROUND_ORDER.includes(t));
+      delete this.settings.finale;
+      this.rounds = s.rounds && s.rounds.filter((t) => PQA.ROUNDS[t]);
+      if (this.rounds && !this.rounds.length) this.rounds = null;
+      if (s.phase === 'lobby' || !this.rounds) { this.phase = 'lobby'; this.changed(); return; }
+      this.champion = s.champion || null; this.runnerUp = s.runnerUp || null;
+      if (s.phase === 'end') { this.roundIdx = this.rounds.length; this.endGame(); return; }
       // On reprend au début de la manche en cours.
-      this.roundIdx = Math.max(-1, s.roundIdx - 1);
+      this.roundIdx = clamp(s.roundIdx - 1, -1, this.rounds.length - 2);
       this.phase = 'leaderboard';
-      this.round = { type: s.rounds[Math.max(0, s.roundIdx)] };
+      this.round = { type: this.rounds[this.roundIdx + 1] };
       this.changed();
     }
   }

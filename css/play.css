@@ -111,15 +111,12 @@ body[data-screen="choices"] .you-buzzed ~ * {}
 .pboard button:disabled { background: var(--ink); color: var(--g3); }
 .plist { display: flex; flex-direction: column; gap: 8px; }
 .plist button { background: var(--ink); border: 4px solid var(--oc); font-size: 30px; padding: 12px; }
-.pthemes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; flex: 1; }
-.pthemes button { background: var(--blue); border: 4px solid #000; font-size: 50px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.pthemes button span { font-size: 22px; }
-.pjokers { display: flex; gap: 6px; }
-.pjokers button { flex: 1; background: var(--cyan); color: var(--ink); border: 3px solid #000; font-size: 26px; padding: 6px 2px; display: flex; flex-direction: column; align-items: center; font-family: var(--font-title); }
-.pjokers button small { font-family: var(--font-text); font-size: 17px; }
-.pjokers button:disabled { opacity: .3; }
-.pjokers button.stop { background: var(--yellow); }
-.pvote { font-size: 24px; background: rgba(115,239,247,.15); border: 2px dashed var(--cyan); padding: 6px; text-align: center; }
+.pthemes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex: 1; overflow-y: auto; }
+.pthemes button { background: var(--blue); border: 4px solid #000; font-size: 34px; padding: 6px 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.pthemes button span { font-size: 19px; }
+.pthemes button small { font-size: 14px; color: var(--g1); }
+.pthemes button:disabled { background: var(--ink); opacity: .5; }
+.pthemes button.mystery { background: var(--plum); }
 
 /* Fourchette */
 .prange { display: flex; flex-direction: column; gap: 10px; }

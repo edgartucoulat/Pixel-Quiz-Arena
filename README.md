@@ -32,15 +32,24 @@ son score. Si le plateau est rechargé, il propose de **reprendre la partie**.
 
 ### Les manches
 
-- 🎡 **Thème Mystère** : la roue choisit le thème, chacun choisit son niveau de 1 à 10.
-- 📏 **La Fourchette** : donne une seule valeur et vise pile. Réponse exacte = 400 pts, puis les points baissent avec l’écart (le plus proche gagne un bonus de 50 pts, trop loin = 0).
-- 🔔 **Buzzer à indices** : les indices tombent un par un, plus tu buzzes tôt, plus tu gagnes.
-  Mais attention : buzz raté = −100 points et exclu de la question, buzz pendant la lecture
-  = faux départ (buzzer bloqué 2 s), et 5 secondes pour répondre (10 s s'il faut écrire).
-- 4️⃣ **Le 4 à la suite** : 4 bonnes réponses d'affilée en 40 secondes.
-- ⚡ **QCM éclair** : tout le monde répond en même temps, avec un bonus de rapidité.
-- 🗃️ **Table des Savoirs** : cases à choisir à tour de rôle, avec pièges, doubles et vols.
-- 🪜 **Finale : l'Échelle** : 10 paliers, jokers 50/50, vote du public et appel à un ami.
+Par défaut, l'émission enchaîne dans cet ordre :
+
+1. 🏁 **Le Sprint** : 10 questions au buzzer sur des thèmes tirés au hasard. Pas de choix
+   multiple : on buzze, puis on tape sa réponse (à l'oral en mode présentateur IRL).
+   Bonne réponse = 200 pts. Attention : buzz raté = −100 points et exclu de la question,
+   buzz pendant la lecture = faux départ (buzzer bloqué 2 s), et 10 secondes pour répondre.
+2. 🎁 **Les Cases mystères** : chacun choisit une case à tour de rôle. Le thème et la valeur
+   (100 à 400 pts) restent cachés jusqu'au choix, avec des pièges, des cases doubles et des vols.
+3. 4️⃣ **Le 4 à la suite** : le 1er du classement choisit son thème en premier, puis le 2e, etc.
+   Un thème pris n'est plus disponible pour les suivants ; le « thème mystère » en tire un
+   au hasard. Il faut enchaîner 4 bonnes réponses d'affilée en 40 secondes.
+4. 📏 **La Fourchette** : donne une seule valeur et vise pile. Réponse exacte = 400 pts, puis les points baissent avec l’écart (le plus proche gagne un bonus de 50 pts, trop loin = 0).
+5. ⚔️ **Le Duel des champions** (toujours en dernier) : les 2 meilleurs du classement
+   s'affrontent au buzzer à indices, les indices tombant un à un. Le premier à 3 bonnes
+   réponses **gagne la partie**, quel que soit son score (en équipes, son équipe gagne).
+
+En option dans le salon : 🎡 **Thème Mystère** (la roue choisit le thème, chacun choisit son
+niveau de 1 à 10) et ⚡ **QCM éclair** (tout le monde répond en même temps, bonus de rapidité).
 
 Et aussi : combos « ON FIRE » (x2, x3), cartes « coup bas » (gel, miroir, vol, double),
 anecdotes après chaque question, titres humoristiques en fin de partie. Les questions déjà
