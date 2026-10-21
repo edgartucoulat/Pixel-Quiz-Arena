@@ -1,0 +1,788 @@
+[
+ {
+  "id": "gas-001",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "qcm",
+  "difficulte": 1,
+  "question": "De quelle région vient le camembert ?",
+  "choix": [
+   "La Normandie",
+   "La Bretagne",
+   "La Savoie",
+   "L'Auvergne"
+  ],
+  "reponse": "La Normandie",
+  "anecdote": "Selon la légende, Marie Harel l'aurait inventé en 1791, aidée par un prêtre réfractaire venu de Brie."
+ },
+ {
+  "id": "gas-002",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine du monde",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "De quel pays vient la paella ?",
+  "choix": [
+   "L'Espagne",
+   "L'Italie",
+   "Le Portugal",
+   "Le Mexique"
+  ],
+  "reponse": "L'Espagne",
+  "anecdote": "Elle est originaire de la région de Valence ; la version traditionnelle contient du lapin et du poulet, pas de fruits de mer."
+ },
+ {
+  "id": "gas-003",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Quelle est la forme d'un croissant ?",
+  "choix": [
+   "Une demi-lune",
+   "Un carré",
+   "Une étoile",
+   "Un cercle"
+  ],
+  "reponse": "Une demi-lune",
+  "anecdote": "Son ancêtre est le kipferl autrichien, une viennoiserie sans pâte feuilletée."
+ },
+ {
+  "id": "gas-004",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine française",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel est l'ingrédient principal de la ratatouille, parmi ceux-ci ?",
+  "choix": [
+   "L'aubergine",
+   "La pomme de terre",
+   "Le chou",
+   "La carotte"
+  ],
+  "reponse": "L'aubergine",
+  "anecdote": "C'est un plat niçois qui mélange aubergine, courgette, poivron, tomate et oignon."
+ },
+ {
+  "id": "gas-005",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel fromage est affiné dans les caves de Roquefort-sur-Soulzon ?",
+  "choix": [
+   "Le roquefort",
+   "Le bleu d'Auvergne",
+   "Le cantal",
+   "Le saint-nectaire"
+  ],
+  "reponse": "Le roquefort",
+  "anecdote": "Le roquefort est fait exclusivement au lait de brebis, et ses veines viennent du Penicillium roqueforti."
+ },
+ {
+  "id": "gas-006",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine du monde",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel pays est à l'origine des sushis modernes ?",
+  "choix": [
+   "Le Japon",
+   "La Chine",
+   "La Corée",
+   "La Thaïlande"
+  ],
+  "reponse": "Le Japon",
+  "anecdote": "À l'origine, le riz servait seulement à conserver le poisson par fermentation, et il était jeté."
+ },
+ {
+  "id": "gas-007",
+  "categorie": "Gastronomie",
+  "sous_theme": "Épices",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quelle épice, la plus chère du monde, provient d'une fleur de crocus ?",
+  "choix": [
+   "Le safran",
+   "La vanille",
+   "La cardamome",
+   "Le curcuma"
+  ],
+  "reponse": "Le safran",
+  "anecdote": "Il faut environ 150 000 fleurs pour obtenir un kilo de safran."
+ },
+ {
+  "id": "gas-008",
+  "categorie": "Gastronomie",
+  "sous_theme": "Vins",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Dans quelle région produit-on le champagne ?",
+  "choix": [
+   "La Champagne",
+   "La Bourgogne",
+   "L'Alsace",
+   "La Loire"
+  ],
+  "reponse": "La Champagne",
+  "anecdote": "Seul le vin produit dans cette zone délimitée a droit au nom « champagne »."
+ },
+ {
+  "id": "gas-009",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine française",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle ville est réputée pour sa bouillabaisse ?",
+  "choix": [
+   "Marseille",
+   "Nice",
+   "Toulon",
+   "Montpellier"
+  ],
+  "reponse": "Marseille",
+  "anecdote": "À l'origine, c'était un plat de pêcheurs, préparé avec les poissons invendus."
+ },
+ {
+  "id": "gas-010",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel gâteau tient son nom d'une course cycliste ?",
+  "choix": [
+   "Le paris-brest",
+   "L'opéra",
+   "Le saint-honoré",
+   "Le fraisier"
+  ],
+  "reponse": "Le paris-brest",
+  "anecdote": "Il a été créé en 1910 ; sa forme ronde évoque une roue de vélo."
+ },
+ {
+  "id": "gas-011",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine du monde",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "De quel pays vient le plat appelé moussaka ?",
+  "choix": [
+   "La Grèce",
+   "La Turquie",
+   "Le Liban",
+   "L'Égypte"
+  ],
+  "reponse": "La Grèce",
+  "anecdote": "La version grecque moderne, avec béchamel, a été popularisée par le chef Nikolaos Tselementes dans les années 1920."
+ },
+ {
+  "id": "gas-012",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fruits",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel fruit est en réalité une baie, contrairement à la fraise ?",
+  "choix": [
+   "La banane",
+   "La framboise",
+   "La mûre",
+   "La cerise"
+  ],
+  "reponse": "La banane",
+  "anecdote": "Botaniquement, la fraise n'est pas une baie : ses vrais fruits sont les petits grains sur sa surface."
+ },
+ {
+  "id": "gas-013",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel fromage est surnommé « le roi des fromages » depuis le Congrès de Vienne de 1815 ?",
+  "choix": [
+   "Le brie de Meaux",
+   "Le comté",
+   "Le reblochon",
+   "Le munster"
+  ],
+  "reponse": "Le brie de Meaux",
+  "anecdote": "Talleyrand l'aurait fait couronner lors d'un concours organisé entre les délégations."
+ },
+ {
+  "id": "gas-014",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine française",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel plat bourguignon est cuit dans le vin rouge avec des lardons et des champignons ?",
+  "choix": [
+   "Le bœuf bourguignon",
+   "La blanquette de veau",
+   "Le pot-au-feu",
+   "La potée"
+  ],
+  "reponse": "Le bœuf bourguignon",
+  "anecdote": "Le coq au vin, autre plat de Bourgogne, se prépare de façon très proche."
+ },
+ {
+  "id": "gas-015",
+  "categorie": "Gastronomie",
+  "sous_theme": "Épices",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "De quel pays la vanille est-elle originaire ?",
+  "choix": [
+   "Le Mexique",
+   "Madagascar",
+   "L'Inde",
+   "L'Indonésie"
+  ],
+  "reponse": "Le Mexique",
+  "anecdote": "Hors du Mexique, elle doit être pollinisée à la main. La technique a été inventée par Edmond Albius, un jeune esclave réunionnais de 12 ans, en 1841."
+ },
+ {
+  "id": "gas-016",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quelle crème porte le nom du pâtissier qui a créé le saint-honoré ?",
+  "choix": [
+   "La crème Chiboust",
+   "La crème pâtissière",
+   "La crème diplomate",
+   "La crème mousseline"
+  ],
+  "reponse": "La crème Chiboust",
+  "anecdote": "Chiboust tenait sa boutique rue Saint-Honoré à Paris, vers 1846. Saint Honoré est aussi le patron des boulangers."
+ },
+ {
+  "id": "gas-017",
+  "categorie": "Gastronomie",
+  "sous_theme": "Vins",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel moine bénédictin est associé à l'élaboration du champagne ?",
+  "choix": [
+   "Dom Pérignon",
+   "Dom Ruinart",
+   "Dom Bosco",
+   "Dom Juan"
+  ],
+  "reponse": "Dom Pérignon",
+  "anecdote": "Contrairement à la légende, il n'a pas inventé les bulles ; il cherchait plutôt à les éviter."
+ },
+ {
+  "id": "gas-018",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine du monde",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "De quelle ville italienne vient la pizza Margherita ?",
+  "choix": [
+   "Naples",
+   "Rome",
+   "Milan",
+   "Florence"
+  ],
+  "reponse": "Naples",
+  "anecdote": "Elle aurait été créée en 1889 en l'honneur de la reine Marguerite de Savoie, aux couleurs du drapeau italien."
+ },
+ {
+  "id": "gas-019",
+  "categorie": "Gastronomie",
+  "sous_theme": "Boissons",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quelle boisson obtient-on en faisant fermenter du jus de pomme ?",
+  "choix": [
+   "Le cidre",
+   "La bière",
+   "Le poiré",
+   "Le calvados"
+  ],
+  "reponse": "Le cidre",
+  "anecdote": "Le calvados est une eau-de-vie obtenue en distillant le cidre."
+ },
+ {
+  "id": "gas-020",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel fromage savoyard fond-on pour la tartiflette ?",
+  "choix": [
+   "Le reblochon",
+   "L'emmental",
+   "Le beaufort",
+   "La tomme"
+  ],
+  "reponse": "Le reblochon",
+  "anecdote": "La tartiflette a été inventée dans les années 1980 pour relancer les ventes de reblochon."
+ },
+ {
+  "id": "gas-021",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine du monde",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle sauce italienne est faite de basilic, d'ail, de pignons et de parmesan ?",
+  "choix": [
+   "Le pesto",
+   "La bolognaise",
+   "La carbonara",
+   "L'arrabbiata"
+  ],
+  "reponse": "Le pesto",
+  "anecdote": "Le pesto vient de Gênes ; son nom vient de « pestare », écraser, car il se prépare au mortier."
+ },
+ {
+  "id": "gas-022",
+  "categorie": "Gastronomie",
+  "sous_theme": "Boissons",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "De quelle plante provient la tequila ?",
+  "choix": [
+   "L'agave",
+   "La canne à sucre",
+   "Le cactus",
+   "Le maïs"
+  ],
+  "reponse": "L'agave",
+  "anecdote": "Elle doit être produite dans des zones bien précises du Mexique, autour de la ville de Tequila."
+ },
+ {
+  "id": "gas-023",
+  "categorie": "Gastronomie",
+  "sous_theme": "Restaurants",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Combien d'étoiles un restaurant peut-il obtenir au maximum dans le Guide Michelin ?",
+  "reponse": 3,
+  "unite": "étoiles",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   10
+  ],
+  "anecdote": "Le guide a été créé en 1900 par les frères Michelin pour donner envie aux automobilistes de rouler… et d'user leurs pneus."
+ },
+ {
+  "id": "gas-024",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Combien de fromages différents la France compte-t-elle, selon l'estimation courante ?",
+  "reponse": 1200,
+  "unite": "fromages",
+  "tolerance": 300,
+  "bornes": [
+   100,
+   3000
+  ],
+  "anecdote": "De Gaulle se demandait comment gouverner un pays qui avait 246 variétés de fromage."
+ },
+ {
+  "id": "gas-025",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine du monde",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "À quelle température environ cuit une pizza napolitaine dans un four à bois ?",
+  "reponse": 450,
+  "unite": "°C",
+  "tolerance": 50,
+  "bornes": [
+   100,
+   900
+  ],
+  "anecdote": "Elle n'y reste qu'environ 60 à 90 secondes."
+ },
+ {
+  "id": "gas-026",
+  "categorie": "Gastronomie",
+  "sous_theme": "Vins",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de bouteilles de champagne sont vendues environ chaque année, en millions ?",
+  "reponse": 300,
+  "unite": "millions",
+  "tolerance": 40,
+  "bornes": [
+   10,
+   1000
+  ],
+  "anecdote": "La pression dans une bouteille de champagne est d'environ 6 bars, trois fois celle d'un pneu de voiture."
+ },
+ {
+  "id": "gas-027",
+  "categorie": "Gastronomie",
+  "sous_theme": "Boissons",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de kilos de café les Français consomment-ils par an et par habitant (environ) ?",
+  "reponse": 5.5,
+  "unite": "kg",
+  "tolerance": 1,
+  "bornes": [
+   1,
+   20
+  ],
+  "anecdote": "Les Finlandais sont les plus gros buveurs de café au monde, avec environ 12 kg par habitant et par an."
+ },
+ {
+  "id": "gas-028",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien pèse environ une baguette de pain, en grammes ?",
+  "reponse": 250,
+  "unite": "g",
+  "tolerance": 20,
+  "bornes": [
+   50,
+   1000
+  ],
+  "anecdote": "Les Français en achètent environ 6 milliards par an, soit près de 200 chaque seconde."
+ },
+ {
+  "id": "gas-029",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année le paris-brest a-t-il été créé ?",
+  "reponse": 1910,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1800,
+   1990
+  ],
+  "anecdote": "Il a été inventé pour la course cycliste Paris-Brest-Paris, créée en 1891."
+ },
+ {
+  "id": "gas-030",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de litres de lait faut-il environ pour fabriquer un kilo de comté ?",
+  "reponse": 12,
+  "unite": "litres",
+  "tolerance": 2,
+  "bornes": [
+   1,
+   40
+  ],
+  "anecdote": "Une meule de comté pèse environ 40 kg, et nécessite donc près de 500 litres de lait."
+ },
+ {
+  "id": "gas-031",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine française",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En quelle année le « repas gastronomique des Français » a-t-il été inscrit au patrimoine immatériel de l'UNESCO ?",
+  "reponse": 2010,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1950,
+   2025
+  ],
+  "anecdote": "C'est un rituel social, pas une recette, qui a été reconnu."
+ },
+ {
+  "id": "gas-032",
+  "categorie": "Gastronomie",
+  "sous_theme": "Boissons",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien de grains de raisin faut-il environ pour une bouteille de vin de 75 cl ?",
+  "reponse": 700,
+  "unite": "grains",
+  "tolerance": 200,
+  "bornes": [
+   50,
+   5000
+  ],
+  "anecdote": "Cela correspond à environ 1,2 kg de raisin."
+ },
+ {
+  "id": "gas-033",
+  "categorie": "Gastronomie",
+  "sous_theme": "Plats",
+  "type": "indices",
+  "difficulte": 2,
+  "question": "Quel est ce plat ?",
+  "reponse": "La raclette",
+  "reponses_acceptees": [
+   "Raclette"
+  ],
+  "indices": [
+   "Je viens de Suisse et de Savoie",
+   "Mon nom vient du verbe « racler »",
+   "On me mange avec des pommes de terre et de la charcuterie",
+   "On fait fondre mon fromage dans un appareil sur la table"
+  ],
+  "anecdote": "À l'origine, on faisait fondre une demi-meule devant un feu de bois avant de la racler."
+ },
+ {
+  "id": "gas-034",
+  "categorie": "Gastronomie",
+  "sous_theme": "Plats",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel est ce plat ?",
+  "reponse": "La crêpe",
+  "reponses_acceptees": [
+   "Crêpe",
+   "Crêpes"
+  ],
+  "indices": [
+   "On me fait sauter le jour de la Chandeleur",
+   "On dit qu'il faut me retourner une pièce dans la main pour avoir de la chance",
+   "Ma version salée bretonne s'appelle galette",
+   "On me fait avec de la farine, des œufs et du lait"
+  ],
+  "anecdote": "La Chandeleur a lieu le 2 février, quarante jours après Noël."
+ },
+ {
+  "id": "gas-035",
+  "categorie": "Gastronomie",
+  "sous_theme": "Chefs",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Qui suis-je ?",
+  "reponse": "Paul Bocuse",
+  "reponses_acceptees": [
+   "Bocuse"
+  ],
+  "indices": [
+   "J'ai été sacré « cuisinier du siècle »",
+   "J'ai créé un concours mondial portant mon nom",
+   "Mon restaurant de Collonges-au-Mont-d'Or a gardé 3 étoiles plus de 50 ans",
+   "Je suis un chef lyonnais célèbre"
+  ],
+  "anecdote": "Son concours, le Bocuse d'or, est surnommé les « Jeux olympiques de la cuisine »."
+ },
+ {
+  "id": "gas-036",
+  "categorie": "Gastronomie",
+  "sous_theme": "Produits",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Qu'est-ce que je suis ?",
+  "reponse": "La truffe",
+  "reponses_acceptees": [
+   "Truffe",
+   "Truffe noire"
+  ],
+  "indices": [
+   "Je pousse sous terre",
+   "On me cherche avec des chiens ou des cochons",
+   "Ma variété noire vient du Périgord",
+   "On me surnomme le « diamant noir »"
+  ],
+  "anecdote": "La truffe blanche d'Alba, en Italie, est la plus chère : plusieurs milliers d'euros le kilo."
+ },
+ {
+  "id": "gas-037",
+  "categorie": "Gastronomie",
+  "sous_theme": "Plats",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quel est ce plat ?",
+  "reponse": "Le cassoulet",
+  "reponses_acceptees": [
+   "Cassoulet"
+  ],
+  "indices": [
+   "Castelnaudary, Carcassonne et Toulouse se disputent ma version authentique",
+   "Mon nom vient du plat en terre dans lequel je cuis",
+   "On me prépare avec du confit de canard",
+   "Je suis un plat de haricots blancs"
+  ],
+  "anecdote": "Le plat en terre s'appelle la « cassole », fabriquée à Issel, près de Castelnaudary."
+ },
+ {
+  "id": "gas-038",
+  "categorie": "Gastronomie",
+  "sous_theme": "Produits",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Qu'est-ce que je suis ?",
+  "reponse": "Le foie gras",
+  "reponses_acceptees": [
+   "Foie gras"
+  ],
+  "indices": [
+   "Les Égyptiens de l'Antiquité pratiquaient déjà mon procédé",
+   "Je fais partie du patrimoine culturel français selon la loi",
+   "On m'obtient par gavage",
+   "Je suis produit avec des canards ou des oies"
+  ],
+  "anecdote": "Une loi de 2006 l'a reconnu comme faisant partie du « patrimoine culturel et gastronomique protégé en France »."
+ },
+ {
+  "id": "gas-039",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Qu'est-ce que je suis ?",
+  "reponse": "Le macaron",
+  "reponses_acceptees": [
+   "Macaron",
+   "Macarons"
+  ],
+  "indices": [
+   "Je serais arrivé en France avec Catherine de Médicis",
+   "Ma ville de Nancy a sa propre version, sans garniture",
+   "Je suis composé de deux coques collées par une ganache",
+   "La maison Ladurée m'a rendu célèbre"
+  ],
+  "anecdote": "C'est Pierre Desfontaines, de chez Ladurée, qui aurait eu l'idée d'assembler deux coques au début du XXe siècle."
+ },
+ {
+  "id": "gas-040",
+  "categorie": "Gastronomie",
+  "sous_theme": "Chefs",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Qui suis-je ?",
+  "reponse": "Auguste Escoffier",
+  "reponses_acceptees": [
+   "Escoffier"
+  ],
+  "indices": [
+   "J'ai inventé la pêche Melba",
+   "J'ai travaillé avec César Ritz",
+   "J'ai organisé les cuisines en « brigade »",
+   "On m'a surnommé « le roi des cuisiniers et le cuisinier des rois »"
+  ],
+  "anecdote": "La pêche Melba rend hommage à la cantatrice australienne Nellie Melba."
+ },
+ {
+  "id": "gas-041",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "vf",
+  "difficulte": 3,
+  "question": "Vrai ou faux : le roquefort est fabriqué avec du lait de vache.",
+  "reponse": "Faux",
+  "anecdote": "Il est fait exclusivement avec du lait de brebis, de race Lacaune."
+ },
+ {
+  "id": "gas-042",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine du monde",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : la tomate est originaire d'Amérique.",
+  "reponse": "Vrai",
+  "anecdote": "Elle est arrivée en Europe au XVIe siècle ; on l'a longtemps crue toxique."
+ },
+ {
+  "id": "gas-043",
+  "categorie": "Gastronomie",
+  "sous_theme": "Boissons",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : le thé et le café contiennent la même molécule stimulante.",
+  "reponse": "Vrai",
+  "anecdote": "La théine et la caféine sont exactement la même molécule."
+ },
+ {
+  "id": "gas-044",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fruits",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : le poivron vert et le poivron rouge proviennent de la même plante.",
+  "reponse": "Vrai",
+  "anecdote": "Le poivron vert est simplement cueilli avant sa maturité complète."
+ },
+ {
+  "id": "gas-045",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "vf",
+  "difficulte": 9,
+  "question": "Vrai ou faux : la baguette de pain a été inscrite au patrimoine immatériel de l'UNESCO.",
+  "reponse": "Vrai",
+  "anecdote": "Le savoir-faire artisanal et la culture de la baguette ont été inscrits en 2022."
+ },
+ {
+  "id": "gas-046",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel fromage à pâte cuite est fabriqué dans le Jura en grandes meules ?",
+  "reponse": "Le comté",
+  "reponses_acceptees": [
+   "Comté"
+  ],
+  "anecdote": "C'est le fromage AOP le plus produit en France."
+ },
+ {
+  "id": "gas-047",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine du monde",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel est le nom de la soupe froide espagnole à base de tomates ?",
+  "reponse": "Le gaspacho",
+  "reponses_acceptees": [
+   "Gazpacho",
+   "Gaspacho"
+  ],
+  "anecdote": "Elle est originaire d'Andalousie et se servait autrefois aux travailleurs des champs."
+ },
+ {
+  "id": "gas-048",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quelle pâtisserie en forme de mille feuilles s'appelle aussi « Napoléon » ?",
+  "reponse": "Le mille-feuille",
+  "reponses_acceptees": [
+   "Mille feuille",
+   "Millefeuille"
+  ],
+  "anecdote": "Une bonne pâte feuilletée compte plus de 700 couches de pâte et de beurre."
+ },
+ {
+  "id": "gas-049",
+  "categorie": "Gastronomie",
+  "sous_theme": "Boissons",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle liqueur verte est fabriquée par des moines chartreux ?",
+  "reponse": "La Chartreuse",
+  "reponses_acceptees": [
+   "Chartreuse"
+  ],
+  "anecdote": "Sa recette, composée de 130 plantes, n'est connue que de deux moines à la fois."
+ },
+ {
+  "id": "gas-050",
+  "categorie": "Gastronomie",
+  "sous_theme": "Cuisine du monde",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Comment s'appelle le plat hongrois de bœuf mijoté au paprika ?",
+  "reponse": "Le goulash",
+  "reponses_acceptees": [
+   "Goulasch",
+   "Goulash",
+   "Gulyás"
+  ],
+  "anecdote": "À l'origine, c'était une soupe de bergers : « gulyás » signifie « vacher »."
+ }
+]

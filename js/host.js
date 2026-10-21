@@ -46,8 +46,11 @@
   async function open(data, saved) {
     PQA.sfx.unlock();
     PQA.tts.init();
-    $('#boot').classList.add('hide');
-    $('#boot-status').textContent = 'Ouverture du plateau...';
+    // L'écran d'accueil reste affiché tant que la salle n'est pas ouverte :
+    // le plateau n'apparaît qu'une fois prêt et mis à l'échelle de l'écran.
+    $('#btn-open').disabled = true;
+    if ($('#btn-resume')) $('#btn-resume').disabled = true;
+    $('#boot-status').textContent = 'Connexion au serveur de mise en relation...';
     const conns = new Set();
     let ui;
     const game = new PQA.Game(data.bank, data.categories, {
@@ -128,13 +131,15 @@
     try {
       code = await net.start(saved ? saved.code : null);
     } catch (err) {
-      $('#boot').classList.remove('hide');
+      $('#btn-open').disabled = false;
       $('#boot-status').innerHTML = '❌ Connexion au serveur de mise en relation impossible (' + esc(err.type || err.message) + '). Vérifie ta connexion internet puis recharge la page.';
       return;
     }
     game.code = code;
     if (saved) game.restore(saved);
     ui = new PQA.HostUI(game);
+    document.body.classList.add('live');
+    $('#boot').classList.add('hide');
     ui.hooks = {
       // Correction manuelle d'une réponse libre mal jugée (clic sur le résultat)
       override(pid) {

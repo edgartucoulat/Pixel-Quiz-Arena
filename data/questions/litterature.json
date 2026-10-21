@@ -1,0 +1,786 @@
+[
+ {
+  "id": "lit-001",
+  "categorie": "Littérature",
+  "sous_theme": "Classiques",
+  "type": "qcm",
+  "difficulte": 1,
+  "question": "Qui a écrit Les Misérables ?",
+  "choix": [
+   "Victor Hugo",
+   "Émile Zola",
+   "Honoré de Balzac",
+   "Alexandre Dumas"
+  ],
+  "reponse": "Victor Hugo",
+  "anecdote": "Le roman est si long que sa première édition a été publiée en dix volumes, en 1862."
+ },
+ {
+  "id": "lit-002",
+  "categorie": "Littérature",
+  "sous_theme": "Jeunesse",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Qui a écrit Le Petit Prince ?",
+  "choix": [
+   "Antoine de Saint-Exupéry",
+   "Jules Verne",
+   "Albert Camus",
+   "Marcel Pagnol"
+  ],
+  "reponse": "Antoine de Saint-Exupéry",
+  "anecdote": "C'est l'un des livres les plus traduits au monde, en plus de 500 langues et dialectes."
+ },
+ {
+  "id": "lit-003",
+  "categorie": "Littérature",
+  "sous_theme": "Classiques",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel auteur a créé le personnage de d'Artagnan ?",
+  "choix": [
+   "Alexandre Dumas",
+   "Victor Hugo",
+   "Gustave Flaubert",
+   "Stendhal"
+  ],
+  "reponse": "Alexandre Dumas",
+  "anecdote": "D'Artagnan a vraiment existé : Charles de Batz de Castelmore, capitaine des mousquetaires de Louis XIV."
+ },
+ {
+  "id": "lit-004",
+  "categorie": "Littérature",
+  "sous_theme": "Théâtre",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel dramaturge a écrit Le Malade imaginaire ?",
+  "choix": [
+   "Molière",
+   "Racine",
+   "Corneille",
+   "Marivaux"
+  ],
+  "reponse": "Molière",
+  "anecdote": "Molière a été pris d'un malaise sur scène lors de la 4e représentation, en 1673, et est mort quelques heures plus tard."
+ },
+ {
+  "id": "lit-005",
+  "categorie": "Littérature",
+  "sous_theme": "Littérature étrangère",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel auteur anglais a écrit Roméo et Juliette ?",
+  "choix": [
+   "William Shakespeare",
+   "Charles Dickens",
+   "Oscar Wilde",
+   "Jane Austen"
+  ],
+  "reponse": "William Shakespeare",
+  "anecdote": "L'histoire se passe à Vérone, où une maison de Juliette avec balcon attire des milliers de touristes."
+ },
+ {
+  "id": "lit-006",
+  "categorie": "Littérature",
+  "sous_theme": "Poésie",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel poète a écrit Les Fleurs du mal ?",
+  "choix": [
+   "Charles Baudelaire",
+   "Arthur Rimbaud",
+   "Paul Verlaine",
+   "Stéphane Mallarmé"
+  ],
+  "reponse": "Charles Baudelaire",
+  "anecdote": "Six poèmes ont été censurés en 1857 pour « outrage à la morale publique ». La condamnation n'a été annulée qu'en 1949."
+ },
+ {
+  "id": "lit-007",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Dans quel roman de Jules Verne Phileas Fogg parie-t-il de faire le tour du monde ?",
+  "choix": [
+   "Le Tour du monde en 80 jours",
+   "Cinq semaines en ballon",
+   "De la Terre à la Lune",
+   "Michel Strogoff"
+  ],
+  "reponse": "Le Tour du monde en 80 jours",
+  "anecdote": "Fogg gagne son pari grâce au décalage horaire : en voyageant vers l'est, il a gagné un jour."
+ },
+ {
+  "id": "lit-008",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Qui a écrit L'Étranger, qui commence par « Aujourd'hui, maman est morte » ?",
+  "choix": [
+   "Albert Camus",
+   "Jean-Paul Sartre",
+   "André Malraux",
+   "Boris Vian"
+  ],
+  "reponse": "Albert Camus",
+  "anecdote": "Camus a reçu le prix Nobel en 1957, à 44 ans, l'un des plus jeunes lauréats de l'histoire."
+ },
+ {
+  "id": "lit-009",
+  "categorie": "Littérature",
+  "sous_theme": "Littérature étrangère",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel auteur a écrit 1984, où « Big Brother vous regarde » ?",
+  "choix": [
+   "George Orwell",
+   "Aldous Huxley",
+   "Ray Bradbury",
+   "H. G. Wells"
+  ],
+  "reponse": "George Orwell",
+  "anecdote": "Orwell est un pseudonyme : il s'appelait Eric Arthur Blair."
+ },
+ {
+  "id": "lit-010",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Dans quelle ville d'Algérie se déroule La Peste d'Albert Camus ?",
+  "choix": [
+   "Oran",
+   "Alger",
+   "Constantine",
+   "Tlemcen"
+  ],
+  "reponse": "Oran",
+  "anecdote": "Oran est une vraie ville d'Algérie, mais l'épidémie du roman est inventée."
+ },
+ {
+  "id": "lit-011",
+  "categorie": "Littérature",
+  "sous_theme": "Théâtre",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Dans quelle pièce de Corneille trouve-t-on la réplique « Rodrigue, as-tu du cœur ? » ?",
+  "choix": [
+   "Le Cid",
+   "Horace",
+   "Cinna",
+   "Polyeucte"
+  ],
+  "reponse": "Le Cid",
+  "anecdote": "La pièce a déclenché en 1637 une querelle littéraire si vive que Richelieu a demandé l'avis de l'Académie française."
+ },
+ {
+  "id": "lit-012",
+  "categorie": "Littérature",
+  "sous_theme": "Poésie",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel poète a écrit Le Bateau ivre à seulement 16 ans ?",
+  "choix": [
+   "Arthur Rimbaud",
+   "Paul Verlaine",
+   "Alfred de Musset",
+   "Gérard de Nerval"
+  ],
+  "reponse": "Arthur Rimbaud",
+  "anecdote": "Rimbaud a cessé d'écrire vers 20 ans et est devenu marchand en Afrique."
+ },
+ {
+  "id": "lit-013",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel auteur a écrit À la recherche du temps perdu ?",
+  "choix": [
+   "Marcel Proust",
+   "André Gide",
+   "Louis-Ferdinand Céline",
+   "Romain Rolland"
+  ],
+  "reponse": "Marcel Proust",
+  "anecdote": "L'œuvre compte environ 1,2 million de mots, ce qui en fait l'un des romans les plus longs jamais publiés."
+ },
+ {
+  "id": "lit-014",
+  "categorie": "Littérature",
+  "sous_theme": "Jeunesse",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel auteur a créé Harry Potter ?",
+  "choix": [
+   "J. K. Rowling",
+   "Roald Dahl",
+   "Philip Pullman",
+   "C. S. Lewis"
+  ],
+  "reponse": "J. K. Rowling",
+  "anecdote": "Le premier tome a été refusé par une douzaine d'éditeurs avant d'être accepté par Bloomsbury."
+ },
+ {
+  "id": "lit-015",
+  "categorie": "Littérature",
+  "sous_theme": "Prix littéraires",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel écrivain a refusé le prix Nobel de littérature en 1964 ?",
+  "choix": [
+   "Jean-Paul Sartre",
+   "Albert Camus",
+   "Samuel Beckett",
+   "André Breton"
+  ],
+  "reponse": "Jean-Paul Sartre",
+  "anecdote": "Il refusait toute distinction officielle pour ne pas « se laisser transformer en institution »."
+ },
+ {
+  "id": "lit-016",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel romancier a écrit La Comédie humaine ?",
+  "choix": [
+   "Honoré de Balzac",
+   "Émile Zola",
+   "Gustave Flaubert",
+   "Guy de Maupassant"
+  ],
+  "reponse": "Honoré de Balzac",
+  "anecdote": "Il aurait bu jusqu'à 50 tasses de café par jour pour tenir ses longues nuits d'écriture."
+ },
+ {
+  "id": "lit-017",
+  "categorie": "Littérature",
+  "sous_theme": "Bande dessinée",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Qui a créé Tintin ?",
+  "choix": [
+   "Hergé",
+   "Goscinny",
+   "Franquin",
+   "Uderzo"
+  ],
+  "reponse": "Hergé",
+  "anecdote": "Hergé vient des initiales inversées de son vrai nom : Georges Remi, soit R.G."
+ },
+ {
+  "id": "lit-018",
+  "categorie": "Littérature",
+  "sous_theme": "Bande dessinée",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Comment s'appelle le chien d'Obélix ?",
+  "choix": [
+   "Idéfix",
+   "Milou",
+   "Rantanplan",
+   "Pif"
+  ],
+  "reponse": "Idéfix",
+  "anecdote": "Il est apparu dans « Le Tour de Gaule d'Astérix », en 1963, sans que les héros le remarquent pendant plusieurs pages."
+ },
+ {
+  "id": "lit-019",
+  "categorie": "Littérature",
+  "sous_theme": "Littérature étrangère",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel écrivain colombien a écrit Cent ans de solitude ?",
+  "choix": [
+   "Gabriel García Márquez",
+   "Mario Vargas Llosa",
+   "Jorge Luis Borges",
+   "Pablo Neruda"
+  ],
+  "reponse": "Gabriel García Márquez",
+  "anecdote": "Le roman se déroule dans le village imaginaire de Macondo."
+ },
+ {
+  "id": "lit-020",
+  "categorie": "Littérature",
+  "sous_theme": "Théâtre",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quelle pièce de Beckett met en scène deux personnages attendant quelqu'un qui ne vient jamais ?",
+  "choix": [
+   "En attendant Godot",
+   "Fin de partie",
+   "Oh les beaux jours",
+   "La Dernière Bande"
+  ],
+  "reponse": "En attendant Godot",
+  "anecdote": "Beckett a écrit la pièce en français, avant de la traduire lui-même en anglais."
+ },
+ {
+  "id": "lit-021",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle héroïne de Flaubert se prénomme Emma ?",
+  "choix": [
+   "Madame Bovary",
+   "Salammbô",
+   "Félicité",
+   "Madame Arnoux"
+  ],
+  "reponse": "Madame Bovary",
+  "anecdote": "Flaubert a été poursuivi en 1857 pour outrage aux bonnes mœurs, puis acquitté."
+ },
+ {
+  "id": "lit-022",
+  "categorie": "Littérature",
+  "sous_theme": "Poésie",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel poète a écrit « Demain, dès l'aube… » en mémoire de sa fille Léopoldine ?",
+  "choix": [
+   "Victor Hugo",
+   "Alphonse de Lamartine",
+   "Alfred de Vigny",
+   "Paul Éluard"
+  ],
+  "reponse": "Victor Hugo",
+  "anecdote": "Léopoldine s'est noyée dans la Seine à Villequier en 1843, quelques mois après son mariage."
+ },
+ {
+  "id": "lit-023",
+  "categorie": "Littérature",
+  "sous_theme": "Classiques",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "En quelle année Victor Hugo est-il né ?",
+  "reponse": 1802,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1750,
+   1900
+  ],
+  "anecdote": "« Ce siècle avait deux ans », écrit-il dans un poème célèbre sur sa naissance."
+ },
+ {
+  "id": "lit-024",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Combien de lieues compte le titre du roman de Jules Verne sur le Nautilus ?",
+  "reponse": 20000,
+  "unite": "lieues",
+  "tolerance": 0,
+  "bornes": [
+   1000,
+   100000
+  ],
+  "anecdote": "Les « 20 000 lieues » mesurent la distance parcourue sous les mers, pas la profondeur."
+ },
+ {
+  "id": "lit-025",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "En quelle année est paru Le Petit Prince ?",
+  "reponse": 1943,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1900,
+   1990
+  ],
+  "anecdote": "Il a d'abord été publié à New York, en anglais et en français, pendant la guerre."
+ },
+ {
+  "id": "lit-026",
+  "categorie": "Littérature",
+  "sous_theme": "Académie",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de membres compte l'Académie française ?",
+  "reponse": 40,
+  "unite": "membres",
+  "tolerance": 2,
+  "bornes": [
+   10,
+   100
+  ],
+  "anecdote": "On les surnomme « les Immortels », en raison de la devise « À l'immortalité » gravée sur le sceau de l'Académie."
+ },
+ {
+  "id": "lit-027",
+  "categorie": "Littérature",
+  "sous_theme": "Classiques",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de volumes compte la série des Rougon-Macquart d'Émile Zola ?",
+  "reponse": 20,
+  "unite": "romans",
+  "tolerance": 1,
+  "bornes": [
+   5,
+   50
+  ],
+  "anecdote": "Zola a mis 22 ans à l'écrire, de 1871 à 1893."
+ },
+ {
+  "id": "lit-028",
+  "categorie": "Littérature",
+  "sous_theme": "Théâtre",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année Molière est-il mort ?",
+  "reponse": 1673,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1500,
+   1800
+  ],
+  "anecdote": "Comme les comédiens étaient excommuniés, il a fallu l'intervention du roi pour qu'il soit enterré de nuit, dans un cimetière."
+ },
+ {
+  "id": "lit-029",
+  "categorie": "Littérature",
+  "sous_theme": "Jeunesse",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de tomes compte la saga Harry Potter ?",
+  "reponse": 7,
+  "unite": "tomes",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   15
+  ],
+  "anecdote": "Le dernier tome, sorti en 2007, s'est vendu à 11 millions d'exemplaires en 24 heures dans les pays anglophones."
+ },
+ {
+  "id": "lit-030",
+  "categorie": "Littérature",
+  "sous_theme": "Classiques",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En quelle année Les Misérables de Victor Hugo ont-ils été publiés ?",
+  "reponse": 1862,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1780,
+   1920
+  ],
+  "anecdote": "Hugo a commencé le roman en 1845, l'a abandonné, puis l'a terminé en exil sur l'île de Guernesey."
+ },
+ {
+  "id": "lit-031",
+  "categorie": "Littérature",
+  "sous_theme": "Prix littéraires",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année a été décerné le premier prix Goncourt ?",
+  "reponse": 1903,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1850,
+   1960
+  ],
+  "anecdote": "Le prix ne rapporte que 10 euros, mais garantit des centaines de milliers de ventes."
+ },
+ {
+  "id": "lit-032",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien de livres sterling Phileas Fogg parie-t-il qu'il fera le tour du monde en 80 jours ?",
+  "reponse": 20000,
+  "unite": "livres",
+  "tolerance": 2000,
+  "bornes": [
+   1000,
+   100000
+  ],
+  "anecdote": "C'est la moitié de sa fortune ; l'autre moitié sert à financer le voyage."
+ },
+ {
+  "id": "lit-033",
+  "categorie": "Littérature",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 2,
+  "question": "Qui suis-je ?",
+  "reponse": "Sherlock Holmes",
+  "reponses_acceptees": [
+   "Sherlock",
+   "Holmes"
+  ],
+  "indices": [
+   "J'habite au 221B Baker Street",
+   "Je joue du violon",
+   "Mon fidèle ami est le docteur Watson",
+   "Je suis le détective créé par Arthur Conan Doyle"
+  ],
+  "anecdote": "Conan Doyle a tenté de le faire mourir en 1893, mais les lecteurs l'ont obligé à le ressusciter."
+ },
+ {
+  "id": "lit-034",
+  "categorie": "Littérature",
+  "sous_theme": "Auteurs",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Qui suis-je ?",
+  "reponse": "Jules Verne",
+  "reponses_acceptees": [
+   "Verne"
+  ],
+  "indices": [
+   "Je suis né à Nantes",
+   "Mes romans forment la série des Voyages extraordinaires",
+   "J'ai imaginé le capitaine Nemo",
+   "J'ai écrit Le Tour du monde en 80 jours"
+  ],
+  "anecdote": "Il est l'un des auteurs les plus traduits au monde, derrière Agatha Christie."
+ },
+ {
+  "id": "lit-035",
+  "categorie": "Littérature",
+  "sous_theme": "Auteurs",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Qui suis-je ?",
+  "reponse": "Agatha Christie",
+  "reponses_acceptees": [
+   "Christie"
+  ],
+  "indices": [
+   "J'ai travaillé dans une pharmacie pendant la guerre, ce qui m'a appris les poisons",
+   "J'ai mystérieusement disparu 11 jours en 1926",
+   "J'ai créé Miss Marple",
+   "J'ai créé le détective belge Hercule Poirot"
+  ],
+  "anecdote": "Elle est l'autrice de fiction la plus vendue de tous les temps, avec environ deux milliards d'exemplaires."
+ },
+ {
+  "id": "lit-036",
+  "categorie": "Littérature",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Qui suis-je ?",
+  "reponse": "Cyrano de Bergerac",
+  "reponses_acceptees": [
+   "Cyrano"
+  ],
+  "indices": [
+   "J'ai vraiment existé au XVIIe siècle",
+   "Je suis poète et redoutable bretteur",
+   "J'écris des lettres d'amour à la place d'un autre",
+   "On se moque de mon grand nez"
+  ],
+  "anecdote": "La pièce d'Edmond Rostand, créée en 1897, a été un triomphe immédiat."
+ },
+ {
+  "id": "lit-037",
+  "categorie": "Littérature",
+  "sous_theme": "Auteurs",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Qui suis-je ?",
+  "reponse": "George Sand",
+  "reponses_acceptees": [
+   "Sand",
+   "Aurore Dupin"
+  ],
+  "indices": [
+   "Mon vrai nom est Aurore Dupin",
+   "J'ai porté des vêtements d'homme pour circuler librement",
+   "J'ai vécu une histoire avec Chopin",
+   "J'ai pris un pseudonyme masculin pour publier mes romans"
+  ],
+  "anecdote": "Elle a vécu à Nohant, dans le Berry, où elle recevait Flaubert, Delacroix et Balzac."
+ },
+ {
+  "id": "lit-038",
+  "categorie": "Littérature",
+  "sous_theme": "Auteurs",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Qui suis-je ?",
+  "reponse": "Émile Zola",
+  "reponses_acceptees": [
+   "Zola"
+  ],
+  "indices": [
+   "J'ai grandi à Aix-en-Provence, avec Cézanne pour ami",
+   "J'ai été employé chez l'éditeur Hachette",
+   "J'ai écrit Germinal",
+   "J'ai publié « J'accuse… ! » pendant l'affaire Dreyfus"
+  ],
+  "anecdote": "Il est mort asphyxié par sa cheminée en 1902, peut-être à cause d'un acte malveillant."
+ },
+ {
+  "id": "lit-039",
+  "categorie": "Littérature",
+  "sous_theme": "Auteurs",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Qui suis-je ?",
+  "reponse": "Marguerite Yourcenar",
+  "reponses_acceptees": [
+   "Yourcenar"
+  ],
+  "indices": [
+   "Je suis née à Bruxelles",
+   "Mon nom de plume est l'anagramme presque parfaite de mon vrai nom",
+   "J'ai écrit Mémoires d'Hadrien",
+   "J'ai été la première femme élue à l'Académie française"
+  ],
+  "anecdote": "Elle a été élue en 1980. Son vrai nom était Marguerite Cleenewerck de Crayencour."
+ },
+ {
+  "id": "lit-040",
+  "categorie": "Littérature",
+  "sous_theme": "Auteurs",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Qui suis-je ?",
+  "reponse": "Romain Gary",
+  "reponses_acceptees": [
+   "Gary",
+   "Émile Ajar"
+  ],
+  "indices": [
+   "Je suis né à Vilnius",
+   "J'ai été aviateur dans la France libre",
+   "J'ai été consul de France à Los Angeles",
+   "J'ai gagné deux fois le Goncourt, dont une sous le nom d'Émile Ajar"
+  ],
+  "anecdote": "C'est le seul écrivain à avoir reçu deux fois le prix Goncourt, ce qui est en principe interdit."
+ },
+ {
+  "id": "lit-041",
+  "categorie": "Littérature",
+  "sous_theme": "Bande dessinée",
+  "type": "vf",
+  "difficulte": 2,
+  "question": "Vrai ou faux : Astérix a été créé par Goscinny et Uderzo.",
+  "reponse": "Vrai",
+  "anecdote": "Le premier album, Astérix le Gaulois, est paru en 1961."
+ },
+ {
+  "id": "lit-042",
+  "categorie": "Littérature",
+  "sous_theme": "Classiques",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : Victor Hugo a été enterré au Panthéon.",
+  "reponse": "Vrai",
+  "anecdote": "Deux millions de personnes ont suivi son cercueil en 1885, à Paris."
+ },
+ {
+  "id": "lit-043",
+  "categorie": "Littérature",
+  "sous_theme": "Littérature étrangère",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : Frankenstein est le nom du monstre dans le roman de Mary Shelley.",
+  "reponse": "Faux",
+  "anecdote": "Frankenstein est le nom du savant ; la créature n'a pas de nom."
+ },
+ {
+  "id": "lit-044",
+  "categorie": "Littérature",
+  "sous_theme": "Jeunesse",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : Pinocchio est l'œuvre d'un auteur italien.",
+  "reponse": "Vrai",
+  "anecdote": "Carlo Collodi l'a publié en feuilleton à partir de 1881."
+ },
+ {
+  "id": "lit-045",
+  "categorie": "Littérature",
+  "sous_theme": "Poésie",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : Paul Verlaine a tiré sur Arthur Rimbaud avec un revolver.",
+  "reponse": "Vrai",
+  "anecdote": "C'était à Bruxelles en 1873 ; Rimbaud a été blessé au poignet et Verlaine condamné à deux ans de prison."
+ },
+ {
+  "id": "lit-046",
+  "categorie": "Littérature",
+  "sous_theme": "Classiques",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel est le prénom du héros de Jules Verne, capitaine du Nautilus ?",
+  "reponse": "Nemo",
+  "reponses_acceptees": [
+   "Le capitaine Nemo",
+   "Capitaine Nemo"
+  ],
+  "anecdote": "« Nemo » signifie « personne » en latin."
+ },
+ {
+  "id": "lit-047",
+  "categorie": "Littérature",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment s'appelle le chevalier de Cervantes qui combat des moulins à vent ?",
+  "reponse": "Don Quichotte",
+  "reponses_acceptees": [
+   "Don Quijote",
+   "Quichotte"
+  ],
+  "anecdote": "Il croit voir des géants dans les moulins. Son écuyer s'appelle Sancho Panza."
+ },
+ {
+  "id": "lit-048",
+  "categorie": "Littérature",
+  "sous_theme": "Bande dessinée",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Comment s'appelle le chien de Tintin ?",
+  "reponse": "Milou",
+  "reponses_acceptees": [
+   "Snowy"
+  ],
+  "anecdote": "Hergé lui a donné le surnom de sa première petite amie, Marie-Louise."
+ },
+ {
+  "id": "lit-049",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel est le nom du bossu de Notre-Dame de Paris ?",
+  "reponse": "Quasimodo",
+  "reponses_acceptees": [
+   "Quasimodo le sonneur"
+  ],
+  "anecdote": "Son nom vient du dimanche de Quasimodo, jour où il a été abandonné devant la cathédrale."
+ },
+ {
+  "id": "lit-050",
+  "categorie": "Littérature",
+  "sous_theme": "Poésie",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel poète a écrit le recueil « Alcools » en 1913 ?",
+  "reponse": "Guillaume Apollinaire",
+  "reponses_acceptees": [
+   "Apollinaire"
+  ],
+  "anecdote": "Il a supprimé toute la ponctuation de ses épreuves juste avant la publication."
+ }
+]

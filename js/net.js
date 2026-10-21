@@ -74,7 +74,10 @@
       return new Promise((resolve, reject) => {
         const peer = new Peer(PQA.config.peerPrefix + code, PQA.config.peerOptions());
         let opened = false;
+        // Le serveur de mise en relation ne répond pas : on abandonne au bout de 20 s.
+        const timer = setTimeout(() => { if (!opened) { peer.destroy(); reject({ type: 'délai dépassé' }); } }, 20000);
         peer.on('open', () => {
+          clearTimeout(timer);
           opened = true;
           this.peer = peer;
           this.code = code;
@@ -83,6 +86,7 @@
         });
         peer.on('error', (err) => {
           if (opened) return this.h.onError && this.h.onError(err);
+          clearTimeout(timer);
           peer.destroy();
           if (err.type === 'unavailable-id' && attempt < 8) {
             // Code déjà utilisé : si on voulait reprendre ce code (rechargement de page),

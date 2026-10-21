@@ -1,0 +1,1271 @@
+[
+ {
+  "id": "ins-001",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 1,
+  "question": "Quel animal dort debout, et peut aussi dormir couché ?",
+  "choix": [
+   "Le cheval",
+   "Le chat",
+   "Le lapin",
+   "Le hamster"
+  ],
+  "reponse": "Le cheval",
+  "anecdote": "Un cheval a besoin de se coucher pour atteindre le sommeil profond, mais seulement quelques dizaines de minutes par jour."
+ },
+ {
+  "id": "ins-002",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "De quelle couleur est le sang du homard ?",
+  "choix": [
+   "Bleu",
+   "Rouge",
+   "Vert",
+   "Jaune"
+  ],
+  "reponse": "Bleu",
+  "anecdote": "Il contient de l'hémocyanine, une molécule à base de cuivre et non de fer."
+ },
+ {
+  "id": "ins-003",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Quelle partie du corps continue de grandir toute la vie, selon une idée reçue en partie vraie ?",
+  "choix": [
+   "Le nez et les oreilles",
+   "Les yeux",
+   "Les dents",
+   "Le cerveau"
+  ],
+  "reponse": "Le nez et les oreilles",
+  "anecdote": "Ce n'est pas l'os qui grandit, mais le cartilage qui s'affaisse et s'allonge avec la gravité."
+ },
+ {
+  "id": "ins-004",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Combien de temps un escargot peut-il dormir d'affilée en cas de sécheresse ?",
+  "choix": [
+   "Jusqu'à trois ans",
+   "Trois jours",
+   "Trois semaines",
+   "Trente ans"
+  ],
+  "reponse": "Jusqu'à trois ans",
+  "anecdote": "On parle d'estivation : l'escargot se scelle dans sa coquille avec un voile de mucus séché."
+ },
+ {
+  "id": "ins-005",
+  "categorie": "Insolite",
+  "sous_theme": "Lois étonnantes",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Dans quel pays la vente de chewing-gum est-elle interdite depuis 1992 ?",
+  "choix": [
+   "Singapour",
+   "Tokyo",
+   "Dubaï",
+   "Séoul"
+  ],
+  "reponse": "Singapour",
+  "anecdote": "Une exception existe pour les gommes thérapeutiques, vendues en pharmacie."
+ },
+ {
+  "id": "ins-006",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel animal a des empreintes digitales presque impossibles à distinguer de celles des humains ?",
+  "choix": [
+   "Le koala",
+   "Le chimpanzé",
+   "Le panda",
+   "Le raton laveur"
+  ],
+  "reponse": "Le koala",
+  "anecdote": "Même au microscope, leurs empreintes ressemblent beaucoup aux nôtres."
+ },
+ {
+  "id": "ins-007",
+  "categorie": "Insolite",
+  "sous_theme": "Objets",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "À quoi servait à l'origine le papier bulle, inventé en 1957 ?",
+  "choix": [
+   "À faire du papier peint",
+   "À emballer des fruits",
+   "À isoler des fusées",
+   "À protéger des disques"
+  ],
+  "reponse": "À faire du papier peint",
+  "anecdote": "Ses inventeurs voulaient créer un papier peint texturé ; ils ont ensuite tenté de le vendre comme isolant pour serres."
+ },
+ {
+  "id": "ins-008",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel animal peut survivre à la congélation en hiver puis revivre au printemps ?",
+  "choix": [
+   "La grenouille des bois",
+   "Le hérisson",
+   "La marmotte",
+   "Le lézard vert"
+  ],
+  "reponse": "La grenouille des bois",
+  "anecdote": "Son cœur s'arrête, et elle produit du glucose qui protège ses cellules du gel."
+ },
+ {
+  "id": "ins-009",
+  "categorie": "Insolite",
+  "sous_theme": "Records insolites",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel objet a été envoyé dans l'espace par Elon Musk en 2018 ?",
+  "choix": [
+   "Une voiture Tesla",
+   "Un piano",
+   "Une statue",
+   "Un drapeau martien"
+  ],
+  "reponse": "Une voiture Tesla",
+  "anecdote": "Un mannequin nommé Starman est assis au volant ; la voiture tourne autour du Soleil."
+ },
+ {
+  "id": "ins-010",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Combien de temps faut-il environ pour que le corps renouvelle complètement la couche superficielle de la peau ?",
+  "choix": [
+   "Un mois",
+   "Un jour",
+   "Un an",
+   "Dix ans"
+  ],
+  "reponse": "Un mois",
+  "anecdote": "Nous perdons chaque minute des dizaines de milliers de cellules mortes, qui composent une partie de la poussière des maisons."
+ },
+ {
+  "id": "ins-011",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Comment se reproduisent les hippocampes ?",
+  "choix": [
+   "C'est le mâle qui porte les petits",
+   "C'est la femelle qui pond dans le sable",
+   "Ils se divisent en deux",
+   "Ils ne se reproduisent qu'une fois par siècle"
+  ],
+  "reponse": "C'est le mâle qui porte les petits",
+  "anecdote": "Le mâle possède une poche ventrale où la femelle dépose ses œufs ; il peut donner naissance à plus de mille petits."
+ },
+ {
+  "id": "ins-012",
+  "categorie": "Insolite",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel aliment a été inventé par hasard par un garçon de 11 ans qui avait oublié son verre dehors ?",
+  "choix": [
+   "L'esquimau glacé",
+   "La barbe à papa",
+   "Le chewing-gum",
+   "Les chips"
+  ],
+  "reponse": "L'esquimau glacé",
+  "anecdote": "Frank Epperson avait laissé un mélange de soda et un bâtonnet dehors pendant une nuit froide, en 1905."
+ },
+ {
+  "id": "ins-013",
+  "categorie": "Insolite",
+  "sous_theme": "Lois étonnantes",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Dans quel pays des villes comme Rome ont-elles interdit les bocaux ronds pour poissons rouges ?",
+  "choix": [
+   "L'Italie",
+   "L'Espagne",
+   "La Suisse",
+   "L'Allemagne"
+  ],
+  "reponse": "L'Italie",
+  "anecdote": "Rome l'a fait en 2005 au nom du bien-être animal : un bocal rond déformerait la vision du poisson."
+ },
+ {
+  "id": "ins-014",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel animal a l'urine qui sent le pop-corn ?",
+  "choix": [
+   "Le binturong",
+   "Le paresseux",
+   "Le tatou",
+   "Le fennec"
+  ],
+  "reponse": "Le binturong",
+  "anecdote": "Cette odeur vient d'une molécule, la 2-acétyl-1-pyrroline, la même que dans le pop-corn grillé."
+ },
+ {
+  "id": "ins-015",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel animal a été jugé et exécuté lors de procès au Moyen Âge en Europe ?",
+  "choix": [
+   "Le cochon",
+   "Le chat",
+   "Le loup",
+   "Le corbeau"
+  ],
+  "reponse": "Le cochon",
+  "anecdote": "En 1386, à Falaise, une truie habillée en humain a été pendue pour avoir tué un enfant."
+ },
+ {
+  "id": "ins-016",
+  "categorie": "Insolite",
+  "sous_theme": "Records insolites",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel est l'âge du plus vieux poisson rouge connu, selon le Guinness ?",
+  "choix": [
+   "43 ans",
+   "12 ans",
+   "21 ans",
+   "60 ans"
+  ],
+  "reponse": "43 ans",
+  "anecdote": "Il s'appelait Tish, avait été gagné à une fête foraine en Angleterre, et est mort en 1999."
+ },
+ {
+  "id": "ins-017",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel animal produit des crottes en forme de cubes ?",
+  "choix": [
+   "Le wombat",
+   "Le koala",
+   "Le kangourou",
+   "Le lièvre"
+  ],
+  "reponse": "Le wombat",
+  "anecdote": "Leurs parois intestinales ont une élasticité variable, ce qui forme ces cubes. Ils marquent ainsi leur territoire sans que ça roule."
+ },
+ {
+  "id": "ins-018",
+  "categorie": "Insolite",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel objet du quotidien a été inventé par un vétérinaire, John Boyd Dunlop ?",
+  "choix": [
+   "Le pneu à air pour vélo",
+   "La brosse à dents",
+   "L'agrafeuse",
+   "Le parapluie pliant"
+  ],
+  "reponse": "Le pneu à air pour vélo",
+  "anecdote": "Il l'a mis au point en 1888 pour rendre plus confortable le tricycle de son fils."
+ },
+ {
+  "id": "ins-019",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quelle ville a connu une « épidémie de danse » en 1518 ?",
+  "choix": [
+   "Strasbourg",
+   "Lyon",
+   "Bruges",
+   "Venise"
+  ],
+  "reponse": "Strasbourg",
+  "anecdote": "Des dizaines de personnes ont dansé pendant des jours sans pouvoir s'arrêter ; plusieurs seraient mortes d'épuisement."
+ },
+ {
+  "id": "ins-020",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Combien de fois par jour cligne-t-on des yeux, environ ?",
+  "choix": [
+   "15 000 fois",
+   "150 fois",
+   "1 500 fois",
+   "150 000 fois"
+  ],
+  "reponse": "15 000 fois",
+  "anecdote": "Chaque clignement dure environ 0,1 à 0,4 seconde : nous passons donc une partie de la journée les yeux fermés."
+ },
+ {
+  "id": "ins-021",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel animal a la langue bleue ?",
+  "choix": [
+   "La girafe",
+   "Le lion",
+   "Le cheval",
+   "Le chameau"
+  ],
+  "reponse": "La girafe",
+  "anecdote": "Cette couleur sombre protégerait sa langue des coups de soleil, quand elle cueille des feuilles d'acacia."
+ },
+ {
+  "id": "ins-022",
+  "categorie": "Insolite",
+  "sous_theme": "Objets",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Pourquoi les avions ont-ils de petits trous dans leurs hublots ?",
+  "choix": [
+   "Pour équilibrer la pression",
+   "Pour faire entrer l'air frais",
+   "Pour évacuer la pluie",
+   "Pour la décoration"
+  ],
+  "reponse": "Pour équilibrer la pression",
+  "anecdote": "Ce petit trou régule la pression entre les vitres, pour que la vitre extérieure supporte seule l'essentiel de l'effort."
+ },
+ {
+  "id": "ins-023",
+  "categorie": "Insolite",
+  "sous_theme": "Records insolites",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Comment abrège-t-on le nom de lieu le plus long du monde, une colline de Nouvelle-Zélande ?",
+  "choix": [
+   "Taumata",
+   "Waikiki",
+   "Rotorua",
+   "Kaikoura"
+  ],
+  "reponse": "Taumata",
+  "anecdote": "Son nom maori complet compte 85 lettres et évoque un homme qui jouait de la flûte pour sa bien-aimée."
+ },
+ {
+  "id": "ins-024",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Que se passe-t-il quand on éternue les yeux ouverts ?",
+  "choix": [
+   "Rien de grave : c'est possible",
+   "Les yeux sortent des orbites",
+   "On perd la vue un instant",
+   "On s'évanouit"
+  ],
+  "reponse": "Rien de grave : c'est possible",
+  "anecdote": "Fermer les yeux est un réflexe, mais il n'y a aucun risque si on les garde ouverts."
+ },
+ {
+  "id": "ins-025",
+  "categorie": "Insolite",
+  "sous_theme": "Objets",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Que signifie le nom de la marque Lego ?",
+  "choix": [
+   "« Joue bien » en danois",
+   "« Brique » en latin",
+   "« Construire » en suédois",
+   "Le nom de son inventeur"
+  ],
+  "reponse": "« Joue bien » en danois",
+  "anecdote": "Le nom vient de « leg godt ». En latin, « lego » signifie aussi « je rassemble », un hasard heureux."
+ },
+ {
+  "id": "ins-026",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel président américain s'est retrouvé coincé dans une baignoire de la Maison-Blanche, selon une légende tenace ?",
+  "choix": [
+   "William Taft",
+   "Abraham Lincoln",
+   "Theodore Roosevelt",
+   "Ulysses Grant"
+  ],
+  "reponse": "William Taft",
+  "anecdote": "L'anecdote n'est pas prouvée, mais il a bien fait installer une baignoire géante pouvant accueillir quatre hommes."
+ },
+ {
+  "id": "ins-027",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Combien de cerveaux possède une sangsue ?",
+  "choix": [
+   "32",
+   "1",
+   "2",
+   "8"
+  ],
+  "reponse": "32",
+  "anecdote": "Son corps est découpé en segments, chacun avec son propre ganglion nerveux. On parle souvent de « 32 cerveaux »."
+ },
+ {
+  "id": "ins-028",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Quel insecte fabrique le miel ?",
+  "choix": [
+   "L'abeille",
+   "La guêpe",
+   "Le bourdon des sables",
+   "La fourmi"
+  ],
+  "reponse": "L'abeille",
+  "anecdote": "Une abeille ouvrière ne produit qu'environ un douzième de cuillère à café de miel dans toute sa vie."
+ },
+ {
+  "id": "ins-029",
+  "categorie": "Insolite",
+  "sous_theme": "Lois étonnantes",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quelle ville française a officiellement interdit de mourir dans sa commune, faute de place au cimetière ?",
+  "choix": [
+   "Le Lavandou",
+   "Nice",
+   "Biarritz",
+   "Annecy"
+  ],
+  "reponse": "Le Lavandou",
+  "anecdote": "Le maire a pris cet arrêté symbolique en 2000 pour protester contre le refus d'agrandir le cimetière."
+ },
+ {
+  "id": "ins-030",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle tour célèbre penche de presque 4 degrés depuis sa construction ?",
+  "choix": [
+   "La tour de Pise",
+   "La tour Eiffel",
+   "Big Ben",
+   "La tour de Belém"
+  ],
+  "reponse": "La tour de Pise",
+  "anecdote": "Elle a commencé à pencher dès le XIIe siècle, pendant les travaux, à cause d'un sol trop mou."
+ },
+ {
+  "id": "ins-031",
+  "categorie": "Insolite",
+  "sous_theme": "Records insolites",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Combien de temps a duré le plus long hoquet jamais enregistré ?",
+  "choix": [
+   "68 ans",
+   "6 mois",
+   "8 ans",
+   "22 ans"
+  ],
+  "reponse": "68 ans",
+  "anecdote": "L'Américain Charles Osborne a eu le hoquet de 1922 à 1990."
+ },
+ {
+  "id": "ins-032",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel animal a des dents faites de métal ?",
+  "choix": [
+   "La patelle",
+   "Le castor",
+   "Le requin",
+   "Le poisson-chat"
+  ],
+  "reponse": "La patelle",
+  "anecdote": "Ses dents contiennent de la goethite, un minéral de fer : c'est le matériau biologique le plus résistant connu."
+ },
+ {
+  "id": "ins-033",
+  "categorie": "Insolite",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel jeu de société était à l'origine conçu pour dénoncer les dangers des propriétaires fonciers ?",
+  "choix": [
+   "Le Monopoly",
+   "Le Cluedo",
+   "Le Scrabble",
+   "Le Risk"
+  ],
+  "reponse": "Le Monopoly",
+  "anecdote": "Elizabeth Magie a créé « The Landlord's Game » en 1903, bien avant que Charles Darrow ne vende sa version."
+ },
+ {
+  "id": "ins-034",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quelle partie du corps n'a aucun vaisseau sanguin ?",
+  "choix": [
+   "La cornée",
+   "La langue",
+   "Le cuir chevelu",
+   "Les lèvres"
+  ],
+  "reponse": "La cornée",
+  "anecdote": "Elle reçoit son oxygène directement de l'air et des larmes."
+ },
+ {
+  "id": "ins-035",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "indices",
+  "difficulte": 2,
+  "question": "Quel est cet animal ?",
+  "reponse": "Le manchot",
+  "reponses_acceptees": [
+   "Manchot",
+   "Manchots",
+   "Pingouin"
+  ],
+  "indices": [
+   "Je vis surtout dans l'hémisphère Sud",
+   "Je ne sais pas voler, mais je nage très bien",
+   "Je porte une sorte de smoking noir et blanc",
+   "Je glisse sur le ventre sur la glace"
+  ],
+  "anecdote": "En français, le pingouin sait voler, contrairement au manchot. En anglais, « penguin » désigne le manchot, d'où la confusion."
+ },
+ {
+  "id": "ins-036",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "fourchette",
+  "difficulte": 2,
+  "question": "Combien de rêves environ faisons-nous par nuit ?",
+  "reponse": 5,
+  "unite": "rêves",
+  "tolerance": 2,
+  "bornes": [
+   1,
+   30
+  ],
+  "anecdote": "Nous oublions la plupart de nos rêves dans les minutes qui suivent le réveil."
+ },
+ {
+  "id": "ins-037",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Combien d'heures par jour un koala dort-il environ ?",
+  "reponse": 20,
+  "unite": "heures",
+  "tolerance": 2,
+  "bornes": [
+   1,
+   24
+  ],
+  "anecdote": "Les feuilles d'eucalyptus sont peu nutritives et longues à digérer, ce qui l'oblige à économiser son énergie."
+ },
+ {
+  "id": "ins-038",
+  "categorie": "Insolite",
+  "sous_theme": "Records insolites",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Combien de kilos pesait la plus grosse citrouille du monde, en 2023 ?",
+  "reponse": 1247,
+  "unite": "kg",
+  "tolerance": 100,
+  "bornes": [
+   100,
+   3000
+  ],
+  "anecdote": "Elle a été cultivée dans le Minnesota par Travis Gienger et pesait plus qu'une petite voiture."
+ },
+ {
+  "id": "ins-039",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Combien de kilomètres de vaisseaux sanguins compte un corps humain adulte, environ ?",
+  "reponse": 100000,
+  "unite": "km",
+  "tolerance": 20000,
+  "bornes": [
+   1000,
+   1000000
+  ],
+  "anecdote": "Mis bout à bout, ils feraient environ deux fois et demie le tour de la Terre."
+ },
+ {
+  "id": "ins-040",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Combien de battements d'ailes par seconde un colibri peut-il faire, pour les espèces les plus rapides ?",
+  "reponse": 80,
+  "unite": "battements",
+  "tolerance": 20,
+  "bornes": [
+   1,
+   300
+  ],
+  "anecdote": "Son cœur peut dépasser 1 000 battements par minute en plein vol."
+ },
+ {
+  "id": "ins-041",
+  "categorie": "Insolite",
+  "sous_theme": "Objets",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de mots environ prononce-t-on par jour, en moyenne ?",
+  "reponse": 16000,
+  "unite": "mots",
+  "tolerance": 4000,
+  "bornes": [
+   1000,
+   100000
+  ],
+  "anecdote": "Une étude de 2007 a montré que les femmes et les hommes parlent à peu près autant."
+ },
+ {
+  "id": "ins-042",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de temps la guerre de l'émeu, en Australie, a-t-elle duré en 1932, en semaines ?",
+  "reponse": 5,
+  "unite": "semaines",
+  "tolerance": 2,
+  "bornes": [
+   1,
+   52
+  ],
+  "anecdote": "L'armée australienne a affronté environ 20 000 émeus avec des mitrailleuses… et a perdu."
+ },
+ {
+  "id": "ins-043",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien d'œufs une reine des abeilles peut-elle pondre par jour, en période de pointe ?",
+  "reponse": 2000,
+  "unite": "œufs",
+  "tolerance": 300,
+  "bornes": [
+   100,
+   10000
+  ],
+  "anecdote": "C'est plus que son propre poids en œufs, chaque jour."
+ },
+ {
+  "id": "ins-044",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de litres de salive produit-on environ par jour ?",
+  "reponse": 1.5,
+  "unite": "litres",
+  "tolerance": 0.3,
+  "bornes": [
+   0.1,
+   10
+  ],
+  "anecdote": "Sur toute une vie, cela représente plusieurs dizaines de milliers de litres."
+ },
+ {
+  "id": "ins-045",
+  "categorie": "Insolite",
+  "sous_theme": "Records insolites",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de temps a duré le plus long baiser jamais enregistré, en heures (record de 2013) ?",
+  "reponse": 58,
+  "unite": "heures",
+  "tolerance": 5,
+  "bornes": [
+   1,
+   200
+  ],
+  "anecdote": "Un couple thaïlandais a tenu 58 heures et 35 minutes, sans jamais se lâcher."
+ },
+ {
+  "id": "ins-046",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de temps un paresseux met-il à digérer un repas, en jours ?",
+  "reponse": 30,
+  "unite": "jours",
+  "tolerance": 6,
+  "bornes": [
+   1,
+   100
+  ],
+  "anecdote": "Il ne descend de son arbre qu'environ une fois par semaine, pour faire ses besoins."
+ },
+ {
+  "id": "ins-047",
+  "categorie": "Insolite",
+  "sous_theme": "Objets",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de pièces de puzzle compte environ le plus grand puzzle commercial, sorti en 2020 ?",
+  "reponse": 54000,
+  "unite": "pièces",
+  "tolerance": 8000,
+  "bornes": [
+   1000,
+   200000
+  ],
+  "anecdote": "Le puzzle « Travel around Art » de Grafika mesure près de 9 mètres de long."
+ },
+ {
+  "id": "ins-048",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de minutes a duré la plus longue ovation debout à Cannes, selon les décomptes ?",
+  "reponse": 22,
+  "unite": "minutes",
+  "tolerance": 4,
+  "bornes": [
+   1,
+   60
+  ],
+  "anecdote": "Le Labyrinthe de Pan de Guillermo del Toro a été longuement applaudi en 2006, selon les récits de la presse."
+ },
+ {
+  "id": "ins-049",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien de bactéries environ notre corps contient-il, en milliers de milliards ?",
+  "reponse": 38,
+  "unite": "milliers de milliards",
+  "tolerance": 10,
+  "bornes": [
+   1,
+   500
+  ],
+  "anecdote": "C'est à peu près autant que de cellules humaines, contrairement à l'idée reçue de « dix fois plus »."
+ },
+ {
+  "id": "ins-050",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien de litres de lait une vache laitière produit-elle environ par jour en France ?",
+  "reponse": 28,
+  "unite": "litres",
+  "tolerance": 8,
+  "bornes": [
+   1,
+   100
+  ],
+  "anecdote": "Une vache ne produit du lait qu'après avoir eu un veau, comme tous les mammifères."
+ },
+ {
+  "id": "ins-051",
+  "categorie": "Insolite",
+  "sous_theme": "Objets",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Combien de trous compte une prise électrique française standard pour la fiche, sans la terre ?",
+  "reponse": 2,
+  "unite": "trous",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   10
+  ],
+  "anecdote": "La broche de terre est une tige saillante, située côté prise."
+ },
+ {
+  "id": "ins-052",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "indices",
+  "difficulte": 2,
+  "question": "Quel est cet animal ?",
+  "reponse": "Le pingouin",
+  "reponses_acceptees": [
+   "Pingouin",
+   "Manchot"
+  ],
+  "indices": [
+   "Je vis en colonie",
+   "Je ne vole pas sous ma forme de manchot",
+   "Je porte une sorte de smoking",
+   "On me voit glisser sur le ventre sur la glace"
+  ],
+  "anecdote": "En français, le manchot ne vole pas, alors que le pingouin, lui, sait voler. En anglais, « penguin » désigne le manchot."
+ },
+ {
+  "id": "ins-053",
+  "categorie": "Insolite",
+  "sous_theme": "Objets",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel est cet objet ?",
+  "reponse": "Le Rubik's Cube",
+  "reponses_acceptees": [
+   "Rubik's cube",
+   "Rubik cube",
+   "Cube de Rubik"
+  ],
+  "indices": [
+   "J'ai été inventé en 1974 par un professeur d'architecture",
+   "Je peux prendre plus de 43 milliards de milliards de positions",
+   "On me résout en moins de 4 secondes en compétition",
+   "Je suis un casse-tête à six faces colorées"
+  ],
+  "anecdote": "Erno Rubik lui-même a mis plus d'un mois à résoudre son propre casse-tête."
+ },
+ {
+  "id": "ins-054",
+  "categorie": "Insolite",
+  "sous_theme": "Inventions",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel est cet objet ?",
+  "reponse": "Le Post-it",
+  "reponses_acceptees": [
+   "Post it",
+   "Post-it",
+   "Les post-it"
+  ],
+  "indices": [
+   "Je suis né d'une colle ratée",
+   "On a mis des années à me trouver un usage",
+   "Un employé me voulait comme marque-page dans son livre de chants",
+   "Je suis un petit papier jaune repositionnable"
+  ],
+  "anecdote": "Spencer Silver, chimiste chez 3M, voulait une colle très forte et a obtenu une colle très faible."
+ },
+ {
+  "id": "ins-055",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel est cet animal ?",
+  "reponse": "Le poulpe",
+  "reponses_acceptees": [
+   "Pieuvre",
+   "Poulpe"
+  ],
+  "indices": [
+   "J'ai le sang bleu",
+   "Je peux changer de couleur en un éclair",
+   "Mes bras peuvent goûter ce qu'ils touchent",
+   "J'ai huit bras et des ventouses"
+  ],
+  "anecdote": "Les deux tiers de ses neurones se trouvent dans ses bras, qui agissent presque de façon autonome."
+ },
+ {
+  "id": "ins-056",
+  "categorie": "Insolite",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Qui suis-je ?",
+  "reponse": "Le Père Noël",
+  "reponses_acceptees": [
+   "Père Noël",
+   "Santa Claus"
+  ],
+  "indices": [
+   "Ma tenue rouge a été popularisée par des publicités",
+   "Je serais inspiré d'un évêque de Myre",
+   "Les enfants m'envoient des lettres",
+   "Je vis au pôle Nord avec mes lutins"
+  ],
+  "anecdote": "La Poste française répond chaque année à plus d'un million de lettres qui lui sont adressées, grâce à un secrétariat créé en 1962."
+ },
+ {
+  "id": "ins-057",
+  "categorie": "Insolite",
+  "sous_theme": "Inventions",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quel est cet objet ?",
+  "reponse": "Le micro-ondes",
+  "reponses_acceptees": [
+   "Four à micro-ondes",
+   "Micro onde",
+   "Micro-ondes"
+  ],
+  "indices": [
+   "J'ai été découvert par un ingénieur qui travaillait sur les radars",
+   "Une barre chocolatée a fondu dans sa poche",
+   "Mon premier modèle mesurait près de 1,80 m",
+   "Je réchauffe les plats en quelques minutes"
+  ],
+  "anecdote": "Percy Spencer a fait la découverte en 1945 chez Raytheon."
+ },
+ {
+  "id": "ins-058",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Quel est cet animal ?",
+  "reponse": "L'axolotl",
+  "reponses_acceptees": [
+   "Axolotl",
+   "Axolotls"
+  ],
+  "indices": [
+   "Je reste toute ma vie à l'état de larve",
+   "Je peux faire repousser mes membres et même une partie de mon cœur",
+   "Je vis à l'état sauvage dans les canaux de Mexico",
+   "On me surnomme le « monstre aquatique » qui sourit"
+  ],
+  "anecdote": "Il est en danger critique d'extinction à l'état sauvage, mais très répandu en aquarium."
+ },
+ {
+  "id": "ins-059",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Quel est ce lieu ?",
+  "reponse": "L'île Clipperton",
+  "reponses_acceptees": [
+   "Clipperton",
+   "Île de la Passion"
+  ],
+  "indices": [
+   "Je suis un atoll français isolé du Pacifique",
+   "Je suis inhabité",
+   "Des gardiens de phare y ont vécu un drame en 1917",
+   "Je porte le nom d'un pirate anglais"
+  ],
+  "anecdote": "Seules quelques femmes et enfants ont survécu après l'abandon de la garnison mexicaine, sauvés en 1917."
+ },
+ {
+  "id": "ins-060",
+  "categorie": "Insolite",
+  "sous_theme": "Objets",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel est cet objet ?",
+  "reponse": "Le chewing-gum",
+  "reponses_acceptees": [
+   "Chewing gum",
+   "Gomme à mâcher"
+  ],
+  "indices": [
+   "Les Mayas mâchaient déjà ma sève",
+   "On m'interdit à Singapour",
+   "Je ne dois pas être avalé",
+   "On me mâche sans m'avaler"
+  ],
+  "anecdote": "Les Mayas et les Aztèques mâchaient le chiclé, une gomme naturelle issue du sapotillier."
+ },
+ {
+  "id": "ins-061",
+  "categorie": "Insolite",
+  "sous_theme": "Records insolites",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel est ce lieu ?",
+  "reponse": "Le Vatican",
+  "reponses_acceptees": [
+   "Vatican",
+   "Cité du Vatican"
+  ],
+  "indices": [
+   "J'ai le plus fort taux de vin consommé par habitant au monde",
+   "J'ai un distributeur automatique de billets en latin",
+   "Je n'ai presque aucune naissance",
+   "Je suis le plus petit État du monde"
+  ],
+  "anecdote": "Le distributeur propose « Inserito scidulam quaeso ut faciundam cognoscas rationem » pour insérer sa carte."
+ },
+ {
+  "id": "ins-062",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel est cet objet ?",
+  "reponse": "Le tamagotchi",
+  "reponses_acceptees": [
+   "Tamagotchi",
+   "Tamagochi"
+  ],
+  "indices": [
+   "Je suis né au Japon en 1996",
+   "Des écoles m'ont interdit en classe",
+   "Je pouvais « mourir » si on m'oubliait",
+   "Je suis un animal virtuel dans un œuf en plastique"
+  ],
+  "anecdote": "Plus de 80 millions d'exemplaires ont été vendus dans le monde."
+ },
+ {
+  "id": "ins-063",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quel est cet animal ?",
+  "reponse": "L'ornithorynque",
+  "reponses_acceptees": [
+   "Ornithorynque"
+  ],
+  "indices": [
+   "Les premiers scientifiques européens ont cru à un canular",
+   "Je brille sous lumière ultraviolette",
+   "Le mâle a un ergot venimeux",
+   "J'ai un bec de canard et une queue de castor"
+  ],
+  "anecdote": "En 1799, des naturalistes ont cherché des points de couture sur le premier spécimen empaillé envoyé en Angleterre."
+ },
+ {
+  "id": "ins-064",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "vf",
+  "difficulte": 2,
+  "question": "Vrai ou faux : les vaches ont des « meilleures amies ».",
+  "reponse": "Vrai",
+  "anecdote": "Une étude a montré que leur stress diminue quand elles sont avec une congénère qu'elles préfèrent."
+ },
+ {
+  "id": "ins-065",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "vf",
+  "difficulte": 3,
+  "question": "Vrai ou faux : il est impossible de se chatouiller soi-même.",
+  "reponse": "Vrai",
+  "anecdote": "Le cerveau anticipe le mouvement et annule en grande partie la sensation."
+ },
+ {
+  "id": "ins-066",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : les chats ne sentent pas le goût sucré.",
+  "reponse": "Vrai",
+  "anecdote": "Ils n'ont pas le récepteur qui permet de percevoir le sucré."
+ },
+ {
+  "id": "ins-067",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : Napoléon a été attaqué par une horde de lapins.",
+  "reponse": "Vrai",
+  "anecdote": "Lors d'une chasse organisée en 1807, des centaines de lapins d'élevage se seraient rués vers lui au lieu de fuir."
+ },
+ {
+  "id": "ins-068",
+  "categorie": "Insolite",
+  "sous_theme": "Objets",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : le miel peut se conserver des milliers d'années.",
+  "reponse": "Vrai",
+  "anecdote": "Des pots de miel encore comestibles ont été retrouvés dans des tombes égyptiennes."
+ },
+ {
+  "id": "ins-069",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : les éléphants sont les seuls mammifères incapables de sauter.",
+  "reponse": "Faux",
+  "anecdote": "Ils ne sautent pas, mais les paresseux et les hippopotames adultes non plus."
+ },
+ {
+  "id": "ins-070",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : on peut entendre ses propres yeux bouger, dans de rares cas.",
+  "reponse": "Vrai",
+  "anecdote": "Une maladie rare de l'oreille interne, la déhiscence du canal semi-circulaire supérieur, provoque ce phénomène."
+ },
+ {
+  "id": "ins-071",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "vf",
+  "difficulte": 9,
+  "question": "Vrai ou faux : la Suisse a déjà « envahi » le Liechtenstein par erreur.",
+  "reponse": "Vrai",
+  "anecdote": "En 2007, 170 soldats suisses se sont perdus de nuit et ont franchi la frontière. Le Liechtenstein n'a rien remarqué."
+ },
+ {
+  "id": "ins-072",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel animal est connu pour dormir la tête en bas, accroché par les pattes ?",
+  "reponse": "La chauve-souris",
+  "reponses_acceptees": [
+   "Chauve souris",
+   "Chauves-souris"
+  ],
+  "anecdote": "Elles peuvent ainsi s'envoler simplement en se laissant tomber."
+ },
+ {
+  "id": "ins-073",
+  "categorie": "Insolite",
+  "sous_theme": "Objets",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "De quelle couleur était le verre de la célèbre bouteille de Coca-Cola dessinée en 1915 ?",
+  "reponse": "Vert",
+  "reponses_acceptees": [
+   "Verte"
+  ],
+  "anecdote": "Cette teinte vert clair s'appelait « Georgia Green », en hommage à l'État d'origine de la marque."
+ },
+ {
+  "id": "ins-074",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel animal du désert peut boire plus de 100 litres d'eau en quelques minutes ?",
+  "reponse": "Le dromadaire",
+  "reponses_acceptees": [
+   "Dromadaire",
+   "Chameau"
+  ],
+  "anecdote": "Sa bosse ne contient pas d'eau mais de la graisse."
+ },
+ {
+  "id": "ins-075",
+  "categorie": "Insolite",
+  "sous_theme": "Histoire insolite",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel légume a été utilisé pour sculpter les premières lanternes d'Halloween en Irlande ?",
+  "reponse": "Le navet",
+  "reponses_acceptees": [
+   "Navet",
+   "Betterave"
+  ],
+  "anecdote": "Les immigrants irlandais aux États-Unis ont remplacé le navet par la citrouille, plus facile à creuser."
+ },
+ {
+  "id": "ins-076",
+  "categorie": "Insolite",
+  "sous_theme": "Corps humain",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel organe, souvent présenté comme le seul muscle attaché par une seule extrémité, est en fait formé de huit muscles ?",
+  "reponse": "La langue",
+  "reponses_acceptees": [
+   "Langue"
+  ],
+  "anecdote": "Elle sert à parler, mastiquer, avaler et goûter : un vrai couteau suisse musculaire."
+ },
+ {
+  "id": "ins-077",
+  "categorie": "Insolite",
+  "sous_theme": "Records insolites",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel pays a inventé le sport du lancer de téléphone portable ?",
+  "reponse": "La Finlande",
+  "reponses_acceptees": [
+   "Finlande"
+  ],
+  "anecdote": "Le championnat du monde se tient chaque année à Savonlinna, depuis 2000."
+ },
+ {
+  "id": "ins-078",
+  "categorie": "Insolite",
+  "sous_theme": "Inventions",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel ingénieur a eu l'idée du velcro en observant des fleurs de bardane accrochées aux poils de son chien ?",
+  "reponse": "George de Mestral",
+  "reponses_acceptees": [
+   "De Mestral",
+   "Mestral"
+  ],
+  "anecdote": "Le nom « Velcro » vient de « velours » et « crochet »."
+ },
+ {
+  "id": "ins-079",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel animal peut vivre plus de 500 ans, record de longévité animal mesuré ?",
+  "reponse": "La palourde arctique",
+  "reponses_acceptees": [
+   "Palourde",
+   "Quahog",
+   "Ming"
+  ],
+  "anecdote": "Un spécimen surnommé Ming avait 507 ans quand il a été pêché, en 2006, au large de l'Islande."
+ },
+ {
+  "id": "ins-080",
+  "categorie": "Insolite",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle pâtisserie Ruth Wakefield a-t-elle inventée vers 1938 dans son auberge du Massachusetts ?",
+  "choix": [
+   "Le cookie aux pépites de chocolat",
+   "Le brownie",
+   "Le donut",
+   "Le muffin"
+  ],
+  "reponse": "Le cookie aux pépites de chocolat",
+  "anecdote": "Elle aurait cédé à Nestlé le droit d'imprimer sa recette contre, dit-on, du chocolat gratuit à vie."
+ }
+]
