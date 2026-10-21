@@ -90,13 +90,13 @@
 
   /* ---- Métadonnées du jeu ---------------------------------------------- */
   PQA.ROUNDS = {
+    sprint: { name: 'Le Sprint', short: 'Sprint', icon: '🏁', desc: '10 questions au buzzer sur des thèmes au hasard. Pas de choix : buzze, puis tape ta réponse. Buzz raté = −100 !' },
     mystere: { name: 'Le Thème Mystère', short: 'Thème Mystère', icon: '🎡', desc: 'La roue choisit le thème, tu choisis ton niveau de 1 à 10. Plus c’est dur, plus ça rapporte !' },
-    fourchette: { name: 'La Fourchette', short: 'Fourchette', icon: '📏', desc: 'Donne un seul chiffre et vise pile ! Plus tu es proche de la réponse, plus tu marques.' },
-    indices: { name: 'Le Buzzer à indices', short: 'Indices', icon: '🔔', desc: 'Les indices tombent un à un. Buzze dès que tu sais : plus tu es rapide, plus tu gagnes.' },
-    quatre: { name: 'Le 4 à la suite', short: '4 à la suite', icon: '4️⃣', desc: 'Choisis ton thème et enchaîne 4 bonnes réponses d’affilée en 40 secondes. Une erreur et tout repart à zéro !' },
+    fourchette: { name: 'La Fourchette', short: 'La Fourchette', icon: '📏', desc: 'Donne un seul chiffre et vise pile ! Plus tu es proche de la réponse, plus tu marques.' },
+    quatre: { name: 'Le 4 à la suite', short: '4 à la suite', icon: '4️⃣', desc: 'Le 1er du classement choisit son thème en premier, puis le suivant… Un thème pris n’est plus disponible ! Enchaîne 4 bonnes réponses d’affilée en 40 secondes.' },
     eclair: { name: 'Tous en même temps', short: 'QCM éclair', icon: '⚡', desc: 'Tout le monde répond en même temps. Bonus de rapidité pour les plus vifs.' },
-    table: { name: 'La Table des Savoirs', short: 'Table des Savoirs', icon: '🗃️', desc: 'Choisis une case à tour de rôle. Attention aux pièges, aux cases doubles et aux vols de points !' },
-    echelle: { name: 'Finale : L’Échelle', short: 'L’Échelle', icon: '🪜', desc: 'Le leader grimpe 10 paliers de plus en plus durs, avec trois jokers pour s’en sortir.' },
+    table: { name: 'Les Cases mystères', short: 'Cases mystères', icon: '🎁', desc: 'Choisis une case à tour de rôle : thème et valeur restent secrets jusqu’au choix. Attention aux pièges, aux cases doubles et aux vols de points !' },
+    champions: { name: 'Le Duel des champions', short: 'Duel des champions', icon: '⚔️', desc: 'Les 2 meilleurs s’affrontent au buzzer : les indices tombent un à un. Le premier à 3 bonnes réponses gagne la partie !' },
     duel: { name: 'Duel', short: 'Duel', icon: '🥊', desc: 'Chaque bonne réponse inflige des dégâts à l’adversaire. Premier K.O. perdu !' },
   };
 
@@ -106,9 +106,6 @@
     vol: { name: 'Vol de question', icon: '🦹', desc: 'Les prochains points gagnés par l’adversaire sont pour toi.', target: true },
     double: { name: 'Double', icon: '✖️2', desc: 'Tes prochains points gagnés sont doublés.', target: false },
   };
-
-  PQA.LADDER = [50, 100, 150, 200, 300, 400, 500, 650, 800, 1000];
-  PQA.LADDER_SAFE = 4; // index du palier assuré (5e marche)
 
   PQA.shuffle = function (arr) {
     const a = arr.slice();

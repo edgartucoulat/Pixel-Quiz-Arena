@@ -226,7 +226,7 @@
     text(v) {
       return {
         key: 'text' + v.qid,
-        html: `${timerBar()}<div class="pq">${v.type === 'indices' ? '<div class="you-buzzed">🔔 À toi ! Quelle est ta réponse ?</div>' : `<div class="pq-text">${esc(v.question)}</div>`}
+        html: `${timerBar()}<div class="pq">${v.buzzed ? '<div class="you-buzzed">🔔 À toi ! Quelle est ta réponse ?</div>' : ''}<div class="pq-text">${esc(v.question)}</div>
           <form id="f-text" class="ptext"><input id="in-answer" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="60" placeholder="Ta réponse..."><button class="big-btn green">ENVOYER</button></form></div>`,
         after() {
           const inp = $('#in-answer');
@@ -242,13 +242,14 @@
     buzzer(v) {
       const st = v.me.frozen ? 'frozen' : v.buzz;
       const label = st === 'open' ? 'BUZZ !' : st === 'early' ? '⏳' : st === 'blocked' ? '⛔' : st === 'locked' ? '🔒' : st === 'frozen' ? '🧊' : '';
-      const sub = st === 'locked' ? `Raté ! −${v.penalty || 100} et bloqué pour cette question.` : st === 'other' ? `${esc(v.buzzer)} a buzzé !`
+      const miss = v.penalty === 0 ? 'Une erreur laisse la main à l’adversaire.' : `Buzz raté = −${v.penalty || 100}.`;
+      const sub = st === 'locked' ? (v.penalty === 0 ? 'Raté ! La main passe à l’adversaire.' : `Raté ! −${v.penalty || 100} et bloqué pour cette question.`) : st === 'other' ? `${esc(v.buzzer)} a buzzé !`
         : st === 'frozen' ? `Gelé ! (${v.me.frozen} s)` : st === 'blocked' ? 'Faux départ ! Buzzer bloqué 2 s.'
         : st === 'early' ? 'Lis la question… Buzzer trop tôt = bloqué 2 s !'
-        : (v.clue ? `Indice : ${esc(v.clue)}<br>` : '') + `Buzz raté = −${v.penalty || 100}. Tu auras ${v.answerSecs || 5} s pour répondre.`;
+        : (v.clue ? `Indice : ${esc(v.clue)}<br>` : '') + `${miss} Tu auras ${v.answerSecs || 5} s pour répondre.`;
       return {
         key: 'buzz' + v.qid + st + (v.buzzer || '') + (st === 'frozen' ? v.me.frozen : ''),
-        html: `${timerBar()}<div class="buzz-wrap ${st}" ${st === 'other' ? `style="--oc:${v.buzzerColor}"` : ''}>
+        html: `${timerBar()}${v.cat ? `<div class="pq-cat">${esc(v.cat)}</div>` : ''}<div class="buzz-wrap ${st}" ${st === 'other' ? `style="--oc:${v.buzzerColor}"` : ''}>
           <button class="buzzer ${st}" id="buzzer" ${st !== 'open' && st !== 'early' ? 'disabled' : ''}><span>${label}</span></button>
           <div class="buzz-sub" id="buzz-sub">${sub}</div></div>`,
         after() {
@@ -277,8 +278,9 @@
     pick(v) {
       return {
         key: 'pick' + v.cells.filter((c) => c.used).length,
-        html: `${timerBar()}<div class="pq"><div class="pq-text">Choisis une case !</div>
-          <div class="pboard" style="--cols:${v.cols}">${v.cells.map((c) => `<button data-act="pick" data-val="${c.i}" ${c.used ? 'disabled' : ''}>${c.used ? '·' : c.icon}<small>${c.used ? '' : esc(c.cat)}</small></button>`).join('')}</div></div>`,
+        html: `${timerBar()}<div class="pq"><div class="pq-text">Choisis une case mystère !</div>
+          <div class="pboard" style="--cols:${v.cols}">${v.cells.map((c) => `<button data-act="pick" data-val="${c.i}" ${c.used ? 'disabled' : ''}>${c.used ? c.icon : '🎁'}<small>${c.used ? '' : c.i + 1}</small></button>`).join('')}</div>
+          <div class="hint">Le thème et la valeur restent secrets jusqu’au choix !</div></div>`,
       };
     },
     target(v) {
@@ -289,35 +291,10 @@
     },
     themes(v) {
       return {
-        key: 'themes',
-        html: `${timerBar()}<div class="pq"><div class="pq-text">Choisis ton thème pour le 4 à la suite !</div><div class="pthemes">${v.themes.map((t, i) => `<button data-act="theme" data-val="${i}">${t.icon}<span>${esc(t.name)}</span></button>`).join('')}</div></div>`,
+        key: 'themes' + v.themes.map((t) => t.by || '').join(','),
+        html: `${timerBar()}<div class="pq"><div class="pq-text">Choisis ton thème pour le 4 à la suite !</div><div class="pthemes">${v.themes.map((t, i) => `<button data-act="theme" data-val="${i}" ${t.by ? 'disabled' : ''}>${t.icon}<span>${esc(t.name)}</span>${t.by ? `<small>pris par ${esc(t.by)}</small>` : ''}</button>`).join('')}
+          <button class="mystery" data-act="theme" data-val="-1">❓<span>Thème mystère</span><small>surprise !</small></button></div></div>`,
       };
-    },
-    ladder(v) {
-      const j = v.jokers;
-      const dist = v.voteDist ? (() => { const tot = v.voteDist.reduce((a, b) => a + b, 0) || 1; return `<div class="pvote">👥 Public : ${v.voteDist.map((n, i) => `${LETTERS[i]} ${Math.round((n / tot) * 100)}%`).join(' · ')}</div>`; })() : '';
-      return {
-        key: 'ladder' + v.qid + JSON.stringify(v.choices) + v.picked + JSON.stringify(j) + v.canStop + !!v.voteDist,
-        html: `${timerBar()}<div class="pq">
-          <div class="pq-cat">🪜 Marche ${v.step + 1} · ${fmt(v.ladder[v.step])} pts</div>
-          <div class="pq-text">${esc(v.question)}</div>
-          ${choiceBtns(v, 'answer', v.picked, v.picked != null ? 'done' : '')}
-          ${dist}
-          ${v.picked == null ? `<div class="pjokers">
-            <button data-act="joker" data-val="fifty" ${j.fifty ? '' : 'disabled'}>½<small>50/50</small></button>
-            <button data-act="joker" data-val="public" ${j.public ? '' : 'disabled'}>👥<small>Public</small></button>
-            <button data-act="friend" ${j.friend && v.friends.length ? '' : 'disabled'}>📞<small>Ami</small></button>
-            ${v.canStop ? `<button class="stop" data-act="stop">✋<small>Stop (${fmt(v.ladder[v.step - 1])})</small></button>` : ''}
-          </div>` : '<div class="hint">Réponse verrouillée... suspense !</div>'}
-        </div>`,
-        after() { state.friends = v.friends; },
-      };
-    },
-    vote(v) {
-      return { key: 'vote' + v.qid + v.voted, html: `${timerBar()}<div class="pq"><div class="pq-cat">👥 Avis du public</div><div class="pq-text">${esc(v.question)}</div>${choiceBtns(v, 'vote', v.voted)}${v.voted != null ? '<div class="hint">Vote enregistré !</div>' : '<div class="hint">Aide le finaliste : quelle est la bonne réponse ?</div>'}</div>` };
-    },
-    friend(v) {
-      return { key: 'friend' + v.qid, html: `<div class="pq"><div class="pq-cat">📞 ${esc(v.from)} t’appelle !</div><div class="pq-text">${esc(v.question)}</div>${choiceBtns(v, 'none', null, 'readonly')}<div class="hint big">Conseille-le à voix haute, vite !</div></div>` };
     },
     result(v) {
       const c = v.correct;
@@ -398,26 +375,16 @@
       const act = b.dataset.act, val = b.dataset.val;
       const num = Number(val);
       if (act === 'answer') { net.send({ t: 'answer', value: num }); PQA.vibrate(30); $$('.pchoice').forEach((x) => x.classList.toggle('picked', x === b)); }
-      else if (act === 'vote') { net.send({ t: 'vote', value: num }); PQA.vibrate(30); }
       else if (act === 'level') { net.send({ t: 'level', value: num }); PQA.vibrate(30); }
       else if (act === 'pick') { net.send({ t: 'pick', value: num }); PQA.vibrate(30); }
       else if (act === 'theme') { net.send({ t: 'theme', value: num }); PQA.vibrate(30); }
       else if (act === 'target') { net.send({ t: 'target', value: val }); PQA.vibrate(30); }
-      else if (act === 'joker') { net.send({ t: 'joker', kind: val }); PQA.vibrate(30); }
-      else if (act === 'stop') { if (confirm('Tu t’arrêtes et tu gardes tes points ?')) net.send({ t: 'stop' }); }
-      else if (act === 'friend') openFriend();
       return;
     }
     const c = e.target.closest('.card-btn');
     if (c) openCard(c.dataset.card);
   });
 
-  function openFriend() {
-    const list = state.friends || [];
-    modal(`<div class="m-title">📞 Qui appelles-tu ?</div><div class="plist">${list.map((o) => `<button data-friend="${o.id}" style="--oc:${o.color}">${esc(o.name)}</button>`).join('')}</div><button class="small-btn" data-close>Annuler</button>`, (el) => {
-      el.querySelectorAll('[data-friend]').forEach((b) => (b.onclick = () => { net.send({ t: 'joker', kind: 'friend', arg: b.dataset.friend }); closeModal(); }));
-    });
-  }
   function openCard(card) {
     const def = PQA.CARDS[card];
     const v = state.view;
