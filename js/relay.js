@@ -174,12 +174,22 @@
           let m;
           try { m = JSON.parse(e.data); } catch (err) { return; }
           if (!ready) {
-            if (m.type !== 'OPEN') { clearTimeout(timer); try { ws.close(); } catch (err) {} return reject(new Error(m.type)); }
-            ready = true;
-            clearTimeout(timer);
-            this._ping = setInterval(() => this._send({ type: 'HEARTBEAT' }), 5000);
-            return resolve(this);
+            if (m.type === 'OPEN') {
+              // Test d'écho : on s'envoie un message pour vérifier que le serveur relaie bien.
+              this._send({ type: 'CANDIDATE', dst: this.id, payload: { pqa: 1, echo: 1 } });
+              return;
+            }
+            if (m.type === 'CANDIDATE' && m.payload && m.payload.echo) {
+              ready = true;
+              clearTimeout(timer);
+              this._ping = setInterval(() => this._send({ type: 'HEARTBEAT' }), 5000);
+              return resolve(this);
+            }
+            clearTimeout(timer); try { ws.close(); } catch (err) {} return reject(new Error(m.type));
           }
+          if (m.payload && m.payload.echo) return;
+          // Message non remis : le destinataire n'est pas connecté au serveur PeerJS.
+          if (m.type === 'EXPIRE') { PQA.netDiag.note = 'peerjs : destinataire absent'; if (PQA.onNetDiag) PQA.onNetDiag(); return; }
           if (m.type === 'CANDIDATE' && m.payload && m.payload.pqa && this.onmessage) this.onmessage(m.payload.topic, m.payload.text);
         };
         const end = () => {
@@ -297,6 +307,7 @@
           this.h.onConn(conn);
         }
         if (conn.mqtt !== mqtt) return; // le même "hello" reçu par un autre broker
+        PQA.diagRx();
         this.h.onData(conn, msg);
       };
       // Broker perdu : ses téléphones se reconnecteront et renverront leur "hello".
@@ -352,6 +363,7 @@
             this.links = [m];
           }
           if (m !== this.mqtt) return;
+          PQA.diagRx();
           if (msg.t === '_bye') return this._end();
           this._emit('data', msg);
         };
