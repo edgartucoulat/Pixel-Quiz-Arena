@@ -571,6 +571,7 @@
       const q = this.q;
       if (!q || this.phase !== 'question') return;
       if (q.kind === 'buzz' && q.buzz.current) return this.resolveBuzz(q.buzz.current, ok);
+      if (q.kind === 'quatre') return this.quatreAnswer(this.round.player, null, ok);
       if (q.kind === 'single') {
         const pid = q.answerers[0];
         q.answers[pid] = q.answers[pid] || { value: '(oral)', t: now() - q.startedAt, text: '(à l’oral)' };
@@ -682,6 +683,8 @@
       if (!data) return this.endRound();
       r.n++;
       const everyone = this.activePlayers().map((p) => p.id);
+      // En IRL, le QCM éclair se joue au buzzer : les choix sont à l'écran, la réponse se dit à voix haute.
+      if (r.type === 'eclair' && this.irl) return this.startBuzz(data, everyone);
       const q = this.makeQ(data, 'all', everyone);
       q.duration = r.type === 'eclair' ? TIMES.eclair + Math.min(8000, data.question.length * 40) : TIMES.fourchette;
       this.startTimer(q.duration, () => this.reveal());
@@ -911,7 +914,7 @@
       const r = this.round;
       this.phase = 'level';
       this.say('wheelResult', { cat: r.cat, name: this.name(r.player) }, 'smug');
-      this.startTimer(TIMES.level, () => this.chooseLevel(r.player, 5));
+      this.startTimer(this.chooseTime(TIMES.level), () => this.chooseLevel(r.player, 5));
       this.changed();
     }
     chooseLevel(pid, level) {
@@ -966,7 +969,7 @@
       this.q = null;
       this.phase = 'board';
       this.say('tablePick', { name: this.name(r.player) }, 'neutral');
-      this.startTimer(TIMES.board, () => {
+      this.startTimer(this.chooseTime(TIMES.board), () => {
         const free = r.cells.filter((c) => !c.used);
         this.tablePick(r.player, pickOne(free).i);
       });
@@ -1009,7 +1012,7 @@
         const others = this.activePlayers().filter((p) => p.id !== r.player);
         if (others.length) {
           this.phase = 'target';
-          this.startTimer(TIMES.target, () => this.tableTarget(r.player, this.ranking().find((p) => p.id !== r.player).id));
+          this.startTimer(this.chooseTime(TIMES.target), () => this.tableTarget(r.player, this.ranking().find((p) => p.id !== r.player).id));
           return this.changed();
         }
       }
@@ -1064,7 +1067,7 @@
       this.q = null;
       this.phase = 'qpick';
       this.say('quatrePick', { name: this.name(r.player) }, 'neutral');
-      this.startTimer(TIMES.theme, () => this.quatreTheme(r.player, 'mystere'));
+      this.startTimer(this.chooseTime(TIMES.theme), () => this.quatreTheme(r.player, 'mystere'));
       this.changed();
     }
     /** Choix du thème : un index de la liste, ou 'mystere' (thème libre tiré au hasard et révélé après). */
@@ -1104,11 +1107,13 @@
       q.startedAt = now();
       this.changed();
     }
-    quatreAnswer(pid, value) {
+    /** Réponse au 4 à la suite : choix sur le téléphone, ou verdict du présentateur IRL (forced). */
+    quatreAnswer(pid, value, forced) {
       const r = this.round, q = this.q;
       if (pid !== r.player || !r.run || r.run.done || q.answers[pid]) return;
+      if (this.irl && forced == null) return; // en IRL, c'est le présentateur qui juge la réponse orale
       q.answers[pid] = { value };
-      const ok = this.evaluate(q, value);
+      const ok = forced != null ? !!forced : this.evaluate(q, value);
       const p = this.players[pid];
       if (ok) {
         r.run.streak++; r.run.correct++;
@@ -1317,10 +1322,11 @@
       switch (m.t) {
         case 'buzz': return this.buzz(pid);
         case 'answer': return this.answer(pid, m.value);
-        case 'level': return this.chooseLevel(pid, m.value);
-        case 'pick': return this.tablePick(pid, m.value);
-        case 'target': return this.tableTarget(pid, m.value);
-        case 'theme': return this.quatreTheme(pid, m.value);
+        // En IRL, les joueurs montrent leur choix du doigt et c'est le présentateur qui le fait.
+        case 'level': return !this.irl && this.chooseLevel(pid, m.value);
+        case 'pick': return !this.irl && this.tablePick(pid, m.value);
+        case 'target': return !this.irl && this.tableTarget(pid, m.value);
+        case 'theme': return !this.irl && this.quatreTheme(pid, m.value);
         case 'card': return this.useCard(pid, m.card, m.target);
         case 'profile': return this.updateProfile(pid, m);
       }
@@ -1333,9 +1339,24 @@
         case 'refuse': return this.validate(false);
         case 'clue': this.clearJobs(); return this.nextClue();
         case 'pause': return this.togglePause();
+        case 'choose': return this.presenterChoose(m.value);
         case 'skip': if (this.q && this.phase === 'question') { this.q.skipped = true; this.forceReveal(); } return;
         case 'points': return this.addPoints(m.pid, Number(m.delta) || 0);
         case 'start': if (this.phase === 'lobby') { const err = this.start(); if (err) this.hooks.toast && this.hooks.toast(err); } return;
+      }
+    }
+
+    /** Temps pour choisir (case, thème, niveau...) : plus long en IRL, le temps que le présentateur saisisse. */
+    chooseTime(ms) { return this.irl ? ms * 2 : ms; }
+    /** Choix fait par le présentateur IRL à la place du joueur dont c'est le tour. */
+    presenterChoose(value) {
+      const r = this.round;
+      if (!r || !r.player) return;
+      switch (this.phase) {
+        case 'level': return this.chooseLevel(r.player, value);
+        case 'board': return this.tablePick(r.player, Number(value));
+        case 'target': return this.tableTarget(r.player, value);
+        case 'qpick': return this.quatreTheme(r.player, value === 'mystere' ? 'mystere' : Number(value));
       }
     }
 
@@ -1380,20 +1401,24 @@
         case 'leaderboard': v.screen = 'wait'; v.title = 'Classement'; v.msg = 'Tu es ' + (v.me.rank === 1 ? '1er' : v.me.rank + 'e') + ' avec ' + p.score + ' pts'; break;
         case 'wheel': v.screen = 'wait'; v.title = 'La roue tourne...'; v.msg = r.player === pid ? 'C’est ton tour !' : 'Tour de ' + this.name(r.player); break;
         case 'level':
-          if (r.player === pid) { v.screen = 'level'; v.cat = r.cat; v.icon = this.catIcon(r.cat); withTimer(); }
+          if (r.player === pid && this.irl) { v.screen = 'wait'; v.title = r.cat; v.msg = '🗣️ Annonce ton niveau (1 à 10) au présentateur !'; }
+          else if (r.player === pid) { v.screen = 'level'; v.cat = r.cat; v.icon = this.catIcon(r.cat); withTimer(); }
           else { v.screen = 'wait'; v.title = r.cat; v.msg = this.name(r.player) + ' choisit son niveau...'; }
           break;
         case 'board':
-          if (r.player === pid) { v.screen = 'pick'; v.cells = r.cells.map((c) => ({ i: c.i, used: c.used, icon: c.used ? c.icon : null })); v.cols = r.cols; withTimer(); }
+          if (r.player === pid && this.irl) { v.screen = 'wait'; v.title = 'Cases mystères'; v.msg = '👉 Montre une case au présentateur !'; }
+          else if (r.player === pid) { v.screen = 'pick'; v.cells = r.cells.map((c) => ({ i: c.i, used: c.used, icon: c.used ? c.icon : null })); v.cols = r.cols; withTimer(); }
           else { v.screen = 'wait'; v.title = 'Cases mystères'; v.msg = this.name(r.player) + ' choisit une case...'; }
           break;
         case 'cell': v.screen = 'wait'; v.title = r.cell.special === 'piege' ? '💣 PIÈGE !' : r.cell.special === 'double' ? '✖️2 DOUBLE !' : r.cell.special === 'vol' ? '🦹 VOL !' : r.cell.icon + ' ' + r.cell.cat; v.msg = r.cell.special === 'piege' ? '−' + r.trapLoss + ' points pour ' + this.name(r.player) : r.cell.cat + ' · ' + r.cellValue + ' points'; break;
         case 'target':
-          if (r.player === pid) { v.screen = 'target'; v.title = 'Qui veux-tu voler ?'; v.targets = v.others; v.action = 'target'; withTimer(); }
+          if (r.player === pid && this.irl) { v.screen = 'wait'; v.title = '🦹 Vol de points'; v.msg = '👉 Désigne ta victime au présentateur !'; }
+          else if (r.player === pid) { v.screen = 'target'; v.title = 'Qui veux-tu voler ?'; v.targets = v.others; v.action = 'target'; withTimer(); }
           else { v.screen = 'wait'; v.title = '🦹 Vol de points'; v.msg = this.name(r.player) + ' choisit sa victime...'; }
           break;
         case 'qpick':
-          if (r.player === pid) { v.screen = 'themes'; v.themes = r.themes.map((t) => ({ name: t.name, icon: t.icon, by: t.by ? this.name(t.by) : null })); withTimer(); }
+          if (r.player === pid && this.irl) { v.screen = 'wait'; v.title = '4 à la suite'; v.msg = '👉 Annonce ton thème au présentateur !'; }
+          else if (r.player === pid) { v.screen = 'themes'; v.themes = r.themes.map((t) => ({ name: t.name, icon: t.icon, by: t.by ? this.name(t.by) : null })); withTimer(); }
           else { v.screen = 'wait'; v.title = '4 à la suite'; v.msg = this.name(r.player) + ' choisit son thème...'; }
           break;
         case 'qresult': v.screen = 'wait'; v.title = r.run.won ? '4 À LA SUITE !' : 'Fin du chrono'; v.msg = this.name(r.player) + ' : meilleure série ' + r.run.best + '/4'; break;
@@ -1431,7 +1456,8 @@
         if (!q.answerers.includes(pid)) { v.screen = 'wait'; v.title = d.type === 'libre' ? 'Question libre' : 'Question'; v.msg = 'À ' + this.name(q.answerers[0]) + ' de jouer !'; return; }
         if (q.kind === 'quatre') { v.run = { streak: r.run.streak, best: r.run.best, last: r.run.last }; v.cat = r.cat; }
         if (q.answers[pid] && q.kind !== 'quatre') { v.screen = 'locked'; v.msg = q.pending ? 'Le présentateur valide...' : 'Réponse enregistrée !'; return; }
-        if (d.type === 'libre') { v.screen = this.irl ? 'oral' : 'text'; return; }
+        if (this.irl) { v.screen = 'oral'; return; } // en IRL : tout se dit à voix haute
+        if (d.type === 'libre') { v.screen = 'text'; return; }
         v.screen = 'choices'; v.choices = this.choicesFor(p, q); return;
       }
       if (q.kind === 'buzz') {
@@ -1480,7 +1506,7 @@
         v.q = { question: d.question, type: d.type, categorie: d.categorie, difficulte: d.difficulte, answer: this.answerText(q), accepted: d.reponses_acceptees || [], anecdote: d.anecdote, choices: q.choices, correctIdx: q.correctIdx, indices: d.indices, clue: q.clue, revealed: !!q.revealed };
         if (q.pending) v.pending = { pid: q.pending.pid, name: this.name(q.pending.pid), text: q.pending.text };
         if (q.kind === 'buzz' && q.buzz.current) v.pending = v.pending || { pid: q.buzz.current, name: this.name(q.buzz.current), text: this.irl && q.typed ? '(répond à l’oral)' : null, oral: this.irl && q.typed };
-        if (q.kind === 'single' && this.irl && d.type === 'libre' && !q.revealed) {
+        if ((q.kind === 'single' || q.kind === 'quatre') && this.irl && !q.revealed) {
           const pid = q.answerers[0];
           v.pending = { pid, name: this.name(pid), text: '(répond à l’oral)', oral: true };
         }
@@ -1488,6 +1514,12 @@
         v.expected = q.answerers.length;
       }
       if (r && this.phase === 'level') v.info = this.name(r.player) + ' choisit son niveau (' + r.cat + ')';
+      if (r && r.type === 'quatre' && r.run && this.phase === 'question') v.info = this.name(r.player) + ' · ' + r.cat + ' · série ' + r.run.streak + '/4';
+      // Choix à faire pour le joueur dont c'est le tour (en IRL, il le montre du doigt).
+      if (r && this.phase === 'level') v.choose = { kind: 'level', title: 'Niveau choisi par ' + this.name(r.player), items: Array.from({ length: 10 }, (_, i) => ({ value: i + 1, label: String(i + 1), sub: (i + 1) * 20 + ' pts' })) };
+      if (r && this.phase === 'board') v.choose = { kind: 'board', title: 'Case montrée par ' + this.name(r.player), cols: r.cols, items: r.cells.map((c) => ({ value: c.i, label: c.used ? c.icon : String(c.i + 1), disabled: c.used })) };
+      if (r && this.phase === 'target') v.choose = { kind: 'target', title: 'Victime choisie par ' + this.name(r.player), items: this.activePlayers().filter((p) => p.id !== r.player).map((p) => ({ value: p.id, label: p.name, color: p.color })) };
+      if (r && this.phase === 'qpick') v.choose = { kind: 'theme', title: 'Thème choisi par ' + this.name(r.player), items: r.themes.map((t, i) => ({ value: i, label: t.icon + ' ' + t.name, sub: t.by ? 'pris par ' + this.name(t.by) : '', disabled: !!t.by })).concat([{ value: 'mystere', label: '❓ Thème mystère' }]) };
       if (r && this.phase === 'board') v.info = this.name(r.player) + ' choisit une case';
       if (r && this.phase === 'qpick') v.info = this.name(r.player) + ' choisit son thème';
       if (r && this.phase === 'faceoff') v.info = 'Duel des champions : ' + this.name(r.finalists[0]) + ' contre ' + this.name(r.finalists[1]);

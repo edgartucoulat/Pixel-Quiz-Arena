@@ -411,7 +411,7 @@
         body = `<div class="q-fourchette">🎯 Visez pile${d.unite && d.unite !== 'année' ? ' (en <b>' + esc(d.unite) + '</b>)' : ''} sur vos téléphones !</div>`;
       } else if (d.type === 'libre') {
         body = `<div class="q-libre">✍️ Réponse libre${g.irl ? ' : réponds à voix haute !' : ' : tape ta réponse sur ton téléphone'}</div>`;
-      } else body = this.choicesHTML(q, false);
+      } else body = this.choicesHTML(q, false) + (g.irl && q.kind === 'single' ? '<div class="q-libre">🎤 Réponds à voix haute !</div>' : '');
       const extra = r.type === 'mystere' ? `<div class="banner-pts">Niveau ${r.level} · ${r.level * 20} pts</div>` : r.type === 'table' ? `<div class="banner-pts">${r.cell.special === 'double' ? '✖️2 ' : r.cell.special === 'vol' ? '🦹 Vol sur ' + esc(g.name(r.victim)) + ' · ' : ''}${g.round.cellValue} pts</div>` : '';
       return {
         key: 'q' + q.id,
@@ -519,7 +519,7 @@
           ${champ ? '<div class="duel-top" id="duel-top"></div>' : ''}
           ${this.qHeader(q)}
           <div class="q-text">${esc(d.question)}</div>
-          ${n ? '<ol class="clues" id="clues"></ol>' : `<div class="q-libre">✍️ Pas de choix : buzzez, puis ${how} !</div>`}
+          ${n ? '<ol class="clues" id="clues"></ol>' : q.choices ? this.choicesHTML(q, revealed) : `<div class="q-libre">✍️ Pas de choix : buzzez, puis ${how} !</div>`}
           <div id="buzz-state"></div>
           ${revealed ? `<div class="answer-big">✔ ${esc(d.reponse)}</div><div id="q-results"></div>${g.irl ? this.anecdoteHTML(q) : ''}` : ''}
         </div>`,
@@ -615,7 +615,7 @@
       return {
         key: 'board',
         html: `<div class="table-wrap"><div id="board"></div><div class="board-turn" id="board-turn"></div></div>`,
-        parts: { board: this.boardHTML(), 'board-turn': p ? `${avatarImg(p, 'idle', 'tiny')} <b style="color:${p.color}">${esc(p.name)}</b> choisit une case mystère sur son téléphone` : '' },
+        parts: { board: this.boardHTML(), 'board-turn': p ? `${avatarImg(p, 'idle', 'tiny')} <b style="color:${p.color}">${esc(p.name)}</b> ${g.irl ? 'montre une case mystère au présentateur' : 'choisit une case mystère sur son téléphone'}` : '' },
       };
     }
     r_cell() {

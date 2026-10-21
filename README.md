@@ -26,7 +26,7 @@ son score. Si le plateau est rechargé, il propose de **reprendre la partie**.
 | Mode | Principe |
 |---|---|
 | 🤖 **Présentateur virtuel** | Pixou, le présentateur en pixel art, anime la partie (bulles de texte et voix naturelle, voir [Son et voix](#son-et-voix)). |
-| 🎤 **Présentateur IRL** | Un humain présente avec la **télécommande** (`presenter.html`, QR code sur le plateau) : il voit la réponse et l'anecdote, valide ou refuse les réponses orales, donne des points. |
+| 🎤 **Présentateur IRL** | Un humain présente avec la **télécommande** (`presenter.html`, QR code sur le plateau) : il voit la réponse et l'anecdote, valide ou refuse les réponses orales, donne des points. Les téléphones ne servent que de **buzzer** : les joueurs répondent à voix haute et montrent du doigt leur case, leur thème ou leur niveau, que le présentateur saisit sur la télécommande. Seule La Fourchette se joue encore sur le téléphone (chacun entre son chiffre en secret), et le QCM éclair passe au buzzer. |
 | 🥊 **Duel 1 contre 1** | Barres de vie : chaque bonne réponse inflige des dégâts. Jouable aussi **sur un seul écran** au clavier (touches **A** et **L** pour buzzer). |
 | 👥 **Équipes** | 2 à 4 équipes, scores cumulés. |
 
