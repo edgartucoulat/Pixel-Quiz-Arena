@@ -6,6 +6,10 @@
  * <prefixe><CODE>. Les téléphones (play.html) et la télécommande
  * (presenter.html) s'y connectent en direct (data channel WebRTC).
  *
+ * Si PeerJS est injoignable, le plateau et les téléphones basculent
+ * automatiquement sur le relais MQTT de secours (js/relay.js).
+ * ?transport=relay force le relais (utile sur un réseau qui bloque WebRTC).
+ *
  * Tous les messages sont des objets JSON { t: 'type', ... }.
  * ========================================================================= */
 (function () {
@@ -35,10 +39,14 @@
       return opts;
     },
     /** Paramètres à recopier dans les liens (pour garder le même serveur de signalisation). */
+    /** 'relay' si on force le relais de secours, sinon 'p2p'. */
+    transport() {
+      return new URLSearchParams(location.search).get('transport') === 'relay' ? 'relay' : 'p2p';
+    },
     passthroughQuery() {
       const qs = new URLSearchParams(location.search);
       const out = new URLSearchParams();
-      ['peer', 'peerpath', 'peersecure'].forEach((k) => qs.get(k) && out.set(k, qs.get(k)));
+      ['peer', 'peerpath', 'peersecure', 'relay', 'transport'].forEach((k) => qs.get(k) && out.set(k, qs.get(k)));
       const s = out.toString();
       return s ? '&' + s : '';
     },
@@ -68,19 +76,39 @@
       this.destroyed = false;
     }
 
-    /** Démarre le serveur. Si le code est pris (ou fourni et indisponible), réessaie. */
-    start(preferredCode, attempt = 0) {
+    /** Ouvre la salle : PeerJS d'abord, puis le relais de secours avec le même code.
+     *  La salle est ouverte dès qu'au moins l'un des deux fonctionne. */
+    async start(preferredCode) {
+      let code = null, p2pErr = null;
+      if (PQA.config.transport() === 'p2p') {
+        try { code = await this._startPeer(preferredCode); } catch (e) { p2pErr = e; }
+      }
+      code = code || preferredCode || PQA.randomCode();
+      this.code = code;
+      const relay = new PQA.RelayHost({
+        onConn: (conn) => { conn._lastSeen = Date.now(); this.conns.add(conn); },
+        onData: (conn, msg) => { conn._lastSeen = Date.now(); this.h.onMessage(conn, msg); },
+        onClose: (conn) => { if (this.conns.delete(conn)) this.h.onClose(conn); },
+      });
+      const relayReady = relay.start(code).then(() => { this.relay = relay; }, (e) => { if (!this.peer) throw p2pErr || e; });
+      // PeerJS fonctionne : le relais s'ouvre en arrière-plan, pour les téléphones qui en auraient besoin.
+      if (!this.peer) await relayReady;
+      this._heartbeat();
+      return code;
+    }
+
+    /** Enregistre le plateau auprès de PeerJS. Si le code est pris (ou fourni et indisponible), réessaie. */
+    _startPeer(preferredCode, attempt = 0) {
       const code = preferredCode || PQA.randomCode();
       return new Promise((resolve, reject) => {
         const peer = new Peer(PQA.config.peerPrefix + code, PQA.config.peerOptions());
         let opened = false;
-        // Le serveur de mise en relation ne répond pas : on abandonne au bout de 20 s.
-        const timer = setTimeout(() => { if (!opened) { peer.destroy(); reject({ type: 'délai dépassé' }); } }, 20000);
+        // Le serveur de mise en relation ne répond pas : on abandonne au bout de 12 s.
+        const timer = setTimeout(() => { if (!opened) { peer.destroy(); reject({ type: 'délai dépassé' }); } }, 12000);
         peer.on('open', () => {
           clearTimeout(timer);
           opened = true;
           this.peer = peer;
-          this.code = code;
           this._wire(peer);
           resolve(code);
         });
@@ -92,9 +120,9 @@
             // Code déjà utilisé : si on voulait reprendre ce code (rechargement de page),
             // l'ancien identifiant met quelques secondes à se libérer.
             const retryCode = preferredCode && attempt < 5 ? preferredCode : null;
-            setTimeout(() => this.start(retryCode, attempt + 1).then(resolve, reject), retryCode ? 2500 : 50);
-          } else if (attempt < 3 && err.type !== 'browser-incompatible') {
-            setTimeout(() => this.start(preferredCode, attempt + 1).then(resolve, reject), 1500);
+            setTimeout(() => this._startPeer(retryCode, attempt + 1).then(resolve, reject), retryCode ? 2500 : 50);
+          } else if (attempt < 2 && err.type !== 'browser-incompatible') {
+            setTimeout(() => this._startPeer(preferredCode, attempt + 1).then(resolve, reject), 1500);
           } else reject(err);
         });
       });
@@ -135,7 +163,11 @@
         if (this.destroyed) return;
         setTimeout(() => { if (!peer.destroyed && peer.disconnected) peer.reconnect(); }, 1000);
       });
-      // Battement de cœur : détection des téléphones partis en veille.
+    }
+
+    /** Battement de cœur : détection des téléphones partis en veille. */
+    _heartbeat() {
+      clearInterval(this._hb);
       this._hb = setInterval(() => {
         const now = Date.now();
         for (const conn of Array.from(this.conns)) {
@@ -160,6 +192,7 @@
       this.destroyed = true;
       clearInterval(this._hb);
       if (this.peer) this.peer.destroy();
+      if (this.relay) this.relay.stop();
     }
   }
 
@@ -176,6 +209,9 @@
       this.lastMsg = 0;
       this.retry = 0;
       this.stopped = false;
+      // 'p2p' (PeerJS) ou 'relay' (secours MQTT). On bascule de l'un à l'autre en cas d'échec.
+      this.mode = PQA.config.transport();
+      this.forced = this.mode === 'relay';
       document.addEventListener('visibilitychange', () => {
         if (document.visibilityState === 'visible' && this.code && !this.stopped) this.checkHealth(true);
       });
@@ -195,10 +231,13 @@
     }
 
     _cleanup() {
-      if (this.conn) { try { this.conn.close(); } catch (e) {} }
-      if (this.peer) { try { this.peer.destroy(); } catch (e) {} }
+      // On oublie l'ancienne connexion avant de la fermer : ses événements
+      // de fermeture (parfois synchrones) seront ainsi ignorés.
+      const conn = this.conn, peer = this.peer;
       this.conn = null;
       this.peer = null;
+      if (conn) { try { conn.close(); } catch (e) {} }
+      if (peer) { try { peer.destroy(); } catch (e) {} }
     }
 
     _open() {
@@ -206,9 +245,12 @@
       this._cleanup();
       clearTimeout(this._retryTimer);
       this._setStatus(this.retry ? 'reconnecting' : 'connecting');
+      if (this.mode === 'relay') return this._openRelay();
       const peer = new Peer(PQA.config.peerOptions());
       this.peer = peer;
       let gotConn = false;
+      // Serveur PeerJS muet : on passe au relais.
+      setTimeout(() => { if (this.peer === peer && !gotConn) this._fail(); }, 9000);
       peer.on('open', () => {
         if (this.peer !== peer) return;
         const conn = peer.connect(PQA.config.peerPrefix + this.code, { serialization: 'json', reliable: true });
@@ -226,29 +268,61 @@
           this.h.onMessage(msg);
         });
         conn.on('close', () => this.conn === conn && this._scheduleRetry());
-        conn.on('error', () => this.conn === conn && this._scheduleRetry());
-        // Si la connexion n'aboutit pas, on réessaie.
-        setTimeout(() => { if (this.conn === conn && !gotConn) this._scheduleRetry(); }, 9000);
+        conn.on('error', () => this.conn === conn && this._fail());
       });
       peer.on('error', (err) => {
         if (this.peer !== peer) return;
-        if (err.type === 'peer-unavailable') {
-          this._setStatus('noroom');
-          this._scheduleRetry(4000);
-        } else this._scheduleRetry();
+        // Salle introuvable sur PeerJS : le plateau est peut-être joignable par le relais.
+        this._fail(err.type === 'peer-unavailable');
       });
       peer.on('disconnected', () => {
         // Signalisation perdue : sans gravité si le canal de données est ouvert.
-        if (this.peer === peer && !(this.conn && this.conn.open)) this._scheduleRetry();
+        if (this.peer === peer && !(this.conn && this.conn.open)) this._fail();
       });
+    }
+
+    /** Connexion via le relais MQTT : connectée dès que le plateau répond au "hello". */
+    _openRelay() {
+      const conn = new PQA.RelayClientConn(this.code);
+      this.conn = conn;
+      let answered = false;
+      conn.on('open', () => {
+        if (this.conn !== conn) return;
+        this.lastMsg = Date.now();
+        conn.send(this.h.getHello());
+        setTimeout(() => { if (this.conn === conn && !answered) this._fail(true); }, 6000);
+      });
+      conn.on('data', (msg) => {
+        if (this.conn !== conn) return;
+        this.lastMsg = Date.now();
+        if (!answered) { answered = true; this.retry = 0; this._setStatus('connected'); }
+        if (msg.t === 'ping') return conn.send({ t: 'pong', h: msg.h });
+        this.h.onMessage(msg);
+      });
+      conn.on('close', () => this.conn === conn && this._scheduleRetry());
+      conn.on('error', () => this.conn === conn && this._fail());
+      conn.start();
+    }
+
+    /** Échec de la tentative : on essaie l'autre moyen de connexion au prochain essai. */
+    _fail(noRoom) {
+      if (!this.forced) {
+        if (this.mode === 'relay' && noRoom && this._p2pNoRoom) this._setStatus('noroom');
+        this._p2pNoRoom = this.mode === 'p2p' && noRoom;
+        this.mode = this.mode === 'p2p' ? 'relay' : 'p2p';
+        // Basculer vers le relais tout de suite ; le retour vers PeerJS suit le rythme normal.
+        if (this.mode === 'relay') { this._retryTimer = null; this.retry++; return this._open(); }
+      }
+      this._scheduleRetry(this.status === 'noroom' ? 4000 : 0);
     }
 
     _scheduleRetry(delay) {
       if (this.stopped) return;
       if (this._retryTimer && this.status === 'reconnecting') return;
       this.retry++;
+      const keep = this.status === 'noroom';
       const d = delay || Math.min(800 * Math.pow(1.5, this.retry), 6000);
-      this._setStatus('reconnecting');
+      if (!keep) this._setStatus('reconnecting');
       clearTimeout(this._retryTimer);
       this._retryTimer = setTimeout(() => { this._retryTimer = null; this._open(); }, d);
     }

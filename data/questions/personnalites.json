@@ -1,0 +1,396 @@
+[
+ {
+  "id": "per-001",
+  "categorie": "Personnalités",
+  "sous_theme": "Mode",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Quelle créatrice française a popularisé la « petite robe noire » ?",
+  "choix": [
+   "Coco Chanel",
+   "Jeanne Lanvin",
+   "Elsa Schiaparelli",
+   "Sonia Rykiel"
+  ],
+  "reponse": "Coco Chanel",
+  "anecdote": "Son parfum N°5, lancé en 1921, porte le numéro de l'échantillon qu'elle a choisi."
+ },
+ {
+  "id": "per-002",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel dirigeant sud-africain a passé 27 ans en prison avant de devenir président ?",
+  "choix": [
+   "Nelson Mandela",
+   "Desmond Tutu",
+   "Thabo Mbeki",
+   "Steve Biko"
+  ],
+  "reponse": "Nelson Mandela",
+  "anecdote": "Il a reçu le prix Nobel de la paix en 1993, avec Frederik de Klerk."
+ },
+ {
+  "id": "per-003",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel pasteur américain a prononcé le discours « I have a dream » en 1963 ?",
+  "choix": [
+   "Martin Luther King",
+   "Malcolm X",
+   "Jesse Jackson",
+   "Barack Obama"
+  ],
+  "reponse": "Martin Luther King",
+  "anecdote": "Il a improvisé la partie la plus célèbre, après qu'une chanteuse lui a crié : « Parle-leur du rêve, Martin ! »."
+ },
+ {
+  "id": "per-004",
+  "categorie": "Personnalités",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quelle ministre a porté la loi autorisant l'IVG en France, en 1975 ?",
+  "choix": [
+   "Simone Veil",
+   "Gisèle Halimi",
+   "Françoise Giroud",
+   "Élisabeth Badinter"
+  ],
+  "reponse": "Simone Veil",
+  "anecdote": "Rescapée d'Auschwitz, elle a été la première présidente du Parlement européen élu au suffrage universel, en 1979."
+ },
+ {
+  "id": "per-005",
+  "categorie": "Personnalités",
+  "sous_theme": "Exploration",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel commandant français a fait découvrir le monde sous-marin avec son bonnet rouge ?",
+  "choix": [
+   "Jacques-Yves Cousteau",
+   "Paul-Émile Victor",
+   "Éric Tabarly",
+   "Haroun Tazieff"
+  ],
+  "reponse": "Jacques-Yves Cousteau",
+  "anecdote": "Il a coinventé le scaphandre autonome moderne en 1943, avec l'ingénieur Émile Gagnan."
+ },
+ {
+  "id": "per-006",
+  "categorie": "Personnalités",
+  "sous_theme": "Espace",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Qui a été le premier humain à voyager dans l'espace, en 1961 ?",
+  "choix": [
+   "Youri Gagarine",
+   "Neil Armstrong",
+   "Alexeï Leonov",
+   "John Glenn"
+  ],
+  "reponse": "Youri Gagarine",
+  "anecdote": "Son vol autour de la Terre a duré 108 minutes ; il a atterri en parachute, séparé de sa capsule."
+ },
+ {
+  "id": "per-007",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel humoriste a fondé les Restos du cœur en 1985 ?",
+  "choix": [
+   "Coluche",
+   "Pierre Desproges",
+   "Thierry Le Luron",
+   "Guy Bedos"
+  ],
+  "reponse": "Coluche",
+  "anecdote": "Il a lancé l'idée à la radio, sur Europe 1, en proposant une « cantine gratuite »."
+ },
+ {
+  "id": "per-008",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle jeune Pakistanaise est devenue la plus jeune lauréate du prix Nobel de la paix, à 17 ans ?",
+  "choix": [
+   "Malala Yousafzai",
+   "Greta Thunberg",
+   "Benazir Bhutto",
+   "Nadia Murad"
+  ],
+  "reponse": "Malala Yousafzai",
+  "anecdote": "Elle avait survécu à une balle tirée par un taliban en 2012, pour avoir défendu l'éducation des filles."
+ },
+ {
+  "id": "per-009",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quelle religieuse française a consacré sa vie aux chiffonniers du Caire ?",
+  "choix": [
+   "Sœur Emmanuelle",
+   "Mère Teresa",
+   "Sœur Sourire",
+   "Madeleine Delbrêl"
+  ],
+  "reponse": "Sœur Emmanuelle",
+  "anecdote": "Elle a vécu plus de 20 ans dans les bidonvilles du Caire, et est morte en 2008, à presque 100 ans."
+ },
+ {
+  "id": "per-010",
+  "categorie": "Personnalités",
+  "sous_theme": "Mode",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel couturier français a lancé le « New Look » en 1947 ?",
+  "choix": [
+   "Christian Dior",
+   "Yves Saint Laurent",
+   "Pierre Cardin",
+   "Hubert de Givenchy"
+  ],
+  "reponse": "Christian Dior",
+  "anecdote": "Une rédactrice de mode américaine s'est exclamée : « It's such a new look ! », d'où le nom."
+ },
+ {
+  "id": "per-011",
+  "categorie": "Personnalités",
+  "sous_theme": "Exploration",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel navigateur français a remporté la première Transat anglaise en solitaire française, en 1964, sur Pen Duick II ?",
+  "choix": [
+   "Éric Tabarly",
+   "Alain Colas",
+   "Olivier de Kersauson",
+   "Florence Arthaud"
+  ],
+  "reponse": "Éric Tabarly",
+  "anecdote": "Sa victoire a été si populaire que le général de Gaulle l'a décoré de la Légion d'honneur."
+ },
+ {
+  "id": "per-012",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Combien d'années Nelson Mandela a-t-il passées en prison ?",
+  "reponse": 27,
+  "unite": "ans",
+  "tolerance": 2,
+  "bornes": [
+   1,
+   60
+  ],
+  "anecdote": "Il a passé 18 de ces années sur l'île de Robben Island, à casser des pierres dans une carrière de chaux."
+ },
+ {
+  "id": "per-013",
+  "categorie": "Personnalités",
+  "sous_theme": "Espace",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "En quelle année Youri Gagarine a-t-il effectué le premier vol habité dans l'espace ?",
+  "reponse": 1961,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1940,
+   1990
+  ],
+  "anecdote": "Il est mort à 34 ans, en 1968, lors d'un vol d'entraînement en avion de chasse."
+ },
+ {
+  "id": "per-014",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "En quelle année les Restos du cœur ont-ils été fondés ?",
+  "reponse": 1985,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1960,
+   2020
+  ],
+  "anecdote": "Jean-Jacques Goldman a écrit leur chanson, interprétée chaque année par les Enfoirés."
+ },
+ {
+  "id": "per-015",
+  "categorie": "Personnalités",
+  "sous_theme": "Mode",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année le parfum Chanel N°5 a-t-il été lancé ?",
+  "reponse": 1921,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1880,
+   1980
+  ],
+  "anecdote": "Marilyn Monroe a déclaré ne porter que « quelques gouttes de N°5 » pour dormir."
+ },
+ {
+  "id": "per-016",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "À quel âge Malala Yousafzai a-t-elle reçu le prix Nobel de la paix ?",
+  "reponse": 17,
+  "unite": "ans",
+  "tolerance": 1,
+  "bornes": [
+   10,
+   40
+  ],
+  "anecdote": "Elle a appris la nouvelle en classe, et a terminé sa journée de cours avant de s'exprimer."
+ },
+ {
+  "id": "per-017",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Qui suis-je ?",
+  "reponse": "Gandhi",
+  "reponses_acceptees": [
+   "Mahatma Gandhi",
+   "Mohandas Gandhi"
+  ],
+  "indices": [
+   "J'ai été avocat en Afrique du Sud",
+   "J'ai mené la marche du sel en 1930",
+   "J'ai prôné la non-violence",
+   "On m'appelle « Mahatma », la « grande âme »"
+  ],
+  "anecdote": "Il a été nommé cinq fois pour le prix Nobel de la paix, sans jamais le recevoir."
+ },
+ {
+  "id": "per-018",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Qui suis-je ?",
+  "reponse": "Steve Jobs",
+  "reponses_acceptees": [
+   "Jobs"
+  ],
+  "indices": [
+   "J'ai été adopté à la naissance",
+   "J'ai été renvoyé de l'entreprise que j'avais cofondée",
+   "J'ai dirigé le studio Pixar",
+   "J'ai présenté l'iPhone en 2007"
+  ],
+  "anecdote": "Il est revenu chez Apple en 1997, alors au bord de la faillite, et en a fait l'une des entreprises les plus riches du monde."
+ },
+ {
+  "id": "per-019",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Qui suis-je ?",
+  "reponse": "Mère Teresa",
+  "reponses_acceptees": [
+   "Mere Teresa",
+   "Sainte Teresa",
+   "Teresa de Calcutta"
+  ],
+  "indices": [
+   "Je suis née à Skopje",
+   "J'ai fondé les Missionnaires de la Charité",
+   "J'ai reçu le prix Nobel de la paix en 1979",
+   "J'ai aidé les plus pauvres à Calcutta"
+  ],
+  "anecdote": "Elle a été canonisée en 2016 par le pape François."
+ },
+ {
+  "id": "per-020",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Qui suis-je ?",
+  "reponse": "Joséphine Baker",
+  "reponses_acceptees": [
+   "Baker",
+   "Josephine Baker"
+  ],
+  "indices": [
+   "Je suis née dans le Missouri",
+   "J'ai dansé avec une ceinture de bananes",
+   "J'ai été résistante pendant la Seconde Guerre mondiale",
+   "Je suis entrée au Panthéon en 2021"
+  ],
+  "anecdote": "Elle a adopté douze enfants de différentes origines, qu'elle appelait sa « tribu arc-en-ciel »."
+ },
+ {
+  "id": "per-021",
+  "categorie": "Personnalités",
+  "sous_theme": "Espace",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : Neil Armstrong a été le premier homme à marcher sur la Lune.",
+  "reponse": "Vrai",
+  "anecdote": "C'était le 21 juillet 1969 (heure française). Buzz Aldrin l'a suivi environ 20 minutes plus tard."
+ },
+ {
+  "id": "per-022",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : Gandhi a reçu le prix Nobel de la paix.",
+  "reponse": "Faux",
+  "anecdote": "Le comité Nobel a exprimé publiquement ses regrets de ne jamais l'avoir récompensé."
+ },
+ {
+  "id": "per-023",
+  "categorie": "Personnalités",
+  "sous_theme": "Mode",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : Coco Chanel s'appelait en réalité Gabrielle.",
+  "reponse": "Vrai",
+  "anecdote": "« Coco » viendrait d'une chanson qu'elle chantait dans un café-concert de Moulins."
+ },
+ {
+  "id": "per-024",
+  "categorie": "Personnalités",
+  "sous_theme": "Espace",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel est le nom de la première femme astronaute française, partie en 1996 ?",
+  "reponse": "Claudie Haigneré",
+  "reponses_acceptees": [
+   "Haigneré",
+   "Claudie André-Deshays"
+  ],
+  "anecdote": "Elle est ensuite devenue ministre de la Recherche, puis des Affaires européennes."
+ },
+ {
+  "id": "per-025",
+  "categorie": "Personnalités",
+  "sous_theme": "Exploration",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel est le prénom composé du commandant Cousteau ?",
+  "reponse": "Jacques-Yves",
+  "reponses_acceptees": [
+   "Jacques Yves",
+   "Jacques"
+  ],
+  "anecdote": "Son navire, la Calypso, était à l'origine un dragueur de mines de la Royal Navy."
+ }
+]
