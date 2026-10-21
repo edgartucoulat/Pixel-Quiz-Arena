@@ -174,21 +174,17 @@
           let m;
           try { m = JSON.parse(e.data); } catch (err) { return; }
           if (!ready) {
-            if (m.type === 'OPEN') {
-              // Test d'écho : on s'envoie un message pour vérifier que le serveur relaie bien.
-              this._sendTo(this.id, { echo: 1 });
-              return;
-            }
-            if ((unwrap(m) || {}).echo) {
-              ready = true;
-              clearTimeout(timer);
-              this._ping = setInterval(() => this._send({ type: 'HEARTBEAT' }), 5000);
-              return resolve(this);
-            }
-            clearTimeout(timer); try { ws.close(); } catch (err) {} return reject(new Error(m.type));
+            clearTimeout(timer);
+            if (m.type !== 'OPEN') { try { ws.close(); } catch (err) {} return reject(new Error(m.type)); }
+            ready = true;
+            this._ping = setInterval(() => this._send({ type: 'HEARTBEAT' }), 5000);
+            // Test d'écho : on s'envoie un message pour vérifier que le serveur relaie bien.
+            this._sendTo(this.id, { echo: 1 });
+            this._echoTimer = setTimeout(() => PQA.setDiag('peerjs', 'sans écho'), 5000);
+            return resolve(this);
           }
           const data = unwrap(m);
-          if (data && data.echo) return;
+          if (data && data.echo) { clearTimeout(this._echoTimer); PQA.setDiag('peerjs', 'ok'); return; }
           // Message non remis : le destinataire n'est pas connecté au serveur PeerJS.
           if (m.type === 'EXPIRE') { PQA.netDiag.note = 'peerjs : destinataire absent'; if (PQA.onNetDiag) PQA.onNetDiag(); return; }
           if (data && data.topic && this.onmessage) this.onmessage(data.topic, data.text);
