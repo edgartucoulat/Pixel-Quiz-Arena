@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1a1c2c">
+  <title>PIXEL QUIZ ARENA</title>
+  <meta name="description" content="Jeu télé rétro de culture générale, multijoueur en temps réel sur vos téléphones.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%235d275d'/><rect x='4' y='3' width='8' height='2' fill='%23ffcd75'/><rect x='10' y='5' width='2' height='3' fill='%23ffcd75'/><rect x='7' y='8' width='3' height='2' fill='%23ffcd75'/><rect x='7' y='12' width='3' height='2' fill='%23ffcd75'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    body { min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 20px 16px;
+      background: radial-gradient(circle at 50% 30%, var(--plum), var(--ink) 70%); }
+    .home { max-width: 760px; width: 100%; text-align: center; display: flex; flex-direction: column; gap: 18px; align-items: center; }
+    .home .logo { font-size: clamp(14px, 4.4vw, 30px); animation: bob 2s infinite; margin-bottom: 6px; }
+    .home p { margin: 0; font-size: 24px; color: var(--g1); }
+    .choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; width: 100%; }
+    .choice { display: flex; flex-direction: column; gap: 8px; align-items: center; text-decoration: none; color: var(--white); padding: 18px 12px; }
+    .choice .ic { font-size: 54px; }
+    .choice b { font-family: var(--font-title); font-size: 13px; color: var(--yellow); line-height: 1.4; }
+    .choice span { font-size: 21px; color: var(--g1); }
+    .choice:hover { transform: translateY(-4px); filter: brightness(1.15); }
+    .choice.tv { background: var(--red); } .choice.phone { background: var(--blue); } .choice.mic { background: var(--teal); }
+    .choice span { color: var(--white); }
+    .small { font-size: 19px !important; }
+    a { color: var(--cyan); }
+  </style>
+</head>
+<body>
+  <div class="home">
+    <div class="logo"><span>PIXEL</span><span>QUIZ</span><span>ARENA</span></div>
+    <p>Le jeu télé de culture générale qui se joue sur vos téléphones.<br>Gratuit, sans compte, sans installation.</p>
+    <div class="choices">
+      <a class="choice panel tv" href="host.html"><span class="ic">📺</span><b>Écran Plateau</b><span>À ouvrir sur la TV, le PC ou le vidéoprojecteur. Crée la salle.</span></a>
+      <a class="choice panel phone" href="play.html"><span class="ic">📱</span><b>Manette Joueur</b><span>Sur ton téléphone : entre le code à 4 lettres (ou scanne le QR code).</span></a>
+      <a class="choice panel mic" href="presenter.html"><span class="ic">🎤</span><b>Télécommande Présentateur</b><span>Pour l’animateur en chair et en os : réponses, anecdotes, validation.</span></a>
+    </div>
+    <p class="small">De 2 à 10 joueurs · Plus de 1000 questions · 6 manches façon jeux télé · Duel, équipes, présentateur virtuel ou IRL</p>
+  </div>
+</body>
+</html>

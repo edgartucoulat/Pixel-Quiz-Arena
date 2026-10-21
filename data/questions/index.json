@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "categories": [
+    { "file": "histoire.json", "name": "Histoire", "icon": "🏛️", "cible": 100 },
+    { "file": "actualite.json", "name": "Actualité", "icon": "📰", "cible": 80 },
+    { "file": "geographie.json", "name": "Géographie", "icon": "🌍", "cible": 90 },
+    { "file": "sciences.json", "name": "Sciences & Nature", "icon": "🔬", "cible": 80 },
+    { "file": "cinema.json", "name": "Cinéma & Séries", "icon": "🎬", "cible": 80 },
+    { "file": "musique.json", "name": "Musique", "icon": "🎵", "cible": 70 },
+    { "file": "sport.json", "name": "Sport", "icon": "⚽", "cible": 70 },
+    { "file": "litterature.json", "name": "Littérature", "icon": "📚", "cible": 50 },
+    { "file": "art.json", "name": "Art & Architecture", "icon": "🎨", "cible": 40 },
+    { "file": "gastronomie.json", "name": "Gastronomie", "icon": "🧀", "cible": 50 },
+    { "file": "langue.json", "name": "Langue française", "icon": "🗣️", "cible": 50 },
+    { "file": "insolite.json", "name": "Insolite", "icon": "🤯", "cible": 80 },
+    { "file": "records.json", "name": "Records & chiffres", "icon": "📈", "cible": 50 },
+    { "file": "popculture.json", "name": "Pop culture & jeux vidéo", "icon": "🎮", "cible": 60 },
+    { "file": "tech.json", "name": "Inventions & tech", "icon": "💡", "cible": 30 },
+    { "file": "personnalites.json", "name": "Personnalités", "icon": "🌟", "cible": 20 }
+  ]
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIXEL QUIZ ARENA · Plateau</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%235d275d'/><rect x='4' y='3' width='8' height='2' fill='%23ffcd75'/><rect x='10' y='5' width='2' height='3' fill='%23ffcd75'/><rect x='7' y='8' width='3' height='2' fill='%23ffcd75'/><rect x='7' y='12' width='3' height='2' fill='%23ffcd75'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/host.css">
+</head>
+<body class="host">
+  <!-- Écran d'accueil : un clic est nécessaire pour autoriser le son -->
+  <div id="boot">
+    <div class="boot-box">
+      <div class="logo"><span>PIXEL</span><span>QUIZ</span><span>ARENA</span></div>
+      <p class="boot-sub">Le jeu télé de culture générale, en direct sur vos téléphones</p>
+      <button class="big-btn" id="btn-open" disabled>📺 OUVRIR LE PLATEAU</button>
+      <div id="resume"></div>
+      <p id="boot-status">Chargement des questions...</p>
+      <p class="boot-tip">Astuce : mets cet écran en plein écran (touche F) sur la TV ou le vidéoprojecteur.</p>
+    </div>
+  </div>
+
+  <div id="app">
+    <div id="shaker">
+      <div id="studio">
+        <div class="curtain left"></div><div class="curtain right"></div>
+        <div class="spot s1"></div><div class="spot s2"></div><div class="spot s3"></div><div class="spot s4"></div>
+        <div class="floor"></div>
+      </div>
+      <header id="topbar">
+        <div class="tb-logo">PIXEL QUIZ ARENA</div>
+        <div id="tb-center"></div>
+        <div id="tb-right"></div>
+      </header>
+      <div id="timerbar"><div class="tfill"></div><span id="timer-num"></span></div>
+      <main id="stage"></main>
+      <div id="host-area">
+        <canvas id="presenter-cv" width="156" height="210"></canvas>
+        <div id="bubble"><div class="bubble-name">PIXOU</div><div id="bubble-text"></div></div>
+      </div>
+      <canvas id="audience" width="320" height="48"></canvas>
+      <footer id="podiums"></footer>
+    </div>
+    <canvas id="fx" width="1600" height="900"></canvas>
+    <div id="pops"></div>
+    <div id="flash"></div>
+    <div id="pause-overlay"><span>⏸ PAUSE</span></div>
+    <nav id="controls"></nav>
+  </div>
+  <div id="crt-overlay"></div>
+
+  <script src="js/vendor/peerjs.min.js"></script>
+  <script src="js/vendor/qrcode.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/net.js"></script>
+  <script src="js/sprites.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/announcer.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/host-ui.js"></script>
+  <script src="js/host.js"></script>
+</body>
+</html>
