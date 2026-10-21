@@ -1,0 +1,47 @@
+# Enregistre la voix du présentateur (scripts/gen_voice.py) quand les
+# répliques ou les questions changent, puis pousse les fichiers audio.
+name: Voix du présentateur
+
+on:
+  push:
+    branches: [main, 'claude/**']
+    paths:
+      - js/announcer.js
+      - js/voice.js
+      - data/questions/**
+      - scripts/voice-lines.js
+      - scripts/gen_voice.py
+      - .github/workflows/voice.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voice-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Outils
+        run: |
+          pip install "edge-tts>=7,<8"
+          command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+      - name: Enregistrement
+        run: python3 scripts/gen_voice.py
+      - name: Publication
+        run: |
+          git add -A audio/voice
+          if git diff --cached --quiet; then echo "Rien de nouveau."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Voix du présentateur : enregistrements mis à jour"
+          for i in 1 2 3; do git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0; sleep 5; done
+          exit 1

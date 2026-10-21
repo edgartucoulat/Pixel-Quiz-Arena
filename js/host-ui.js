@@ -9,6 +9,8 @@
   const PQA = (window.PQA = window.PQA || {});
   const { esc, patch, $, fmt } = PQA;
   const sfx = PQA.sfx;
+  const music = PQA.music;
+  const voice = PQA.voice;
   const LETTERS = ['A', 'B', 'C', 'D'];
   const avatarImg = (p, pose, cls = '') => `<img class="pix av ${cls}" src="${PQA.avatarURL(p.avatar, p.color, pose)}" alt="">`;
   const diffBar = (d) => `<span class="diff" title="Difficulté ${d}/10">${Array.from({ length: 10 }, (_, i) => `<i class="${i < d ? 'on' : ''} ${i >= 7 ? 'hard' : i >= 3 ? 'mid' : ''}"></i>`).join('')}</span>`;
@@ -32,6 +34,9 @@
       this.wheelDone = null;
       window.addEventListener('resize', () => this.fit());
       this.fit();
+      this.buildSoundPanel();
+      voice.onTalk = (on) => music.setDuck(on);
+      voice.onVoices = () => this.refreshSoundPanel();
       this.applyPrefs();
       this.bind();
       requestAnimationFrame((t) => this.loop(t));
@@ -39,15 +44,66 @@
 
     /* ---- Préférences locales de l'écran (son, CRT, voix) ---- */
     loadPrefs() {
-      try { return Object.assign({ crt: true, tts: false, volume: 0.6 }, JSON.parse(localStorage.getItem('pqa_prefs') || '{}')); }
-      catch (e) { return { crt: true, tts: false, volume: 0.6 }; }
+      const def = { crt: true, tts: true, muted: false, volume: 0.6, music: 0.45, voiceVol: 1, voice: 'auto', robot: false };
+      let saved = {};
+      try { saved = JSON.parse(localStorage.getItem('pqa_prefs') || '{}') || {}; } catch (e) {}
+      // Anciennes préférences : la voix était coupée par défaut car robotique.
+      if (saved.music == null) { delete saved.tts; if (saved.volume === 0) { saved.volume = 0.6; saved.muted = true; } }
+      return Object.assign(def, saved);
     }
     savePrefs() { try { localStorage.setItem('pqa_prefs', JSON.stringify(this.prefs)); } catch (e) {} this.applyPrefs(); }
     applyPrefs() {
-      document.body.classList.toggle('crt', !!this.prefs.crt);
-      PQA.tts.enabled = !!this.prefs.tts;
-      sfx.setVolume(this.prefs.volume);
-      sfx.muted = this.prefs.volume === 0;
+      const pr = this.prefs, off = !!pr.muted;
+      document.body.classList.toggle('crt', !!pr.crt);
+      sfx.setVolume(off ? 0 : pr.volume);
+      music.setVolume(off ? 0 : pr.music);
+      voice.volume = pr.voiceVol;
+      voice.choice = pr.voice;
+      voice.fallback = !!pr.robot;
+      voice.pickLive();
+      PQA.tts.enabled = !!pr.tts && !off && pr.voiceVol > 0;
+      this.refreshSoundPanel();
+    }
+
+    /* ---- Panneau « Sons » : musique, effets, voix ---- */
+    buildSoundPanel() {
+      const el = (this.soundPanel = document.createElement('div'));
+      el.id = 'sound-panel';
+      el.innerHTML = `
+        <div class="sp-title">🎚️ SONS</div>
+        <label>🎵 Musique <input type="range" min="0" max="1" step="0.05" data-k="music"></label>
+        <label>💥 Effets <input type="range" min="0" max="1" step="0.05" data-k="volume"></label>
+        <label>🗣️ Voix <input type="range" min="0" max="1" step="0.05" data-k="voiceVol"></label>
+        <label class="sp-row">Voix de Pixou <select data-k="voice"></select></label>
+        <label class="sp-check"><input type="checkbox" data-k="robot"> Voix robotique en secours</label>
+        <div class="sp-info"></div>
+        <button class="ctl" data-sp="test">▶ Tester la voix</button>`;
+      this.app.appendChild(el);
+      el.addEventListener('input', (e) => {
+        const k = e.target.dataset.k;
+        if (!k) return;
+        this.prefs[k] = e.target.type === 'checkbox' ? e.target.checked : e.target.type === 'range' ? Number(e.target.value) : e.target.value;
+        if (k === 'voiceVol' && this.prefs.voiceVol > 0) this.prefs.tts = true;
+        this.savePrefs();
+        if (k === 'volume') { sfx.unlock(); sfx.select(); }
+      });
+      el.addEventListener('click', (e) => {
+        if (!e.target.closest('[data-sp="test"]')) return;
+        sfx.unlock();
+        voice.speak(PQA.line('question') + ' ' + 'Quel peintre a coupé une partie de son oreille gauche en 1888 ?', { kind: 'question' });
+      });
+    }
+    refreshSoundPanel() {
+      const el = this.soundPanel;
+      if (!el) return;
+      const pr = this.prefs;
+      el.querySelectorAll('input[type=range]').forEach((i) => (i.value = pr[i.dataset.k]));
+      el.querySelector('[data-k=robot]').checked = !!pr.robot;
+      const sel = el.querySelector('select');
+      const opts = [['auto', 'Automatique (la plus naturelle)']].concat(voice.voices.map((v) => [v.name, v.name + (voice.score(v) >= 80 ? ' ★' : '')]));
+      sel.innerHTML = opts.map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
+      sel.value = opts.some(([v]) => v === pr.voice) ? pr.voice : 'auto';
+      el.querySelector('.sp-info').textContent = 'En ce moment : ' + voice.description;
     }
 
     fit() {
@@ -64,7 +120,7 @@
         this.action(el.dataset.act, el.dataset);
       });
       document.addEventListener('keydown', (e) => {
-        if (e.target.tagName === 'INPUT') return;
+        if (/INPUT|SELECT/.test(e.target.tagName)) return;
         const k = e.key.toLowerCase();
         const g = this.g;
         // Duel sur un seul écran : A et L pour buzzer, puis 1-4 (A) ou 7-0 (L).
@@ -110,8 +166,7 @@
           sfx.select(); g.changed(); return;
         }
         case 'pref': {
-          if (d.key === 'volume') this.prefs.volume = Number(d.val);
-          else this.prefs[d.key] = !this.prefs[d.key];
+          this.prefs[d.key] = !this.prefs[d.key];
           this.savePrefs(); sfx.select(); g.changed();
           if (d.key === 'tts' && this.prefs.tts) PQA.tts.speak('La voix du présentateur est activée !');
           return;
@@ -121,6 +176,7 @@
         case 'next': return g.advance();
         case 'pause': return g.togglePause();
         case 'fullscreen': return this.fullscreen();
+        case 'sounds': this.soundPanel.classList.toggle('on'); this.refreshSoundPanel(); return;
         case 'team': return g.cycleTeam(d.pid);
         case 'shuffleteams': return g.shuffleTeams();
         case 'kick': if (confirm('Retirer ce joueur ?')) g.kick(d.pid); return;
@@ -184,7 +240,8 @@
         ${canNext ? `<button class="ctl" data-act="next" title="Espace">${g.phase === 'question' ? '⏭ Révéler' : '▶ Suivant'}</button>` : ''}
         ${g.phase !== 'lobby' && g.phase !== 'end' ? `<button class="ctl" data-act="pause" title="P">${g.paused ? '▶ Reprendre' : '⏸ Pause'}</button>` : ''}
         <button class="ctl" data-act="pref" data-key="tts" title="Voix du présentateur">${this.prefs.tts ? '🗣️ Voix' : '🤐 Voix'}</button>
-        <button class="ctl" data-act="pref" data-key="volume" data-val="${this.prefs.volume > 0 ? 0 : 0.6}">${this.prefs.volume > 0 ? '🔊' : '🔇'}</button>
+        <button class="ctl" data-act="pref" data-key="muted" title="Couper tous les sons">${this.prefs.muted ? '🔇 Muet' : '🔊 Son'}</button>
+        <button class="ctl" data-act="sounds" title="Musique, effets, voix">🎚️ Réglages</button>
         <button class="ctl" data-act="pref" data-key="crt">📺 CRT</button>
         <button class="ctl" data-act="fullscreen" title="F">⛶</button>`);
       $('#pause-overlay').classList.toggle('on', g.paused);
@@ -713,7 +770,31 @@
     say(text, expr) {
       this.expr = expr || 'neutral';
       this.typing = { text, i: 0, last: 0 };
-      if (this.g.settings.mode !== 'irl') PQA.tts.speak(text);
+      // Deux répliques d'affilée (« C'est parti ! » puis l'annonce de la manche) : on dit les deux.
+      const t = performance.now(), same = t - (this.lastSay || 0) < 50;
+      this.lastSay = t;
+      if (this.g.settings.mode !== 'irl') voice.speak(text, { queue: same });
+    }
+    /** Lit la question (ou le nouvel indice) juste après la réplique du présentateur. */
+    readAloud(fn) {
+      if (this.g.settings.mode === 'irl') return;
+      // La réplique (« Question suivante ! ») est dite juste après l'effet : on passe derrière.
+      Promise.resolve().then(() => { const t = fn(); if (t) voice.speak(t, { queue: true, kind: 'question' }); });
+    }
+
+    /** Choisit la musique selon la phase de jeu (appelé à chaque image). */
+    updateMusic() {
+      const g = this.g;
+      let want = null, delay = 0;
+      if (g.paused) want = null;
+      else if (g.phase === 'lobby') want = 'theme';
+      else if (g.phase === 'end') { want = 'finale'; delay = 1.5; }
+      else if (g.phase === 'leaderboard') want = 'leaderboard';
+      else if (g.phase === 'question') want = 'suspense';
+      else if (g.round) { want = PQA.MUSIC_TRACKS['round_' + g.round.type] ? 'round_' + g.round.type : 'theme'; delay = 0.8; }
+      // Le suspense accélère quand le chrono s'épuise (jusqu'à presque 2x).
+      music.tempo = g.timer && g.timer.total ? 1 + (1 - g.timerLeft() / g.timer.total) * 0.85 : 1;
+      if (want !== this.musicWant) { this.musicWant = want; music.play(want, delay); }
     }
 
     /* ======================= Effets ================================ */
@@ -723,35 +804,46 @@
       switch (name) {
         case 'join': sfx.join(); this.audience.cheer(0.5); break;
         case 'rejoin': sfx.select(); break;
-        case 'start': sfx.jingle(); this.audience.cheer(1); this.confetti(80); break;
-        case 'roundIntro': sfx.roundJingle(); sfx.whoosh(); this.audience.cheer(0.7); break;
-        case 'question': sfx.whoosh(); break;
+        case 'start': music.sting('opening'); sfx.applause(3); this.audience.cheer(1); this.confetti(80); break;
+        case 'roundIntro': music.sting('round'); sfx.whoosh(); this.audience.cheer(0.7); break;
+        case 'question': {
+          sfx.whoosh(); voice.stop();
+          const q = g.q;
+          this.readAloud(() => q && g.q === q && q.data && [q.data.question, q.data.indices && q.data.indices[0]].filter(Boolean).join(' '));
+          break;
+        }
         case 'lock': sfx.lock(); break;
         case 'select': sfx.select(); break;
-        case 'clue': sfx.pop(); break;
+        case 'clue': {
+          sfx.pop();
+          const q = g.q;
+          this.readAloud(() => q && g.q === q && !q.buzz.current && q.data.indices && q.data.indices[q.clue]);
+          break;
+        }
+        case 'falsestart': sfx.falseStart(); if (p) this.flash('#e43b44'); break;
         case 'buzz': sfx.buzz(p ? p.colorIdx : 0); this.shake(1); this.flash(p ? p.color : '#fff'); break;
-        case 'wrong': sfx.wrong(); this.shake(1); break;
+        case 'wrong': sfx.wrong(); sfx.ooh(0.6); this.shake(1); break;
         case 'correct': sfx.coin(); break;
         case 'reveal':
-          if (d.winners && d.winners.length) { sfx.correct(); this.audience.cheer(0.9); this.confetti(25 + d.winners.length * 10); }
-          else { sfx.wrong(); }
+          if (d.winners && d.winners.length) { sfx.correct(); sfx.applause(2, 0.5 + Math.min(0.6, d.winners.length * 0.15)); this.audience.cheer(0.9); this.confetti(25 + d.winners.length * 10); }
+          else { sfx.wrong(); sfx.ooh(); }
           break;
         case 'points': if (p && d.pts) this.popAt(p.id, (d.pts > 0 ? '+' : '') + d.pts, d.pts > 0 ? '#a7f070' : '#e43b44'); break;
         case 'pop': if (p && d.text) this.popAt(p.id, d.text, '#ffcd75'); break;
-        case 'streak': sfx.fire(); this.bigText(d.mult >= 4 ? '4 À LA SUITE !' : `ON FIRE x${d.mult} 🔥`, p ? p.color : '#ef7d57'); this.shake(2); this.audience.cheer(1); break;
+        case 'streak': sfx.fire(); sfx.wow(); this.bigText(d.mult >= 4 ? '4 À LA SUITE !' : `ON FIRE x${d.mult} 🔥`, p ? p.color : '#ef7d57'); this.shake(2); this.audience.cheer(1); break;
         case 'card': { sfx.card(); const t = g.players[d.target]; this.bigText(`${PQA.CARDS[d.card].icon} ${p ? p.name : ''} ${t ? '→ ' + t.name : ''}`, '#b55088', PQA.CARDS[d.card].name.toUpperCase()); if (d.card === 'gel') sfx.freeze(); break; }
         case 'cardGain': sfx.coin(); if (p) this.popAt(p.id, '🃏 Carte !', '#73eff7'); break;
-        case 'trap': sfx.explosion(); this.shake(3); this.flash('#e43b44'); break;
-        case 'double': sfx.coin(); sfx.fanfare && this.audience.cheer(1); break;
+        case 'trap': sfx.explosion(); sfx.ooh(0.8); this.shake(3); this.flash('#e43b44'); break;
+        case 'double': sfx.coin(); sfx.wow(0.8); this.audience.cheer(1); break;
         case 'steal': sfx.card(); break;
         case 'drumroll': sfx.drumroll(2); break;
         case 'wheel': break;
-        case 'leaderboard': sfx.roundJingle(); this.audience.cheer(0.6); break;
-        case 'ladder': sfx.roundJingle(); this.audience.cheer(1); break;
+        case 'leaderboard': music.sting('round'); this.audience.cheer(0.6); break;
+        case 'ladder': music.sting('round'); this.audience.cheer(1); break;
         case 'joker': sfx.card(); break;
         case 'hit': sfx.hit(); this.shake(d.crit ? 3 : 2); this.flash('#e43b44'); break;
-        case 'ko': sfx.ko(); this.shake(3); setTimeout(() => { sfx.fanfare(); this.confetti(150); }, 1200); break;
-        case 'end': sfx.fanfare(); this.confetti(200); this.audience.cheer(1); break;
+        case 'ko': sfx.ko(); this.shake(3); setTimeout(() => { sfx.victory(); this.confetti(150); }, 1200); break;
+        case 'end': sfx.drumroll(1.2); setTimeout(() => { sfx.victory(); this.confetti(200); this.audience.cheer(1); }, 1300); break;
       }
     }
     shake(level) {
@@ -798,6 +890,7 @@
       const g = this.g;
       // Public
       this.audience.draw(t);
+      this.updateMusic();
       // Présentateur : machine à écrire + bouche qui bouge
       let talking = false;
       if (this.typing) {
@@ -805,9 +898,9 @@
         if (ty.i < ty.text.length && t - ty.last > 28) {
           ty.i += ty.text[ty.i] === ' ' ? 2 : 1;
           ty.last = t;
-          if (ty.i % 3 === 0 && g.settings.mode !== 'irl') sfx.blip();
+          if (ty.i % 3 === 0 && g.settings.mode !== 'irl' && !voice.talking) sfx.blip();
         }
-        talking = ty.i < ty.text.length;
+        talking = ty.i < ty.text.length || voice.talking;
         patch($('#bubble-text'), esc(ty.text.slice(0, ty.i)) + (talking ? '<span class="caret">▌</span>' : ''));
       }
       const ctx = this.pctx;
