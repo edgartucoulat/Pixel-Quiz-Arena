@@ -757,8 +757,8 @@
       else if (g.phase === 'end') { want = 'finale'; delay = 1.5; }
       else if (g.phase === 'leaderboard') want = 'leaderboard';
       else if (g.phase === 'question') want = 'suspense';
-      else if (g.round) { want = PQA.MUSIC_TRACKS['round_' + g.round.type] ? 'round_' + g.round.type : 'theme'; delay = 0.8; }
-      // Le suspense accélère quand le chrono s'épuise (jusqu'à presque 2x).
+      else if (g.round) { want = 'round_' + g.round.type; delay = 0.8; }
+      // La musique de réflexion se tend quand le chrono s'épuise.
       music.tempo = g.timer && g.timer.total ? 1 + (1 - g.timerLeft() / g.timer.total) * 0.85 : 1;
       if (want !== this.musicWant) { this.musicWant = want; music.play(want, delay); }
     }
@@ -771,7 +771,7 @@
         case 'join': sfx.join(); this.audience.cheer(0.5); break;
         case 'rejoin': sfx.select(); break;
         case 'start': music.sting('opening'); sfx.applause(3); this.audience.cheer(1); this.confetti(80); break;
-        case 'roundIntro': music.sting('round'); sfx.whoosh(); this.audience.cheer(0.7); break;
+        case 'roundIntro': music.sting('round_' + d.type); sfx.whoosh(); this.audience.cheer(0.7); break;
         case 'question': {
           sfx.whoosh(); voice.stop();
           const q = g.q;
@@ -804,8 +804,8 @@
         case 'steal': sfx.card(); break;
         case 'drumroll': sfx.drumroll(2); break;
         case 'wheel': break;
-        case 'leaderboard': music.sting('round'); this.audience.cheer(0.6); break;
-        case 'faceoff': music.sting('round'); sfx.whoosh(); this.audience.cheer(1); break;
+        case 'leaderboard': music.sting('transition'); this.audience.cheer(0.6); break;
+        case 'faceoff': music.sting('transition'); sfx.whoosh(); this.audience.cheer(1); break;
         case 'champHit': sfx.hit(); this.shake(2); if (p) this.bigText('★ ' + p.name, p.color); break;
         case 'champion': sfx.drumroll(1); setTimeout(() => { sfx.victory(); this.confetti(180); this.audience.cheer(1); }, 1100); break;
         case 'hit': sfx.hit(); this.shake(d.crit ? 3 : 2); this.flash('#e43b44'); break;

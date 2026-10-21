@@ -89,7 +89,8 @@ presenter.html  Télécommande du présentateur IRL
 js/engine.js    Moteur de jeu : manches, scores, règles
 js/host-ui.js   Rendu du plateau, animations, sons
 js/audio.js     Effets sonores 8-bit synthétisés (buzzers, public, tambour…)
-js/music.js     Musique chiptune générée (thème, une boucle par manche, suspense)
+js/music.js     Lecteur de musique (ambiances en boucle, jingles, suspense)
+audio/music/    Musiques originales (générées par scripts/compose_music.py)
 js/voice.js     Voix du présentateur (enregistrements + voix naturelles du navigateur)
 audio/voice/    Voix enregistrée, générée automatiquement (ne pas modifier à la main)
 js/net.js       Réseau PeerJS + reconnexion automatique
@@ -150,9 +151,15 @@ Options d'URL utiles pour le développement :
 Tout est gratuit et sans serveur. Le bouton **🎚️ Réglages** du plateau règle séparément la
 **musique**, les **effets** et la **voix**, et indique quelle voix est utilisée.
 
-- **Musique** : composée par le jeu lui-même (chiptune 8-bit) : thème d'accueil, une boucle
-  par manche, musique de suspense qui accélère avec le chrono, fanfare de victoire. Elle
-  baisse automatiquement quand Pixou parle.
+- **Musique** : des compositions originales jouées par de vrais instruments (orchestre,
+  cuivres, piano, timbales) : ambiance lounge à l'accueil, trois fonds discrets pendant les
+  manches, musique de réflexion qui se tend quand le chrono s'épuise, un **jingle d'annonce
+  différent pour chaque manche**, fanfares d'ouverture et de victoire. Elle baisse
+  automatiquement quand Pixou parle.
+  Les partitions sont écrites dans `scripts/compose_music.py` et jouées avec la banque de
+  sons libre **FluidR3_GM** (Frank Wen, licence MIT) :
+  `pip install mido && python3 scripts/compose_music.py` (fluidsynth, ffmpeg et le paquet
+  `fluid-soundfont-gm` requis). Aucune musique d'un tiers n'est utilisée.
 - **Effets** : un buzzer différent par joueur, faux départ, roulement de tambour,
   applaudissements, « ooooh » déçu et « wouah » du public.
 - **Voix de Pixou** : pour éviter l'effet robot, deux sources sont combinées.
