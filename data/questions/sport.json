@@ -2,57 +2,9 @@
  {
   "id": "spo-001",
   "categorie": "Sport",
-  "sous_theme": "Football",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Combien de joueurs compte une équipe de football sur le terrain ?",
-  "choix": [
-   "11",
-   "10",
-   "12",
-   "9"
-  ],
-  "reponse": "11",
-  "anecdote": "Les premières règles officielles du football ont été écrites à Londres en 1863."
- },
- {
-  "id": "spo-002",
-  "categorie": "Sport",
-  "sous_theme": "Football",
+  "sous_theme": "Tennis",
   "type": "qcm",
   "difficulte": 2,
-  "question": "Quel pays a remporté la Coupe du monde de football 2018 ?",
-  "choix": [
-   "La France",
-   "La Croatie",
-   "La Belgique",
-   "L'Argentine"
-  ],
-  "reponse": "La France",
-  "anecdote": "C'était la deuxième étoile des Bleus, vingt ans après 1998."
- },
- {
-  "id": "spo-003",
-  "categorie": "Sport",
-  "sous_theme": "Tennis",
-  "type": "qcm",
-  "difficulte": 3,
-  "question": "Sur quelle surface se joue le tournoi de Roland-Garros ?",
-  "choix": [
-   "La terre battue",
-   "Le gazon",
-   "Le dur",
-   "La moquette"
-  ],
-  "reponse": "La terre battue",
-  "anecdote": "La terre battue est en fait de la brique pilée posée sur une couche de calcaire."
- },
- {
-  "id": "spo-004",
-  "categorie": "Sport",
-  "sous_theme": "Tennis",
-  "type": "qcm",
-  "difficulte": 4,
   "question": "Quel joueur a remporté Roland-Garros 14 fois ?",
   "choix": [
    "Rafael Nadal",
@@ -64,27 +16,11 @@
   "anecdote": "Une statue de Nadal a été installée à Roland-Garros en 2021, de son vivant."
  },
  {
-  "id": "spo-005",
+  "id": "spo-002",
   "categorie": "Sport",
   "sous_theme": "Cyclisme",
   "type": "qcm",
-  "difficulte": 3,
-  "question": "Quelle couleur de maillot porte le leader du Tour de France ?",
-  "choix": [
-   "Jaune",
-   "Vert",
-   "À pois",
-   "Blanc"
-  ],
-  "reponse": "Jaune",
-  "anecdote": "Le jaune a été choisi en 1919, couleur du journal L'Auto qui organisait la course."
- },
- {
-  "id": "spo-006",
-  "categorie": "Sport",
-  "sous_theme": "Cyclisme",
-  "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Quelle couleur de maillot récompense le meilleur grimpeur du Tour ?",
   "choix": [
    "Blanc à pois rouges",
@@ -96,11 +32,11 @@
   "anecdote": "Le maillot à pois date de 1975 ; son motif venait d'un sponsor de chocolat."
  },
  {
-  "id": "spo-007",
+  "id": "spo-003",
   "categorie": "Sport",
   "sous_theme": "Rugby",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Combien de points vaut un essai au rugby à XV ?",
   "choix": [
    "5",
@@ -112,11 +48,11 @@
   "anecdote": "L'essai valait seulement 3 points avant 1971, puis 4, et 5 depuis 1992."
  },
  {
-  "id": "spo-008",
+  "id": "spo-004",
   "categorie": "Sport",
   "sous_theme": "Jeux olympiques",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Dans quelle ville se sont tenus les premiers Jeux olympiques modernes ?",
   "choix": [
    "Athènes",
@@ -128,27 +64,11 @@
   "anecdote": "Ils ont eu lieu en 1896, à l'initiative de Pierre de Coubertin."
  },
  {
-  "id": "spo-009",
-  "categorie": "Sport",
-  "sous_theme": "Jeux olympiques",
-  "type": "qcm",
-  "difficulte": 6,
-  "question": "Combien d'anneaux figurent sur le drapeau olympique ?",
-  "choix": [
-   "5",
-   "4",
-   "6",
-   "7"
-  ],
-  "reponse": "5",
-  "anecdote": "Avec le fond blanc, leurs couleurs permettaient de reproduire tous les drapeaux nationaux de l'époque."
- },
- {
-  "id": "spo-010",
+  "id": "spo-005",
   "categorie": "Sport",
   "sous_theme": "Athlétisme",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Quel athlète détient le record du monde du 100 m en 9,58 secondes ?",
   "choix": [
    "Usain Bolt",
@@ -160,11 +80,11 @@
   "anecdote": "Il l'a établi à Berlin en 2009. Il a atteint une pointe d'environ 44 km/h."
  },
  {
-  "id": "spo-011",
+  "id": "spo-006",
   "categorie": "Sport",
   "sous_theme": "Football",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 3,
   "question": "Quel club a remporté le plus de Ligues des champions ?",
   "choix": [
    "Le Real Madrid",
@@ -176,27 +96,11 @@
   "anecdote": "Le club espagnol compte 15 titres, dont cinq consécutifs entre 1956 et 1960."
  },
  {
-  "id": "spo-012",
+  "id": "spo-007",
   "categorie": "Sport",
   "sous_theme": "Basket",
   "type": "qcm",
-  "difficulte": 5,
-  "question": "Combien de points vaut un panier marqué loin derrière la ligne à trois points ?",
-  "choix": [
-   "3",
-   "2",
-   "4",
-   "5"
-  ],
-  "reponse": "3",
-  "anecdote": "La ligne à trois points a été adoptée en NBA en 1979."
- },
- {
-  "id": "spo-013",
-  "categorie": "Sport",
-  "sous_theme": "Basket",
-  "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 3,
   "question": "Quel joueur de basket français a été choisi en premier lors de la draft NBA 2023 ?",
   "choix": [
    "Victor Wembanyama",
@@ -208,11 +112,11 @@
   "anecdote": "Mesurant environ 2,24 m, il a été élu rookie de l'année 2024 avec les Spurs de San Antonio."
  },
  {
-  "id": "spo-014",
+  "id": "spo-008",
   "categorie": "Sport",
   "sous_theme": "Tennis",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 3,
   "question": "Quel joueur a été le premier à remporter 24 titres du Grand Chelem en simple messieurs ?",
   "choix": [
    "Novak Djokovic",
@@ -224,27 +128,11 @@
   "anecdote": "Il a atteint ce total à l'US Open 2023, égalant le record de Margaret Court chez les femmes."
  },
  {
-  "id": "spo-015",
-  "categorie": "Sport",
-  "sous_theme": "Golf",
-  "type": "qcm",
-  "difficulte": 6,
-  "question": "Comment appelle-t-on un trou réussi en un coup au golf ?",
-  "choix": [
-   "Un trou en un",
-   "Un eagle",
-   "Un birdie",
-   "Un albatros"
-  ],
-  "reponse": "Un trou en un",
-  "anecdote": "Un birdie est un coup sous le par, un eagle deux, un albatros trois."
- },
- {
-  "id": "spo-016",
+  "id": "spo-009",
   "categorie": "Sport",
   "sous_theme": "Football",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 2,
   "question": "Quel joueur a remporté le plus de Ballons d'or ?",
   "choix": [
    "Lionel Messi",
@@ -256,11 +144,11 @@
   "anecdote": "Messi en compte 8, le dernier en 2023."
  },
  {
-  "id": "spo-017",
+  "id": "spo-010",
   "categorie": "Sport",
   "sous_theme": "Formule 1",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 3,
   "question": "Quel pilote détient le record de 7 titres de champion du monde de F1, avec Michael Schumacher ?",
   "choix": [
    "Lewis Hamilton",
@@ -272,11 +160,11 @@
   "anecdote": "Hamilton détient aussi le record de victoires en Grand Prix."
  },
  {
-  "id": "spo-018",
+  "id": "spo-011",
   "categorie": "Sport",
   "sous_theme": "Formule 1",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 6,
   "question": "Quel pilote a remporté le plus de Grands Prix de Monaco, avec 6 victoires ?",
   "choix": [
    "Ayrton Senna",
@@ -288,11 +176,11 @@
   "anecdote": "Le Brésilien y a gagné en 1987 puis cinq fois de suite, de 1989 à 1993."
  },
  {
-  "id": "spo-019",
+  "id": "spo-012",
   "categorie": "Sport",
   "sous_theme": "Rugby",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel pays a remporté la Coupe du monde de rugby 2023, organisée en France ?",
   "choix": [
    "L'Afrique du Sud",
@@ -304,11 +192,11 @@
   "anecdote": "C'était le 4e titre des Springboks, un record."
  },
  {
-  "id": "spo-020",
+  "id": "spo-013",
   "categorie": "Sport",
   "sous_theme": "Jeux olympiques",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 4,
   "question": "Quel nageur détient le record de 23 médailles d'or olympiques ?",
   "choix": [
    "Michael Phelps",
@@ -320,11 +208,11 @@
   "anecdote": "Il a remporté 8 médailles d'or aux seuls Jeux de Pékin en 2008."
  },
  {
-  "id": "spo-021",
+  "id": "spo-014",
   "categorie": "Sport",
   "sous_theme": "Jeux olympiques",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 2,
   "question": "Quel nageur français a remporté 4 médailles d'or aux JO de Paris 2024 ?",
   "choix": [
    "Léon Marchand",
@@ -336,27 +224,11 @@
   "anecdote": "Il a gagné deux finales le même soir, le 200 m papillon et le 200 m brasse."
  },
  {
-  "id": "spo-022",
-  "categorie": "Sport",
-  "sous_theme": "Sports US",
-  "type": "qcm",
-  "difficulte": 5,
-  "question": "Quel sport pratique-t-on lors du Super Bowl ?",
-  "choix": [
-   "Le football américain",
-   "Le baseball",
-   "Le basket",
-   "Le hockey sur glace"
-  ],
-  "reponse": "Le football américain",
-  "anecdote": "Les spots publicitaires de 30 secondes y coûtent plusieurs millions de dollars."
- },
- {
-  "id": "spo-023",
+  "id": "spo-015",
   "categorie": "Sport",
   "sous_theme": "Boxe",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 2,
   "question": "Quel boxeur se faisait appeler « The Greatest » ?",
   "choix": [
    "Mohamed Ali",
@@ -368,11 +240,11 @@
   "anecdote": "Il est né Cassius Clay et a changé de nom en 1964."
  },
  {
-  "id": "spo-024",
+  "id": "spo-016",
   "categorie": "Sport",
   "sous_theme": "Football",
   "type": "qcm",
-  "difficulte": 10,
+  "difficulte": 4,
   "question": "Quel pays a remporté la toute première Coupe du monde de football, en 1930 ?",
   "choix": [
    "L'Uruguay",
@@ -384,11 +256,11 @@
   "anecdote": "Le pays organisateur a battu l'Argentine 4-2 en finale à Montevideo."
  },
  {
-  "id": "spo-025",
+  "id": "spo-017",
   "categorie": "Sport",
   "sous_theme": "Tennis",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 4,
   "question": "Quelle joueuse française a remporté Wimbledon en 2013 ?",
   "choix": [
    "Marion Bartoli",
@@ -400,27 +272,11 @@
   "anecdote": "Elle a gagné le titre sans perdre un seul set."
  },
  {
-  "id": "spo-026",
-  "categorie": "Sport",
-  "sous_theme": "Jeux olympiques",
-  "type": "qcm",
-  "difficulte": 4,
-  "question": "Quelle ville a accueilli les Jeux olympiques d'été 2024 ?",
-  "choix": [
-   "Paris",
-   "Los Angeles",
-   "Tokyo",
-   "Londres"
-  ],
-  "reponse": "Paris",
-  "anecdote": "Paris accueillait les Jeux pour la troisième fois, après 1900 et 1924."
- },
- {
-  "id": "spo-027",
+  "id": "spo-018",
   "categorie": "Sport",
   "sous_theme": "Cyclisme",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Quel coureur a remporté cinq fois le Tour de France, comme Anquetil, Merckx et Indurain ?",
   "choix": [
    "Bernard Hinault",
@@ -432,27 +288,11 @@
   "anecdote": "Le Breton, surnommé « le Blaireau », a gagné son dernier Tour en 1985."
  },
  {
-  "id": "spo-028",
-  "categorie": "Sport",
-  "sous_theme": "Sports d'hiver",
-  "type": "qcm",
-  "difficulte": 4,
-  "question": "Dans quel sport d'hiver utilise-t-on une « pierre » et des balais ?",
-  "choix": [
-   "Le curling",
-   "Le biathlon",
-   "Le bobsleigh",
-   "Le skeleton"
-  ],
-  "reponse": "Le curling",
-  "anecdote": "Les pierres officielles sont taillées dans un granit d'une petite île écossaise, Ailsa Craig."
- },
- {
-  "id": "spo-029",
+  "id": "spo-019",
   "categorie": "Sport",
   "sous_theme": "Escrime",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Combien d'armes différentes existe-t-il en escrime olympique ?",
   "choix": [
    "3",
@@ -464,11 +304,11 @@
   "anecdote": "Le fleuret, l'épée et le sabre ont chacun leurs règles et leur zone de touche."
  },
  {
-  "id": "spo-030",
+  "id": "spo-020",
   "categorie": "Sport",
   "sous_theme": "Football",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quel joueur français a été sacré meilleur buteur de la Coupe du monde 2022 ?",
   "choix": [
    "Kylian Mbappé",
@@ -480,11 +320,11 @@
   "anecdote": "Il a inscrit un triplé en finale, ce que seul Geoff Hurst avait fait avant lui, en 1966."
  },
  {
-  "id": "spo-031",
+  "id": "spo-021",
   "categorie": "Sport",
   "sous_theme": "Basket",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 5,
   "question": "Quel joueur détient le record de points marqués en un match NBA, avec 100 points ?",
   "choix": [
    "Wilt Chamberlain",
@@ -496,11 +336,11 @@
   "anecdote": "Il a réalisé l'exploit le 2 mars 1962. Aucune vidéo du match n'existe."
  },
  {
-  "id": "spo-032",
+  "id": "spo-022",
   "categorie": "Sport",
   "sous_theme": "Tennis",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Quel tournoi du Grand Chelem se joue sur gazon ?",
   "choix": [
    "Wimbledon",
@@ -512,27 +352,11 @@
   "anecdote": "Les joueurs doivent y être habillés presque entièrement de blanc."
  },
  {
-  "id": "spo-033",
-  "categorie": "Sport",
-  "sous_theme": "Football",
-  "type": "fourchette",
-  "difficulte": 2,
-  "question": "En quelle année la France a-t-elle remporté sa première Coupe du monde ?",
-  "reponse": 1998,
-  "unite": "année",
-  "tolerance": 0,
-  "bornes": [
-   1950,
-   2022
-  ],
-  "anecdote": "Zinédine Zidane a marqué deux buts de la tête en finale contre le Brésil."
- },
- {
-  "id": "spo-034",
+  "id": "spo-023",
   "categorie": "Sport",
   "sous_theme": "Marathon",
   "type": "fourchette",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quelle est la distance officielle d'un marathon, en kilomètres ?",
   "reponse": 42.195,
   "unite": "km",
@@ -544,11 +368,11 @@
   "anecdote": "Cette distance a été fixée aux JO de Londres en 1908, pour que la course parte du château de Windsor."
  },
  {
-  "id": "spo-035",
+  "id": "spo-024",
   "categorie": "Sport",
   "sous_theme": "Tennis",
   "type": "fourchette",
-  "difficulte": 5,
+  "difficulte": 6,
   "question": "Combien de mètres mesure la longueur d'un court de tennis ?",
   "reponse": 23.77,
   "unite": "m",
@@ -560,11 +384,11 @@
   "anecdote": "Cette mesure vient des 78 pieds du court original anglais."
  },
  {
-  "id": "spo-036",
+  "id": "spo-025",
   "categorie": "Sport",
   "sous_theme": "Cyclisme",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 7,
   "question": "Combien de kilomètres fait environ le Tour de France 2025 ?",
   "reponse": 3338,
   "unite": "km",
@@ -576,27 +400,11 @@
   "anecdote": "Le Tour le plus long de l'histoire, en 1926, faisait 5 745 km."
  },
  {
-  "id": "spo-037",
-  "categorie": "Sport",
-  "sous_theme": "Jeux olympiques",
-  "type": "fourchette",
-  "difficulte": 3,
-  "question": "Combien d'années séparent deux Jeux olympiques d'été ?",
-  "reponse": 4,
-  "unite": "ans",
-  "tolerance": 0,
-  "bornes": [
-   1,
-   10
-  ],
-  "anecdote": "Cette période s'appelait une « olympiade » dans la Grèce antique."
- },
- {
-  "id": "spo-038",
+  "id": "spo-026",
   "categorie": "Sport",
   "sous_theme": "Athlétisme",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 6,
   "question": "Quel est le record du monde de saut en hauteur masculin, en mètres ?",
   "reponse": 2.45,
   "unite": "m",
@@ -608,11 +416,11 @@
   "anecdote": "Javier Sotomayor l'a établi en 1993, et personne ne l'a battu depuis."
  },
  {
-  "id": "spo-039",
+  "id": "spo-027",
   "categorie": "Sport",
   "sous_theme": "Athlétisme",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Quel est le record du monde de saut à la perche d'Armand Duplantis au 1er janvier 2026, en mètres ?",
   "reponse": 6.3,
   "unite": "m",
@@ -624,27 +432,11 @@
   "anecdote": "Le Suédois bat souvent son propre record d'un seul centimètre, ce qui lui rapporte une prime à chaque fois."
  },
  {
-  "id": "spo-040",
+  "id": "spo-028",
   "categorie": "Sport",
   "sous_theme": "Football",
   "type": "fourchette",
-  "difficulte": 5,
-  "question": "Combien de minutes dure un match de football, hors prolongations et temps additionnel ?",
-  "reponse": 90,
-  "unite": "minutes",
-  "tolerance": 0,
-  "bornes": [
-   40,
-   150
-  ],
-  "anecdote": "Les arbitres ajoutent du temps additionnel pour compenser les arrêts de jeu."
- },
- {
-  "id": "spo-041",
-  "categorie": "Sport",
-  "sous_theme": "Football",
-  "type": "fourchette",
-  "difficulte": 9,
+  "difficulte": 6,
   "question": "Combien de buts Just Fontaine a-t-il marqués lors de la Coupe du monde 1958, un record ?",
   "reponse": 13,
   "unite": "buts",
@@ -656,11 +448,11 @@
   "anecdote": "Il jouait avec des chaussures prêtées par un coéquipier, les siennes s'étant cassées."
  },
  {
-  "id": "spo-042",
+  "id": "spo-029",
   "categorie": "Sport",
   "sous_theme": "Jeux olympiques",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "Combien de médailles la France a-t-elle remportées aux JO de Paris 2024 ?",
   "reponse": 64,
   "unite": "médailles",
@@ -672,11 +464,11 @@
   "anecdote": "Dont 16 médailles d'or, son meilleur bilan depuis 1900."
  },
  {
-  "id": "spo-043",
+  "id": "spo-030",
   "categorie": "Sport",
   "sous_theme": "Basket",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Quelle est la hauteur d'un panier de basket, en mètres ?",
   "reponse": 3.05,
   "unite": "m",
@@ -688,11 +480,11 @@
   "anecdote": "Cette hauteur correspond aux 10 pieds du balcon où James Naismith a accroché ses premiers paniers de pêches, en 1891."
  },
  {
-  "id": "spo-044",
+  "id": "spo-031",
   "categorie": "Sport",
   "sous_theme": "Rugby",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "En quelle année a eu lieu la première Coupe du monde de rugby ?",
   "reponse": 1987,
   "unite": "année",
@@ -704,11 +496,11 @@
   "anecdote": "Elle a été coorganisée par la Nouvelle-Zélande et l'Australie, et gagnée par les All Blacks."
  },
  {
-  "id": "spo-045",
+  "id": "spo-032",
   "categorie": "Sport",
   "sous_theme": "Golf",
   "type": "fourchette",
-  "difficulte": 10,
+  "difficulte": 7,
   "question": "Combien d'alvéoles compte en moyenne une balle de golf ?",
   "reponse": 350,
   "unite": "alvéoles",
@@ -720,11 +512,11 @@
   "anecdote": "Les alvéoles réduisent la traînée : une balle lisse irait environ deux fois moins loin."
  },
  {
-  "id": "spo-046",
+  "id": "spo-033",
   "categorie": "Sport",
   "sous_theme": "Football",
   "type": "fourchette",
-  "difficulte": 4,
+  "difficulte": 5,
   "question": "Combien mesure la largeur d'un but de football, en mètres ?",
   "reponse": 7.32,
   "unite": "m",
@@ -736,31 +528,11 @@
   "anecdote": "Cela correspond à 8 yards, mesure fixée par les Anglais au XIXe siècle."
  },
  {
-  "id": "spo-047",
-  "categorie": "Sport",
-  "sous_theme": "Football",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Qui suis-je ?",
-  "reponse": "Zinédine Zidane",
-  "reponses_acceptees": [
-   "Zidane",
-   "Zizou"
-  ],
-  "indices": [
-   "Je suis né à Marseille",
-   "J'ai commencé ma carrière professionnelle à Cannes",
-   "J'ai été expulsé en finale de la Coupe du monde 2006",
-   "On m'appelle Zizou"
-  ],
-  "anecdote": "Entraîneur, il a remporté trois Ligues des champions consécutives avec le Real Madrid."
- },
- {
-  "id": "spo-048",
+  "id": "spo-034",
   "categorie": "Sport",
   "sous_theme": "Tennis",
   "type": "indices",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Roger Federer",
   "reponses_acceptees": [
@@ -775,11 +547,11 @@
   "anecdote": "Il a été n°1 mondial pendant 237 semaines consécutives, un record."
  },
  {
-  "id": "spo-049",
+  "id": "spo-035",
   "categorie": "Sport",
   "sous_theme": "Athlétisme",
   "type": "indices",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Usain Bolt",
   "reponses_acceptees": [
@@ -794,11 +566,11 @@
   "anecdote": "Il a avoué avoir mangé environ 1 000 nuggets pendant les JO de Pékin."
  },
  {
-  "id": "spo-050",
+  "id": "spo-036",
   "categorie": "Sport",
   "sous_theme": "Basket",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Michael Jordan",
   "reponses_acceptees": [
@@ -813,11 +585,11 @@
   "anecdote": "Il a porté le numéro 23, la moitié de 45, le numéro de son frère qu'il admirait."
  },
  {
-  "id": "spo-051",
+  "id": "spo-037",
   "categorie": "Sport",
   "sous_theme": "Cyclisme",
   "type": "indices",
-  "difficulte": 7,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Eddy Merckx",
   "reponses_acceptees": [
@@ -832,11 +604,11 @@
   "anecdote": "Il a remporté en 1969 à la fois le maillot jaune, le vert et le classement du meilleur grimpeur."
  },
  {
-  "id": "spo-052",
+  "id": "spo-038",
   "categorie": "Sport",
   "sous_theme": "Football",
   "type": "indices",
-  "difficulte": 8,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Pelé",
   "reponses_acceptees": [
@@ -851,11 +623,11 @@
   "anecdote": "Il a gagné sa première Coupe du monde en 1958, à seulement 17 ans."
  },
  {
-  "id": "spo-053",
+  "id": "spo-039",
   "categorie": "Sport",
   "sous_theme": "Jeux olympiques",
   "type": "indices",
-  "difficulte": 9,
+  "difficulte": 4,
   "question": "Qui suis-je ?",
   "reponse": "Marie-José Pérec",
   "reponses_acceptees": [
@@ -871,11 +643,11 @@
   "anecdote": "Elle est la seule athlète française à avoir remporté trois titres olympiques en athlétisme."
  },
  {
-  "id": "spo-054",
+  "id": "spo-040",
   "categorie": "Sport",
   "sous_theme": "Rugby",
   "type": "indices",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Antoine Dupont",
   "reponses_acceptees": [
@@ -890,11 +662,11 @@
   "anecdote": "Il a été élu meilleur joueur du monde World Rugby en 2021."
  },
  {
-  "id": "spo-055",
+  "id": "spo-041",
   "categorie": "Sport",
   "sous_theme": "Ski",
   "type": "indices",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Qui suis-je ?",
   "reponse": "Jean-Claude Killy",
   "reponses_acceptees": [
@@ -908,11 +680,11 @@
   "anecdote": "Il a réussi le triplé descente, slalom géant et slalom, seulement réalisé avant lui par Toni Sailer."
  },
  {
-  "id": "spo-056",
+  "id": "spo-042",
   "categorie": "Sport",
   "sous_theme": "Natation",
   "type": "indices",
-  "difficulte": 7,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Laure Manaudou",
   "reponses_acceptees": [
@@ -927,107 +699,61 @@
   "anecdote": "Son frère Florent a gagné le 50 m nage libre aux JO de Londres en 2012."
  },
  {
-  "id": "spo-057",
-  "categorie": "Sport",
-  "sous_theme": "Football",
-  "type": "vf",
-  "difficulte": 2,
-  "question": "Vrai ou faux : un gardien de but peut toucher le ballon avec les mains dans sa surface de réparation.",
-  "reponse": "Vrai",
-  "anecdote": "Mais pas sur une passe volontaire du pied d'un coéquipier, depuis 1992."
- },
- {
-  "id": "spo-058",
+  "id": "spo-043",
   "categorie": "Sport",
   "sous_theme": "Jeux olympiques",
   "type": "vf",
-  "difficulte": 4,
+  "difficulte": 5,
   "question": "Vrai ou faux : le golf était au programme des JO de 1900 à Paris.",
   "reponse": "Vrai",
   "anecdote": "Il en a disparu après 1904 et n'est revenu qu'aux JO de Rio en 2016."
  },
  {
-  "id": "spo-059",
+  "id": "spo-044",
   "categorie": "Sport",
   "sous_theme": "Tennis",
   "type": "vf",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Vrai ou faux : le mot « tennis » viendrait du français « tenez ».",
   "reponse": "Vrai",
   "anecdote": "Les joueurs de jeu de paume criaient « tenez ! » en servant la balle."
  },
  {
-  "id": "spo-060",
+  "id": "spo-045",
   "categorie": "Sport",
   "sous_theme": "Cyclisme",
   "type": "vf",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Vrai ou faux : le Tour de France a toujours eu son arrivée sur les Champs-Élysées.",
   "reponse": "Faux",
   "anecdote": "L'arrivée sur les Champs date de 1975. En 2024, à cause des JO, l'arrivée a eu lieu à Nice."
  },
  {
-  "id": "spo-061",
+  "id": "spo-046",
   "categorie": "Sport",
   "sous_theme": "Football",
   "type": "vf",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Vrai ou faux : le carton rouge a été utilisé dès la première Coupe du monde, en 1930.",
   "reponse": "Faux",
   "anecdote": "Les cartons jaunes et rouges ont été utilisés pour la première fois en Coupe du monde en 1970."
  },
  {
-  "id": "spo-062",
+  "id": "spo-047",
   "categorie": "Sport",
   "sous_theme": "Sports d'hiver",
   "type": "vf",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Vrai ou faux : la France a organisé trois fois les Jeux olympiques d'hiver.",
   "reponse": "Vrai",
   "anecdote": "Chamonix en 1924, Grenoble en 1968 et Albertville en 1992. Les Alpes françaises accueilleront ceux de 2030."
  },
  {
-  "id": "spo-063",
-  "categorie": "Sport",
-  "sous_theme": "Rugby",
-  "type": "vf",
-  "difficulte": 3,
-  "question": "Vrai ou faux : au rugby, on ne peut pas faire de passe vers l'avant avec les mains.",
-  "reponse": "Vrai",
-  "anecdote": "Une passe en avant est sanctionnée d'une mêlée pour l'équipe adverse."
- },
- {
-  "id": "spo-064",
-  "categorie": "Sport",
-  "sous_theme": "Football",
-  "type": "libre",
-  "difficulte": 2,
-  "question": "Comment s'appelle le stade national de la France, à Saint-Denis ?",
-  "reponse": "Le Stade de France",
-  "reponses_acceptees": [
-   "Stade de France"
-  ],
-  "anecdote": "Il a été construit pour la Coupe du monde 1998 et compte environ 80 000 places."
- },
- {
-  "id": "spo-065",
-  "categorie": "Sport",
-  "sous_theme": "Sports US",
-  "type": "libre",
-  "difficulte": 4,
-  "question": "Quel sport se joue avec une batte et quatre bases ?",
-  "reponse": "Le baseball",
-  "reponses_acceptees": [
-   "Baseball"
-  ],
-  "anecdote": "Le terrain en forme de losange s'appelle le « diamant »."
- },
- {
-  "id": "spo-066",
+  "id": "spo-048",
   "categorie": "Sport",
   "sous_theme": "Tennis",
   "type": "libre",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Comment appelle-t-on, au tennis, un service gagnant que l'adversaire ne touche pas ?",
   "reponse": "Un ace",
   "reponses_acceptees": [
@@ -1037,24 +763,11 @@
   "anecdote": "Le record de 113 aces en un seul match a été établi par John Isner à Wimbledon en 2010."
  },
  {
-  "id": "spo-067",
-  "categorie": "Sport",
-  "sous_theme": "Boxe",
-  "type": "libre",
-  "difficulte": 6,
-  "question": "Jusqu'à quel nombre l'arbitre de boxe compte-t-il pour déclarer un K.O. ?",
-  "reponse": "10",
-  "reponses_acceptees": [
-   "Dix"
-  ],
-  "anecdote": "Le boxeur à terre doit se relever avant la fin du compte, sinon le combat est terminé."
- },
- {
-  "id": "spo-068",
+  "id": "spo-049",
   "categorie": "Sport",
   "sous_theme": "Sports de combat",
   "type": "libre",
-  "difficulte": 7,
+  "difficulte": 2,
   "question": "De quel pays vient le judo ?",
   "reponse": "Le Japon",
   "reponses_acceptees": [
@@ -1063,11 +776,11 @@
   "anecdote": "Jigoro Kano l'a créé en 1882 à partir du jujitsu. Son nom signifie « la voie de la souplesse »."
  },
  {
-  "id": "spo-069",
+  "id": "spo-050",
   "categorie": "Sport",
   "sous_theme": "Cyclisme",
   "type": "libre",
-  "difficulte": 8,
+  "difficulte": 3,
   "question": "Comment s'appelle la célèbre classique cycliste surnommée « l'enfer du Nord » ?",
   "reponse": "Paris-Roubaix",
   "reponses_acceptees": [
@@ -1076,16 +789,443 @@
   "anecdote": "Le vainqueur reçoit un pavé en guise de trophée."
  },
  {
-  "id": "spo-070",
+  "id": "spo-051",
   "categorie": "Sport",
   "sous_theme": "Sports d'hiver",
   "type": "libre",
-  "difficulte": 9,
+  "difficulte": 2,
   "question": "Quel sport combine le ski de fond et le tir à la carabine ?",
   "reponse": "Le biathlon",
   "reponses_acceptees": [
    "Biathlon"
   ],
   "anecdote": "Martin Fourcade est l'un des sportifs français les plus titrés de l'histoire des Jeux olympiques."
+ },
+ {
+  "id": "spo-052",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel club a remporté la première Coupe des clubs champions européens, en 1956 ?",
+  "choix": [
+   "Le Real Madrid",
+   "Le Stade de Reims",
+   "Le Benfica Lisbonne",
+   "L'AC Milan"
+  ],
+  "reponse": "Le Real Madrid",
+  "anecdote": "Il a battu Reims 4-3 en finale au Parc des Princes, puis gagné les quatre éditions suivantes."
+ },
+ {
+  "id": "spo-053",
+  "categorie": "Sport",
+  "sous_theme": "Tennis",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel joueur a réussi deux fois le Grand Chelem calendaire, en 1962 et 1969 ?",
+  "choix": [
+   "Rod Laver",
+   "Ken Rosewall",
+   "Roy Emerson",
+   "Don Budge"
+  ],
+  "reponse": "Rod Laver",
+  "anecdote": "Entre ses deux Grands Chelems, il était passé professionnel et n'avait plus le droit de jouer ces tournois."
+ },
+ {
+  "id": "spo-054",
+  "categorie": "Sport",
+  "sous_theme": "Cyclisme",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Qui a remporté le premier Tour de France, en 1903 ?",
+  "choix": [
+   "Maurice Garin",
+   "Henri Cornet",
+   "Lucien Petit-Breton",
+   "Hippolyte Aucouturier"
+  ],
+  "reponse": "Maurice Garin",
+  "anecdote": "Surnommé « le petit ramoneur », il a été déclassé l'année suivante pour tricherie, avec d'autres coureurs."
+ },
+ {
+  "id": "spo-055",
+  "categorie": "Sport",
+  "sous_theme": "Rugby",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel pays a remporté la première Coupe du monde de rugby, en 1987 ?",
+  "choix": [
+   "La Nouvelle-Zélande",
+   "L'Australie",
+   "La France",
+   "L'Angleterre"
+  ],
+  "reponse": "La Nouvelle-Zélande",
+  "anecdote": "Les All Blacks ont battu la France en finale, à Auckland."
+ },
+ {
+  "id": "spo-056",
+  "categorie": "Sport",
+  "sous_theme": "Formule 1",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel pilote français a été quatre fois champion du monde de F1 ?",
+  "choix": [
+   "Alain Prost",
+   "Jean Alesi",
+   "René Arnoux",
+   "Didier Pironi"
+  ],
+  "reponse": "Alain Prost",
+  "anecdote": "Surnommé « le Professeur », il a vécu une rivalité légendaire avec Ayrton Senna chez McLaren."
+ },
+ {
+  "id": "spo-057",
+  "categorie": "Sport",
+  "sous_theme": "Athlétisme",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel athlète américain a remporté quatre médailles d'or aux JO de Berlin, en 1936 ?",
+  "choix": [
+   "Jesse Owens",
+   "Carl Lewis",
+   "Paavo Nurmi",
+   "Ralph Metcalfe"
+  ],
+  "reponse": "Jesse Owens",
+  "anecdote": "Il a remporté le 100 m, le 200 m, la longueur et le relais 4 x 100 m, sous les yeux d'Hitler."
+ },
+ {
+  "id": "spo-058",
+  "categorie": "Sport",
+  "sous_theme": "Athlétisme",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel coureur a remporté le 5 000 m, le 10 000 m et le marathon aux JO d'Helsinki en 1952 ?",
+  "choix": [
+   "Emil Zátopek",
+   "Paavo Nurmi",
+   "Abebe Bikila",
+   "Lasse Virén"
+  ],
+  "reponse": "Emil Zátopek",
+  "anecdote": "Il courait son tout premier marathon."
+ },
+ {
+  "id": "spo-059",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel joueur a marqué le « but en or » qui a offert l'Euro 2000 à la France ?",
+  "choix": [
+   "David Trezeguet",
+   "Sylvain Wiltord",
+   "Thierry Henry",
+   "Robert Pirès"
+  ],
+  "reponse": "David Trezeguet",
+  "anecdote": "La France était menée par l'Italie jusqu'à l'égalisation de Wiltord, dans les dernières secondes du temps réglementaire."
+ },
+ {
+  "id": "spo-060",
+  "categorie": "Sport",
+  "sous_theme": "Basket",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle franchise NBA a remporté 11 titres en 13 saisons, de 1957 à 1969 ?",
+  "choix": [
+   "Les Boston Celtics",
+   "Les Los Angeles Lakers",
+   "Les Chicago Bulls",
+   "Les Philadelphia 76ers"
+  ],
+  "reponse": "Les Boston Celtics",
+  "anecdote": "Leur pivot Bill Russell a gagné onze bagues de champion, un record."
+ },
+ {
+  "id": "spo-061",
+  "categorie": "Sport",
+  "sous_theme": "Golf",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel golfeur détient le record de 18 victoires en tournois majeurs ?",
+  "choix": [
+   "Jack Nicklaus",
+   "Tiger Woods",
+   "Arnold Palmer",
+   "Gary Player"
+  ],
+  "reponse": "Jack Nicklaus",
+  "anecdote": "On le surnommait « l'Ours d'or ». Tiger Woods en compte 15."
+ },
+ {
+  "id": "spo-062",
+  "categorie": "Sport",
+  "sous_theme": "Cyclisme",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel coureur détient le record de 35 victoires d'étapes sur le Tour de France ?",
+  "choix": [
+   "Mark Cavendish",
+   "Eddy Merckx",
+   "Bernard Hinault",
+   "André Darrigade"
+  ],
+  "reponse": "Mark Cavendish",
+  "anecdote": "Il a battu le record d'Eddy Merckx en 2024, lors de son dernier Tour."
+ },
+ {
+  "id": "spo-063",
+  "categorie": "Sport",
+  "sous_theme": "Ski",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel skieur alpin détient le record de huit médailles olympiques ?",
+  "choix": [
+   "Kjetil André Aamodt",
+   "Lasse Kjus",
+   "Aksel Lund Svindal",
+   "Marcel Hirscher"
+  ],
+  "reponse": "Kjetil André Aamodt",
+  "anecdote": "Le Norvégien a remporté des médailles sur quatre éditions des Jeux, de 1992 à 2006."
+ },
+ {
+  "id": "spo-064",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel joueur a marqué 91 buts au cours de la seule année civile 2012 ?",
+  "reponse": "Lionel Messi",
+  "reponses_acceptees": [
+   "Messi"
+  ],
+  "anecdote": "Il a battu le record de Gerd Müller, qui en avait inscrit 85 en 1972."
+ },
+ {
+  "id": "spo-065",
+  "categorie": "Sport",
+  "sous_theme": "Rugby",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel trophée récompense le vainqueur du match France-Italie du Tournoi des Six Nations ?",
+  "reponse": "Le trophée Garibaldi",
+  "reponses_acceptees": [
+   "Garibaldi",
+   "Trophée Garibaldi"
+  ],
+  "anecdote": "Il honore Giuseppe Garibaldi, héros de l'unité italienne, né à Nice en 1807."
+ },
+ {
+  "id": "spo-066",
+  "categorie": "Sport",
+  "sous_theme": "Tennis",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Comment s'appelle le trophée remis au vainqueur du simple messieurs de Roland-Garros ?",
+  "reponse": "La coupe des Mousquetaires",
+  "reponses_acceptees": [
+   "Coupe des Mousquetaires",
+   "Mousquetaires"
+  ],
+  "anecdote": "Il rend hommage à Borotra, Brugnon, Cochet et Lacoste, vainqueurs de la Coupe Davis en 1927."
+ },
+ {
+  "id": "spo-067",
+  "categorie": "Sport",
+  "sous_theme": "Jeux olympiques",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment s'appellent les mascottes des JO de Paris 2024 ?",
+  "reponse": "Les Phryges",
+  "reponses_acceptees": [
+   "Phryge",
+   "Phryges"
+  ],
+  "anecdote": "Elles s'inspirent du bonnet phrygien, symbole de la Révolution et de la République."
+ },
+ {
+  "id": "spo-068",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année la Coupe des clubs champions a-t-elle pris le nom de Ligue des champions ?",
+  "reponse": 1992,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1950,
+   2010
+  ],
+  "anecdote": "L'Olympique de Marseille a remporté la première finale sous ce nom, en 1993."
+ },
+ {
+  "id": "spo-069",
+  "categorie": "Sport",
+  "sous_theme": "Athlétisme",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Quel est le record du monde du saut en longueur masculin, établi par Mike Powell en 1991 ?",
+  "reponse": 8.95,
+  "unite": "m",
+  "tolerance": 0,
+  "bornes": [
+   6,
+   10
+  ],
+  "anecdote": "Il a battu le record de Bob Beamon (8,90 m), qui tenait depuis 1968."
+ },
+ {
+  "id": "spo-070",
+  "categorie": "Sport",
+  "sous_theme": "Tennis",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de titres du Grand Chelem en simple Serena Williams a-t-elle remportés ?",
+  "reponse": 23,
+  "unite": "titres",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   40
+  ],
+  "anecdote": "Elle a gagné l'Open d'Australie 2017 alors qu'elle était enceinte de deux mois."
+ },
+ {
+  "id": "spo-071",
+  "categorie": "Sport",
+  "sous_theme": "Jeux olympiques",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année ont eu lieu les premiers Jeux olympiques d'hiver, à Chamonix ?",
+  "reponse": 1924,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1880,
+   1960
+  ],
+  "anecdote": "Ils s'appelaient d'abord « Semaine internationale des sports d'hiver » et n'ont été reconnus comme JO qu'après coup."
+ },
+ {
+  "id": "spo-072",
+  "categorie": "Sport",
+  "sous_theme": "Jeux olympiques",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : le tir à la corde a été une discipline olympique.",
+  "reponse": "Vrai",
+  "anecdote": "Il a été au programme de 1900 à 1920. La France a remporté l'argent en 1900."
+ },
+ {
+  "id": "spo-073",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : la France a participé à la toute première Coupe du monde, en 1930.",
+  "reponse": "Vrai",
+  "anecdote": "Le Français Lucien Laurent a même marqué le tout premier but de l'histoire de la compétition."
+ },
+ {
+  "id": "spo-074",
+  "categorie": "Sport",
+  "sous_theme": "Sportifs",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Qui suis-je ?",
+  "reponse": "Nadia Comăneci",
+  "reponses_acceptees": [
+   "Nadia Comaneci",
+   "Comaneci"
+  ],
+  "indices": [
+   "Je suis née en Roumanie en 1961",
+   "J'ai été entraînée par Béla Károlyi",
+   "Le tableau d'affichage n'a pas pu afficher ma note",
+   "J'ai obtenu le premier 10 de l'histoire de la gymnastique olympique"
+  ],
+  "anecdote": "Le tableau, prévu pour trois chiffres, a affiché 1.00 à Montréal en 1976."
+ },
+ {
+  "id": "spo-075",
+  "categorie": "Sport",
+  "sous_theme": "Sportifs",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Qui suis-je ?",
+  "reponse": "Alain Mimoun",
+  "reponses_acceptees": [
+   "Mimoun"
+  ],
+  "indices": [
+   "Je suis né en Algérie en 1921",
+   "J'ai souvent terminé deuxième derrière Emil Zátopek",
+   "J'ai remporté 32 titres de champion de France",
+   "J'ai gagné le marathon des JO de Melbourne en 1956"
+  ],
+  "anecdote": "Zátopek, sixième ce jour-là, est venu le féliciter à l'arrivée."
+ },
+ {
+  "id": "spo-076",
+  "categorie": "Sport",
+  "sous_theme": "Cyclisme",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Qui a remporté le Tour de France 1947, le premier de l'après-guerre ?",
+  "choix": [
+   "Jean Robic",
+   "Louison Bobet",
+   "Fausto Coppi",
+   "Gino Bartali"
+  ],
+  "reponse": "Jean Robic",
+  "anecdote": "Il n'a pris le maillot jaune qu'au soir de la dernière étape, en attaquant dans la côte de Bonsecours."
+ },
+ {
+  "id": "spo-077",
+  "categorie": "Sport",
+  "sous_theme": "Rugby",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Comment s'appelle le trophée remis au vainqueur de la Coupe du monde de rugby ?",
+  "reponse": "La coupe Webb Ellis",
+  "reponses_acceptees": [
+   "Webb Ellis",
+   "Coupe Webb Ellis",
+   "Coupe Webb-Ellis"
+  ],
+  "anecdote": "Il honore William Webb Ellis, qui aurait inventé le rugby en prenant le ballon à la main en 1823."
+ },
+ {
+  "id": "spo-078",
+  "categorie": "Sport",
+  "sous_theme": "Boxe",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel boxeur français est devenu champion du monde des poids moyens en 1948 ?",
+  "choix": [
+   "Marcel Cerdan",
+   "Georges Carpentier",
+   "Laurent Dauthuille",
+   "Jean-Claude Bouttier"
+  ],
+  "reponse": "Marcel Cerdan",
+  "anecdote": "Il est mort l'année suivante dans un accident d'avion, alors qu'il rejoignait Édith Piaf à New York."
+ },
+ {
+  "id": "spo-079",
+  "categorie": "Sport",
+  "sous_theme": "Jeux olympiques",
+  "type": "vf",
+  "difficulte": 10,
+  "question": "Vrai ou faux : Pierre de Coubertin a lui-même remporté une médaille d'or olympique.",
+  "reponse": "Vrai",
+  "anecdote": "En 1912, il a gagné le concours d'art (littérature) avec son « Ode au sport », signée sous pseudonyme."
  }
 ]

@@ -91,7 +91,7 @@
   /* ---- Métadonnées du jeu ---------------------------------------------- */
   PQA.ROUNDS = {
     mystere: { name: 'Le Thème Mystère', short: 'Thème Mystère', icon: '🎡', desc: 'La roue choisit le thème, tu choisis ton niveau de 1 à 10. Plus c’est dur, plus ça rapporte !' },
-    fourchette: { name: 'La Fourchette', short: 'Fourchette', icon: '📏', desc: 'Encadre la bonne réponse avec tes deux curseurs. La fourchette la plus serrée rafle la mise.' },
+    fourchette: { name: 'La Fourchette', short: 'Fourchette', icon: '📏', desc: 'Donne un seul chiffre et vise pile ! Plus tu es proche de la réponse, plus tu marques.' },
     indices: { name: 'Le Buzzer à indices', short: 'Indices', icon: '🔔', desc: 'Les indices tombent un à un. Buzze dès que tu sais : plus tu es rapide, plus tu gagnes.' },
     quatre: { name: 'Le 4 à la suite', short: '4 à la suite', icon: '4️⃣', desc: 'Choisis ton thème et enchaîne 4 bonnes réponses d’affilée en 40 secondes. Une erreur et tout repart à zéro !' },
     eclair: { name: 'Tous en même temps', short: 'QCM éclair', icon: '⚡', desc: 'Tout le monde répond en même temps. Bonus de rapidité pour les plus vifs.' },

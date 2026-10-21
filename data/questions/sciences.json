@@ -2,41 +2,9 @@
  {
   "id": "sci-001",
   "categorie": "Sciences & Nature",
-  "sous_theme": "Espace",
+  "sous_theme": "Animaux",
   "type": "qcm",
   "difficulte": 3,
-  "question": "Quelle est la planète la plus proche du Soleil ?",
-  "choix": [
-   "Mercure",
-   "Vénus",
-   "Mars",
-   "La Terre"
-  ],
-  "reponse": "Mercure",
-  "anecdote": "Une année n'y dure que 88 jours terrestres."
- },
- {
-  "id": "sci-002",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Animaux",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quel est l'animal terrestre le plus rapide ?",
-  "choix": [
-   "Le guépard",
-   "Le lion",
-   "L'antilope",
-   "Le lévrier"
-  ],
-  "reponse": "Le guépard",
-  "anecdote": "Il peut atteindre environ 100 km/h, mais seulement sur quelques centaines de mètres."
- },
- {
-  "id": "sci-003",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Animaux",
-  "type": "qcm",
-  "difficulte": 5,
   "question": "Combien de cœurs possède une pieuvre ?",
   "choix": [
    "Trois",
@@ -48,11 +16,11 @@
   "anecdote": "Et son sang est bleu, grâce à une protéine à base de cuivre."
  },
  {
-  "id": "sci-004",
+  "id": "sci-002",
   "categorie": "Sciences & Nature",
   "sous_theme": "Corps humain",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Quel est l'organe le plus lourd du corps humain ?",
   "choix": [
    "La peau",
@@ -64,7 +32,7 @@
   "anecdote": "Elle pèse environ 4 kg chez l'adulte. Le foie, lui, est le plus lourd des organes internes."
  },
  {
-  "id": "sci-005",
+  "id": "sci-003",
   "categorie": "Sciences & Nature",
   "sous_theme": "Botanique",
   "type": "qcm",
@@ -80,11 +48,11 @@
   "anecdote": "L'oxygène qu'elles rejettent provient en réalité de l'eau, pas du CO₂."
  },
  {
-  "id": "sci-006",
+  "id": "sci-004",
   "categorie": "Sciences & Nature",
   "sous_theme": "Chimie",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quel est le symbole chimique de l'or ?",
   "choix": [
    "Au",
@@ -96,11 +64,11 @@
   "anecdote": "Tout l'or extrait dans l'histoire de l'humanité tiendrait dans un cube d'environ 22 m de côté."
  },
  {
-  "id": "sci-007",
+  "id": "sci-005",
   "categorie": "Sciences & Nature",
   "sous_theme": "Espace",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Quelle planète possède le plus de lunes connues ?",
   "choix": [
    "Saturne",
@@ -112,11 +80,11 @@
   "anecdote": "En 2025, l'annonce de 128 nouvelles lunes a porté son total à 274."
  },
  {
-  "id": "sci-008",
+  "id": "sci-006",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quel est le plus grand animal ayant jamais existé ?",
   "choix": [
    "La baleine bleue",
@@ -128,27 +96,11 @@
   "anecdote": "Sa langue, à elle seule, peut peser autant qu'un éléphant."
  },
  {
-  "id": "sci-009",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Physique",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Quel scientifique a formulé la théorie de la relativité ?",
-  "choix": [
-   "Albert Einstein",
-   "Isaac Newton",
-   "Stephen Hawking",
-   "Niels Bohr"
-  ],
-  "reponse": "Albert Einstein",
-  "anecdote": "Il a reçu le prix Nobel en 1921... pour ses travaux sur l'effet photoélectrique, pas pour la relativité."
- },
- {
-  "id": "sci-010",
+  "id": "sci-007",
   "categorie": "Sciences & Nature",
   "sous_theme": "Corps humain",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quel est l'os le plus long du corps humain ?",
   "choix": [
    "Le fémur",
@@ -160,43 +112,11 @@
   "anecdote": "Il représente environ un quart de la taille d'une personne."
  },
  {
-  "id": "sci-011",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Animaux",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quel est le seul mammifère capable de voler activement ?",
-  "choix": [
-   "La chauve-souris",
-   "L'écureuil volant",
-   "Le colugo",
-   "Le phalanger volant"
-  ],
-  "reponse": "La chauve-souris",
-  "anecdote": "Les chauves-souris représentent environ une espèce de mammifères sur cinq."
- },
- {
-  "id": "sci-012",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Animaux",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Combien de pattes a une araignée ?",
-  "choix": [
-   "Huit",
-   "Six",
-   "Dix",
-   "Douze"
-  ],
-  "reponse": "Huit",
-  "anecdote": "Ce ne sont pas des insectes, qui en ont six, mais des arachnides, comme les scorpions."
- },
- {
-  "id": "sci-013",
+  "id": "sci-008",
   "categorie": "Sciences & Nature",
   "sous_theme": "Espace",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Quelle est la planète la plus chaude du système solaire ?",
   "choix": [
    "Vénus",
@@ -208,11 +128,11 @@
   "anecdote": "Sa surface dépasse 460 °C, à cause d'un effet de serre extrême, alors qu'elle est plus loin du Soleil que Mercure."
  },
  {
-  "id": "sci-014",
+  "id": "sci-009",
   "categorie": "Sciences & Nature",
   "sous_theme": "Chimie",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quel est l'élément chimique le plus abondant dans l'univers ?",
   "choix": [
    "L'hydrogène",
@@ -224,11 +144,11 @@
   "anecdote": "Il représente environ les trois quarts de la matière ordinaire de l'univers."
  },
  {
-  "id": "sci-015",
+  "id": "sci-010",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Quel mammifère a la plus longue durée de gestation ?",
   "choix": [
    "L'éléphant",
@@ -240,11 +160,11 @@
   "anecdote": "Près de 22 mois : l'éléphanteau pèse plus de 100 kg à la naissance."
  },
  {
-  "id": "sci-016",
+  "id": "sci-011",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "De quelle couleur est la peau d'un ours polaire ?",
   "choix": [
    "Noire",
@@ -256,11 +176,11 @@
   "anecdote": "Ses poils ne sont pas blancs mais transparents et creux : ils diffusent la lumière."
  },
  {
-  "id": "sci-017",
+  "id": "sci-012",
   "categorie": "Sciences & Nature",
   "sous_theme": "Santé",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle vitamine la peau fabrique-t-elle quand elle est exposée au soleil ?",
   "choix": [
    "La vitamine D",
@@ -272,11 +192,11 @@
   "anecdote": "Elle est indispensable pour fixer le calcium dans les os."
  },
  {
-  "id": "sci-018",
+  "id": "sci-013",
   "categorie": "Sciences & Nature",
   "sous_theme": "Espace",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Combien de temps met la lumière du Soleil pour atteindre la Terre ?",
   "choix": [
    "Environ 8 minutes",
@@ -288,11 +208,11 @@
   "anecdote": "Plus précisément 8 minutes et 20 secondes : on voit toujours le Soleil tel qu'il était un peu avant."
  },
  {
-  "id": "sci-019",
+  "id": "sci-014",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quel est le plus grand des primates ?",
   "choix": [
    "Le gorille",
@@ -304,7 +224,7 @@
   "anecdote": "Un gorille mâle adulte peut peser plus de 200 kg."
  },
  {
-  "id": "sci-020",
+  "id": "sci-015",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
@@ -320,27 +240,11 @@
   "anecdote": "Un seul cocon peut contenir un fil continu d'environ 1 km."
  },
  {
-  "id": "sci-021",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Corps humain",
-  "type": "qcm",
-  "difficulte": 3,
-  "question": "Quelle partie de l'œil lui donne sa couleur ?",
-  "choix": [
-   "L'iris",
-   "La pupille",
-   "La rétine",
-   "La cornée"
-  ],
-  "reponse": "L'iris",
-  "anecdote": "Tous les yeux bleus descendraient d'une seule mutation apparue il y a 6 000 à 10 000 ans."
- },
- {
-  "id": "sci-022",
+  "id": "sci-016",
   "categorie": "Sciences & Nature",
   "sous_theme": "Chimie",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quel métal est liquide à température ambiante ?",
   "choix": [
    "Le mercure",
@@ -352,11 +256,11 @@
   "anecdote": "Le gallium, lui, fond dans la main : il devient liquide vers 30 °C."
  },
  {
-  "id": "sci-023",
+  "id": "sci-017",
   "categorie": "Sciences & Nature",
   "sous_theme": "Espace",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quelle est la grande galaxie voisine de la Voie lactée ?",
   "choix": [
    "Andromède",
@@ -368,11 +272,11 @@
   "anecdote": "Elle se rapproche de nous et pourrait entrer en collision avec la Voie lactée dans quelques milliards d'années."
  },
  {
-  "id": "sci-024",
+  "id": "sci-018",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel minuscule animal a survécu à une exposition au vide spatial ?",
   "choix": [
    "Le tardigrade",
@@ -384,11 +288,11 @@
   "anecdote": "En 2007, ces « oursons d'eau » de moins d'1 mm ont survécu dix jours dans l'espace, en orbite autour de la Terre."
  },
  {
-  "id": "sci-025",
+  "id": "sci-019",
   "categorie": "Sciences & Nature",
   "sous_theme": "Santé",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quel groupe sanguin est le « donneur universel » de globules rouges ?",
   "choix": [
    "O négatif",
@@ -400,27 +304,11 @@
   "anecdote": "À l'inverse, les personnes AB positif sont receveurs universels."
  },
  {
-  "id": "sci-026",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Espace",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quelle est la plus grande planète du système solaire ?",
-  "choix": [
-   "Jupiter",
-   "Saturne",
-   "Neptune",
-   "Uranus"
-  ],
-  "reponse": "Jupiter",
-  "anecdote": "Sa Grande Tache rouge est une tempête plus large que la Terre, observée depuis au moins le XIXe siècle."
- },
- {
-  "id": "sci-027",
+  "id": "sci-020",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quel est le seul oiseau capable de voler en marche arrière ?",
   "choix": [
    "Le colibri",
@@ -432,11 +320,11 @@
   "anecdote": "Son cœur peut battre plus de 1 200 fois par minute."
  },
  {
-  "id": "sci-028",
+  "id": "sci-021",
   "categorie": "Sciences & Nature",
   "sous_theme": "Botanique",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Quel arbre détient le record de longévité pour un individu unique ?",
   "choix": [
    "Le pin Bristlecone",
@@ -448,11 +336,11 @@
   "anecdote": "L'un d'eux, surnommé « Mathusalem », pousse en Californie depuis plus de 4 800 ans."
  },
  {
-  "id": "sci-029",
+  "id": "sci-022",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Quel animal possède les plus grands yeux du règne animal ?",
   "choix": [
    "Le calmar colossal",
@@ -464,11 +352,11 @@
   "anecdote": "Ils peuvent mesurer environ 27 cm de diamètre, la taille d'un ballon de football."
  },
  {
-  "id": "sci-030",
+  "id": "sci-023",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quel est le plus grand des félins ?",
   "choix": [
    "Le tigre",
@@ -480,11 +368,11 @@
   "anecdote": "Le tigre de Sibérie peut dépasser 300 kg."
  },
  {
-  "id": "sci-031",
+  "id": "sci-024",
   "categorie": "Sciences & Nature",
   "sous_theme": "Corps humain",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel est le plus petit os du corps humain ?",
   "choix": [
    "L'étrier",
@@ -496,11 +384,11 @@
   "anecdote": "Situé dans l'oreille moyenne, il mesure environ 3 mm."
  },
  {
-  "id": "sci-032",
+  "id": "sci-025",
   "categorie": "Sciences & Nature",
   "sous_theme": "Espace",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Quelle planète tourne « couchée » sur le côté ?",
   "choix": [
    "Uranus",
@@ -512,11 +400,11 @@
   "anecdote": "Son axe est incliné d'environ 98° : chaque pôle connaît 42 ans de jour, puis 42 ans de nuit."
  },
  {
-  "id": "sci-033",
+  "id": "sci-026",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Lequel de ces mammifères pond des œufs ?",
   "choix": [
    "L'ornithorynque",
@@ -528,11 +416,11 @@
   "anecdote": "Le mâle possède un ergot venimeux sur les pattes arrière."
  },
  {
-  "id": "sci-034",
+  "id": "sci-027",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Combien d'yeux possède une abeille ?",
   "choix": [
    "Cinq",
@@ -544,11 +432,11 @@
   "anecdote": "Deux grands yeux composés et trois petits yeux simples, les ocelles, sur le dessus de la tête."
  },
  {
-  "id": "sci-035",
+  "id": "sci-028",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Quel animal a des yeux plus gros que son cerveau ?",
   "choix": [
    "L'autruche",
@@ -560,11 +448,11 @@
   "anecdote": "Chaque œil mesure environ 5 cm : ce sont les plus gros yeux de tous les animaux terrestres."
  },
  {
-  "id": "sci-036",
+  "id": "sci-029",
   "categorie": "Sciences & Nature",
   "sous_theme": "Terre",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quel est le principal gaz de l'atmosphère terrestre ?",
   "choix": [
    "L'azote",
@@ -576,11 +464,11 @@
   "anecdote": "Il représente environ 78 % de l'air, contre 21 % pour l'oxygène."
  },
  {
-  "id": "sci-037",
+  "id": "sci-030",
   "categorie": "Sciences & Nature",
   "sous_theme": "Corps humain",
   "type": "fourchette",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Combien d'os compte le squelette d'un adulte ?",
   "reponse": 206,
   "unite": "os",
@@ -592,11 +480,11 @@
   "anecdote": "Un nouveau-né en a environ 300 : certains fusionnent en grandissant."
  },
  {
-  "id": "sci-038",
+  "id": "sci-031",
   "categorie": "Sciences & Nature",
   "sous_theme": "Physique",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Quelle est la vitesse de la lumière dans le vide, en km/s ?",
   "reponse": 299792,
   "unite": "km/s",
@@ -608,11 +496,11 @@
   "anecdote": "À cette vitesse, on ferait environ sept fois et demie le tour de la Terre en une seconde."
  },
  {
-  "id": "sci-039",
+  "id": "sci-032",
   "categorie": "Sciences & Nature",
   "sous_theme": "Espace",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 6,
   "question": "Quelle est la température de la surface du Soleil ?",
   "reponse": 5500,
   "unite": "°C",
@@ -624,11 +512,11 @@
   "anecdote": "Son cœur, lui, atteint environ 15 millions de degrés."
  },
  {
-  "id": "sci-040",
+  "id": "sci-033",
   "categorie": "Sciences & Nature",
   "sous_theme": "Espace",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "Quelle est la distance moyenne entre la Terre et la Lune ?",
   "reponse": 384400,
   "unite": "km",
@@ -640,11 +528,11 @@
   "anecdote": "La Lune s'éloigne de nous d'environ 3,8 cm par an."
  },
  {
-  "id": "sci-041",
+  "id": "sci-034",
   "categorie": "Sciences & Nature",
   "sous_theme": "Biologie",
   "type": "fourchette",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Combien de chromosomes possède une cellule humaine ?",
   "reponse": 46,
   "unite": "chromosomes",
@@ -656,11 +544,11 @@
   "anecdote": "Le chien en a 78, et une petite fougère, l'Ophioglossum, en compte plus de 1 400."
  },
  {
-  "id": "sci-042",
+  "id": "sci-035",
   "categorie": "Sciences & Nature",
   "sous_theme": "Espace",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Quel est l'âge de l'univers, en milliards d'années ?",
   "reponse": 13.8,
   "unite": "milliards d'années",
@@ -672,11 +560,11 @@
   "anecdote": "La plus ancienne lumière observable a été émise environ 380 000 ans après le Big Bang."
  },
  {
-  "id": "sci-043",
+  "id": "sci-036",
   "categorie": "Sciences & Nature",
   "sous_theme": "Terre",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Quel est l'âge de la Terre, en milliards d'années ?",
   "reponse": 4.54,
   "unite": "milliards d'années",
@@ -688,23 +576,7 @@
   "anecdote": "Elle a été datée grâce aux météorites, par la méthode uranium-plomb."
  },
  {
-  "id": "sci-044",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Corps humain",
-  "type": "fourchette",
-  "difficulte": 2,
-  "question": "Combien de dents compte un adulte, dents de sagesse comprises ?",
-  "reponse": 32,
-  "unite": "dents",
-  "tolerance": 0,
-  "bornes": [
-   10,
-   60
-  ],
-  "anecdote": "L'émail des dents est la substance la plus dure du corps humain."
- },
- {
-  "id": "sci-045",
+  "id": "sci-037",
   "categorie": "Sciences & Nature",
   "sous_theme": "Corps humain",
   "type": "fourchette",
@@ -720,11 +592,11 @@
   "anecdote": "Soit plus de 2,5 milliards de battements au cours d'une vie."
  },
  {
-  "id": "sci-046",
+  "id": "sci-038",
   "categorie": "Sciences & Nature",
   "sous_theme": "Physique",
   "type": "fourchette",
-  "difficulte": 9,
+  "difficulte": 7,
   "question": "À quelle température l'eau bout-elle au sommet de l'Everest ?",
   "reponse": 70,
   "unite": "°C",
@@ -736,11 +608,11 @@
   "anecdote": "À cause de la faible pression : impossible d'y cuire correctement des pâtes."
  },
  {
-  "id": "sci-047",
+  "id": "sci-039",
   "categorie": "Sciences & Nature",
   "sous_theme": "Chimie",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "Combien d'éléments compte le tableau périodique ?",
   "reponse": 118,
   "unite": "éléments",
@@ -752,11 +624,11 @@
   "anecdote": "Les quatre derniers ont été nommés en 2016, dont le nihonium, en l'honneur du Japon."
  },
  {
-  "id": "sci-048",
+  "id": "sci-040",
   "categorie": "Sciences & Nature",
   "sous_theme": "Biologie",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 7,
   "question": "Quelle longueur atteindrait l'ADN d'une seule cellule humaine, une fois déroulé ?",
   "reponse": 2,
   "unite": "m",
@@ -768,11 +640,11 @@
   "anecdote": "Mis bout à bout, l'ADN de toutes nos cellules ferait des centaines d'allers-retours entre la Terre et le Soleil."
  },
  {
-  "id": "sci-049",
+  "id": "sci-041",
   "categorie": "Sciences & Nature",
   "sous_theme": "Espace",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Combien de jours terrestres dure une année sur Mars ?",
   "reponse": 687,
   "unite": "jours",
@@ -784,11 +656,11 @@
   "anecdote": "Ses deux lunes s'appellent Phobos et Deimos, « la peur » et « la terreur »."
  },
  {
-  "id": "sci-050",
+  "id": "sci-042",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 6,
   "question": "Quelle vitesse le faucon pèlerin peut-il atteindre en piqué ?",
   "reponse": 390,
   "unite": "km/h",
@@ -800,11 +672,11 @@
   "anecdote": "C'est l'animal le plus rapide du monde, tous milieux confondus."
  },
  {
-  "id": "sci-051",
+  "id": "sci-043",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "fourchette",
-  "difficulte": 9,
+  "difficulte": 8,
   "question": "Combien d'espèces de fourmis ont été décrites par les scientifiques ?",
   "reponse": 14000,
   "unite": "espèces",
@@ -816,7 +688,7 @@
   "anecdote": "Une étude de 2022 estime qu'environ 20 millions de milliards de fourmis vivent sur Terre."
  },
  {
-  "id": "sci-052",
+  "id": "sci-044",
   "categorie": "Sciences & Nature",
   "sous_theme": "Corps humain",
   "type": "fourchette",
@@ -832,7 +704,7 @@
   "anecdote": "Le cerveau, lui, est composé d'environ 75 % d'eau."
  },
  {
-  "id": "sci-053",
+  "id": "sci-045",
   "categorie": "Sciences & Nature",
   "sous_theme": "Corps humain",
   "type": "fourchette",
@@ -848,49 +720,11 @@
   "anecdote": "Il représente environ 2 % de notre masse, mais consomme près de 20 % de notre énergie."
  },
  {
-  "id": "sci-054",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Espace",
-  "type": "indices",
-  "difficulte": 2,
-  "question": "Qui suis-je ?",
-  "reponse": "Le Soleil",
-  "reponses_acceptees": [
-   "Soleil"
-  ],
-  "indices": [
-   "Je représente plus de 99 % de la masse du système solaire",
-   "J'ai environ 4,6 milliards d'années",
-   "Je suis une étoile naine jaune",
-   "Les éclipses me cachent parfois"
-  ],
-  "anecdote": "On pourrait faire entrer environ 1,3 million de Terres à l'intérieur."
- },
- {
-  "id": "sci-055",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Espace",
-  "type": "indices",
-  "difficulte": 2,
-  "question": "Qui suis-je ?",
-  "reponse": "La Lune",
-  "reponses_acceptees": [
-   "Lune"
-  ],
-  "indices": [
-   "Je montre toujours la même face",
-   "Douze hommes ont marché sur moi",
-   "Je provoque les marées",
-   "Je suis le satellite naturel de la Terre"
-  ],
-  "anecdote": "Sa « face cachée » n'est pas plus sombre : elle est simplement invisible depuis la Terre."
- },
- {
-  "id": "sci-056",
+  "id": "sci-046",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quel est cet animal ?",
   "reponse": "Le requin",
   "reponses_acceptees": [
@@ -906,92 +740,11 @@
   "anecdote": "Les requins tuent moins de dix personnes par an, quand l'homme tue des dizaines de millions de requins."
  },
  {
-  "id": "sci-057",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Savants",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Qui suis-je ?",
-  "reponse": "Marie Curie",
-  "reponses_acceptees": [
-   "Curie",
-   "Maria Sklodowska",
-   "Marie Sklodowska-Curie"
-  ],
-  "indices": [
-   "Mes carnets de notes sont encore radioactifs aujourd'hui",
-   "J'ai découvert le polonium, nommé en l'honneur de mon pays natal",
-   "Je suis la seule personne récompensée par des Nobel dans deux sciences différentes",
-   "Je suis née Maria Skłodowska à Varsovie"
-  ],
-  "anecdote": "Ses carnets sont conservés dans des boîtes doublées de plomb, consultables avec une combinaison de protection."
- },
- {
-  "id": "sci-058",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Minéraux",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Qu'est-ce que c'est ?",
-  "reponse": "Le diamant",
-  "reponses_acceptees": [
-   "Diamant",
-   "Diamants"
-  ],
-  "indices": [
-   "Je suis composé uniquement de carbone",
-   "Je suis le minéral naturel le plus dur",
-   "On m'évalue en carats",
-   "Une célèbre publicité dit que je suis éternel"
-  ],
-  "anecdote": "Le graphite des mines de crayon est fait du même atome de carbone : seul l'arrangement change."
- },
- {
-  "id": "sci-059",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Animaux",
-  "type": "indices",
-  "difficulte": 4,
-  "question": "Quel est cet animal ?",
-  "reponse": "Le caméléon",
-  "reponses_acceptees": [
-   "Cameleon",
-   "Caméléon"
-  ],
-  "indices": [
-   "Je peux bouger mes deux yeux indépendamment",
-   "Ma langue peut être plus longue que mon corps",
-   "Je change de couleur surtout pour communiquer",
-   "Je suis un lézard célèbre pour changer de couleur"
-  ],
-  "anecdote": "Près de la moitié des espèces de caméléons vivent à Madagascar."
- },
- {
-  "id": "sci-060",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Espace",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Quelle est cette planète ?",
-  "reponse": "Mars",
-  "reponses_acceptees": [
-   "La planète Mars",
-   "Planete Mars"
-  ],
-  "indices": [
-   "Des robots y roulent depuis des décennies",
-   "J'abrite Olympus Mons, le plus haut volcan du système solaire",
-   "Ma couleur vient de l'oxyde de fer",
-   "On me surnomme la planète rouge"
-  ],
-  "anecdote": "Sur place, les couchers de soleil sont... bleus."
- },
- {
-  "id": "sci-061",
+  "id": "sci-047",
   "categorie": "Sciences & Nature",
   "sous_theme": "Biologie",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Qu'est-ce que c'est ?",
   "reponse": "L'ADN",
   "reponses_acceptees": [
@@ -1008,11 +761,11 @@
   "anecdote": "Deux êtres humains partagent environ 99,9 % de leur ADN."
  },
  {
-  "id": "sci-062",
+  "id": "sci-048",
   "categorie": "Sciences & Nature",
   "sous_theme": "Botanique",
   "type": "indices",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quelle est cette plante ?",
   "reponse": "Le pissenlit",
   "reponses_acceptees": [
@@ -1028,148 +781,61 @@
   "anecdote": "Portées par le vent, ses aigrettes peuvent parfois parcourir plusieurs kilomètres."
  },
  {
-  "id": "sci-063",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Animaux",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Quel est cet animal ?",
-  "reponse": "La girafe",
-  "reponses_acceptees": [
-   "Girafe"
-  ],
-  "indices": [
-   "Mon cœur pèse environ 11 kg",
-   "Je n'ai que 7 vertèbres cervicales, comme vous",
-   "Ma langue bleu-noir mesure près de 50 cm",
-   "Je suis le plus grand animal terrestre"
-  ],
-  "anecdote": "Elle dort très peu, souvent moins de deux heures par jour, par petites siestes."
- },
- {
-  "id": "sci-064",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Animaux",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Quel est cet animal ?",
-  "reponse": "Le koala",
-  "reponses_acceptees": [
-   "Koala"
-  ],
-  "indices": [
-   "Je dors jusqu'à 20 heures par jour",
-   "Je me nourris presque uniquement d'eucalyptus",
-   "Mes empreintes digitales ressemblent beaucoup aux vôtres",
-   "Je ne suis pas un ours, mais un marsupial australien"
-  ],
-  "anecdote": "Les feuilles d'eucalyptus sont si pauvres et toxiques qu'il doit dormir longtemps pour les digérer."
- },
- {
-  "id": "sci-065",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Botanique",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Qu'est-ce que c'est ?",
-  "reponse": "La photosynthèse",
-  "reponses_acceptees": [
-   "Photosynthese"
-  ],
-  "indices": [
-   "Je me produis surtout dans les feuilles",
-   "J'ai besoin de lumière, d'eau et de CO₂",
-   "La chlorophylle m'est indispensable",
-   "Je permets aux plantes de fabriquer du sucre et de rejeter de l'oxygène"
-  ],
-  "anecdote": "Le phytoplancton des océans produit environ la moitié de l'oxygène de la planète."
- },
- {
-  "id": "sci-066",
+  "id": "sci-049",
   "categorie": "Sciences & Nature",
   "sous_theme": "Espace",
   "type": "vf",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Vrai ou faux : sur Vénus, une journée dure plus longtemps qu'une année.",
   "reponse": "Vrai",
   "anecdote": "Elle tourne sur elle-même en 243 jours terrestres, mais fait le tour du Soleil en 225 jours."
  },
  {
-  "id": "sci-067",
+  "id": "sci-050",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "vf",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Vrai ou faux : les poissons rouges ont une mémoire de trois secondes.",
   "reponse": "Faux",
   "anecdote": "Des expériences montrent qu'ils retiennent des informations pendant des mois."
  },
  {
-  "id": "sci-068",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Météo",
-  "type": "vf",
-  "difficulte": 2,
-  "question": "Vrai ou faux : la foudre ne tombe jamais deux fois au même endroit.",
-  "reponse": "Faux",
-  "anecdote": "L'Empire State Building est frappé en moyenne une vingtaine de fois par an."
- },
- {
-  "id": "sci-069",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Corps humain",
-  "type": "vf",
-  "difficulte": 3,
-  "question": "Vrai ou faux : nous n'utilisons que 10 % de notre cerveau.",
-  "reponse": "Faux",
-  "anecdote": "L'imagerie médicale montre que toutes les zones du cerveau sont actives au cours d'une journée."
- },
- {
-  "id": "sci-070",
+  "id": "sci-051",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "vf",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Vrai ou faux : le cœur d'une crevette se trouve dans sa tête.",
   "reponse": "Vrai",
   "anecdote": "Il se situe dans le céphalothorax, la partie avant qui réunit la tête et le thorax."
  },
  {
-  "id": "sci-071",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Botanique",
-  "type": "vf",
-  "difficulte": 3,
-  "question": "Vrai ou faux : d'un point de vue botanique, la tomate est un fruit.",
-  "reponse": "Vrai",
-  "anecdote": "En 1893, la Cour suprême des États-Unis l'a pourtant classée légume, pour une histoire de taxes douanières."
- },
- {
-  "id": "sci-072",
+  "id": "sci-052",
   "categorie": "Sciences & Nature",
   "sous_theme": "Physique",
   "type": "vf",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Vrai ou faux : le son se propage plus vite dans l'eau que dans l'air.",
   "reponse": "Vrai",
   "anecdote": "Environ 1 500 m/s dans l'eau, contre 340 m/s dans l'air."
  },
  {
-  "id": "sci-073",
+  "id": "sci-053",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "vf",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Vrai ou faux : l'autruche enfouit sa tête dans le sable quand elle a peur.",
   "reponse": "Faux",
   "anecdote": "Elle baisse la tête au ras du sol pour retourner ses œufs ou passer inaperçue, d'où la légende."
  },
  {
-  "id": "sci-074",
+  "id": "sci-054",
   "categorie": "Sciences & Nature",
   "sous_theme": "Chimie",
   "type": "libre",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Quel est le symbole chimique du fer ?",
   "reponse": "Fe",
   "reponses_acceptees": [
@@ -1178,11 +844,11 @@
   "anecdote": "Le noyau de la Terre est principalement composé de fer et de nickel."
  },
  {
-  "id": "sci-075",
+  "id": "sci-055",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "libre",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Comment appelle-t-on un bébé kangourou ?",
   "reponse": "Un joey",
   "reponses_acceptees": [
@@ -1191,26 +857,11 @@
   "anecdote": "À la naissance, il ne mesure qu'environ 2 cm et grimpe seul jusqu'à la poche de sa mère."
  },
  {
-  "id": "sci-076",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Chimie",
-  "type": "libre",
-  "difficulte": 2,
-  "question": "Quel gaz de l'air est indispensable à la combustion ?",
-  "reponse": "L'oxygène",
-  "reponses_acceptees": [
-   "Oxygene",
-   "O2",
-   "Dioxygene"
-  ],
-  "anecdote": "C'est pourquoi on étouffe un feu de casserole avec un couvercle, et jamais avec de l'eau."
- },
- {
-  "id": "sci-077",
+  "id": "sci-056",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "libre",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Comment s'appelle la science qui étudie les insectes ?",
   "reponse": "L'entomologie",
   "reponses_acceptees": [
@@ -1219,28 +870,11 @@
   "anecdote": "Le Français Jean-Henri Fabre, surnommé « l'Homère des insectes », les a observés toute sa vie en Provence."
  },
  {
-  "id": "sci-078",
-  "categorie": "Sciences & Nature",
-  "sous_theme": "Physique",
-  "type": "libre",
-  "difficulte": 1,
-  "question": "Quelle force nous maintient au sol ?",
-  "reponse": "La gravité",
-  "reponses_acceptees": [
-   "Gravite",
-   "Gravitation",
-   "La gravitation",
-   "Pesanteur",
-   "La pesanteur"
-  ],
-  "anecdote": "Sur la Lune, elle est six fois plus faible : on y pèse six fois moins lourd."
- },
- {
-  "id": "sci-079",
+  "id": "sci-057",
   "categorie": "Sciences & Nature",
   "sous_theme": "Animaux",
   "type": "libre",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel mammifère marin est surnommé la « licorne des mers » ?",
   "reponse": "Le narval",
   "reponses_acceptees": [
@@ -1249,31 +883,492 @@
   "anecdote": "Sa « corne » est en réalité une dent, qui peut dépasser 2,5 m de long."
  },
  {
-  "id": "sci-080",
+  "id": "sci-058",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel est l'élément chimique le plus électronégatif ?",
+  "choix": [
+   "Le fluor",
+   "L'oxygène",
+   "Le chlore",
+   "L'azote"
+  ],
+  "reponse": "Le fluor",
+  "anecdote": "Il est si réactif qu'il attaque même le verre, et a coûté la santé à plusieurs chimistes qui ont tenté de l'isoler."
+ },
+ {
+  "id": "sci-059",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel élément chimique a pour symbole W ?",
+  "choix": [
+   "Le tungstène",
+   "Le vanadium",
+   "Le titane",
+   "Le xénon"
+  ],
+  "reponse": "Le tungstène",
+  "anecdote": "Le W vient de « wolfram », son nom allemand. C'est le métal au point de fusion le plus élevé : 3 422 °C."
+ },
+ {
+  "id": "sci-060",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Biologie",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quelle structure de la cellule fabrique les ribosomes ?",
+  "choix": [
+   "Le nucléole",
+   "L'appareil de Golgi",
+   "Le réticulum endoplasmique lisse",
+   "Le lysosome"
+  ],
+  "reponse": "Le nucléole",
+  "anecdote": "Ce petit corps dense se trouve à l'intérieur du noyau et disparaît pendant la division cellulaire."
+ },
+ {
+  "id": "sci-061",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Corps humain",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel muscle, qui traverse la cuisse en diagonale, est le plus long du corps humain ?",
+  "choix": [
+   "Le muscle couturier",
+   "Le grand fessier",
+   "Le quadriceps",
+   "Le biceps fémoral"
+  ],
+  "reponse": "Le muscle couturier",
+  "anecdote": "Son nom vient de la position des tailleurs assis en tailleur."
+ },
+ {
+  "id": "sci-062",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Espace",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel est le plus grand satellite naturel du système solaire ?",
+  "choix": [
+   "Ganymède",
+   "Titan",
+   "Callisto",
+   "Io"
+  ],
+  "reponse": "Ganymède",
+  "anecdote": "Ce satellite de Jupiter est plus grand que la planète Mercure."
+ },
+ {
+  "id": "sci-063",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Espace",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Autour de quelle planète tourne Triton ?",
+  "choix": [
+   "Neptune",
+   "Uranus",
+   "Saturne",
+   "Jupiter"
+  ],
+  "reponse": "Neptune",
+  "anecdote": "C'est le seul grand satellite qui tourne en sens inverse de la rotation de sa planète : sans doute un objet capturé."
+ },
+ {
+  "id": "sci-064",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel gaz noble est le plus abondant dans l'atmosphère terrestre ?",
+  "choix": [
+   "L'argon",
+   "Le néon",
+   "L'hélium",
+   "Le krypton"
+  ],
+  "reponse": "L'argon",
+  "anecdote": "Il représente près de 1 % de l'air, soit bien plus que le dioxyde de carbone."
+ },
+ {
+  "id": "sci-065",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Physique",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quelle est l'unité de l'inductance dans le Système international ?",
+  "choix": [
+   "Le henry",
+   "Le tesla",
+   "Le weber",
+   "Le siemens"
+  ],
+  "reponse": "Le henry",
+  "anecdote": "Elle honore l'Américain Joseph Henry, qui a découvert l'auto-induction en même temps que Faraday."
+ },
+ {
+  "id": "sci-066",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Combien de poches compte l'estomac d'une vache ?",
+  "choix": [
+   "Quatre",
+   "Deux",
+   "Trois",
+   "Six"
+  ],
+  "reponse": "Quatre",
+  "anecdote": "La panse, le bonnet, le feuillet et la caillette : la panse peut contenir plus de 150 litres."
+ },
+ {
+  "id": "sci-067",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "De quels animaux la limule, ou « crabe fer à cheval », est-elle la plus proche ?",
+  "choix": [
+   "Des araignées et des scorpions",
+   "Des crabes et des homards",
+   "Des escargots et des seiches",
+   "Des scarabées et des cafards"
+  ],
+  "reponse": "Des araignées et des scorpions",
+  "anecdote": "Son sang bleu sert à détecter les contaminations bactériennes des vaccins et des médicaments injectables."
+ },
+ {
+  "id": "sci-068",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Espace",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Comment s'appelait le module qui s'est posé sur une comète pour la première fois, en 2014 ?",
+  "choix": [
+   "Philae",
+   "Huygens",
+   "Beagle 2",
+   "Deep Impact"
+  ],
+  "reponse": "Philae",
+  "anecdote": "Largué par la sonde Rosetta, il a rebondi plusieurs fois avant de s'immobiliser à l'ombre d'une falaise."
+ },
+ {
+  "id": "sci-069",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Géologie",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel minéral occupe le rang 1, le plus tendre, sur l'échelle de dureté de Mohs ?",
+  "choix": [
+   "Le talc",
+   "Le gypse",
+   "La calcite",
+   "Le quartz"
+  ],
+  "reponse": "Le talc",
+  "anecdote": "L'échelle va jusqu'à 10, le diamant. Le talc se raye à l'ongle."
+ },
+ {
+  "id": "sci-070",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel élément chimique porte le numéro atomique 79 ?",
+  "choix": [
+   "L'or",
+   "Le platine",
+   "Le mercure",
+   "L'argent"
+  ],
+  "reponse": "L'or",
+  "anecdote": "Tout l'or extrait depuis l'Antiquité tiendrait dans un cube d'environ 22 mètres de côté."
+ },
+ {
+  "id": "sci-071",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Physique",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel savant a donné son nom à l'unité de pression du Système international ?",
+  "choix": [
+   "Blaise Pascal",
+   "Evangelista Torricelli",
+   "Robert Boyle",
+   "Daniel Bernoulli"
+  ],
+  "reponse": "Blaise Pascal",
+  "anecdote": "Il a fait mesurer la pression atmosphérique au sommet du puy de Dôme en 1648 par son beau-frère."
+ },
+ {
+  "id": "sci-072",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Biologie",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel naturaliste français a proposé une théorie de l'évolution des espèces dès 1809, avant Darwin ?",
+  "reponse": "Lamarck",
+  "reponses_acceptees": [
+   "Jean-Baptiste de Lamarck",
+   "Jean-Baptiste Lamarck"
+  ],
+  "anecdote": "Il a aussi créé le mot « biologie » et le terme « invertébrés »."
+ },
+ {
+  "id": "sci-073",
   "categorie": "Sciences & Nature",
   "sous_theme": "Corps humain",
   "type": "libre",
-  "difficulte": 3,
-  "question": "Quels organes filtrent le sang pour produire l'urine ?",
-  "reponse": "Les reins",
+  "difficulte": 8,
+  "question": "Quelle petite glande du cerveau sécrète la mélatonine, l'hormone du sommeil ?",
+  "reponse": "L'épiphyse",
   "reponses_acceptees": [
-   "Rein",
-   "Le rein",
-   "Reins"
+   "Épiphyse",
+   "Glande pinéale",
+   "La glande pinéale"
   ],
-  "anecdote": "Ils filtrent environ 180 litres de liquide par jour."
+  "anecdote": "Descartes y voyait le siège de l'âme."
+ },
+ {
+  "id": "sci-074",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Astronomie",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Comment s'appelle l'étoile la plus proche du Soleil ?",
+  "reponse": "Proxima du Centaure",
+  "reponses_acceptees": [
+   "Proxima Centauri",
+   "Proxima"
+  ],
+  "anecdote": "Elle se trouve à environ 4,2 années-lumière et possède au moins une planète."
+ },
+ {
+  "id": "sci-075",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel chimiste russe a publié la classification périodique des éléments en 1869 ?",
+  "reponse": "Mendeleïev",
+  "reponses_acceptees": [
+   "Dmitri Mendeleïev",
+   "Mendeleiev",
+   "Mendeleev"
+  ],
+  "anecdote": "Il avait laissé des cases vides pour des éléments encore inconnus, et prédit leurs propriétés."
+ },
+ {
+  "id": "sci-076",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Physique",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "À quelle température correspond le zéro absolu ?",
+  "reponse": -273.15,
+  "unite": "°C",
+  "tolerance": 0.15,
+  "bornes": [
+   -1000,
+   0
+  ],
+  "anecdote": "C'est le 0 kelvin : la température la plus basse possible, jamais atteinte exactement."
+ },
+ {
+  "id": "sci-077",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Espace",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de secondes met la lumière du Soleil pour atteindre la Terre ?",
+  "reponse": 499,
+  "unite": "secondes",
+  "tolerance": 5,
+  "bornes": [
+   10,
+   5000
+  ],
+  "anecdote": "Soit environ 8 minutes et 19 secondes : on voit toujours le Soleil tel qu'il était il y a 8 minutes."
+ },
+ {
+  "id": "sci-078",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Physique",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Quelle est la vitesse du son dans l'air à 20 °C ?",
+  "reponse": 343,
+  "unite": "m/s",
+  "tolerance": 3,
+  "bornes": [
+   50,
+   2000
+  ],
+  "anecdote": "Dans l'eau, il va environ quatre fois plus vite, et plus de quinze fois plus vite dans l'acier."
+ },
+ {
+  "id": "sci-079",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Terre",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Quelle est la circonférence de la Terre à l'équateur ?",
+  "reponse": 40075,
+  "unite": "km",
+  "tolerance": 100,
+  "bornes": [
+   1000,
+   100000
+  ],
+  "anecdote": "Le mètre a été défini en 1791 comme le dix-millionième du quart du méridien terrestre."
+ },
+ {
+  "id": "sci-080",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Biologie",
+  "type": "vf",
+  "difficulte": 9,
+  "question": "Vrai ou faux : l'être humain possède plus de gènes que le riz.",
+  "reponse": "Faux",
+  "anecdote": "Nous avons environ 20 000 gènes codant des protéines, le riz en compte deux fois plus."
  },
  {
   "id": "sci-081",
   "categorie": "Sciences & Nature",
-  "sous_theme": "Physique",
-  "type": "libre",
-  "difficulte": 2,
-  "question": "Quel savant anglais a formulé la loi de la gravitation universelle ?",
-  "reponse": "Isaac Newton",
+  "sous_theme": "Espace",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : Pluton est plus petite que la Lune.",
+  "reponse": "Vrai",
+  "anecdote": "Son diamètre est d'environ 2 380 km, contre près de 3 475 km pour la Lune."
+ },
+ {
+  "id": "sci-082",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Scientifiques",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Qui suis-je ?",
+  "reponse": "Antoine Lavoisier",
   "reponses_acceptees": [
-   "Newton"
+   "Lavoisier"
   ],
-  "anecdote": "C'est lui-même qui racontait, âgé, l'histoire de la pomme. Elle ne lui serait pas tombée sur la tête."
+  "indices": [
+   "J'ai été fermier général, collecteur d'impôts",
+   "Mon épouse Marie-Anne illustrait mes expériences",
+   "J'ai donné leur nom à l'oxygène et à l'hydrogène",
+   "J'ai été guillotiné en 1794"
+  ],
+  "anecdote": "On lui attribue la formule : « Rien ne se perd, rien ne se crée, tout se transforme »."
+ },
+ {
+  "id": "sci-083",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Scientifiques",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Qui suis-je ?",
+  "reponse": "Rosalind Franklin",
+  "reponses_acceptees": [
+   "Franklin"
+  ],
+  "indices": [
+   "J'étais chimiste, spécialiste de la diffraction des rayons X",
+   "J'ai aussi étudié la structure des virus",
+   "Mon « cliché 51 » a été montré à d'autres chercheurs sans mon accord",
+   "Mes travaux ont été décisifs pour découvrir la double hélice de l'ADN"
+  ],
+  "anecdote": "Morte en 1958, elle n'a pas pu partager le Nobel de 1962, qui n'est jamais décerné à titre posthume."
+ },
+ {
+  "id": "sci-084",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Animaux",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel est cet animal ?",
+  "reponse": "Le pangolin",
+  "reponses_acceptees": [
+   "Pangolin"
+  ],
+  "indices": [
+   "Je suis l'un des mammifères les plus braconnés du monde",
+   "Je n'ai pas de dents",
+   "Je me roule en boule quand j'ai peur",
+   "Mes écailles sont en kératine, comme vos ongles"
+  ],
+  "anecdote": "Il existe huit espèces de pangolins, en Afrique et en Asie."
+ },
+ {
+  "id": "sci-085",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Scientifiques",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Qui suis-je ?",
+  "reponse": "Alfred Wegener",
+  "reponses_acceptees": [
+   "Wegener"
+  ],
+  "indices": [
+   "J'étais météorologue allemand",
+   "Je suis mort lors d'une expédition au Groenland en 1930",
+   "On s'est longtemps moqué de ma théorie",
+   "J'ai proposé la dérive des continents"
+  ],
+  "anecdote": "Il a fallu attendre les années 1960 et la tectonique des plaques pour lui donner raison."
+ },
+ {
+  "id": "sci-086",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Physique",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quelle constante vaut exactement 6,626 070 15 × 10⁻³⁴ J·s depuis 2019 ?",
+  "choix": [
+   "La constante de Planck",
+   "La constante de Boltzmann",
+   "La constante gravitationnelle",
+   "La constante d'Avogadro"
+  ],
+  "reponse": "La constante de Planck",
+  "anecdote": "Elle sert désormais à définir le kilogramme, qui ne dépend plus d'un cylindre de métal conservé à Sèvres."
+ },
+ {
+  "id": "sci-087",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel élément a été découvert dans le spectre du Soleil avant d'être trouvé sur Terre ?",
+  "choix": [
+   "L'hélium",
+   "Le néon",
+   "L'argon",
+   "Le radon"
+  ],
+  "reponse": "L'hélium",
+  "anecdote": "Il a été observé en 1868 pendant une éclipse. Son nom vient d'Hélios, le Soleil en grec."
+ },
+ {
+  "id": "sci-088",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Médecine",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quelle bactérie de l'estomac le médecin Barry Marshall a-t-il avalée pour prouver qu'elle cause des ulcères ?",
+  "reponse": "Helicobacter pylori",
+  "reponses_acceptees": [
+   "H. pylori",
+   "Helicobacter",
+   "Helicobacter pylori"
+  ],
+  "anecdote": "Tombé malade comme prévu, il a reçu le prix Nobel de médecine 2005 avec Robin Warren."
  }
 ]

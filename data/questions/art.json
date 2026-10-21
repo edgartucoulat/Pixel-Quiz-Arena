@@ -4,55 +4,7 @@
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "qcm",
-  "difficulte": 1,
-  "question": "Qui a peint La Joconde ?",
-  "choix": [
-   "Léonard de Vinci",
-   "Michel-Ange",
-   "Raphaël",
-   "Botticelli"
-  ],
-  "reponse": "Léonard de Vinci",
-  "anecdote": "Le tableau est peint sur un panneau de bois de peuplier, et non sur une toile."
- },
- {
-  "id": "art-002",
-  "categorie": "Art & Architecture",
-  "sous_theme": "Peinture",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quel peintre s'est coupé une partie de l'oreille en 1888 ?",
-  "choix": [
-   "Vincent van Gogh",
-   "Paul Gauguin",
-   "Claude Monet",
-   "Edgar Degas"
-  ],
-  "reponse": "Vincent van Gogh",
-  "anecdote": "C'était à Arles, après une dispute avec Gauguin."
- },
- {
-  "id": "art-003",
-  "categorie": "Art & Architecture",
-  "sous_theme": "Sculpture",
-  "type": "qcm",
   "difficulte": 3,
-  "question": "Quel sculpteur a réalisé Le Penseur ?",
-  "choix": [
-   "Auguste Rodin",
-   "Camille Claudel",
-   "Michel-Ange",
-   "Aristide Maillol"
-  ],
-  "reponse": "Auguste Rodin",
-  "anecdote": "La statue devait à l'origine représenter Dante, assis au-dessus de La Porte de l'Enfer."
- },
- {
-  "id": "art-004",
-  "categorie": "Art & Architecture",
-  "sous_theme": "Peinture",
-  "type": "qcm",
-  "difficulte": 4,
   "question": "Quel mouvement artistique doit son nom à un tableau de Monet ?",
   "choix": [
    "L'impressionnisme",
@@ -64,11 +16,11 @@
   "anecdote": "Le tableau s'intitule « Impression, soleil levant ». Un critique a utilisé le mot pour se moquer."
  },
  {
-  "id": "art-005",
+  "id": "art-002",
   "categorie": "Art & Architecture",
   "sous_theme": "Architecture",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Quel architecte a conçu la pyramide du Louvre ?",
   "choix": [
    "Ieoh Ming Pei",
@@ -80,11 +32,11 @@
   "anecdote": "Inaugurée en 1989, elle compte 673 losanges et triangles de verre."
  },
  {
-  "id": "art-006",
+  "id": "art-003",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quel peintre espagnol a peint Guernica ?",
   "choix": [
    "Pablo Picasso",
@@ -96,11 +48,11 @@
   "anecdote": "L'œuvre dénonce le bombardement de la ville basque en 1937. Elle n'est arrivée en Espagne qu'en 1981."
  },
  {
-  "id": "art-007",
+  "id": "art-004",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Quel peintre est célèbre pour ses montres molles ?",
   "choix": [
    "Salvador Dalí",
@@ -112,11 +64,11 @@
   "anecdote": "Le tableau s'appelle La Persistance de la mémoire ; il est minuscule, environ 24 x 33 cm."
  },
  {
-  "id": "art-008",
+  "id": "art-005",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Qui a peint le plafond de la chapelle Sixtine ?",
   "choix": [
    "Michel-Ange",
@@ -128,11 +80,11 @@
   "anecdote": "Il l'a peint debout sur un échafaudage, et non allongé comme le veut la légende."
  },
  {
-  "id": "art-009",
+  "id": "art-006",
   "categorie": "Art & Architecture",
   "sous_theme": "Architecture",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "Quel architecte a conçu le Centre Pompidou avec Richard Rogers ?",
   "choix": [
    "Renzo Piano",
@@ -144,11 +96,11 @@
   "anecdote": "Les tuyaux sont peints selon leur fonction : bleu pour l'air, vert pour l'eau, jaune pour l'électricité, rouge pour la circulation."
  },
  {
-  "id": "art-010",
+  "id": "art-007",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 3,
   "question": "Quel peintre belge a peint « Ceci n'est pas une pipe » ?",
   "choix": [
    "René Magritte",
@@ -160,11 +112,11 @@
   "anecdote": "Le tableau s'appelle La Trahison des images : c'est l'image d'une pipe, pas une pipe."
  },
  {
-  "id": "art-011",
+  "id": "art-008",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 2,
   "question": "Quel peintre a réalisé la série des Nymphéas ?",
   "choix": [
    "Claude Monet",
@@ -176,11 +128,11 @@
   "anecdote": "Il les a peints dans son jardin de Giverny ; une partie est exposée au musée de l'Orangerie."
  },
  {
-  "id": "art-012",
+  "id": "art-009",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Dans quel musée est exposé La Nuit étoilée de Van Gogh ?",
   "choix": [
    "Le MoMA à New York",
@@ -192,11 +144,11 @@
   "anecdote": "Van Gogh l'a peinte en 1889 depuis la fenêtre de l'asile de Saint-Rémy-de-Provence."
  },
  {
-  "id": "art-013",
+  "id": "art-010",
   "categorie": "Art & Architecture",
   "sous_theme": "Art contemporain",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 2,
   "question": "Quel artiste est célèbre pour ses portraits de Marilyn Monroe en sérigraphie ?",
   "choix": [
    "Andy Warhol",
@@ -208,11 +160,11 @@
   "anecdote": "Son atelier new-yorkais s'appelait « The Factory »."
  },
  {
-  "id": "art-014",
+  "id": "art-011",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 4,
   "question": "Quel peintre a réalisé Le Radeau de La Méduse ?",
   "choix": [
    "Théodore Géricault",
@@ -224,11 +176,11 @@
   "anecdote": "Pour être réaliste, il a étudié des cadavres à la morgue de l'hôpital Beaujon."
  },
  {
-  "id": "art-015",
+  "id": "art-012",
   "categorie": "Art & Architecture",
   "sous_theme": "Architecture",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 4,
   "question": "Quel architecte a conçu la Cité radieuse de Marseille ?",
   "choix": [
    "Le Corbusier",
@@ -240,11 +192,11 @@
   "anecdote": "Les Marseillais l'ont d'abord surnommée « la maison du fada »."
  },
  {
-  "id": "art-016",
+  "id": "art-013",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "qcm",
-  "difficulte": 10,
+  "difficulte": 3,
   "question": "Quel peintre a réalisé La Liberté guidant le peuple ?",
   "choix": [
    "Eugène Delacroix",
@@ -256,11 +208,11 @@
   "anecdote": "Le tableau célèbre les Trois Glorieuses de juillet 1830."
  },
  {
-  "id": "art-017",
+  "id": "art-014",
   "categorie": "Art & Architecture",
   "sous_theme": "Sculpture",
   "type": "qcm",
-  "difficulte": 10,
+  "difficulte": 3,
   "question": "Quelle sculptrice fut l'élève et la compagne de Rodin ?",
   "choix": [
    "Camille Claudel",
@@ -272,23 +224,7 @@
   "anecdote": "Elle a passé les trente dernières années de sa vie en hôpital psychiatrique."
  },
  {
-  "id": "art-018",
-  "categorie": "Art & Architecture",
-  "sous_theme": "Architecture",
-  "type": "qcm",
-  "difficulte": 3,
-  "question": "Dans quel pays se trouve le Taj Mahal ?",
-  "choix": [
-   "L'Inde",
-   "Le Pakistan",
-   "L'Iran",
-   "Le Bangladesh"
-  ],
-  "reponse": "L'Inde",
-  "anecdote": "L'empereur Shah Jahan l'a fait construire en mémoire de son épouse, morte en couches."
- },
- {
-  "id": "art-019",
+  "id": "art-015",
   "categorie": "Art & Architecture",
   "sous_theme": "Architecture",
   "type": "fourchette",
@@ -304,7 +240,7 @@
   "anecdote": "Elle peut grandir d'une quinzaine de centimètres l'été, à cause de la dilatation du métal."
  },
  {
-  "id": "art-020",
+  "id": "art-016",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "fourchette",
@@ -320,11 +256,11 @@
   "anecdote": "Il est mort au Clos Lucé, à Amboise, invité par François Ier."
  },
  {
-  "id": "art-021",
+  "id": "art-017",
   "categorie": "Art & Architecture",
   "sous_theme": "Musées",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 7,
   "question": "Combien d'œuvres environ le Louvre expose-t-il dans ses salles ?",
   "reponse": 35000,
   "unite": "œuvres",
@@ -336,11 +272,11 @@
   "anecdote": "Il en conserve environ 500 000, dont la grande majorité dans ses réserves."
  },
  {
-  "id": "art-022",
+  "id": "art-018",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Combien de tableaux Van Gogh a-t-il vendus de son vivant (selon la version la plus courante) ?",
   "reponse": 1,
   "unite": "tableau",
@@ -352,11 +288,11 @@
   "anecdote": "La Vigne rouge a été achetée en 1890 par la peintre Anna Boch. Il en a peint plus de 850."
  },
  {
-  "id": "art-023",
+  "id": "art-019",
   "categorie": "Art & Architecture",
   "sous_theme": "Architecture",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 2,
   "question": "En quelle année la tour Eiffel a-t-elle été inaugurée ?",
   "reponse": 1889,
   "unite": "année",
@@ -368,11 +304,11 @@
   "anecdote": "Elle devait être démontée au bout de 20 ans, mais son utilité pour la radio l'a sauvée."
  },
  {
-  "id": "art-024",
+  "id": "art-020",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Combien de dollars le Salvator Mundi attribué à Léonard de Vinci a-t-il été vendu en 2017, en millions ?",
   "reponse": 450,
   "unite": "millions de $",
@@ -384,11 +320,11 @@
   "anecdote": "C'est le tableau le plus cher jamais vendu aux enchères."
  },
  {
-  "id": "art-025",
+  "id": "art-021",
   "categorie": "Art & Architecture",
   "sous_theme": "Architecture",
   "type": "fourchette",
-  "difficulte": 9,
+  "difficulte": 8,
   "question": "Combien de marches faut-il gravir pour atteindre le 2e étage de la tour Eiffel ?",
   "reponse": 674,
   "unite": "marches",
@@ -400,11 +336,11 @@
   "anecdote": "La tour compte 1 665 marches jusqu'au sommet, mais le dernier tronçon est réservé au personnel."
  },
  {
-  "id": "art-026",
+  "id": "art-022",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "fourchette",
-  "difficulte": 10,
+  "difficulte": 6,
   "question": "Combien mesure la largeur de La Joconde, en centimètres ?",
   "reponse": 53,
   "unite": "cm",
@@ -416,11 +352,11 @@
   "anecdote": "Elle mesure 77 cm de haut : bien plus petite que ce qu'imaginent la plupart des visiteurs."
  },
  {
-  "id": "art-027",
+  "id": "art-023",
   "categorie": "Art & Architecture",
   "sous_theme": "Peintres",
   "type": "indices",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Pablo Picasso",
   "reponses_acceptees": [
@@ -435,11 +371,11 @@
   "anecdote": "Son nom complet compte plus de 20 prénoms selon les récits."
  },
  {
-  "id": "art-028",
+  "id": "art-024",
   "categorie": "Art & Architecture",
   "sous_theme": "Peintres",
   "type": "indices",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Claude Monet",
   "reponses_acceptees": [
@@ -454,11 +390,11 @@
   "anecdote": "Sa vue s'est dégradée à cause de la cataracte, ce qui a changé les couleurs de ses derniers tableaux."
  },
  {
-  "id": "art-029",
+  "id": "art-025",
   "categorie": "Art & Architecture",
   "sous_theme": "Monuments",
   "type": "indices",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Quel est ce monument ?",
   "reponse": "L'Arc de triomphe",
   "reponses_acceptees": [
@@ -474,11 +410,11 @@
   "anecdote": "La flamme du Soldat inconnu est ravivée chaque soir à 18 h 30 depuis 1923."
  },
  {
-  "id": "art-030",
+  "id": "art-026",
   "categorie": "Art & Architecture",
   "sous_theme": "Peintres",
   "type": "indices",
-  "difficulte": 7,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Frida Kahlo",
   "reponses_acceptees": [
@@ -494,11 +430,11 @@
   "anecdote": "Elle a peint la plupart de ses œuvres alitée, grâce à un chevalet adapté à son lit."
  },
  {
-  "id": "art-031",
+  "id": "art-027",
   "categorie": "Art & Architecture",
   "sous_theme": "Peintres",
   "type": "indices",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Qui suis-je ?",
   "reponse": "Henri Matisse",
   "reponses_acceptees": [
@@ -513,11 +449,11 @@
   "anecdote": "Il a commencé à peindre pendant une convalescence, quand sa mère lui a offert une boîte de couleurs."
  },
  {
-  "id": "art-032",
+  "id": "art-028",
   "categorie": "Art & Architecture",
   "sous_theme": "Architectes",
   "type": "indices",
-  "difficulte": 9,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Gustave Eiffel",
   "reponses_acceptees": [
@@ -532,65 +468,41 @@
   "anecdote": "Il avait un appartement privé au sommet de sa tour, où il a reçu Thomas Edison."
  },
  {
-  "id": "art-033",
+  "id": "art-029",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "vf",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Vrai ou faux : La Joconde a été volée au Louvre au XXe siècle.",
   "reponse": "Vrai",
   "anecdote": "Elle a été retrouvée en Italie deux ans plus tard, en 1913."
  },
  {
-  "id": "art-034",
-  "categorie": "Art & Architecture",
-  "sous_theme": "Sculpture",
-  "type": "vf",
-  "difficulte": 5,
-  "question": "Vrai ou faux : la statue de la Liberté a été offerte par la France aux États-Unis.",
-  "reponse": "Vrai",
-  "anecdote": "Elle a été inaugurée en 1886 à New York. Sa réplique réduite se trouve à Paris, sur l'île aux Cygnes."
- },
- {
-  "id": "art-035",
+  "id": "art-030",
   "categorie": "Art & Architecture",
   "sous_theme": "Peinture",
   "type": "vf",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Vrai ou faux : Van Gogh a commencé à peindre après 25 ans.",
   "reponse": "Vrai",
   "anecdote": "Il a décidé de devenir artiste vers 27 ans, en 1880, et n'a peint que pendant une dizaine d'années."
  },
  {
-  "id": "art-036",
+  "id": "art-031",
   "categorie": "Art & Architecture",
   "sous_theme": "Sculpture",
   "type": "vf",
-  "difficulte": 9,
+  "difficulte": 4,
   "question": "Vrai ou faux : la Vénus de Milo a été découverte avec ses bras.",
   "reponse": "Faux",
   "anecdote": "Elle a été trouvée sans bras sur l'île de Milos en 1820, et achetée par la France."
  },
  {
-  "id": "art-037",
-  "categorie": "Art & Architecture",
-  "sous_theme": "Musées",
-  "type": "libre",
-  "difficulte": 4,
-  "question": "Dans quel musée parisien se trouve La Joconde ?",
-  "reponse": "Le Louvre",
-  "reponses_acceptees": [
-   "Louvre",
-   "Musée du Louvre"
-  ],
-  "anecdote": "Elle est protégée par une vitre blindée depuis 2005, et des millions de visiteurs viennent la voir chaque année."
- },
- {
-  "id": "art-038",
+  "id": "art-032",
   "categorie": "Art & Architecture",
   "sous_theme": "Mouvements",
   "type": "libre",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Comment s'appelle le mouvement de Picasso et Braque fondé sur des formes géométriques ?",
   "reponse": "Le cubisme",
   "reponses_acceptees": [
@@ -599,11 +511,11 @@
   "anecdote": "Le mot vient d'un critique qui a parlé de « petits cubes » à propos d'un tableau de Braque."
  },
  {
-  "id": "art-039",
+  "id": "art-033",
   "categorie": "Art & Architecture",
   "sous_theme": "Architecture",
   "type": "libre",
-  "difficulte": 8,
+  "difficulte": 2,
   "question": "Quel architecte catalan a conçu le parc Güell et la Casa Batlló ?",
   "reponse": "Antoni Gaudí",
   "reponses_acceptees": [
@@ -613,16 +525,298 @@
   "anecdote": "Il est mort en 1926, renversé par un tramway ; mal habillé, il a d'abord été pris pour un mendiant."
  },
  {
-  "id": "art-040",
+  "id": "art-034",
   "categorie": "Art & Architecture",
   "sous_theme": "Sculpture",
   "type": "libre",
-  "difficulte": 10,
+  "difficulte": 5,
   "question": "Quelle artiste franco-américaine a créé les sculptures géantes d'araignées appelées « Maman » ?",
   "reponse": "Louise Bourgeois",
   "reponses_acceptees": [
    "Bourgeois"
   ],
   "anecdote": "L'araignée rend hommage à sa mère, restauratrice de tapisseries, patiente et protectrice comme l'araignée qui tisse."
+ },
+ {
+  "id": "art-035",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel peintre a exposé Le Déjeuner sur l'herbe au Salon des refusés, en 1863 ?",
+  "choix": [
+   "Édouard Manet",
+   "Claude Monet",
+   "Gustave Courbet",
+   "Edgar Degas"
+  ],
+  "reponse": "Édouard Manet",
+  "anecdote": "Le scandale venait d'une femme nue réaliste assise au milieu d'hommes habillés en contemporains."
+ },
+ {
+  "id": "art-036",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel peintre réaliste a peint L'Origine du monde, en 1866 ?",
+  "choix": [
+   "Gustave Courbet",
+   "Édouard Manet",
+   "Jean-François Millet",
+   "Honoré Daumier"
+  ],
+  "reponse": "Gustave Courbet",
+  "anecdote": "Le tableau a appartenu au psychanalyste Jacques Lacan avant d'entrer au musée d'Orsay en 1995."
+ },
+ {
+  "id": "art-037",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Sculpture",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel sculpteur a conçu la statue de la Liberté de New York ?",
+  "choix": [
+   "Auguste Bartholdi",
+   "Gustave Eiffel",
+   "Jean-Baptiste Carpeaux",
+   "François Rude"
+  ],
+  "reponse": "Auguste Bartholdi",
+  "anecdote": "Né à Colmar, il aurait donné à la statue le visage de sa mère."
+ },
+ {
+  "id": "art-038",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture flamande",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel peintre a réalisé Les Époux Arnolfini en 1434 ?",
+  "choix": [
+   "Jan van Eyck",
+   "Rogier van der Weyden",
+   "Hans Memling",
+   "Jérôme Bosch"
+  ],
+  "reponse": "Jan van Eyck",
+  "anecdote": "Le miroir convexe du fond reflète deux personnages, dont peut-être le peintre lui-même."
+ },
+ {
+  "id": "art-039",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Architecture",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel architecte a conçu l'opéra de Paris inauguré en 1875 ?",
+  "choix": [
+   "Charles Garnier",
+   "Georges-Eugène Haussmann",
+   "Eugène Viollet-le-Duc",
+   "Hector Guimard"
+  ],
+  "reponse": "Charles Garnier",
+  "anecdote": "Sous le bâtiment se trouve une réserve d'eau, à l'origine de la légende du lac souterrain du Fantôme de l'Opéra."
+ },
+ {
+  "id": "art-040",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel peintre néerlandais a peint La Jeune Fille à la perle ?",
+  "choix": [
+   "Johannes Vermeer",
+   "Rembrandt",
+   "Frans Hals",
+   "Pieter de Hooch"
+  ],
+  "reponse": "Johannes Vermeer",
+  "anecdote": "On ne connaît qu'une trentaine de tableaux de lui."
+ },
+ {
+  "id": "art-041",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Architecture",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel architecte a conçu le musée Guggenheim de Bilbao, ouvert en 1997 ?",
+  "choix": [
+   "Frank Gehry",
+   "Renzo Piano",
+   "Zaha Hadid",
+   "Norman Foster"
+  ],
+  "reponse": "Frank Gehry",
+  "anecdote": "Il est recouvert de plaques de titane. On parle d'« effet Bilbao » quand un musée relance une ville."
+ },
+ {
+  "id": "art-042",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Musées",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Dans quel musée est exposé Le Jardin des délices de Jérôme Bosch ?",
+  "choix": [
+   "Le Prado, à Madrid",
+   "Le Rijksmuseum, à Amsterdam",
+   "Le Louvre, à Paris",
+   "Le Kunsthistorisches Museum, à Vienne"
+  ],
+  "reponse": "Le Prado, à Madrid",
+  "anecdote": "Le roi Philippe II d'Espagne, grand amateur de Bosch, l'avait acquis au XVIe siècle."
+ },
+ {
+  "id": "art-043",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel peintre baroque italien, au tempérament violent, a peint La Vocation de saint Matthieu ?",
+  "reponse": "Le Caravage",
+  "reponses_acceptees": [
+   "Caravage",
+   "Caravaggio"
+  ],
+  "anecdote": "Condamné pour meurtre en 1606, il a fini sa vie en fuite."
+ },
+ {
+  "id": "art-044",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Jardins",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Qui a dessiné les jardins du château de Versailles ?",
+  "reponse": "André Le Nôtre",
+  "reponses_acceptees": [
+   "Le Nôtre",
+   "Le Notre",
+   "Andre Le Notre"
+  ],
+  "anecdote": "Jardinier de Louis XIV, il a aussi conçu ceux de Vaux-le-Vicomte et la perspective des Champs-Élysées."
+ },
+ {
+  "id": "art-045",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année Vincent van Gogh est-il mort ?",
+  "reponse": 1890,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1800,
+   1950
+  ],
+  "anecdote": "Il est mort à Auvers-sur-Oise, deux jours après s'être tiré une balle. Il repose à côté de son frère Théo."
+ },
+ {
+  "id": "art-046",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Architecture",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de rivets la tour Eiffel compte-t-elle, en millions ?",
+  "reponse": 2.5,
+  "unite": "millions",
+  "tolerance": 0.1,
+  "bornes": [
+   0.1,
+   10
+  ],
+  "anecdote": "Elle compte aussi environ 18 000 pièces métalliques, toutes dessinées une à une."
+ },
+ {
+  "id": "art-047",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Musées",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : le musée d'Orsay est installé dans une ancienne gare.",
+  "reponse": "Vrai",
+  "anecdote": "La gare d'Orsay a été construite pour l'Exposition universelle de 1900."
+ },
+ {
+  "id": "art-048",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peintres",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Qui suis-je ?",
+  "reponse": "Paul Cézanne",
+  "reponses_acceptees": [
+   "Cézanne",
+   "Cezanne"
+  ],
+  "indices": [
+   "Je suis né à Aix-en-Provence",
+   "Mon ami d'enfance Émile Zola s'est inspiré de moi pour un peintre raté",
+   "J'ai peint la montagne Sainte-Victoire des dizaines de fois",
+   "On me surnomme souvent le père de l'art moderne"
+  ],
+  "anecdote": "Le roman L'Œuvre, de Zola, a mis fin à leur amitié en 1886."
+ },
+ {
+  "id": "art-049",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Architecture",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel artiste baroque a conçu la colonnade de la place Saint-Pierre, à Rome ?",
+  "reponse": "Le Bernin",
+  "reponses_acceptees": [
+   "Bernin",
+   "Gian Lorenzo Bernini",
+   "Bernini"
+  ],
+  "anecdote": "Ses deux bras de colonnes devaient symboliser l'Église qui accueille les fidèles."
+ },
+ {
+  "id": "art-050",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel peintre a réalisé Le Tricheur à l'as de carreau ?",
+  "choix": [
+   "Georges de La Tour",
+   "Le Caravage",
+   "Louis Le Nain",
+   "Valentin de Boulogne"
+  ],
+  "reponse": "Georges de La Tour",
+  "anecdote": "Ce peintre lorrain, oublié pendant près de trois siècles, a été redécouvert au début du XXe siècle."
+ },
+ {
+  "id": "art-051",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel peintre a réalisé Le Christ jaune, en 1889 ?",
+  "choix": [
+   "Paul Gauguin",
+   "Émile Bernard",
+   "Paul Sérusier",
+   "Vincent van Gogh"
+  ],
+  "reponse": "Paul Gauguin",
+  "anecdote": "Il s'est inspiré d'un crucifix en bois de la chapelle de Trémalo, près de Pont-Aven."
+ },
+ {
+  "id": "art-052",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Mouvements",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel mouvement est né d'un manifeste de Marinetti publié en une du Figaro en 1909 ?",
+  "choix": [
+   "Le futurisme",
+   "Le dadaïsme",
+   "Le constructivisme",
+   "Le vorticisme"
+  ],
+  "reponse": "Le futurisme",
+  "anecdote": "Il exaltait la vitesse, les machines et la modernité, et voulait détruire les musées."
  }
 ]

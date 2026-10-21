@@ -2,57 +2,9 @@
  {
   "id": "mus-001",
   "categorie": "Musique",
-  "sous_theme": "Pop",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Quel chanteur est surnommé le « roi de la pop » ?",
-  "choix": [
-   "Michael Jackson",
-   "Elvis Presley",
-   "Prince",
-   "Freddie Mercury"
-  ],
-  "reponse": "Michael Jackson",
-  "anecdote": "Thriller, sorti en 1982, reste l'album le plus vendu de l'histoire."
- },
- {
-  "id": "mus-002",
-  "categorie": "Musique",
-  "sous_theme": "Rock",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "De quel pays vient le groupe The Beatles ?",
-  "choix": [
-   "Royaume-Uni",
-   "États-Unis",
-   "Irlande",
-   "Australie"
-  ],
-  "reponse": "Royaume-Uni",
-  "anecdote": "Le groupe est né à Liverpool. Ringo Starr a remplacé le batteur Pete Best en 1962."
- },
- {
-  "id": "mus-003",
-  "categorie": "Musique",
-  "sous_theme": "Chanson française",
-  "type": "qcm",
-  "difficulte": 3,
-  "question": "Qui chante « Non, je ne regrette rien » ?",
-  "choix": [
-   "Édith Piaf",
-   "Dalida",
-   "Barbara",
-   "Juliette Gréco"
-  ],
-  "reponse": "Édith Piaf",
-  "anecdote": "Piaf l'a dédiée à la Légion étrangère, qui en a fait l'un de ses chants."
- },
- {
-  "id": "mus-004",
-  "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quel compositeur a écrit La Flûte enchantée ?",
   "choix": [
    "Mozart",
@@ -64,11 +16,11 @@
   "anecdote": "Mozart est mort à 35 ans, quelques semaines après la création de l'opéra en 1791."
  },
  {
-  "id": "mus-005",
+  "id": "mus-002",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Quel compositeur a continué à composer alors qu'il était devenu sourd ?",
   "choix": [
    "Beethoven",
@@ -80,11 +32,11 @@
   "anecdote": "Lors de la première de la 9e Symphonie, il a fallu le retourner pour qu'il voie le public applaudir."
  },
  {
-  "id": "mus-006",
+  "id": "mus-003",
   "categorie": "Musique",
   "sous_theme": "Instruments",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Combien de cordes possède une guitare classique ?",
   "choix": [
    "6",
@@ -96,11 +48,11 @@
   "anecdote": "Les cordes de guitare classique étaient autrefois en boyau de mouton, aujourd'hui en nylon."
  },
  {
-  "id": "mus-007",
+  "id": "mus-004",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quel groupe a sorti l'album The Dark Side of the Moon ?",
   "choix": [
    "Pink Floyd",
@@ -112,11 +64,11 @@
   "anecdote": "L'album est resté plus de 900 semaines dans le classement américain Billboard 200."
  },
  {
-  "id": "mus-008",
+  "id": "mus-005",
   "categorie": "Musique",
   "sous_theme": "Chanson française",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quel chanteur a composé et interprété « La Bohème » en 1965 ?",
   "choix": [
    "Charles Aznavour",
@@ -128,11 +80,11 @@
   "anecdote": "Les paroles sont de Jacques Plante ; Aznavour en a composé la musique et en a fait un succès mondial."
  },
  {
-  "id": "mus-009",
+  "id": "mus-006",
   "categorie": "Musique",
   "sous_theme": "Rap",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Quel rappeur français a sorti l'album « Civilisation » en 2021 ?",
   "choix": [
    "Orelsan",
@@ -144,7 +96,7 @@
   "anecdote": "L'album a été certifié disque de diamant en quelques mois."
  },
  {
-  "id": "mus-010",
+  "id": "mus-007",
   "categorie": "Musique",
   "sous_theme": "Pop",
   "type": "qcm",
@@ -160,11 +112,11 @@
   "anecdote": "Le titre de l'album correspond à l'âge qu'elle avait pendant son écriture."
  },
  {
-  "id": "mus-011",
+  "id": "mus-008",
   "categorie": "Musique",
   "sous_theme": "Instruments",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Combien de touches compte un piano standard ?",
   "choix": [
    "88",
@@ -176,11 +128,11 @@
   "anecdote": "52 touches blanches et 36 touches noires couvrent un peu plus de sept octaves."
  },
  {
-  "id": "mus-012",
+  "id": "mus-009",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Quel compositeur a écrit Les Quatre Saisons ?",
   "choix": [
    "Vivaldi",
@@ -192,11 +144,11 @@
   "anecdote": "Antonio Vivaldi était prêtre, surnommé le « prêtre roux » à cause de ses cheveux."
  },
  {
-  "id": "mus-013",
+  "id": "mus-010",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Quel guitariste a joué l'hymne américain à Woodstock en 1969 ?",
   "choix": [
    "Jimi Hendrix",
@@ -208,27 +160,11 @@
   "anecdote": "Il jouait à 9 heures du matin, devant un public déjà très clairsemé."
  },
  {
-  "id": "mus-014",
-  "categorie": "Musique",
-  "sous_theme": "Chanson française",
-  "type": "qcm",
-  "difficulte": 4,
-  "question": "Qui chante « Alors on danse », tube de 2009 ?",
-  "choix": [
-   "Stromae",
-   "Christophe Maé",
-   "Maître Gims",
-   "Grand Corps Malade"
-  ],
-  "reponse": "Stromae",
-  "anecdote": "Son nom de scène est le verlan de « maestro »."
- },
- {
-  "id": "mus-015",
+  "id": "mus-011",
   "categorie": "Musique",
   "sous_theme": "Jazz",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 2,
   "question": "Quel instrument jouait Louis Armstrong ?",
   "choix": [
    "La trompette",
@@ -240,11 +176,11 @@
   "anecdote": "Il a appris à jouer du cornet dans une maison de correction pour jeunes, à La Nouvelle-Orléans."
  },
  {
-  "id": "mus-016",
+  "id": "mus-012",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 3,
   "question": "Quel compositeur polonais a passé la majeure partie de sa vie d'adulte en France ?",
   "choix": [
    "Frédéric Chopin",
@@ -256,27 +192,11 @@
   "anecdote": "Son cœur repose à Varsovie, dans une église, conservé dans un bocal de cognac."
  },
  {
-  "id": "mus-017",
-  "categorie": "Musique",
-  "sous_theme": "Pop",
-  "type": "qcm",
-  "difficulte": 6,
-  "question": "Quel groupe suédois a remporté l'Eurovision 1974 avec « Waterloo » ?",
-  "choix": [
-   "ABBA",
-   "Roxette",
-   "Ace of Base",
-   "Europe"
-  ],
-  "reponse": "ABBA",
-  "anecdote": "Le nom du groupe est formé des initiales de ses quatre membres."
- },
- {
-  "id": "mus-018",
+  "id": "mus-013",
   "categorie": "Musique",
   "sous_theme": "Eurovision",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Quel pays détient, avec l'Irlande, le record de 7 victoires à l'Eurovision ?",
   "choix": [
    "La Suède",
@@ -288,11 +208,11 @@
   "anecdote": "Loreen est la seule femme à avoir gagné deux fois, en 2012 et en 2023."
  },
  {
-  "id": "mus-019",
+  "id": "mus-014",
   "categorie": "Musique",
   "sous_theme": "Opéra",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 6,
   "question": "Dans quel opéra trouve-t-on l'air « La donna è mobile » ?",
   "choix": [
    "Rigoletto",
@@ -304,11 +224,11 @@
   "anecdote": "Verdi a gardé l'air secret jusqu'à la générale, de peur qu'il soit copié avant la première."
  },
  {
-  "id": "mus-020",
+  "id": "mus-015",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Quel est le vrai prénom du chanteur Freddie Mercury ?",
   "choix": [
    "Farrokh",
@@ -320,11 +240,11 @@
   "anecdote": "Né à Zanzibar dans une famille parsie, il s'appelait Farrokh Bulsara."
  },
  {
-  "id": "mus-021",
+  "id": "mus-016",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 3,
   "question": "Combien de symphonies Beethoven a-t-il achevées ?",
   "choix": [
    "9",
@@ -336,11 +256,11 @@
   "anecdote": "Une « malédiction de la 9e » est née ensuite : Schubert, Dvořák et Mahler n'ont pas dépassé ce nombre."
  },
  {
-  "id": "mus-022",
+  "id": "mus-017",
   "categorie": "Musique",
   "sous_theme": "Chanson française",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quel chanteur est surnommé « le Taulier » ?",
   "choix": [
    "Johnny Hallyday",
@@ -352,11 +272,11 @@
   "anecdote": "Plus d'un million de personnes ont assisté à son hommage populaire à Paris en décembre 2017."
  },
  {
-  "id": "mus-023",
+  "id": "mus-018",
   "categorie": "Musique",
   "sous_theme": "Instruments",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 3,
   "question": "De quel pays vient le didgeridoo ?",
   "choix": [
    "L'Australie",
@@ -368,11 +288,11 @@
   "anecdote": "C'est un tronc d'eucalyptus évidé naturellement par les termites."
  },
  {
-  "id": "mus-024",
+  "id": "mus-019",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Quel groupe a chanté « Smells Like Teen Spirit » ?",
   "choix": [
    "Nirvana",
@@ -384,27 +304,11 @@
   "anecdote": "Le titre vient d'un graffiti faisant référence à un déodorant, Teen Spirit, porté par la copine de Kurt Cobain."
  },
  {
-  "id": "mus-025",
-  "categorie": "Musique",
-  "sous_theme": "Électro",
-  "type": "qcm",
-  "difficulte": 6,
-  "question": "Quel duo français portait des casques de robots ?",
-  "choix": [
-   "Daft Punk",
-   "Justice",
-   "Air",
-   "Cassius"
-  ],
-  "reponse": "Daft Punk",
-  "anecdote": "Ils ont annoncé leur séparation en 2021 avec une vidéo intitulée « Epilogue »."
- },
- {
-  "id": "mus-026",
+  "id": "mus-020",
   "categorie": "Musique",
   "sous_theme": "Jazz",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 6,
   "question": "Quel saxophoniste était surnommé « Bird » ?",
   "choix": [
    "Charlie Parker",
@@ -416,27 +320,11 @@
   "anecdote": "Le surnom viendrait de « Yardbird », sa passion pour le poulet."
  },
  {
-  "id": "mus-027",
-  "categorie": "Musique",
-  "sous_theme": "Pop",
-  "type": "qcm",
-  "difficulte": 7,
-  "question": "Quelle chanteuse a sorti l'album « Like a Virgin » ?",
-  "choix": [
-   "Madonna",
-   "Cyndi Lauper",
-   "Whitney Houston",
-   "Kylie Minogue"
-  ],
-  "reponse": "Madonna",
-  "anecdote": "Elle est arrivée à New York en 1978 avec, dit-on, 35 dollars en poche."
- },
- {
-  "id": "mus-028",
+  "id": "mus-021",
   "categorie": "Musique",
   "sous_theme": "Comédies musicales",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "De quelle comédie musicale française est tiré l'air « Belle » ?",
   "choix": [
    "Notre-Dame de Paris",
@@ -448,11 +336,11 @@
   "anecdote": "Ce trio a été classé chanson de l'année aux Victoires de la musique 1999."
  },
  {
-  "id": "mus-029",
+  "id": "mus-022",
   "categorie": "Musique",
   "sous_theme": "Rap",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 2,
   "question": "Quel rappeur américain est surnommé « Slim Shady » ?",
   "choix": [
    "Eminem",
@@ -464,11 +352,11 @@
   "anecdote": "Son vrai nom est Marshall Mathers, qui a donné le titre d'un de ses albums."
  },
  {
-  "id": "mus-030",
+  "id": "mus-023",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "qcm",
-  "difficulte": 10,
+  "difficulte": 3,
   "question": "Quel compositeur a écrit le Boléro, dont la mélodie se répète en crescendo ?",
   "choix": [
    "Maurice Ravel",
@@ -480,11 +368,11 @@
   "anecdote": "Ravel le décrivait comme « une pièce pour orchestre sans musique »."
  },
  {
-  "id": "mus-031",
+  "id": "mus-024",
   "categorie": "Musique",
   "sous_theme": "Chanson française",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Qui chante « Je veux », premier grand succès de 2010 ?",
   "choix": [
    "Zaz",
@@ -496,11 +384,11 @@
   "anecdote": "Avant le succès, elle chantait dans les rues de Montmartre."
  },
  {
-  "id": "mus-032",
+  "id": "mus-025",
   "categorie": "Musique",
   "sous_theme": "Instruments",
   "type": "qcm",
-  "difficulte": 10,
+  "difficulte": 8,
   "question": "Combien de cordes a une harpe de concert ?",
   "choix": [
    "47",
@@ -512,11 +400,11 @@
   "anecdote": "Les cordes de do sont rouges et celles de fa bleues ou noires, pour s'y retrouver."
  },
  {
-  "id": "mus-033",
+  "id": "mus-026",
   "categorie": "Musique",
   "sous_theme": "Pop",
   "type": "fourchette",
-  "difficulte": 2,
+  "difficulte": 3,
   "question": "En quelle année est sorti l'album Thriller de Michael Jackson ?",
   "reponse": 1982,
   "unite": "année",
@@ -528,11 +416,11 @@
   "anecdote": "Le clip de 14 minutes a été réalisé par John Landis, le réalisateur du Loup-garou de Londres."
  },
  {
-  "id": "mus-034",
+  "id": "mus-027",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "fourchette",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "En quelle année s'est tenu le festival de Woodstock ?",
   "reponse": 1969,
   "unite": "année",
@@ -544,7 +432,7 @@
   "anecdote": "Environ 400 000 personnes sont venues, bien plus que prévu, si bien que l'entrée est devenue gratuite."
  },
  {
-  "id": "mus-035",
+  "id": "mus-028",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "fourchette",
@@ -560,11 +448,11 @@
   "anecdote": "Ses premiers menuets, notés par son père, datent de 1761."
  },
  {
-  "id": "mus-036",
+  "id": "mus-029",
   "categorie": "Musique",
   "sous_theme": "Pop",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 6,
   "question": "Combien d'albums Thriller s'est-il vendu, en millions d'exemplaires (estimation) ?",
   "reponse": 70,
   "unite": "millions",
@@ -576,11 +464,11 @@
   "anecdote": "Sept des neuf chansons de l'album ont été classées dans le top 10 américain."
  },
  {
-  "id": "mus-037",
+  "id": "mus-030",
   "categorie": "Musique",
   "sous_theme": "Chanson française",
   "type": "fourchette",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "En quelle année est morte Édith Piaf ?",
   "reponse": 1963,
   "unite": "année",
@@ -592,11 +480,11 @@
   "anecdote": "Jean Cocteau, son ami, est mort le même jour, quelques heures après elle."
  },
  {
-  "id": "mus-038",
+  "id": "mus-031",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 7,
   "question": "Combien de chansons les Beatles ont-ils classées numéro 1 aux États-Unis ?",
   "reponse": 20,
   "unite": "chansons",
@@ -608,11 +496,11 @@
   "anecdote": "C'est un record toujours inégalé dans le classement Billboard Hot 100."
  },
  {
-  "id": "mus-039",
+  "id": "mus-032",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "fourchette",
-  "difficulte": 3,
+  "difficulte": 4,
   "question": "En quelle année est sortie la chanson « Bohemian Rhapsody » de Queen ?",
   "reponse": 1975,
   "unite": "année",
@@ -624,7 +512,7 @@
   "anecdote": "Avec près de 6 minutes, la maison de disques la trouvait trop longue pour passer à la radio."
  },
  {
-  "id": "mus-040",
+  "id": "mus-033",
   "categorie": "Musique",
   "sous_theme": "Rap",
   "type": "fourchette",
@@ -640,11 +528,11 @@
   "anecdote": "Le groupe marseillais a ensuite sorti « L'École du micro d'argent » en 1997, souvent classé meilleur album de rap français."
  },
  {
-  "id": "mus-041",
+  "id": "mus-034",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "fourchette",
-  "difficulte": 9,
+  "difficulte": 7,
   "question": "Combien de temps dure environ la 9e symphonie de Beethoven, en minutes ?",
   "reponse": 70,
   "unite": "minutes",
@@ -656,11 +544,11 @@
   "anecdote": "Selon la légende, la durée des CD (74 min) aurait été choisie pour pouvoir la contenir en entier."
  },
  {
-  "id": "mus-042",
+  "id": "mus-035",
   "categorie": "Musique",
   "sous_theme": "Eurovision",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "En quelle année la France a-t-elle remporté l'Eurovision pour la dernière fois ?",
   "reponse": 1977,
   "unite": "année",
@@ -672,11 +560,11 @@
   "anecdote": "Marie Myriam a gagné avec « L'Oiseau et l'Enfant ». C'est la 5e victoire française."
  },
  {
-  "id": "mus-043",
+  "id": "mus-036",
   "categorie": "Musique",
   "sous_theme": "Pop",
   "type": "fourchette",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "En quelle année est mort Michael Jackson ?",
   "reponse": 2009,
   "unite": "année",
@@ -688,11 +576,11 @@
   "anecdote": "Il préparait une série de 50 concerts à Londres, « This Is It »."
  },
  {
-  "id": "mus-044",
+  "id": "mus-037",
   "categorie": "Musique",
   "sous_theme": "Opéra",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "En quelle année l'opéra Carmen de Bizet a-t-il été créé ?",
   "reponse": 1875,
   "unite": "année",
@@ -704,11 +592,11 @@
   "anecdote": "L'accueil fut froid ; Bizet est mort trois mois plus tard, sans connaître le triomphe de son œuvre."
  },
  {
-  "id": "mus-045",
+  "id": "mus-038",
   "categorie": "Musique",
   "sous_theme": "Électro",
   "type": "fourchette",
-  "difficulte": 4,
+  "difficulte": 6,
   "question": "Combien de temps dure le titre « Around the World » de Daft Punk dans sa version album, en minutes ?",
   "reponse": 7,
   "unite": "minutes",
@@ -720,11 +608,11 @@
   "anecdote": "Les mots « Around the world » y sont répétés 144 fois."
  },
  {
-  "id": "mus-046",
+  "id": "mus-039",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "fourchette",
-  "difficulte": 10,
+  "difficulte": 8,
   "question": "Quel est le numéro du Requiem de Mozart dans le catalogue Köchel ?",
   "reponse": 626,
   "unite": "numéro K.",
@@ -736,31 +624,11 @@
   "anecdote": "Le Requiem est resté inachevé à la mort de Mozart en 1791 ; son élève Süssmayr l'a complété."
  },
  {
-  "id": "mus-047",
-  "categorie": "Musique",
-  "sous_theme": "Chanson française",
-  "type": "indices",
-  "difficulte": 2,
-  "question": "Qui suis-je ?",
-  "reponse": "Céline Dion",
-  "reponses_acceptees": [
-   "Dion",
-   "Céline"
-  ],
-  "indices": [
-   "J'ai 13 frères et sœurs",
-   "J'ai gagné l'Eurovision pour la Suisse en 1988",
-   "J'ai chanté la chanson de Titanic",
-   "Je suis une chanteuse québécoise"
-  ],
-  "anecdote": "Elle a chanté « Ne partez pas sans moi » à l'Eurovision, devançant le Royaume-Uni d'un seul point."
- },
- {
-  "id": "mus-048",
+  "id": "mus-040",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Elvis Presley",
   "reponses_acceptees": [
@@ -775,11 +643,11 @@
   "anecdote": "Son jumeau, Jesse Garon, est mort à la naissance."
  },
  {
-  "id": "mus-049",
+  "id": "mus-041",
   "categorie": "Musique",
   "sous_theme": "Chanson française",
   "type": "indices",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Serge Gainsbourg",
   "reponses_acceptees": [
@@ -795,11 +663,11 @@
   "anecdote": "Il est né Lucien Ginsburg, à Paris, en 1928."
  },
  {
-  "id": "mus-050",
+  "id": "mus-042",
   "categorie": "Musique",
   "sous_theme": "Pop",
   "type": "indices",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Lady Gaga",
   "reponses_acceptees": [
@@ -814,11 +682,11 @@
   "anecdote": "Son nom vient de « Radio Ga Ga », de Queen."
  },
  {
-  "id": "mus-051",
+  "id": "mus-043",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "indices",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Qui suis-je ?",
   "reponse": "Jean-Sébastien Bach",
   "reponses_acceptees": [
@@ -835,11 +703,11 @@
   "anecdote": "Il a été presque oublié après sa mort, jusqu'à ce que Mendelssohn le remette à l'honneur en 1829."
  },
  {
-  "id": "mus-052",
+  "id": "mus-044",
   "categorie": "Musique",
   "sous_theme": "Rap",
   "type": "indices",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Jul",
   "reponses_acceptees": [
@@ -854,11 +722,11 @@
   "anecdote": "Il fait partie des artistes qui vendent le plus d'albums en France, tous genres confondus."
  },
  {
-  "id": "mus-053",
+  "id": "mus-045",
   "categorie": "Musique",
   "sous_theme": "Jazz",
   "type": "indices",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Qui suis-je ?",
   "reponse": "Django Reinhardt",
   "reponses_acceptees": [
@@ -874,11 +742,11 @@
   "anecdote": "Il a ainsi inventé une technique unique qui a donné naissance au jazz manouche."
  },
  {
-  "id": "mus-054",
+  "id": "mus-046",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "indices",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Quel est ce groupe ?",
   "reponse": "Queen",
   "reponses_acceptees": [
@@ -893,11 +761,11 @@
   "anecdote": "Brian May a fabriqué la « Red Special » avec le bois d'une vieille cheminée."
  },
  {
-  "id": "mus-055",
+  "id": "mus-047",
   "categorie": "Musique",
   "sous_theme": "Chanson française",
   "type": "indices",
-  "difficulte": 9,
+  "difficulte": 5,
   "question": "Qui suis-je ?",
   "reponse": "Barbara",
   "reponses_acceptees": [
@@ -912,37 +780,17 @@
   "anecdote": "Elle a écrit « Göttingen » en 1964, lors d'un séjour dans cette ville allemande où elle était invitée à chanter."
  },
  {
-  "id": "mus-056",
-  "categorie": "Musique",
-  "sous_theme": "Pop",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Qui suis-je ?",
-  "reponse": "Taylor Swift",
-  "reponses_acceptees": [
-   "Swift",
-   "Taylor"
-  ],
-  "indices": [
-   "J'ai commencé par la musique country",
-   "Mes fans s'appellent les Swifties",
-   "Ma tournée « The Eras Tour » est la plus lucrative de l'histoire",
-   "J'ai réenregistré mes anciens albums"
-  ],
-  "anecdote": "L'Eras Tour a dépassé les 2 milliards de dollars de recettes, de 2023 à 2024."
- },
- {
-  "id": "mus-057",
+  "id": "mus-048",
   "categorie": "Musique",
   "sous_theme": "Instruments",
   "type": "vf",
-  "difficulte": 2,
+  "difficulte": 3,
   "question": "Vrai ou faux : le saxophone a été inventé par un Belge.",
   "reponse": "Vrai",
   "anecdote": "Adolphe Sax l'a breveté à Paris en 1846. Son visage figure sur l'ancien billet de 200 francs belges."
  },
  {
-  "id": "mus-058",
+  "id": "mus-049",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "vf",
@@ -952,7 +800,7 @@
   "anecdote": "Les Beatles existaient dès 1960 ; les Rolling Stones se sont formés en 1962."
  },
  {
-  "id": "mus-059",
+  "id": "mus-050",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "vf",
@@ -962,64 +810,51 @@
   "anecdote": "Beethoven a fait un séjour à Vienne en 1787, peut-être pour prendre des leçons auprès de Mozart, mais aucune preuve n'existe."
  },
  {
-  "id": "mus-060",
+  "id": "mus-051",
   "categorie": "Musique",
   "sous_theme": "Chanson française",
   "type": "vf",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Vrai ou faux : « Comme d'habitude » de Claude François est devenue « My Way » de Frank Sinatra.",
   "reponse": "Vrai",
   "anecdote": "Paul Anka en a écrit les paroles anglaises, sans rapport avec les paroles françaises."
  },
  {
-  "id": "mus-061",
+  "id": "mus-052",
   "categorie": "Musique",
   "sous_theme": "Pop",
   "type": "vf",
-  "difficulte": 7,
+  "difficulte": 6,
   "question": "Vrai ou faux : « Happy Birthday to You » est tombée dans le domaine public aux États-Unis seulement en 2016.",
   "reponse": "Vrai",
   "anecdote": "Un tribunal a jugé en 2015 que les droits revendiqués par Warner n'étaient pas valides."
  },
  {
-  "id": "mus-062",
+  "id": "mus-053",
   "categorie": "Musique",
   "sous_theme": "Instruments",
   "type": "vf",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Vrai ou faux : le piano est classé parmi les instruments à percussion.",
   "reponse": "Vrai",
   "anecdote": "Ses cordes sont frappées par des marteaux : on le range souvent parmi les percussions ou les cordes frappées."
  },
  {
-  "id": "mus-063",
+  "id": "mus-054",
   "categorie": "Musique",
   "sous_theme": "Rap",
   "type": "vf",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Vrai ou faux : le rap est né à New York.",
   "reponse": "Vrai",
   "anecdote": "Le DJ Kool Herc aurait lancé le mouvement lors d'une fête dans le Bronx, le 11 août 1973."
  },
  {
-  "id": "mus-064",
-  "categorie": "Musique",
-  "sous_theme": "Chanson française",
-  "type": "libre",
-  "difficulte": 2,
-  "question": "Quel chanteur belge a chanté « Ne me quitte pas » ?",
-  "reponse": "Jacques Brel",
-  "reponses_acceptees": [
-   "Brel"
-  ],
-  "anecdote": "Il a écrit la chanson en 1959, après sa rupture avec une femme qui attendait un enfant de lui."
- },
- {
-  "id": "mus-065",
+  "id": "mus-055",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "libre",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quel compositeur a écrit La Lettre à Élise ?",
   "reponse": "Beethoven",
   "reponses_acceptees": [
@@ -1028,7 +863,7 @@
   "anecdote": "L'identité d'Élise reste un mystère : il pourrait s'agir de Thérèse, mal déchiffrée par un copiste."
  },
  {
-  "id": "mus-066",
+  "id": "mus-056",
   "categorie": "Musique",
   "sous_theme": "Instruments",
   "type": "libre",
@@ -1042,11 +877,11 @@
   "anecdote": "Il est traditionnellement accompagné par la bombarde, un hautbois populaire."
  },
  {
-  "id": "mus-067",
+  "id": "mus-057",
   "categorie": "Musique",
   "sous_theme": "Rock",
   "type": "libre",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Quel est le nom du chanteur du groupe U2 ?",
   "reponse": "Bono",
   "reponses_acceptees": [
@@ -1055,11 +890,11 @@
   "anecdote": "Son surnom vient d'une enseigne de magasin d'appareils auditifs, « Bonavox »."
  },
  {
-  "id": "mus-068",
+  "id": "mus-058",
   "categorie": "Musique",
   "sous_theme": "Pop",
   "type": "libre",
-  "difficulte": 7,
+  "difficulte": 3,
   "question": "Quel chanteur britannique s'appelait en réalité David Robert Jones ?",
   "reponse": "David Bowie",
   "reponses_acceptees": [
@@ -1068,11 +903,11 @@
   "anecdote": "Il a changé de nom pour ne pas être confondu avec Davy Jones, chanteur des Monkees."
  },
  {
-  "id": "mus-069",
+  "id": "mus-059",
   "categorie": "Musique",
   "sous_theme": "Opéra",
   "type": "libre",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quel compositeur allemand a créé la Tétralogie « L'Anneau du Nibelung » ?",
   "reponse": "Richard Wagner",
   "reponses_acceptees": [
@@ -1081,16 +916,244 @@
   "anecdote": "Il a fait construire son propre théâtre, à Bayreuth, pour la jouer."
  },
  {
-  "id": "mus-070",
+  "id": "mus-060",
   "categorie": "Musique",
   "sous_theme": "Classique",
   "type": "libre",
-  "difficulte": 9,
+  "difficulte": 6,
   "question": "Quel compositeur a écrit l'opéra « Pelléas et Mélisande » en 1902 ?",
   "reponse": "Claude Debussy",
   "reponses_acceptees": [
    "Debussy"
   ],
   "anecdote": "Sa création à l'Opéra-Comique a provoqué un scandale, puis un culte."
+ },
+ {
+  "id": "mus-061",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel compositeur a écrit l'opéra Les Troyens ?",
+  "choix": [
+   "Hector Berlioz",
+   "Charles Gounod",
+   "Jules Massenet",
+   "Camille Saint-Saëns"
+  ],
+  "reponse": "Hector Berlioz",
+  "anecdote": "Il n'a jamais vu son œuvre jouée en entier de son vivant : la première intégrale date de 1957."
+ },
+ {
+  "id": "mus-062",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel compositeur a écrit la Symphonie « du Nouveau Monde » ?",
+  "choix": [
+   "Antonín Dvořák",
+   "Bedřich Smetana",
+   "Gustav Mahler",
+   "Piotr Ilitch Tchaïkovski"
+  ],
+  "reponse": "Antonín Dvořák",
+  "anecdote": "Il l'a composée à New York en 1893 ; Neil Armstrong en aurait emporté un enregistrement sur la Lune."
+ },
+ {
+  "id": "mus-063",
+  "categorie": "Musique",
+  "sous_theme": "Opéra",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Dans quel opéra de Puccini trouve-t-on l'air « Nessun dorma » ?",
+  "choix": [
+   "Turandot",
+   "La Bohème",
+   "Tosca",
+   "Madame Butterfly"
+  ],
+  "reponse": "Turandot",
+  "anecdote": "Puccini est mort avant d'achever l'œuvre, terminée par Franco Alfano."
+ },
+ {
+  "id": "mus-064",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel compositeur français a écrit « Le Carnaval des animaux » ?",
+  "choix": [
+   "Camille Saint-Saëns",
+   "Maurice Ravel",
+   "Paul Dukas",
+   "Emmanuel Chabrier"
+  ],
+  "reponse": "Camille Saint-Saëns",
+  "anecdote": "Il en avait interdit la publication de son vivant, à l'exception du « Cygne »."
+ },
+ {
+  "id": "mus-065",
+  "categorie": "Musique",
+  "sous_theme": "Jazz",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel trompettiste a enregistré l'album « Kind of Blue » en 1959 ?",
+  "choix": [
+   "Miles Davis",
+   "Dizzy Gillespie",
+   "Chet Baker",
+   "Louis Armstrong"
+  ],
+  "reponse": "Miles Davis",
+  "anecdote": "C'est l'album de jazz le plus vendu de l'histoire."
+ },
+ {
+  "id": "mus-066",
+  "categorie": "Musique",
+  "sous_theme": "Rock",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel batteur a rejoint les Beatles en 1962, à la place de Pete Best ?",
+  "choix": [
+   "Ringo Starr",
+   "Charlie Watts",
+   "Keith Moon",
+   "Ginger Baker"
+  ],
+  "reponse": "Ringo Starr",
+  "anecdote": "De son vrai nom Richard Starkey, il devait son surnom à ses nombreuses bagues."
+ },
+ {
+  "id": "mus-067",
+  "categorie": "Musique",
+  "sous_theme": "Chanson française",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel chanteur a écrit et interprété « La Mauvaise Réputation » en 1952 ?",
+  "choix": [
+   "Georges Brassens",
+   "Léo Ferré",
+   "Boris Vian",
+   "Jacques Brel"
+  ],
+  "reponse": "Georges Brassens",
+  "anecdote": "Il a vécu plus de vingt ans impasse Florimont, à Paris, hébergé par Jeanne et Marcel Planche."
+ },
+ {
+  "id": "mus-068",
+  "categorie": "Musique",
+  "sous_theme": "Théorie musicale",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Combien de dièses compte la tonalité de mi majeur ?",
+  "choix": [
+   "Quatre",
+   "Trois",
+   "Cinq",
+   "Deux"
+  ],
+  "reponse": "Quatre",
+  "anecdote": "Fa, do, sol et ré dièse. Sa relative mineure est do dièse mineur."
+ },
+ {
+  "id": "mus-069",
+  "categorie": "Musique",
+  "sous_theme": "Instruments",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "À quelle famille d'instruments appartient le cor anglais ?",
+  "choix": [
+   "Les bois",
+   "Les cuivres",
+   "Les cordes",
+   "Les percussions"
+  ],
+  "reponse": "Les bois",
+  "anecdote": "Malgré son nom, ce n'est ni un cor ni un instrument anglais : c'est un hautbois plus grave."
+ },
+ {
+  "id": "mus-070",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel compositeur a écrit la Danse macabre et la Symphonie avec orgue ?",
+  "reponse": "Camille Saint-Saëns",
+  "reponses_acceptees": [
+   "Saint-Saëns",
+   "Saint-Saens"
+  ],
+  "anecdote": "Enfant prodige, il donnait un récital de piano à 10 ans à la salle Pleyel."
+ },
+ {
+  "id": "mus-071",
+  "categorie": "Musique",
+  "sous_theme": "Opéra",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel compositeur a écrit l'opéra Carmen ?",
+  "reponse": "Georges Bizet",
+  "reponses_acceptees": [
+   "Bizet"
+  ],
+  "anecdote": "Il est mort trois mois après la première, sans connaître le succès mondial de son œuvre."
+ },
+ {
+  "id": "mus-072",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel compositeur a écrit Les Tableaux d'une exposition pour piano, orchestrés plus tard par Ravel ?",
+  "reponse": "Modeste Moussorgski",
+  "reponses_acceptees": [
+   "Moussorgski",
+   "Mussorgsky",
+   "Moussorgsky"
+  ],
+  "anecdote": "L'œuvre est un hommage à son ami peintre Viktor Hartmann, mort l'année précédente."
+ },
+ {
+  "id": "mus-073",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de sonates pour piano Beethoven a-t-il composées (numérotées) ?",
+  "reponse": 32,
+  "unite": "sonates",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   100
+  ],
+  "anecdote": "On les surnomme le « Nouveau Testament » du piano, le Clavier bien tempéré de Bach étant l'« Ancien »."
+ },
+ {
+  "id": "mus-074",
+  "categorie": "Musique",
+  "sous_theme": "Rock",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année les Beatles ont-ils donné leur dernier concert, sur le toit d'Apple à Londres ?",
+  "reponse": 1969,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1950,
+   2000
+  ],
+  "anecdote": "Le 30 janvier 1969, le concert a été interrompu par la police au bout d'environ 40 minutes."
+ },
+ {
+  "id": "mus-075",
+  "categorie": "Musique",
+  "sous_theme": "Classique",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : Jean-Sébastien Bach et Haendel sont nés la même année.",
+  "reponse": "Vrai",
+  "anecdote": "Tous deux sont nés en 1685, à moins de 150 km l'un de l'autre, mais ne se sont jamais rencontrés."
  }
 ]

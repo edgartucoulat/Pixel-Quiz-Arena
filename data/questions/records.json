@@ -2,41 +2,9 @@
  {
   "id": "rec-001",
   "categorie": "Records & chiffres",
-  "sous_theme": "Bâtiments",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Quel est le plus haut gratte-ciel du monde ?",
-  "choix": [
-   "Burj Khalifa",
-   "Shanghai Tower",
-   "One World Trade Center",
-   "Taipei 101"
-  ],
-  "reponse": "Burj Khalifa",
-  "anecdote": "Situé à Dubaï, il mesure 828 m et a été inauguré en 2010."
- },
- {
-  "id": "rec-002",
-  "categorie": "Records & chiffres",
-  "sous_theme": "Animaux",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quel est le plus grand animal terrestre actuel ?",
-  "choix": [
-   "L'éléphant d'Afrique",
-   "L'hippopotame",
-   "Le rhinocéros blanc",
-   "La girafe"
-  ],
-  "reponse": "L'éléphant d'Afrique",
-  "anecdote": "Un mâle peut dépasser 6 tonnes ; ses oreilles servent à se rafraîchir."
- },
- {
-  "id": "rec-003",
-  "categorie": "Records & chiffres",
   "sous_theme": "Population",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 5,
   "question": "Quelle est la ville la plus peuplée du monde, agglomération comprise, selon l'ONU en 2025 ?",
   "choix": [
    "Jakarta",
@@ -48,11 +16,11 @@
   "anecdote": "Le rapport de l'ONU de 2025 a placé Jakarta en tête, devant Dacca, Tokyo passant au 3e rang avec une nouvelle méthode de calcul."
  },
  {
-  "id": "rec-004",
+  "id": "rec-002",
   "categorie": "Records & chiffres",
   "sous_theme": "Humains",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Qui détient le record de la personne la plus âgée de l'histoire, vérifiée ?",
   "choix": [
    "Jeanne Calment",
@@ -64,7 +32,7 @@
   "anecdote": "Elle est morte à Arles en 1997, à 122 ans et 164 jours."
  },
  {
-  "id": "rec-005",
+  "id": "rec-003",
   "categorie": "Records & chiffres",
   "sous_theme": "Nature",
   "type": "qcm",
@@ -80,11 +48,11 @@
   "anecdote": "Surnommé Hyperion, il mesure environ 116 m. Son emplacement en Californie est tenu secret."
  },
  {
-  "id": "rec-006",
+  "id": "rec-004",
   "categorie": "Records & chiffres",
   "sous_theme": "Transports",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Quel pays détient le record de vitesse d'un train, avec 603 km/h en 2015 ?",
   "choix": [
    "Le Japon",
@@ -96,11 +64,11 @@
   "anecdote": "Le train à lévitation magnétique L0 a établi ce record lors d'un essai sur une ligne d'essai près du mont Fuji."
  },
  {
-  "id": "rec-007",
+  "id": "rec-005",
   "categorie": "Records & chiffres",
   "sous_theme": "Bâtiments",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Quel est le plus grand musée d'art du monde par la surface d'exposition ?",
   "choix": [
    "Le Louvre",
@@ -112,7 +80,7 @@
   "anecdote": "C'est aussi le musée le plus visité du monde, avec environ 9 millions de visiteurs par an."
  },
  {
-  "id": "rec-008",
+  "id": "rec-006",
   "categorie": "Records & chiffres",
   "sous_theme": "Transports",
   "type": "qcm",
@@ -128,11 +96,11 @@
   "anecdote": "En 1997, sa voiture Thrust SSC a été la première à franchir le mur du son sur terre."
  },
  {
-  "id": "rec-009",
+  "id": "rec-007",
   "categorie": "Records & chiffres",
   "sous_theme": "Nature",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Quel est le plus long fleuve d'Asie ?",
   "choix": [
    "Le Yangzi Jiang",
@@ -144,11 +112,11 @@
   "anecdote": "Il mesure environ 6 300 km. Le barrage des Trois-Gorges y est le plus puissant du monde."
  },
  {
-  "id": "rec-010",
+  "id": "rec-008",
   "categorie": "Records & chiffres",
   "sous_theme": "Nature",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Quel endroit détient le record de la température la plus chaude jamais mesurée, selon l'OMM ?",
   "choix": [
    "La Vallée de la Mort",
@@ -160,11 +128,11 @@
   "anecdote": "56,7 °C ont été mesurés en 1913 en Californie, même si ce record est discuté."
  },
  {
-  "id": "rec-011",
+  "id": "rec-009",
   "categorie": "Records & chiffres",
   "sous_theme": "Humains",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Quel alpiniste a été le premier à gravir les 14 sommets de plus de 8 000 m ?",
   "choix": [
    "Reinhold Messner",
@@ -176,11 +144,11 @@
   "anecdote": "Il a achevé ce défi en 1986, sans oxygène en bouteille."
  },
  {
-  "id": "rec-012",
+  "id": "rec-010",
   "categorie": "Records & chiffres",
   "sous_theme": "Espace",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Quel astronaute détient le record du plus long séjour continu dans l'espace ?",
   "choix": [
    "Valeri Poliakov",
@@ -192,11 +160,11 @@
   "anecdote": "Il est resté 437 jours à bord de la station Mir, en 1994 et 1995."
  },
  {
-  "id": "rec-013",
+  "id": "rec-011",
   "categorie": "Records & chiffres",
   "sous_theme": "Bâtiments",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Quel est le pont le plus long du monde ?",
   "choix": [
    "Le grand pont de Danyang-Kunshan",
@@ -208,11 +176,11 @@
   "anecdote": "Ce viaduc ferroviaire chinois mesure environ 164 km."
  },
  {
-  "id": "rec-014",
+  "id": "rec-012",
   "categorie": "Records & chiffres",
   "sous_theme": "Nature",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 7,
   "question": "Quel est le volcan actif le plus haut du monde ?",
   "choix": [
    "L'Ojos del Salado",
@@ -224,11 +192,11 @@
   "anecdote": "Il culmine à environ 6 893 m, à la frontière entre le Chili et l'Argentine."
  },
  {
-  "id": "rec-015",
+  "id": "rec-013",
   "categorie": "Records & chiffres",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 4,
   "question": "Quel est l'animal le plus venimeux du monde, selon de nombreux classements ?",
   "choix": [
    "La méduse-boîte",
@@ -240,11 +208,11 @@
   "anecdote": "Son venin peut tuer un humain en quelques minutes. On la trouve au large de l'Australie."
  },
  {
-  "id": "rec-016",
+  "id": "rec-014",
   "categorie": "Records & chiffres",
   "sous_theme": "Humains",
   "type": "qcm",
-  "difficulte": 10,
+  "difficulte": 4,
   "question": "Qui détient le record de la personne la plus grande de l'histoire ?",
   "choix": [
    "Robert Wadlow",
@@ -256,11 +224,11 @@
   "anecdote": "Il mesurait 2,72 m et chaussait du 76."
  },
  {
-  "id": "rec-017",
+  "id": "rec-015",
   "categorie": "Records & chiffres",
   "sous_theme": "Sport",
   "type": "qcm",
-  "difficulte": 10,
+  "difficulte": 2,
   "question": "Quel pays a remporté le plus de médailles olympiques d'été de l'histoire ?",
   "choix": [
    "Les États-Unis",
@@ -272,7 +240,7 @@
   "anecdote": "Ils dépassent les 2 600 médailles depuis 1896."
  },
  {
-  "id": "rec-018",
+  "id": "rec-016",
   "categorie": "Records & chiffres",
   "sous_theme": "Nature",
   "type": "qcm",
@@ -288,11 +256,11 @@
   "anecdote": "Certaines stations n'y ont presque jamais enregistré de pluie ; la NASA y teste des robots destinés à Mars."
  },
  {
-  "id": "rec-019",
+  "id": "rec-017",
   "categorie": "Records & chiffres",
   "sous_theme": "Espace",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel est l'objet fabriqué par l'humain le plus éloigné de la Terre ?",
   "choix": [
    "La sonde Voyager 1",
@@ -304,11 +272,11 @@
   "anecdote": "Lancée en 1977, elle a quitté l'héliosphère en 2012 et voyage dans l'espace interstellaire."
  },
  {
-  "id": "rec-020",
+  "id": "rec-018",
   "categorie": "Records & chiffres",
   "sous_theme": "Animaux",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Quel est le plus petit mammifère du monde, en masse ?",
   "choix": [
    "Le pachyure étrusque",
@@ -320,11 +288,11 @@
   "anecdote": "Cette musaraigne pèse environ 2 grammes, moins qu'une pièce de 1 centime."
  },
  {
-  "id": "rec-021",
+  "id": "rec-019",
   "categorie": "Records & chiffres",
   "sous_theme": "Population",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quel est le pays le plus densément peuplé du monde ?",
   "choix": [
    "Monaco",
@@ -336,11 +304,11 @@
   "anecdote": "Plus de 18 000 habitants au km² sur environ 2 km²."
  },
  {
-  "id": "rec-022",
+  "id": "rec-020",
   "categorie": "Records & chiffres",
   "sous_theme": "Bâtiments",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 6,
   "question": "Quel est le plus grand château du monde selon le Guinness ?",
   "choix": [
    "Le château de Malbork",
@@ -352,11 +320,11 @@
   "anecdote": "Construit par les chevaliers Teutoniques en Pologne, il couvre plus de 140 000 m²."
  },
  {
-  "id": "rec-023",
+  "id": "rec-021",
   "categorie": "Records & chiffres",
   "sous_theme": "Bâtiments",
   "type": "fourchette",
-  "difficulte": 3,
+  "difficulte": 4,
   "question": "Combien mesure le Burj Khalifa, en mètres ?",
   "reponse": 828,
   "unite": "m",
@@ -368,11 +336,11 @@
   "anecdote": "Il compte 163 étages, et son sommet est visible à près de 95 km de distance."
  },
  {
-  "id": "rec-024",
+  "id": "rec-022",
   "categorie": "Records & chiffres",
   "sous_theme": "Bâtiments",
   "type": "fourchette",
-  "difficulte": 4,
+  "difficulte": 5,
   "question": "Combien mesure le viaduc de Millau à son point le plus haut, pylône compris, en mètres ?",
   "reponse": 343,
   "unite": "m",
@@ -384,11 +352,11 @@
   "anecdote": "C'est le pont le plus haut du monde, un peu plus haut que la tour Eiffel."
  },
  {
-  "id": "rec-025",
+  "id": "rec-023",
   "categorie": "Records & chiffres",
   "sous_theme": "Nature",
   "type": "fourchette",
-  "difficulte": 5,
+  "difficulte": 6,
   "question": "Combien mesure Hyperion, le plus grand arbre connu, en mètres ?",
   "reponse": 116,
   "unite": "m",
@@ -400,7 +368,7 @@
   "anecdote": "Il est plus haut que la statue de la Liberté avec son socle."
  },
  {
-  "id": "rec-026",
+  "id": "rec-024",
   "categorie": "Records & chiffres",
   "sous_theme": "Espace",
   "type": "fourchette",
@@ -416,11 +384,11 @@
   "anecdote": "Il voulait prouver qu'un humain pourrait supporter un voyage vers Mars."
  },
  {
-  "id": "rec-027",
+  "id": "rec-025",
   "categorie": "Records & chiffres",
   "sous_theme": "Transports",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "Quelle est la vitesse record du TGV, établie en 2007, en km/h ?",
   "reponse": 574.8,
   "unite": "km/h",
@@ -432,11 +400,11 @@
   "anecdote": "Le record a été battu sur la LGV Est, avec une rame raccourcie et des roues plus grandes."
  },
  {
-  "id": "rec-028",
+  "id": "rec-026",
   "categorie": "Records & chiffres",
   "sous_theme": "Humains",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Combien mesurait Robert Wadlow, l'homme le plus grand de l'histoire, en mètres ?",
   "reponse": 2.72,
   "unite": "m",
@@ -448,11 +416,11 @@
   "anecdote": "Il grandissait encore au moment de sa mort, à 22 ans."
  },
  {
-  "id": "rec-029",
+  "id": "rec-027",
   "categorie": "Records & chiffres",
   "sous_theme": "Nature",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 7,
   "question": "Quelle est la plus grande profondeur jamais atteinte par un plongeur en apnée (no limit), en mètres ?",
   "reponse": 214,
   "unite": "m",
@@ -464,11 +432,11 @@
   "anecdote": "Le record est détenu par l'Autrichien Herbert Nitsch depuis 2007."
  },
  {
-  "id": "rec-030",
+  "id": "rec-028",
   "categorie": "Records & chiffres",
   "sous_theme": "Sport",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 3,
   "question": "En combien de minutes environ Kelvin Kiptum a-t-il couru le marathon lors de son record du monde de 2023 ?",
   "reponse": 120,
   "unite": "minutes",
@@ -480,11 +448,11 @@
   "anecdote": "Il a couru en 2 h 00 min 35 s à Chicago. Il est mort l'année suivante dans un accident de voiture."
  },
  {
-  "id": "rec-031",
+  "id": "rec-029",
   "categorie": "Records & chiffres",
   "sous_theme": "Espace",
   "type": "fourchette",
-  "difficulte": 9,
+  "difficulte": 6,
   "question": "À combien de milliards de kilomètres de la Terre se trouvait Voyager 1 en 2025, environ ?",
   "reponse": 25,
   "unite": "milliards de km",
@@ -496,11 +464,11 @@
   "anecdote": "Ses signaux mettent environ 23 heures pour nous parvenir à la vitesse de la lumière."
  },
  {
-  "id": "rec-032",
+  "id": "rec-030",
   "categorie": "Records & chiffres",
   "sous_theme": "Animaux",
   "type": "fourchette",
-  "difficulte": 10,
+  "difficulte": 6,
   "question": "Combien de grammes pèse environ le pachyure étrusque, plus petit mammifère du monde ?",
   "reponse": 1.8,
   "unite": "g",
@@ -512,32 +480,11 @@
   "anecdote": "Son cœur bat jusqu'à 1 500 fois par minute."
  },
  {
-  "id": "rec-033",
-  "categorie": "Records & chiffres",
-  "sous_theme": "Nature",
-  "type": "indices",
-  "difficulte": 2,
-  "question": "Quel est ce lieu ?",
-  "reponse": "Le mont Everest",
-  "reponses_acceptees": [
-   "Everest",
-   "Mont Everest",
-   "Chomolungma"
-  ],
-  "indices": [
-   "Je suis à la frontière entre le Népal et la Chine",
-   "Les Tibétains m'appellent Chomolungma",
-   "Edmund Hillary et Tenzing Norgay m'ont gravi en 1953",
-   "Je suis le plus haut sommet du monde"
-  ],
-  "anecdote": "Son altitude a été officiellement réévaluée à 8 848,86 m en 2020."
- },
- {
-  "id": "rec-034",
+  "id": "rec-031",
   "categorie": "Records & chiffres",
   "sous_theme": "Bâtiments",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quel est ce monument ?",
   "reponse": "La Grande Pyramide de Gizeh",
   "reponses_acceptees": [
@@ -554,11 +501,11 @@
   "anecdote": "Elle a été dépassée par la flèche de la cathédrale de Lincoln, en Angleterre, vers 1311."
  },
  {
-  "id": "rec-035",
+  "id": "rec-032",
   "categorie": "Records & chiffres",
   "sous_theme": "Humains",
   "type": "indices",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Qui suis-je ?",
   "reponse": "Jeanne Calment",
   "reponses_acceptees": [
@@ -573,11 +520,11 @@
   "anecdote": "Le notaire a payé pendant 30 ans, plus que la valeur de l'appartement."
  },
  {
-  "id": "rec-036",
+  "id": "rec-033",
   "categorie": "Records & chiffres",
   "sous_theme": "Nature",
   "type": "indices",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Quel est ce lieu ?",
   "reponse": "La fosse des Mariannes",
   "reponses_acceptees": [
@@ -593,11 +540,11 @@
   "anecdote": "La pression y est plus de 1 000 fois supérieure à celle de la surface."
  },
  {
-  "id": "rec-037",
+  "id": "rec-034",
   "categorie": "Records & chiffres",
   "sous_theme": "Espace",
   "type": "indices",
-  "difficulte": 7,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Valentina Terechkova",
   "reponses_acceptees": [
@@ -613,11 +560,11 @@
   "anecdote": "Elle a passé près de trois jours en orbite, plus que tous les astronautes américains réunis à l'époque."
  },
  {
-  "id": "rec-038",
+  "id": "rec-035",
   "categorie": "Records & chiffres",
   "sous_theme": "Animaux",
   "type": "indices",
-  "difficulte": 8,
+  "difficulte": 2,
   "question": "Quel est cet animal ?",
   "reponse": "Le requin-baleine",
   "reponses_acceptees": [
@@ -632,11 +579,11 @@
   "anecdote": "Chaque individu a un motif de taches unique, comme une empreinte digitale."
  },
  {
-  "id": "rec-039",
+  "id": "rec-036",
   "categorie": "Records & chiffres",
   "sous_theme": "Bâtiments",
   "type": "indices",
-  "difficulte": 9,
+  "difficulte": 3,
   "question": "Quel est ce lieu ?",
   "reponse": "Le Pentagone",
   "reponses_acceptees": [
@@ -652,11 +599,11 @@
   "anecdote": "Il possède environ 28 km de couloirs, mais on peut aller d'un point à l'autre en 7 minutes."
  },
  {
-  "id": "rec-040",
+  "id": "rec-037",
   "categorie": "Records & chiffres",
   "sous_theme": "Humains",
   "type": "indices",
-  "difficulte": 10,
+  "difficulte": 3,
   "question": "Qui suis-je ?",
   "reponse": "Edmund Hillary",
   "reponses_acceptees": [
@@ -672,61 +619,61 @@
   "anecdote": "Il a consacré une grande partie de sa vie à construire des écoles et des hôpitaux pour les Sherpas."
  },
  {
-  "id": "rec-041",
+  "id": "rec-038",
   "categorie": "Records & chiffres",
   "sous_theme": "Nature",
   "type": "vf",
-  "difficulte": 3,
+  "difficulte": 4,
   "question": "Vrai ou faux : l'océan Pacifique est plus grand que toutes les terres émergées réunies.",
   "reponse": "Vrai",
   "anecdote": "Il couvre environ 165 millions de km², contre environ 150 millions pour les terres."
  },
  {
-  "id": "rec-042",
+  "id": "rec-039",
   "categorie": "Records & chiffres",
   "sous_theme": "Nature",
   "type": "vf",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Vrai ou faux : le lac Baïkal contient environ un cinquième de l'eau douce liquide de surface de la planète.",
   "reponse": "Vrai",
   "anecdote": "C'est aussi le plus vieux lac du monde, avec environ 25 millions d'années."
  },
  {
-  "id": "rec-043",
+  "id": "rec-040",
   "categorie": "Records & chiffres",
   "sous_theme": "Bâtiments",
   "type": "vf",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Vrai ou faux : la tour Eiffel a été le plus haut monument du monde pendant plus de 40 ans.",
   "reponse": "Vrai",
   "anecdote": "Elle a été dépassée en 1930 par le Chrysler Building, à New York."
  },
  {
-  "id": "rec-044",
+  "id": "rec-041",
   "categorie": "Records & chiffres",
   "sous_theme": "Animaux",
   "type": "vf",
-  "difficulte": 8,
+  "difficulte": 3,
   "question": "Vrai ou faux : le guépard est plus rapide que le faucon pèlerin.",
   "reponse": "Faux",
   "anecdote": "Le faucon pèlerin dépasse les 300 km/h en piqué, le guépard environ 110 km/h."
  },
  {
-  "id": "rec-045",
+  "id": "rec-042",
   "categorie": "Records & chiffres",
   "sous_theme": "Espace",
   "type": "vf",
-  "difficulte": 9,
+  "difficulte": 5,
   "question": "Vrai ou faux : la Lune s'éloigne de la Terre d'environ 3,8 cm par an.",
   "reponse": "Vrai",
   "anecdote": "Ce phénomène est dû aux marées, qui ralentissent aussi légèrement la rotation de la Terre."
  },
  {
-  "id": "rec-046",
+  "id": "rec-043",
   "categorie": "Records & chiffres",
   "sous_theme": "Animaux",
   "type": "libre",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quel est le plus grand reptile vivant du monde ?",
   "reponse": "Le crocodile marin",
   "reponses_acceptees": [
@@ -736,37 +683,11 @@
   "anecdote": "Les plus grands mâles peuvent dépasser 6 mètres et une tonne."
  },
  {
-  "id": "rec-047",
-  "categorie": "Records & chiffres",
-  "sous_theme": "Animaux",
-  "type": "libre",
-  "difficulte": 6,
-  "question": "Quel est l'oiseau le plus grand du monde ?",
-  "reponse": "L'autruche",
-  "reponses_acceptees": [
-   "Autruche"
-  ],
-  "anecdote": "Ses œufs sont les plus gros du monde : un seul équivaut à environ 24 œufs de poule."
- },
- {
-  "id": "rec-048",
-  "categorie": "Records & chiffres",
-  "sous_theme": "Sport",
-  "type": "libre",
-  "difficulte": 7,
-  "question": "Quel nageur a remporté le plus de médailles olympiques de l'histoire, toutes couleurs confondues ?",
-  "reponse": "Michael Phelps",
-  "reponses_acceptees": [
-   "Phelps"
-  ],
-  "anecdote": "Il en compte 28, dont 23 en or, entre 2004 et 2016."
- },
- {
-  "id": "rec-049",
+  "id": "rec-044",
   "categorie": "Records & chiffres",
   "sous_theme": "Bâtiments",
   "type": "libre",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Dans quel pays se trouve la Merdeka 118, deuxième plus haut gratte-ciel du monde depuis 2023 ?",
   "reponse": "La Malaisie",
   "reponses_acceptees": [
@@ -775,16 +696,192 @@
   "anecdote": "Elle mesure environ 679 m à Kuala Lumpur, devant la Shanghai Tower (632 m)."
  },
  {
+  "id": "rec-045",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Espace",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel cosmonaute détient le record du temps cumulé passé dans l'espace, avec plus de 1 000 jours ?",
+  "choix": [
+   "Oleg Kononenko",
+   "Guennadi Padalka",
+   "Sergueï Krikaliov",
+   "Peggy Whitson"
+  ],
+  "reponse": "Oleg Kononenko",
+  "anecdote": "Le Russe a franchi la barre des 1 000 jours en juin 2024, au fil de cinq missions."
+ },
+ {
+  "id": "rec-046",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Animaux",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel oiseau possède la plus grande envergure du monde ?",
+  "choix": [
+   "L'albatros hurleur",
+   "Le condor des Andes",
+   "Le pélican blanc",
+   "Le marabout"
+  ],
+  "reponse": "L'albatros hurleur",
+  "anecdote": "Ses ailes peuvent dépasser 3,5 mètres : il peut planer des heures sans battre des ailes."
+ },
+ {
+  "id": "rec-047",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Football",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel joueur détient le record de buts en sélection nationale masculine ?",
+  "choix": [
+   "Cristiano Ronaldo",
+   "Ali Daei",
+   "Lionel Messi",
+   "Sunil Chhetri"
+  ],
+  "reponse": "Cristiano Ronaldo",
+  "anecdote": "Il a battu en 2021 le record de l'Iranien Ali Daei, qui avait marqué 109 buts."
+ },
+ {
+  "id": "rec-048",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Nature",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel champignon de l'Oregon, étendu sur près de 10 km² sous terre, est l'un des plus grands organismes vivants connus ?",
+  "reponse": "L'armillaire",
+  "reponses_acceptees": [
+   "Armillaria",
+   "Armillaire",
+   "Armillaria ostoyae",
+   "Armillaire obscur"
+  ],
+  "anecdote": "Cet individu unique aurait plusieurs milliers d'années. Ses filaments se propagent sous la forêt."
+ },
+ {
+  "id": "rec-049",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Animaux",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien pèse environ le cœur d'une baleine bleue ?",
+  "reponse": 180,
+  "unite": "kg",
+  "tolerance": 20,
+  "bornes": [
+   10,
+   2000
+  ],
+  "anecdote": "Celui qui a été mesuré au Canada en 2014 pesait environ 180 kg : bien moins que la voiture qu'on évoque souvent."
+ },
+ {
   "id": "rec-050",
   "categorie": "Records & chiffres",
-  "sous_theme": "Humains",
-  "type": "libre",
-  "difficulte": 10,
-  "question": "Quel est le prénom du premier humain à avoir marché sur la Lune ?",
-  "reponse": "Neil",
-  "reponses_acceptees": [
-   "Neil Armstrong"
+  "sous_theme": "Records humains",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Quel âge avait Jeanne Calment à sa mort, en 1997 ?",
+  "reponse": 122,
+  "unite": "ans",
+  "tolerance": 0,
+  "bornes": [
+   90,
+   140
   ],
-  "anecdote": "Sa première empreinte est probablement toujours intacte, faute de vent sur la Lune."
+  "anecdote": "Elle avait rencontré Van Gogh dans le magasin de son oncle, à Arles, quand elle avait 13 ans."
+ },
+ {
+  "id": "rec-051",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Athlétisme",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Quel est le record du monde du 100 m féminin, établi par Florence Griffith-Joyner en 1988 ?",
+  "reponse": 10.49,
+  "unite": "secondes",
+  "tolerance": 0,
+  "bornes": [
+   9,
+   13
+  ],
+  "anecdote": "C'est l'un des plus anciens records de l'athlétisme encore en vigueur."
+ },
+ {
+  "id": "rec-052",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Géographie",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : le sommet du Chimborazo, en Équateur, est le point de la surface terrestre le plus éloigné du centre de la Terre.",
+  "reponse": "Vrai",
+  "anecdote": "À cause du renflement de la Terre à l'équateur, il dépasse l'Everest de plus de 2 km sur ce critère."
+ },
+ {
+  "id": "rec-053",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Records",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Qui suis-je ?",
+  "reponse": "Felix Baumgartner",
+  "reponses_acceptees": [
+   "Baumgartner"
+  ],
+  "indices": [
+   "Je suis un parachutiste autrichien",
+   "J'ai sauté depuis un ballon à environ 39 km d'altitude",
+   "J'ai dépassé le mur du son en chute libre",
+   "Mon saut de 2012 a été suivi en direct par des millions d'internautes"
+  ],
+  "anecdote": "Son record d'altitude a été battu deux ans plus tard par Alan Eustace, cadre de Google."
+ },
+ {
+  "id": "rec-054",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Sport",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Quelle était la hauteur de la plus grande vague jamais surfée, par Sebastian Steudtner à Nazaré en 2020 ?",
+  "reponse": 26.21,
+  "unite": "m",
+  "tolerance": 0.5,
+  "bornes": [
+   5,
+   50
+  ],
+  "anecdote": "Le record a été homologué en 2022 par le Guinness, après une analyse vidéo de plusieurs mois."
+ },
+ {
+  "id": "rec-055",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Géographie",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel est le lac le plus profond d'Europe ?",
+  "choix": [
+   "Le lac Hornindal",
+   "Le lac Léman",
+   "Le lac Majeur",
+   "Le lac de Côme"
+  ],
+  "reponse": "Le lac Hornindal",
+  "anecdote": "Ce lac norvégien atteint 514 mètres de profondeur."
+ },
+ {
+  "id": "rec-056",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Constructions",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel est le plus long tunnel ferroviaire du monde ?",
+  "choix": [
+   "Le tunnel de base du Saint-Gothard",
+   "Le tunnel sous la Manche",
+   "Le tunnel du Seikan",
+   "Le tunnel du Lötschberg"
+  ],
+  "reponse": "Le tunnel de base du Saint-Gothard",
+  "anecdote": "Inauguré en Suisse en 2016, il mesure 57 km."
  }
 ]

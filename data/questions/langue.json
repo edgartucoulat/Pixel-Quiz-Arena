@@ -4,71 +4,7 @@
   "categorie": "Langue française",
   "sous_theme": "Orthographe",
   "type": "qcm",
-  "difficulte": 1,
-  "question": "Combien de lettres compte l'alphabet français ?",
-  "choix": [
-   "26",
-   "24",
-   "28",
-   "30"
-  ],
-  "reponse": "26",
-  "anecdote": "Le W a été le dernier ajouté officiellement au dictionnaire de l'Académie, en 1935 (8e édition)."
- },
- {
-  "id": "lan-002",
-  "categorie": "Langue française",
-  "sous_theme": "Expressions",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Que signifie « poser un lapin » ?",
-  "choix": [
-   "Ne pas venir à un rendez-vous",
-   "Faire une blague",
-   "Partir sans payer",
-   "Dire un mensonge"
-  ],
-  "reponse": "Ne pas venir à un rendez-vous",
-  "anecdote": "Au XIXe siècle, l'expression désignait le fait de partir sans payer les faveurs d'une femme."
- },
- {
-  "id": "lan-003",
-  "categorie": "Langue française",
-  "sous_theme": "Expressions",
-  "type": "qcm",
   "difficulte": 3,
-  "question": "Que veut dire « avoir le cafard » ?",
-  "choix": [
-   "Être triste",
-   "Avoir faim",
-   "Être en retard",
-   "Avoir de la chance"
-  ],
-  "reponse": "Être triste",
-  "anecdote": "Baudelaire a popularisé ce sens dans Les Fleurs du mal."
- },
- {
-  "id": "lan-004",
-  "categorie": "Langue française",
-  "sous_theme": "Grammaire",
-  "type": "qcm",
-  "difficulte": 3,
-  "question": "Quel est le pluriel de « cheval » ?",
-  "choix": [
-   "Chevaux",
-   "Chevals",
-   "Chevaus",
-   "Chevaulx"
-  ],
-  "reponse": "Chevaux",
-  "anecdote": "Mais on écrit « des festivals », « des carnavals » et « des chacals »."
- },
- {
-  "id": "lan-005",
-  "categorie": "Langue française",
-  "sous_theme": "Orthographe",
-  "type": "qcm",
-  "difficulte": 4,
   "question": "Lequel de ces mots est correctement orthographié ?",
   "choix": [
    "Néanmoins",
@@ -80,11 +16,11 @@
   "anecdote": "Le mot vient de « néant » et « moins »."
  },
  {
-  "id": "lan-006",
+  "id": "lan-002",
   "categorie": "Langue française",
   "sous_theme": "Expressions",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Que signifie « tirer les vers du nez » ?",
   "choix": [
    "Faire avouer quelqu'un",
@@ -96,11 +32,11 @@
   "anecdote": "Son origine reste discutée par les linguistes, faute de source claire."
  },
  {
-  "id": "lan-007",
+  "id": "lan-003",
   "categorie": "Langue française",
   "sous_theme": "Étymologie",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "De quelle langue vient le mot « algèbre » ?",
   "choix": [
    "L'arabe",
@@ -112,11 +48,11 @@
   "anecdote": "Il vient de « al-jabr », le titre d'un traité du mathématicien al-Khwârizmî, au IXe siècle."
  },
  {
-  "id": "lan-008",
+  "id": "lan-004",
   "categorie": "Langue française",
   "sous_theme": "Grammaire",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Comment appelle-t-on un mot qui se lit de la même façon dans les deux sens, comme « radar » ?",
   "choix": [
    "Un palindrome",
@@ -128,7 +64,7 @@
   "anecdote": "L'une des plus longues phrases palindromes en français est « Ésope reste ici et se repose »."
  },
  {
-  "id": "lan-009",
+  "id": "lan-005",
   "categorie": "Langue française",
   "sous_theme": "Orthographe",
   "type": "qcm",
@@ -144,11 +80,11 @@
   "anecdote": "« Hébreu » n'a pas de féminin propre : on utilise « hébraïque » pour une chose ou « juive » pour une personne."
  },
  {
-  "id": "lan-010",
+  "id": "lan-006",
   "categorie": "Langue française",
   "sous_theme": "Expressions",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Que signifie « faire chou blanc » ?",
   "choix": [
    "Échouer",
@@ -160,11 +96,11 @@
   "anecdote": "L'expression viendrait du jeu de quilles, où « coup blanc » désignait un coup qui n'en renversait aucune."
  },
  {
-  "id": "lan-011",
+  "id": "lan-007",
   "categorie": "Langue française",
   "sous_theme": "Étymologie",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "De quelle langue vient le mot « kayak » ?",
   "choix": [
    "Une langue inuite",
@@ -176,11 +112,11 @@
   "anecdote": "C'est un palindrome, comme « ressasser » et « elle »."
  },
  {
-  "id": "lan-012",
+  "id": "lan-008",
   "categorie": "Langue française",
   "sous_theme": "Grammaire",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Quel est le participe passé du verbe « clore » ?",
   "choix": [
    "Clos",
@@ -192,11 +128,11 @@
   "anecdote": "Le verbe « clore » est défectif : il ne s'utilise pas à toutes les personnes et à tous les temps."
  },
  {
-  "id": "lan-013",
+  "id": "lan-009",
   "categorie": "Langue française",
   "sous_theme": "Orthographe",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Lequel de ces mots en « -ou » prend un « s » au pluriel ?",
   "choix": [
    "Clou",
@@ -208,11 +144,11 @@
   "anecdote": "Seuls bijou, caillou, chou, genou, hibou, joujou et pou prennent un « x » au pluriel."
  },
  {
-  "id": "lan-014",
+  "id": "lan-010",
   "categorie": "Langue française",
   "sous_theme": "Expressions",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Que signifie « avoir maille à partir avec quelqu'un » ?",
   "choix": [
    "Avoir un différend avec lui",
@@ -224,11 +160,11 @@
   "anecdote": "La maille était une petite pièce de monnaie : la « partir », c'était la partager, ce qui était impossible."
  },
  {
-  "id": "lan-015",
+  "id": "lan-011",
   "categorie": "Langue française",
   "sous_theme": "Grammaire",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 3,
   "question": "À quel temps est conjugué le verbe dans « nous chantâmes » ?",
   "choix": [
    "Le passé simple",
@@ -240,11 +176,11 @@
   "anecdote": "Le passé simple a presque disparu de l'oral, mais reste bien vivant dans les romans et les contes."
  },
  {
-  "id": "lan-016",
+  "id": "lan-012",
   "categorie": "Langue française",
   "sous_theme": "Étymologie",
   "type": "qcm",
-  "difficulte": 9,
+  "difficulte": 5,
   "question": "Quel est le mot le plus long du dictionnaire français, selon la plupart des sources ?",
   "choix": [
    "Intergouvernementalisations",
@@ -256,11 +192,11 @@
   "anecdote": "Avec 27 lettres, il dépasse « anticonstitutionnellement » (25 lettres), longtemps cité comme le plus long."
  },
  {
-  "id": "lan-017",
+  "id": "lan-013",
   "categorie": "Langue française",
   "sous_theme": "Orthographe",
   "type": "qcm",
-  "difficulte": 10,
+  "difficulte": 3,
   "question": "Combien existe-t-il d'accents en français, hors tréma et cédille ?",
   "choix": [
    "3",
@@ -272,11 +208,11 @@
   "anecdote": "Les accents aigu, grave et circonflexe. Le seul mot avec un « ù » est « où »."
  },
  {
-  "id": "lan-018",
+  "id": "lan-014",
   "categorie": "Langue française",
   "sous_theme": "Expressions",
   "type": "qcm",
-  "difficulte": 10,
+  "difficulte": 6,
   "question": "D'où vient l'expression « être sur la sellette » ?",
   "choix": [
    "D'un petit siège où s'asseyait l'accusé",
@@ -288,27 +224,11 @@
   "anecdote": "Sous l'Ancien Régime, l'accusé était interrogé assis sur un tabouret bas, la sellette."
  },
  {
-  "id": "lan-019",
-  "categorie": "Langue française",
-  "sous_theme": "Grammaire",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quel est le contraire de « grand » ?",
-  "choix": [
-   "Petit",
-   "Gros",
-   "Lourd",
-   "Large"
-  ],
-  "reponse": "Petit",
-  "anecdote": "« Grand » et « petit » sont des antonymes, alors que « grand » et « immense » sont des synonymes."
- },
- {
-  "id": "lan-020",
+  "id": "lan-015",
   "categorie": "Langue française",
   "sous_theme": "Francophonie",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Dans quel pays le français est-il langue officielle aux côtés de l'allemand, de l'italien et du romanche ?",
   "choix": [
    "La Suisse",
@@ -320,11 +240,11 @@
   "anecdote": "Environ un quart des Suisses ont le français comme langue principale."
  },
  {
-  "id": "lan-021",
+  "id": "lan-016",
   "categorie": "Langue française",
   "sous_theme": "Francophonie",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 4,
   "question": "Quelle ville est souvent citée comme la plus grande ville francophone du monde ?",
   "choix": [
    "Kinshasa",
@@ -336,7 +256,7 @@
   "anecdote": "La capitale de la République démocratique du Congo compte plus de 15 millions d'habitants, davantage que l'agglomération parisienne."
  },
  {
-  "id": "lan-022",
+  "id": "lan-017",
   "categorie": "Langue française",
   "sous_theme": "Orthographe",
   "type": "fourchette",
@@ -352,11 +272,11 @@
   "anecdote": "A, E, I, O, U et Y. On compte en revanche une quinzaine de sons voyelles en français."
  },
  {
-  "id": "lan-023",
+  "id": "lan-018",
   "categorie": "Langue française",
   "sous_theme": "Histoire de la langue",
   "type": "fourchette",
-  "difficulte": 4,
+  "difficulte": 5,
   "question": "En quelle année a été créée l'Académie française ?",
   "reponse": 1635,
   "unite": "année",
@@ -368,7 +288,7 @@
   "anecdote": "Elle a été fondée par le cardinal de Richelieu."
  },
  {
-  "id": "lan-024",
+  "id": "lan-019",
   "categorie": "Langue française",
   "sous_theme": "Histoire de la langue",
   "type": "fourchette",
@@ -384,11 +304,11 @@
   "anecdote": "Signée par François Ier, elle est le plus ancien texte législatif encore en vigueur en France."
  },
  {
-  "id": "lan-025",
+  "id": "lan-020",
   "categorie": "Langue française",
   "sous_theme": "Francophonie",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 7,
   "question": "Combien de personnes parlent le français dans le monde en 2022, en millions (estimation de l'OIF) ?",
   "reponse": 321,
   "unite": "millions",
@@ -400,7 +320,7 @@
   "anecdote": "Le français est la 5e langue la plus parlée au monde."
  },
  {
-  "id": "lan-026",
+  "id": "lan-021",
   "categorie": "Langue française",
   "sous_theme": "Dictionnaire",
   "type": "fourchette",
@@ -416,11 +336,11 @@
   "anecdote": "Chaque année, environ 150 nouveaux mots y entrent."
  },
  {
-  "id": "lan-027",
+  "id": "lan-022",
   "categorie": "Langue française",
   "sous_theme": "Orthographe",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Combien de lettres compte le mot « anticonstitutionnellement » ?",
   "reponse": 25,
   "unite": "lettres",
@@ -432,11 +352,11 @@
   "anecdote": "On l'a longtemps présenté comme le plus long mot du français."
  },
  {
-  "id": "lan-028",
+  "id": "lan-023",
   "categorie": "Langue française",
   "sous_theme": "Histoire de la langue",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "En quelle année la réforme de l'orthographe autorisant « ognon » a-t-elle été publiée ?",
   "reponse": 1990,
   "unite": "année",
@@ -448,11 +368,11 @@
   "anecdote": "Elle propose aussi de supprimer l'accent circonflexe sur le i et le u dans de nombreux mots."
  },
  {
-  "id": "lan-029",
+  "id": "lan-024",
   "categorie": "Langue française",
   "sous_theme": "Dictionnaire",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 7,
   "question": "En quelle année a été publiée la première édition du dictionnaire de l'Académie française ?",
   "reponse": 1694,
   "unite": "année",
@@ -464,11 +384,11 @@
   "anecdote": "La 9e édition a été achevée en 2024, après plus de 85 ans de travail."
  },
  {
-  "id": "lan-030",
+  "id": "lan-025",
   "categorie": "Langue française",
   "sous_theme": "Francophonie",
   "type": "fourchette",
-  "difficulte": 9,
+  "difficulte": 7,
   "question": "Dans combien de pays le français est-il langue officielle (seule ou avec d'autres) ?",
   "reponse": 29,
   "unite": "pays",
@@ -480,11 +400,11 @@
   "anecdote": "Le français est aussi l'une des langues de travail de l'ONU et l'une des deux langues officielles des Jeux olympiques."
  },
  {
-  "id": "lan-031",
+  "id": "lan-026",
   "categorie": "Langue française",
   "sous_theme": "Orthographe",
   "type": "fourchette",
-  "difficulte": 10,
+  "difficulte": 6,
   "question": "Combien de lettres compte le mot « intergouvernementalisations » ?",
   "reponse": 27,
   "unite": "lettres",
@@ -496,50 +416,11 @@
   "anecdote": "On l'a ajouté au débat comme mot le plus long, mais certains dictionnaires ne le recensent pas."
  },
  {
-  "id": "lan-032",
+  "id": "lan-027",
   "categorie": "Langue française",
   "sous_theme": "Mots",
   "type": "indices",
   "difficulte": 3,
-  "question": "Quel est ce mot ?",
-  "reponse": "Parapluie",
-  "reponses_acceptees": [
-   "Un parapluie"
-  ],
-  "indices": [
-   "Je m'ouvre quand il pleut",
-   "Je suis un mot composé de « para » et d'un nom de la météo",
-   "On m'oublie souvent dans le métro",
-   "Je protège la tête de l'eau qui tombe"
-  ],
-  "anecdote": "Cherbourg en est devenue la capitale symbolique grâce au film de Jacques Demy."
- },
- {
-  "id": "lan-033",
-  "categorie": "Langue française",
-  "sous_theme": "Mots",
-  "type": "indices",
-  "difficulte": 4,
-  "question": "Quel est ce mot ?",
-  "reponse": "Week-end",
-  "reponses_acceptees": [
-   "Weekend",
-   "Week end"
-  ],
-  "indices": [
-   "Je suis un anglicisme",
-   "Les Québécois préfèrent dire « fin de semaine »",
-   "Je dure deux jours",
-   "Je désigne le samedi et le dimanche"
-  ],
-  "anecdote": "L'Académie a longtemps proposé d'écrire ce mot avec un trait d'union."
- },
- {
-  "id": "lan-034",
-  "categorie": "Langue française",
-  "sous_theme": "Mots",
-  "type": "indices",
-  "difficulte": 5,
   "question": "Quel est ce mot ?",
   "reponse": "Ordinateur",
   "reponses_acceptees": [
@@ -554,11 +435,11 @@
   "anecdote": "C'est le linguiste Jacques Perret qui a suggéré le mot, inspiré du vocabulaire religieux."
  },
  {
-  "id": "lan-035",
+  "id": "lan-028",
   "categorie": "Langue française",
   "sous_theme": "Mots",
   "type": "indices",
-  "difficulte": 6,
+  "difficulte": 2,
   "question": "Quel est ce mot ?",
   "reponse": "Hippopotame",
   "reponses_acceptees": [
@@ -573,11 +454,11 @@
   "anecdote": "Il est l'un des animaux les plus dangereux d'Afrique pour l'être humain."
  },
  {
-  "id": "lan-036",
+  "id": "lan-029",
   "categorie": "Langue française",
   "sous_theme": "Mots",
   "type": "indices",
-  "difficulte": 7,
+  "difficulte": 5,
   "question": "Quel est ce mot ?",
   "reponse": "Bistrot",
   "reponses_acceptees": [
@@ -592,11 +473,11 @@
   "anecdote": "La légende des cosaques criant « bystro ! » à Paris en 1814 n'est appuyée par aucune source de l'époque."
  },
  {
-  "id": "lan-037",
+  "id": "lan-030",
   "categorie": "Langue française",
   "sous_theme": "Mots",
   "type": "indices",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quel est ce mot ?",
   "reponse": "Courriel",
   "reponses_acceptees": [
@@ -611,11 +492,11 @@
   "anecdote": "Les Français utilisent pourtant bien plus souvent « mail » ou « e-mail »."
  },
  {
-  "id": "lan-038",
+  "id": "lan-031",
   "categorie": "Langue française",
   "sous_theme": "Mots",
   "type": "indices",
-  "difficulte": 9,
+  "difficulte": 5,
   "question": "Quel est ce mot ?",
   "reponse": "Abracadabra",
   "reponses_acceptees": [],
@@ -628,11 +509,11 @@
   "anecdote": "On écrivait le mot en retirant une lettre par ligne, pour faire disparaître la maladie."
  },
  {
-  "id": "lan-039",
+  "id": "lan-032",
   "categorie": "Langue française",
   "sous_theme": "Mots",
   "type": "indices",
-  "difficulte": 10,
+  "difficulte": 3,
   "question": "Quel est ce mot ?",
   "reponse": "Hôpital",
   "reponses_acceptees": [
@@ -647,17 +528,7 @@
   "anecdote": "Le circonflexe marque souvent un « s » disparu : forêt/forestier, fête/festif, île/insulaire."
  },
  {
-  "id": "lan-040",
-  "categorie": "Langue française",
-  "sous_theme": "Expressions",
-  "type": "vf",
-  "difficulte": 2,
-  "question": "Vrai ou faux : « avoir un poil dans la main » signifie être paresseux.",
-  "reponse": "Vrai",
-  "anecdote": "L'image : une main si peu utilisée qu'un poil a eu le temps d'y pousser."
- },
- {
-  "id": "lan-041",
+  "id": "lan-033",
   "categorie": "Langue française",
   "sous_theme": "Grammaire",
   "type": "vf",
@@ -667,7 +538,7 @@
   "anecdote": "Les deux genres sont admis par l'Académie française."
  },
  {
-  "id": "lan-042",
+  "id": "lan-034",
   "categorie": "Langue française",
   "sous_theme": "Étymologie",
   "type": "vf",
@@ -677,44 +548,31 @@
   "anecdote": "La « bure » était une étoffe de laine qui recouvrait les tables de travail."
  },
  {
-  "id": "lan-043",
+  "id": "lan-035",
   "categorie": "Langue française",
   "sous_theme": "Orthographe",
   "type": "vf",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Vrai ou faux : le mot « oignon » s'écrit toujours avec un « i ».",
   "reponse": "Faux",
   "anecdote": "Depuis la réforme de 1990, « ognon » est aussi accepté."
  },
  {
-  "id": "lan-044",
+  "id": "lan-036",
   "categorie": "Langue française",
   "sous_theme": "Étymologie",
   "type": "vf",
-  "difficulte": 9,
+  "difficulte": 4,
   "question": "Vrai ou faux : le mot « salaire » vient du sel.",
   "reponse": "Vrai",
   "anecdote": "Le latin « salarium » désignait une somme versée aux soldats romains, peut-être pour acheter du sel."
  },
  {
-  "id": "lan-045",
-  "categorie": "Langue française",
-  "sous_theme": "Expressions",
-  "type": "libre",
-  "difficulte": 4,
-  "question": "Complétez l'expression : « Il pleut des… » ?",
-  "reponse": "Cordes",
-  "reponses_acceptees": [
-   "Des cordes"
-  ],
-  "anecdote": "On dit aussi « il tombe des hallebardes » ou « il pleut comme vache qui pisse »."
- },
- {
-  "id": "lan-046",
+  "id": "lan-037",
   "categorie": "Langue française",
   "sous_theme": "Grammaire",
   "type": "libre",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Comment appelle-t-on des mots qui se prononcent pareil mais s'écrivent différemment, comme « vert » et « verre » ?",
   "reponse": "Des homophones",
   "reponses_acceptees": [
@@ -724,11 +582,11 @@
   "anecdote": "« Ver », « vers », « vair » et « verre » complètent la série."
  },
  {
-  "id": "lan-047",
+  "id": "lan-038",
   "categorie": "Langue française",
   "sous_theme": "Étymologie",
   "type": "libre",
-  "difficulte": 7,
+  "difficulte": 6,
   "question": "De quelle langue vient le mot « chocolat » ?",
   "reponse": "Le nahuatl",
   "reponses_acceptees": [
@@ -738,11 +596,11 @@
   "anecdote": "C'est la langue des Aztèques ; le mot « tomate » vient aussi du nahuatl."
  },
  {
-  "id": "lan-048",
+  "id": "lan-039",
   "categorie": "Langue française",
   "sous_theme": "Grammaire",
   "type": "libre",
-  "difficulte": 8,
+  "difficulte": 3,
   "question": "Comment appelle-t-on une figure de style qui exagère, comme « je meurs de faim » ?",
   "reponse": "Une hyperbole",
   "reponses_acceptees": [
@@ -751,11 +609,11 @@
   "anecdote": "Le contraire, qui dit moins pour suggérer plus, s'appelle une litote : « Va, je ne te hais point »."
  },
  {
-  "id": "lan-049",
+  "id": "lan-040",
   "categorie": "Langue française",
   "sous_theme": "Vocabulaire",
   "type": "libre",
-  "difficulte": 10,
+  "difficulte": 4,
   "question": "Comment appelle-t-on une phrase difficile à prononcer, comme « Les chaussettes de l'archiduchesse » ?",
   "reponse": "Un virelangue",
   "reponses_acceptees": [
@@ -765,19 +623,284 @@
   "anecdote": "Autre exemple célèbre : « Un chasseur sachant chasser doit savoir chasser sans son chien »."
  },
  {
-  "id": "lan-050",
+  "id": "lan-041",
+  "categorie": "Langue française",
+  "sous_theme": "Orthographe",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel est le pluriel d'« aïeul » quand il désigne les ancêtres en général ?",
+  "choix": [
+   "Des aïeux",
+   "Des aïeuls",
+   "Des aïeules",
+   "Des aïeulx"
+  ],
+  "reponse": "Des aïeux",
+  "anecdote": "« Aïeuls » s'emploie seulement pour parler des grands-parents."
+ },
+ {
+  "id": "lan-042",
+  "categorie": "Langue française",
+  "sous_theme": "Genre des mots",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Lequel de ces noms est masculin ?",
+  "choix": [
+   "Pétale",
+   "Oasis",
+   "Azalée",
+   "Écritoire"
+  ],
+  "reponse": "Pétale",
+  "anecdote": "On dit « un pétale », même si on entend souvent « une pétale »."
+ },
+ {
+  "id": "lan-043",
+  "categorie": "Langue française",
+  "sous_theme": "Genre des mots",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Lequel de ces noms est féminin ?",
+  "choix": [
+   "Épithète",
+   "Apogée",
+   "Haltère",
+   "Astérisque"
+  ],
+  "reponse": "Épithète",
+  "anecdote": "On dit « une épithète », mais « un apogée », « un haltère » et « un astérisque »."
+ },
+ {
+  "id": "lan-044",
+  "categorie": "Langue française",
+  "sous_theme": "Étymologie",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "De quelle langue vient le mot « bijou » ?",
+  "choix": [
+   "Le breton",
+   "Le latin",
+   "L'italien",
+   "L'arabe"
+  ],
+  "reponse": "Le breton",
+  "anecdote": "Il vient de « bizou », l'anneau, lui-même dérivé de « biz », le doigt."
+ },
+ {
+  "id": "lan-045",
+  "categorie": "Langue française",
+  "sous_theme": "Étymologie",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "De quelle langue vient le mot « hamac » ?",
+  "choix": [
+   "Le taïno, une langue des Antilles",
+   "Le malais",
+   "L'hindi",
+   "Le portugais"
+  ],
+  "reponse": "Le taïno, une langue des Antilles",
+  "anecdote": "Les Espagnols l'ont découvert chez les Taïnos, qui dormaient dans ces filets suspendus, et l'ont transmis à l'Europe."
+ },
+ {
+  "id": "lan-046",
   "categorie": "Langue française",
   "sous_theme": "Expressions",
   "type": "qcm",
   "difficulte": 5,
-  "question": "Que signifie « mettre la charrue avant les bœufs » ?",
+  "question": "Que signifie « tirer le diable par la queue » ?",
   "choix": [
-   "Faire les choses dans le mauvais ordre",
-   "Travailler très dur",
-   "Être très fort",
-   "Revenir en arrière"
+   "Avoir du mal à joindre les deux bouts",
+   "Prendre de gros risques",
+   "Chercher les ennuis",
+   "Mentir effrontément"
   ],
-  "reponse": "Faire les choses dans le mauvais ordre",
-  "anecdote": "L'image date d'une époque où l'on labourait avec des bœufs attelés devant la charrue."
+  "reponse": "Avoir du mal à joindre les deux bouts",
+  "anecdote": "L'expression évoque l'effort vain de celui qui tient le diable par la queue au lieu des cornes."
+ },
+ {
+  "id": "lan-047",
+  "categorie": "Langue française",
+  "sous_theme": "Figures de style",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle figure de style trouve-t-on dans « Cette obscure clarté qui tombe des étoiles » ?",
+  "choix": [
+   "Un oxymore",
+   "Une litote",
+   "Une hyperbole",
+   "Une métonymie"
+  ],
+  "reponse": "Un oxymore",
+  "anecdote": "Le vers vient du Cid de Corneille. L'oxymore réunit deux mots de sens contraires."
+ },
+ {
+  "id": "lan-048",
+  "categorie": "Langue française",
+  "sous_theme": "Figures de style",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "« Va, je ne te hais point », dit Chimène dans Le Cid. Quelle est cette figure de style ?",
+  "choix": [
+   "Une litote",
+   "Un euphémisme",
+   "Un oxymore",
+   "Une antiphrase"
+  ],
+  "reponse": "Une litote",
+  "anecdote": "La litote dit moins pour suggérer plus : Chimène avoue en fait son amour pour Rodrigue."
+ },
+ {
+  "id": "lan-049",
+  "categorie": "Langue française",
+  "sous_theme": "Typographie",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment s'appelle le signe « & » ?",
+  "reponse": "L'esperluette",
+  "reponses_acceptees": [
+   "Esperluette",
+   "Et commercial",
+   "Perluète"
+  ],
+  "anecdote": "Il vient de la ligature des lettres e et t, qui forment le mot latin « et »."
+ },
+ {
+  "id": "lan-050",
+  "categorie": "Langue française",
+  "sous_theme": "Typographie",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Comment s'appelle le signe typographique « ¶ », qui marque un paragraphe ?",
+  "reponse": "Le pied-de-mouche",
+  "reponses_acceptees": [
+   "Pied-de-mouche",
+   "Pied de mouche"
+  ],
+  "anecdote": "On le voit souvent apparaître dans les traitements de texte, quand on affiche les caractères invisibles."
+ },
+ {
+  "id": "lan-051",
+  "categorie": "Langue française",
+  "sous_theme": "Dictionnaires",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien d'éditions complètes du Dictionnaire de l'Académie française ont été publiées, la dernière en 2024 ?",
+  "reponse": 9,
+  "unite": "éditions",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   30
+  ],
+  "anecdote": "La 9e édition, commencée en 1986, a été achevée en 2024 : elle compte environ 53 000 mots."
+ },
+ {
+  "id": "lan-052",
+  "categorie": "Langue française",
+  "sous_theme": "Grammaire",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : « amour », « délice » et « orgue » sont masculins au singulier mais souvent féminins au pluriel.",
+  "reponse": "Vrai",
+  "anecdote": "On écrit « un amour fou », mais « des amours folles », et « les grandes orgues » d'une cathédrale."
+ },
+ {
+  "id": "lan-053",
+  "categorie": "Langue française",
+  "sous_theme": "Mots",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel est ce mot ?",
+  "reponse": "Mot-dièse",
+  "reponses_acceptees": [
+   "Mot dièse",
+   "Mot-dièse",
+   "Mots-dièses"
+  ],
+  "indices": [
+   "J'ai été recommandé au Journal officiel en 2013",
+   "Je remplace un anglicisme des réseaux sociaux",
+   "Je commence par le signe #",
+   "On m'utilise pour classer les messages par thème"
+  ],
+  "anecdote": "Il est l'équivalent officiel de « hashtag », qui reste bien plus utilisé."
+ },
+ {
+  "id": "lan-054",
+  "categorie": "Langue française",
+  "sous_theme": "Mots",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quel est ce mot ?",
+  "reponse": "Ouvrable",
+  "reponses_acceptees": [
+   "Jour ouvrable",
+   "Ouvrables"
+  ],
+  "indices": [
+   "On me croit souvent lié au verbe « ouvrir »",
+   "Je viens en fait de l'ancien verbe « ouvrer », qui veut dire travailler",
+   "Le dimanche ne l'est généralement pas",
+   "Je qualifie un jour où l'on peut travailler"
+  ],
+  "anecdote": "On retrouve le verbe « ouvrer » dans « ouvrier », « ouvrage » et « œuvre »."
+ },
+ {
+  "id": "lan-055",
+  "categorie": "Langue française",
+  "sous_theme": "Conjugaison",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel est le participe passé masculin du verbe « absoudre » ?",
+  "choix": [
+   "Absous",
+   "Absout",
+   "Absolu",
+   "Absoudu"
+  ],
+  "reponse": "Absous",
+  "anecdote": "Au féminin, on écrit « absoute », avec un t : une irrégularité célèbre."
+ },
+ {
+  "id": "lan-056",
+  "categorie": "Langue française",
+  "sous_theme": "Étymologie",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "D'où vient le mot « boulevard » ?",
+  "choix": [
+   "Du néerlandais « bolwerk », un rempart",
+   "Du latin « bulla », une boule",
+   "Du jeu de boules",
+   "De l'occitan « bolevar », une allée"
+  ],
+  "reponse": "Du néerlandais « bolwerk », un rempart",
+  "anecdote": "Les premiers boulevards ont été tracés sur d'anciens remparts démolis."
+ },
+ {
+  "id": "lan-057",
+  "categorie": "Langue française",
+  "sous_theme": "Typographie",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Comment appelle-t-on la lettre « æ », comme dans « cæcum » ?",
+  "reponse": "L'e dans l'a",
+  "reponses_acceptees": [
+   "E dans l'a",
+   "E-dans-l'a",
+   "Ae dans l'a"
+  ],
+  "anecdote": "On la nomme aussi « a-e collés ». Sa cousine « œ » s'appelle l'e dans l'o."
+ },
+ {
+  "id": "lan-058",
+  "categorie": "Langue française",
+  "sous_theme": "Orthographe",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : le pluriel de « chacal » est « chacals ».",
+  "reponse": "Vrai",
+  "anecdote": "Comme bal, carnaval, festival, récital ou régal, il fait exception à la règle du pluriel en -aux."
  }
 ]

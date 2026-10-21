@@ -33,7 +33,7 @@ son score. Si le plateau est rechargé, il propose de **reprendre la partie**.
 ### Les manches
 
 - 🎡 **Thème Mystère** : la roue choisit le thème, chacun choisit son niveau de 1 à 10.
-- 📏 **La Fourchette** : encadre la réponse avec deux curseurs, la fourchette la plus serrée gagne.
+- 📏 **La Fourchette** : donne une seule valeur et vise pile. Réponse exacte = 400 pts, puis les points baissent avec l’écart (le plus proche gagne un bonus de 50 pts, trop loin = 0).
 - 🔔 **Buzzer à indices** : les indices tombent un par un, plus tu buzzes tôt, plus tu gagnes.
 - 4️⃣ **Le 4 à la suite** : 4 bonnes réponses d'affilée en 40 secondes.
 - ⚡ **QCM éclair** : tout le monde répond en même temps, avec un bonus de rapidité.
@@ -132,14 +132,23 @@ Options d'URL utiles pour le développement :
 
 ## Les questions
 
-**1007 questions** en français, réparties en 16 catégories : Histoire, Actualité (2020-2026),
+**1121 questions** en français, réparties en 16 catégories : Histoire, Actualité (2020-2026),
 Géographie, Sciences & Nature, Cinéma & Séries, Musique, Sport, Littérature, Art & Architecture,
 Gastronomie, Langue française, Insolite, Records & chiffres, Pop culture & jeux vidéo,
 Inventions & tech, Personnalités.
 
 Elles sont réparties en environ 45 % de QCM, 20 % de fourchettes, 15 % de questions à indices,
-10 % de vrai/faux et 10 % de réponses libres. Côté difficulté, environ 20 % sont faciles,
-50 % moyennes et 30 % difficiles. Chaque question a son anecdote.
+10 % de vrai/faux et 10 % de réponses libres. Chaque question a son anecdote.
+
+Échelle de difficulté (il n'y a plus de questions de niveau 1, jugées trop évidentes) :
+
+| Niveau | Pour qui |
+|---|---|
+| 2-3 | Culture générale courante |
+| 4-5 | Bonne culture générale |
+| 6-7 | Amateur éclairé |
+| 8-9 | Connaisseur, spécialiste |
+| 10 | Expert : très pointu, même pour un passionné |
 
 ### Vérifier la banque
 
@@ -162,7 +171,7 @@ Ajoute un objet dans le fichier de la catégorie (`data/questions/<categorie>.js
   "categorie": "Histoire",         // nom exact de la catégorie (voir index.json)
   "sous_theme": "Moyen Âge",
   "type": "qcm",                   // qcm | vf | fourchette | indices | libre
-  "difficulte": 5,                 // 1 (facile) à 10 (très dur)
+  "difficulte": 5,                 // 2 (culture courante) à 10 (expert)
   "question": "…",
   "reponse": "…",
   "anecdote": "…",                 // affichée après la réponse
@@ -177,7 +186,7 @@ Selon le type :
 |---|---|
 | `qcm` | `choix` : 4 propositions distinctes, dont la `reponse` |
 | `vf` | `reponse` : `"Vrai"` ou `"Faux"` |
-| `fourchette` | `reponse` numérique, `unite` (`"année"` pour une date, négatif = av. J.-C.), `tolerance`, `bornes` : `[min, max]` des curseurs |
+| `fourchette` | `reponse` numérique, `unite` (`"année"` pour une date, négatif = av. J.-C.), `tolerance` (écart encore compté « pile », plafonné à 2 % de la réponse), `bornes` : `[min, max]` du curseur, qui servent aussi d’échelle pour noter l’écart |
 | `indices` | `indices` : 3 à 5 indices du plus dur au plus facile, `reponses_acceptees` |
 | `libre` | `reponses_acceptees` : variantes acceptées (les accents, articles et petites fautes sont tolérés automatiquement) |
 

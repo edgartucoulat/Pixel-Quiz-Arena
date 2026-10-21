@@ -501,10 +501,10 @@
       if (!q.answerers.includes(pid) || q.answers[pid]) return;
       const t = now() - q.startedAt;
       if (q.data.type === 'fourchette') {
-        let mn = Number(value && value.min), mx = Number(value && value.max);
-        if (!isFinite(mn) || !isFinite(mx)) return;
-        if (mn > mx) [mn, mx] = [mx, mn];
-        q.answers[pid] = { value: { min: mn, max: mx }, t };
+        // Une seule valeur : il faut viser pile (ancien format {min, max} d'un téléphone pas à jour : on prend le milieu).
+        const x = value && typeof value === 'object' ? (Number(value.min) + Number(value.max)) / 2 : Number(value);
+        if (!isFinite(x)) return;
+        q.answers[pid] = { value: x, t };
       } else {
         q.answers[pid] = { value, t, text: typeof value === 'string' ? value.slice(0, 60) : undefined };
       }
@@ -595,8 +595,8 @@
     commentReveal(q, winners) {
       const vars = { text: q.data.anecdote };
       if (q.data.type === 'fourchette') {
-        const w = Object.keys(q.results).find((pid) => q.results[pid].rank === 1);
-        if (w) this.say('fourchetteWin', { name: this.name(w) }, 'happy');
+        const w = Object.keys(q.results).find((pid) => q.results[pid].rank === 1 && q.results[pid].correct);
+        if (w) this.say(q.results[w].exact ? 'fourchettePile' : 'fourchetteWin', { name: this.name(w) }, 'happy');
         else this.say('fourchetteNone', {}, 'sad');
       } else if (q.kind === 'single') {
         const pid = q.answerers[0];
@@ -633,7 +633,7 @@
       if (r.n >= r.total) return this.endRound();
       const types = r.type === 'eclair' ? ['qcm', 'vf'] : r.type === 'fourchette' ? ['fourchette'] : ['indices'];
       // Difficulté qui monte doucement au fil de la manche.
-      const diff = clamp(Math.round(2 + (r.n / Math.max(1, r.total - 1)) * 6 + (Math.random() * 2 - 1)), 1, 10);
+      const diff = clamp(Math.round(3 + (r.n / Math.max(1, r.total - 1)) * 6 + (Math.random() * 2 - 1)), 2, 10);
       const data = this.pickQuestion({ types, diff });
       if (!data) return this.endRound();
       r.n++;
@@ -649,32 +649,45 @@
       this.changed();
     }
 
+    /**
+     * Fourchette : chacun donne UNE valeur et doit viser pile.
+     *  - pile (écart ≤ tolérance, plafonnée à 2 % de la réponse) : 400 pts
+     *  - sinon 300 × exp(-écart / échelle) :
+     *      dates : écart rapporté à l'amplitude des bornes, échelle 5 %
+     *      quantités : plus petit écart relatif (à la réponse ou aux bornes), échelle 10 %
+     *  - le plus proche touche +50 ; moins de 30 pts = raté
+     */
+    fourchetteGap(d, x) {
+      const [lo, hi] = d.bornes || [0, 0];
+      const gap = Math.abs(x - d.reponse);
+      const span = hi - lo || Math.abs(d.reponse) || 1;
+      if (d.unite === 'année') return gap / span / 0.05;
+      return Math.min(d.reponse ? gap / Math.abs(d.reponse) : Infinity, gap / span) / 0.1;
+    }
     scoreFourchette(q) {
       const d = q.data;
-      const tol = d.tolerance || 0;
-      const inside = [];
+      const tol = Math.min(d.tolerance || 0, Math.abs(d.reponse) * 0.02);
+      const scored = [];
       for (const pid of q.answerers) {
         const p = this.players[pid];
         const a = q.answers[pid];
         if (!p) continue;
         if (!a) { q.results[pid] = { correct: false, pts: 0, none: true }; continue; }
-        const { min, max } = a.value;
-        if (d.reponse >= min - tol && d.reponse <= max + tol) inside.push({ pid, width: max - min });
-        else { this.scoreWrong(p); q.results[pid] = { correct: false, pts: 0 }; }
+        const diff = Math.abs(a.value - d.reponse);
+        const exact = diff <= tol;
+        const base = exact ? 400 : Math.round(300 * Math.exp(-this.fourchetteGap(d, a.value)));
+        scored.push({ pid, diff, exact, base });
       }
-      inside.sort((a, b) => a.width - b.width);
-      const prizes = [300, 200, 150];
-      let rank = 0, lastW = null;
-      inside.forEach((it, i) => {
-        if (it.width !== lastW) rank = i + 1;
-        lastW = it.width;
+      scored.sort((a, b) => a.diff - b.diff);
+      const best = scored.length ? scored[0].diff : null;
+      scored.forEach((it) => {
         const p = this.players[it.pid];
-        let base = prizes[rank - 1] || 100;
-        const exact = it.width <= 2 * tol || it.width === 0;
-        if (exact) base += 100;
-        if (rank === 1) p.stats.fourchette++;
+        const rank = scored.findIndex((x) => x.diff === it.diff) + 1;
+        let base = it.base;
+        if (base < 30) { this.scoreWrong(p); q.results[it.pid] = { correct: false, pts: 0, rank, gap: it.diff }; return; }
+        if (it.diff === best) { base += 50; p.stats.fourchette++; }
         const r = this.scoreCorrect(p, base, { diff: d.difficulte });
-        q.results[it.pid] = { correct: true, pts: r.pts, rank, exact, mult: r.mult };
+        q.results[it.pid] = { correct: true, pts: r.pts, rank, exact: it.exact, gap: it.diff, mult: r.mult };
       });
       this.fx('drumroll');
     }
@@ -922,7 +935,7 @@
     tableQuestion() {
       const r = this.round;
       const v = r.cell.value;
-      const diff = v <= 100 ? 2 : v <= 200 ? 4 : v <= 300 ? 6 : v <= 400 ? 7 : 9;
+      const diff = v <= 100 ? 3 : v <= 200 ? 5 : v <= 300 ? 7 : v <= 400 ? 8 : 10;
       const data = this.pickQuestion({ types: ['qcm', 'vf', 'libre'], cat: r.cell.cat, diff });
       if (!data) return this.tableNextTurn();
       const q = this.makeQ(data, 'single', [r.player]);
@@ -971,8 +984,8 @@
     }
     quatreQuestion() {
       const r = this.round;
-      const data = this.pickQuestion({ types: ['qcm', 'vf'], cat: r.cat, diffMin: 1, diffMax: 7, diff: 3 + r.run.streak })
-        || this.pickQuestion({ types: ['qcm', 'vf'], diffMax: 7, diff: 4 });
+      const data = this.pickQuestion({ types: ['qcm', 'vf'], cat: r.cat, diffMin: 2, diffMax: 8, diff: 4 + r.run.streak })
+        || this.pickQuestion({ types: ['qcm', 'vf'], diffMax: 8, diff: 5 });
       if (!data) return this.quatreEnd();
       const keepTimer = this.timer;
       const q = this.makeQ(data, 'quatre', [r.player]);
@@ -1204,7 +1217,7 @@
       const alive = r.fighters.filter((id) => r.hp[id] > 0);
       if (alive.length < 2 || r.n >= r.total) return this.duelKO();
       r.n++;
-      const diff = clamp(2 + Math.floor(r.n / 2), 2, 9);
+      const diff = clamp(3 + Math.floor(r.n / 2), 3, 10);
       const data = this.pickQuestion({ types: ['qcm', 'vf'], diff });
       if (!data) return this.duelKO();
       const q = this.makeQ(data, 'buzz', r.fighters.slice());
@@ -1266,7 +1279,7 @@
       const last = rk[rk.length - 1];
       const C = [
         { t: 'Encyclopédie sur pattes', d: 'Le plus de bonnes réponses', s: (p) => p.stats.correct, min: 3 },
-        { t: 'Sniper des fourchettes', d: 'Fourchettes les plus serrées', s: (p) => p.stats.fourchette, min: 1 },
+        { t: 'Sniper des fourchettes', d: 'Le plus souvent au plus près de la réponse', s: (p) => p.stats.fourchette, min: 1 },
         { t: 'Gâchette la plus rapide de l’Ouest', d: 'Buzz le plus rapide', s: (p) => (p.stats.fastest != null ? 100000 - p.stats.fastest : 0), min: 1 },
         { t: 'Kamikaze du buzzer', d: 'Le plus de buzz ratés', s: (p) => p.stats.wrongBuzz, min: 2 },
         { t: 'Machiavel de salon', d: 'Le plus de coups bas joués', s: (p) => p.stats.cardsUsed, min: 1 },
@@ -1356,6 +1369,11 @@
         if (q && q.answerers.includes(pid) && res) { v.correct = res.correct; v.pts = res.pts; v.none = res.none; }
         else v.correct = null;
         v.answer = q ? this.answerText(q) : '';
+        if (q && q.data.type === 'fourchette' && q.answers[pid]) {
+          v.guess = PQA.fmtVal(q.answers[pid].value, q.data.unite);
+          v.gap = res && res.gap ? PQA.fmtVal(res.gap, q.data.unite === 'année' ? 'ans' : q.data.unite) : null;
+          v.exact = !!(res && res.exact);
+        }
         v.anecdote = q ? q.data.anecdote : '';
       };
       switch (this.phase) {

@@ -4,7 +4,7 @@
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 5,
   "question": "Quel pays possède le plus de fuseaux horaires, outre-mer compris ?",
   "choix": [
    "La France",
@@ -20,7 +20,7 @@
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle est la capitale de l'Australie ?",
   "choix": [
    "Canberra",
@@ -36,7 +36,7 @@
   "categorie": "Géographie",
   "sous_theme": "Fleuves",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Quel est le plus long fleuve d'Europe ?",
   "choix": [
    "La Volga",
@@ -52,7 +52,7 @@
   "categorie": "Géographie",
   "sous_theme": "Îles",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Quel pays compte le plus d'îles au monde ?",
   "choix": [
    "La Suède",
@@ -68,7 +68,7 @@
   "categorie": "Géographie",
   "sous_theme": "Afrique",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Dans quel pays se trouve Tombouctou ?",
   "choix": [
    "Le Mali",
@@ -82,25 +82,9 @@
  {
   "id": "geo-006",
   "categorie": "Géographie",
-  "sous_theme": "Pays",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quel est le plus petit pays du monde ?",
-  "choix": [
-   "Le Vatican",
-   "Monaco",
-   "Saint-Marin",
-   "Le Liechtenstein"
-  ],
-  "reponse": "Le Vatican",
-  "anecdote": "Avec 0,44 km², on peut en faire le tour à pied en moins d'une heure."
- },
- {
-  "id": "geo-007",
-  "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle est la capitale du Canada ?",
   "choix": [
    "Ottawa",
@@ -112,11 +96,11 @@
   "anecdote": "Elle a été choisie en 1857 par la reine Victoria, notamment parce qu'elle se trouvait entre le Canada anglophone et francophone."
  },
  {
-  "id": "geo-008",
+  "id": "geo-007",
   "categorie": "Géographie",
   "sous_theme": "Déserts",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quel est le plus grand désert du monde ?",
   "choix": [
    "L'Antarctique",
@@ -128,11 +112,11 @@
   "anecdote": "Un désert se définit par la rareté des précipitations, pas par la chaleur : le Sahara n'est « que » le plus grand désert chaud."
  },
  {
-  "id": "geo-009",
+  "id": "geo-008",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "De quel pays Ouagadougou est-elle la capitale ?",
   "choix": [
    "Le Burkina Faso",
@@ -144,11 +128,11 @@
   "anecdote": "Burkina Faso signifie « pays des hommes intègres »."
  },
  {
-  "id": "geo-010",
+  "id": "geo-009",
   "categorie": "Géographie",
   "sous_theme": "France",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Combien de pays ont une frontière terrestre avec la France métropolitaine ?",
   "choix": [
    "8",
@@ -160,11 +144,11 @@
   "anecdote": "La plus longue frontière terrestre de la France est pourtant... avec le Brésil, environ 730 km, via la Guyane."
  },
  {
-  "id": "geo-011",
+  "id": "geo-010",
   "categorie": "Géographie",
   "sous_theme": "Montagnes",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quel est le point culminant de l'Afrique ?",
   "choix": [
    "Le Kilimandjaro",
@@ -176,11 +160,11 @@
   "anecdote": "Il culmine à 5 895 m, en Tanzanie, et ses glaciers fondent à grande vitesse."
  },
  {
-  "id": "geo-012",
+  "id": "geo-011",
   "categorie": "Géographie",
   "sous_theme": "Afrique",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quel pays est entièrement enclavé dans l'Afrique du Sud ?",
   "choix": [
    "Le Lesotho",
@@ -192,11 +176,11 @@
   "anecdote": "C'est le seul pays au monde entièrement situé au-dessus de 1 000 m d'altitude."
  },
  {
-  "id": "geo-013",
+  "id": "geo-012",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle est la capitale de la Turquie ?",
   "choix": [
    "Ankara",
@@ -208,11 +192,11 @@
   "anecdote": "Istanbul est bien plus peuplée, mais Atatürk a choisi Ankara en 1923 pour marquer la rupture avec l'Empire ottoman."
  },
  {
-  "id": "geo-014",
+  "id": "geo-013",
   "categorie": "Géographie",
   "sous_theme": "Lacs",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel est le lac le plus profond du monde ?",
   "choix": [
    "Le lac Baïkal",
@@ -224,11 +208,11 @@
   "anecdote": "Profond de 1 642 m, il contient environ 20 % de l'eau douce liquide de surface de la planète."
  },
  {
-  "id": "geo-015",
+  "id": "geo-014",
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 7,
   "question": "Quel est le seul pays traversé à la fois par l'équateur et par un tropique ?",
   "choix": [
    "Le Brésil",
@@ -240,11 +224,11 @@
   "anecdote": "L'équateur passe au nord du pays, près de l'embouchure de l'Amazone, et le tropique du Capricorne près de São Paulo."
  },
  {
-  "id": "geo-016",
+  "id": "geo-015",
   "categorie": "Géographie",
   "sous_theme": "Îles",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle est la plus grande île du monde (hors continent) ?",
   "choix": [
    "Le Groenland",
@@ -256,11 +240,11 @@
   "anecdote": "Environ 80 % de sa surface est recouverte d'une calotte de glace."
  },
  {
-  "id": "geo-017",
+  "id": "geo-016",
   "categorie": "Géographie",
   "sous_theme": "États-Unis",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quel est le plus grand État des États-Unis ?",
   "choix": [
    "L'Alaska",
@@ -272,11 +256,11 @@
   "anecdote": "Il est plus de deux fois plus grand que le Texas."
  },
  {
-  "id": "geo-018",
+  "id": "geo-017",
   "categorie": "Géographie",
   "sous_theme": "Europe",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Combien de pays font partie de l'Union européenne depuis le départ du Royaume-Uni ?",
   "choix": [
    "27",
@@ -288,11 +272,11 @@
   "anecdote": "Le Brexit a pris effet le 31 janvier 2020, après 47 ans d'adhésion."
  },
  {
-  "id": "geo-019",
+  "id": "geo-018",
   "categorie": "Géographie",
   "sous_theme": "Îles",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Dans quel océan se trouve l'île Maurice ?",
   "choix": [
    "L'océan Indien",
@@ -304,27 +288,11 @@
   "anecdote": "C'est le seul endroit au monde où vivait le dodo, disparu à la fin du XVIIe siècle."
  },
  {
-  "id": "geo-020",
-  "categorie": "Géographie",
-  "sous_theme": "Mers",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quel détroit sépare l'Europe de l'Afrique ?",
-  "choix": [
-   "Le détroit de Gibraltar",
-   "Le Bosphore",
-   "Le détroit de Messine",
-   "Le détroit d'Ormuz"
-  ],
-  "reponse": "Le détroit de Gibraltar",
-  "anecdote": "À son point le plus étroit, il ne mesure qu'environ 14 km."
- },
- {
-  "id": "geo-021",
+  "id": "geo-019",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quelle est la capitale de la Nouvelle-Zélande ?",
   "choix": [
    "Wellington",
@@ -336,11 +304,11 @@
   "anecdote": "C'est la capitale d'État souverain la plus au sud du monde."
  },
  {
-  "id": "geo-022",
+  "id": "geo-020",
   "categorie": "Géographie",
   "sous_theme": "Fleuves",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Quel fleuve traverse le plus de pays ?",
   "choix": [
    "Le Danube",
@@ -352,27 +320,11 @@
   "anecdote": "Il traverse dix pays et quatre capitales : Vienne, Bratislava, Budapest et Belgrade."
  },
  {
-  "id": "geo-023",
-  "categorie": "Géographie",
-  "sous_theme": "Pays",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Quel pays a la forme d'une botte ?",
-  "choix": [
-   "L'Italie",
-   "La Grèce",
-   "L'Espagne",
-   "La Croatie"
-  ],
-  "reponse": "L'Italie",
-  "anecdote": "Le « talon » correspond aux Pouilles, la « pointe » à la Calabre."
- },
- {
-  "id": "geo-024",
+  "id": "geo-021",
   "categorie": "Géographie",
   "sous_theme": "Côtes",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Quel pays possède la plus longue côte du monde ?",
   "choix": [
    "Le Canada",
@@ -384,11 +336,11 @@
   "anecdote": "Plus de 200 000 km de côtes, grâce à ses dizaines de milliers d'îles arctiques."
  },
  {
-  "id": "geo-025",
+  "id": "geo-022",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle est la capitale du Brésil ?",
   "choix": [
    "Brasília",
@@ -400,11 +352,11 @@
   "anecdote": "Construite en 41 mois et inaugurée en 1960, son plan dessine la forme d'un avion."
  },
  {
-  "id": "geo-026",
+  "id": "geo-023",
   "categorie": "Géographie",
   "sous_theme": "Afrique",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quel est le pays le plus peuplé d'Afrique ?",
   "choix": [
    "Le Nigeria",
@@ -416,27 +368,11 @@
   "anecdote": "Avec plus de 220 millions d'habitants, environ un Africain sur six est nigérian."
  },
  {
-  "id": "geo-027",
-  "categorie": "Géographie",
-  "sous_theme": "Montagnes",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Quelle chaîne de montagnes sépare la France de l'Espagne ?",
-  "choix": [
-   "Les Pyrénées",
-   "Les Alpes",
-   "Le Jura",
-   "Les Vosges"
-  ],
-  "reponse": "Les Pyrénées",
-  "anecdote": "L'Andorre y est nichée : l'un de ses deux chefs d'État est... le président de la République française."
- },
- {
-  "id": "geo-028",
+  "id": "geo-024",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle est la capitale de l'Écosse ?",
   "choix": [
    "Édimbourg",
@@ -448,11 +384,11 @@
   "anecdote": "Glasgow est pourtant la plus grande ville du pays."
  },
  {
-  "id": "geo-029",
+  "id": "geo-025",
   "categorie": "Géographie",
   "sous_theme": "Volcans",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quel pays compte le plus de volcans actifs ?",
   "choix": [
    "L'Indonésie",
@@ -464,11 +400,11 @@
   "anecdote": "L'éruption du Tambora en 1815 a provoqué en Europe « l'année sans été » de 1816."
  },
  {
-  "id": "geo-030",
+  "id": "geo-026",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Quelle est la capitale du Kazakhstan ?",
   "choix": [
    "Astana",
@@ -480,11 +416,11 @@
   "anecdote": "Elle s'est appelée Noursoultan de 2019 à 2022, avant de redevenir Astana."
  },
  {
-  "id": "geo-031",
+  "id": "geo-027",
   "categorie": "Géographie",
   "sous_theme": "Drapeaux",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quel pays a un drapeau qui n'est ni carré ni rectangulaire ?",
   "choix": [
    "Le Népal",
@@ -496,27 +432,11 @@
   "anecdote": "Il est formé de deux triangles superposés, qui évoqueraient les sommets de l'Himalaya."
  },
  {
-  "id": "geo-032",
-  "categorie": "Géographie",
-  "sous_theme": "Mers",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Dans quelle mer, très salée, flotte-t-on sans effort ?",
-  "choix": [
-   "La mer Morte",
-   "La mer Rouge",
-   "La mer Caspienne",
-   "La mer d'Aral"
-  ],
-  "reponse": "La mer Morte",
-  "anecdote": "Ses rives sont le point le plus bas des terres émergées, à plus de 430 m sous le niveau de la mer."
- },
- {
-  "id": "geo-033",
+  "id": "geo-028",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Quelle ville est la « capitale » de la Suisse ?",
   "choix": [
    "Berne",
@@ -528,11 +448,11 @@
   "anecdote": "Officiellement, la Suisse n'a pas de capitale : Berne n'est que la « ville fédérale »."
  },
  {
-  "id": "geo-034",
+  "id": "geo-029",
   "categorie": "Géographie",
   "sous_theme": "Frontières",
   "type": "qcm",
-  "difficulte": 8,
+  "difficulte": 4,
   "question": "Quelle est la plus longue frontière terrestre du monde ?",
   "choix": [
    "Canada – États-Unis",
@@ -544,11 +464,11 @@
   "anecdote": "Près de 8 900 km. Elle traverse même une bibliothèque, à cheval entre le Québec et le Vermont."
  },
  {
-  "id": "geo-035",
+  "id": "geo-030",
   "categorie": "Géographie",
   "sous_theme": "Villes",
   "type": "qcm",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle grande ville est construite sur deux continents ?",
   "choix": [
    "Istanbul",
@@ -560,43 +480,11 @@
   "anecdote": "Le Bosphore la coupe en deux : une rive en Europe, l'autre en Asie."
  },
  {
-  "id": "geo-036",
-  "categorie": "Géographie",
-  "sous_theme": "Amérique du Sud",
-  "type": "qcm",
-  "difficulte": 2,
-  "question": "Quel est le pays le plus peuplé d'Amérique du Sud ?",
-  "choix": [
-   "Le Brésil",
-   "L'Argentine",
-   "La Colombie",
-   "Le Pérou"
-  ],
-  "reponse": "Le Brésil",
-  "anecdote": "Près d'un Sud-Américain sur deux est brésilien."
- },
- {
-  "id": "geo-037",
-  "categorie": "Géographie",
-  "sous_theme": "Pays",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Quel pays est surnommé le « pays du Soleil-Levant » ?",
-  "choix": [
-   "Le Japon",
-   "La Chine",
-   "La Corée du Sud",
-   "La Thaïlande"
-  ],
-  "reponse": "Le Japon",
-  "anecdote": "C'est le sens même de son nom, Nihon ou Nippon : « l'origine du soleil »."
- },
- {
-  "id": "geo-038",
+  "id": "geo-031",
   "categorie": "Géographie",
   "sous_theme": "Monuments",
   "type": "qcm",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Dans quel pays se trouve le temple d'Angkor Vat ?",
   "choix": [
    "Le Cambodge",
@@ -608,43 +496,11 @@
   "anecdote": "C'est le plus grand monument religieux du monde, et il figure sur le drapeau cambodgien."
  },
  {
-  "id": "geo-039",
-  "categorie": "Géographie",
-  "sous_theme": "Océans",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Quel est le plus grand océan du monde ?",
-  "choix": [
-   "Le Pacifique",
-   "L'Atlantique",
-   "L'océan Indien",
-   "L'océan Arctique"
-  ],
-  "reponse": "Le Pacifique",
-  "anecdote": "Il est plus vaste que toutes les terres émergées réunies."
- },
- {
-  "id": "geo-040",
-  "categorie": "Géographie",
-  "sous_theme": "France",
-  "type": "qcm",
-  "difficulte": 1,
-  "question": "Quelle île française est surnommée « l'île de Beauté » ?",
-  "choix": [
-   "La Corse",
-   "La Réunion",
-   "Belle-Île",
-   "La Martinique"
-  ],
-  "reponse": "La Corse",
-  "anecdote": "Napoléon y est né en 1769, un an seulement après que Gênes l'a cédée à la France."
- },
- {
-  "id": "geo-041",
+  "id": "geo-032",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "qcm",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quelle est la capitale du Maroc ?",
   "choix": [
    "Rabat",
@@ -656,7 +512,7 @@
   "anecdote": "Casablanca est la plus grande ville du pays, mais le roi et le gouvernement siègent à Rabat."
  },
  {
-  "id": "geo-042",
+  "id": "geo-033",
   "categorie": "Géographie",
   "sous_theme": "Montagnes",
   "type": "fourchette",
@@ -672,11 +528,11 @@
   "anecdote": "Son altitude varie de quelques mètres d'une année à l'autre, selon l'épaisseur de la glace au sommet."
  },
  {
-  "id": "geo-043",
+  "id": "geo-034",
   "categorie": "Géographie",
   "sous_theme": "Montagnes",
   "type": "fourchette",
-  "difficulte": 4,
+  "difficulte": 5,
   "question": "Quelle est l'altitude de l'Everest ?",
   "reponse": 8849,
   "unite": "m",
@@ -688,11 +544,11 @@
   "anecdote": "Sa hauteur officielle a été mesurée de nouveau en 2020, conjointement par la Chine et le Népal."
  },
  {
-  "id": "geo-044",
+  "id": "geo-035",
   "categorie": "Géographie",
   "sous_theme": "France",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Quelle est la superficie de la France métropolitaine ?",
   "reponse": 551000,
   "unite": "km²",
@@ -704,7 +560,7 @@
   "anecdote": "C'est le plus grand pays de l'Union européenne, devant l'Espagne."
  },
  {
-  "id": "geo-045",
+  "id": "geo-036",
   "categorie": "Géographie",
   "sous_theme": "Population",
   "type": "fourchette",
@@ -720,11 +576,11 @@
   "anecdote": "Le cap des 8 milliards a été franchi en novembre 2022, selon l'ONU."
  },
  {
-  "id": "geo-046",
+  "id": "geo-037",
   "categorie": "Géographie",
   "sous_theme": "Fleuves",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 7,
   "question": "Quelle est la longueur du Nil ?",
   "reponse": 6650,
   "unite": "km",
@@ -736,11 +592,11 @@
   "anecdote": "Le titre de plus long fleuve du monde lui est disputé par l'Amazone, selon l'endroit où l'on place sa source."
  },
  {
-  "id": "geo-047",
+  "id": "geo-038",
   "categorie": "Géographie",
   "sous_theme": "Océans",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 7,
   "question": "Quelle est la profondeur maximale de la fosse des Mariannes ?",
   "reponse": 10935,
   "unite": "m",
@@ -752,11 +608,11 @@
   "anecdote": "Si l'on y posait l'Everest, son sommet serait encore à plus de 2 km sous la surface."
  },
  {
-  "id": "geo-048",
+  "id": "geo-039",
   "categorie": "Géographie",
   "sous_theme": "Monde",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "Combien d'États sont membres de l'ONU ?",
   "reponse": 193,
   "unite": "pays",
@@ -768,11 +624,11 @@
   "anecdote": "Le Vatican et la Palestine n'y siègent qu'en tant qu'États observateurs."
  },
  {
-  "id": "geo-049",
+  "id": "geo-040",
   "categorie": "Géographie",
   "sous_theme": "France",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Quelle est la distance à vol d'oiseau entre Paris et Marseille ?",
   "reponse": 660,
   "unite": "km",
@@ -784,7 +640,7 @@
   "anecdote": "Par la route, comptez plutôt 775 km."
  },
  {
-  "id": "geo-050",
+  "id": "geo-041",
   "categorie": "Géographie",
   "sous_theme": "France",
   "type": "fourchette",
@@ -800,7 +656,7 @@
   "anecdote": "Le dernier créé est Mayotte, devenu département en 2011."
  },
  {
-  "id": "geo-051",
+  "id": "geo-042",
   "categorie": "Géographie",
   "sous_theme": "Cascades",
   "type": "fourchette",
@@ -816,11 +672,11 @@
   "anecdote": "Elle porte le nom de l'aviateur américain Jimmie Angel, qui l'a survolée en 1933."
  },
  {
-  "id": "geo-052",
+  "id": "geo-043",
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Quelle est la superficie de la Russie, en millions de km² ?",
   "reponse": 17.1,
   "unite": "millions de km²",
@@ -832,11 +688,11 @@
   "anecdote": "Elle s'étend sur 11 fuseaux horaires : quand il est midi à Kaliningrad, il est déjà 22 h au Kamtchatka."
  },
  {
-  "id": "geo-053",
+  "id": "geo-044",
   "categorie": "Géographie",
   "sous_theme": "Climat",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 7,
   "question": "Quelle est la température la plus froide jamais mesurée sur Terre par une station météo ?",
   "reponse": -89.2,
   "unite": "°C",
@@ -848,11 +704,11 @@
   "anecdote": "Mesurée en 1983 à la station russe Vostok, en Antarctique."
  },
  {
-  "id": "geo-054",
+  "id": "geo-045",
   "categorie": "Géographie",
   "sous_theme": "Villes",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "Combien d'habitants compte Paris intra-muros, en millions ?",
   "reponse": 2.1,
   "unite": "millions",
@@ -864,7 +720,7 @@
   "anecdote": "Son agglomération dépasse les dix millions d'habitants."
  },
  {
-  "id": "geo-055",
+  "id": "geo-046",
   "categorie": "Géographie",
   "sous_theme": "Monuments",
   "type": "fourchette",
@@ -880,11 +736,11 @@
   "anecdote": "C'est le résultat d'un grand recensement officiel publié en 2012."
  },
  {
-  "id": "geo-056",
+  "id": "geo-047",
   "categorie": "Géographie",
   "sous_theme": "Villes",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 7,
   "question": "À quelle altitude se trouve La Paz, siège du gouvernement bolivien ?",
   "reponse": 3640,
   "unite": "m",
@@ -896,11 +752,11 @@
   "anecdote": "L'aéroport d'El Alto, qui la dessert, est encore 400 m plus haut."
  },
  {
-  "id": "geo-057",
+  "id": "geo-048",
   "categorie": "Géographie",
   "sous_theme": "Déserts",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Quelle est la superficie du Sahara, en millions de km² ?",
   "reponse": 9,
   "unite": "millions de km²",
@@ -912,7 +768,7 @@
   "anecdote": "C'est presque la superficie des États-Unis."
  },
  {
-  "id": "geo-058",
+  "id": "geo-049",
   "categorie": "Géographie",
   "sous_theme": "Afrique",
   "type": "fourchette",
@@ -928,11 +784,11 @@
   "anecdote": "Le plus récent est le Soudan du Sud, indépendant depuis 2011."
  },
  {
-  "id": "geo-059",
+  "id": "geo-050",
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "fourchette",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Combien d'habitants compte Monaco ?",
   "reponse": 38000,
   "unite": "habitants",
@@ -944,11 +800,11 @@
   "anecdote": "C'est le pays le plus densément peuplé du monde."
  },
  {
-  "id": "geo-060",
+  "id": "geo-051",
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quel est ce pays ?",
   "reponse": "L'Islande",
   "reponses_acceptees": [
@@ -964,30 +820,11 @@
   "anecdote": "Le mot « geyser » vient du Geysir, une source jaillissante islandaise."
  },
  {
-  "id": "geo-061",
-  "categorie": "Géographie",
-  "sous_theme": "Villes",
-  "type": "indices",
-  "difficulte": 2,
-  "question": "Quelle est cette ville ?",
-  "reponse": "Venise",
-  "reponses_acceptees": [
-   "Venezia"
-  ],
-  "indices": [
-   "Je suis construite sur 118 îlots",
-   "Les voitures y sont interdites",
-   "Mon carnaval est célèbre pour ses masques",
-   "On s'y déplace en vaporetto ou en gondole"
-  ],
-  "anecdote": "Depuis 2020, un système de digues mobiles, le MOSE, la protège des grandes marées."
- },
- {
-  "id": "geo-062",
+  "id": "geo-052",
   "categorie": "Géographie",
   "sous_theme": "Îles",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quelle est cette île ?",
   "reponse": "Madagascar",
   "reponses_acceptees": [
@@ -1002,69 +839,11 @@
   "anecdote": "L'île s'est séparée du sous-continent indien il y a environ 88 millions d'années."
  },
  {
-  "id": "geo-063",
+  "id": "geo-053",
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "indices",
   "difficulte": 3,
-  "question": "Quel est ce pays ?",
-  "reponse": "Le Canada",
-  "reponses_acceptees": [
-   "Canada"
-  ],
-  "indices": [
-   "Je suis le deuxième plus grand pays du monde",
-   "Je compte plus de lacs que le reste du monde réuni",
-   "Mon hymne se chante en anglais et en français",
-   "Une feuille d'érable orne mon drapeau"
-  ],
-  "anecdote": "Son nom viendrait du mot iroquoien « kanata », qui signifie « village »."
- },
- {
-  "id": "geo-064",
-  "categorie": "Géographie",
-  "sous_theme": "France",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Quel est ce lieu ?",
-  "reponse": "Le Mont-Saint-Michel",
-  "reponses_acceptees": [
-   "Mont-Saint-Michel",
-   "Mont Saint Michel"
-  ],
-  "indices": [
-   "Je suis entouré par les plus fortes marées d'Europe continentale",
-   "Je me trouve à la limite entre Normandie et Bretagne",
-   "Mon abbaye est perchée sur un rocher",
-   "On me surnomme la « Merveille de l'Occident »"
-  ],
-  "anecdote": "Le dicton dit : « Le Couesnon, dans sa folie, a mis le Mont en Normandie »."
- },
- {
-  "id": "geo-065",
-  "categorie": "Géographie",
-  "sous_theme": "Pays",
-  "type": "indices",
-  "difficulte": 2,
-  "question": "Quel est ce pays ?",
-  "reponse": "L'Australie",
-  "reponses_acceptees": [
-   "Australie"
-  ],
-  "indices": [
-   "Je suis à la fois un pays et presque un continent",
-   "On y compte plus de kangourous que d'habitants",
-   "La Grande Barrière de corail longe mes côtes",
-   "Sydney est ma plus grande ville"
-  ],
-  "anecdote": "En 1932, son armée a déclaré la guerre aux émeus qui ravageaient les cultures... et a dû battre en retraite."
- },
- {
-  "id": "geo-066",
-  "categorie": "Géographie",
-  "sous_theme": "Pays",
-  "type": "indices",
-  "difficulte": 5,
   "question": "Quel est ce pays ?",
   "reponse": "Singapour",
   "reponses_acceptees": [
@@ -1079,11 +858,11 @@
   "anecdote": "Le pays est devenu indépendant malgré lui, exclu de la Fédération de Malaisie en 1965."
  },
  {
-  "id": "geo-067",
+  "id": "geo-054",
   "categorie": "Géographie",
   "sous_theme": "Fleuves",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quel est ce fleuve ?",
   "reponse": "Le Rhin",
   "reponses_acceptees": [
@@ -1099,11 +878,11 @@
   "anecdote": "Selon la légende, la Lorelei, une sirène perchée sur un rocher de ses rives, attirait les bateliers vers le naufrage."
  },
  {
-  "id": "geo-068",
+  "id": "geo-055",
   "categorie": "Géographie",
   "sous_theme": "Fleuves",
   "type": "indices",
-  "difficulte": 5,
+  "difficulte": 2,
   "question": "Quel est ce fleuve ?",
   "reponse": "L'Amazone",
   "reponses_acceptees": [
@@ -1119,11 +898,11 @@
   "anecdote": "Aucun pont ne le traverse sur toute sa longueur."
  },
  {
-  "id": "geo-069",
+  "id": "geo-056",
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "indices",
-  "difficulte": 6,
+  "difficulte": 3,
   "question": "Quel est ce pays ?",
   "reponse": "Le Sri Lanka",
   "reponses_acceptees": [
@@ -1139,11 +918,11 @@
   "anecdote": "En 1960, Sirimavo Bandaranaike y est devenue la première femme Première ministre au monde."
  },
  {
-  "id": "geo-070",
+  "id": "geo-057",
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "indices",
-  "difficulte": 4,
+  "difficulte": 3,
   "question": "Quel est ce pays ?",
   "reponse": "Le Portugal",
   "reponses_acceptees": [
@@ -1158,31 +937,11 @@
   "anecdote": "Le portugais est la langue officielle de neuf pays, du Brésil au Timor oriental."
  },
  {
-  "id": "geo-071",
+  "id": "geo-058",
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "indices",
-  "difficulte": 3,
-  "question": "Quel est ce pays ?",
-  "reponse": "L'Égypte",
-  "reponses_acceptees": [
-   "Egypte",
-   "Egypt"
-  ],
-  "indices": [
-   "Plus de 90 % de ma population vit sur environ 5 % de mon territoire",
-   "Le canal de Suez me traverse",
-   "Ma capitale est la plus grande ville du monde arabe",
-   "Les pyramides de Gizeh sont chez moi"
-  ],
-  "anecdote": "En 2021, le porte-conteneurs Ever Given a bloqué le canal de Suez pendant six jours."
- },
- {
-  "id": "geo-072",
-  "categorie": "Géographie",
-  "sous_theme": "Pays",
-  "type": "indices",
-  "difficulte": 4,
+  "difficulte": 2,
   "question": "Quel est ce pays ?",
   "reponse": "Le Chili",
   "reponses_acceptees": [
@@ -1198,37 +957,17 @@
   "anecdote": "Certaines stations météo de l'Atacama n'ont jamais enregistré la moindre goutte de pluie."
  },
  {
-  "id": "geo-073",
-  "categorie": "Géographie",
-  "sous_theme": "Pays",
-  "type": "indices",
-  "difficulte": 3,
-  "question": "Quel est ce pays ?",
-  "reponse": "L'Inde",
-  "reponses_acceptees": [
-   "Inde",
-   "India"
-  ],
-  "indices": [
-   "Ma Constitution reconnaît 22 langues",
-   "Le Gange est mon fleuve sacré",
-   "Le Taj Mahal se trouve chez moi",
-   "Ma capitale est New Delhi"
-  ],
-  "anecdote": "Selon l'ONU, il est devenu en 2023 le pays le plus peuplé du monde, devant la Chine."
- },
- {
-  "id": "geo-074",
+  "id": "geo-059",
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "vf",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Vrai ou faux : le Canada est plus grand que les États-Unis.",
   "reponse": "Vrai",
   "anecdote": "De très peu : environ 9,98 millions de km² contre 9,83 millions."
  },
  {
-  "id": "geo-075",
+  "id": "geo-060",
   "categorie": "Géographie",
   "sous_theme": "Monuments",
   "type": "vf",
@@ -1238,81 +977,81 @@
   "anecdote": "Elle est très longue mais bien trop étroite : même depuis l'orbite basse, les astronautes peinent à la distinguer."
  },
  {
-  "id": "geo-076",
+  "id": "geo-061",
   "categorie": "Géographie",
   "sous_theme": "Continents",
   "type": "vf",
-  "difficulte": 5,
+  "difficulte": 4,
   "question": "Vrai ou faux : le Mexique fait partie de l'Amérique du Nord.",
   "reponse": "Vrai",
   "anecdote": "Géographiquement, l'Amérique centrale ne commence qu'au sud du Mexique."
  },
  {
-  "id": "geo-077",
+  "id": "geo-062",
   "categorie": "Géographie",
   "sous_theme": "Fleuves",
   "type": "vf",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Vrai ou faux : le Rhône prend sa source en France.",
   "reponse": "Faux",
   "anecdote": "Il naît dans le glacier du Rhône, en Suisse, puis traverse le lac Léman."
  },
  {
-  "id": "geo-078",
+  "id": "geo-063",
   "categorie": "Géographie",
   "sous_theme": "Frontières",
   "type": "vf",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Vrai ou faux : à un endroit, la Russie et les États-Unis ne sont séparés que par environ 4 km.",
   "reponse": "Vrai",
   "anecdote": "Les îles Diomède, dans le détroit de Béring, sont à 3,8 km l'une de l'autre... et séparées par la ligne de changement de date."
  },
  {
-  "id": "geo-079",
+  "id": "geo-064",
   "categorie": "Géographie",
   "sous_theme": "Insolite",
   "type": "vf",
-  "difficulte": 8,
+  "difficulte": 6,
   "question": "Vrai ou faux : l'Australie est plus large que la Lune.",
   "reponse": "Vrai",
   "anecdote": "L'Australie mesure environ 4 000 km d'est en ouest, la Lune 3 474 km de diamètre."
  },
  {
-  "id": "geo-080",
+  "id": "geo-065",
   "categorie": "Géographie",
   "sous_theme": "Déserts",
   "type": "vf",
-  "difficulte": 6,
+  "difficulte": 5,
   "question": "Vrai ou faux : le Sahara a toujours été un désert.",
   "reponse": "Faux",
   "anecdote": "Il y a 6 000 à 10 000 ans, c'était une savane verte, avec des lacs, des girafes et des hippopotames."
  },
  {
-  "id": "geo-081",
+  "id": "geo-066",
   "categorie": "Géographie",
   "sous_theme": "Villes",
   "type": "vf",
-  "difficulte": 8,
+  "difficulte": 5,
   "question": "Vrai ou faux : Paris est situé plus au nord que Montréal.",
   "reponse": "Vrai",
   "anecdote": "Grâce au Gulf Stream, l'hiver parisien est pourtant bien plus doux."
  },
  {
-  "id": "geo-082",
+  "id": "geo-067",
   "categorie": "Géographie",
   "sous_theme": "Fleuves",
   "type": "vf",
-  "difficulte": 5,
+  "difficulte": 3,
   "question": "Vrai ou faux : le Nil coule du nord vers le sud.",
   "reponse": "Faux",
   "anecdote": "Il coule vers le nord, du cœur de l'Afrique jusqu'à la Méditerranée."
  },
  {
-  "id": "geo-083",
+  "id": "geo-068",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "libre",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "De quel pays Lima est-elle la capitale ?",
   "reponse": "Le Pérou",
   "reponses_acceptees": [
@@ -1322,7 +1061,7 @@
   "anecdote": "Lima a été fondée en 1535 par le conquistador Francisco Pizarro."
  },
  {
-  "id": "geo-084",
+  "id": "geo-069",
   "categorie": "Géographie",
   "sous_theme": "France",
   "type": "libre",
@@ -1335,11 +1074,11 @@
   "anecdote": "Avec environ 1 000 km, c'est l'un des derniers grands fleuves sauvages d'Europe."
  },
  {
-  "id": "geo-085",
+  "id": "geo-070",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "libre",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle est la capitale de la Norvège ?",
   "reponse": "Oslo",
   "reponses_acceptees": [
@@ -1348,11 +1087,11 @@
   "anecdote": "Elle s'est appelée Christiania pendant trois siècles, jusqu'en 1925."
  },
  {
-  "id": "geo-086",
+  "id": "geo-071",
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "libre",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quel pays est surnommé le « plat pays » ?",
   "reponse": "La Belgique",
   "reponses_acceptees": [
@@ -1361,24 +1100,11 @@
   "anecdote": "L'expression vient de la chanson de Jacques Brel, « Le Plat Pays », sortie en 1962."
  },
  {
-  "id": "geo-087",
-  "categorie": "Géographie",
-  "sous_theme": "Villes",
-  "type": "libre",
-  "difficulte": 2,
-  "question": "Dans quelle ville se trouve la Sagrada Família ?",
-  "reponse": "Barcelone",
-  "reponses_acceptees": [
-   "Barcelona"
-  ],
-  "anecdote": "Commencée en 1882, la basilique de Gaudí n'est toujours pas terminée."
- },
- {
-  "id": "geo-088",
+  "id": "geo-072",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "libre",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle est la capitale de l'Argentine ?",
   "reponse": "Buenos Aires",
   "reponses_acceptees": [
@@ -1387,11 +1113,11 @@
   "anecdote": "Son nom signifie « bons vents ». Ses habitants sont surnommés les Porteños."
  },
  {
-  "id": "geo-089",
+  "id": "geo-073",
   "categorie": "Géographie",
   "sous_theme": "Afrique",
   "type": "libre",
-  "difficulte": 6,
+  "difficulte": 4,
   "question": "Quel est le plus vaste pays d'Afrique ?",
   "reponse": "L'Algérie",
   "reponses_acceptees": [
@@ -1401,31 +1127,381 @@
   "anecdote": "Il a pris la première place en 2011, lors de la partition du Soudan."
  },
  {
-  "id": "geo-090",
-  "categorie": "Géographie",
-  "sous_theme": "Océans",
-  "type": "libre",
-  "difficulte": 1,
-  "question": "Quel océan borde la côte ouest des États-Unis ?",
-  "reponse": "Le Pacifique",
-  "reponses_acceptees": [
-   "Pacifique",
-   "Ocean Pacifique",
-   "L'océan Pacifique"
-  ],
-  "anecdote": "C'est Magellan qui l'a baptisé « Pacifique », après l'avoir trouvé étonnamment calme."
- },
- {
-  "id": "geo-091",
+  "id": "geo-074",
   "categorie": "Géographie",
   "sous_theme": "Capitales",
   "type": "libre",
-  "difficulte": 3,
+  "difficulte": 2,
   "question": "Quelle est la capitale de la Corée du Sud ?",
   "reponse": "Séoul",
   "reponses_acceptees": [
    "Seoul"
   ],
   "anecdote": "Près de la moitié des Sud-Coréens vivent dans son agglomération."
+ },
+ {
+  "id": "geo-075",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quelle ville a remplacé Bujumbura comme capitale politique du Burundi ?",
+  "choix": [
+   "Gitega",
+   "Kigali",
+   "Ngozi",
+   "Dodoma"
+  ],
+  "reponse": "Gitega",
+  "anecdote": "Le transfert, annoncé dès 2007, a été voté fin 2018. Bujumbura reste la capitale économique."
+ },
+ {
+  "id": "geo-076",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quelle ville est la capitale de la Birmanie (Myanmar) depuis 2005 ?",
+  "choix": [
+   "Naypyidaw",
+   "Rangoun",
+   "Mandalay",
+   "Bago"
+  ],
+  "reponse": "Naypyidaw",
+  "anecdote": "Construite de toutes pièces en pleine campagne, elle possède des autoroutes à 20 voies presque vides."
+ },
+ {
+  "id": "geo-077",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quelle est la capitale des Palaos, dans le Pacifique ?",
+  "choix": [
+   "Ngerulmud",
+   "Koror",
+   "Majuro",
+   "Funafuti"
+  ],
+  "reponse": "Ngerulmud",
+  "anecdote": "C'est l'une des plus petites capitales du monde : elle a remplacé Koror en 2006."
+ },
+ {
+  "id": "geo-078",
+  "categorie": "Géographie",
+  "sous_theme": "Montagnes",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel est le point culminant de l'Espagne ?",
+  "choix": [
+   "Le Teide",
+   "Le Mulhacén",
+   "L'Aneto",
+   "Le Veleta"
+  ],
+  "reponse": "Le Teide",
+  "anecdote": "Ce volcan de 3 715 m se trouve sur l'île de Tenerife, aux Canaries."
+ },
+ {
+  "id": "geo-079",
+  "categorie": "Géographie",
+  "sous_theme": "Hydrographie",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Dans quelle mer se jetait l'Amou-Daria avant d'être détourné pour l'irrigation ?",
+  "choix": [
+   "La mer d'Aral",
+   "La mer Caspienne",
+   "La mer Noire",
+   "Le golfe Persique"
+  ],
+  "reponse": "La mer d'Aral",
+  "anecdote": "Privée de ses fleuves pour irriguer le coton, la mer d'Aral a perdu l'essentiel de sa surface."
+ },
+ {
+  "id": "geo-080",
+  "categorie": "Géographie",
+  "sous_theme": "Frontières",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Lequel de ces pays est « doublement enclavé » : entouré uniquement de pays sans accès à la mer ?",
+  "choix": [
+   "L'Ouzbékistan",
+   "La Mongolie",
+   "La Bolivie",
+   "Le Paraguay"
+  ],
+  "reponse": "L'Ouzbékistan",
+  "anecdote": "Il n'existe que deux pays dans ce cas : l'Ouzbékistan et le Liechtenstein."
+ },
+ {
+  "id": "geo-081",
+  "categorie": "Géographie",
+  "sous_theme": "Hydrographie",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel fleuve marque la frontière entre la Zambie et le Zimbabwe ?",
+  "choix": [
+   "Le Zambèze",
+   "Le Limpopo",
+   "L'Okavango",
+   "Le fleuve Orange"
+  ],
+  "reponse": "Le Zambèze",
+  "anecdote": "Il forme les chutes Victoria, que les habitants appellent « la fumée qui gronde »."
+ },
+ {
+  "id": "geo-082",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle est la capitale de l'État américain de l'Alaska ?",
+  "choix": [
+   "Juneau",
+   "Anchorage",
+   "Fairbanks",
+   "Sitka"
+  ],
+  "reponse": "Juneau",
+  "anecdote": "Aucune route ne la relie au reste du continent : on y arrive en avion ou en bateau."
+ },
+ {
+  "id": "geo-083",
+  "categorie": "Géographie",
+  "sous_theme": "France",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel est le département le plus peuplé de France ?",
+  "choix": [
+   "Le Nord",
+   "Paris",
+   "Les Bouches-du-Rhône",
+   "Le Rhône"
+  ],
+  "reponse": "Le Nord",
+  "anecdote": "Il compte environ 2,6 millions d'habitants."
+ },
+ {
+  "id": "geo-084",
+  "categorie": "Géographie",
+  "sous_theme": "France",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quelle est la préfecture de la Lozère, le département le moins peuplé de France ?",
+  "choix": [
+   "Mende",
+   "Florac",
+   "Marvejols",
+   "Rodez"
+  ],
+  "reponse": "Mende",
+  "anecdote": "Le département compte moins de 80 000 habitants."
+ },
+ {
+  "id": "geo-085",
+  "categorie": "Géographie",
+  "sous_theme": "Montagnes",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel est le plus haut sommet du massif de l'Atlas, au Maroc ?",
+  "reponse": "Le Toubkal",
+  "reponses_acceptees": [
+   "Toubkal",
+   "Jbel Toubkal"
+  ],
+  "anecdote": "Il culmine à 4 167 m, au sud de Marrakech."
+ },
+ {
+  "id": "geo-086",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle est la capitale de la Moldavie ?",
+  "reponse": "Chișinău",
+  "reponses_acceptees": [
+   "Chisinau",
+   "Kichinev",
+   "Kichinau"
+  ],
+  "anecdote": "Dans cette ancienne république soviétique, la langue officielle est le roumain."
+ },
+ {
+  "id": "geo-087",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quelle est la capitale du Suriname ?",
+  "reponse": "Paramaribo",
+  "reponses_acceptees": [],
+  "anecdote": "Ancienne colonie néerlandaise, le Suriname a le néerlandais pour langue officielle."
+ },
+ {
+  "id": "geo-088",
+  "categorie": "Géographie",
+  "sous_theme": "Mers et détroits",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel détroit sépare la péninsule malaise de l'île de Sumatra ?",
+  "reponse": "Le détroit de Malacca",
+  "reponses_acceptees": [
+   "Malacca",
+   "Détroit de Malacca"
+  ],
+  "anecdote": "C'est l'une des routes maritimes les plus fréquentées du monde."
+ },
+ {
+  "id": "geo-089",
+  "categorie": "Géographie",
+  "sous_theme": "Montagnes",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Quelle est l'altitude du K2, deuxième sommet du monde ?",
+  "reponse": 8611,
+  "unite": "m",
+  "tolerance": 5,
+  "bornes": [
+   5000,
+   10000
+  ],
+  "anecdote": "Il est réputé bien plus dangereux que l'Everest et n'a été gravi en hiver qu'en 2021."
+ },
+ {
+  "id": "geo-090",
+  "categorie": "Géographie",
+  "sous_theme": "Lacs",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Quelle est la superficie de la mer Caspienne, plus grande étendue d'eau fermée du monde ?",
+  "reponse": 371000,
+  "unite": "km²",
+  "tolerance": 15000,
+  "bornes": [
+   10000,
+   10000000
+  ],
+  "anecdote": "Elle est plus vaste que l'Allemagne. Son statut, lac ou mer, a été débattu pendant des décennies."
+ },
+ {
+  "id": "geo-091",
+  "categorie": "Géographie",
+  "sous_theme": "Frontières",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Avec combien de pays la Chine partage-t-elle une frontière terrestre ?",
+  "reponse": 14,
+  "unite": "pays",
+  "tolerance": 0,
+  "bornes": [
+   3,
+   30
+  ],
+  "anecdote": "Un record qu'elle partage avec la Russie."
+ },
+ {
+  "id": "geo-092",
+  "categorie": "Géographie",
+  "sous_theme": "Hydrographie",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Quelle est la longueur du Rhône, de sa source à la mer ?",
+  "reponse": 812,
+  "unite": "km",
+  "tolerance": 10,
+  "bornes": [
+   100,
+   3000
+  ],
+  "anecdote": "Il naît du glacier du Rhône, en Suisse, et y parcourt environ 270 km, lac Léman compris, avant d'entrer en France."
+ },
+ {
+  "id": "geo-093",
+  "categorie": "Géographie",
+  "sous_theme": "Frontières",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : la Russie a une frontière terrestre avec la Corée du Nord.",
+  "reponse": "Vrai",
+  "anecdote": "Elle ne mesure qu'une vingtaine de kilomètres, le long du fleuve Tumen."
+ },
+ {
+  "id": "geo-094",
+  "categorie": "Géographie",
+  "sous_theme": "Frontières",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : la France a une frontière terrestre avec les Pays-Bas.",
+  "reponse": "Vrai",
+  "anecdote": "Elle se trouve sur l'île de Saint-Martin, aux Antilles, partagée depuis 1648."
+ },
+ {
+  "id": "geo-095",
+  "categorie": "Géographie",
+  "sous_theme": "Pays",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel est ce pays ?",
+  "reponse": "Le Kazakhstan",
+  "reponses_acceptees": [
+   "Kazakhstan"
+  ],
+  "indices": [
+   "Je suis le plus grand pays enclavé du monde",
+   "Le cosmodrome de Baïkonour se trouve chez moi",
+   "Ma plus grande ville est Almaty",
+   "Ma capitale, Astana, a changé plusieurs fois de nom"
+  ],
+  "anecdote": "Il est plus de quatre fois plus grand que la France."
+ },
+ {
+  "id": "geo-096",
+  "categorie": "Géographie",
+  "sous_theme": "Pays",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel est ce pays ?",
+  "reponse": "Le Bhoutan",
+  "reponses_acceptees": [
+   "Bhoutan"
+  ],
+  "indices": [
+   "Je mesure le « bonheur national brut »",
+   "Ma capitale, Thimphou, n'a aucun feu de circulation",
+   "Je suis l'un des rares pays au bilan carbone négatif",
+   "Royaume himalayen, je suis coincé entre l'Inde et la Chine"
+  ],
+  "anecdote": "La télévision et Internet n'y ont été autorisés qu'en 1999."
+ },
+ {
+  "id": "geo-097",
+  "categorie": "Géographie",
+  "sous_theme": "Drapeaux",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel pays fait figurer la carte de son territoire sur son drapeau, comme le Kosovo ?",
+  "choix": [
+   "Chypre",
+   "Malte",
+   "L'Islande",
+   "La Jamaïque"
+  ],
+  "reponse": "Chypre",
+  "anecdote": "L'île y est dessinée en couleur cuivre, en référence à son nom grec, à l'origine du mot « cuivre »."
+ },
+ {
+  "id": "geo-098",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quelle est la capitale du Liechtenstein ?",
+  "reponse": "Vaduz",
+  "reponses_acceptees": [
+   "Vaduz"
+  ],
+  "anecdote": "La principauté n'a pas d'aéroport, et le prince vit dans le château qui domine la ville."
  }
 ]

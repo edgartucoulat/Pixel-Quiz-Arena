@@ -352,7 +352,7 @@
       const single = q.kind === 'single' ? g.players[q.answerers[0]] : null;
       let body;
       if (d.type === 'fourchette') {
-        body = `<div class="q-fourchette">📏 Encadrez la réponse${d.unite ? ' (en <b>' + esc(d.unite) + '</b>)' : ''} sur vos téléphones !</div>`;
+        body = `<div class="q-fourchette">🎯 Visez pile${d.unite && d.unite !== 'année' ? ' (en <b>' + esc(d.unite) + '</b>)' : ''} sur vos téléphones !</div>`;
       } else if (d.type === 'libre') {
         body = `<div class="q-libre">✍️ Réponse libre${g.irl ? ' : réponds à voix haute !' : ' : tape ta réponse sur ton téléphone'}</div>`;
       } else body = this.choicesHTML(q, false);
@@ -408,7 +408,7 @@
       const g = this.g, q = g.q, d = q.data;
       const entries = Object.keys(q.answers).map((pid) => ({ p: g.players[pid], a: q.answers[pid].value, r: q.results[pid] })).filter((x) => x.p);
       let lo = d.reponse, hi = d.reponse;
-      entries.forEach((e) => { lo = Math.min(lo, e.a.min); hi = Math.max(hi, e.a.max); });
+      entries.forEach((e) => { lo = Math.min(lo, e.a); hi = Math.max(hi, e.a); });
       if (hi === lo) { hi += Math.max(1, Math.abs(hi) * 0.1); lo -= Math.max(1, Math.abs(lo) * 0.1); }
       const pad = (hi - lo) * 0.08;
       lo -= pad; hi += pad;
@@ -418,12 +418,13 @@
       for (let t = Math.ceil(lo / stp) * stp; t <= hi; t += stp) ticks.push(t);
       const V = (v) => PQA.fmtVal(v, d.unite, false);
       const unit = d.unite && d.unite !== 'année' ? ' ' + esc(d.unite) : '';
-      const rows = entries.sort((a, b) => (a.a.max - a.a.min) - (b.a.max - b.a.min)).map((e, i) => {
+      const gap = (e) => Math.abs(e.a - d.reponse);
+      const rows = entries.sort((a, b) => gap(a) - gap(b)).map((e, i) => {
         const ok = e.r && e.r.correct;
         return `<div class="fr-row" style="--d:${i * 0.25}s">
-          <div class="fr-name"><b style="color:${e.p.color}">${esc(e.p.name)}</b><small>${V(e.a.min)} – ${V(e.a.max)}</small></div>
-          <div class="fr-track"><div class="fr-bar ${ok ? 'good' : 'bad'}" style="left:${X(e.a.min)}%;width:${Math.max(0.6, X(e.a.max) - X(e.a.min))}%;--pc:${e.p.color}"></div></div>
-          <div class="fr-pts ${ok ? 'good' : ''}">${ok ? '+' + e.r.pts + (e.r.rank === 1 ? ' 🎯' : '') + (e.r.exact ? ' PILE !' : '') : '✖'}</div>
+          <div class="fr-name"><b style="color:${e.p.color}">${esc(e.p.name)}</b><small>${V(e.a)}</small></div>
+          <div class="fr-track"><div class="fr-dot ${ok ? 'good' : 'bad'}" style="left:${X(e.a)}%;--pc:${e.p.color}"></div></div>
+          <div class="fr-pts ${ok ? 'good' : ''}">${ok ? '+' + e.r.pts + (e.r.exact ? ' 🎯' : e.r.rank === 1 ? ' ★' : '') : '✖'}</div>
         </div>`;
       }).join('');
       return {
@@ -435,7 +436,7 @@
             <div class="fr-rows">${rows || '<div class="center-msg small">Personne n’a répondu !</div>'}
               <div class="fr-answer" style="left:calc(260px + (100% - 380px) * ${X(d.reponse) / 100})"><span>${V(d.reponse)}${unit}</span></div>
             </div>
-            <div class="fr-axis">${ticks.map((t) => `<span style="left:${X(t)}%">${V(Math.round(t * 1000) / 1000)}</span>`).join('')}</div>
+            <div class="fr-axis">${ticks.map((t) => `<span style="left:${X(t)}%">${V(Math.round(t * 1000) / 1000 || 0)}</span>`).join('')}</div>
           </div>
           <div class="answer-big late">✔ ${V(d.reponse)}${unit}</div>
           ${g.irl ? this.anecdoteHTML(q) : ''}
