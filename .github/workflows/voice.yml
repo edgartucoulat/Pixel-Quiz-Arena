@@ -4,7 +4,8 @@ name: Voix du présentateur
 
 on:
   push:
-    branches: [main, 'claude/**']
+    # Seulement main : une branche de PR peut être supprimée avant la fin de l'enregistrement.
+    branches: [main]
     paths:
       - js/announcer.js
       - js/voice.js
