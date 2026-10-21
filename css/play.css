@@ -91,6 +91,8 @@ body.play.shake { animation: pshake .35s; }
   box-shadow: 0 14px 0 #5a1020, 0 18px 0 #000, 0 0 60px rgba(228, 59, 68, .6); font-family: var(--font-title); font-size: 34px; color: var(--white); text-shadow: 4px 4px 0 #000; transition: transform .05s; animation: pulse 1.2s infinite; }
 .buzzer.pressed, .buzzer:active { transform: translateY(12px); box-shadow: 0 2px 0 #5a1020, 0 6px 0 #000; animation: none; }
 .buzzer:disabled { animation: none; background: radial-gradient(circle at 35% 30%, #94b0c2, #566c86 45%, #333c57); box-shadow: 0 14px 0 #222, 0 18px 0 #000; }
+.buzzer.early { animation: none; background: radial-gradient(circle at 35% 30%, #ffe9a8, #c9a040 45%, #6b5420); box-shadow: 0 14px 0 #3d3010, 0 18px 0 #000; }
+.buzzer.blocked { background: radial-gradient(circle at 35% 30%, #5a1020, #2a0810 60%); }
 .buzzer.frozen { background: radial-gradient(circle at 35% 30%, #fff, #73eff7 45%, #41a6f6); }
 .buzz-wrap.other { background: var(--oc); margin: -12px; padding: 12px; }
 .buzz-sub { font-size: 26px; text-align: center; min-height: 2.2em; }

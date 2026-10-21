@@ -37,6 +37,18 @@
     duelBuzz: 15000, duelAnswer: 8000,
   };
 
+  /* Anti-buzz au hasard : buzz raté = pénalité, faux départ = buzzer bloqué,
+   * et peu de temps pour répondre une fois qu'on a buzzé. */
+  const BUZZ = {
+    penalty: 100,      // points perdus sur un buzz raté (ou sans réponse à temps)
+    duelPenalty: 10,   // en duel : points de vie perdus
+    falseStart: 2000,  // buzzer bloqué après un buzz trop tôt
+    answer: 5000,      // temps pour répondre après le buzz (choix)
+    answerText: 10000, // ... quand il faut taper la réponse
+  };
+  /** Temps de lecture avant l'ouverture des buzzers, selon la longueur du texte. */
+  const readTime = (text) => clamp(String(text || '').length * 35, 1500, 4000);
+
   class Game {
     constructor(bank, categories, hooks) {
       this.bank = bank;
@@ -696,7 +708,8 @@
     startIndices(data, everyone) {
       const q = this.makeQ(data, 'buzz', everyone);
       q.clue = 0;
-      q.buzz = { open: true, locked: [], current: null, pending: [] };
+      q.buzz = { open: true, locked: [], current: null, pending: [], readyAt: now() + readTime(data.question + ' ' + data.indices[0]) };
+      this.after(q.buzz.readyAt - now(), () => this.changed());
       this.fx('question');
       this.say('question', {}, 'neutral');
       this.scheduleClue(q);
@@ -724,6 +737,16 @@
       if (!q || !p || q.kind !== 'buzz' || this.phase !== 'question' || q.revealed) return;
       if (!q.buzz.open || q.buzz.locked.includes(pid) || !q.answerers.includes(pid)) return;
       if (this.isFrozen(p)) return this.hooks.send(pid, { t: 'fx', fx: 'frozen' });
+      if (p.buzzBlockedUntil && now() < p.buzzBlockedUntil) return;
+      // Faux départ : buzz avant la fin de la lecture de la question.
+      if (q.buzz.readyAt && now() < q.buzz.readyAt) {
+        p.buzzBlockedUntil = now() + BUZZ.falseStart;
+        this.after(BUZZ.falseStart, () => this.changed());
+        this.fx('pop', { pid, text: '⛔ Faux départ !' });
+        this.hooks.send(pid, { t: 'fx', fx: 'falsestart' });
+        this.changed();
+        return;
+      }
       if (q.buzz.pending.some((b) => b.pid === pid)) return;
       // Compensation de latence : on retranche la moitié du ping mesuré (plafonnée).
       const arrival = now();
@@ -744,7 +767,8 @@
       if (p.stats.fastest == null || reaction < p.stats.fastest) p.stats.fastest = reaction;
       // Le chrono de la question est mis en pause pendant que le joueur répond.
       q.savedTimer = this.timer ? { left: this.timerLeft(), onEnd: this.timer.onEnd, total: this.timer.total } : null;
-      const dur = this.round.type === 'duel' ? TIMES.duelAnswer : this.irl ? TIMES.buzzAnswerIRL : TIMES.buzzAnswer;
+      // Réponse orale en mode IRL : le présentateur garde la main sur le temps.
+      const dur = this.irl && q.data.type === 'indices' ? TIMES.buzzAnswerIRL : q.data.type === 'indices' ? BUZZ.answerText : BUZZ.answer;
       this.startTimer(dur, () => this.resolveBuzz(win.pid, false, true));
       this.fx('buzz', { pid: win.pid });
       this.hooks.send(win.pid, { t: 'fx', fx: 'buzzwin' });
@@ -775,11 +799,19 @@
         this.say('correct', { name: p.name, pts: r.pts }, 'happy');
         return this.reveal();
       }
-      // Erreur : joueur bloqué, le buzzer se rouvre pour les autres.
+      // Erreur : pénalité, joueur bloqué, le buzzer se rouvre pour les autres.
       this.scoreWrong(p);
       p.stats.wrongBuzz++;
       q.buzz.locked.push(pid);
-      q.results[pid] = { correct: false, pts: 0, wrongAnswer: q.answers[pid] && q.answers[pid].text };
+      let pts = -BUZZ.penalty;
+      if (this.round.type === 'duel') {
+        pts = -BUZZ.duelPenalty;
+        this.round.hp[pid] = Math.max(0, this.round.hp[pid] - BUZZ.duelPenalty);
+      } else {
+        p.score -= BUZZ.penalty;
+      }
+      this.fx('points', { pid, pts });
+      q.results[pid] = { correct: false, pts, wrongAnswer: q.answers[pid] && q.answers[pid].text, timeout: !!timeout };
       delete q.answers[pid];
       this.fx('wrong', { pid });
       this.hooks.send(pid, { t: 'fx', fx: 'wrong' });
@@ -1221,7 +1253,8 @@
       const data = this.pickQuestion({ types: ['qcm', 'vf'], diff });
       if (!data) return this.duelKO();
       const q = this.makeQ(data, 'buzz', r.fighters.slice());
-      q.buzz = { open: true, locked: [], current: null, pending: [] };
+      q.buzz = { open: true, locked: [], current: null, pending: [], readyAt: now() + readTime(data.question) };
+      this.after(q.buzz.readyAt - now(), () => this.changed());
       this.startTimer(TIMES.duelBuzz + Math.min(6000, data.question.length * 40), () => this.buzzTimeout());
       this.fx('question');
       this.changed();
@@ -1443,9 +1476,13 @@
         }
         if (!q.answerers.includes(pid)) { v.screen = 'wait'; v.title = 'Duel'; v.msg = 'Regarde l’écran !'; return; }
         v.screen = 'buzzer';
-        v.buzz = b.locked.includes(pid) ? 'locked' : b.current ? 'other' : 'open';
+        v.buzz = b.locked.includes(pid) ? 'locked' : b.current ? 'other'
+          : p.buzzBlockedUntil && now() < p.buzzBlockedUntil ? 'blocked' : b.readyAt && now() < b.readyAt ? 'early' : 'open';
         if (b.current) { v.buzzer = this.name(b.current); v.buzzerColor = this.players[b.current].color; }
         if (d.indices) v.clue = d.indices[q.clue];
+        const duel = this.round.type === 'duel';
+        v.penalty = duel ? BUZZ.duelPenalty + ' PV' : BUZZ.penalty;
+        v.answerSecs = (this.irl && d.type === 'indices' ? TIMES.buzzAnswerIRL : d.type === 'indices' ? BUZZ.answerText : BUZZ.answer) / 1000;
         return;
       }
       if (q.kind === 'ladder') {

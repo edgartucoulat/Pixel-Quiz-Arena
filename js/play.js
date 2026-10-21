@@ -217,12 +217,15 @@
     range(v) { return rangeScreen(v); },
     buzzer(v) {
       const st = v.me.frozen ? 'frozen' : v.buzz;
-      const label = st === 'open' ? 'BUZZ !' : st === 'locked' ? '🔒' : st === 'frozen' ? '🧊' : '';
-      const sub = st === 'locked' ? 'Raté ! Tu es bloqué pour cette question.' : st === 'other' ? `${esc(v.buzzer)} a buzzé !` : st === 'frozen' ? `Gelé ! (${v.me.frozen} s)` : v.clue ? `Indice : ${esc(v.clue)}` : 'Appuie dès que tu sais !';
+      const label = st === 'open' ? 'BUZZ !' : st === 'early' ? '⏳' : st === 'blocked' ? '⛔' : st === 'locked' ? '🔒' : st === 'frozen' ? '🧊' : '';
+      const sub = st === 'locked' ? `Raté ! −${v.penalty || 100} et bloqué pour cette question.` : st === 'other' ? `${esc(v.buzzer)} a buzzé !`
+        : st === 'frozen' ? `Gelé ! (${v.me.frozen} s)` : st === 'blocked' ? 'Faux départ ! Buzzer bloqué 2 s.'
+        : st === 'early' ? 'Lis la question… Buzzer trop tôt = bloqué 2 s !'
+        : (v.clue ? `Indice : ${esc(v.clue)}<br>` : '') + `Buzz raté = −${v.penalty || 100}. Tu auras ${v.answerSecs || 5} s pour répondre.`;
       return {
         key: 'buzz' + v.qid + st + (v.buzzer || '') + (st === 'frozen' ? v.me.frozen : ''),
         html: `${timerBar()}<div class="buzz-wrap ${st}" ${st === 'other' ? `style="--oc:${v.buzzerColor}"` : ''}>
-          <button class="buzzer ${st}" id="buzzer" ${st !== 'open' ? 'disabled' : ''}><span>${label}</span></button>
+          <button class="buzzer ${st}" id="buzzer" ${st !== 'open' && st !== 'early' ? 'disabled' : ''}><span>${label}</span></button>
           <div class="buzz-sub" id="buzz-sub">${sub}</div></div>`,
         after() {
           const b = $('#buzzer');
@@ -419,6 +422,7 @@
     if (m.fx === 'good') { flash('#38b764'); PQA.vibrate([40, 40, 40]); }
     else if (m.fx === 'wrong') { flash('#e43b44'); PQA.vibrate(350); document.body.classList.remove('shake'); void document.body.offsetWidth; document.body.classList.add('shake'); }
     else if (m.fx === 'buzzwin') { flash(state.view ? state.view.me.color : '#fff'); PQA.vibrate([100, 50, 150]); }
+    else if (m.fx === 'falsestart') { flash('#e43b44'); PQA.vibrate([200, 80, 200]); }
     else if (m.fx === 'frozen') { $('#ice').classList.add('on'); PQA.vibrate([20, 20, 20, 20, 20]); setTimeout(() => $('#ice').classList.remove('on'), 5000); }
     else if (m.fx === 'card') { toast('🃏 Nouvelle carte : ' + PQA.CARDS[m.card].name + ' !'); PQA.vibrate([30, 30, 30]); }
   }

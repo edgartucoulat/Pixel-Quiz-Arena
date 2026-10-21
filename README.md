@@ -35,6 +35,8 @@ son score. Si le plateau est rechargé, il propose de **reprendre la partie**.
 - 🎡 **Thème Mystère** : la roue choisit le thème, chacun choisit son niveau de 1 à 10.
 - 📏 **La Fourchette** : donne une seule valeur et vise pile. Réponse exacte = 400 pts, puis les points baissent avec l’écart (le plus proche gagne un bonus de 50 pts, trop loin = 0).
 - 🔔 **Buzzer à indices** : les indices tombent un par un, plus tu buzzes tôt, plus tu gagnes.
+  Mais attention : buzz raté = −100 points et exclu de la question, buzz pendant la lecture
+  = faux départ (buzzer bloqué 2 s), et 5 secondes pour répondre (10 s s'il faut écrire).
 - 4️⃣ **Le 4 à la suite** : 4 bonnes réponses d'affilée en 40 secondes.
 - ⚡ **QCM éclair** : tout le monde répond en même temps, avec un bonus de rapidité.
 - 🗃️ **Table des Savoirs** : cases à choisir à tour de rôle, avec pièges, doubles et vols.
