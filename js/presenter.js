@@ -59,6 +59,11 @@
     if (v.mode !== 'irl') html += '<div class="pwarn">ℹ️ Le plateau est en mode « ' + (v.mode === 'duel' ? 'Duel' : 'Présentateur virtuel') + ' » : la partie avance toute seule, mais tu peux quand même piloter.</div>';
     if (v.phase === 'lobby') html += `<div class="wait"><div class="wtitle">En attente des joueurs</div><div class="wmsg">${v.players.length} joueur(s) connecté(s)</div>${v.canStart ? '<button class="big-btn green" data-c="start">▶ LANCER L’ÉMISSION</button>' : ''}</div>`;
     if (v.info) html += `<div class="pinfo">${esc(v.info)}</div>`;
+    // Choix montré du doigt par le joueur : le présentateur le saisit ici.
+    if (v.choose) {
+      const c = v.choose;
+      html += `<div class="pchoose ${c.kind}"><div class="pmeta">👉 ${esc(c.title)}</div><div class="pgrid" ${c.cols ? `style="--cols:${c.cols}"` : ''}>${c.items.map((it) => `<button data-c="choose" data-v="${esc(String(it.value))}" ${it.disabled ? 'disabled' : ''} ${it.color ? `style="--oc:${it.color}"` : ''}>${esc(it.label)}${it.sub ? `<small>${esc(it.sub)}</small>` : ''}</button>`).join('')}</div></div>`;
+    }
     if (v.q) {
       const q = v.q;
       html += `<div class="pcard">
@@ -90,7 +95,9 @@
   document.addEventListener('click', (e) => {
     const b = e.target.closest('[data-c]');
     if (!b) return;
+    if (b.disabled) return;
     if (b.dataset.c === 'points') cmd('points', { pid: b.dataset.pid, delta: Number(b.dataset.d) });
+    else if (b.dataset.c === 'choose') cmd('choose', { value: b.dataset.v });
     else cmd(b.dataset.c);
   });
 

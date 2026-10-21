@@ -32,3 +32,10 @@ body.presenter { background: radial-gradient(circle at 50% 0, var(--plum), var(-
 .ppn { flex: 1; font-size: 22px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pps { font-family: var(--font-title); font-size: 12px; color: var(--yellow); width: 60px; text-align: right; }
 .pp button { background: var(--g3); border: 2px solid #000; font-size: 18px; padding: 4px 6px; }
+/* Choix montré du doigt par le joueur, saisi par le présentateur */
+.pchoose { background: rgba(255, 205, 117, .12); border: 3px dashed var(--yellow); padding: 8px; }
+.pgrid { display: grid; grid-template-columns: repeat(var(--cols, 2), 1fr); gap: 6px; margin-top: 6px; }
+.pchoose.level .pgrid { grid-template-columns: repeat(5, 1fr); }
+.pgrid button { background: var(--blue); border: 3px solid #000; border-left: 8px solid var(--oc, #000); font-size: 20px; padding: 10px 2px; display: flex; flex-direction: column; align-items: center; color: var(--white); }
+.pgrid button small { font-size: 13px; color: var(--g1); }
+.pgrid button:disabled { background: var(--ink); opacity: .45; }
