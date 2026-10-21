@@ -259,12 +259,11 @@
         <div class="set-row"><label>Durée</label>${seg('length', [['court', 'Courte'], ['normal', 'Normale'], ['long', 'Longue']], s.length)}</div>
         <div class="set-row"><label>Finale</label>${seg('finale', [['solo', 'Le leader seul'], ['duo', 'Face-à-face des 2 premiers']], s.finale)}</div>
         <div class="set-row"><label>Coups bas</label>${seg('cards', [['1', '🃏 Oui'], ['0', 'Non']], s.cards ? '1' : '0')}</div>`}
-        <div class="set-row small"><label>Questions</label><span>${g.bank.length} au total · ${g.seen.size} déjà vues sur cet écran</span><button class="mini" data-act="resetseen">Oublier</button></div>
-        <div class="set-row small"><label>Réseau</label><span class="netdiag">${esc(PQA.netDiagText())}</span></div>`;
+        <div class="set-row small"><label>Questions</label><span>${g.bank.length} au total · ${g.seen.size} déjà vues sur cet écran</span><button class="mini" data-act="resetseen">Oublier</button></div>`;
       const n = g.activePlayers().length;
       const canStart = duel ? n === 2 : n >= 1;
       const info = `<button class="big-btn ${canStart ? '' : 'disabled'}" data-act="start">▶ LANCER L’ÉMISSION</button>
-        <div class="lobby-count">${n} joueur${n > 1 ? 's' : ''} ${duel ? '/ 2' : '/ 10'}</div>`;
+        <div><div class="lobby-count">${n} joueur${n > 1 ? 's' : ''} ${duel ? '/ 2' : '/ 10'}</div><div class="netdiag">Réseau : ${esc(PQA.netDiagText())}</div></div>`;
       const pres = s.mode === 'irl' ? `<div class="pres-join"><img class="qr small" src="${this.qr(purl)}" alt=""><div><b>Télécommande du présentateur</b><br>${g.presenter.connected ? '<span class="okc">✔ Connectée</span>' : 'Scanne ce code avec le téléphone du présentateur'}</div></div>` : '';
       return {
         key: 'lobby',
