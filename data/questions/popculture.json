@@ -1,0 +1,943 @@
+[
+ {
+  "id": "pop-001",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 1,
+  "question": "Quel est le métier d'origine de Mario ?",
+  "choix": [
+   "Charpentier",
+   "Plombier",
+   "Cuisinier",
+   "Électricien"
+  ],
+  "reponse": "Charpentier",
+  "anecdote": "Dans Donkey Kong (1981), il s'appelait « Jumpman » et était charpentier ; il est devenu plombier ensuite."
+ },
+ {
+  "id": "pop-002",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Comment s'appelle la princesse que Mario doit souvent sauver ?",
+  "choix": [
+   "Peach",
+   "Zelda",
+   "Daisy",
+   "Rosalina"
+  ],
+  "reponse": "Peach",
+  "anecdote": "Aux États-Unis, elle s'est appelée « Princess Toadstool » jusqu'en 1993."
+ },
+ {
+  "id": "pop-003",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Quel Pokémon est la mascotte de la franchise ?",
+  "choix": [
+   "Pikachu",
+   "Salamèche",
+   "Évoli",
+   "Rondoudou"
+  ],
+  "reponse": "Pikachu",
+  "anecdote": "Son nom vient de « pika » (bruit d'une étincelle) et « chu » (cri de la souris) en japonais."
+ },
+ {
+  "id": "pop-004",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Dans quel jeu construit-on avec des blocs dans un monde infini ?",
+  "choix": [
+   "Minecraft",
+   "Fortnite",
+   "Roblox",
+   "Terraria"
+  ],
+  "reponse": "Minecraft",
+  "anecdote": "C'est le jeu vidéo le plus vendu de l'histoire, avec plus de 300 millions d'exemplaires."
+ },
+ {
+  "id": "pop-005",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quelle entreprise japonaise a créé la console Switch ?",
+  "choix": [
+   "Nintendo",
+   "Sony",
+   "Sega",
+   "Bandai"
+  ],
+  "reponse": "Nintendo",
+  "anecdote": "Nintendo a été fondée en 1889 pour fabriquer des cartes à jouer."
+ },
+ {
+  "id": "pop-006",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel personnage bleu de Sega court très vite ?",
+  "choix": [
+   "Sonic",
+   "Mega Man",
+   "Crash Bandicoot",
+   "Spyro"
+  ],
+  "reponse": "Sonic",
+  "anecdote": "Il a été créé pour concurrencer Mario. Sa couleur bleue reprend celle du logo de Sega."
+ },
+ {
+  "id": "pop-007",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Dans quel jeu des fantômes poursuivent-ils un personnage jaune qui mange des pac-gommes ?",
+  "choix": [
+   "Pac-Man",
+   "Space Invaders",
+   "Galaga",
+   "Dig Dug"
+  ],
+  "reponse": "Pac-Man",
+  "anecdote": "Son créateur se serait inspiré d'une pizza à laquelle il manquait une part."
+ },
+ {
+  "id": "pop-008",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel est le nom du héros de la saga The Legend of Zelda ?",
+  "choix": [
+   "Link",
+   "Zelda",
+   "Ganon",
+   "Epona"
+  ],
+  "reponse": "Link",
+  "anecdote": "Beaucoup de joueurs pensent à tort que Zelda est le héros ; c'est en fait la princesse."
+ },
+ {
+  "id": "pop-009",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mangas",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel est le rêve de Luffy dans One Piece ?",
+  "choix": [
+   "Devenir le roi des pirates",
+   "Devenir Hokage",
+   "Devenir le meilleur dresseur",
+   "Retrouver son père"
+  ],
+  "reponse": "Devenir le roi des pirates",
+  "anecdote": "One Piece est le manga le plus vendu de l'histoire, avec plus de 500 millions d'exemplaires."
+ },
+ {
+  "id": "pop-010",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mangas",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel ninja rêve de devenir Hokage ?",
+  "choix": [
+   "Naruto",
+   "Sasuke",
+   "Kakashi",
+   "Itachi"
+  ],
+  "reponse": "Naruto",
+  "anecdote": "Le manga a été publié de 1999 à 2014 dans le magazine Weekly Shōnen Jump."
+ },
+ {
+  "id": "pop-011",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Dans quel jeu de 1989 place-t-on des blocs qui tombent pour compléter des lignes, très populaire sur Game Boy ?",
+  "choix": [
+   "Tetris",
+   "Puyo Puyo",
+   "Dr. Mario",
+   "Columns"
+  ],
+  "reponse": "Tetris",
+  "anecdote": "Le jeu a été créé en 1984 par le Soviétique Alekseï Pajitnov."
+ },
+ {
+  "id": "pop-012",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle console de Sony est sortie en 1994 au Japon ?",
+  "choix": [
+   "La PlayStation",
+   "La Saturn",
+   "La Dreamcast",
+   "La 3DO"
+  ],
+  "reponse": "La PlayStation",
+  "anecdote": "Elle était à l'origine un projet de lecteur CD pour la Super Nintendo, abandonné par Nintendo."
+ },
+ {
+  "id": "pop-013",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel jeu de bataille royale a popularisé la « danse de la victoire » des personnages ?",
+  "choix": [
+   "Fortnite",
+   "PUBG",
+   "Apex Legends",
+   "Warzone"
+  ],
+  "reponse": "Fortnite",
+  "anecdote": "Son mode Battle Royale gratuit est sorti en 2017 et a attiré des centaines de millions de joueurs."
+ },
+ {
+  "id": "pop-014",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel studio français a créé Rayman ?",
+  "choix": [
+   "Ubisoft",
+   "Quantic Dream",
+   "Arkane",
+   "Dontnod"
+  ],
+  "reponse": "Ubisoft",
+  "anecdote": "Rayman n'a ni bras, ni jambes, ni cou : un choix d'abord technique, pour économiser de la mémoire."
+ },
+ {
+  "id": "pop-015",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mangas",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel mangaka a créé Dragon Ball ?",
+  "choix": [
+   "Akira Toriyama",
+   "Eiichirō Oda",
+   "Masashi Kishimoto",
+   "Osamu Tezuka"
+  ],
+  "reponse": "Akira Toriyama",
+  "anecdote": "Il a aussi dessiné les personnages de la saga Dragon Quest ; il est mort en 2024."
+ },
+ {
+  "id": "pop-016",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel jeu de 1972 est souvent considéré comme le premier jeu vidéo à succès commercial ?",
+  "choix": [
+   "Pong",
+   "Tennis for Two",
+   "Spacewar!",
+   "Space Invaders"
+  ],
+  "reponse": "Pong",
+  "anecdote": "La première borne, installée dans un bar, est tombée en panne… parce que le bac à pièces débordait."
+ },
+ {
+  "id": "pop-017",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Quel est le nom du frère de Mario ?",
+  "choix": [
+   "Luigi",
+   "Wario",
+   "Toad",
+   "Yoshi"
+  ],
+  "reponse": "Luigi",
+  "anecdote": "Il est apparu dès Mario Bros. en 1983, avec la même apparence que son frère mais en vert."
+ },
+ {
+  "id": "pop-018",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel jeu de Nintendo met en scène un petit monstre rose qui avale ses ennemis ?",
+  "choix": [
+   "Kirby",
+   "Yoshi",
+   "Jigglypuff",
+   "Pikmin"
+  ],
+  "reponse": "Kirby",
+  "anecdote": "Son créateur, Masahiro Sakurai, a ensuite créé Super Smash Bros."
+ },
+ {
+  "id": "pop-019",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jouets",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "De quel pays viennent les briques Lego ?",
+  "choix": [
+   "Le Danemark",
+   "La Suède",
+   "L'Allemagne",
+   "Les Pays-Bas"
+  ],
+  "reponse": "Le Danemark",
+  "anecdote": "L'usine historique se trouve à Billund, une petite ville danoise qui a aussi son parc Legoland."
+ },
+ {
+  "id": "pop-020",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jouets",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quelle poupée, créée en 1959, s'appelle en entier Barbara Millicent Roberts ?",
+  "choix": [
+   "Barbie",
+   "Polly Pocket",
+   "Bratz",
+   "Cindy"
+  ],
+  "reponse": "Barbie",
+  "anecdote": "Son créateur, Ruth Handler, lui a donné le prénom de sa fille, Barbara."
+ },
+ {
+  "id": "pop-021",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Dessins animés",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "De quelle race est le chien Scooby-Doo ?",
+  "choix": [
+   "Un dogue allemand",
+   "Un beagle",
+   "Un labrador",
+   "Un saint-bernard"
+  ],
+  "reponse": "Un dogue allemand",
+  "anecdote": "Son nom viendrait des paroles « doo-be-doo-be-doo » de Frank Sinatra dans « Strangers in the Night »."
+ },
+ {
+  "id": "pop-022",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Dessins animés",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Comment s'appelle l'éponge qui vit dans un ananas sous la mer ?",
+  "choix": [
+   "Bob l'éponge",
+   "Patrick",
+   "Carlo",
+   "Sandy"
+  ],
+  "reponse": "Bob l'éponge",
+  "anecdote": "Son créateur, Stephen Hillenburg, était biologiste marin avant de devenir animateur."
+ },
+ {
+  "id": "pop-023",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Internet",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel réseau social a popularisé les vidéos courtes verticales avec des danses ?",
+  "choix": [
+   "TikTok",
+   "Snapchat",
+   "Vine",
+   "Pinterest"
+  ],
+  "reponse": "TikTok",
+  "anecdote": "L'application chinoise s'appelle Douyin dans son pays d'origine."
+ },
+ {
+  "id": "pop-024",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quelle entreprise a créé la console Xbox ?",
+  "choix": [
+   "Microsoft",
+   "Sony",
+   "Sega",
+   "Atari"
+  ],
+  "reponse": "Microsoft",
+  "anecdote": "La première Xbox est sortie en 2001 ; son nom vient de « DirectX Box »."
+ },
+ {
+  "id": "pop-025",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel jeu de 2017 de Nintendo se déroule dans un Hyrule en monde ouvert ?",
+  "choix": [
+   "Breath of the Wild",
+   "Ocarina of Time",
+   "Twilight Princess",
+   "Skyward Sword"
+  ],
+  "reponse": "Breath of the Wild",
+  "anecdote": "Il a été un titre de lancement de la Switch, en mars 2017."
+ },
+ {
+  "id": "pop-026",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Super-héros",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel super-héros est surnommé « l'Homme d'acier » ?",
+  "choix": [
+   "Superman",
+   "Iron Man",
+   "Captain America",
+   "Hulk"
+  ],
+  "reponse": "Superman",
+  "anecdote": "Il est né sur la planète Krypton, détruite peu après son départ."
+ },
+ {
+  "id": "pop-027",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jouets",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Combien de faces a un dé classique ?",
+  "choix": [
+   "6",
+   "4",
+   "8",
+   "12"
+  ],
+  "reponse": "6",
+  "anecdote": "La somme de deux faces opposées vaut toujours 7."
+ },
+ {
+  "id": "pop-028",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "fourchette",
+  "difficulte": 2,
+  "question": "En quelle année est sortie la première Game Boy ?",
+  "reponse": 1989,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1970,
+   2010
+  ],
+  "anecdote": "Une Game Boy a survécu à un bombardement pendant la guerre du Golfe ; elle est exposée à New York et fonctionne encore."
+ },
+ {
+  "id": "pop-029",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Combien de Pokémon comptait la toute première génération ?",
+  "reponse": 151,
+  "unite": "Pokémon",
+  "tolerance": 5,
+  "bornes": [
+   50,
+   500
+  ],
+  "anecdote": "Mew, le 151e, a été ajouté en secret par un programmeur à la dernière minute."
+ },
+ {
+  "id": "pop-030",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "En quelle année est sorti le premier Super Mario Bros. sur NES ?",
+  "reponse": 1985,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1970,
+   2010
+  ],
+  "anecdote": "Le jeu a longtemps été le jeu vidéo le plus vendu, avec plus de 40 millions d'exemplaires."
+ },
+ {
+  "id": "pop-031",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Combien d'exemplaires Minecraft s'est-il vendu, en millions (2023) ?",
+  "reponse": 300,
+  "unite": "millions",
+  "tolerance": 30,
+  "bornes": [
+   10,
+   1000
+  ],
+  "anecdote": "Microsoft a racheté le studio Mojang pour 2,5 milliards de dollars en 2014."
+ },
+ {
+  "id": "pop-032",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mangas",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien d'exemplaires de One Piece ont été imprimés dans le monde, en millions (2022) ?",
+  "reponse": 516,
+  "unite": "millions",
+  "tolerance": 60,
+  "bornes": [
+   50,
+   1500
+  ],
+  "anecdote": "Le Guinness l'a reconnu comme la série de BD la plus publiée par un seul auteur."
+ },
+ {
+  "id": "pop-033",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "En quelle année est sortie la première PlayStation au Japon ?",
+  "reponse": 1994,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1975,
+   2015
+  ],
+  "anecdote": "Elle a été la première console à dépasser les 100 millions d'exemplaires vendus."
+ },
+ {
+  "id": "pop-034",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année sont sortis Pokémon Rouge et Vert au Japon ?",
+  "reponse": 1996,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1980,
+   2015
+  ],
+  "anecdote": "Leur créateur, Satoshi Tajiri, collectionnait les insectes quand il était enfant."
+ },
+ {
+  "id": "pop-035",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de joueurs s'affrontent au maximum dans une partie Battle Royale classique de Fortnite ?",
+  "reponse": 100,
+  "unite": "joueurs",
+  "tolerance": 10,
+  "bornes": [
+   10,
+   500
+  ],
+  "anecdote": "Le dernier survivant remporte une « Victoire Royale »."
+ },
+ {
+  "id": "pop-036",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Internet",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année YouTube a-t-il été créé ?",
+  "reponse": 2005,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1990,
+   2025
+  ],
+  "anecdote": "La première vidéo, « Me at the zoo », dure 19 secondes et montre un cofondateur devant des éléphants."
+ },
+ {
+  "id": "pop-037",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien d'exemplaires a été vendue la Nintendo DS, en millions ?",
+  "reponse": 154,
+  "unite": "millions",
+  "tolerance": 10,
+  "bornes": [
+   50,
+   300
+  ],
+  "anecdote": "Elle a longtemps été la console de Nintendo la plus vendue de l'histoire."
+ },
+ {
+  "id": "pop-038",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jouets",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En quelle année les briques Lego modernes à tubes ont-elles été brevetées ?",
+  "reponse": 1958,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1900,
+   2000
+  ],
+  "anecdote": "Une brique de 1958 s'emboîte encore parfaitement avec une brique fabriquée aujourd'hui."
+ },
+ {
+  "id": "pop-039",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien de temps faut-il, en minutes, pour que le record du monde « any% » de Super Mario Bros. soit terminé (environ) ?",
+  "reponse": 5,
+  "unite": "minutes",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   60
+  ],
+  "anecdote": "Les meilleurs joueurs terminent le jeu en moins de 4 min 55 s, en exploitant des bugs."
+ },
+ {
+  "id": "pop-040",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 2,
+  "question": "Qui suis-je ?",
+  "reponse": "Mickey Mouse",
+  "reponses_acceptees": [
+   "Mickey"
+  ],
+  "indices": [
+   "Je suis né en 1928",
+   "Ma première apparition s'appelle Steamboat Willie",
+   "Ma compagne s'appelle Minnie",
+   "Je suis la souris de Walt Disney"
+  ],
+  "anecdote": "Walt Disney a lui-même fait sa voix jusqu'en 1947."
+ },
+ {
+  "id": "pop-041",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel est ce jeu ?",
+  "reponse": "Les Sims",
+  "reponses_acceptees": [
+   "Sims",
+   "The Sims"
+  ],
+  "indices": [
+   "Je simule la vie quotidienne",
+   "Mes personnages parlent une langue inventée, le simlish",
+   "Mes personnages ont un losange vert au-dessus de la tête",
+   "On peut retirer l'échelle de la piscine"
+  ],
+  "anecdote": "Le losange vert s'appelle un « plumbob »."
+ },
+ {
+  "id": "pop-042",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Qui suis-je ?",
+  "reponse": "Lara Croft",
+  "reponses_acceptees": [
+   "Lara",
+   "Croft"
+  ],
+  "indices": [
+   "Je suis une aristocrate britannique",
+   "J'ai été incarnée au cinéma par Angelina Jolie",
+   "Je suis archéologue aventurière",
+   "Je suis l'héroïne de Tomb Raider"
+  ],
+  "anecdote": "Le personnage devait au départ être un homme, mais les créateurs ont craint de copier Indiana Jones."
+ },
+ {
+  "id": "pop-043",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel est ce jeu ?",
+  "reponse": "Among Us",
+  "reponses_acceptees": [
+   "Among us"
+  ],
+  "indices": [
+   "Je suis sorti en 2018 sans succès",
+   "Je suis devenu un phénomène en 2020 pendant le confinement",
+   "On y cherche un imposteur",
+   "Mes personnages ressemblent à des astronautes en haricot"
+  ],
+  "anecdote": "Le jeu a été développé par un petit studio de seulement trois personnes, Innersloth."
+ },
+ {
+  "id": "pop-044",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Personnages",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Qui suis-je ?",
+  "reponse": "Pac-Man",
+  "reponses_acceptees": [
+   "Pacman"
+  ],
+  "indices": [
+   "Je suis né en 1980 au Japon",
+   "Je fuis Blinky, Pinky, Inky et Clyde",
+   "Je mange des fruits et des pac-gommes",
+   "Je suis une boule jaune qui ouvre la bouche"
+  ],
+  "anecdote": "Au Japon, il s'appelait d'abord « Puck-Man »."
+ },
+ {
+  "id": "pop-045",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mangas",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Qui suis-je ?",
+  "reponse": "Son Goku",
+  "reponses_acceptees": [
+   "Goku",
+   "Sangoku",
+   "Son Gokū"
+  ],
+  "indices": [
+   "Je suis venu d'une autre planète enfant",
+   "J'ai une queue de singe",
+   "Je me transforme en Super Saiyan",
+   "Je suis le héros de Dragon Ball"
+  ],
+  "anecdote": "Son nom est la version japonaise de Sun Wukong, le roi singe de la littérature chinoise."
+ },
+ {
+  "id": "pop-046",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Quel est ce jeu ?",
+  "reponse": "World of Warcraft",
+  "reponses_acceptees": [
+   "WoW",
+   "Warcraft"
+  ],
+  "indices": [
+   "Je suis sorti en 2004",
+   "Une épidémie virtuelle y a servi de modèle à des épidémiologistes",
+   "Mes joueurs se divisent entre Horde et Alliance",
+   "Je suis un jeu en ligne massivement multijoueur de Blizzard"
+  ],
+  "anecdote": "L'incident du « Sang corrompu », en 2005, a été étudié par des chercheurs pour comprendre la propagation des épidémies."
+ },
+ {
+  "id": "pop-047",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Qui suis-je ?",
+  "reponse": "Shigeru Miyamoto",
+  "reponses_acceptees": [
+   "Miyamoto"
+  ],
+  "indices": [
+   "J'ai étudié le design industriel",
+   "Je suis entré chez Nintendo en 1977",
+   "J'ai créé Zelda en m'inspirant de mes explorations d'enfant",
+   "J'ai inventé Mario et Donkey Kong"
+  ],
+  "anecdote": "Il a été fait chevalier des Arts et des Lettres par la France en 2006."
+ },
+ {
+  "id": "pop-048",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Dessins animés",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Qui suis-je ?",
+  "reponse": "Garfield",
+  "reponses_acceptees": [
+   "Garfield le chat"
+  ],
+  "indices": [
+   "Je déteste les lundis",
+   "Mon maître s'appelle Jon",
+   "Je martyrise un chien nommé Odie",
+   "Je suis un gros chat orange fan de lasagnes"
+  ],
+  "anecdote": "Jim Davis l'a créé en 1978 et lui a donné le nom de son grand-père, James Garfield Davis."
+ },
+ {
+  "id": "pop-049",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "vf",
+  "difficulte": 2,
+  "question": "Vrai ou faux : Mario porte une casquette avec la lettre M.",
+  "reponse": "Vrai",
+  "anecdote": "La casquette et la moustache ont été choisies car les cheveux et la bouche étaient trop difficiles à dessiner en pixels."
+ },
+ {
+  "id": "pop-050",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mangas",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : les mangas se lisent de droite à gauche.",
+  "reponse": "Vrai",
+  "anecdote": "C'est le sens de lecture traditionnel au Japon ; les éditeurs français l'ont gardé."
+ },
+ {
+  "id": "pop-051",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : Pokémon Go est sorti en 2016.",
+  "reponse": "Vrai",
+  "anecdote": "Il a dépassé les 500 millions de téléchargements en deux mois environ."
+ },
+ {
+  "id": "pop-052",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Internet",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : le premier tweet de l'histoire date de 2006.",
+  "reponse": "Vrai",
+  "anecdote": "Jack Dorsey a écrit « just setting up my twttr ». Il l'a vendu sous forme de NFT 2,9 millions de dollars en 2021."
+ },
+ {
+  "id": "pop-053",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : Tetris a été créé aux États-Unis.",
+  "reponse": "Faux",
+  "anecdote": "Il a été créé en URSS en 1984, à Moscou, par Alekseï Pajitnov."
+ },
+ {
+  "id": "pop-054",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jouets",
+  "type": "vf",
+  "difficulte": 9,
+  "question": "Vrai ou faux : le Monopoly a servi à aider des prisonniers de guerre à s'évader.",
+  "reponse": "Vrai",
+  "anecdote": "Pendant la Seconde Guerre mondiale, des boîtes contenant cartes, boussoles et vrais billets ont été envoyées dans des camps."
+ },
+ {
+  "id": "pop-055",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel est le nom du dinosaure vert qui accompagne Mario ?",
+  "reponse": "Yoshi",
+  "reponses_acceptees": [
+   "Yoshi le dinosaure"
+  ],
+  "anecdote": "Son nom complet au Japon est T. Yoshisaur Munchakoopas."
+ },
+ {
+  "id": "pop-056",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mangas",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel est le nom de la boule magique à collectionner dans Dragon Ball, qui permet d'exaucer un vœu ?",
+  "reponse": "La boule de cristal",
+  "reponses_acceptees": [
+   "Dragon Ball",
+   "Boule de cristal",
+   "Boules de cristal"
+  ],
+  "anecdote": "Il faut réunir les 7 boules pour invoquer le dragon Shenron."
+ },
+ {
+  "id": "pop-057",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Comment s'appelle le méchant gorille du jeu de 1981 où apparaît Mario ?",
+  "reponse": "Donkey Kong",
+  "reponses_acceptees": [
+   "Donkey kong",
+   "DK"
+  ],
+  "anecdote": "Son nom devait signifier « gorille têtu » : « donkey » pour l'âne, symbole d'entêtement."
+ },
+ {
+  "id": "pop-058",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Internet",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel est le nom du célèbre chat grincheux devenu un mème en 2012 ?",
+  "reponse": "Grumpy Cat",
+  "reponses_acceptees": [
+   "Grumpy"
+  ],
+  "anecdote": "Il s'appelait en réalité Tardar Sauce et souffrait de nanisme félin."
+ },
+ {
+  "id": "pop-059",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel plombier rival de Mario porte du jaune et du violet ?",
+  "reponse": "Wario",
+  "reponses_acceptees": [
+   "Wario"
+  ],
+  "anecdote": "Son nom vient du japonais « warui » (mauvais) et de Mario."
+ },
+ {
+  "id": "pop-060",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel jeu de Valve se joue en lançant des portails orange et bleus ?",
+  "reponse": "Portal",
+  "reponses_acceptees": [
+   "Portal"
+  ],
+  "anecdote": "La célèbre réplique « The cake is a lie » est devenue un mème mondial."
+ }
+]

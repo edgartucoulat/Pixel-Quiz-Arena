@@ -116,7 +116,7 @@
   "categorie": "Géographie",
   "sous_theme": "Déserts",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 8,
   "question": "Quel est le plus grand désert du monde ?",
   "choix": [
    "L'Antarctique",
@@ -148,7 +148,7 @@
   "categorie": "Géographie",
   "sous_theme": "France",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 8,
   "question": "Combien de pays ont une frontière terrestre avec la France métropolitaine ?",
   "choix": [
    "8",
@@ -340,7 +340,7 @@
   "categorie": "Géographie",
   "sous_theme": "Fleuves",
   "type": "qcm",
-  "difficulte": 6,
+  "difficulte": 8,
   "question": "Quel fleuve traverse le plus de pays ?",
   "choix": [
    "Le Danube",
@@ -452,7 +452,7 @@
   "categorie": "Géographie",
   "sous_theme": "Volcans",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 8,
   "question": "Quel pays compte le plus de volcans actifs ?",
   "choix": [
    "L'Indonésie",
@@ -484,7 +484,7 @@
   "categorie": "Géographie",
   "sous_theme": "Drapeaux",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 8,
   "question": "Quel pays a un drapeau qui n'est ni carré ni rectangulaire ?",
   "choix": [
    "Le Népal",
@@ -532,7 +532,7 @@
   "categorie": "Géographie",
   "sous_theme": "Frontières",
   "type": "qcm",
-  "difficulte": 7,
+  "difficulte": 8,
   "question": "Quelle est la plus longue frontière terrestre du monde ?",
   "choix": [
    "Canada – États-Unis",
@@ -715,7 +715,7 @@
   "tolerance": 0.25,
   "bornes": [
    1,
-   15
+   20
   ],
   "anecdote": "Le cap des 8 milliards a été franchi en novembre 2022, selon l'ONU."
  },
@@ -724,7 +724,7 @@
   "categorie": "Géographie",
   "sous_theme": "Fleuves",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 8,
   "question": "Quelle est la longueur du Nil ?",
   "reponse": 6650,
   "unite": "km",
@@ -740,13 +740,13 @@
   "categorie": "Géographie",
   "sous_theme": "Océans",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 8,
   "question": "Quelle est la profondeur maximale de la fosse des Mariannes ?",
   "reponse": 10935,
   "unite": "m",
   "tolerance": 150,
   "bornes": [
-   2000,
+   1000,
    20000
   ],
   "anecdote": "Si l'on y posait l'Everest, son sommet serait encore à plus de 2 km sous la surface."
@@ -772,7 +772,7 @@
   "categorie": "Géographie",
   "sous_theme": "France",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 8,
   "question": "Quelle est la distance à vol d'oiseau entre Paris et Marseille ?",
   "reponse": 660,
   "unite": "km",
@@ -820,7 +820,7 @@
   "categorie": "Géographie",
   "sous_theme": "Pays",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 8,
   "question": "Quelle est la superficie de la Russie, en millions de km² ?",
   "reponse": 17.1,
   "unite": "millions de km²",
@@ -836,7 +836,7 @@
   "categorie": "Géographie",
   "sous_theme": "Climat",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 8,
   "question": "Quelle est la température la plus froide jamais mesurée sur Terre par une station météo ?",
   "reponse": -89.2,
   "unite": "°C",
@@ -884,7 +884,7 @@
   "categorie": "Géographie",
   "sous_theme": "Villes",
   "type": "fourchette",
-  "difficulte": 7,
+  "difficulte": 8,
   "question": "À quelle altitude se trouve La Paz, siège du gouvernement bolivien ?",
   "reponse": 3640,
   "unite": "m",
@@ -900,7 +900,7 @@
   "categorie": "Géographie",
   "sous_theme": "Déserts",
   "type": "fourchette",
-  "difficulte": 6,
+  "difficulte": 8,
   "question": "Quelle est la superficie du Sahara, en millions de km² ?",
   "reponse": 9,
   "unite": "millions de km²",
@@ -1292,7 +1292,7 @@
   "categorie": "Géographie",
   "sous_theme": "Villes",
   "type": "vf",
-  "difficulte": 7,
+  "difficulte": 8,
   "question": "Vrai ou faux : Paris est situé plus au nord que Montréal.",
   "reponse": "Vrai",
   "anecdote": "Grâce au Gulf Stream, l'hiver parisien est pourtant bien plus doux."

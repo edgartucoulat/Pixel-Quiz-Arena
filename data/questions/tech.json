@@ -1,0 +1,472 @@
+[
+ {
+  "id": "tec-001",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 1,
+  "question": "Qui a inventé l'ampoule électrique à filament de longue durée, en 1879 ?",
+  "choix": [
+   "Thomas Edison",
+   "Nikola Tesla",
+   "Alexander Graham Bell",
+   "Benjamin Franklin"
+  ],
+  "reponse": "Thomas Edison",
+  "anecdote": "D'autres inventeurs avaient fait des ampoules avant lui ; Edison a trouvé un filament de bambou carbonisé qui tenait des centaines d'heures."
+ },
+ {
+  "id": "tec-002",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Quel objet Alexander Graham Bell a-t-il breveté en 1876 ?",
+  "choix": [
+   "Le téléphone",
+   "Le télégraphe",
+   "La radio",
+   "Le phonographe"
+  ],
+  "reponse": "Le téléphone",
+  "anecdote": "Il aurait proposé de répondre au téléphone par « Ahoy ! » plutôt que « Allô »."
+ },
+ {
+  "id": "tec-003",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quelle entreprise a été fondée dans un garage par Steve Jobs et Steve Wozniak ?",
+  "choix": [
+   "Apple",
+   "Microsoft",
+   "IBM",
+   "HP"
+  ],
+  "reponse": "Apple",
+  "anecdote": "Le premier Apple I était vendu 666,66 dollars, en 1976."
+ },
+ {
+  "id": "tec-004",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel inventeur allemand a mis au point l'imprimerie à caractères mobiles en Europe ?",
+  "choix": [
+   "Gutenberg",
+   "Diesel",
+   "Daimler",
+   "Siemens"
+  ],
+  "reponse": "Gutenberg",
+  "anecdote": "Sa Bible, imprimée vers 1455, est l'un des livres les plus précieux du monde."
+ },
+ {
+  "id": "tec-005",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Internet",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel chercheur du CERN a inventé le World Wide Web en 1989 ?",
+  "choix": [
+   "Tim Berners-Lee",
+   "Vint Cerf",
+   "Bill Gates",
+   "Linus Torvalds"
+  ],
+  "reponse": "Tim Berners-Lee",
+  "anecdote": "Le premier site web, toujours en ligne, expliquait… ce qu'était le Web."
+ },
+ {
+  "id": "tec-006",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quels frères ont réalisé le premier vol motorisé contrôlé en 1903 ?",
+  "choix": [
+   "Les frères Wright",
+   "Les frères Lumière",
+   "Les frères Montgolfier",
+   "Les frères Renault"
+  ],
+  "reponse": "Les frères Wright",
+  "anecdote": "Le premier vol a duré 12 secondes et parcouru 37 mètres, moins que l'envergure d'un Boeing 747."
+ },
+ {
+  "id": "tec-007",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quels frères français ont fait voler la première montgolfière habitée en 1783 ?",
+  "choix": [
+   "Les frères Montgolfier",
+   "Les frères Wright",
+   "Les frères Lumière",
+   "Les frères Peugeot"
+  ],
+  "reponse": "Les frères Montgolfier",
+  "anecdote": "Les tout premiers passagers, quelques mois plus tôt, étaient un mouton, un canard et un coq."
+ },
+ {
+  "id": "tec-008",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Que signifie l'abréviation « Wi-Fi » ?",
+  "choix": [
+   "Rien de précis : c'est un nom de marque",
+   "Wireless Fidelity",
+   "Wide Field",
+   "Wireless Fiber"
+  ],
+  "reponse": "Rien de précis : c'est un nom de marque",
+  "anecdote": "Le nom a été inventé par une agence de marketing en 1999 ; « Wireless Fidelity » a été ajouté après coup."
+ },
+ {
+  "id": "tec-009",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel Français a inventé un système d'écriture pour les aveugles ?",
+  "choix": [
+   "Louis Braille",
+   "Valentin Haüy",
+   "Charles Barbier",
+   "Louis Pasteur"
+  ],
+  "reponse": "Louis Braille",
+  "anecdote": "Il est devenu aveugle à 3 ans et a créé son alphabet à seulement 15 ans."
+ },
+ {
+  "id": "tec-010",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Transports",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel ingénieur allemand a breveté la première automobile à moteur à essence en 1886 ?",
+  "choix": [
+   "Carl Benz",
+   "Gottlieb Daimler",
+   "Rudolf Diesel",
+   "Ferdinand Porsche"
+  ],
+  "reponse": "Carl Benz",
+  "anecdote": "Sa femme Bertha a fait le premier long trajet en voiture, 106 km, sans prévenir son mari."
+ },
+ {
+  "id": "tec-011",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Comment s'appelait le premier ordinateur électronique généraliste, mis en service en 1946 ?",
+  "choix": [
+   "L'ENIAC",
+   "L'Apple I",
+   "Le Colossus",
+   "L'IBM PC"
+  ],
+  "reponse": "L'ENIAC",
+  "anecdote": "Il pesait 30 tonnes et occupait une pièce de 167 m²."
+ },
+ {
+  "id": "tec-012",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel Français a inventé le stéthoscope en 1816 ?",
+  "choix": [
+   "René Laennec",
+   "Louis Pasteur",
+   "Claude Bernard",
+   "Ambroise Paré"
+  ],
+  "reponse": "René Laennec",
+  "anecdote": "Gêné d'ausculter une patiente en collant l'oreille contre sa poitrine, il a roulé une feuille de papier en tube."
+ },
+ {
+  "id": "tec-013",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel mathématicien britannique a décrypté la machine Enigma pendant la Seconde Guerre mondiale ?",
+  "choix": [
+   "Alan Turing",
+   "Charles Babbage",
+   "John von Neumann",
+   "Claude Shannon"
+  ],
+  "reponse": "Alan Turing",
+  "anecdote": "Le film Imitation Game, sorti en 2014, raconte son histoire."
+ },
+ {
+  "id": "tec-014",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quelle femme a inventé un système de saut de fréquence, ancêtre du Wi-Fi et du Bluetooth ?",
+  "choix": [
+   "Hedy Lamarr",
+   "Ada Lovelace",
+   "Grace Hopper",
+   "Marie Curie"
+  ],
+  "reponse": "Hedy Lamarr",
+  "anecdote": "C'était aussi une star d'Hollywood. Elle l'a breveté en 1942 avec le compositeur George Antheil."
+ },
+ {
+  "id": "tec-015",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "En quelle année est sorti le premier iPhone ?",
+  "reponse": 2007,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1990,
+   2020
+  ],
+  "anecdote": "Steve Jobs l'avait présenté comme « un iPod, un téléphone et un navigateur internet » en un seul appareil."
+ },
+ {
+  "id": "tec-016",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Téléphonie",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "En quelle année le premier SMS a-t-il été envoyé ?",
+  "reponse": 1992,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1960,
+   2015
+  ],
+  "anecdote": "Il disait simplement « Merry Christmas » et a été envoyé depuis un ordinateur vers un téléphone."
+ },
+ {
+  "id": "tec-017",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de bits compte un octet ?",
+  "reponse": 8,
+  "unite": "bits",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   32
+  ],
+  "anecdote": "Un octet permet de coder 256 valeurs différentes, de 0 à 255."
+ },
+ {
+  "id": "tec-018",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Internet",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année le premier e-mail a-t-il été envoyé, par Ray Tomlinson ?",
+  "reponse": 1971,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1950,
+   2000
+  ],
+  "anecdote": "C'est lui qui a choisi le signe @ pour séparer le nom de l'utilisateur et celui de la machine."
+ },
+ {
+  "id": "tec-019",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Internet",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de caractères pouvait contenir un tweet au maximum, avant 2017 ?",
+  "reponse": 140,
+  "unite": "caractères",
+  "tolerance": 10,
+  "bornes": [
+   20,
+   500
+  ],
+  "anecdote": "La limite venait des SMS, limités à 160 caractères : il restait de la place pour le pseudo."
+ },
+ {
+  "id": "tec-020",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Espace",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "En quelle année a été lancé Spoutnik 1, le premier satellite artificiel ?",
+  "reponse": 1957,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1900,
+   2000
+  ],
+  "anecdote": "Il se contentait d'émettre un « bip » radio, que les radioamateurs du monde entier pouvaient capter."
+ },
+ {
+  "id": "tec-021",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel est cet objet ?",
+  "reponse": "Le téléphone portable",
+  "reponses_acceptees": [
+   "Téléphone portable",
+   "Portable",
+   "Téléphone mobile",
+   "Smartphone"
+  ],
+  "indices": [
+   "Le premier appel avec moi a été passé en 1973",
+   "Mon premier modèle pesait environ 1 kg",
+   "On m'a surnommé « la brique »",
+   "Je tiens aujourd'hui dans la poche"
+  ],
+  "anecdote": "Martin Cooper, de Motorola, a passé le premier appel… à son concurrent de chez Bell Labs."
+ },
+ {
+  "id": "tec-022",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Qui suis-je ?",
+  "reponse": "Nikola Tesla",
+  "reponses_acceptees": [
+   "Tesla"
+  ],
+  "indices": [
+   "Je suis né dans l'actuelle Croatie",
+   "J'ai travaillé quelques mois pour Edison",
+   "J'ai défendu le courant alternatif",
+   "Une marque de voitures électriques porte mon nom"
+  ],
+  "anecdote": "Il a déposé près de 300 brevets et rêvait de transmettre l'électricité sans fil."
+ },
+ {
+  "id": "tec-023",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Qui suis-je ?",
+  "reponse": "Ada Lovelace",
+  "reponses_acceptees": [
+   "Lovelace",
+   "Ada Byron"
+  ],
+  "indices": [
+   "Je suis la fille du poète Lord Byron",
+   "J'ai travaillé avec Charles Babbage",
+   "J'ai écrit ce qu'on considère comme le premier programme informatique",
+   "Un langage informatique porte mon prénom"
+  ],
+  "anecdote": "Le langage Ada a été baptisé en son honneur par le département américain de la Défense, en 1980."
+ },
+ {
+  "id": "tec-024",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Qui suis-je ?",
+  "reponse": "Denis Papin",
+  "reponses_acceptees": [
+   "Papin"
+  ],
+  "indices": [
+   "Je suis né près de Blois en 1647",
+   "J'ai travaillé avec Robert Boyle à Londres",
+   "J'ai inventé l'ancêtre de l'autocuiseur",
+   "J'ai imaginé l'un des premiers moteurs à vapeur à piston"
+  ],
+  "anecdote": "Son « digesteur », une marmite à couvercle étanche, permettait d'attendrir les os."
+ },
+ {
+  "id": "tec-025",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Internet",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : Google s'est d'abord appelé « BackRub ».",
+  "reponse": "Vrai",
+  "anecdote": "Le nom Google vient de « googol », le nombre 1 suivi de 100 zéros."
+ },
+ {
+  "id": "tec-026",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : le mot « bug » viendrait d'un vrai insecte coincé dans un ordinateur.",
+  "reponse": "Vrai",
+  "anecdote": "En 1947, l'équipe de Grace Hopper a trouvé une mite dans un relais du Mark II et l'a collée dans le journal de bord."
+ },
+ {
+  "id": "tec-027",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : le Minitel a été lancé en France avant la création du Web.",
+  "reponse": "Vrai",
+  "anecdote": "Le Minitel a été déployé à partir de 1980-1982, et a fonctionné jusqu'en 2012."
+ },
+ {
+  "id": "tec-028",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel système d'exploitation libre, créé en 1991, a pour mascotte un manchot ?",
+  "reponse": "Linux",
+  "reponses_acceptees": [
+   "Gnu Linux",
+   "GNU/Linux"
+  ],
+  "anecdote": "La mascotte s'appelle Tux ; Linus Torvalds aurait été mordu par un manchot dans un zoo."
+ },
+ {
+  "id": "tec-029",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventions",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel médecin écossais a découvert la pénicilline en 1928 ?",
+  "reponse": "Alexander Fleming",
+  "reponses_acceptees": [
+   "Fleming"
+  ],
+  "anecdote": "Il a découvert l'effet d'une moisissure sur des boîtes de culture oubliées pendant ses vacances."
+ },
+ {
+  "id": "tec-030",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Transports",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel avion supersonique franco-britannique a volé de 1976 à 2003 ?",
+  "reponse": "Le Concorde",
+  "reponses_acceptees": [
+   "Concorde"
+  ],
+  "anecdote": "Il reliait Paris à New York en environ 3 h 30, plus vite que la rotation de la Terre : on arrivait « avant » d'être parti, à l'heure locale."
+ }
+]
