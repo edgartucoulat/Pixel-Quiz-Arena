@@ -27,7 +27,7 @@
         this.noiseBuf = this.ctx.createBuffer(1, len, this.ctx.sampleRate);
         const d = this.noiseBuf.getChannelData(0);
         for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
-        if (PQA.music) PQA.music.attach(this.ctx, this.noiseBuf);
+        if (PQA.music) PQA.music.attach(this.ctx);
       }
       if (this.ctx.state === 'suspended') this.ctx.resume();
     }
