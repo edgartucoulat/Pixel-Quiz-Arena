@@ -61,7 +61,8 @@
   };
 
   /* Diagnostic réseau affiché à l'écran : état de PeerJS et de chaque relais. */
-  PQA.netDiag = { peer: 'wait', relays: {} };
+  PQA.netDiag = { peer: 'wait', relays: {}, rx: 0, note: '' };
+  PQA.diagRx = function () { PQA.netDiag.rx++; if (PQA.netDiag.rx < 4 && PQA.onNetDiag) PQA.onNetDiag(); };
   PQA.setDiag = function (key, value) {
     if (key === 'peer') PQA.netDiag.peer = value;
     else PQA.netDiag.relays[key] = value;
@@ -71,12 +72,16 @@
     const icon = { ok: '✔', ko: '✖', wait: '⏳', absent: '✔ (salle absente)', direct: '✔ mais liaison directe bloquée' };
     const d = PQA.netDiag;
     const relays = Object.entries(d.relays).map(([h, v]) => h + ' ' + (icon[v] || v)).join(' · ');
-    return 'PeerJS ' + (icon[d.peer] || d.peer) + (relays ? ' | Relais : ' + relays : '');
+    return 'PeerJS ' + (icon[d.peer] || d.peer) + (relays ? ' | Relais : ' + relays + ' | reçus : ' + d.rx : '') + (d.note ? ' | ' + d.note : '');
   };
 
   PQA.randomCode = function () {
-    let s = '';
-    for (let i = 0; i < 4; i++) s += CODE_LETTERS[Math.floor(Math.random() * CODE_LETTERS.length)];
+    let s;
+    // Évite les codes gênants à l'écran.
+    do {
+      s = '';
+      for (let i = 0; i < 4; i++) s += CODE_LETTERS[Math.floor(Math.random() * CODE_LETTERS.length)];
+    } while (/XNX|SEX|CUL|PD|FUCK|PUTE|NAZI|CON|KK|PIPI|CACA|BITE|ZOB|SS/.test(s));
     return s;
   };
 
