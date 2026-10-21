@@ -65,8 +65,10 @@ vues sont mémorisées par le navigateur du plateau, pour ne pas retomber dessus
 - **Réseau** : connexion directe WebRTC avec [PeerJS](https://peerjs.com/), via le
   serveur gratuit `0.peerjs.com`.
   **Relais de secours** : si ce serveur est injoignable (réseau d'entreprise, pare-feu…),
-  le jeu bascule automatiquement sur un broker MQTT public (EMQX, HiveMQ ou Mosquitto).
-  Les messages y passent en clair, ce qui est acceptable pour une partie entre amis.
+  ou si la liaison directe est bloquée, le jeu bascule automatiquement sur un relais :
+  le serveur PeerJS lui-même (port 443, le plus souvent autorisé) ou un broker MQTT public
+  (EMQX, HiveMQ ou Mosquitto). Les messages y passent en clair, ce qui est acceptable pour
+  une partie entre amis.
 - Une connexion internet est donc nécessaire, même si tout le monde est dans la même pièce.
 
 ```
@@ -119,6 +121,9 @@ Options d'URL utiles pour le développement :
 - **« Connexion au serveur de mise en relation impossible »** : le navigateur n'arrive à
   joindre ni PeerJS ni le relais. C'est fréquent sur un **ordinateur professionnel** (logiciel
   de sécurité ou proxy). Utilise un ordinateur personnel ou le navigateur d'une TV.
+- **Le téléphone reste sur « Connexion au plateau »** : regarde la ligne « Réseau » sur le
+  plateau et le texte sous le bandeau orange du téléphone. Il faut qu'au moins un canal soit
+  marqué ✔ des deux côtés.
 - **Le téléphone affiche « Salle introuvable »** : vérifie le code, et que le plateau est bien ouvert.
 - **Pas de son** : les navigateurs exigent un clic avant de jouer du son. Clique sur le plateau,
   et vérifie le bouton 🔊 en haut à droite.
