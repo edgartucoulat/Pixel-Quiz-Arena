@@ -1030,5 +1030,377 @@
    2015
   ],
   "anecdote": "C'est la série de bandes dessinées la plus imprimée par un même auteur, selon le Guinness."
+ },
+ {
+  "id": "pop-068",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel plombier moustachu est la mascotte de Nintendo ?",
+  "reponse": "Mario",
+  "reponses_acceptees": [
+   "Super Mario"
+  ],
+  "anecdote": "Son nom viendrait de Mario Segale, propriétaire d'un entrepôt loué par Nintendo aux États-Unis."
+ },
+ {
+  "id": "pop-069",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel hérisson bleu est la mascotte de Sega ?",
+  "reponse": "Sonic",
+  "reponses_acceptees": [
+   "Sonic the Hedgehog"
+  ],
+  "anecdote": "Il a été créé en 1991 pour concurrencer Mario."
+ },
+ {
+  "id": "pop-070",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel jeu de construction en cubes, créé par Markus Persson, est le plus vendu de l'histoire ?",
+  "reponse": "Minecraft",
+  "reponses_acceptees": [
+   "Mine craft"
+  ],
+  "anecdote": "Microsoft l'a racheté 2,5 milliards de dollars en 2014."
+ },
+ {
+  "id": "pop-071",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle série de jeux Nintendo fait vivre le joueur sur une île peuplée d'animaux, énorme succès de 2020 ?",
+  "reponse": "Animal Crossing",
+  "reponses_acceptees": [
+   "Animal Crossing New Horizons"
+  ],
+  "anecdote": "Sorti en plein confinement, l'épisode New Horizons s'est vendu à plus de 40 millions d'exemplaires."
+ },
+ {
+  "id": "pop-072",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel studio de Montpellier a créé le jeu « Clair Obscur : Expedition 33 », sorti en 2025 ?",
+  "reponse": "Sandfall Interactive",
+  "reponses_acceptees": [
+   "Sandfall"
+  ],
+  "anecdote": "Le studio ne comptait qu'une trentaine de personnes pendant le développement."
+ },
+ {
+  "id": "pop-073",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment s'appelle la princesse que Mario doit souvent délivrer ?",
+  "reponse": "Peach",
+  "reponses_acceptees": [
+   "Princesse Peach",
+   "Toadstool"
+  ],
+  "anecdote": "En Occident, elle s'appelait « Toadstool » jusqu'au début des années 1990."
+ },
+ {
+  "id": "pop-074",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Dans quelle série HBO de 2023, adaptée d'un jeu vidéo, Pedro Pascal joue-t-il Joel ?",
+  "reponse": "The Last of Us",
+  "reponses_acceptees": [
+   "Last of Us",
+   "TLOU"
+  ],
+  "anecdote": "Le jeu original, sorti en 2013, a été créé par le studio Naughty Dog."
+ },
+ {
+  "id": "pop-075",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel professeur de chimie devient fabricant de drogue dans « Breaking Bad » ?",
+  "reponse": "Walter White",
+  "reponses_acceptees": [
+   "White",
+   "Heisenberg"
+  ],
+  "anecdote": "Son pseudonyme, Heisenberg, fait référence au physicien allemand."
+ },
+ {
+  "id": "pop-076",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle famille de « Game of Thrones » a pour devise « L'hiver vient » ?",
+  "reponse": "Les Stark",
+  "reponses_acceptees": [
+   "Stark",
+   "Starks"
+  ],
+  "anecdote": "Son emblème est un loup-garou gris sur fond blanc."
+ },
+ {
+  "id": "pop-077",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Dans « Friends », comment s'appelle le café où se retrouvent les amis ?",
+  "reponse": "Central Perk",
+  "reponses_acceptees": [
+   "Central Perc"
+  ],
+  "anecdote": "Le nom est un jeu de mots avec Central Park."
+ },
+ {
+  "id": "pop-078",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Comment s'appelle la petite ville de l'Indiana où se déroule « Stranger Things » ?",
+  "reponse": "Hawkins",
+  "reponses_acceptees": [
+   "Hawkins Indiana"
+  ],
+  "anecdote": "Les scènes ont en réalité été tournées en Géorgie, près d'Atlanta."
+ },
+ {
+  "id": "pop-079",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Dans « Friends », quel est le métier de Ross Geller ?",
+  "reponse": "Paléontologue",
+  "reponses_acceptees": [
+   "Paleontologue"
+  ],
+  "anecdote": "Il travaille d'abord au muséum d'histoire naturelle de New York, puis enseigne à l'université."
+ },
+ {
+  "id": "pop-080",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Bande dessinée",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Comment s'appelle le chien de Tintin ?",
+  "reponse": "Milou",
+  "reponses_acceptees": [
+   "Snowy"
+  ],
+  "anecdote": "Hergé lui aurait donné le nom d'une ancienne amie, Marie-Louise."
+ },
+ {
+  "id": "pop-081",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Bande dessinée",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel garçon de bureau gaffeur Franquin a-t-il créé en 1957 ?",
+  "reponse": "Gaston Lagaffe",
+  "reponses_acceptees": [
+   "Gaston",
+   "Lagaffe"
+  ],
+  "anecdote": "Il est apparu d'abord dans les marges du journal « Spirou »."
+ },
+ {
+  "id": "pop-082",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Bande dessinée",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel dessinateur belge a créé « Le Chat » en 1983 ?",
+  "reponse": "Philippe Geluck",
+  "reponses_acceptees": [
+   "Geluck"
+  ],
+  "anecdote": "Le personnage est né dans le quotidien belge « Le Soir »."
+ },
+ {
+  "id": "pop-083",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Manga",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel manga de Hajime Isayama met en scène des titans dévoreurs d'humains ?",
+  "reponse": "L'Attaque des Titans",
+  "reponses_acceptees": [
+   "Attaque des titans",
+   "Shingeki no Kyojin",
+   "Attack on Titan"
+  ],
+  "anecdote": "Les habitants y vivent protégés par trois immenses murs concentriques."
+ },
+ {
+  "id": "pop-084",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Manga",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel mangaka a créé « One Piece » en 1997 ?",
+  "reponse": "Eiichirō Oda",
+  "reponses_acceptees": [
+   "Oda",
+   "Eiichiro Oda"
+  ],
+  "anecdote": "La série a dépassé 500 millions d'exemplaires vendus dans le monde."
+ },
+ {
+  "id": "pop-085",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Bande dessinée",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "En quelle année est paru le premier album d'Astérix, « Astérix le Gaulois » ?",
+  "reponse": 1961,
+  "unite": "année",
+  "tolerance": 1,
+  "bornes": [
+   1930,
+   2000
+  ],
+  "anecdote": "La série avait été lancée deux ans plus tôt dans le magazine « Pilote »."
+ },
+ {
+  "id": "pop-086",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel personnage suis-je ?",
+  "reponse": "Lara Croft",
+  "reponses_acceptees": [
+   "Croft"
+  ],
+  "indices": [
+   "Je suis une aristocrate anglaise",
+   "Je suis née chez le studio Core Design en 1996",
+   "Angelina Jolie m'a incarnée au cinéma",
+   "Je suis l'héroïne de « Tomb Raider »"
+  ],
+  "anecdote": "Le personnage devait d'abord être un homme, jugé trop proche d'Indiana Jones."
+ },
+ {
+  "id": "pop-087",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Séries",
+  "type": "indices",
+  "difficulte": 2,
+  "question": "Quel personnage suis-je ?",
+  "reponse": "Homer Simpson",
+  "reponses_acceptees": [
+   "Homer"
+  ],
+  "indices": [
+   "Je travaille à la centrale nucléaire de Springfield",
+   "Je m'exclame souvent « D'oh ! »",
+   "J'adore la bière Duff et les donuts",
+   "Je suis le père de Bart et Lisa"
+  ],
+  "anecdote": "Son créateur, Matt Groening, lui a donné le prénom de son propre père."
+ },
+ {
+  "id": "pop-088",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel Pokémon suis-je ?",
+  "reponse": "Pikachu",
+  "reponses_acceptees": [
+   "Pikatchu"
+  ],
+  "indices": [
+   "Je suis de type Électrik",
+   "Je porte le numéro 25 du Pokédex",
+   "J'accompagne Sacha dans le dessin animé",
+   "Je suis la souris jaune mascotte de Pokémon"
+  ],
+  "anecdote": "Son nom combine deux onomatopées japonaises : « pika » (étincelle) et « chu » (couinement)."
+ },
+ {
+  "id": "pop-089",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Bande dessinée",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel personnage suis-je ?",
+  "reponse": "Le capitaine Haddock",
+  "reponses_acceptees": [
+   "Haddock",
+   "Capitaine Haddock"
+  ],
+  "indices": [
+   "Je descends du chevalier François de Hadoque",
+   "Je vis au château de Moulinsart",
+   "Je jure « Mille millions de mille sabords ! »",
+   "Je suis le meilleur ami de Tintin, amateur de whisky"
+  ],
+  "anecdote": "Il apparaît pour la première fois dans « Le Crabe aux pinces d'or », en 1941."
+ },
+ {
+  "id": "pop-090",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quel créateur de jeux suis-je ?",
+  "reponse": "Michel Ancel",
+  "reponses_acceptees": [
+   "Ancel"
+  ],
+  "indices": [
+   "Je suis né à Monaco en 1972",
+   "J'ai travaillé chez Ubisoft à Montpellier",
+   "J'ai créé « Beyond Good & Evil »",
+   "J'ai créé « Rayman »"
+  ],
+  "anecdote": "Il a quitté le jeu vidéo en 2020 pour se consacrer à un sanctuaire pour animaux."
+ },
+ {
+  "id": "pop-091",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Séries",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel personnage suis-je ?",
+  "reponse": "Daenerys Targaryen",
+  "reponses_acceptees": [
+   "Daenerys",
+   "Khaleesi",
+   "Targaryen"
+  ],
+  "indices": [
+   "Je suis née à Peyredragon",
+   "J'ai épousé Khal Drogo",
+   "On m'appelle la « Mère des dragons »",
+   "Emilia Clarke m'incarne dans « Game of Thrones »"
+  ],
+  "anecdote": "Son titre, « Khaleesi », est devenu un prénom donné à des centaines de bébés."
+ },
+ {
+  "id": "pop-092",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Séries",
+  "type": "vf",
+  "difficulte": 3,
+  "question": "Vrai ou faux : « Les Simpson » ont été créés par Matt Groening.",
+  "reponse": "Vrai",
+  "anecdote": "Ils sont apparus d'abord en 1987, en courtes séquences dans une émission de variétés."
  }
 ]

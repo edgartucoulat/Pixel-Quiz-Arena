@@ -1440,5 +1440,1811 @@
   ],
   "anecdote": "Il a soutenu sa vice-présidente, Kamala Harris, qui l'a remplacé comme candidate.",
   "annee_reference": 2024
+ },
+ {
+  "id": "act-088",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Qui a été nommé Premier ministre en juillet 2020, succédant à Édouard Philippe ?",
+  "reponse": "Jean Castex",
+  "reponses_acceptees": [
+   "Castex"
+  ],
+  "anecdote": "Ancien maire de Prades, dans les Pyrénées-Orientales, il avait piloté le plan de déconfinement.",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-089",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle femme a été nommée Première ministre en mai 2022 ?",
+  "reponse": "Élisabeth Borne",
+  "reponses_acceptees": [
+   "Borne",
+   "Elisabeth Borne"
+  ],
+  "anecdote": "Elle a été la deuxième femme à diriger le gouvernement, plus de trente ans après Édith Cresson.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-090",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel article de la Constitution a permis de faire adopter la réforme des retraites sans vote, en mars 2023 ?",
+  "reponse": "49.3",
+  "reponses_acceptees": [
+   "49-3",
+   "493",
+   "49 3",
+   "article 49.3",
+   "49.3"
+  ],
+  "anecdote": "Élisabeth Borne a utilisé cet article 23 fois en vingt mois à Matignon.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-091",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle alliance de gauche est arrivée en tête des législatives anticipées de juillet 2024 ?",
+  "reponse": "Le Nouveau Front populaire",
+  "reponses_acceptees": [
+   "NFP",
+   "Nouveau Front populaire",
+   "Front populaire"
+  ],
+  "anecdote": "Elle a obtenu environ 180 sièges, loin de la majorité absolue fixée à 289.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-092",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle femme a été réélue présidente de l'Assemblée nationale en juillet 2024 ?",
+  "reponse": "Yaël Braun-Pivet",
+  "reponses_acceptees": [
+   "Braun-Pivet",
+   "Braun Pivet",
+   "Yael Braun-Pivet"
+  ],
+  "anecdote": "Élue une première fois en 2022, elle est la première femme à présider l'Assemblée.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-093",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "En décembre 2024, quel type de motion a fait tomber le gouvernement de Michel Barnier ?",
+  "reponse": "Une motion de censure",
+  "reponses_acceptees": [
+   "Censure",
+   "Motion de censure"
+  ],
+  "anecdote": "Aucun gouvernement n'avait été renversé ainsi depuis celui de Georges Pompidou, en 1962.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-094",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel vote François Bayrou a-t-il lui-même sollicité, et perdu, le 8 septembre 2025 ?",
+  "reponse": "La confiance",
+  "reponses_acceptees": [
+   "Confiance",
+   "Vote de confiance",
+   "Question de confiance"
+  ],
+  "anecdote": "Il l'avait demandé pour obtenir un soutien sur la réduction de la dette publique.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-095",
+  "categorie": "Actualité",
+  "sous_theme": "Justice",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Dans quelle prison parisienne Nicolas Sarkozy a-t-il été incarcéré en octobre 2025 ?",
+  "reponse": "La Santé",
+  "reponses_acceptees": [
+   "Santé",
+   "Prison de la Santé"
+  ],
+  "anecdote": "Premier ancien président de la Ve République à aller en prison, il a été libéré au bout de trois semaines.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-096",
+  "categorie": "Actualité",
+  "sous_theme": "Justice",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "À combien d'années d'inéligibilité Marine Le Pen a-t-elle été condamnée en première instance, en mars 2025 ?",
+  "reponse": "5",
+  "reponses_acceptees": [
+   "cinq",
+   "5 ans"
+  ],
+  "anecdote": "La peine était assortie d'une exécution provisoire, applicable avant même l'appel.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-097",
+  "categorie": "Actualité",
+  "sous_theme": "Politique",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Avec quel pourcentage des voix Emmanuel Macron a-t-il été réélu au second tour de la présidentielle 2022 ?",
+  "reponse": 58.55,
+  "unite": "%",
+  "tolerance": 1,
+  "bornes": [
+   40,
+   80
+  ],
+  "anecdote": "Face à Marine Le Pen, il avait obtenu 66 % cinq ans plus tôt.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-098",
+  "categorie": "Actualité",
+  "sous_theme": "Jeux olympiques",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle championne a allumé la vasque des JO de Paris 2024 aux côtés de Teddy Riner ?",
+  "reponse": "Marie-José Pérec",
+  "reponses_acceptees": [
+   "Pérec",
+   "Perec",
+   "Marie-Jose Perec"
+  ],
+  "anecdote": "La vasque, un anneau de feu sous un ballon, s'élevait chaque soir au-dessus du jardin des Tuileries.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-099",
+  "categorie": "Actualité",
+  "sous_theme": "Jeux olympiques",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle star américaine a chanté « Mon truc en plumes » lors de l'ouverture des JO de Paris 2024 ?",
+  "reponse": "Lady Gaga",
+  "reponses_acceptees": [
+   "Gaga"
+  ],
+  "anecdote": "Elle rendait hommage à Zizi Jeanmaire, sur des marches au bord de la Seine.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-100",
+  "categorie": "Actualité",
+  "sous_theme": "Jeux olympiques",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle chanteuse a interprété « Djadja » avec la Garde républicaine, lors de l'ouverture des JO 2024 ?",
+  "reponse": "Aya Nakamura",
+  "reponses_acceptees": [
+   "Nakamura"
+  ],
+  "anecdote": "La scène se déroulait devant l'Institut de France, siège de l'Académie française.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-101",
+  "categorie": "Actualité",
+  "sous_theme": "Jeux olympiques",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel metteur en scène a conçu la cérémonie d'ouverture des JO de Paris 2024 ?",
+  "reponse": "Thomas Jolly",
+  "reponses_acceptees": [
+   "Jolly"
+  ],
+  "anecdote": "Il avait auparavant monté une nouvelle version de la comédie musicale « Starmania ».",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-102",
+  "categorie": "Actualité",
+  "sous_theme": "Jeux olympiques",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle maire de Paris s'est baignée dans la Seine en juillet 2024, juste avant les JO ?",
+  "reponse": "Anne Hidalgo",
+  "reponses_acceptees": [
+   "Hidalgo"
+  ],
+  "anecdote": "Elle voulait prouver que le fleuve était redevenu baignable, une promesse faite par Jacques Chirac plus de trente ans plus tôt.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-103",
+  "categorie": "Actualité",
+  "sous_theme": "Jeux olympiques",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : aux JO de Paris 2024, les épreuves de surf se sont déroulées à Tahiti.",
+  "reponse": "Vrai",
+  "anecdote": "Sur la vague de Teahupo'o, à près de 16 000 km de Paris.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-104",
+  "categorie": "Actualité",
+  "sous_theme": "Jeux olympiques",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : le breaking (breakdance) a fait ses débuts olympiques aux JO de Paris 2024.",
+  "reponse": "Vrai",
+  "anecdote": "La discipline n'a pas été retenue pour les JO de Los Angeles 2028.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-105",
+  "categorie": "Actualité",
+  "sous_theme": "Jeux olympiques",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel pays a obtenu, en juillet 2024, l'organisation des JO d'hiver de 2030 ?",
+  "choix": [
+   "La France",
+   "La Suisse",
+   "La Suède",
+   "Le Canada"
+  ],
+  "reponse": "La France",
+  "anecdote": "Les épreuves se tiendront dans les Alpes françaises et autour de Nice.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-106",
+  "categorie": "Actualité",
+  "sous_theme": "Jeux olympiques",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quelle grande ville a organisé les JO d'hiver de février 2026 avec Cortina d'Ampezzo ?",
+  "choix": [
+   "Milan",
+   "Turin",
+   "Bolzano",
+   "Venise"
+  ],
+  "reponse": "Milan",
+  "anecdote": "Turin avait déjà organisé les Jeux d'hiver en 2006.",
+  "annee_reference": 2026
+ },
+ {
+  "id": "act-107",
+  "categorie": "Actualité",
+  "sous_theme": "Cyclisme",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel coureur slovène a remporté son quatrième Tour de France en 2025 ?",
+  "reponse": "Tadej Pogačar",
+  "reponses_acceptees": [
+   "Pogacar",
+   "Tadej Pogacar"
+  ],
+  "anecdote": "Il avait déjà gagné en 2020, 2021 et 2024.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-108",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel stade de Mexico a été choisi pour accueillir le match d'ouverture de la Coupe du monde 2026 ?",
+  "reponse": "Le stade Azteca",
+  "reponses_acceptees": [
+   "Azteca",
+   "Estadio Azteca",
+   "Stade Azteca"
+  ],
+  "anecdote": "C'est le premier stade à recevoir des matchs de trois Coupes du monde : 1970, 1986 et 2026.",
+  "annee_reference": 2026
+ },
+ {
+  "id": "act-109",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel pays est devenu en 2022 le premier pays africain demi-finaliste d'une Coupe du monde ?",
+  "reponse": "Le Maroc",
+  "reponses_acceptees": [
+   "Maroc"
+  ],
+  "anecdote": "Les Lions de l'Atlas avaient éliminé l'Espagne puis le Portugal.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-110",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel club a remporté en 2025 la première Coupe du monde des clubs à 32 équipes ?",
+  "reponse": "Chelsea",
+  "reponses_acceptees": [
+   "Chelsea FC"
+  ],
+  "anecdote": "Il a battu le PSG 3-0 en finale, près de New York.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-111",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel club Kylian Mbappé a-t-il rejoint à l'été 2024 ?",
+  "reponse": "Le Real Madrid",
+  "reponses_acceptees": [
+   "Real Madrid",
+   "Real"
+  ],
+  "anecdote": "Il est arrivé libre, son contrat avec le PSG étant arrivé à son terme.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-112",
+  "categorie": "Actualité",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Dans quel club américain Lionel Messi a-t-il signé en 2023 ?",
+  "reponse": "L'Inter Miami",
+  "reponses_acceptees": [
+   "Inter Miami",
+   "Miami"
+  ],
+  "anecdote": "Le club est copropriété de l'ancien joueur anglais David Beckham.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-113",
+  "categorie": "Actualité",
+  "sous_theme": "Tennis",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Contre qui Carlos Alcaraz a-t-il gagné la finale de Roland-Garros 2025, la plus longue de l'histoire du tournoi ?",
+  "reponse": "Jannik Sinner",
+  "reponses_acceptees": [
+   "Sinner"
+  ],
+  "anecdote": "Le match a duré 5 h 29, et Alcaraz a sauvé trois balles de match.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-114",
+  "categorie": "Actualité",
+  "sous_theme": "Tennis",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quelle Française, invitée par le tournoi, a atteint les demi-finales de Roland-Garros 2025 ?",
+  "reponse": "Loïs Boisson",
+  "reponses_acceptees": [
+   "Boisson",
+   "Lois Boisson"
+  ],
+  "anecdote": "Classée 361e mondiale, elle a éliminé Jessica Pegula puis Mirra Andreeva.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-115",
+  "categorie": "Actualité",
+  "sous_theme": "Formule 1",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel pilote britannique de McLaren a été sacré champion du monde de F1 en 2025 ?",
+  "reponse": "Lando Norris",
+  "reponses_acceptees": [
+   "Norris"
+  ],
+  "anecdote": "Il a devancé Max Verstappen de deux points, au dernier Grand Prix à Abou Dhabi.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-116",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel rappeur a assuré le show de la mi-temps du Super Bowl en février 2025 ?",
+  "reponse": "Kendrick Lamar",
+  "reponses_acceptees": [
+   "Lamar",
+   "Kendrick"
+  ],
+  "anecdote": "Il y a interprété « Not Like Us », son titre contre Drake, avec SZA en invitée.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-117",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel chanteur portoricain a été choisi pour le show de la mi-temps du Super Bowl de février 2026 ?",
+  "reponse": "Bad Bunny",
+  "reponses_acceptees": [
+   "Benito"
+  ],
+  "anecdote": "Ce choix a fait polémique aux États-Unis, car il chante presque exclusivement en espagnol.",
+  "annee_reference": 2026
+ },
+ {
+  "id": "act-118",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de concerts a compté l'« Eras Tour » de Taylor Swift, entre 2023 et 2024 ?",
+  "reponse": 149,
+  "unite": "concerts",
+  "tolerance": 5,
+  "bornes": [
+   50,
+   300
+  ],
+  "anecdote": "Elle est la première tournée à dépasser 2 milliards de dollars de recettes.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-119",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quelle star de l'actualité 2023 suis-je ?",
+  "reponse": "Taylor Swift",
+  "reponses_acceptees": [
+   "Swift"
+  ],
+  "indices": [
+   "Je suis née en Pennsylvanie en 1989",
+   "Je réenregistre mes anciens albums en « Taylor's Version »",
+   "Ma tournée « Eras » a été adaptée au cinéma en 2023",
+   "Je chante « Shake It Off » et « Anti-Hero »"
+  ],
+  "anecdote": "Le magazine Time l'a nommée personnalité de l'année 2023.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-120",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel artiste suisse non binaire a remporté l'Eurovision 2024 avec « The Code » ?",
+  "reponse": "Nemo",
+  "reponses_acceptees": [
+   "Nemo Mettler"
+  ],
+  "anecdote": "La Suisse n'avait plus gagné depuis Céline Dion, en 1988.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-121",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel chanteur a représenté la France à l'Eurovision 2024 avec « Mon amour » ?",
+  "reponse": "Slimane",
+  "reponses_acceptees": [
+   "Slimane Nebchi"
+  ],
+  "anecdote": "Il a terminé 4e et a chanté la fin du titre à plusieurs mètres de son micro.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-122",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle chanteuse a représenté la France à l'Eurovision 2025 avec « Maman » ?",
+  "reponse": "Louane",
+  "reponses_acceptees": [
+   "Louane Emera"
+  ],
+  "anecdote": "Révélée par « The Voice » puis « La Famille Bélier », elle a terminé 7e.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-123",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Avec quelle chanson Barbara Pravi a-t-elle fini 2e de l'Eurovision 2021 ?",
+  "reponse": "Voilà",
+  "reponses_acceptees": [
+   "Voila"
+  ],
+  "anecdote": "La France n'avait plus été sur le podium depuis Amina, en 1991.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-124",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Avec quel chanteur américain Rosé, de Blackpink, a-t-elle chanté le tube « APT. » en 2024 ?",
+  "reponse": "Bruno Mars",
+  "reponses_acceptees": [
+   "Mars"
+  ],
+  "anecdote": "Le titre vient d'un jeu à boire coréen appelé « apateu ».",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-125",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel film d'animation Netflix de 2025 met en scène un groupe de K-pop qui chasse les démons ?",
+  "reponse": "KPop Demon Hunters",
+  "reponses_acceptees": [
+   "Kpop Demon Hunters",
+   "Demon Hunters"
+  ],
+  "anecdote": "Sa chanson « Golden » a été numéro 1 des ventes aux États-Unis.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-126",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Avec quel album country Beyoncé a-t-elle remporté le Grammy de l'album de l'année, en 2025 ?",
+  "reponse": "Cowboy Carter",
+  "reponses_acceptees": [
+   "Cowboy"
+  ],
+  "anecdote": "Elle est déjà l'artiste la plus récompensée de l'histoire des Grammy Awards.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-127",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel groupe de Manchester s'est reformé en 2025 pour une tournée mondiale ?",
+  "reponse": "Oasis",
+  "reponses_acceptees": [
+   "Les Oasis"
+  ],
+  "anecdote": "Les frères Liam et Noel Gallagher ne s'étaient plus produits ensemble depuis 2009.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-128",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel chanteur, surnommé « le Prince des ténèbres », est mort en juillet 2025 ?",
+  "reponse": "Ozzy Osbourne",
+  "reponses_acceptees": [
+   "Osbourne",
+   "Ozzy"
+  ],
+  "anecdote": "Quelques semaines plus tôt, il avait donné un concert d'adieu avec Black Sabbath à Birmingham.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-129",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle chanteuse de « Tous les garçons et les filles » est morte en juin 2024 ?",
+  "reponse": "Françoise Hardy",
+  "reponses_acceptees": [
+   "Hardy",
+   "Francoise Hardy"
+  ],
+  "anecdote": "Elle était l'épouse de Jacques Dutronc et la mère du guitariste Thomas Dutronc.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-130",
+  "categorie": "Actualité",
+  "sous_theme": "Cinéma",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel acteur du « Samouraï » et du « Guépard » est mort en août 2024 ?",
+  "reponse": "Alain Delon",
+  "reponses_acceptees": [
+   "Delon"
+  ],
+  "anecdote": "Il s'est éteint dans sa propriété de Douchy, dans le Loiret.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-131",
+  "categorie": "Actualité",
+  "sous_theme": "Cinéma",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel acteur surnommé « Bébel » est mort en septembre 2021 ?",
+  "reponse": "Jean-Paul Belmondo",
+  "reponses_acceptees": [
+   "Belmondo",
+   "Bebel"
+  ],
+  "anecdote": "Un hommage national lui a été rendu aux Invalides.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-132",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel duo électro français a annoncé sa séparation en février 2021 avec une vidéo intitulée « Epilogue » ?",
+  "reponse": "Daft Punk",
+  "reponses_acceptees": [
+   "Daftpunk"
+  ],
+  "anecdote": "Dans la vidéo, l'un des deux robots explose dans le désert.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-133",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel chanteur belge a fait son retour en 2022 avec l'album « Multitude » ?",
+  "reponse": "Stromae",
+  "reponses_acceptees": [
+   "Paul Van Haver"
+  ],
+  "anecdote": "Il avait chanté son titre « L'enfer » en plein journal télévisé de TF1.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-134",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle chanteuse belge a sorti l'album « Nonante-Cinq » en 2021 ?",
+  "reponse": "Angèle",
+  "reponses_acceptees": [
+   "Angele"
+  ],
+  "anecdote": "Le titre évoque 1995, son année de naissance, dite à la belge.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-135",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel titre de The Weeknd est devenu en 2021 la chanson la mieux classée de l'histoire du Billboard Hot 100 ?",
+  "reponse": "Blinding Lights",
+  "reponses_acceptees": [
+   "Blinding Light"
+  ],
+  "anecdote": "Il est resté 90 semaines dans le classement américain.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-136",
+  "categorie": "Actualité",
+  "sous_theme": "Musique",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : les Beatles ont sorti une nouvelle chanson en 2023.",
+  "reponse": "Vrai",
+  "anecdote": "Pour « Now and Then », la voix de John Lennon a été isolée d'une vieille cassette grâce à l'IA.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-137",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Dans quel château écossais la reine Élisabeth II est-elle morte, en septembre 2022 ?",
+  "reponse": "Balmoral",
+  "reponses_acceptees": [
+   "Château de Balmoral"
+  ],
+  "anecdote": "Elle avait régné 70 ans et 214 jours, un record pour un monarque britannique.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-138",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quelle relique écossaise a été placée sous le trône lors du couronnement de Charles III, en 2023 ?",
+  "choix": [
+   "La pierre du Destin",
+   "L'épée de William Wallace",
+   "La harpe de Brian Boru",
+   "Le calice de Saint Andrews"
+  ],
+  "reponse": "La pierre du Destin",
+  "anecdote": "Volée par les Anglais en 1296, elle n'a été rendue à l'Écosse qu'en 1996.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-139",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : la reine Margrethe II du Danemark a abdiqué en janvier 2024.",
+  "reponse": "Vrai",
+  "anecdote": "Son fils est devenu le roi Frederik X ; aucun souverain danois n'avait abdiqué depuis 1146.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-140",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel titre français porte « Spare », les mémoires du prince Harry parues en 2023 ?",
+  "reponse": "Le Suppléant",
+  "reponses_acceptees": [
+   "Suppléant",
+   "Suppleant"
+  ],
+  "anecdote": "Il s'en est vendu 1,4 million d'exemplaires le premier jour, un record pour un essai.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-141",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Qui a été élu président des États-Unis en novembre 2020 ?",
+  "reponse": "Joe Biden",
+  "reponses_acceptees": [
+   "Biden"
+  ],
+  "anecdote": "À 78 ans, il est devenu le président le plus âgé au moment de son investiture.",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-142",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Donald Trump est devenu en janvier 2025 le combien-ième président des États-Unis ?",
+  "reponse": "47",
+  "reponses_acceptees": [
+   "47e",
+   "quarante-septieme",
+   "quarante-sept"
+  ],
+  "anecdote": "Il était aussi le 45e : seul Grover Cleveland avait déjà fait deux mandats non consécutifs.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-143",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel bâtiment de Washington a été envahi par des partisans de Donald Trump le 6 janvier 2021 ?",
+  "reponse": "Le Capitole",
+  "reponses_acceptees": [
+   "Capitole",
+   "Capitol"
+  ],
+  "anecdote": "Les émeutiers voulaient empêcher la certification de la victoire de Joe Biden.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-144",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle Première ministre britannique n'est restée que 49 jours en poste, en 2022 ?",
+  "reponse": "Liz Truss",
+  "reponses_acceptees": [
+   "Truss"
+  ],
+  "anecdote": "Un tabloïd avait filmé une laitue en direct pour voir qui durerait le plus longtemps : la salade a gagné.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-145",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Qui est devenu en octobre 2022 le premier Premier ministre britannique d'origine indienne ?",
+  "reponse": "Rishi Sunak",
+  "reponses_acceptees": [
+   "Sunak"
+  ],
+  "anecdote": "Hindou pratiquant, il a prêté serment au Parlement sur la Bhagavad-Gita.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-146",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel travailliste est devenu Premier ministre du Royaume-Uni en juillet 2024 ?",
+  "reponse": "Keir Starmer",
+  "reponses_acceptees": [
+   "Starmer"
+  ],
+  "anecdote": "Sa victoire a mis fin à quatorze ans de gouvernements conservateurs.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-147",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Qui a succédé à Angela Merkel à la chancellerie allemande en décembre 2021 ?",
+  "reponse": "Olaf Scholz",
+  "reponses_acceptees": [
+   "Scholz"
+  ],
+  "anecdote": "Il gouvernait avec une coalition dite « feu tricolore » : sociaux-démocrates, Verts et libéraux.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-148",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle femme est devenue en octobre 2022 la première à diriger le gouvernement italien ?",
+  "reponse": "Giorgia Meloni",
+  "reponses_acceptees": [
+   "Meloni"
+  ],
+  "anecdote": "Son parti, Fratelli d'Italia, était arrivé en tête des législatives de septembre.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-149",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel ancien président du Brésil a été réélu en octobre 2022, battant Jair Bolsonaro ?",
+  "reponse": "Lula",
+  "reponses_acceptees": [
+   "Lula da Silva",
+   "Luiz Inacio Lula da Silva"
+  ],
+  "anecdote": "Il avait passé 580 jours en prison avant l'annulation de ses condamnations.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-150",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Qui est devenu maire de New York en janvier 2026 ?",
+  "reponse": "Zohran Mamdani",
+  "reponses_acceptees": [
+   "Mamdani"
+  ],
+  "anecdote": "À 34 ans, il est le premier maire musulman de la ville.",
+  "annee_reference": 2026
+ },
+ {
+  "id": "act-151",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel historien conservateur a remporté l'élection présidentielle polonaise en juin 2025 ?",
+  "reponse": "Karol Nawrocki",
+  "reponses_acceptees": [
+   "Nawrocki"
+  ],
+  "anecdote": "Il dirigeait auparavant l'Institut de la mémoire nationale, chargé des archives de l'époque communiste.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-152",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel pays européen a vu son élection présidentielle annulée en décembre 2024, sur fond d'ingérence via TikTok ?",
+  "reponse": "La Roumanie",
+  "reponses_acceptees": [
+   "Roumanie"
+  ],
+  "anecdote": "Un candidat presque inconnu, Călin Georgescu, était arrivé en tête du premier tour.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-153",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel ancien leader étudiant est devenu en 2022, à 36 ans, le plus jeune président de l'histoire du Chili ?",
+  "reponse": "Gabriel Boric",
+  "reponses_acceptees": [
+   "Boric"
+  ],
+  "anecdote": "Il avait été élu en décembre 2021 face au candidat d'extrême droite José Antonio Kast.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-154",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle Première ministre néo-zélandaise a démissionné en janvier 2023, disant ne plus avoir « assez d'énergie » ?",
+  "reponse": "Jacinda Ardern",
+  "reponses_acceptees": [
+   "Ardern"
+  ],
+  "anecdote": "Elle avait accouché pendant son mandat, une première depuis Benazir Bhutto en 1990.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-155",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel ancien Premier ministre japonais a été assassiné en pleine campagne électorale en juillet 2022 ?",
+  "reponse": "Shinzō Abe",
+  "reponses_acceptees": [
+   "Abe",
+   "Shinzo Abe"
+  ],
+  "anecdote": "Il avait été le chef de gouvernement resté le plus longtemps en poste au Japon.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-156",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel pays est devenu le 32e membre de l'OTAN en mars 2024 ?",
+  "reponse": "La Suède",
+  "reponses_acceptees": [
+   "Suède",
+   "Suede"
+  ],
+  "anecdote": "Le pays renonçait à deux siècles de neutralité militaire.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-157",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Le 31 janvier 2020, quel pays a officiellement quitté l'Union européenne ?",
+  "reponse": "Le Royaume-Uni",
+  "reponses_acceptees": [
+   "Royaume-Uni",
+   "Royaume Uni",
+   "Grande-Bretagne",
+   "Angleterre",
+   "UK"
+  ],
+  "anecdote": "Le référendum sur le Brexit avait eu lieu près de quatre ans plus tôt, en juin 2016.",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-158",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Quel jour de février 2022 la Russie a-t-elle lancé son invasion de l'Ukraine ?",
+  "reponse": 24,
+  "unite": "février",
+  "tolerance": 1,
+  "bornes": [
+   1,
+   28
+  ],
+  "anecdote": "L'offensive a commencé avant l'aube, par des frappes sur tout le pays.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-159",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel croiseur russe, navire amiral de la flotte de la mer Noire, a coulé en avril 2022 ?",
+  "reponse": "Le Moskva",
+  "reponses_acceptees": [
+   "Moskva",
+   "Moskova"
+  ],
+  "anecdote": "L'Ukraine affirme l'avoir touché avec deux missiles Neptune.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-160",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quelle personnalité de l'actualité 2022 suis-je ?",
+  "reponse": "Volodymyr Zelensky",
+  "reponses_acceptees": [
+   "Zelensky",
+   "Zelenski",
+   "Volodymyr Zelenski"
+  ],
+  "indices": [
+   "J'ai doublé l'ours Paddington en ukrainien",
+   "J'ai joué un professeur devenu président dans une série",
+   "J'ai refusé d'être évacué de Kiev en février 2022",
+   "Je suis le président de l'Ukraine"
+  ],
+  "anecdote": "On lui prête cette réplique aux Américains : « J'ai besoin de munitions, pas d'un taxi. »",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-161",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel slogan kurde est devenu le cri des manifestations en Iran à l'automne 2022 ?",
+  "reponse": "Femme, vie, liberté",
+  "reponses_acceptees": [
+   "Femme vie liberte",
+   "Jin jiyan azadi",
+   "Woman life freedom"
+  ],
+  "anecdote": "La révolte a éclaté après la mort de Mahsa Amini, arrêtée pour un voile jugé mal porté.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-162",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel archipel du Pacifique a été frappé par l'éruption géante du volcan Hunga Tonga, en janvier 2022 ?",
+  "reponse": "Les Tonga",
+  "reponses_acceptees": [
+   "Tonga"
+  ],
+  "anecdote": "L'onde de choc a fait plusieurs fois le tour de la Terre.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-163",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel canal a été bloqué six jours par le porte-conteneurs Ever Given, en mars 2021 ?",
+  "reponse": "Le canal de Suez",
+  "reponses_acceptees": [
+   "Suez",
+   "Canal de Suez"
+  ],
+  "anecdote": "Le navire de 400 mètres de long s'était mis en travers à cause de vents violents.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-164",
+  "categorie": "Actualité",
+  "sous_theme": "Santé",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Dans quelle ville chinoise les premiers cas de Covid-19 ont-ils été signalés, avant la pandémie de 2020 ?",
+  "reponse": "Wuhan",
+  "reponses_acceptees": [
+   "Ouhan"
+  ],
+  "anecdote": "En France, le premier confinement a commencé le 17 mars 2020.",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-165",
+  "categorie": "Actualité",
+  "sous_theme": "Santé",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle Britannique a été, en décembre 2020, la première personne vaccinée contre le Covid hors essais cliniques ?",
+  "reponse": "Margaret Keenan",
+  "reponses_acceptees": [
+   "Keenan"
+  ],
+  "anecdote": "Elle a reçu le vaccin à Coventry, une semaine avant ses 91 ans.",
+  "annee_reference": 2020
+ },
+ {
+  "id": "act-166",
+  "categorie": "Actualité",
+  "sous_theme": "Société",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "En décembre 2024, quelle cathédrale parisienne a rouvert, cinq ans après un incendie ?",
+  "reponse": "Notre-Dame de Paris",
+  "reponses_acceptees": [
+   "Notre-Dame",
+   "Notre Dame"
+  ],
+  "anecdote": "L'incendie du 15 avril 2019 avait détruit la flèche dessinée par Viollet-le-Duc.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-167",
+  "categorie": "Actualité",
+  "sous_theme": "Société",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de mètres mesure la flèche de Notre-Dame de Paris, reconstruite en 2023 ?",
+  "reponse": 96,
+  "unite": "m",
+  "tolerance": 3,
+  "bornes": [
+   40,
+   200
+  ],
+  "anecdote": "Elle a été refaite à l'identique, en chêne recouvert de plomb, avec son coq-reliquaire.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-168",
+  "categorie": "Actualité",
+  "sous_theme": "Société",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel territoire français du Pacifique a connu de violentes émeutes en mai 2024 ?",
+  "reponse": "La Nouvelle-Calédonie",
+  "reponses_acceptees": [
+   "Nouvelle-Calédonie",
+   "Nouvelle Caledonie",
+   "Caledonie"
+  ],
+  "anecdote": "La colère portait sur une réforme du corps électoral pour les élections provinciales.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-169",
+  "categorie": "Actualité",
+  "sous_theme": "Société",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle femme a exigé que le procès de ses agresseurs soit public, à Avignon, en 2024 ?",
+  "reponse": "Gisèle Pelicot",
+  "reponses_acceptees": [
+   "Pelicot",
+   "Gisele Pelicot"
+  ],
+  "anecdote": "Sa phrase « La honte doit changer de camp » a fait le tour du monde.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-170",
+  "categorie": "Actualité",
+  "sous_theme": "Société",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : la Joconde a été aspergée de soupe par des militantes écologistes en janvier 2024.",
+  "reponse": "Vrai",
+  "anecdote": "La vitre blindée qui protège le tableau depuis les années 2000 l'a sauvé.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-171",
+  "categorie": "Actualité",
+  "sous_theme": "Télévision",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle chaîne de la TNT, qui diffusait « Touche pas à mon poste ! », s'est arrêtée en février 2025 ?",
+  "reponse": "C8",
+  "reponses_acceptees": [
+   "C 8"
+  ],
+  "anecdote": "L'Arcom n'avait pas renouvelé sa fréquence, citant de nombreux manquements de l'émission.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-172",
+  "categorie": "Actualité",
+  "sous_theme": "Télévision",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle émission musicale TF1 a-t-elle relancée en octobre 2022, quatorze ans après sa dernière saison ?",
+  "reponse": "Star Academy",
+  "reponses_acceptees": [
+   "Star Ac",
+   "Star Academie"
+  ],
+  "anecdote": "Elle avait révélé Nolwenn Leroy, Jenifer et Grégory Lemarchal.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-173",
+  "categorie": "Actualité",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle série française de Netflix avec Omar Sy en gentleman cambrioleur est sortie en 2021 ?",
+  "reponse": "Lupin",
+  "reponses_acceptees": [
+   "Lupin Netflix"
+  ],
+  "anecdote": "Plus de 70 millions de foyers l'ont regardée dans son premier mois.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-174",
+  "categorie": "Actualité",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Dans quelle série Netflix de 2022 Jenna Ortega joue-t-elle la fille de la famille Addams ?",
+  "reponse": "Mercredi",
+  "reponses_acceptees": [
+   "Wednesday"
+  ],
+  "anecdote": "Sa danse sur « Goo Goo Muck » des Cramps est devenue virale sur TikTok.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-175",
+  "categorie": "Actualité",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle mini-série britannique de 2025, tournée épisode par épisode en un seul plan-séquence, a été un phénomène sur Netflix ?",
+  "reponse": "Adolescence",
+  "reponses_acceptees": [
+   "Adolescence Netflix"
+  ],
+  "anecdote": "Elle suit l'arrestation d'un garçon de 13 ans accusé de meurtre.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-176",
+  "categorie": "Actualité",
+  "sous_theme": "Internet",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel youtubeur a organisé en 2022 le GP Explorer, une course de Formule 4 entre vidéastes ?",
+  "reponse": "Squeezie",
+  "reponses_acceptees": [
+   "Lucas Hauchard",
+   "Hauchard"
+  ],
+  "anecdote": "Plus d'un million de personnes ont suivi la course en direct sur Twitch.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-177",
+  "categorie": "Actualité",
+  "sous_theme": "Internet",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel streamer organise le ZEvent, marathon caritatif qui a récolté plus de 10 millions d'euros en 2022 ?",
+  "reponse": "ZeratoR",
+  "reponses_acceptees": [
+   "Zerator",
+   "Zera"
+  ],
+  "anecdote": "Les dons de 2022 sont allés à des associations de protection de l'environnement.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-178",
+  "categorie": "Actualité",
+  "sous_theme": "Internet",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel youtubeur a gravi l'Everest pour son documentaire « Kaizen », sorti en 2024 ?",
+  "reponse": "Inoxtag",
+  "reponses_acceptees": [
+   "Inox",
+   "Ines Benazzouz"
+  ],
+  "anecdote": "Le film, diffusé gratuitement sur YouTube, a aussi été projeté dans des centaines de cinémas.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-179",
+  "categorie": "Actualité",
+  "sous_theme": "Cinéma",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle réalisatrice a remporté la Palme d'or 2023 avec « Anatomie d'une chute » ?",
+  "reponse": "Justine Triet",
+  "reponses_acceptees": [
+   "Triet"
+  ],
+  "anecdote": "Elle est la troisième femme palmée, après Jane Campion et Julia Ducournau.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-180",
+  "categorie": "Actualité",
+  "sous_theme": "Cinéma",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel film sur le multivers a remporté l'Oscar du meilleur film en 2023 ?",
+  "reponse": "Everything Everywhere All at Once",
+  "reponses_acceptees": [
+   "Everything Everywhere",
+   "EEAAO"
+  ],
+  "anecdote": "Il a gagné sept Oscars, dont celui de la meilleure actrice pour Michelle Yeoh.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-181",
+  "categorie": "Actualité",
+  "sous_theme": "Cinéma",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel acteur joue Edmond Dantès dans « Le Comte de Monte-Cristo », grand succès français de 2024 ?",
+  "reponse": "Pierre Niney",
+  "reponses_acceptees": [
+   "Niney"
+  ],
+  "anecdote": "Le film a dépassé les 9 millions d'entrées en France.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-182",
+  "categorie": "Actualité",
+  "sous_theme": "Cinéma",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel humoriste a réalisé « Un p'tit truc en plus », plus gros succès du box-office français en 2024 ?",
+  "reponse": "Artus",
+  "reponses_acceptees": [
+   "Victor Artus Solaro"
+  ],
+  "anecdote": "Le film, tourné avec des comédiens en situation de handicap, a fait plus de 10 millions d'entrées.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-183",
+  "categorie": "Actualité",
+  "sous_theme": "Cinéma",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel acteur incarne Napoléon dans le film de Ridley Scott sorti en 2023 ?",
+  "choix": [
+   "Joaquin Phoenix",
+   "Christian Bale",
+   "Tom Hardy",
+   "Benoît Magimel"
+  ],
+  "reponse": "Joaquin Phoenix",
+  "anecdote": "Le film a été critiqué par des historiens français pour ses nombreuses libertés.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-184",
+  "categorie": "Actualité",
+  "sous_theme": "Littérature",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel écrivain a reçu le prix Goncourt 2023 pour « Veiller sur elle » ?",
+  "reponse": "Jean-Baptiste Andrea",
+  "reponses_acceptees": [
+   "Andrea",
+   "Jean Baptiste Andrea"
+  ],
+  "anecdote": "Le roman suit un sculpteur de petite taille dans l'Italie de Mussolini.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-185",
+  "categorie": "Actualité",
+  "sous_theme": "Littérature",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel écrivain a reçu le prix Goncourt 2025 pour « La Maison vide » ?",
+  "reponse": "Laurent Mauvignier",
+  "reponses_acceptees": [
+   "Mauvignier"
+  ],
+  "anecdote": "Le roman remonte l'histoire de sa propre famille, du début du XXe siècle à l'après-guerre.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-186",
+  "categorie": "Actualité",
+  "sous_theme": "Littérature",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel écrivain sénégalais a remporté le Goncourt 2021 ?",
+  "reponse": "Mohamed Mbougar Sarr",
+  "reponses_acceptees": [
+   "Mbougar Sarr",
+   "Sarr"
+  ],
+  "anecdote": "À 31 ans, il est le premier auteur d'Afrique subsaharienne à le recevoir.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-187",
+  "categorie": "Actualité",
+  "sous_theme": "Littérature",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle romancière sud-coréenne a reçu le prix Nobel de littérature en 2024 ?",
+  "reponse": "Han Kang",
+  "reponses_acceptees": [
+   "Kang"
+  ],
+  "anecdote": "Son roman « La Végétarienne » avait remporté le Booker international en 2016.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-188",
+  "categorie": "Actualité",
+  "sous_theme": "Littérature",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel écrivain hongrois a reçu le Nobel de littérature 2025 ?",
+  "reponse": "László Krasznahorkai",
+  "reponses_acceptees": [
+   "Krasznahorkai",
+   "Laszlo Krasznahorkai"
+  ],
+  "anecdote": "Ses romans aux phrases interminables ont inspiré les films de Béla Tarr, comme « Le Tango de Satan ».",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-189",
+  "categorie": "Actualité",
+  "sous_theme": "Sciences",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quelle biochimiste hongroise a reçu le Nobel de médecine 2023 pour ses travaux sur l'ARN messager ?",
+  "reponse": "Katalin Karikó",
+  "reponses_acceptees": [
+   "Kariko",
+   "Katalin Kariko"
+  ],
+  "anecdote": "Longtemps marginalisée, elle avait été rétrogradée par son université dans les années 1990.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-190",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quelle militante iranienne emprisonnée a reçu le Nobel de la paix 2023 ?",
+  "reponse": "Narges Mohammadi",
+  "reponses_acceptees": [
+   "Mohammadi"
+  ],
+  "anecdote": "Ce sont ses jumeaux, exilés à Paris, qui ont reçu le prix à sa place.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-191",
+  "categorie": "Actualité",
+  "sous_theme": "Sciences",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : le Nobel de physique 2024 a récompensé des pionniers de l'intelligence artificielle.",
+  "reponse": "Vrai",
+  "anecdote": "Geoffrey Hinton et John Hopfield ont été primés pour leurs réseaux de neurones artificiels.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-192",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel casque de réalité mixte Apple a-t-il commercialisé en 2024 ?",
+  "reponse": "Vision Pro",
+  "reponses_acceptees": [
+   "Apple Vision Pro",
+   "Vision"
+  ],
+  "anecdote": "Il coûtait 3 499 dollars à son lancement aux États-Unis.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-193",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle IA chinoise a fait plonger l'action Nvidia en janvier 2025 ?",
+  "reponse": "DeepSeek",
+  "reponses_acceptees": [
+   "Deep Seek"
+  ],
+  "anecdote": "Nvidia a perdu près de 600 milliards de dollars de valeur boursière en une journée, un record.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-194",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle start-up française, fondée en 2023, a lancé l'assistant d'IA « Le Chat » ?",
+  "reponse": "Mistral AI",
+  "reponses_acceptees": [
+   "Mistral"
+  ],
+  "anecdote": "Elle tire son nom du vent froid qui souffle dans la vallée du Rhône.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-195",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "En juillet 2025, quelle entreprise est devenue la première à valoir 4 000 milliards de dollars en Bourse ?",
+  "reponse": "Nvidia",
+  "reponses_acceptees": [
+   "NVIDIA"
+  ],
+  "anecdote": "Ses puces graphiques équipent la plupart des centres de données consacrés à l'IA.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-196",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel réseau social Meta a-t-il lancé en juillet 2023 pour concurrencer Twitter ?",
+  "reponse": "Threads",
+  "reponses_acceptees": [
+   "Threads Meta"
+  ],
+  "anecdote": "Il a dépassé les 100 millions d'inscrits en cinq jours.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-197",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quelle entreprise de cybersécurité a provoqué une panne informatique mondiale en juillet 2024 ?",
+  "reponse": "CrowdStrike",
+  "reponses_acceptees": [
+   "Crowdstrike",
+   "Crowd Strike"
+  ],
+  "anecdote": "Une mise à jour défectueuse a bloqué quelque 8,5 millions d'ordinateurs Windows.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-198",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Pour combien de milliards de dollars Microsoft a-t-il racheté Activision Blizzard, en 2023 ?",
+  "reponse": 69,
+  "unite": "milliards de $",
+  "tolerance": 3,
+  "bornes": [
+   10,
+   150
+  ],
+  "anecdote": "C'est le plus gros rachat de l'histoire du jeu vidéo ; il a mis près de deux ans à être autorisé.",
+  "annee_reference": 2023
+ },
+ {
+  "id": "act-199",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Comment s'appelle le robot humanoïde présenté par Tesla en 2022 ?",
+  "choix": [
+   "Optimus",
+   "Atlas",
+   "Figure",
+   "Ameca"
+  ],
+  "reponse": "Optimus",
+  "anecdote": "Lors de son annonce, en 2021, c'est un danseur déguisé en robot qui était monté sur scène.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-200",
+  "categorie": "Actualité",
+  "sous_theme": "Technologie",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel patron de l'actualité 2022 suis-je ?",
+  "reponse": "Elon Musk",
+  "reponses_acceptees": [
+   "Musk"
+  ],
+  "indices": [
+   "Je suis né à Pretoria",
+   "J'ai cofondé PayPal",
+   "J'ai fondé SpaceX",
+   "J'ai racheté Twitter en 2022",
+   "Je dirige Tesla"
+  ],
+  "anecdote": "Il a renommé Twitter « X », la lettre fétiche de ses entreprises.",
+  "annee_reference": 2022
+ },
+ {
+  "id": "act-201",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel département, confié à Elon Musk en 2025, devait réduire les dépenses fédérales américaines ?",
+  "reponse": "DOGE",
+  "reponses_acceptees": [
+   "Doge",
+   "Department of Government Efficiency"
+  ],
+  "anecdote": "Son sigle est un clin d'œil au chien shiba et à la cryptomonnaie dogecoin.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-202",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment Donald Trump a-t-il surnommé le 2 avril 2025, jour où il a annoncé des droits de douane massifs ?",
+  "reponse": "Liberation Day",
+  "reponses_acceptees": [
+   "Jour de la libération",
+   "Liberation"
+  ],
+  "anecdote": "Les Bourses mondiales ont fortement chuté les jours suivants.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-203",
+  "categorie": "Actualité",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "En 2025, comment Donald Trump a-t-il rebaptisé le golfe du Mexique ?",
+  "reponse": "Le golfe d'Amérique",
+  "reponses_acceptees": [
+   "Golfe d'Amerique",
+   "Gulf of America",
+   "Amérique"
+  ],
+  "anecdote": "L'agence AP a été privée d'accès au Bureau ovale pour avoir refusé ce nom.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-204",
+  "categorie": "Actualité",
+  "sous_theme": "Espace",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment s'appelait le petit hélicoptère de la NASA qui a volé sur Mars en 2021 ?",
+  "reponse": "Ingenuity",
+  "reponses_acceptees": [
+   "Ingeniosity"
+  ],
+  "anecdote": "C'était le premier vol motorisé sur une autre planète ; il en a réalisé 72.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-205",
+  "categorie": "Actualité",
+  "sous_theme": "Espace",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel rover de la NASA s'est posé dans le cratère Jezero en février 2021 ?",
+  "reponse": "Perseverance",
+  "reponses_acceptees": [
+   "Persévérance",
+   "Perseverence"
+  ],
+  "anecdote": "Il collecte des échantillons de roche qui devront un jour être rapportés sur Terre.",
+  "annee_reference": 2021
+ },
+ {
+  "id": "act-206",
+  "categorie": "Actualité",
+  "sous_theme": "Espace",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "En octobre 2024, SpaceX a rattrapé avec sa tour de lancement le premier étage de quelle fusée ?",
+  "reponse": "Starship",
+  "reponses_acceptees": [
+   "Super Heavy"
+  ],
+  "anecdote": "La tour, surnommée Mechazilla, l'a saisi avec deux bras appelés « baguettes ».",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-207",
+  "categorie": "Actualité",
+  "sous_theme": "Climat",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Dans quelle ville amazonienne du Brésil s'est tenue la COP30, en novembre 2025 ?",
+  "reponse": "Belém",
+  "reponses_acceptees": [
+   "Belem"
+  ],
+  "anecdote": "Le choix de la ville voulait mettre la forêt amazonienne au cœur des discussions.",
+  "annee_reference": 2025
+ },
+ {
+  "id": "act-208",
+  "categorie": "Actualité",
+  "sous_theme": "Climat",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Dans quelle capitale s'est tenue la COP29, en novembre 2024 ?",
+  "reponse": "Bakou",
+  "reponses_acceptees": [
+   "Baku"
+  ],
+  "anecdote": "L'Azerbaïdjan, pays hôte, tire l'essentiel de ses exportations du pétrole et du gaz.",
+  "annee_reference": 2024
+ },
+ {
+  "id": "act-209",
+  "categorie": "Actualité",
+  "sous_theme": "Climat",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel pays a accueilli la COP28, en 2023 ?",
+  "choix": [
+   "Les Émirats arabes unis",
+   "L'Égypte",
+   "L'Azerbaïdjan",
+   "Le Qatar"
+  ],
+  "reponse": "Les Émirats arabes unis",
+  "anecdote": "Elle était présidée par le patron de la compagnie pétrolière nationale, Sultan Al Jaber.",
+  "annee_reference": 2023
  }
 ]

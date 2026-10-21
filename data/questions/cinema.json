@@ -1367,5 +1367,357 @@
   "question": "Vrai ou faux : Federico Fellini a remporté quatre fois l'Oscar du meilleur film en langue étrangère.",
   "reponse": "Vrai",
   "anecdote": "Avec La Strada, Les Nuits de Cabiria, Huit et demi et Amarcord, avant un Oscar d'honneur en 1993."
+ },
+ {
+  "id": "cin-089",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel film de James Cameron sorti en 1997 raconte l'histoire de Jack et Rose ?",
+  "reponse": "Titanic",
+  "reponses_acceptees": [
+   "Le Titanic"
+  ],
+  "anecdote": "Il a remporté onze Oscars, un record partagé avec « Ben-Hur » et « Le Retour du roi »."
+ },
+ {
+  "id": "cin-090",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel réalisateur a signé « E.T. » et « Jurassic Park » ?",
+  "reponse": "Steven Spielberg",
+  "reponses_acceptees": [
+   "Spielberg"
+  ],
+  "anecdote": "Il a reçu son premier Oscar de meilleur réalisateur pour « La Liste de Schindler »."
+ },
+ {
+  "id": "cin-091",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Dans quel quartier de Paris vit Amélie Poulain ?",
+  "reponse": "Montmartre",
+  "reponses_acceptees": [
+   "La butte Montmartre"
+  ],
+  "anecdote": "Le café des Deux Moulins, où elle travaille, existe vraiment, rue Lepic."
+ },
+ {
+  "id": "cin-092",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel acteur joue « Le Grand Blond avec une chaussure noire » ?",
+  "reponse": "Pierre Richard",
+  "reponses_acceptees": [
+   "Richard"
+  ],
+  "anecdote": "Son vrai nom est Pierre Defays ; il a joué trois fois en duo avec Gérard Depardieu."
+ },
+ {
+  "id": "cin-093",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel film avec Omar Sy et François Cluzet est sorti en 2011 ?",
+  "reponse": "Intouchables",
+  "reponses_acceptees": [
+   "Les Intouchables"
+  ],
+  "anecdote": "Il s'inspire de l'histoire vraie de Philippe Pozzo di Borgo et de son auxiliaire de vie."
+ },
+ {
+  "id": "cin-094",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel boxeur Bruce Willis incarne-t-il dans « Pulp Fiction » ?",
+  "reponse": "Butch",
+  "reponses_acceptees": [
+   "Butch Coolidge"
+  ],
+  "anecdote": "Il refuse de se coucher dans un match truqué, malgré les ordres de Marsellus Wallace."
+ },
+ {
+  "id": "cin-095",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel personnage révèle à Luke « Je suis ton père » dans « L'Empire contre-attaque » ?",
+  "reponse": "Dark Vador",
+  "reponses_acceptees": [
+   "Darth Vader",
+   "Vador",
+   "Anakin Skywalker",
+   "Anakin"
+  ],
+  "anecdote": "La vraie réplique commence par « Non », et est très souvent mal citée."
+ },
+ {
+  "id": "cin-096",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment s'appelle le petit robot nettoyeur du film Pixar sorti en 2008 ?",
+  "reponse": "WALL-E",
+  "reponses_acceptees": [
+   "Wall E",
+   "Walle"
+  ],
+  "anecdote": "Son nom signifie « Waste Allocation Load Lifter Earth-Class »."
+ },
+ {
+  "id": "cin-097",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Dans « Le Roi lion », comment s'appelle l'oncle de Simba ?",
+  "reponse": "Scar",
+  "reponses_acceptees": [
+   "Skar"
+  ],
+  "anecdote": "Jeremy Irons lui prête sa voix dans la version originale."
+ },
+ {
+  "id": "cin-098",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel acteur incarne le Joker dans « The Dark Knight », en 2008 ?",
+  "reponse": "Heath Ledger",
+  "reponses_acceptees": [
+   "Ledger"
+  ],
+  "anecdote": "Il a reçu l'Oscar du meilleur second rôle à titre posthume."
+ },
+ {
+  "id": "cin-099",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel réalisateur a tourné « Les Parapluies de Cherbourg » ?",
+  "reponse": "Jacques Demy",
+  "reponses_acceptees": [
+   "Demy"
+  ],
+  "anecdote": "Tous les dialogues du film sont chantés, sur une musique de Michel Legrand."
+ },
+ {
+  "id": "cin-100",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel réalisateur a tourné « Pierrot le Fou » en 1965, avec Belmondo et Anna Karina ?",
+  "reponse": "Jean-Luc Godard",
+  "reponses_acceptees": [
+   "Godard"
+  ],
+  "anecdote": "Belmondo y finit le visage peint en bleu, entouré de bâtons de dynamite."
+ },
+ {
+  "id": "cin-101",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Dans « La Haine », comment s'appelle le personnage joué par Vincent Cassel ?",
+  "reponse": "Vinz",
+  "reponses_acceptees": [
+   "Vince"
+  ],
+  "anecdote": "Le film a valu à Mathieu Kassovitz le prix de la mise en scène à Cannes en 1995."
+ },
+ {
+  "id": "cin-102",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Dans « Casablanca », quel morceau Rick demande-t-il à Sam de jouer ?",
+  "reponse": "As Time Goes By",
+  "reponses_acceptees": [
+   "Time Goes By"
+  ],
+  "anecdote": "La réplique « Play it again, Sam » n'est jamais prononcée telle quelle dans le film."
+ },
+ {
+  "id": "cin-103",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quelle actrice suis-je ?",
+  "reponse": "Isabelle Huppert",
+  "reponses_acceptees": [
+   "Huppert"
+  ],
+  "indices": [
+   "Je suis née à Paris en 1953",
+   "J'ai été dirigée par Michael Haneke dans « La Pianiste »",
+   "J'ai joué dans « Elle » de Paul Verhoeven",
+   "Je suis l'actrice la plus nommée de l'histoire des César"
+  ],
+  "anecdote": "Elle a reçu deux fois le prix d'interprétation à Cannes, en 1978 et en 2001."
+ },
+ {
+  "id": "cin-104",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel acteur suis-je ?",
+  "reponse": "Omar Sy",
+  "reponses_acceptees": [
+   "Sy"
+  ],
+  "indices": [
+   "J'ai grandi à Trappes",
+   "J'ai formé un duo comique avec Fred Testot",
+   "Je joue Assane Diop dans « Lupin »",
+   "J'ai reçu le César du meilleur acteur pour « Intouchables »"
+  ],
+  "anecdote": "Il est le premier acteur noir à avoir reçu ce César."
+ },
+ {
+  "id": "cin-105",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel réalisateur suis-je ?",
+  "reponse": "Christopher Nolan",
+  "reponses_acceptees": [
+   "Nolan"
+  ],
+  "indices": [
+   "Je suis né à Londres en 1970",
+   "Je préfère tourner sur pellicule",
+   "J'ai réalisé « Inception » et « Interstellar »",
+   "J'ai reçu l'Oscar du meilleur réalisateur pour « Oppenheimer »"
+  ],
+  "anecdote": "Pour « Tenet », il a fait écraser un vrai Boeing 747 plutôt que d'utiliser des effets numériques."
+ },
+ {
+  "id": "cin-106",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Acteurs",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quelle actrice suis-je ?",
+  "reponse": "Romy Schneider",
+  "reponses_acceptees": [
+   "Schneider"
+  ],
+  "indices": [
+   "Je suis née à Vienne en 1938",
+   "J'ai été fiancée à Alain Delon",
+   "J'ai joué dans « Les Choses de la vie »",
+   "J'ai incarné l'impératrice Sissi"
+  ],
+  "anecdote": "Elle a reçu deux César de la meilleure actrice, en 1976 et 1979."
+ },
+ {
+  "id": "cin-107",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Réalisateurs",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quel réalisateur suis-je ?",
+  "reponse": "Henri-Georges Clouzot",
+  "reponses_acceptees": [
+   "Clouzot"
+  ],
+  "indices": [
+   "Je suis né à Niort en 1907",
+   "J'ai réalisé « Le Corbeau » en 1943",
+   "J'ai gagné le Grand Prix de Cannes et l'Ours d'or avec le même film",
+   "J'ai réalisé « Le Salaire de la peur » et « Les Diaboliques »"
+  ],
+  "anecdote": "Son film inachevé « L'Enfer » a été en partie reconstitué dans un documentaire en 2009."
+ },
+ {
+  "id": "cin-108",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel film suis-je ?",
+  "reponse": "Le Dîner de cons",
+  "reponses_acceptees": [
+   "Diner de cons"
+  ],
+  "indices": [
+   "Je suis d'abord une pièce de théâtre",
+   "François Pignon y est l'invité principal",
+   "Jacques Villeret y fait des maquettes en allumettes",
+   "Mon titre évoque un repas où chacun amène un idiot"
+  ],
+  "anecdote": "Réalisé par Francis Veber en 1998, il a dépassé 9 millions d'entrées."
+ },
+ {
+  "id": "cin-109",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de minutes dure le film « Titanic » de James Cameron ?",
+  "reponse": 194,
+  "unite": "minutes",
+  "tolerance": 5,
+  "bornes": [
+   80,
+   300
+  ],
+  "anecdote": "Le naufrage réel, lui, a duré environ 2 h 40."
+ },
+ {
+  "id": "cin-110",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "En quelle année est sorti « Les Dents de la mer », de Steven Spielberg ?",
+  "reponse": 1975,
+  "unite": "année",
+  "tolerance": 1,
+  "bornes": [
+   1950,
+   2010
+  ],
+  "anecdote": "Il est souvent considéré comme le premier « blockbuster » de l'été."
+ },
+ {
+  "id": "cin-111",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : Sean Connery a été le premier acteur à jouer James Bond au cinéma.",
+  "reponse": "Vrai",
+  "anecdote": "C'était dans « James Bond 007 contre Dr No », en 1962."
+ },
+ {
+  "id": "cin-112",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : « Psychose » d'Hitchcock serait le premier film américain à montrer une chasse d'eau.",
+  "reponse": "Vrai",
+  "anecdote": "La censure de l'époque jugeait les toilettes trop vulgaires pour l'écran."
  }
 ]

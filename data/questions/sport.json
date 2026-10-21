@@ -1227,5 +1227,318 @@
   "question": "Vrai ou faux : Pierre de Coubertin a lui-même remporté une médaille d'or olympique.",
   "reponse": "Vrai",
   "anecdote": "En 1912, il a gagné le concours d'art (littérature) avec son « Ode au sport », signée sous pseudonyme."
+ },
+ {
+  "id": "spo-080",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel club anglais est surnommé « les Red Devils » ?",
+  "reponse": "Manchester United",
+  "reponses_acceptees": [
+   "Man United",
+   "Manchester Utd",
+   "Man Utd"
+  ],
+  "anecdote": "Son stade, Old Trafford, est surnommé « le théâtre des rêves »."
+ },
+ {
+  "id": "spo-081",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel club de Turin joue en maillot rayé noir et blanc ?",
+  "reponse": "La Juventus",
+  "reponses_acceptees": [
+   "Juventus",
+   "Juve"
+  ],
+  "anecdote": "Elle est surnommée « la Vieille Dame »."
+ },
+ {
+  "id": "spo-082",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel gardien était le capitaine des Bleus champions du monde en 2018 ?",
+  "reponse": "Hugo Lloris",
+  "reponses_acceptees": [
+   "Lloris"
+  ],
+  "anecdote": "Il détient le record de sélections en équipe de France, avec 145 matchs."
+ },
+ {
+  "id": "spo-083",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel Français a entraîné Arsenal pendant 22 ans ?",
+  "reponse": "Arsène Wenger",
+  "reponses_acceptees": [
+   "Wenger",
+   "Arsene Wenger"
+  ],
+  "anecdote": "Ses « Invincibles » ont fini la saison 2003-2004 sans aucune défaite."
+ },
+ {
+  "id": "spo-084",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel joueur français a reçu le Ballon d'or en 1998 ?",
+  "reponse": "Zinédine Zidane",
+  "reponses_acceptees": [
+   "Zidane",
+   "Zizou",
+   "Zinedine Zidane"
+  ],
+  "anecdote": "Il avait marqué deux buts de la tête en finale de la Coupe du monde."
+ },
+ {
+  "id": "spo-085",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel joueur néerlandais a donné son nom à un célèbre crochet, réalisé à la Coupe du monde 1974 ?",
+  "reponse": "Johan Cruyff",
+  "reponses_acceptees": [
+   "Cruyff",
+   "Cruijff"
+  ],
+  "anecdote": "Sa victime, le Suédois Jan Olsson, est restée célèbre pour cette action."
+ },
+ {
+  "id": "spo-086",
+  "categorie": "Sport",
+  "sous_theme": "Tennis",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle joueuse américaine a remporté 23 titres du Grand Chelem en simple ?",
+  "reponse": "Serena Williams",
+  "reponses_acceptees": [
+   "Serena",
+   "Williams"
+  ],
+  "anecdote": "Elle a gagné l'Open d'Australie 2017 alors qu'elle était enceinte."
+ },
+ {
+  "id": "spo-087",
+  "categorie": "Sport",
+  "sous_theme": "Tennis",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel joueur français a remporté Roland-Garros en 1983 ?",
+  "reponse": "Yannick Noah",
+  "reponses_acceptees": [
+   "Noah"
+  ],
+  "anecdote": "Il est le dernier Français vainqueur en simple messieurs à Paris."
+ },
+ {
+  "id": "spo-088",
+  "categorie": "Sport",
+  "sous_theme": "Tennis",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quelle joueuse française a remporté Roland-Garros en 2000 ?",
+  "reponse": "Mary Pierce",
+  "reponses_acceptees": [
+   "Pierce"
+  ],
+  "anecdote": "Née à Montréal, elle avait aussi gagné l'Open d'Australie en 1995."
+ },
+ {
+  "id": "spo-089",
+  "categorie": "Sport",
+  "sous_theme": "Cyclisme",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel coureur français a perdu le Tour de France 1989 pour seulement 8 secondes ?",
+  "reponse": "Laurent Fignon",
+  "reponses_acceptees": [
+   "Fignon"
+  ],
+  "anecdote": "Il a été battu par Greg LeMond lors du contre-la-montre final sur les Champs-Élysées."
+ },
+ {
+  "id": "spo-090",
+  "categorie": "Sport",
+  "sous_theme": "Rugby",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Comment s'appelle la danse guerrière des All Blacks avant les matchs ?",
+  "reponse": "Le haka",
+  "reponses_acceptees": [
+   "Haka"
+  ],
+  "anecdote": "Le plus connu, « Ka Mate », a été composé par le chef maori Te Rauparaha."
+ },
+ {
+  "id": "spo-091",
+  "categorie": "Sport",
+  "sous_theme": "Basket",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Dans quelle équipe Michael Jordan a-t-il remporté six titres NBA ?",
+  "reponse": "Les Chicago Bulls",
+  "reponses_acceptees": [
+   "Chicago Bulls",
+   "Bulls",
+   "Chicago"
+  ],
+  "anecdote": "Il a réalisé deux triplés, de 1991 à 1993 puis de 1996 à 1998."
+ },
+ {
+  "id": "spo-092",
+  "categorie": "Sport",
+  "sous_theme": "Ski",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel skieur autrichien a remporté huit fois de suite la Coupe du monde générale ?",
+  "reponse": "Marcel Hirscher",
+  "reponses_acceptees": [
+   "Hirscher"
+  ],
+  "anecdote": "De 2012 à 2019 ; il a fait son retour en 2024 sous les couleurs des Pays-Bas."
+ },
+ {
+  "id": "spo-093",
+  "categorie": "Sport",
+  "sous_theme": "Biathlon",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel biathlète français a remporté sept Coupes du monde générales d'affilée, de 2012 à 2018 ?",
+  "reponse": "Martin Fourcade",
+  "reponses_acceptees": [
+   "Fourcade"
+  ],
+  "anecdote": "Ses cinq titres olympiques sont un record pour un Français aux Jeux d'hiver."
+ },
+ {
+  "id": "spo-094",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel footballeur suis-je ?",
+  "reponse": "Diego Maradona",
+  "reponses_acceptees": [
+   "Maradona"
+  ],
+  "indices": [
+   "Je suis né à Lanús en 1960",
+   "J'ai été le héros du club de Naples",
+   "J'ai marqué un but de la « main de Dieu »",
+   "J'ai été champion du monde avec l'Argentine en 1986"
+  ],
+  "anecdote": "Le stade de Naples porte son nom depuis sa mort, en 2020."
+ },
+ {
+  "id": "spo-095",
+  "categorie": "Sport",
+  "sous_theme": "Tennis",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quelle sportive suis-je ?",
+  "reponse": "Suzanne Lenglen",
+  "reponses_acceptees": [
+   "Lenglen"
+  ],
+  "indices": [
+   "Je suis née à Paris en 1899",
+   "J'ai gagné six fois Wimbledon",
+   "Je jouais en jupe plissée au-dessus du mollet",
+   "Un court de Roland-Garros porte mon nom"
+  ],
+  "anecdote": "On la surnommait « la Divine »."
+ },
+ {
+  "id": "spo-096",
+  "categorie": "Sport",
+  "sous_theme": "Cyclisme",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel coureur suis-je ?",
+  "reponse": "Jacques Anquetil",
+  "reponses_acceptees": [
+   "Anquetil"
+  ],
+  "indices": [
+   "Je suis né en Normandie en 1934",
+   "J'ai été le premier à gagner cinq Tours de France",
+   "J'ai eu une rivalité célèbre avec Raymond Poulidor",
+   "On me surnommait « Monsieur Chrono »"
+  ],
+  "anecdote": "Il a gagné le Tour en 1957 puis de 1961 à 1964."
+ },
+ {
+  "id": "spo-097",
+  "categorie": "Sport",
+  "sous_theme": "Athlétisme",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel athlète suis-je ?",
+  "reponse": "Carl Lewis",
+  "reponses_acceptees": [
+   "Lewis"
+  ],
+  "indices": [
+   "Je suis né en Alabama en 1961",
+   "On m'a surnommé « le Fils du vent »",
+   "J'ai gagné neuf médailles d'or olympiques",
+   "J'ai remporté quatre titres en 1984, comme Jesse Owens en 1936"
+  ],
+  "anecdote": "Il a gagné le saut en longueur à quatre Jeux olympiques consécutifs."
+ },
+ {
+  "id": "spo-098",
+  "categorie": "Sport",
+  "sous_theme": "Rugby",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quel rugbyman suis-je ?",
+  "reponse": "Serge Blanco",
+  "reponses_acceptees": [
+   "Blanco"
+  ],
+  "indices": [
+   "Je suis né à Caracas en 1958",
+   "J'ai joué toute ma carrière à Biarritz",
+   "J'ai marqué un essai légendaire contre l'Australie en 1987",
+   "J'ai été l'arrière vedette du XV de France"
+  ],
+  "anecdote": "Il a ensuite présidé la Ligue nationale de rugby."
+ },
+ {
+  "id": "spo-099",
+  "categorie": "Sport",
+  "sous_theme": "Basket",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de points Kobe Bryant a-t-il marqués en un seul match, en janvier 2006 ?",
+  "reponse": 81,
+  "unite": "points",
+  "tolerance": 2,
+  "bornes": [
+   30,
+   150
+  ],
+  "anecdote": "Seul Wilt Chamberlain, avec 100 points en 1962, a fait mieux."
+ },
+ {
+  "id": "spo-100",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "vf",
+  "difficulte": 2,
+  "question": "Vrai ou faux : la France a remporté la Coupe du monde 1998 en battant le Brésil 3-0 en finale.",
+  "reponse": "Vrai",
+  "anecdote": "La finale s'est jouée au Stade de France, à Saint-Denis, le 12 juillet."
  }
 ]

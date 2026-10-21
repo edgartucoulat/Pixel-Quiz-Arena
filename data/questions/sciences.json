@@ -1370,5 +1370,282 @@
    "Helicobacter pylori"
   ],
   "anecdote": "Tombé malade comme prévu, il a reçu le prix Nobel de médecine 2005 avec Robin Warren."
+ },
+ {
+  "id": "sci-089",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel métal mou, de symbole Na, réagit violemment au contact de l'eau ?",
+  "reponse": "Le sodium",
+  "reponses_acceptees": [
+   "Sodium"
+  ],
+  "anecdote": "Le symbole vient de son nom latin, « natrium »."
+ },
+ {
+  "id": "sci-090",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Astronomie",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quelle est la plus grosse planète du système solaire ?",
+  "reponse": "Jupiter",
+  "reponses_acceptees": [
+   "La planete Jupiter"
+  ],
+  "anecdote": "Sa Grande Tache rouge est une tempête plus large que la Terre."
+ },
+ {
+  "id": "sci-091",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Biologie",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel organe produit l'insuline ?",
+  "reponse": "Le pancréas",
+  "reponses_acceptees": [
+   "Pancreas"
+  ],
+  "anecdote": "L'insuline est fabriquée par des cellules regroupées en îlots de Langerhans."
+ },
+ {
+  "id": "sci-092",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Physique",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel physicien a formulé la théorie de la relativité ?",
+  "reponse": "Albert Einstein",
+  "reponses_acceptees": [
+   "Einstein"
+  ],
+  "anecdote": "Il a pourtant reçu son prix Nobel pour ses travaux sur l'effet photoélectrique."
+ },
+ {
+  "id": "sci-093",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Biologie",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle protéine transporte l'oxygène dans le sang ?",
+  "reponse": "L'hémoglobine",
+  "reponses_acceptees": [
+   "Hemoglobine"
+  ],
+  "anecdote": "C'est elle qui donne leur couleur rouge aux globules."
+ },
+ {
+  "id": "sci-094",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel gaz rare donne une lumière rouge-orangé aux enseignes lumineuses ?",
+  "reponse": "Le néon",
+  "reponses_acceptees": [
+   "Neon"
+  ],
+  "anecdote": "C'est le Français Georges Claude qui a mis au point ces tubes, en 1910."
+ },
+ {
+  "id": "sci-095",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Astronomie",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel est le plus grand satellite de Saturne ?",
+  "reponse": "Titan",
+  "reponses_acceptees": [
+   "Titan Saturne"
+  ],
+  "anecdote": "C'est la seule lune du système solaire dotée d'une atmosphère épaisse."
+ },
+ {
+  "id": "sci-096",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Médecine",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel savant a mis au point le vaccin contre la rage, en 1885 ?",
+  "reponse": "Louis Pasteur",
+  "reponses_acceptees": [
+   "Pasteur"
+  ],
+  "anecdote": "Son premier patient, Joseph Meister, avait 9 ans."
+ },
+ {
+  "id": "sci-097",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Physique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle particule, prédite en 1964, a été détectée au CERN en 2012 ?",
+  "reponse": "Le boson de Higgs",
+  "reponses_acceptees": [
+   "Boson de Higgs",
+   "Higgs",
+   "Boson"
+  ],
+  "anecdote": "Peter Higgs et François Englert ont reçu le Nobel de physique en 2013."
+ },
+ {
+  "id": "sci-098",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Biologie",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel naturaliste anglais a publié « De l'origine des espèces », en 1859 ?",
+  "reponse": "Charles Darwin",
+  "reponses_acceptees": [
+   "Darwin"
+  ],
+  "anecdote": "Son voyage autour du monde à bord du Beagle a duré près de cinq ans."
+ },
+ {
+  "id": "sci-099",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Physique",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quelle physicienne autrichienne a expliqué la fission nucléaire avec Otto Frisch, en 1939 ?",
+  "reponse": "Lise Meitner",
+  "reponses_acceptees": [
+   "Meitner"
+  ],
+  "anecdote": "L'élément 109, le meitnérium, porte son nom."
+ },
+ {
+  "id": "sci-100",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Astronomie",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel astronome a découvert Uranus en 1781 ?",
+  "reponse": "William Herschel",
+  "reponses_acceptees": [
+   "Herschel"
+  ],
+  "anecdote": "Il voulait l'appeler « l'étoile de George », en l'honneur du roi George III."
+ },
+ {
+  "id": "sci-101",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Géologie",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle échelle classe la dureté des minéraux de 1 à 10 ?",
+  "reponse": "L'échelle de Mohs",
+  "reponses_acceptees": [
+   "Mohs",
+   "Echelle de Mohs"
+  ],
+  "anecdote": "Elle a été conçue en 1812 par le minéralogiste allemand Friedrich Mohs."
+ },
+ {
+  "id": "sci-102",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Sciences",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel savant suis-je ?",
+  "reponse": "Isaac Newton",
+  "reponses_acceptees": [
+   "Newton"
+  ],
+  "indices": [
+   "Je suis né en Angleterre en 1643",
+   "J'ai dirigé la Monnaie royale",
+   "J'ai construit un télescope à miroir",
+   "On dit qu'une pomme m'a inspiré ma loi de la gravitation"
+  ],
+  "anecdote": "Il a aussi consacré beaucoup de temps à l'alchimie."
+ },
+ {
+  "id": "sci-103",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Sciences",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel savant suis-je ?",
+  "reponse": "Galilée",
+  "reponses_acceptees": [
+   "Galileo Galilei",
+   "Galilee",
+   "Galileo"
+  ],
+  "indices": [
+   "Je suis né à Pise en 1564",
+   "J'ai découvert quatre lunes de Jupiter",
+   "J'ai été condamné par l'Inquisition en 1633",
+   "On me prête la phrase « Et pourtant elle tourne »"
+  ],
+  "anecdote": "L'Église l'a officiellement réhabilité en 1992."
+ },
+ {
+  "id": "sci-104",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Sciences",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quelle savante suis-je ?",
+  "reponse": "Hypatie",
+  "reponses_acceptees": [
+   "Hypatia",
+   "Hypathie"
+  ],
+  "indices": [
+   "J'ai vécu à Alexandrie",
+   "J'étais mathématicienne et astronome",
+   "J'ai enseigné la philosophie néoplatonicienne",
+   "J'ai été tuée par une foule de chrétiens en 415"
+  ],
+  "anecdote": "Le film « Agora » d'Alejandro Amenábar retrace sa vie."
+ },
+ {
+  "id": "sci-105",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel élément suis-je ?",
+  "reponse": "L'oxygène",
+  "reponses_acceptees": [
+   "Oxygene"
+  ],
+  "indices": [
+   "Mon numéro atomique est 8",
+   "Lavoisier m'a donné mon nom",
+   "Sous forme de trois atomes, je forme l'ozone",
+   "Je représente environ 21 % de l'air que l'on respire"
+  ],
+  "anecdote": "Son nom signifie « qui engendre les acides » en grec."
+ },
+ {
+  "id": "sci-106",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "À quelle température, en degrés Celsius, fond le fer ?",
+  "reponse": 1538,
+  "unite": "°C",
+  "tolerance": 30,
+  "bornes": [
+   500,
+   3000
+  ],
+  "anecdote": "Les hauts fourneaux dépassent ces températures pour obtenir de la fonte liquide."
+ },
+ {
+  "id": "sci-107",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Chimie",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : le diamant et le graphite sont tous deux faits de carbone pur.",
+  "reponse": "Vrai",
+  "anecdote": "Seule la façon dont les atomes sont agencés diffère."
  }
 ]

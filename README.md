@@ -166,13 +166,14 @@ Tout est gratuit et sans serveur. Le bouton **🎚️ Réglages** du plateau rè
 
 ## Les questions
 
-**1121 questions** en français, réparties en 16 catégories : Histoire, Actualité (2020-2026),
+**1515 questions** en français, réparties en 16 catégories : Histoire, Actualité (2020-2026),
 Géographie, Sciences & Nature, Cinéma & Séries, Musique, Sport, Littérature, Art & Architecture,
 Gastronomie, Langue française, Insolite, Records & chiffres, Pop culture & jeux vidéo,
 Inventions & tech, Personnalités.
 
-Elles sont réparties en environ 45 % de QCM, 20 % de fourchettes, 15 % de questions à indices,
-10 % de vrai/faux et 10 % de réponses libres. Chaque question a son anecdote.
+Elles sont réparties en environ 34 % de QCM, 17 % de fourchettes, 13 % de questions à indices,
+9 % de vrai/faux et 26 % de réponses libres, à taper (avec leurs variantes acceptées).
+Chaque question a son anecdote.
 
 Échelle de difficulté (il n'y a plus de questions de niveau 1, jugées trop évidentes) :
 

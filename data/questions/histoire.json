@@ -1668,5 +1668,307 @@
    "Je suis mort au fort de Joux, dans le Jura, en 1803"
   ],
   "anecdote": "Haïti a proclamé son indépendance quelques mois après sa mort, le 1er janvier 1804."
+ },
+ {
+  "id": "his-108",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quelle jeune femme a fait lever le siège d'Orléans en 1429 ?",
+  "reponse": "Jeanne d'Arc",
+  "reponses_acceptees": [
+   "Jeanne",
+   "La Pucelle"
+  ],
+  "anecdote": "Elle a ensuite conduit Charles VII se faire sacrer à Reims."
+ },
+ {
+  "id": "his-109",
+  "categorie": "Histoire",
+  "sous_theme": "Ancien Régime",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel roi de France est surnommé « le Roi-Soleil » ?",
+  "reponse": "Louis XIV",
+  "reponses_acceptees": [
+   "Louis 14",
+   "Louis quatorze"
+  ],
+  "anecdote": "Il a fait de Versailles le siège du pouvoir en 1682."
+ },
+ {
+  "id": "his-110",
+  "categorie": "Histoire",
+  "sous_theme": "Révolution",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quelle forteresse parisienne a été prise le 14 juillet 1789 ?",
+  "reponse": "La Bastille",
+  "reponses_acceptees": [
+   "Bastille"
+  ],
+  "anecdote": "Elle ne renfermait plus que sept prisonniers ce jour-là."
+ },
+ {
+  "id": "his-111",
+  "categorie": "Histoire",
+  "sous_theme": "Empire",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Sur quelle île Napoléon est-il mort, en 1821 ?",
+  "reponse": "Sainte-Hélène",
+  "reponses_acceptees": [
+   "Sainte Helene",
+   "St Helene"
+  ],
+  "anecdote": "Cette île britannique de l'Atlantique Sud se trouve à près de 2 000 km des côtes africaines."
+ },
+ {
+  "id": "his-112",
+  "categorie": "Histoire",
+  "sous_theme": "Empire",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle victoire de 1805 est surnommée « la bataille des Trois Empereurs » ?",
+  "reponse": "Austerlitz",
+  "reponses_acceptees": [
+   "Bataille d'Austerlitz"
+  ],
+  "anecdote": "Napoléon y a battu les empereurs d'Autriche et de Russie, le 2 décembre."
+ },
+ {
+  "id": "his-113",
+  "categorie": "Histoire",
+  "sous_theme": "XXe siècle",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel paquebot a coulé en avril 1912 après avoir heurté un iceberg ?",
+  "reponse": "Le Titanic",
+  "reponses_acceptees": [
+   "Titanic"
+  ],
+  "anecdote": "Il effectuait son voyage inaugural, de Southampton à New York."
+ },
+ {
+  "id": "his-114",
+  "categorie": "Histoire",
+  "sous_theme": "XXe siècle",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel archiduc a été assassiné à Sarajevo en juin 1914 ?",
+  "reponse": "François-Ferdinand",
+  "reponses_acceptees": [
+   "Francois Ferdinand",
+   "Franz Ferdinand"
+  ],
+  "anecdote": "Son assassin, Gavrilo Princip, n'avait que 19 ans."
+ },
+ {
+  "id": "his-115",
+  "categorie": "Histoire",
+  "sous_theme": "XXe siècle",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel nom de code désignait l'opération de débarquement en Normandie, en 1944 ?",
+  "reponse": "Overlord",
+  "reponses_acceptees": [
+   "Operation Overlord"
+  ],
+  "anecdote": "La phase d'assaut naval portait un autre nom : « Neptune »."
+ },
+ {
+  "id": "his-116",
+  "categorie": "Histoire",
+  "sous_theme": "XXe siècle",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel mur est tombé dans la nuit du 9 novembre 1989 ?",
+  "reponse": "Le mur de Berlin",
+  "reponses_acceptees": [
+   "Mur de Berlin",
+   "Berlin"
+  ],
+  "anecdote": "Il avait coupé la ville en deux pendant 28 ans."
+ },
+ {
+  "id": "his-117",
+  "categorie": "Histoire",
+  "sous_theme": "XXe siècle",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel président américain a été assassiné à Dallas, en 1963 ?",
+  "reponse": "John F. Kennedy",
+  "reponses_acceptees": [
+   "Kennedy",
+   "JFK",
+   "John Kennedy"
+  ],
+  "anecdote": "Il circulait en voiture décapotable, aux côtés de son épouse Jackie."
+ },
+ {
+  "id": "his-118",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel philosophe a été le précepteur d'Alexandre le Grand ?",
+  "reponse": "Aristote",
+  "reponses_acceptees": [
+   "Aristotle"
+  ],
+  "anecdote": "Il a été appelé à la cour de Macédoine par Philippe II, le père d'Alexandre."
+ },
+ {
+  "id": "his-119",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quelle bataille de 1346 a vu les archers anglais écraser la chevalerie française ?",
+  "reponse": "Crécy",
+  "reponses_acceptees": [
+   "Bataille de Crecy",
+   "Crecy"
+  ],
+  "anecdote": "Les arcs longs gallois et anglais ont décimé les chevaliers de Philippe VI."
+ },
+ {
+  "id": "his-120",
+  "categorie": "Histoire",
+  "sous_theme": "Renaissance",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel roi de France a été fait prisonnier à la bataille de Pavie, en 1525 ?",
+  "reponse": "François Ier",
+  "reponses_acceptees": [
+   "Francois 1er",
+   "Francois Ier",
+   "Francois premier"
+  ],
+  "anecdote": "Il a écrit à sa mère : « De toutes choses ne m'est demeuré que l'honneur. »"
+ },
+ {
+  "id": "his-121",
+  "categorie": "Histoire",
+  "sous_theme": "Ancien Régime",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel surintendant des finances Louis XIV a-t-il fait arrêter en 1661 ?",
+  "reponse": "Nicolas Fouquet",
+  "reponses_acceptees": [
+   "Fouquet"
+  ],
+  "anecdote": "Sa fête trop fastueuse au château de Vaux-le-Vicomte aurait précipité sa chute."
+ },
+ {
+  "id": "his-122",
+  "categorie": "Histoire",
+  "sous_theme": "Ancien Régime",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel personnage suis-je ?",
+  "reponse": "Louis XVI",
+  "reponses_acceptees": [
+   "Louis 16"
+  ],
+  "indices": [
+   "J'étais passionné de serrurerie",
+   "J'ai épousé une archiduchesse autrichienne",
+   "J'ai été arrêté à Varennes en 1791",
+   "J'ai été guillotiné en janvier 1793"
+  ],
+  "anecdote": "Il est monté sur le trône à 19 ans, en 1774."
+ },
+ {
+  "id": "his-123",
+  "categorie": "Histoire",
+  "sous_theme": "Ancien Régime",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel personnage suis-je ?",
+  "reponse": "Richelieu",
+  "reponses_acceptees": [
+   "Cardinal de Richelieu"
+  ],
+  "indices": [
+   "Je suis né à Paris en 1585",
+   "J'ai fondé l'Académie française",
+   "J'ai assiégé La Rochelle",
+   "J'ai été le principal ministre de Louis XIII"
+  ],
+  "anecdote": "Il a donné son nom à une ville nouvelle qu'il a fait bâtir en Touraine."
+ },
+ {
+  "id": "his-124",
+  "categorie": "Histoire",
+  "sous_theme": "XXe siècle",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel personnage suis-je ?",
+  "reponse": "Jean Jaurès",
+  "reponses_acceptees": [
+   "Jaures",
+   "Jean Jaures"
+  ],
+  "indices": [
+   "Je suis né à Castres en 1859",
+   "J'ai fondé le journal « L'Humanité »",
+   "J'étais un pacifiste convaincu",
+   "J'ai été assassiné au café du Croissant en 1914"
+  ],
+  "anecdote": "Ses cendres ont été transférées au Panthéon en 1924."
+ },
+ {
+  "id": "his-125",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quel personnage suis-je ?",
+  "reponse": "Bertrand du Guesclin",
+  "reponses_acceptees": [
+   "Du Guesclin",
+   "Guesclin"
+  ],
+  "indices": [
+   "Je suis né près de Dinan",
+   "On me disait très laid",
+   "J'ai été fait connétable de France en 1370",
+   "J'ai combattu les Anglais pendant la guerre de Cent Ans"
+  ],
+  "anecdote": "Il repose à la basilique de Saint-Denis, parmi les rois."
+ },
+ {
+  "id": "his-126",
+  "categorie": "Histoire",
+  "sous_theme": "Renaissance",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "En quelle année a eu lieu la bataille de Marignan ?",
+  "reponse": 1515,
+  "unite": "année",
+  "tolerance": 1,
+  "bornes": [
+   1400,
+   1600
+  ],
+  "anecdote": "C'est la première grande victoire de François Ier, quelques mois après son sacre."
+ },
+ {
+  "id": "his-127",
+  "categorie": "Histoire",
+  "sous_theme": "Renaissance",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année Henri IV a-t-il signé l'édit de Nantes ?",
+  "reponse": 1598,
+  "unite": "année",
+  "tolerance": 1,
+  "bornes": [
+   1500,
+   1700
+  ],
+  "anecdote": "Il accordait la liberté de culte aux protestants dans certaines places."
  }
 ]

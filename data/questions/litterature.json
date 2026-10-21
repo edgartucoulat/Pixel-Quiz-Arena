@@ -889,5 +889,263 @@
   ],
   "reponse": "Sully Prudhomme",
   "anecdote": "Le choix a été critiqué : beaucoup attendaient Tolstoï, qui ne l'a jamais reçu."
+ },
+ {
+  "id": "lit-058",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Qui a écrit « Le Petit Prince » ?",
+  "reponse": "Antoine de Saint-Exupéry",
+  "reponses_acceptees": [
+   "Saint-Exupery",
+   "Saint Exupery",
+   "Saint-Ex"
+  ],
+  "anecdote": "Il a disparu en mer en 1944, aux commandes de son avion de reconnaissance."
+ },
+ {
+  "id": "lit-059",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Qui a écrit « Madame Bovary » ?",
+  "reponse": "Gustave Flaubert",
+  "reponses_acceptees": [
+   "Flaubert"
+  ],
+  "anecdote": "Le roman lui a valu un procès pour « outrage à la morale publique », dont il a été acquitté."
+ },
+ {
+  "id": "lit-060",
+  "categorie": "Littérature",
+  "sous_theme": "Théâtre",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel dramaturge a écrit « Le Malade imaginaire » ?",
+  "reponse": "Molière",
+  "reponses_acceptees": [
+   "Moliere",
+   "Jean-Baptiste Poquelin",
+   "Poquelin"
+  ],
+  "anecdote": "Il a été pris d'un malaise sur scène lors de la quatrième représentation."
+ },
+ {
+  "id": "lit-061",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Qui a écrit « Le Rouge et le Noir » ?",
+  "reponse": "Stendhal",
+  "reponses_acceptees": [
+   "Henri Beyle"
+  ],
+  "anecdote": "Le roman s'inspire d'un fait divers réel, l'affaire Berthet."
+ },
+ {
+  "id": "lit-062",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Qui a écrit « Bel-Ami » ?",
+  "reponse": "Guy de Maupassant",
+  "reponses_acceptees": [
+   "Maupassant"
+  ],
+  "anecdote": "Le héros, Georges Duroy, gravit l'échelle sociale grâce aux femmes."
+ },
+ {
+  "id": "lit-063",
+  "categorie": "Littérature",
+  "sous_theme": "Romans étrangers",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Qui a écrit « Don Quichotte » ?",
+  "reponse": "Miguel de Cervantès",
+  "reponses_acceptees": [
+   "Cervantes",
+   "Cervantès"
+  ],
+  "anecdote": "Il avait perdu l'usage de la main gauche à la bataille de Lépante."
+ },
+ {
+  "id": "lit-064",
+  "categorie": "Littérature",
+  "sous_theme": "Romans étrangers",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Qui a écrit « Crime et Châtiment » ?",
+  "reponse": "Fiodor Dostoïevski",
+  "reponses_acceptees": [
+   "Dostoievski",
+   "Dostoïevski",
+   "Dostoevski",
+   "Dostoievsky"
+  ],
+  "anecdote": "Il avait lui-même été condamné à mort, puis gracié au dernier moment."
+ },
+ {
+  "id": "lit-065",
+  "categorie": "Littérature",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel détective imaginé par Conan Doyle habite au 221B Baker Street ?",
+  "reponse": "Sherlock Holmes",
+  "reponses_acceptees": [
+   "Holmes",
+   "Sherlock"
+  ],
+  "anecdote": "Conan Doyle l'a fait mourir en 1893, avant de le ressusciter sous la pression des lecteurs."
+ },
+ {
+  "id": "lit-066",
+  "categorie": "Littérature",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Dans « Les Trois Mousquetaires », comment s'appelle le jeune Gascon ?",
+  "reponse": "D'Artagnan",
+  "reponses_acceptees": [
+   "Dartagnan",
+   "Artagnan"
+  ],
+  "anecdote": "Le personnage s'inspire d'un vrai mousquetaire, Charles de Batz de Castelmore."
+ },
+ {
+  "id": "lit-067",
+  "categorie": "Littérature",
+  "sous_theme": "Théâtre",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel auteur a écrit la pièce « Rhinocéros », en 1959 ?",
+  "reponse": "Eugène Ionesco",
+  "reponses_acceptees": [
+   "Ionesco"
+  ],
+  "anecdote": "Les habitants d'une ville s'y transforment un à un en rhinocéros, image du conformisme."
+ },
+ {
+  "id": "lit-068",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Qui a écrit « Le Grand Meaulnes » ?",
+  "reponse": "Alain-Fournier",
+  "reponses_acceptees": [
+   "Alain Fournier"
+  ],
+  "anecdote": "Il est mort au front en septembre 1914, un an après la parution du roman."
+ },
+ {
+  "id": "lit-069",
+  "categorie": "Littérature",
+  "sous_theme": "Poésie",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Combien de vers compte un sonnet ?",
+  "reponse": "14",
+  "reponses_acceptees": [
+   "quatorze"
+  ],
+  "anecdote": "Il se compose de deux quatrains suivis de deux tercets."
+ },
+ {
+  "id": "lit-070",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année est paru « Candide », de Voltaire ?",
+  "reponse": 1759,
+  "unite": "année",
+  "tolerance": 2,
+  "bornes": [
+   1650,
+   1850
+  ],
+  "anecdote": "Voltaire l'a publié anonymement, et a longtemps nié en être l'auteur."
+ },
+ {
+  "id": "lit-071",
+  "categorie": "Littérature",
+  "sous_theme": "Poésie",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel écrivain suis-je ?",
+  "reponse": "Jean de La Fontaine",
+  "reponses_acceptees": [
+   "La Fontaine"
+  ],
+  "indices": [
+   "Je suis né à Château-Thierry en 1621",
+   "J'ai été protégé par le surintendant Fouquet",
+   "J'ai été élu à l'Académie française en 1684",
+   "J'ai écrit « Le Corbeau et le Renard »"
+  ],
+  "anecdote": "Il s'est beaucoup inspiré du fabuliste grec Ésope."
+ },
+ {
+  "id": "lit-072",
+  "categorie": "Littérature",
+  "sous_theme": "Essais",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quelle écrivaine suis-je ?",
+  "reponse": "Simone de Beauvoir",
+  "reponses_acceptees": [
+   "Beauvoir"
+  ],
+  "indices": [
+   "Je suis née à Paris en 1908",
+   "J'ai été reçue deuxième à l'agrégation de philosophie",
+   "J'ai reçu le Goncourt pour « Les Mandarins »",
+   "J'ai écrit « Le Deuxième Sexe »"
+  ],
+  "anecdote": "Elle y écrit : « On ne naît pas femme : on le devient. »"
+ },
+ {
+  "id": "lit-073",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quelle écrivaine suis-je ?",
+  "reponse": "Marguerite Duras",
+  "reponses_acceptees": [
+   "Duras"
+  ],
+  "indices": [
+   "Je suis née en Indochine en 1914",
+   "Mon vrai nom est Donnadieu",
+   "J'ai écrit le scénario de « Hiroshima mon amour »",
+   "J'ai reçu le Goncourt pour « L'Amant »"
+  ],
+  "anecdote": "« L'Amant » s'est vendu à plus d'un million d'exemplaires."
+ },
+ {
+  "id": "lit-074",
+  "categorie": "Littérature",
+  "sous_theme": "Romans",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel écrivain suis-je ?",
+  "reponse": "Boris Vian",
+  "reponses_acceptees": [
+   "Vian"
+  ],
+  "indices": [
+   "J'étais ingénieur de formation",
+   "Je jouais de la trompette dans les caves de Saint-Germain-des-Prés",
+   "J'ai écrit sous le pseudonyme de Vernon Sullivan",
+   "J'ai écrit « L'Écume des jours »"
+  ],
+  "anecdote": "Il est mort à 39 ans, pendant la projection de l'adaptation de son roman « J'irai cracher sur vos tombes »."
  }
 ]

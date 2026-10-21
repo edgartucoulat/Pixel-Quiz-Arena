@@ -452,5 +452,357 @@
   ],
   "reponse": "Françoise Barré-Sinoussi",
   "anecdote": "Elle a reçu le prix Nobel de médecine 2008 avec Luc Montagnier."
+ },
+ {
+  "id": "per-030",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quelle personnalité suis-je ?",
+  "reponse": "Simone Veil",
+  "reponses_acceptees": [
+   "Veil"
+  ],
+  "indices": [
+   "J'ai survécu à Auschwitz",
+   "J'ai été la première présidente du Parlement européen élu au suffrage universel",
+   "J'ai fait voter la loi sur l'IVG en 1975",
+   "Je repose au Panthéon depuis 2018"
+  ],
+  "anecdote": "Elle était aussi membre de l'Académie française, élue en 2008."
+ },
+ {
+  "id": "per-031",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quelle personnalité suis-je ?",
+  "reponse": "Coco Chanel",
+  "reponses_acceptees": [
+   "Chanel",
+   "Gabrielle Chanel"
+  ],
+  "indices": [
+   "J'ai grandi dans un orphelinat à Aubazine",
+   "Mon prénom de naissance est Gabrielle",
+   "J'ai lancé un parfum numéroté devenu mythique",
+   "Ma maison de couture est installée rue Cambon"
+  ],
+  "anecdote": "Son surnom viendrait d'une chanson qu'elle chantait dans un café-concert de Moulins."
+ },
+ {
+  "id": "per-032",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 2,
+  "question": "Quelle personnalité suis-je ?",
+  "reponse": "Nelson Mandela",
+  "reponses_acceptees": [
+   "Mandela",
+   "Madiba"
+  ],
+  "indices": [
+   "J'ai été avocat à Johannesburg",
+   "J'ai été détenu sur l'île de Robben Island",
+   "J'ai reçu le Nobel de la paix en 1993 avec Frederik de Klerk",
+   "J'ai été le premier président noir d'Afrique du Sud"
+  ],
+  "anecdote": "Son surnom, Madiba, est le nom de son clan."
+ },
+ {
+  "id": "per-033",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quelle personnalité suis-je ?",
+  "reponse": "L'abbé Pierre",
+  "reponses_acceptees": [
+   "Abbe Pierre",
+   "Henri Groues"
+  ],
+  "indices": [
+   "Je suis né à Lyon en 1912",
+   "J'ai été résistant puis député",
+   "J'ai lancé un appel à la radio pendant l'hiver 1954",
+   "J'ai fondé le mouvement Emmaüs"
+  ],
+  "anecdote": "Des révélations d'agressions sexuelles, publiées en 2024, ont profondément terni son image."
+ },
+ {
+  "id": "per-034",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quelle personnalité suis-je ?",
+  "reponse": "Coluche",
+  "reponses_acceptees": [
+   "Michel Colucci"
+  ],
+  "indices": [
+   "Je suis né à Paris en 1944",
+   "Je portais une salopette rayée et un nez rouge",
+   "Je me suis présenté à la présidentielle de 1981",
+   "J'ai fondé les Restos du cœur"
+  ],
+  "anecdote": "Il est mort dans un accident de moto en juin 1986."
+ },
+ {
+  "id": "per-035",
+  "categorie": "Personnalités",
+  "sous_theme": "Explorateurs",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quel explorateur suis-je ?",
+  "reponse": "Ernest Shackleton",
+  "reponses_acceptees": [
+   "Shackleton"
+  ],
+  "indices": [
+   "Je suis né en Irlande en 1874",
+   "Mon navire, l'Endurance, a été broyé par la glace",
+   "J'ai traversé l'océan Austral dans un canot de sauvetage",
+   "J'ai ramené vivants tous mes hommes de l'Antarctique"
+  ],
+  "anecdote": "L'épave de l'Endurance a été retrouvée en 2022, à plus de 3 000 m de fond."
+ },
+ {
+  "id": "per-036",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 2,
+  "question": "Quelle personnalité suis-je ?",
+  "reponse": "Martin Luther King",
+  "reponses_acceptees": [
+   "King",
+   "MLK",
+   "Martin Luther King Jr"
+  ],
+  "indices": [
+   "Je suis né à Atlanta en 1929",
+   "J'étais pasteur baptiste",
+   "J'ai mené le boycott des bus de Montgomery",
+   "J'ai prononcé le discours « I Have a Dream »"
+  ],
+  "anecdote": "À 35 ans, il est devenu le plus jeune lauréat du Nobel de la paix de l'époque."
+ },
+ {
+  "id": "per-037",
+  "categorie": "Personnalités",
+  "sous_theme": "Explorateurs",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quelle exploratrice suis-je ?",
+  "reponse": "Alexandra David-Néel",
+  "reponses_acceptees": [
+   "David-Neel",
+   "David Neel"
+  ],
+  "indices": [
+   "J'ai d'abord été chanteuse d'opéra",
+   "J'ai été la première Européenne à entrer à Lhassa, en 1924",
+   "J'ai vécu jusqu'à 100 ans à Digne",
+   "Je suis une spécialiste du bouddhisme tibétain"
+  ],
+  "anecdote": "À 100 ans, elle a fait renouveler son passeport."
+ },
+ {
+  "id": "per-038",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quelle personnalité suis-je ?",
+  "reponse": "Gisèle Halimi",
+  "reponses_acceptees": [
+   "Halimi",
+   "Gisele Halimi"
+  ],
+  "indices": [
+   "Je suis née en Tunisie en 1927",
+   "J'ai défendu la militante algérienne Djamila Boupacha",
+   "J'ai plaidé au procès de Bobigny en 1972",
+   "J'ai cofondé l'association « Choisir la cause des femmes »"
+  ],
+  "anecdote": "Le procès de Bobigny a ouvert la voie à la dépénalisation de l'avortement."
+ },
+ {
+  "id": "per-039",
+  "categorie": "Personnalités",
+  "sous_theme": "Sciences",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel scientifique suis-je ?",
+  "reponse": "Stephen Hawking",
+  "reponses_acceptees": [
+   "Hawking"
+  ],
+  "indices": [
+   "Je suis né le 8 janvier 1942",
+   "J'étais atteint de la maladie de Charcot",
+   "Je parlais grâce à un synthétiseur vocal",
+   "J'ai écrit « Une brève histoire du temps »"
+  ],
+  "anecdote": "Il est né trois cents ans jour pour jour après la mort de Galilée."
+ },
+ {
+  "id": "per-040",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quelle personnalité suis-je ?",
+  "reponse": "Rosa Parks",
+  "reponses_acceptees": [
+   "Parks"
+  ],
+  "indices": [
+   "Je suis née en Alabama en 1913",
+   "J'étais couturière à Montgomery",
+   "J'ai été arrêtée en décembre 1955",
+   "J'ai refusé de céder ma place à un Blanc dans un bus"
+  ],
+  "anecdote": "Le Congrès américain l'a surnommée « la mère du mouvement des droits civiques »."
+ },
+ {
+  "id": "per-041",
+  "categorie": "Personnalités",
+  "sous_theme": "Entrepreneurs",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel homme d'affaires français dirige le groupe de luxe LVMH ?",
+  "reponse": "Bernard Arnault",
+  "reponses_acceptees": [
+   "Arnault"
+  ],
+  "anecdote": "Il a été brièvement l'homme le plus riche du monde, notamment en 2023."
+ },
+ {
+  "id": "per-042",
+  "categorie": "Personnalités",
+  "sous_theme": "Entrepreneurs",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel entrepreneur a fondé Amazon en 1994 ?",
+  "reponse": "Jeff Bezos",
+  "reponses_acceptees": [
+   "Bezos"
+  ],
+  "anecdote": "Il a lancé l'entreprise comme librairie en ligne, depuis son garage près de Seattle."
+ },
+ {
+  "id": "per-043",
+  "categorie": "Personnalités",
+  "sous_theme": "Entrepreneurs",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel cofondateur de Microsoft a créé une fondation avec son ex-épouse Melinda ?",
+  "reponse": "Bill Gates",
+  "reponses_acceptees": [
+   "Gates"
+  ],
+  "anecdote": "Il a quitté Harvard pour fonder Microsoft avec Paul Allen en 1975."
+ },
+ {
+  "id": "per-044",
+  "categorie": "Personnalités",
+  "sous_theme": "Politiques",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Dans quelle série Volodymyr Zelensky jouait-il, avant son élection en 2019 ?",
+  "reponse": "Serviteur du peuple",
+  "reponses_acceptees": [
+   "Servant of the People",
+   "Le Serviteur du peuple"
+  ],
+  "anecdote": "Son parti politique a pris le même nom que la série."
+ },
+ {
+  "id": "per-045",
+  "categorie": "Personnalités",
+  "sous_theme": "Politiques",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel était le nom de jeune fille d'Yvonne de Gaulle ?",
+  "reponse": "Vendroux",
+  "reponses_acceptees": [
+   "Yvonne Vendroux"
+  ],
+  "anecdote": "Elle était issue d'une famille d'industriels de Calais."
+ },
+ {
+  "id": "per-046",
+  "categorie": "Personnalités",
+  "sous_theme": "Personnalités",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quelle jeune Suédoise a lancé la « grève de l'école pour le climat » en 2018 ?",
+  "reponse": "Greta Thunberg",
+  "reponses_acceptees": [
+   "Thunberg",
+   "Greta"
+  ],
+  "anecdote": "En 2019, elle a traversé l'Atlantique en voilier pour se rendre à l'ONU."
+ },
+ {
+  "id": "per-047",
+  "categorie": "Personnalités",
+  "sous_theme": "Aviateurs",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel aviateur a été le premier à traverser la Manche en avion, en 1909 ?",
+  "reponse": "Louis Blériot",
+  "reponses_acceptees": [
+   "Bleriot",
+   "Louis Bleriot"
+  ],
+  "anecdote": "Il a relié Calais à Douvres en 37 minutes environ."
+ },
+ {
+  "id": "per-048",
+  "categorie": "Personnalités",
+  "sous_theme": "Sciences",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : Albert Einstein s'est vu proposer la présidence d'Israël en 1952.",
+  "reponse": "Vrai",
+  "anecdote": "Il a décliné, s'estimant dépourvu des qualités nécessaires pour la fonction."
+ },
+ {
+  "id": "per-049",
+  "categorie": "Personnalités",
+  "sous_theme": "Politiques",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "À quel âge Nelson Mandela a-t-il été élu président de l'Afrique du Sud ?",
+  "reponse": 75,
+  "unite": "ans",
+  "tolerance": 2,
+  "bornes": [
+   40,
+   100
+  ],
+  "anecdote": "Il a gouverné un seul mandat, de 1994 à 1999."
+ },
+ {
+  "id": "per-050",
+  "categorie": "Personnalités",
+  "sous_theme": "Politiques",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle fonction Jean Moulin exerçait-il avant la Seconde Guerre mondiale ?",
+  "choix": [
+   "Préfet",
+   "Avocat",
+   "Instituteur",
+   "Journaliste"
+  ],
+  "reponse": "Préfet",
+  "anecdote": "Nommé en 1937 dans l'Aveyron, il était alors le plus jeune préfet de France."
  }
 ]

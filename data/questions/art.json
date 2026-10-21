@@ -818,5 +818,186 @@
   ],
   "reponse": "Le futurisme",
   "anecdote": "Il exaltait la vitesse, les machines et la modernité, et voulait détruire les musées."
+ },
+ {
+  "id": "art-053",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel peintre néerlandais s'est coupé une partie de l'oreille à Arles, en 1888 ?",
+  "reponse": "Vincent van Gogh",
+  "reponses_acceptees": [
+   "Van Gogh",
+   "Vincent"
+  ],
+  "anecdote": "De son vivant, il n'aurait vendu qu'une seule toile."
+ },
+ {
+  "id": "art-054",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel peintre norvégien a peint « Le Cri » ?",
+  "reponse": "Edvard Munch",
+  "reponses_acceptees": [
+   "Munch"
+  ],
+  "anecdote": "Il en a réalisé plusieurs versions, peintes et dessinées."
+ },
+ {
+  "id": "art-055",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Qui a peint « La Naissance de Vénus » ?",
+  "reponse": "Sandro Botticelli",
+  "reponses_acceptees": [
+   "Botticelli"
+  ],
+  "anecdote": "Le tableau est exposé au musée des Offices, à Florence."
+ },
+ {
+  "id": "art-056",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel peintre flamand a peint « Le Jardin des délices » ?",
+  "reponse": "Jérôme Bosch",
+  "reponses_acceptees": [
+   "Bosch",
+   "Hieronymus Bosch"
+  ],
+  "anecdote": "Le triptyque, peuplé de créatures étranges, est conservé au Prado."
+ },
+ {
+  "id": "art-057",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Sculpture",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel sculpteur a réalisé « Le Penseur » ?",
+  "reponse": "Auguste Rodin",
+  "reponses_acceptees": [
+   "Rodin"
+  ],
+  "anecdote": "La statue devait à l'origine surmonter « La Porte de l'Enfer »."
+ },
+ {
+  "id": "art-058",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel peintre espagnol a peint « Les Ménines », en 1656 ?",
+  "reponse": "Diego Velázquez",
+  "reponses_acceptees": [
+   "Velazquez",
+   "Velasquez"
+  ],
+  "anecdote": "Il s'y est représenté lui-même, pinceau à la main."
+ },
+ {
+  "id": "art-059",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel peintre impressionniste a peint « Le Déjeuner des canotiers » ?",
+  "reponse": "Auguste Renoir",
+  "reponses_acceptees": [
+   "Renoir",
+   "Pierre-Auguste Renoir"
+  ],
+  "anecdote": "Sa future épouse, Aline Charigot, y joue avec un petit chien."
+ },
+ {
+  "id": "art-060",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Architecture",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Dans quelle ville se trouve la Sagrada Família ?",
+  "reponse": "Barcelone",
+  "reponses_acceptees": [
+   "Barcelona"
+  ],
+  "anecdote": "Commencée en 1882, la basilique n'est toujours pas achevée."
+ },
+ {
+  "id": "art-061",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel artiste suis-je ?",
+  "reponse": "Gustav Klimt",
+  "reponses_acceptees": [
+   "Klimt"
+  ],
+  "indices": [
+   "Je suis né près de Vienne en 1862",
+   "J'ai cofondé la Sécession viennoise",
+   "J'utilisais beaucoup la feuille d'or",
+   "J'ai peint « Le Baiser »"
+  ],
+  "anecdote": "Son « Portrait d'Adele Bloch-Bauer I » a été vendu 135 millions de dollars en 2006."
+ },
+ {
+  "id": "art-062",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel artiste suis-je ?",
+  "reponse": "Yves Klein",
+  "reponses_acceptees": [
+   "Klein"
+  ],
+  "indices": [
+   "Je suis né à Nice en 1928",
+   "J'étais ceinture noire de judo",
+   "J'ai fait de modèles nus des « pinceaux vivants »",
+   "J'ai déposé une couleur bleue à mon nom, l'IKB"
+  ],
+  "anecdote": "IKB signifie « International Klein Blue »."
+ },
+ {
+  "id": "art-063",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Street art",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel artiste suis-je ?",
+  "reponse": "Banksy",
+  "reponses_acceptees": [
+   "Bansky"
+  ],
+  "indices": [
+   "Je viens de la région de Bristol",
+   "Mon identité reste secrète",
+   "Une de mes toiles s'est autodétruite juste après sa vente aux enchères, en 2018",
+   "Je suis un artiste de rue célèbre pour mes pochoirs"
+  ],
+  "anecdote": "La toile à moitié déchiquetée a été rebaptisée « L'amour est dans la poubelle »."
+ },
+ {
+  "id": "art-064",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Sculpture",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de mètres mesure la statue de la Liberté, sans son socle ?",
+  "reponse": 46,
+  "unite": "m",
+  "tolerance": 2,
+  "bornes": [
+   10,
+   150
+  ],
+  "anecdote": "Sa structure interne a été conçue par Gustave Eiffel."
  }
 ]

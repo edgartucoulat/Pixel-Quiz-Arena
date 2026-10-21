@@ -876,5 +876,176 @@
   ],
   "reponse": "Château d'Yquem",
   "anecdote": "Ses vendanges se font grain par grain, en plusieurs passages, pour ne cueillir que les raisins touchés par la pourriture noble."
+ },
+ {
+  "id": "gas-058",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quelle région française est le berceau du camembert ?",
+  "reponse": "La Normandie",
+  "reponses_acceptees": [
+   "Normandie"
+  ],
+  "anecdote": "Selon la tradition, Marie Harel l'aurait mis au point à la fin du XVIIIe siècle."
+ },
+ {
+  "id": "gas-059",
+  "categorie": "Gastronomie",
+  "sous_theme": "Plats",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel plat alsacien est à base de chou fermenté ?",
+  "reponse": "La choucroute",
+  "reponses_acceptees": [
+   "Choucroute"
+  ],
+  "anecdote": "On la sert avec des saucisses, du lard et des pommes de terre."
+ },
+ {
+  "id": "gas-060",
+  "categorie": "Gastronomie",
+  "sous_theme": "Plats",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "De quel pays vient le ceviche, poisson cru mariné dans le citron vert ?",
+  "reponse": "Le Pérou",
+  "reponses_acceptees": [
+   "Perou"
+  ],
+  "anecdote": "Le jus de la marinade est surnommé « lait de tigre »."
+ },
+ {
+  "id": "gas-061",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel gâteau de biscuit Joconde, crème au beurre café et ganache, porte le nom d'une salle de spectacle ?",
+  "reponse": "L'opéra",
+  "reponses_acceptees": [
+   "Opera",
+   "Gateau opera"
+  ],
+  "anecdote": "La maison Dalloyau le revendique depuis les années 1950."
+ },
+ {
+  "id": "gas-062",
+  "categorie": "Gastronomie",
+  "sous_theme": "Vins",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Dans quelle appellation bordelaise est produit le célèbre Pétrus ?",
+  "reponse": "Pomerol",
+  "reponses_acceptees": [
+   "Pomerol Bordeaux"
+  ],
+  "anecdote": "Il est élaboré presque uniquement avec du merlot."
+ },
+ {
+  "id": "gas-063",
+  "categorie": "Gastronomie",
+  "sous_theme": "Épices",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle épice donne sa couleur jaune au curry ?",
+  "reponse": "Le curcuma",
+  "reponses_acceptees": [
+   "Curcuma"
+  ],
+  "anecdote": "On la surnomme parfois « safran des Indes »."
+ },
+ {
+  "id": "gas-064",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle moisissure donne ses veines bleues au roquefort ?",
+  "reponse": "Penicillium roqueforti",
+  "reponses_acceptees": [
+   "Penicillium",
+   "Penicilium roqueforti"
+  ],
+  "anecdote": "Le fromage est affiné dans les caves naturelles du Combalou."
+ },
+ {
+  "id": "gas-065",
+  "categorie": "Gastronomie",
+  "sous_theme": "Boissons",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel alcool est obtenu à partir de la canne à sucre ?",
+  "reponse": "Le rhum",
+  "reponses_acceptees": [
+   "Rhum",
+   "Rum"
+  ],
+  "anecdote": "Le rhum agricole est issu du jus de canne frais, et non de la mélasse."
+ },
+ {
+  "id": "gas-066",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel pâtissier français est surnommé le « Picasso de la pâtisserie » ?",
+  "reponse": "Pierre Hermé",
+  "reponses_acceptees": [
+   "Herme",
+   "Pierre Herme"
+  ],
+  "anecdote": "Il est célèbre pour son macaron Ispahan, à la rose, au litchi et à la framboise."
+ },
+ {
+  "id": "gas-067",
+  "categorie": "Gastronomie",
+  "sous_theme": "Plats",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel plat suis-je ?",
+  "reponse": "Le bœuf bourguignon",
+  "reponses_acceptees": [
+   "Boeuf bourguignon",
+   "Bourguignon"
+  ],
+  "indices": [
+   "Je mijote pendant des heures",
+   "Je contiens des lardons et des champignons",
+   "On me cuisine au vin rouge",
+   "Je porte le nom d'une région viticole française"
+  ],
+  "anecdote": "On le prépare traditionnellement avec du bœuf charolais, race née dans la région."
+ },
+ {
+  "id": "gas-068",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel dessert suis-je ?",
+  "reponse": "La tarte Tatin",
+  "reponses_acceptees": [
+   "Tatin",
+   "Tarte tatin"
+  ],
+  "indices": [
+   "On dit que je suis née à Lamotte-Beuvron",
+   "Deux sœurs m'auraient inventée par accident",
+   "On me cuit à l'envers",
+   "Je suis une tarte aux pommes caramélisées"
+  ],
+  "anecdote": "Les sœurs Stéphanie et Caroline Tatin tenaient un hôtel en Sologne."
+ },
+ {
+  "id": "gas-069",
+  "categorie": "Gastronomie",
+  "sous_theme": "Pâtisserie",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : le croissant serait d'origine autrichienne.",
+  "reponse": "Vrai",
+  "anecdote": "Il descend du « kipferl » viennois, popularisé à Paris au XIXe siècle."
  }
 ]

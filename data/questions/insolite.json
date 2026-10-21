@@ -1339,5 +1339,170 @@
   "question": "Vrai ou faux : les loutres de mer se tiennent parfois par la patte en dormant pour ne pas dériver.",
   "reponse": "Vrai",
   "anecdote": "Elles s'enroulent aussi dans les algues, qui leur servent d'ancre."
+ },
+ {
+  "id": "ins-088",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel oiseau australien sait imiter une tronçonneuse ou le déclic d'un appareil photo ?",
+  "reponse": "L'oiseau-lyre",
+  "reponses_acceptees": [
+   "Oiseau lyre",
+   "Menure"
+  ],
+  "anecdote": "Il imite aussi le chant de dizaines d'autres espèces d'oiseaux."
+ },
+ {
+  "id": "ins-089",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel est le seul mammifère capable de voler activement ?",
+  "reponse": "La chauve-souris",
+  "reponses_acceptees": [
+   "Chauve-souris",
+   "Chauve souris"
+  ],
+  "anecdote": "Ses ailes sont en fait des mains aux doigts très allongés, reliés par une membrane."
+ },
+ {
+  "id": "ins-090",
+  "categorie": "Insolite",
+  "sous_theme": "Insolite",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel fruit flotte dans l'eau parce qu'il contient environ 25 % d'air ?",
+  "reponse": "La pomme",
+  "reponses_acceptees": [
+   "Pomme"
+  ],
+  "anecdote": "C'est ce qui rend possible le jeu de la pêche aux pommes avec la bouche."
+ },
+ {
+  "id": "ins-091",
+  "categorie": "Insolite",
+  "sous_theme": "Insolite",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel légume, souvent violet ou jaune à l'origine, a été rendu orange par des cultivateurs néerlandais ?",
+  "reponse": "La carotte",
+  "reponses_acceptees": [
+   "Carotte"
+  ],
+  "anecdote": "Les variétés orange se sont imposées aux Pays-Bas au XVIIe siècle."
+ },
+ {
+  "id": "ins-092",
+  "categorie": "Insolite",
+  "sous_theme": "Insolite",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel pays compte plus de pyramides que l'Égypte ?",
+  "reponse": "Le Soudan",
+  "reponses_acceptees": [
+   "Soudan"
+  ],
+  "anecdote": "Il en possède plus de 200, héritées des rois de Koush, notamment à Méroé."
+ },
+ {
+  "id": "ins-093",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel mammifère marin se tient par la patte pour ne pas dériver en dormant ?",
+  "reponse": "La loutre de mer",
+  "reponses_acceptees": [
+   "Loutre",
+   "Loutre de mer"
+  ],
+  "anecdote": "Elle s'enroule aussi parfois dans des algues pour rester sur place."
+ },
+ {
+  "id": "ins-094",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel oiseau incapable de voler est l'emblème de la Nouvelle-Zélande ?",
+  "reponse": "Le kiwi",
+  "reponses_acceptees": [
+   "Kiwi"
+  ],
+  "anecdote": "Les Néo-Zélandais eux-mêmes sont surnommés les « Kiwis »."
+ },
+ {
+  "id": "ins-095",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Chez quel animal le dessin de la truffe est-il unique, comme une empreinte digitale ?",
+  "reponse": "Le chien",
+  "reponses_acceptees": [
+   "Chien"
+  ],
+  "anecdote": "Des applications d'identification utilisent ces « empreintes nasales »."
+ },
+ {
+  "id": "ins-096",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel animal suis-je ?",
+  "reponse": "Le paresseux",
+  "reponses_acceptees": [
+   "Paresseux"
+  ],
+  "indices": [
+   "Je ne descends de mon arbre qu'environ une fois par semaine",
+   "Des algues verdâtres poussent dans mon pelage",
+   "Je peux tourner la tête à 270 degrés",
+   "Je suis réputé pour mon extrême lenteur"
+  ],
+  "anecdote": "Il nage pourtant étonnamment bien."
+ },
+ {
+  "id": "ins-097",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel animal suis-je ?",
+  "reponse": "Le caméléon",
+  "reponses_acceptees": [
+   "Cameleon"
+  ],
+  "indices": [
+   "Mes yeux bougent indépendamment l'un de l'autre",
+   "Ma langue peut être plus longue que mon corps",
+   "Je change de couleur surtout pour communiquer",
+   "Je suis un lézard dont la moitié des espèces vit à Madagascar"
+  ],
+  "anecdote": "Sa langue se projette en une fraction de seconde pour attraper ses proies."
+ },
+ {
+  "id": "ins-098",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : les flamants roses naissent avec un plumage gris.",
+  "reponse": "Vrai",
+  "anecdote": "Leur couleur vient des pigments des petites crevettes et algues qu'ils mangent."
+ },
+ {
+  "id": "ins-099",
+  "categorie": "Insolite",
+  "sous_theme": "Insolite",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : il existe en France une commune nommée « Y ».",
+  "reponse": "Vrai",
+  "anecdote": "Ce village de la Somme porte le nom le plus court de France."
  }
 ]
