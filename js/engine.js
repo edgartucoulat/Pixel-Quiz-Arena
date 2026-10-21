@@ -743,6 +743,7 @@
         p.buzzBlockedUntil = now() + BUZZ.falseStart;
         this.after(BUZZ.falseStart, () => this.changed());
         this.fx('pop', { pid, text: '⛔ Faux départ !' });
+        this.fx('falsestart', { pid });
         this.hooks.send(pid, { t: 'fx', fx: 'falsestart' });
         this.changed();
         return;

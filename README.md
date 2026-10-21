@@ -25,7 +25,7 @@ son score. Si le plateau est rechargé, il propose de **reprendre la partie**.
 
 | Mode | Principe |
 |---|---|
-| 🤖 **Présentateur virtuel** | Pixou, le présentateur en pixel art, anime la partie (bulles de texte, voix de synthèse en option). |
+| 🤖 **Présentateur virtuel** | Pixou, le présentateur en pixel art, anime la partie (bulles de texte et voix naturelle, voir [Son et voix](#son-et-voix)). |
 | 🎤 **Présentateur IRL** | Un humain présente avec la **télécommande** (`presenter.html`, QR code sur le plateau) : il voit la réponse et l'anecdote, valide ou refuse les réponses orales, donne des points. |
 | 🥊 **Duel 1 contre 1** | Barres de vie : chaque bonne réponse inflige des dégâts. Jouable aussi **sur un seul écran** au clavier (touches **A** et **L** pour buzzer). |
 | 👥 **Équipes** | 2 à 4 équipes, scores cumulés. |
@@ -79,6 +79,10 @@ play.html       Manette joueur (mobile)
 presenter.html  Télécommande du présentateur IRL
 js/engine.js    Moteur de jeu : manches, scores, règles
 js/host-ui.js   Rendu du plateau, animations, sons
+js/audio.js     Effets sonores 8-bit synthétisés (buzzers, public, tambour…)
+js/music.js     Musique chiptune générée (thème, une boucle par manche, suspense)
+js/voice.js     Voix du présentateur (enregistrements + voix naturelles du navigateur)
+audio/voice/    Voix enregistrée, générée automatiquement (ne pas modifier à la main)
 js/net.js       Réseau PeerJS + reconnexion automatique
 js/relay.js     Relais de secours MQTT (client minimal sans dépendance)
 data/questions/ Banque de questions (un fichier JSON par catégorie)
@@ -128,7 +132,35 @@ Options d'URL utiles pour le développement :
   marqué ✔ des deux côtés.
 - **Le téléphone affiche « Salle introuvable »** : vérifie le code, et que le plateau est bien ouvert.
 - **Pas de son** : les navigateurs exigent un clic avant de jouer du son. Clique sur le plateau,
-  et vérifie le bouton 🔊 en haut à droite.
+  et vérifie les boutons 🔊 Son et 🎚️ Réglages en haut à droite.
+
+---
+
+## Son et voix
+
+Tout est gratuit et sans serveur. Le bouton **🎚️ Réglages** du plateau règle séparément la
+**musique**, les **effets** et la **voix**, et indique quelle voix est utilisée.
+
+- **Musique** : composée par le jeu lui-même (chiptune 8-bit) : thème d'accueil, une boucle
+  par manche, musique de suspense qui accélère avec le chrono, fanfare de victoire. Elle
+  baisse automatiquement quand Pixou parle.
+- **Effets** : un buzzer différent par joueur, faux départ, roulement de tambour,
+  applaudissements, « ooooh » déçu et « wouah » du public.
+- **Voix de Pixou** : pour éviter l'effet robot, deux sources sont combinées.
+  1. **Une voix neuronale enregistrée** (`audio/voice/`) : répliques, questions, indices et
+     anecdotes sont pré-enregistrés avec la voix *Rémy* de Microsoft (gratuite, via
+     [edge-tts](https://github.com/rany2/edge-tts)), compressés en Opus. L'action GitHub
+     **« Voix du présentateur »** (`.github/workflows/voice.yml`) ré-enregistre
+     automatiquement ce qui change à chaque modification des questions ou des répliques.
+     On peut aussi la lancer à la main depuis l'onglet *Actions*, ou en local :
+     `pip install edge-tts && python3 scripts/gen_voice.py` (ffmpeg requis).
+  2. **Les voix naturelles du navigateur**, pour ce qui ne peut pas être enregistré (les
+     pseudos des joueurs). **Microsoft Edge** fournit gratuitement les mêmes voix neuronales
+     (« Microsoft Rémy/Henri Online (Natural) ») : c'est le navigateur conseillé pour le
+     plateau. Sur les autres navigateurs, Pixou s'en tient aux phrases enregistrées.
+
+  Les voix système robotiques ne sont jamais utilisées, sauf si l'on coche
+  « Voix robotique en secours ».
 
 ---
 
