@@ -19,7 +19,7 @@
 
   PQA.relayBrokers = function () {
     const custom = new URLSearchParams(location.search).get('relay');
-    return custom ? [custom] : BROKERS;
+    return custom ? custom.split(',') : BROKERS;
   };
 
   const enc = new TextEncoder();
@@ -128,13 +128,24 @@
     }
   }
 
-  /** Essaie chaque broker jusqu'à en trouver un qui répond. */
-  async function connectAny(clientId) {
-    let lastErr;
-    for (const url of PQA.relayBrokers()) {
-      try { return await new Mqtt(url, clientId).connect(); } catch (e) { lastErr = e; }
-    }
-    throw lastErr || new Error('aucun relais');
+  /** Se connecte en parallèle à tous les brokers joignables (le plateau et un téléphone
+   *  n'ont pas forcément accès aux mêmes : chacun utilise tous ceux qu'il peut joindre). */
+  function connectAll(clientId) {
+    return new Promise((resolve, reject) => {
+      const ok = [];
+      let pending = PQA.relayBrokers().length, lastErr, grace = null;
+      const finish = () => { clearTimeout(grace); grace = -1; resolve(ok.slice()); };
+      PQA.relayBrokers().forEach((url) => {
+        new Mqtt(url, clientId).connect().then((m) => {
+          if (grace === -1) return m.close(); // arrivé trop tard
+          ok.push(m);
+          // Un broker répond : on laisse 2 s aux autres, sans attendre ceux qui sont bloqués.
+          if (grace === null) grace = setTimeout(finish, 2000);
+        }, (e) => { lastErr = e; }).finally(() => {
+          if (--pending === 0 && grace !== -1) ok.length ? finish() : reject(lastErr || new Error('aucun relais'));
+        });
+      });
+    });
   }
 
   function shortId() {
@@ -144,15 +155,17 @@
   /* -----------------------------------------------------------------------
    * Côté plateau : une "connexion" par téléphone, qui imite celles de PeerJS
    * (open, send, close, peer) pour que HostNet les traite pareil.
+   * Elle répond sur le broker par lequel le téléphone est arrivé.
    * --------------------------------------------------------------------- */
   class RelayConn {
-    constructor(host, id) {
+    constructor(host, id, mqtt) {
       this.host = host;
       this.peer = id;
+      this.mqtt = mqtt;
       this.open = true;
       this.relay = true;
     }
-    send(msg) { if (this.open) this.host.mqtt.publish(this.host.base + 'c/' + this.peer, JSON.stringify(msg)); }
+    send(msg) { if (this.open) this.mqtt.publish(this.host.base + 'c/' + this.peer, JSON.stringify(msg)); }
     close() {
       if (!this.open) return;
       this.send({ t: '_bye' });
@@ -163,13 +176,20 @@
 
   class RelayHost {
     /** handlers : { onConn(conn), onData(conn, msg), onClose(conn) } */
-    constructor(handlers) { this.h = handlers; this.byId = new Map(); }
+    constructor(handlers) { this.h = handlers; this.byId = new Map(); this.links = []; }
 
     async start(code) {
+      this.code = code;
       this.base = TOPIC + code + '/';
-      this.mqtt = await connectAny(shortId());
-      this.mqtt.subscribe(this.base + 'h/+');
-      this.mqtt.onmessage = (topic, text) => {
+      const links = await connectAll(shortId());
+      links.forEach((m) => this._attach(m));
+      return code;
+    }
+
+    _attach(mqtt) {
+      this.links.push(mqtt);
+      mqtt.subscribe(this.base + 'h/+');
+      mqtt.onmessage = (topic, text) => {
         const id = topic.slice((this.base + 'h/').length);
         let msg;
         try { msg = JSON.parse(text); } catch (e) { return; }
@@ -178,62 +198,88 @@
         if (msg.t === '_bye') { if (conn) { conn.open = false; this.byId.delete(id); this.h.onClose(conn); } return; }
         if (!conn) {
           if (msg.t !== 'hello') return; // message d'une ancienne connexion
-          conn = new RelayConn(this, id);
+          conn = new RelayConn(this, id, mqtt);
           this.byId.set(id, conn);
           this.h.onConn(conn);
         }
+        if (conn.mqtt !== mqtt) return; // le même "hello" reçu par un autre broker
         this.h.onData(conn, msg);
       };
-      // Broker perdu : on se reconnecte, les téléphones renverront leur "hello".
-      this.mqtt.onclose = () => {
-        if (this.stopped) return;
-        for (const c of Array.from(this.byId.values())) { c.open = false; this.h.onClose(c); }
-        this.byId.clear();
-        setTimeout(() => !this.stopped && this.start(code).catch(() => this.mqtt.onclose && this.mqtt.onclose()), 2000);
+      // Broker perdu : ses téléphones se reconnecteront et renverront leur "hello".
+      mqtt.onclose = () => {
+        this.links = this.links.filter((m) => m !== mqtt);
+        for (const c of Array.from(this.byId.values())) {
+          if (c.mqtt === mqtt) { c.open = false; this.byId.delete(c.peer); this.h.onClose(c); }
+        }
+        if (!this.stopped) setTimeout(() => this._reconnect(mqtt.url), 3000);
       };
-      return code;
     }
 
-    stop() { this.stopped = true; if (this.mqtt) this.mqtt.close(); }
+    _reconnect(url) {
+      if (this.stopped) return;
+      new Mqtt(url, shortId()).connect().then((m) => (this.stopped ? m.close() : this._attach(m)), () => setTimeout(() => this._reconnect(url), 10000));
+    }
+
+    stop() { this.stopped = true; this.links.forEach((m) => m.close()); }
   }
 
   /* -----------------------------------------------------------------------
    * Côté téléphone : même interface qu'une DataConnection PeerJS.
+   * Envoie son "hello" sur tous les brokers joignables et garde celui
+   * par lequel le plateau répond.
    * --------------------------------------------------------------------- */
   class RelayClientConn {
     constructor(code) {
       this.base = TOPIC + code + '/';
       this.id = shortId();
       this.open = false;
+      this.links = [];
+      this.mqtt = null; // broker retenu
       this.handlers = {};
     }
     on(ev, fn) { this.handlers[ev] = fn; return this; }
     _emit(ev, arg) { if (this.handlers[ev]) this.handlers[ev](arg); }
 
     async start() {
-      try {
-        this.mqtt = await connectAny(this.id);
-      } catch (e) { return this._emit('error', e); }
-      if (this.closed) return this.mqtt.close();
-      this.mqtt.subscribe(this.base + 'c/' + this.id);
-      this.mqtt.onmessage = (topic, text) => {
-        let msg;
-        try { msg = JSON.parse(text); } catch (e) { return; }
-        if (msg.t === '_bye') return this._end();
-        this._emit('data', msg);
-      };
-      this.mqtt.onclose = () => this._end();
+      let links;
+      try { links = await connectAll(this.id); } catch (e) { return this._emit('error', e); }
+      this.links = links;
+      if (this.closed) return links.forEach((m) => m.close());
+      for (const m of links) {
+        m.subscribe(this.base + 'c/' + this.id);
+        m.onmessage = (topic, text) => {
+          let msg;
+          try { msg = JSON.parse(text); } catch (e) { return; }
+          if (!this.mqtt) {
+            // Premier broker par lequel le plateau répond : on ferme les autres.
+            this.mqtt = m;
+            this.links.filter((o) => o !== m).forEach((o) => { o.onclose = null; o.close(); });
+            this.links = [m];
+          }
+          if (m !== this.mqtt) return;
+          if (msg.t === '_bye') return this._end();
+          this._emit('data', msg);
+        };
+        m.onclose = () => {
+          this.links = this.links.filter((o) => o !== m);
+          if (m === this.mqtt || !this.links.length) this._end();
+        };
+      }
       this.open = true;
       this._emit('open');
     }
 
-    send(msg) { if (this.open) this.mqtt.publish(this.base + 'h/' + this.id, JSON.stringify(msg)); }
+    send(msg) {
+      if (!this.open) return;
+      const text = JSON.stringify(msg);
+      (this.mqtt ? [this.mqtt] : this.links).forEach((m) => m.publish(this.base + 'h/' + this.id, text));
+    }
 
     _end() {
       if (this.closed) return;
       this.closed = true;
       this.open = false;
-      if (this.mqtt) this.mqtt.close();
+      this.links.forEach((m) => { m.onclose = null; m.close(); });
       this._emit('close');
     }
 
@@ -242,7 +288,9 @@
       if (this.open) this.send({ t: '_bye' });
       this.closed = true;
       this.open = false;
-      if (this.mqtt) setTimeout(() => this.mqtt.close(), 100);
+      const links = this.links;
+      links.forEach((m) => { m.onclose = null; });
+      setTimeout(() => links.forEach((m) => m.close()), 100);
     }
   }
 
