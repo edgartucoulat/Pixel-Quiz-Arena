@@ -44,7 +44,8 @@
       netStatus = s;
       const txt = { connecting: '⏳ Connexion au plateau...', reconnecting: '🔄 Reconnexion...', noroom: '❓ Salle introuvable : vérifie le code (nouvelle tentative...)', connected: '' }[s] || '';
       // Diagnostic sous le message, pour savoir quel canal passe ou bloque.
-      $('#netbar').innerHTML = txt ? '<span>' + PQA.esc(txt) + '</span><small>' + PQA.esc(PQA.netDiagText()) + '</small>' : '';
+      $('#netbar').innerHTML = txt ? '<span>' + PQA.esc(txt) + '</span><small>' + PQA.esc(PQA.netDiagText()) + '</small>'
+        + (state.view ? '<button class="mini-btn" data-act="leave">↩ Changer de salle</button>' : '') : '';
       $('#netbar').classList.toggle('on', !!txt);
     },
     onMessage(m) {
@@ -67,6 +68,29 @@
   });
 
   /* ======================= Écran de connexion ===================== */
+  function showConnecting(msg) {
+    state.renderKey = 'connecting';
+    $('#screen').innerHTML = `<div class="wait"><div class="spinner"></div><div class="wmsg">${msg}</div>
+      <button class="mini-btn" data-act="leave">↩ Changer de salle</button></div>`;
+  }
+  /** Abandonne la salle en cours (ou enregistrée) pour en rejoindre une autre. */
+  function leaveRoom() {
+    net.stop();
+    state.room = '';
+    state.token = null;
+    state.joined = false;
+    state.view = null;
+    state.editing = false;
+    save();
+    // Le code de l'ancienne salle ne doit pas revenir au prochain rechargement.
+    try { const u = new URL(location.href); u.searchParams.delete('room'); history.replaceState(null, '', u); } catch (e) {}
+    $('#netbar').classList.remove('on');
+    showJoin();
+  }
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('[data-act="leave"]')) { PQA.vibrate(20); leaveRoom(); }
+  });
+
   function showJoin(error) {
     state.renderKey = 'join';
     $('#me').innerHTML = '';
@@ -105,7 +129,7 @@
       state.room = r;
       save();
       PQA.vibrate(30);
-      $('#screen').innerHTML = '<div class="wait"><div class="spinner"></div><div class="wmsg">Connexion au plateau...</div></div>';
+      showConnecting('Connexion au plateau...');
       net.connect(r);
     };
     bindAvatarEditor();
@@ -449,7 +473,7 @@
 
   // Démarrage : reconnexion directe si on a déjà un jeton pour cette salle.
   if (state.room && state.token && state.name) {
-    $('#screen').innerHTML = '<div class="wait"><div class="spinner"></div><div class="wmsg">Retour sur le plateau...</div></div>';
+    showConnecting(`Retour dans la salle ${esc(state.room)}...`);
     net.connect(state.room);
   } else showJoin();
 })();
