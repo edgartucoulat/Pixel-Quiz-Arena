@@ -132,14 +132,23 @@ Options d'URL utiles pour le développement :
 
 ## Les questions
 
-**1007 questions** en français, réparties en 16 catégories : Histoire, Actualité (2020-2026),
+**1121 questions** en français, réparties en 16 catégories : Histoire, Actualité (2020-2026),
 Géographie, Sciences & Nature, Cinéma & Séries, Musique, Sport, Littérature, Art & Architecture,
 Gastronomie, Langue française, Insolite, Records & chiffres, Pop culture & jeux vidéo,
 Inventions & tech, Personnalités.
 
 Elles sont réparties en environ 45 % de QCM, 20 % de fourchettes, 15 % de questions à indices,
-10 % de vrai/faux et 10 % de réponses libres. Côté difficulté, environ 20 % sont faciles,
-50 % moyennes et 30 % difficiles. Chaque question a son anecdote.
+10 % de vrai/faux et 10 % de réponses libres. Chaque question a son anecdote.
+
+Échelle de difficulté (il n'y a plus de questions de niveau 1, jugées trop évidentes) :
+
+| Niveau | Pour qui |
+|---|---|
+| 2-3 | Culture générale courante |
+| 4-5 | Bonne culture générale |
+| 6-7 | Amateur éclairé |
+| 8-9 | Connaisseur, spécialiste |
+| 10 | Expert : très pointu, même pour un passionné |
 
 ### Vérifier la banque
 
@@ -162,7 +171,7 @@ Ajoute un objet dans le fichier de la catégorie (`data/questions/<categorie>.js
   "categorie": "Histoire",         // nom exact de la catégorie (voir index.json)
   "sous_theme": "Moyen Âge",
   "type": "qcm",                   // qcm | vf | fourchette | indices | libre
-  "difficulte": 5,                 // 1 (facile) à 10 (très dur)
+  "difficulte": 5,                 // 2 (culture courante) à 10 (expert)
   "question": "…",
   "reponse": "…",
   "anecdote": "…",                 // affichée après la réponse
