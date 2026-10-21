@@ -61,6 +61,7 @@
       toast: (t) => ui && ui.toast(t),
     });
     window.game = game; // pratique pour déboguer dans la console
+    PQA.onNetDiag = () => game.changed();
 
     const net = new PQA.HostNet({
       onMessage(conn, m) {
