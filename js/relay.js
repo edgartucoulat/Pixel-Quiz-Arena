@@ -38,6 +38,8 @@
 
   /** Connexion MQTT : connect(), subscribe(topic), publish(topic, texte), onmessage(topic, texte). */
   class Mqtt {
+    remake() { return new Mqtt(this.url, shortId()); }
+
     constructor(url, clientId) {
       this.url = url;
       this.clientId = clientId;
@@ -136,15 +138,99 @@
     }
   }
 
+  /** Même interface que Mqtt, mais passe par le serveur de signalisation PeerJS (port 443).
+   *  Le serveur relaie tel quel les messages "CANDIDATE" vers le pair visé : quand la liaison
+   *  directe WebRTC est bloquée mais que PeerJS répond, les messages du jeu passent par là. */
+  class PeerLink {
+    constructor(id, code) {
+      this.id = id;
+      this.code = code;
+      this.onmessage = null;
+      this.onclose = null;
+      this.closed = false;
+    }
+
+    remake() { return new PeerLink(this.id, this.code); }
+
+    connect(timeout = 8000) {
+      const name = 'peerjs';
+      if (PQA.netDiag.relays[name] !== 'ok') PQA.setDiag(name, 'wait');
+      return this._connect(timeout).then((m) => { PQA.setDiag(name, 'ok'); return m; }, (e) => { PQA.setDiag(name, 'ko'); throw e; });
+    }
+
+    _connect(timeout) {
+      return new Promise((resolve, reject) => {
+        const o = PQA.config.peerOptions();
+        const host = o.host || '0.peerjs.com', port = o.port || 443, path = o.path || '/';
+        const secure = o.secure != null ? o.secure : port === 443;
+        const url = (secure ? 'wss' : 'ws') + '://' + host + ':' + port + path + 'peerjs?key=' + (o.key || 'peerjs') +
+          '&id=' + encodeURIComponent(this.id) + '&token=' + PQA.randomToken().slice(0, 10) + '&version=1.5.5';
+        let ws;
+        try { ws = new WebSocket(url); } catch (e) { return reject(e); }
+        this.ws = ws;
+        let ready = false;
+        const timer = setTimeout(() => { if (!ready) { try { ws.close(); } catch (e) {} reject(new Error('timeout')); } }, timeout);
+        ws.onmessage = (e) => {
+          let m;
+          try { m = JSON.parse(e.data); } catch (err) { return; }
+          if (!ready) {
+            if (m.type !== 'OPEN') { clearTimeout(timer); try { ws.close(); } catch (err) {} return reject(new Error(m.type)); }
+            ready = true;
+            clearTimeout(timer);
+            this._ping = setInterval(() => this._send({ type: 'HEARTBEAT' }), 5000);
+            return resolve(this);
+          }
+          if (m.type === 'CANDIDATE' && m.payload && m.payload.pqa && this.onmessage) this.onmessage(m.payload.topic, m.payload.text);
+        };
+        const end = () => {
+          clearTimeout(timer);
+          clearInterval(this._ping);
+          if (!ready) reject(new Error('fermé'));
+          else if (!this.closed) { this.closed = true; if (this.onclose) this.onclose(); }
+        };
+        ws.onclose = end;
+        ws.onerror = end;
+      });
+    }
+
+    _send(obj) {
+      if (this.ws && this.ws.readyState === 1) { this.ws.send(JSON.stringify(obj)); return true; }
+      return false;
+    }
+
+    subscribe() {} // le serveur PeerJS livre directement à notre identifiant
+
+    publish(topic, text) {
+      // pqa1/<CODE>/h/<id> -> le plateau ; pqa1/<CODE>/c/<id> -> ce téléphone
+      const m = /\/(h|c)\/([^/]+)$/.exec(topic);
+      if (!m) return false;
+      const dst = m[1] === 'h' ? peerLinkId(this.code) : peerLinkId(this.code, m[2]);
+      return this._send({ type: 'CANDIDATE', dst, payload: { pqa: 1, topic, text } });
+    }
+
+    close() {
+      this.closed = true;
+      clearInterval(this._ping);
+      try { this.ws.close(); } catch (e) {}
+    }
+  }
+
+  /** Identifiant PeerJS du relais : celui du plateau, ou celui d'un téléphone. */
+  function peerLinkId(code, clientId) {
+    return PQA.config.peerPrefix + code + (clientId ? '-c-' + clientId : '-relais');
+  }
+
   /** Se connecte en parallèle à tous les brokers joignables (le plateau et un téléphone
    *  n'ont pas forcément accès aux mêmes : chacun utilise tous ceux qu'il peut joindre). */
-  function connectAll(clientId) {
+  function connectAll(clientId, code, peerClient) {
     return new Promise((resolve, reject) => {
       const ok = [];
-      let pending = PQA.relayBrokers().length, lastErr, grace = null;
+      const links = PQA.relayBrokers().map((url) => new Mqtt(url, clientId));
+      links.push(new PeerLink(peerLinkId(code, peerClient), code));
+      let pending = links.length, lastErr, grace = null;
       const finish = () => { clearTimeout(grace); grace = -1; resolve(ok.slice()); };
-      PQA.relayBrokers().forEach((url) => {
-        new Mqtt(url, clientId).connect().then((m) => {
+      links.forEach((link) => {
+        link.connect().then((m) => {
           if (grace === -1) return m.close(); // arrivé trop tard
           ok.push(m);
           // Un broker répond : on laisse 2 s aux autres, sans attendre ceux qui sont bloqués.
@@ -189,7 +275,7 @@
     async start(code) {
       this.code = code;
       this.base = TOPIC + code + '/';
-      const links = await connectAll(shortId());
+      const links = await connectAll(shortId(), code);
       links.forEach((m) => this._attach(m));
       return code;
     }
@@ -219,13 +305,13 @@
         for (const c of Array.from(this.byId.values())) {
           if (c.mqtt === mqtt) { c.open = false; this.byId.delete(c.peer); this.h.onClose(c); }
         }
-        if (!this.stopped) setTimeout(() => this._reconnect(mqtt.url), 3000);
+        if (!this.stopped) setTimeout(() => this._reconnect(mqtt), 3000);
       };
     }
 
-    _reconnect(url) {
+    _reconnect(old) {
       if (this.stopped) return;
-      new Mqtt(url, shortId()).connect().then((m) => (this.stopped ? m.close() : this._attach(m)), () => setTimeout(() => this._reconnect(url), 10000));
+      old.remake().connect().then((m) => (this.stopped ? m.close() : this._attach(m)), () => setTimeout(() => this._reconnect(old), 10000));
     }
 
     stop() { this.stopped = true; this.links.forEach((m) => m.close()); }
@@ -238,6 +324,7 @@
    * --------------------------------------------------------------------- */
   class RelayClientConn {
     constructor(code) {
+      this.code = code;
       this.base = TOPIC + code + '/';
       this.id = shortId();
       this.open = false;
@@ -250,7 +337,7 @@
 
     async start() {
       let links;
-      try { links = await connectAll(this.id); } catch (e) { return this._emit('error', e); }
+      try { links = await connectAll(this.id, this.code, this.id); } catch (e) { return this._emit('error', e); }
       this.links = links;
       if (this.closed) return links.forEach((m) => m.close());
       for (const m of links) {
