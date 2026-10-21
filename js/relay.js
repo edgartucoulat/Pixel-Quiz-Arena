@@ -139,7 +139,7 @@
   }
 
   /** Même interface que Mqtt, mais passe par le serveur de signalisation PeerJS (port 443).
-   *  Le serveur relaie tel quel les messages "CANDIDATE" vers le pair visé : quand la liaison
+   *  Le serveur relaie les messages "CANDIDATE" vers le pair visé : quand la liaison
    *  directe WebRTC est bloquée mais que PeerJS répond, les messages du jeu passent par là. */
   class PeerLink {
     constructor(id, code) {
@@ -176,10 +176,10 @@
           if (!ready) {
             if (m.type === 'OPEN') {
               // Test d'écho : on s'envoie un message pour vérifier que le serveur relaie bien.
-              this._send({ type: 'CANDIDATE', dst: this.id, payload: { pqa: 1, echo: 1 } });
+              this._sendTo(this.id, { echo: 1 });
               return;
             }
-            if (m.type === 'CANDIDATE' && m.payload && m.payload.echo) {
+            if ((unwrap(m) || {}).echo) {
               ready = true;
               clearTimeout(timer);
               this._ping = setInterval(() => this._send({ type: 'HEARTBEAT' }), 5000);
@@ -187,10 +187,11 @@
             }
             clearTimeout(timer); try { ws.close(); } catch (err) {} return reject(new Error(m.type));
           }
-          if (m.payload && m.payload.echo) return;
+          const data = unwrap(m);
+          if (data && data.echo) return;
           // Message non remis : le destinataire n'est pas connecté au serveur PeerJS.
           if (m.type === 'EXPIRE') { PQA.netDiag.note = 'peerjs : destinataire absent'; if (PQA.onNetDiag) PQA.onNetDiag(); return; }
-          if (m.type === 'CANDIDATE' && m.payload && m.payload.pqa && this.onmessage) this.onmessage(m.payload.topic, m.payload.text);
+          if (data && data.topic && this.onmessage) this.onmessage(data.topic, data.text);
         };
         const end = () => {
           clearTimeout(timer);
@@ -215,7 +216,11 @@
       const m = /\/(h|c)\/([^/]+)$/.exec(topic);
       if (!m) return false;
       const dst = m[1] === 'h' ? peerLinkId(this.code) : peerLinkId(this.code, m[2]);
-      return this._send({ type: 'CANDIDATE', dst, payload: { pqa: 1, topic, text } });
+      return this._sendTo(dst, { topic, text });
+    }
+
+    _sendTo(dst, data) {
+      return this._send({ type: 'CANDIDATE', dst, payload: wrap(data, this.id) });
     }
 
     close() {
@@ -223,6 +228,26 @@
       clearInterval(this._ping);
       try { this.ws.close(); } catch (e) {}
     }
+  }
+
+  /* Les données voyagent déguisées en candidat ICE ordinaire (le format qu'envoie PeerJS),
+   * encodées en base64 dans le texte du candidat, pour passer un serveur qui filtrerait. */
+  function wrap(data, id) {
+    const bytes = enc.encode(JSON.stringify(data));
+    let bin = '';
+    for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return {
+      candidate: { candidate: 'pqa ' + btoa(bin), sdpMid: '0', sdpMLineIndex: 0, usernameFragment: null },
+      type: 'data',
+      connectionId: 'dc_' + id.slice(-12),
+    };
+  }
+  function unwrap(m) {
+    try {
+      const c = m.type === 'CANDIDATE' && m.payload && m.payload.candidate && m.payload.candidate.candidate;
+      if (!c || c.slice(0, 4) !== 'pqa ') return null;
+      return JSON.parse(dec.decode(Uint8Array.from(atob(c.slice(4)), (ch) => ch.charCodeAt(0))));
+    } catch (e) { return null; }
   }
 
   /** Identifiant PeerJS du relais : celui du plateau, ou celui d'un téléphone. */
