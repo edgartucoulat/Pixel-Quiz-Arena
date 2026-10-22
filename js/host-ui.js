@@ -107,8 +107,30 @@
     }
 
     fit() {
-      const s = Math.min(window.innerWidth / 1600, window.innerHeight / 900);
+      // Mode Solo : la manette du joueur occupe une colonne à droite, le plateau se cale à gauche.
+      const pad = document.body.classList.contains('solo') ? this.padWidth() : 0;
+      const w = window.innerWidth - pad;
+      const s = Math.min(w / 1600, window.innerHeight / 900);
+      this.app.style.left = w / 2 + 'px';
       this.app.style.transform = `translate(-50%, -50%) scale(${s})`;
+      document.documentElement.style.setProperty('--pad-w', pad + 'px');
+    }
+    padWidth() { return Math.round(Math.min(420, Math.max(320, window.innerWidth * 0.26))); }
+    /** Affiche (ou retire) la manette intégrée du mode Solo. */
+    updateSoloPad() {
+      const g = this.g, on = g.settings.mode === 'solo' && !!g.code;
+      let frame = document.getElementById('solo-pad');
+      if (on && !frame) {
+        frame = document.createElement('iframe');
+        frame.id = 'solo-pad';
+        frame.title = 'Ta manette';
+        frame.src = 'play.html?room=' + g.code + '&local=1' + PQA.config.passthroughQuery();
+        document.body.appendChild(frame);
+      } else if (!on && frame) {
+        frame.remove();
+        this.hooks && this.hooks.dropLocalPad && this.hooks.dropLocalPad();
+      }
+      if (document.body.classList.contains('solo') !== on) { document.body.classList.toggle('solo', on); this.fit(); }
     }
 
     /* ---- Interactions (souris / clavier) ---- */
@@ -155,6 +177,8 @@
           if (d.key === 'mode') {
             s.localDuel = false;
             if (v === 'duel' && g.activePlayers().length > 2) { this.toast('Le duel se joue à 2 : retire des joueurs d’abord.'); return; }
+            if (v === 'solo' && !g.bots().length) { g.setTeams(0); g.addBot('moyen'); }
+            if (v !== 'solo') g.removeBots();
           }
           s[d.key] = v;
           sfx.select(); g.changed();
@@ -171,6 +195,8 @@
           if (d.key === 'tts' && this.prefs.tts) PQA.tts.speak('La voix du présentateur est activée !');
           return;
         }
+        case 'botadd': if (!g.addBot(d.val || 'moyen')) this.toast('10 joueurs maximum.'); sfx.select(); return;
+        case 'botlevel': g.setBotLevel(d.pid, d.val); sfx.select(); return;
         case 'localduel': s.localDuel = true; s.mode = 'duel'; g.addLocalPlayers(); return;
         case 'start': { const err = g.start(); if (err) this.toast(err); return; }
         case 'next': return g.advance();
@@ -179,7 +205,7 @@
         case 'sounds': this.soundPanel.classList.toggle('on'); this.refreshSoundPanel(); return;
         case 'team': return g.cycleTeam(d.pid);
         case 'shuffleteams': return g.shuffleTeams();
-        case 'kick': if (confirm('Retirer ce joueur ?')) g.kick(d.pid); return;
+        case 'kick': if ((g.players[d.pid] && g.players[d.pid].bot) || confirm('Retirer ce joueur ?')) g.kick(d.pid); return;
         case 'resetseen': g.resetSeen(); this.toast('Historique des questions effacé.'); g.changed(); return;
         case 'override': return this.hooks.override(d.pid);
         case 'lobby': return this.hooks.backToLobby();
@@ -204,6 +230,7 @@
     render() {
       const g = this.g;
       document.body.dataset.mode = g.settings.mode;
+      this.updateSoloPad();
       document.body.dataset.phase = g.phase;
       this.renderTop();
       const fn = this['r_' + g.phase] || this.r_wait;
@@ -267,6 +294,7 @@
         if (p.double) badge += '<i>✖️2</i>';
         if (p.streak >= 3) badge += `<i class="fire">🔥x${g.multiplier(p)}</i>`;
         if (p.cards.length) badge += `<i>🃏${p.cards.length}</i>`;
+        if (p.bot) badge += `<i title="Ordinateur ${PQA.BOT_LEVELS[p.level].name}">🤖${PQA.BOT_LEVELS[p.level].icon}</i>`;
         const team = g.settings.teams ? `<span class="pod-team" style="background:${PQA.PALETTE.team[p.team]}"></span>` : '';
         const lobbyBtns = g.phase === 'lobby' ? `<button class="pod-x" data-act="kick" data-pid="${p.id}" title="Retirer">✖</button>` : '';
         const teamAct = g.phase === 'lobby' && g.settings.teams;
@@ -311,9 +339,11 @@
       const seg = (key, opts, cur) => `<div class="seg">${opts.map(([v, l]) => `<button data-act="set" data-key="${key}" data-val="${v}" class="${String(cur) === String(v) ? 'on' : ''}">${l}</button>`).join('')}</div>`;
       const duel = s.mode === 'duel';
       const settings = `
-        <div class="set-row"><label>Mode</label>${seg('mode', [['virtual', '🤖 Présentateur virtuel'], ['irl', '🎤 Présentateur IRL'], ['duel', '🥊 Duel 1 contre 1']], s.mode)}</div>
+        <div class="set-row"><label>Mode</label>${seg('mode', [['virtual', '🤖 Présentateur virtuel'], ['irl', '🎤 Présentateur IRL'], ['duel', '🥊 Duel 1 contre 1'], ['solo', '🎮 Solo contre l’ordi']], s.mode)}</div>
+        ${s.mode === 'solo' ? `<div class="set-row bots-row"><label>Adversaires</label><div class="bots">${g.bots().map((b) => `<div class="bot-line" style="--pc:${b.color}"><b>🤖 ${esc(b.name)}</b>${Object.entries(PQA.BOT_LEVELS).map(([k, L]) => `<button data-act="botlevel" data-pid="${b.id}" data-val="${k}" class="${b.level === k ? 'on' : ''}">${L.icon} ${L.name}</button>`).join('')}<button class="mini" data-act="kick" data-pid="${b.id}" title="Retirer">✖</button></div>`).join('')}
+          <button class="mini" data-act="botadd">＋ Ajouter un adversaire</button></div></div>` : ''}
         ${duel ? `<div class="set-row"><label>Duel</label><div class="seg"><button data-act="localduel" class="${s.localDuel ? 'on' : ''}">⌨️ Les 2 sur cet écran (touches A / L)</button></div></div>` : `
-        <div class="set-row"><label>Équipes</label>${seg('teams', [[0, 'Chacun pour soi'], [2, '2'], [3, '3'], [4, '4']], s.teams)}${s.teams ? '<button class="mini" data-act="shuffleteams">🔀 Mélanger</button>' : ''}</div>
+        ${s.mode === 'solo' ? '' : `<div class="set-row"><label>Équipes</label>${seg('teams', [[0, 'Chacun pour soi'], [2, '2'], [3, '3'], [4, '4']], s.teams)}${s.teams ? '<button class="mini" data-act="shuffleteams">🔀 Mélanger</button>' : ''}</div>`}
         <div class="set-row"><label>Manches</label><div class="chips">${PQA.ROUND_ORDER.map((r) => `<button data-act="round" data-val="${r}" class="${s.rounds.includes(r) ? 'on' : ''}">${PQA.ROUNDS[r].icon} ${esc(PQA.ROUNDS[r].short)}</button>`).join('')}</div></div>
         <div class="set-row"><label>Durée</label>${seg('length', [['court', 'Courte'], ['normal', 'Normale'], ['long', 'Longue']], s.length)}</div>
         <div class="set-row"><label>Coups bas</label>${seg('cards', [['1', '🃏 Oui'], ['0', 'Non']], s.cards ? '1' : '0')}</div>`}

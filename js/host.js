@@ -57,7 +57,7 @@
       changed: () => scheduleFlush(),
       fx: (n, d) => ui && ui.fx(n, d),
       say: (text, expr) => ui && ui.say(text, expr),
-      send: (pid, msg) => conns.forEach((c) => c.pid === pid && net.send(c, msg)),
+      send: (pid, msg) => conns.forEach((c) => c.pid === pid && send(c, msg)),
       toast: (t) => ui && ui.toast(t),
     });
     window.game = game; // pratique pour déboguer dans la console
@@ -85,22 +85,39 @@
       onError(err) { console.warn('PeerJS', err); },
     });
 
+    // Envoi vers un téléphone (PeerJS / relais) ou vers la manette intégrée du mode Solo.
+    function send(conn, msg) {
+      if (conn.localWin) { try { conn.localWin.postMessage({ pqa: msg }, '*'); } catch (e) {} return; }
+      net.send(conn, msg);
+    }
+    // Manette intégrée (mode Solo) : la page play.html dans un cadre, reliée sans réseau.
+    const localConn = { localWin: null, _last: null };
+    window.addEventListener('message', (e) => {
+      const frame = document.getElementById('solo-pad');
+      const m = e.data && e.data.pqaLocal;
+      if (!m || !frame || e.source !== frame.contentWindow) return;
+      localConn.localWin = frame.contentWindow;
+      if (m.t === 'hello') { localConn._last = null; hello(localConn, m); const p = game.players[localConn.pid]; if (p) p.rtt = 0; return; }
+      if (m.t === 'bye') { conns.delete(localConn); if (localConn.pid) game.setConnected(localConn.pid, false); return; }
+      if (localConn.pid) game.handle(localConn.pid, m);
+    });
+
     function hello(conn, m) {
       conns.add(conn);
       if (m.role === 'presenter') {
         conn.role = 'presenter';
         game.presenter.connected = true;
-        net.send(conn, { t: 'welcome', role: 'presenter', code: game.code });
+        send(conn, { t: 'welcome', role: 'presenter', code: game.code });
         game.changed();
         return;
       }
       const res = game.join({ token: m.token, name: m.name, avatar: m.avatar });
-      if (res.error) { net.send(conn, { t: 'error', text: res.error }); return; }
+      if (res.error) { send(conn, { t: 'error', text: res.error }); return; }
       // Un seul canal actif par joueur (le plus récent gagne).
       conns.forEach((c) => { if (c !== conn && c.pid === res.p.id) { conns.delete(c); try { c.close(); } catch (e) {} } });
       conn.pid = res.p.id;
       conn._last = null;
-      net.send(conn, { t: 'welcome', role: 'player', token: res.p.token, id: res.p.id, code: game.code, rejoined: res.rejoined });
+      send(conn, { t: 'welcome', role: 'player', token: res.p.token, id: res.p.id, code: game.code, rejoined: res.rejoined });
       game.changed();
     }
 
@@ -120,7 +137,7 @@
         const json = JSON.stringify(view);
         if (json === conn._last) continue;
         conn._last = json;
-        net.send(conn, { t: 'view', v: view, left });
+        send(conn, { t: 'view', v: view, left });
       }
       if (Date.now() - lastSave > 1500) {
         lastSave = Date.now();
@@ -155,6 +172,12 @@
         }
         PQA.sfx.select();
         game.changed();
+      },
+      /** Retire la manette intégrée et son joueur quand on quitte le mode Solo. */
+      dropLocalPad() {
+        conns.delete(localConn);
+        if (localConn.pid && game.players[localConn.pid] && game.phase === 'lobby') game.kick(localConn.pid);
+        localConn.pid = null; localConn.localWin = null;
       },
       backToLobby() {
         game.clearJobs(); game.stopTimer();

@@ -36,9 +36,29 @@
     try { localStorage.setItem(STORE, JSON.stringify({ room: state.room, token: state.token, name: state.name, avatar: state.avatar })); } catch (e) {}
   }
 
+  /** Manette intégrée au plateau (mode Solo) : on parle directement à la page parente, sans réseau. */
+  const LOCAL = qs.get('local') === '1' && window.parent !== window;
+  class LocalNet {
+    constructor(h) {
+      this.h = h;
+      window.addEventListener('message', (e) => { if (e.source === window.parent && e.data && e.data.pqa) h.onMessage(e.data.pqa); });
+    }
+    connect(code) { this.code = code; this.h.onStatus('connected'); this.send(this.h.getHello()); }
+    send(m) { window.parent.postMessage({ pqaLocal: m }, '*'); }
+    stop() { this.send({ t: 'bye' }); }
+    checkHealth() {}
+  }
+  if (LOCAL) document.body.classList.add('local-pad');
+  // Au clavier (manette intégrée du mode Solo, ou téléphone avec clavier) : Espace pour buzzer.
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== ' ' || /INPUT|TEXTAREA/.test(e.target.tagName)) return;
+    const b = document.getElementById('buzzer');
+    if (b && !b.disabled) { e.preventDefault(); b.dispatchEvent(new MouseEvent('mousedown', { bubbles: true })); }
+  });
+
   let netStatus = 'idle';
   PQA.onNetDiag = () => net && net.h.onStatus(netStatus);
-  const net = new PQA.ClientNet({
+  const net = new (LOCAL ? LocalNet : PQA.ClientNet)({
     getHello: () => ({ t: 'hello', role: 'player', token: state.token, name: state.name, avatar: state.avatar, v: 1 }),
     onStatus(s) {
       netStatus = s;
@@ -100,7 +120,7 @@
         <div class="logo small"><span>PIXEL</span><span>QUIZ</span><span>ARENA</span></div>
         ${error ? `<div class="err">${esc(error)}</div>` : ''}
         <label>Code de la salle</label>
-        <input id="in-room" class="code" maxlength="4" autocomplete="off" autocapitalize="characters" value="${esc(state.room)}" placeholder="ABCD" ${state.editing ? 'disabled' : ''}>
+        <input id="in-room" class="code" maxlength="4" autocomplete="off" autocapitalize="characters" value="${esc(state.room)}" placeholder="ABCD" ${state.editing || LOCAL ? 'disabled' : ''}>
         <label>Ton pseudo</label>
         <input id="in-name" maxlength="14" autocomplete="nickname" value="${esc(state.name)}" placeholder="Ex : Mamie Quiz">
         <label>Ton avatar</label>
