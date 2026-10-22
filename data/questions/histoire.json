@@ -2152,5 +2152,754 @@
    "Gorbatchev"
   ],
   "anecdote": "Il a reçu le prix Nobel de la paix en 1990."
+ },
+ {
+  "id": "his-t001",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel roi surnommé « le Bon Roi » voulait que chaque paysan ait sa poule au pot le dimanche ?",
+  "reponse": "Henri IV",
+  "reponses_acceptees": [
+   "Henri 4",
+   "Henri de Navarre"
+  ],
+  "anecdote": "On le surnommait aussi « le Vert-Galant », pour son goût prononcé des conquêtes amoureuses.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t002",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel roi suis-je ?",
+  "reponse": "François Ier",
+  "reponses_acceptees": [
+   "François 1er",
+   "Francois Ier",
+   "François premier"
+  ],
+  "indices": [
+   "On m'a surnommé « le Roi-Chevalier »",
+   "J'ai fait construire Chambord",
+   "J'ai accueilli Léonard de Vinci en France",
+   "J'ai gagné la bataille de Marignan en 1515"
+  ],
+  "anecdote": "Il a aussi imposé le français dans les actes officiels, avec l'ordonnance de Villers-Cotterêts, en 1539.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t003",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel roi, vainqueur à Bouvines en 1214, est surnommé « Auguste » ?",
+  "choix": [
+   "Philippe II",
+   "Philippe IV",
+   "Louis VII",
+   "Louis VI"
+  ],
+  "reponse": "Philippe II",
+  "anecdote": "On l'appelait ainsi car il était né en août, et parce qu'il avait considérablement agrandi le royaume.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t004",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel roi, sacré à Reims grâce à Jeanne d'Arc, est surnommé « le Victorieux » ?",
+  "choix": [
+   "Charles VII",
+   "Charles VI",
+   "Louis XI",
+   "Charles VIII"
+  ],
+  "reponse": "Charles VII",
+  "anecdote": "Ses ennemis l'appelaient avant cela, avec mépris, « le petit roi de Bourges ».",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t005",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel roi était surnommé « le Sage » ?",
+  "choix": [
+   "Charles V",
+   "Charles VI",
+   "Louis XI",
+   "Jean II"
+  ],
+  "reponse": "Charles V",
+  "anecdote": "Il a fondé la première bibliothèque royale, ancêtre de la Bibliothèque nationale de France.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t006",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel roi capétien était surnommé « le Gros » ?",
+  "choix": [
+   "Louis VI",
+   "Louis VII",
+   "Philippe Ier",
+   "Henri Ier"
+  ],
+  "reponse": "Louis VI",
+  "anecdote": "À la fin de sa vie, il était si corpulent qu'il ne pouvait plus monter à cheval.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t007",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel roi était surnommé « l'Universelle Aragne », l'araignée universelle ?",
+  "reponse": "Louis XI",
+  "reponses_acceptees": [
+   "Louis 11"
+  ],
+  "anecdote": "Il tissait sa toile de complots et d'intrigues. Il a vaincu Charles le Téméraire sans presque livrer bataille.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t008",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel roi surnommé « le Bon » a été fait prisonnier à Poitiers en 1356 ?",
+  "reponse": "Jean II",
+  "reponses_acceptees": [
+   "Jean le Bon",
+   "Jean 2"
+  ],
+  "anecdote": "Pour payer sa rançon, on a frappé une nouvelle monnaie : le franc, qui signifiait « libre ».",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t009",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel roi était surnommé « le Lion » ?",
+  "choix": [
+   "Louis VIII",
+   "Louis VI",
+   "Philippe III",
+   "Charles VII"
+  ],
+  "reponse": "Louis VIII",
+  "anecdote": "Il n'a régné que trois ans, de 1223 à 1226. C'est le père de Saint Louis.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t010",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel roi était surnommé « le Père du peuple » ?",
+  "choix": [
+   "Louis XII",
+   "Louis XIII",
+   "Henri II",
+   "Charles VIII"
+  ],
+  "reponse": "Louis XII",
+  "anecdote": "Il avait baissé les impôts. Le titre lui a été décerné par les États généraux de 1506.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t011",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel roi était surnommé « le Long » ?",
+  "choix": [
+   "Philippe V",
+   "Philippe III",
+   "Philippe VI",
+   "Louis VII"
+  ],
+  "reponse": "Philippe V",
+  "anecdote": "Ce fils de Philippe le Bel était, dit-on, d'une très grande taille. Il a régné de 1316 à 1322.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t012",
+  "categorie": "Histoire",
+  "sous_theme": "Les surnoms des rois de France",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel roi était surnommé « le Hardi » ?",
+  "choix": [
+   "Philippe III",
+   "Philippe IV",
+   "Charles VIII",
+   "Louis X"
+  ],
+  "reponse": "Philippe III",
+  "anecdote": "Il a hérité du trône en Tunisie, en 1270, à la mort de son père Saint Louis pendant la croisade.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t013",
+  "categorie": "Histoire",
+  "sous_theme": "Les présidents de la Ve République",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel général a été le premier président de la Ve République ?",
+  "reponse": "Charles de Gaulle",
+  "reponses_acceptees": [
+   "De Gaulle",
+   "Le général de Gaulle"
+  ],
+  "anecdote": "Élu en 1958, il a démissionné en 1969 après l'échec d'un référendum.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t014",
+  "categorie": "Histoire",
+  "sous_theme": "Les présidents de la Ve République",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Combien de présidents différents la Ve République a-t-elle eus, Emmanuel Macron compris (sans compter les intérims) ?",
+  "reponse": 8,
+  "unite": "présidents",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   20
+  ],
+  "anecdote": "De Gaulle, Pompidou, Giscard d'Estaing, Mitterrand, Chirac, Sarkozy, Hollande et Macron.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t015",
+  "categorie": "Histoire",
+  "sous_theme": "Les présidents de la Ve République",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel président suis-je ?",
+  "reponse": "Georges Pompidou",
+  "reponses_acceptees": [
+   "Pompidou"
+  ],
+  "indices": [
+   "J'ai été professeur de lettres",
+   "J'ai travaillé à la banque Rothschild",
+   "J'ai publié une anthologie de la poésie française",
+   "Je suis mort pendant mon mandat, en 1974",
+   "Un centre d'art moderne parisien porte mon nom"
+  ],
+  "anecdote": "Il est le seul président de la Ve République mort en fonction.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t016",
+  "categorie": "Histoire",
+  "sous_theme": "Les présidents de la Ve République",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "En quelle année la majorité est-elle passée de 21 à 18 ans en France ?",
+  "reponse": 1974,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1945,
+   2000
+  ],
+  "anecdote": "La loi a été votée quelques semaines après l'élection de Valéry Giscard d'Estaing.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t017",
+  "categorie": "Histoire",
+  "sous_theme": "Les présidents de la Ve République",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année le quinquennat a-t-il été adopté par référendum ?",
+  "reponse": 2000,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1958,
+   2020
+  ],
+  "anecdote": "Le « oui » l'a emporté avec 73 % des voix, mais seulement 30 % des électeurs se sont déplacés.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t018",
+  "categorie": "Histoire",
+  "sous_theme": "Les présidents de la Ve République",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel président du Sénat a assuré l'intérim de la présidence, en 1969 puis en 1974 ?",
+  "reponse": "Alain Poher",
+  "reponses_acceptees": [
+   "Poher"
+  ],
+  "anecdote": "Il s'est présenté en 1969 et a perdu au second tour face à Georges Pompidou.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t019",
+  "categorie": "Histoire",
+  "sous_theme": "Les présidents de la Ve République",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : François Hollande ne s'est pas représenté à l'élection présidentielle de 2017.",
+  "reponse": "Vrai",
+  "anecdote": "C'est la première fois sous la Ve République qu'un président sortant renonçait à briguer un second mandat.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t020",
+  "categorie": "Histoire",
+  "sous_theme": "Les présidents de la Ve République",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel président avait une chienne labrador nommée Baltique ?",
+  "choix": [
+   "François Mitterrand",
+   "Jacques Chirac",
+   "Nicolas Sarkozy",
+   "Georges Pompidou"
+  ],
+  "reponse": "François Mitterrand",
+  "anecdote": "Baltique était présente aux obsèques du président, à Jarnac, en 1996.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t021",
+  "categorie": "Histoire",
+  "sous_theme": "Les présidents de la Ve République",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Comment s'appelait le bichon maltais de Jacques Chirac, qui mordait les visiteurs ?",
+  "reponse": "Sumo",
+  "reponses_acceptees": [
+   "Sumo"
+  ],
+  "anecdote": "Le chien, devenu agressif, a dû être confié à une famille à la campagne. Chirac était un grand amateur de sumo.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t022",
+  "categorie": "Histoire",
+  "sous_theme": "Les présidents de la Ve République",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel président de la Ve République est né à Coblence, en Allemagne ?",
+  "choix": [
+   "Valéry Giscard d'Estaing",
+   "Georges Pompidou",
+   "Jacques Chirac",
+   "Alain Poher"
+  ],
+  "reponse": "Valéry Giscard d'Estaing",
+  "anecdote": "Il y est né en 1926, car son père travaillait alors pour l'administration française en Rhénanie occupée.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t023",
+  "categorie": "Histoire",
+  "sous_theme": "Les pharaons",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel pharaon a imposé le culte d'un dieu unique, le disque solaire Aton ?",
+  "choix": [
+   "Akhenaton",
+   "Ramsès II",
+   "Khéops",
+   "Thoutmôsis III"
+  ],
+  "reponse": "Akhenaton",
+  "anecdote": "Il a même fondé une nouvelle capitale, Amarna. Après sa mort, son nom a été effacé des monuments.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t024",
+  "categorie": "Histoire",
+  "sous_theme": "Les pharaons",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle reine, épouse d'Akhenaton, est célèbre pour son buste conservé à Berlin ?",
+  "reponse": "Néfertiti",
+  "reponses_acceptees": [
+   "Nefertiti"
+  ],
+  "anecdote": "Son nom signifie « la belle est venue ». Le buste a été découvert en 1912 par des archéologues allemands.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t025",
+  "categorie": "Histoire",
+  "sous_theme": "Les pharaons",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle femme pharaon se faisait représenter avec une barbe postiche ?",
+  "reponse": "Hatchepsout",
+  "reponses_acceptees": [
+   "Hatshepsout",
+   "Hatchepsut"
+  ],
+  "anecdote": "Elle a régné une vingtaine d'années. Son temple de Deir el-Bahari est l'un des plus beaux d'Égypte.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t026",
+  "categorie": "Histoire",
+  "sous_theme": "Les pharaons",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien d'années environ Ramsès II a-t-il régné ?",
+  "reponse": 66,
+  "unite": "ans",
+  "tolerance": 2,
+  "bornes": [
+   10,
+   100
+  ],
+  "anecdote": "Il aurait eu plus de cent enfants. Sa momie a reçu un passeport égyptien pour venir se faire soigner à Paris, en 1976.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t027",
+  "categorie": "Histoire",
+  "sous_theme": "Les pharaons",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel Français a déchiffré les hiéroglyphes, en 1822 ?",
+  "reponse": "Jean-François Champollion",
+  "reponses_acceptees": [
+   "Champollion"
+  ],
+  "anecdote": "Il a travaillé à partir de la pierre de Rosette, qui portait un même texte en trois écritures.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t028",
+  "categorie": "Histoire",
+  "sous_theme": "Les pharaons",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel pharaon a fait bâtir la deuxième pyramide de Gizeh, celle près du Sphinx ?",
+  "reponse": "Khéphren",
+  "reponses_acceptees": [
+   "Khephren",
+   "Kephren",
+   "Khafrê"
+  ],
+  "anecdote": "Elle paraît plus haute que celle de Khéops, car elle est construite sur un terrain plus élevé.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t029",
+  "categorie": "Histoire",
+  "sous_theme": "Les pharaons",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel pharaon aurait eu le plus long règne de l'histoire, plus de 90 ans selon la tradition ?",
+  "choix": [
+   "Pépi II",
+   "Ramsès II",
+   "Djéser",
+   "Snéfrou"
+  ],
+  "reponse": "Pépi II",
+  "anecdote": "Il serait monté sur le trône vers l'âge de six ans. Les historiens discutent encore la durée exacte.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t030",
+  "categorie": "Histoire",
+  "sous_theme": "Les pharaons",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Dans quelle vallée, près de Louxor, les pharaons du Nouvel Empire étaient-ils enterrés ?",
+  "reponse": "La Vallée des Rois",
+  "reponses_acceptees": [
+   "Vallée des Rois",
+   "Vallee des rois"
+  ],
+  "anecdote": "On y a découvert plus de soixante tombes. Les pharaons espéraient échapper aux pilleurs, en vain, sauf Toutânkhamon.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t031",
+  "categorie": "Histoire",
+  "sous_theme": "Les dieux grecs",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel dieu grec règne sur l'Olympe et manie la foudre ?",
+  "reponse": "Zeus",
+  "reponses_acceptees": [
+   "Zeus"
+  ],
+  "anecdote": "Son équivalent romain est Jupiter, qui a donné son nom à la plus grande planète du système solaire.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t032",
+  "categorie": "Histoire",
+  "sous_theme": "Les dieux grecs",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quelle déesse est sortie tout armée du crâne de Zeus ?",
+  "choix": [
+   "Athéna",
+   "Aphrodite",
+   "Artémis",
+   "Héra"
+  ],
+  "reponse": "Athéna",
+  "anecdote": "C'est la déesse de la sagesse et de la guerre. Athènes porte son nom.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t033",
+  "categorie": "Histoire",
+  "sous_theme": "Les dieux grecs",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel dieu forgeron et boiteux est l'époux d'Aphrodite ?",
+  "reponse": "Héphaïstos",
+  "reponses_acceptees": [
+   "Hephaistos",
+   "Héphaistos"
+  ],
+  "anecdote": "Sa femme le trompait avec Arès. Il les a pris au piège dans un filet invisible, sous les rires des dieux.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t034",
+  "categorie": "Histoire",
+  "sous_theme": "Les dieux grecs",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel chien à trois têtes garde l'entrée des Enfers ?",
+  "reponse": "Cerbère",
+  "reponses_acceptees": [
+   "Cerbere"
+  ],
+  "anecdote": "Héraclès l'a capturé lors de son douzième et dernier travail.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t035",
+  "categorie": "Histoire",
+  "sous_theme": "Les dieux grecs",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel passeur fait traverser le fleuve des Enfers aux âmes des morts ?",
+  "reponse": "Charon",
+  "reponses_acceptees": [
+   "Charon"
+  ],
+  "anecdote": "On plaçait une pièce de monnaie dans la bouche des défunts pour le payer.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t036",
+  "categorie": "Histoire",
+  "sous_theme": "Les dieux grecs",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Combien de dieux olympiens compte-t-on traditionnellement ?",
+  "reponse": 12,
+  "unite": "dieux",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   40
+  ],
+  "anecdote": "La liste varie selon les auteurs : Dionysos remplace parfois Hestia.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t037",
+  "categorie": "Histoire",
+  "sous_theme": "Les dieux grecs",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle déesse de l'agriculture est la mère de Perséphone ?",
+  "choix": [
+   "Déméter",
+   "Héra",
+   "Hestia",
+   "Gaïa"
+  ],
+  "reponse": "Déméter",
+  "anecdote": "Quand sa fille est aux Enfers, Déméter est triste et rien ne pousse : c'est ainsi que les Grecs expliquaient l'hiver.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t038",
+  "categorie": "Histoire",
+  "sous_theme": "Les dieux grecs",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Qui suis-je ?",
+  "reponse": "Prométhée",
+  "reponses_acceptees": [
+   "Promethee"
+  ],
+  "indices": [
+   "Mon nom signifie « celui qui réfléchit avant »",
+   "Mon frère Épiméthée a épousé Pandore",
+   "Un aigle vient me dévorer le foie chaque jour",
+   "J'ai volé le feu aux dieux pour le donner aux hommes"
+  ],
+  "anecdote": "Son foie repoussait chaque nuit. Héraclès a fini par tuer l'aigle et le délivrer.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "his-t039",
+  "categorie": "Histoire",
+  "sous_theme": "Les dieux grecs",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quelle muse préside à l'histoire ?",
+  "choix": [
+   "Clio",
+   "Calliope",
+   "Uranie",
+   "Thalie"
+  ],
+  "reponse": "Clio",
+  "anecdote": "Les neuf muses sont filles de Zeus et de Mnémosyne, la mémoire. Calliope est celle de la poésie épique.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
  }
 ]

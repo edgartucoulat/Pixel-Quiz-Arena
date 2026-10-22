@@ -1116,5 +1116,959 @@
    "Éléphant d'Afrique"
   ],
   "anecdote": "Un mâle peut dépasser 6 tonnes."
+ },
+ {
+  "id": "rec-t001",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Combien de points compte un permis de conduire en France, une fois la période probatoire terminée ?",
+  "reponse": 12,
+  "unite": "points",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   30
+  ],
+  "anecdote": "Un jeune conducteur commence avec 6 points, et en gagne jusqu'à 12 au fil de sa période probatoire.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t002",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Quelle est la vitesse maximale sur autoroute par temps sec, en km/h ?",
+  "reponse": 130,
+  "unite": "km/h",
+  "tolerance": 0,
+  "bornes": [
+   50,
+   250
+  ],
+  "anecdote": "Par temps de pluie, elle descend à 110 km/h, et à 50 km/h en cas de brouillard épais.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t003",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Avec combien de points un jeune conducteur commence-t-il son permis probatoire ?",
+  "reponse": 6,
+  "unite": "points",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   20
+  ],
+  "anecdote": "Avec la conduite accompagnée, la période probatoire dure deux ans au lieu de trois.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t004",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Quel est le taux d'alcool maximal autorisé dans le sang pour un conducteur confirmé, en grammes par litre ?",
+  "reponse": 0.5,
+  "unite": "g/L",
+  "tolerance": 0,
+  "bornes": [
+   0,
+   3
+  ],
+  "anecdote": "Pour un jeune conducteur, la limite tombe à 0,2 g/L, ce qui revient pratiquement à zéro verre.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t005",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "En quelle année la ceinture de sécurité est-elle devenue obligatoire à l'avant, hors agglomération ?",
+  "reponse": 1973,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1950,
+   2000
+  ],
+  "anecdote": "L'année précédente, en 1972, plus de 18 000 personnes étaient mortes sur les routes françaises, un triste record.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t006",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel panneau est le seul de forme octogonale ?",
+  "reponse": "Le stop",
+  "reponses_acceptees": [
+   "Stop",
+   "Panneau stop"
+  ],
+  "anecdote": "Sa forme unique permet de le reconnaître de dos, ou même couvert de neige.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t007",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel panneau suis-je ?",
+  "reponse": "Le cédez-le-passage",
+  "reponses_acceptees": [
+   "Cédez le passage",
+   "Cedez le passage",
+   "Céder le passage"
+  ],
+  "indices": [
+   "Je suis un triangle",
+   "Ma pointe est tournée vers le bas",
+   "Mon bord est rouge et mon centre blanc",
+   "Je t'oblige à laisser passer les autres au carrefour"
+  ],
+  "anecdote": "C'est le seul panneau triangulaire pointe en bas. Les autres panneaux de danger ont la pointe en haut.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t008",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En quelle année le permis à points a-t-il été mis en place en France ?",
+  "reponse": 1992,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1960,
+   2010
+  ],
+  "anecdote": "Il est entré en vigueur le 1er juillet 1992. Les routiers avaient bloqué les routes pour protester.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t009",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Combien d'années dure la période probatoire après un permis classique, sans conduite accompagnée ?",
+  "reponse": 3,
+  "unite": "ans",
+  "tolerance": 0,
+  "bornes": [
+   0,
+   10
+  ],
+  "anecdote": "Pendant cette période, le jeune conducteur doit apposer un « A » rouge à l'arrière de son véhicule.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t010",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : il est obligatoire d'avoir un gilet jaune et un triangle dans sa voiture.",
+  "reponse": "Vrai",
+  "anecdote": "C'est obligatoire depuis 2008. Le gilet doit être à portée de main, et pas dans le coffre.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t011",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les noces",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment appelle-t-on les 50 ans de mariage ?",
+  "reponse": "Les noces d'or",
+  "reponses_acceptees": [
+   "Noces d'or",
+   "Or"
+  ],
+  "anecdote": "Les noces d'or étaient si rares autrefois qu'on les fêtait avec tout le village.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t012",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les noces",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quelles noces fête-t-on pour 25 ans de mariage ?",
+  "choix": [
+   "Les noces d'argent",
+   "Les noces de porcelaine",
+   "Les noces de diamant",
+   "Les noces de perle"
+  ],
+  "reponse": "Les noces d'argent",
+  "anecdote": "La tradition de célébrer chaque anniversaire de mariage par une matière est née dans les pays germaniques.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t013",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les noces",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quelles noces fête-t-on après une année de mariage ?",
+  "choix": [
+   "Les noces de coton",
+   "Les noces de papier",
+   "Les noces de cuir",
+   "Les noces de bois"
+  ],
+  "reponse": "Les noces de coton",
+  "anecdote": "Le coton symbolise un lien encore fragile. Les matières deviennent de plus en plus solides avec les années.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t014",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les noces",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Combien d'années de mariage fête-t-on avec les noces de diamant ?",
+  "reponse": 60,
+  "unite": "ans",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   100
+  ],
+  "anecdote": "Le diamant, la pierre la plus dure, représente un amour indestructible.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t015",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les noces",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien d'années de mariage fête-t-on avec les noces de porcelaine ?",
+  "reponse": 20,
+  "unite": "ans",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   80
+  ],
+  "anecdote": "La liste française donne un nom à chaque année de mariage, jusqu'à plus de 80 ans.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t016",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les noces",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Après dix ans de mariage, quelles noces les époux célèbrent-ils ?",
+  "choix": [
+   "Les noces d'étain",
+   "Les noces de cuir",
+   "Les noces de laine",
+   "Les noces de bois"
+  ],
+  "reponse": "Les noces d'étain",
+  "anecdote": "Les noces de bois se fêtent à 5 ans, et celles de cuir à 2 ans.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t017",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les noces",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien d'années de mariage fête-t-on avec les noces de platine ?",
+  "reponse": 70,
+  "unite": "ans",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   100
+  ],
+  "anecdote": "La reine Élisabeth II et le prince Philip les ont célébrées en 2017, une première pour un couple royal britannique.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t018",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La paperasse",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "Combien de chiffres compte un numéro de sécurité sociale, sans les deux chiffres de la clé ?",
+  "reponse": 13,
+  "unite": "chiffres",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   30
+  ],
+  "anecdote": "Il indique le sexe, l'année et le mois de naissance, le département et la commune de naissance.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t019",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La paperasse",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Par quel chiffre commence le numéro de sécurité sociale d'un homme ?",
+  "choix": [
+   "1",
+   "2",
+   "0",
+   "9"
+  ],
+  "reponse": "1",
+  "anecdote": "Celui d'une femme commence par 2. Le chiffre 7 ou 8 sert aux numéros provisoires.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t020",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La paperasse",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "En quelle année le prélèvement à la source de l'impôt sur le revenu a-t-il été mis en place ?",
+  "reponse": 2019,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   2000,
+   2025
+  ],
+  "anecdote": "Avant, les Français payaient en 2018 l'impôt sur leurs revenus de 2017, avec un an de décalage.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t021",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La paperasse",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel haut fonctionnaire français a inventé la TVA, en 1954 ?",
+  "choix": [
+   "Maurice Lauré",
+   "Jacques Rueff",
+   "Pierre Mendès France",
+   "Antoine Pinay"
+  ],
+  "reponse": "Maurice Lauré",
+  "anecdote": "Cette taxe sur la valeur ajoutée a été copiée par plus de 170 pays dans le monde.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t022",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La paperasse",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Quel est le taux normal de la TVA en France, en pourcentage ?",
+  "reponse": 20,
+  "unite": "%",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   50
+  ],
+  "anecdote": "Il existe aussi des taux réduits, comme 5,5 % pour la plupart des produits alimentaires.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t023",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La paperasse",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En quelle année l'impôt sur le revenu a-t-il été créé en France ?",
+  "reponse": 1914,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1850,
+   1960
+  ],
+  "anecdote": "Il est surnommé loi Caillaux, du nom du ministre qui l'a défendu. Il a été voté quelques semaines avant la guerre.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t024",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La paperasse",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Quel document suis-je ?",
+  "reponse": "Le livret de famille",
+  "reponses_acceptees": [
+   "Livret de famille"
+  ],
+  "indices": [
+   "J'ai été créé après la destruction des archives de l'état civil de Paris, pendant la Commune de 1871",
+   "On y inscrit les naissances, les adoptions et les décès",
+   "On me remet souvent à la mairie le jour du mariage",
+   "Je suis le petit carnet officiel de la famille"
+  ],
+  "anecdote": "Comme les originaux des actes avaient brûlé, chaque famille a reçu sa propre copie.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t025",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La paperasse",
+  "type": "vf",
+  "difficulte": 3,
+  "question": "Vrai ou faux : en France, un mariage célébré seulement à l'église a une valeur légale.",
+  "reponse": "Faux",
+  "anecdote": "Le mariage civil, à la mairie, est obligatoire et doit avoir lieu avant toute cérémonie religieuse.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t026",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le casino",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Combien de cases numérotées compte une roulette française, zéro compris ?",
+  "reponse": 37,
+  "unite": "cases",
+  "tolerance": 0,
+  "bornes": [
+   10,
+   100
+  ],
+  "anecdote": "La roulette américaine en a 38, car elle ajoute un double zéro, ce qui avantage encore plus la banque.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t027",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le casino",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quelle est la meilleure main possible au poker ?",
+  "choix": [
+   "La quinte flush royale",
+   "Le carré",
+   "Le full",
+   "La couleur"
+  ],
+  "reponse": "La quinte flush royale",
+  "anecdote": "Elle va du 10 à l'as dans la même couleur. La probabilité de l'avoir d'emblée est d'environ une sur 650 000.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t028",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le casino",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "De quel nombre faut-il s'approcher sans le dépasser, au blackjack ?",
+  "reponse": 21,
+  "unite": "points",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   50
+  ],
+  "anecdote": "Les figures valent 10 points et l'as vaut 1 ou 11, au choix du joueur.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t029",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le casino",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel jeu de cartes de casino, cher à James Bond, se joue avec des mains qui valent au maximum 9 ?",
+  "reponse": "Le baccara",
+  "reponses_acceptees": [
+   "Baccara",
+   "Baccarat",
+   "Chemin de fer"
+  ],
+  "anecdote": "Dans Casino Royale, le roman de Ian Fleming, Bond joue au baccara. Le film de 2006 l'a remplacé par le poker.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t030",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le casino",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Dans quel quartier de Monaco se trouve le célèbre casino ?",
+  "reponse": "Monte-Carlo",
+  "reponses_acceptees": [
+   "Monte Carlo",
+   "Montecarlo"
+  ],
+  "anecdote": "Les Monégasques n'ont pas le droit d'y jouer. Le casino a sauvé les finances de la principauté au XIXe siècle.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t031",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le casino",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien obtient-on en additionnant tous les numéros d'une roulette ?",
+  "reponse": 666,
+  "unite": "total",
+  "tolerance": 0,
+  "bornes": [
+   100,
+   2000
+  ],
+  "anecdote": "De 0 à 36, la somme fait 666, le « nombre de la Bête ». D'où le surnom de la roulette : « la roue du diable ».",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t032",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le casino",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel jeu suis-je ?",
+  "reponse": "Le Loto",
+  "reponses_acceptees": [
+   "Loto"
+  ],
+  "indices": [
+   "J'ai été lancé en France en 1976",
+   "Au départ, il fallait cocher 6 numéros sur 49",
+   "Depuis 2008, on choisit aussi un numéro chance",
+   "Mes tirages ont lieu le lundi, le mercredi et le samedi"
+  ],
+  "anecdote": "La probabilité de gagner le gros lot est d'environ une sur 19 millions.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t033",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le casino",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Au poker, comment appelle-t-on une main avec trois cartes identiques et une paire ?",
+  "reponse": "Un full",
+  "reponses_acceptees": [
+   "Full",
+   "Le full",
+   "Full house"
+  ],
+  "anecdote": "Il bat la couleur, mais il est battu par le carré.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t034",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le casino",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En quelle année les jeux d'argent en ligne ont-ils été légalisés en France ?",
+  "reponse": 2010,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1990,
+   2025
+  ],
+  "anecdote": "Le poker, les paris sportifs et les paris hippiques sont autorisés en ligne, mais pas les machines à sous.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t035",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le casino",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quelle ville suis-je ?",
+  "reponse": "Las Vegas",
+  "reponses_acceptees": [
+   "Vegas"
+  ],
+  "indices": [
+   "Je suis née en 1905, au milieu du désert",
+   "On me surnomme « Sin City », la ville du péché",
+   "On y trouve une réplique de la tour Eiffel",
+   "Je suis la capitale mondiale du jeu, dans le Nevada"
+  ],
+  "anecdote": "On y compte plus de 150 000 chambres d'hôtel. On peut s'y marier en quelques minutes.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t036",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La vie de bureau",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Quelle est la durée légale du travail en France, en heures par semaine ?",
+  "reponse": 35,
+  "unite": "heures",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   60
+  ],
+  "anecdote": "Au-delà, les heures sont payées en heures supplémentaires ou récupérées.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t037",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La vie de bureau",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En quelle année la première loi Aubry sur les 35 heures a-t-elle été votée ?",
+  "reponse": 1998,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1980,
+   2010
+  ],
+  "anecdote": "Une seconde loi, en 2000, a généralisé le passage aux 35 heures. Les entreprises de plus de 20 salariés devaient s'y mettre en premier.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t038",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La vie de bureau",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Combien de semaines de congés payés les salariés ont-ils par an, en France ?",
+  "reponse": 5,
+  "unite": "semaines",
+  "tolerance": 0,
+  "bornes": [
+   0,
+   15
+  ],
+  "anecdote": "La cinquième semaine date de 1982. Avant, il y en avait quatre, depuis 1969.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t039",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La vie de bureau",
+  "type": "fourchette",
+  "difficulte": 5,
+  "question": "En quelle année les premiers congés payés ont-ils été instaurés en France ?",
+  "reponse": 1936,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1900,
+   1970
+  ],
+  "anecdote": "Le Front populaire en avait accordé deux semaines. Des milliers d'ouvriers ont vu la mer pour la première fois.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t040",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La vie de bureau",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel organisme suis-je ?",
+  "reponse": "France Travail",
+  "reponses_acceptees": [
+   "France travail"
+  ],
+  "indices": [
+   "J'ai été créé en 2008 par la fusion de l'ANPE et des Assédic",
+   "J'aide les demandeurs d'emploi à trouver un travail",
+   "Je verse les allocations chômage",
+   "On m'appelait Pôle emploi jusqu'en 2024"
+  ],
+  "anecdote": "Le changement de nom s'est accompagné de l'inscription automatique des bénéficiaires du RSA.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t041",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La vie de bureau",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel document suis-je ?",
+  "reponse": "Le CV",
+  "reponses_acceptees": [
+   "Curriculum vitae",
+   "CV",
+   "Le curriculum vitae"
+  ],
+  "indices": [
+   "Mon nom vient du latin et signifie « déroulement de la vie »",
+   "On m'accompagne d'une lettre de motivation",
+   "On me conseille de ne pas dépasser une page",
+   "J'énumère tes diplômes et tes expériences"
+  ],
+  "anecdote": "Léonard de Vinci aurait rédigé l'un des premiers CV connus, une lettre où il vantait ses talents au duc de Milan.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t042",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La vie de bureau",
+  "type": "vf",
+  "difficulte": 9,
+  "question": "Vrai ou faux : le 1er mai est le seul jour férié obligatoirement chômé et payé pour tous les salariés.",
+  "reponse": "Vrai",
+  "anecdote": "Les autres jours fériés peuvent être travaillés selon les conventions. La tradition du muguet ce jour-là remonte au début du XXe siècle.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t043",
+  "categorie": "Records & chiffres",
+  "sous_theme": "La vie de bureau",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Quel jour suis-je ?",
+  "reponse": "La journée de solidarité",
+  "reponses_acceptees": [
+   "Journée de solidarité",
+   "Journee de solidarite"
+  ],
+  "indices": [
+   "J'ai été créée en 2004, après la canicule de 2003",
+   "Les salariés travaillent ce jour-là sans être payés en plus",
+   "Je finance l'autonomie des personnes âgées et handicapées",
+   "On me place souvent le lundi de Pentecôte"
+  ],
+  "anecdote": "Elle rapporte environ trois milliards d'euros par an à la Caisse nationale de solidarité pour l'autonomie.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t044",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Le Code de la route",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de grammes d'alcool pur contient un « verre standard », le repère utilisé en France ?",
+  "reponse": 10,
+  "unite": "grammes",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   50
+  ],
+  "anecdote": "Un demi de bière, un verre de vin de 10 cl et un petit verre de whisky en contiennent à peu près autant.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "rec-t045",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les records insolites",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien de hot-dogs Joey Chestnut a-t-il avalés en 10 minutes, lors de son record de 2021 ?",
+  "reponse": 76,
+  "unite": "hot-dogs",
+  "tolerance": 1,
+  "bornes": [
+   10,
+   200
+  ],
+  "anecdote": "Ce concours a lieu chaque 4 juillet à Coney Island, à New York, depuis plus d'un siècle selon la légende.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "rec-t046",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les records insolites",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien de centimètres mesurait le Népalais Chandra Bahadur Dangi, plus petit homme adulte jamais mesuré ?",
+  "reponse": 54.6,
+  "unite": "cm",
+  "tolerance": 1,
+  "bornes": [
+   20,
+   150
+  ],
+  "anecdote": "Il a été reconnu par le Guinness en 2012, à 72 ans. Il est mort en 2015, lors d'une tournée aux Samoa américaines.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "rec-t047",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les records insolites",
+  "type": "vf",
+  "difficulte": 3,
+  "question": "Vrai ou faux : la tour Eiffel grandit de plusieurs centimètres en été.",
+  "reponse": "Vrai",
+  "anecdote": "Le fer se dilate à la chaleur : son sommet peut s'élever d'une quinzaine de centimètres et pencher légèrement à l'opposé du soleil.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "rec-t048",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Les records insolites",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien de fois le garde forestier américain Roy Sullivan a-t-il été frappé par la foudre ?",
+  "reponse": 7,
+  "unite": "fois",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   30
+  ],
+  "anecdote": "Il a survécu à chaque fois, entre 1942 et 1977. Ses chapeaux brûlés sont exposés dans des musées Guinness.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
  }
 ]

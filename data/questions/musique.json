@@ -1645,5 +1645,339 @@
   "reponse": "Deep Purple",
   "reponses_acceptees": [],
   "anecdote": "La chanson raconte l'incendie du casino de Montreux en 1971."
+ },
+ {
+  "id": "mus-t001",
+  "categorie": "Musique",
+  "sous_theme": "Les génériques de dessins animés",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel dessin animé suis-je ?",
+  "reponse": "Les Mystérieuses Cités d'or",
+  "reponses_acceptees": [
+   "Mystérieuses Cités d'or",
+   "Les Cités d'or",
+   "Cités d'or"
+  ],
+  "indices": [
+   "Je suis une coproduction franco-japonaise de 1982",
+   "Mon histoire se déroule au XVIe siècle, en Amérique du Sud",
+   "Mon héros, Esteban, porte un médaillon",
+   "Mon générique chante « Enfants du soleil, ah ah ah… »"
+  ],
+  "anecdote": "Une suite a été produite plus de trente ans après, à partir de 2012.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "mus-t002",
+  "categorie": "Musique",
+  "sous_theme": "Les génériques de dessins animés",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel chanteur interprète « Goldorak, go ! », le générique français de Goldorak ?",
+  "choix": [
+   "Noam",
+   "Bernard Minet",
+   "Jean-Jacques Debout",
+   "Claude Lombard"
+  ],
+  "reponse": "Noam",
+  "anecdote": "Goldorak a été l'un des tout premiers dessins animés japonais diffusés en France, à partir de 1978.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "mus-t003",
+  "categorie": "Musique",
+  "sous_theme": "Les génériques de dessins animés",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Qui chante « Capitaine Flam, tu n'es pas de notre galaxie » ?",
+  "choix": [
+   "Jean-Jacques Debout",
+   "Noam",
+   "Bernard Minet",
+   "Chantal Goya"
+  ],
+  "reponse": "Jean-Jacques Debout",
+  "anecdote": "Il est aussi le parolier et le mari de Chantal Goya, pour qui il a écrit « Bécassine, c'est ma cousine ».",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "mus-t004",
+  "categorie": "Musique",
+  "sous_theme": "Les génériques de dessins animés",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel gros dinosaure orange à pois verts était la star de L'Île aux enfants ?",
+  "reponse": "Casimir",
+  "reponses_acceptees": [
+   "Casimir"
+  ],
+  "anecdote": "L'émission a été diffusée de 1974 à 1982. Casimir adorait le « gloubi-boulga », un mélange improbable.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "mus-t005",
+  "categorie": "Musique",
+  "sous_theme": "Les génériques de dessins animés",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel dessin animé franco-japonais de 1981 transpose l'Odyssée d'Homère dans l'espace ?",
+  "reponse": "Ulysse 31",
+  "reponses_acceptees": [
+   "Ulysse",
+   "Ulysse trente et un"
+  ],
+  "anecdote": "Ulysse y affronte les dieux de l'Olympe pour avoir tué le Cyclope, un robot géant.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "mus-t006",
+  "categorie": "Musique",
+  "sous_theme": "Les génériques de dessins animés",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel duo a composé les génériques de nombreux dessins animés des années 1980, dont Inspecteur Gadget ?",
+  "choix": [
+   "Haim Saban et Shuki Levy",
+   "Rodolphe et Christian",
+   "Jean-Michel Jarre et Vangelis",
+   "Didier Barbelivien et Félix Gray"
+  ],
+  "reponse": "Haim Saban et Shuki Levy",
+  "anecdote": "Haim Saban a ensuite fait fortune en produisant la série Power Rangers.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "mus-t007",
+  "categorie": "Musique",
+  "sous_theme": "Les génériques de dessins animés",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année le Club Dorothée a-t-il commencé sur TF1 ?",
+  "reponse": 1987,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1970,
+   2000
+  ],
+  "anecdote": "L'émission a duré dix ans. Elle a fait découvrir aux enfants français Dragon Ball, Les Chevaliers du Zodiaque et Nicky Larson.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "mus-t008",
+  "categorie": "Musique",
+  "sous_theme": "Les génériques de dessins animés",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Dans quelle émission jeunesse d'Antenne 2 Goldorak a-t-il débarqué en France, en 1978 ?",
+  "reponse": "Récré A2",
+  "reponses_acceptees": [
+   "Recre A2",
+   "La Récré A2",
+   "Récré Antenne 2"
+  ],
+  "anecdote": "Le robot géant est devenu un phénomène, au point d'inquiéter certains parents à cause de ses combats.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "mus-t009",
+  "categorie": "Musique",
+  "sous_theme": "Daft Punk et la French Touch",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel duo casqué a sorti « Get Lucky » en 2013, avec Pharrell Williams ?",
+  "reponse": "Daft Punk",
+  "reponses_acceptees": [
+   "Daftpunk"
+  ],
+  "anecdote": "Le nom du groupe vient d'une critique qui qualifiait leur premier groupe de rock de « daft punky thrash », du punk débile.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "mus-t010",
+  "categorie": "Musique",
+  "sous_theme": "Daft Punk et la French Touch",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel DJ français a produit « Titanium » avec la chanteuse Sia ?",
+  "reponse": "David Guetta",
+  "reponses_acceptees": [
+   "Guetta"
+  ],
+  "anecdote": "C'est l'un des DJ les plus écoutés au monde. Il a commencé dans les clubs parisiens à la fin des années 1980.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "mus-t011",
+  "categorie": "Musique",
+  "sous_theme": "Daft Punk et la French Touch",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel duo versaillais a sorti l'album « Moon Safari » en 1998 ?",
+  "choix": [
+   "Air",
+   "Justice",
+   "Cassius",
+   "Phoenix"
+  ],
+  "reponse": "Air",
+  "anecdote": "Leur titre « Sexy Boy » a fait le tour du monde. Phoenix aussi vient de Versailles.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "mus-t012",
+  "categorie": "Musique",
+  "sous_theme": "Daft Punk et la French Touch",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année est sorti l'album « Discovery », avec le tube « One More Time » ?",
+  "reponse": 2001,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1990,
+   2015
+  ],
+  "anecdote": "Les clips de l'album ont été réunis dans un film d'animation japonais, Interstella 5555, supervisé par Leiji Matsumoto, le créateur d'Albator.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "mus-t013",
+  "categorie": "Musique",
+  "sous_theme": "Daft Punk et la French Touch",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "De quel film Disney Daft Punk a-t-il signé la bande originale, en 2010 ?",
+  "choix": [
+   "Tron : L'Héritage",
+   "Wall-E",
+   "Les Indestructibles",
+   "Ratatouille"
+  ],
+  "reponse": "Tron : L'Héritage",
+  "anecdote": "Les deux musiciens font même une apparition dans le film, en DJ d'une boîte de nuit futuriste.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "mus-t014",
+  "categorie": "Musique",
+  "sous_theme": "Daft Punk et la French Touch",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel tube de 1998 de Stardust, le groupe de Thomas Bangalter, est devenu un hymne de la French Touch ?",
+  "reponse": "Music Sounds Better with You",
+  "reponses_acceptees": [
+   "Music sounds better with you",
+   "Music sounds better"
+  ],
+  "anecdote": "Ce sera le seul single du groupe, qui s'est séparé aussitôt après.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "mus-t015",
+  "categorie": "Musique",
+  "sous_theme": "Daft Punk et la French Touch",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Quel groupe suis-je ?",
+  "reponse": "Justice",
+  "reponses_acceptees": [
+   "Justice"
+  ],
+  "indices": [
+   "Je suis un duo parisien du label Ed Banger",
+   "Mon symbole est une croix lumineuse",
+   "Mon titre « D.A.N.C.E. » a été nommé aux Grammy Awards",
+   "Je porte le nom d'une valeur morale"
+  ],
+  "anecdote": "Gaspard Augé et Xavier de Rosnay ont remporté un Grammy Award en 2019 pour un album live.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "mus-t016",
+  "categorie": "Musique",
+  "sous_theme": "Daft Punk et la French Touch",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Comment s'appelle le premier album de Daft Punk, sorti en 1997 ?",
+  "choix": [
+   "Homework",
+   "Discovery",
+   "Human After All",
+   "Random Access Memories"
+  ],
+  "reponse": "Homework",
+  "anecdote": "On y trouve « Around the World » et « Da Funk ». Le clip d'« Around the World » a été réalisé par Michel Gondry.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "mus-t017",
+  "categorie": "Musique",
+  "sous_theme": "Daft Punk et la French Touch",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "En quelle année Daft Punk a-t-il été fondé ?",
+  "reponse": 1993,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1980,
+   2010
+  ],
+  "anecdote": "Thomas Bangalter et Guy-Manuel de Homem-Christo s'étaient rencontrés au lycée Carnot, à Paris.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
  }
 ]

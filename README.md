@@ -183,14 +183,21 @@ Tout est gratuit et sans serveur. Le bouton **🎚️ Réglages** du plateau rè
 
 ## Les questions
 
-**1515 questions** en français, réparties en 16 catégories : Histoire, Actualité (2020-2026),
+**2129 questions** en français, réparties en 16 catégories : Histoire, Actualité (2020-2026),
 Géographie, Sciences & Nature, Cinéma & Séries, Musique, Sport, Littérature, Art & Architecture,
 Gastronomie, Langue française, Insolite, Records & chiffres, Pop culture & jeux vidéo,
 Inventions & tech, Personnalités.
 
-Elles sont réparties en environ 34 % de QCM, 17 % de fourchettes, 13 % de questions à indices,
-9 % de vrai/faux et 26 % de réponses libres, à taper (avec leurs variantes acceptées).
+Elles sont réparties en environ 31 % de QCM, 16 % de fourchettes, 12 % de questions à indices,
+7 % de vrai/faux et 33 % de réponses libres, à taper (avec leurs variantes acceptées).
 Chaque question a son anecdote.
+
+Parmi elles, 500 questions « façon TTMC » (Tu te mets combien ?) sont regroupées par thèmes très
+précis (« Les mascottes de Coupe du monde », « Kaamelott », « Les cocktails »…), du niveau 3 au
+niveau 10. Leur thème est dans `sous_theme`, leur `id` contient un `t` (`spo-t001`) et leurs
+`tags` indiquent la famille : `["ttmc", "improbable" | "scolaire" | "plaisir" | "mature"]`
+(Mature : vie d'adulte et alcool, jamais rien d'explicite). Elles servent dans toutes les manches,
+comme les autres questions.
 
 Échelle de difficulté (il n'y a plus de questions de niveau 1, jugées trop évidentes) :
 

@@ -907,5 +907,165 @@
   "reponse": "Siri",
   "reponses_acceptees": [],
   "anecdote": "Le nom vient d'un prénom norvégien."
+ },
+ {
+  "id": "tec-t001",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Les inventeurs du quotidien",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel objet suis-je ?",
+  "reponse": "Le stylo Bic",
+  "reponses_acceptees": [
+   "Bic",
+   "Stylo Bic",
+   "Bic Cristal"
+  ],
+  "indices": [
+   "Je suis né en 1950",
+   "Mon inventeur s'appelait Marcel Bich",
+   "Mon capuchon est percé d'un trou pour éviter l'étouffement",
+   "Je suis un stylo à bille au corps transparent et hexagonal"
+  ],
+  "anecdote": "Il s'en est vendu plus de 100 milliards d'exemplaires. Le « h » de Bich a été retiré pour éviter une prononciation gênante en anglais.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "tec-t002",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Les inventeurs du quotidien",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Qui suis-je ?",
+  "reponse": "Louis Réard",
+  "reponses_acceptees": [
+   "Reard",
+   "Réard"
+  ],
+  "indices": [
+   "J'étais ingénieur automobile avant de reprendre la boutique de lingerie de ma mère",
+   "J'ai présenté ma création à la piscine Molitor, à Paris, en 1946",
+   "Ma création porte le nom d'un atoll du Pacifique",
+   "J'ai inventé le bikini"
+  ],
+  "anecdote": "Aucun mannequin n'acceptait de le porter : il a fait appel à une danseuse du Casino de Paris, Micheline Bernardini.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "tec-t003",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Les inventeurs du quotidien",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Qui suis-je ?",
+  "reponse": "Nicolas Appert",
+  "reponses_acceptees": [
+   "Appert"
+  ],
+  "indices": [
+   "J'étais confiseur à Paris",
+   "Napoléon a récompensé ma méthode pour nourrir les soldats",
+   "J'ai publié en 1810 « L'Art de conserver… »",
+   "On me considère comme l'inventeur de la conserve"
+  ],
+  "anecdote": "Il conservait les aliments dans des bouteilles en verre chauffées. La boîte de conserve en métal est venue ensuite, en Angleterre.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "tec-t004",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Les inventeurs du quotidien",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel Français a inventé la machine à coudre, en 1830 ?",
+  "choix": [
+   "Barthélemy Thimonnier",
+   "Isaac Singer",
+   "Elias Howe",
+   "Joseph Jacquard"
+  ],
+  "reponse": "Barthélemy Thimonnier",
+  "anecdote": "Des tailleurs parisiens, craignant pour leur emploi, ont saccagé son atelier en 1831. Il est mort dans la misère.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "tec-t005",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Les inventeurs du quotidien",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "En quelle année Louis Braille a-t-il publié son système d'écriture pour les aveugles ?",
+  "reponse": 1829,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1750,
+   1950
+  ],
+  "anecdote": "Il l'a mis au point à 15 ans, en s'inspirant d'une écriture de nuit inventée pour les soldats.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "tec-t006",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Les inventeurs du quotidien",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel objet suis-je ?",
+  "reponse": "Le stéthoscope",
+  "reponses_acceptees": [
+   "Stethoscope",
+   "Stéthoscope"
+  ],
+  "indices": [
+   "J'ai été inventé en 1816 par René Laennec",
+   "Ma première version était une simple feuille de papier roulée",
+   "On m'a imaginé pour éviter de coller l'oreille contre la poitrine des patients",
+   "Les médecins me portent autour du cou"
+  ],
+  "anecdote": "Le nom vient du grec : « stêthos », la poitrine, et « skopein », examiner.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "tec-t007",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Les inventeurs du quotidien",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Quel objet suis-je ?",
+  "reponse": "L'Opinel",
+  "reponses_acceptees": [
+   "Opinel",
+   "Couteau Opinel"
+  ],
+  "indices": [
+   "Je suis né en Savoie en 1890",
+   "Ma bague de sécurité, la Virobloc, date de 1955",
+   "Mon logo est une main couronnée",
+   "Je suis un couteau pliant au manche en bois"
+  ],
+  "anecdote": "Il figure dans la liste des 100 plus beaux objets du monde établie par le Victoria and Albert Museum de Londres.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
  }
 ]

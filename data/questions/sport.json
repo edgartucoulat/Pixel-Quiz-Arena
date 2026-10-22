@@ -1678,5 +1678,943 @@
    "Bowling"
   ],
   "anecdote": "Un score parfait au bowling est de 300 points."
+ },
+ {
+  "id": "spo-t001",
+  "categorie": "Sport",
+  "sous_theme": "Les célébrations de footballeurs",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel joueur célèbre ses buts en sautant et en criant « Siuuu » ?",
+  "reponse": "Cristiano Ronaldo",
+  "reponses_acceptees": [
+   "Ronaldo",
+   "CR7"
+  ],
+  "anecdote": "Le cri vient de « sí », « oui » en espagnol. Il l'a popularisé quand il jouait au Real Madrid.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t002",
+  "categorie": "Sport",
+  "sous_theme": "Les célébrations de footballeurs",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel attaquant français célèbre ses buts les bras croisés, l'air boudeur ?",
+  "choix": [
+   "Kylian Mbappé",
+   "Antoine Griezmann",
+   "Olivier Giroud",
+   "Ousmane Dembélé"
+  ],
+  "reponse": "Kylian Mbappé",
+  "anecdote": "Il a raconté l'avoir copiée sur son petit frère Ethan, qui la faisait quand il le battait à FIFA.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t003",
+  "categorie": "Sport",
+  "sous_theme": "Les célébrations de footballeurs",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel joueur gallois formait un cœur avec ses mains après ses buts ?",
+  "choix": [
+   "Gareth Bale",
+   "Aaron Ramsey",
+   "Ryan Giggs",
+   "Ian Rush"
+  ],
+  "reponse": "Gareth Bale",
+  "anecdote": "Il a déposé ce geste comme marque, associé à son numéro : « Eleven of Hearts ».",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t004",
+  "categorie": "Sport",
+  "sous_theme": "Les célébrations de footballeurs",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel Camerounais a dansé autour du poteau de corner à la Coupe du monde 1990 ?",
+  "reponse": "Roger Milla",
+  "reponses_acceptees": [
+   "Milla"
+  ],
+  "anecdote": "Il avait 38 ans. En 1994, il est devenu à 42 ans le plus vieux buteur de l'histoire de la Coupe du monde.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t005",
+  "categorie": "Sport",
+  "sous_theme": "Les célébrations de footballeurs",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel Brésilien a mimé le bercement d'un bébé après un but contre les Pays-Bas, en 1994 ?",
+  "choix": [
+   "Bebeto",
+   "Romário",
+   "Ronaldo",
+   "Dunga"
+  ],
+  "reponse": "Bebeto",
+  "anecdote": "Son fils venait de naître. Romário et Mazinho l'avaient imité, et le geste a fait le tour du monde.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t006",
+  "categorie": "Sport",
+  "sous_theme": "Les célébrations de footballeurs",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel grand attaquant anglais de 2,01 m célébrait ses buts en faisant le robot ?",
+  "reponse": "Peter Crouch",
+  "reponses_acceptees": [
+   "Crouch"
+  ],
+  "anecdote": "Il a marqué 22 buts en 42 sélections avec l'Angleterre, souvent de la tête, évidemment.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t007",
+  "categorie": "Sport",
+  "sous_theme": "Les célébrations de footballeurs",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année l'Italien Marco Tardelli a-t-il poussé son célèbre cri de joie en finale de Coupe du monde ?",
+  "reponse": 1982,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1950,
+   2010
+  ],
+  "anecdote": "Son but contre la RFA, suivi d'une course les bras écartés et les larmes aux yeux, est resté l'image de la victoire italienne en Espagne.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t008",
+  "categorie": "Sport",
+  "sous_theme": "Les célébrations de footballeurs",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : il est interdit d'enlever son maillot pour célébrer un but.",
+  "reponse": "Vrai",
+  "anecdote": "Depuis 2004, le règlement prévoit un carton jaune pour un joueur qui retire son maillot ou s'en couvre la tête.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t009",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment s'appelait le coq mascotte de la Coupe du monde 1998 en France ?",
+  "reponse": "Footix",
+  "reponses_acceptees": [
+   "Footix le coq"
+  ],
+  "anecdote": "Son nom mélange « football » et le « -ix » des Gaulois d'Astérix.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t010",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel animal était World Cup Willie, la toute première mascotte de Coupe du monde, en 1966 ?",
+  "choix": [
+   "Un lion",
+   "Un bouledogue",
+   "Un ours",
+   "Un coq"
+  ],
+  "reponse": "Un lion",
+  "anecdote": "Le lion, emblème de l'Angleterre, portait un maillot à l'Union Jack. L'Angleterre a d'ailleurs gagné son Mondial.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t011",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel animal était Zakumi, la mascotte de la Coupe du monde 2010 en Afrique du Sud ?",
+  "choix": [
+   "Un léopard",
+   "Un lion",
+   "Un zèbre",
+   "Un guépard"
+  ],
+  "reponse": "Un léopard",
+  "anecdote": "« Za » pour South Africa, et « kumi » signifie dix dans plusieurs langues africaines.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t012",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel animal était Fuleco, la mascotte de la Coupe du monde 2014 au Brésil ?",
+  "reponse": "Un tatou",
+  "reponses_acceptees": [
+   "Tatou",
+   "Tatou à trois bandes"
+  ],
+  "anecdote": "Ce tatou peut se rouler en boule… comme un ballon. L'espèce est menacée de disparition.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t013",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel animal était Zabivaka, la mascotte de la Coupe du monde 2018 en Russie ?",
+  "choix": [
+   "Un loup",
+   "Un ours",
+   "Un renard",
+   "Un lynx"
+  ],
+  "reponse": "Un loup",
+  "anecdote": "Son nom signifie à peu près « celui qui marque » en russe. Il portait des lunettes de ski orange.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t014",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : La'eeb, la mascotte de la Coupe du monde 2022 au Qatar, était un chameau.",
+  "reponse": "Faux",
+  "anecdote": "C'était un keffieh blanc volant, la coiffe traditionnelle du Golfe. Son nom signifie « joueur très doué ».",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t015",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : Ettie, la mascotte de la Coupe du monde féminine 2019 en France, était présentée comme la fille de Footix.",
+  "reponse": "Vrai",
+  "anecdote": "Cette jeune poule était née, selon sa légende, le soir de la victoire des Bleus en 1998.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t016",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Qu'était Pique, la mascotte de la Coupe du monde 1986 au Mexique ?",
+  "choix": [
+   "Un piment",
+   "Un cactus",
+   "Un taco",
+   "Un avocat"
+  ],
+  "reponse": "Un piment",
+  "anecdote": "Ce piment jalapeño portait une moustache et un grand sombrero.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t017",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel fruit était Naranjito, la mascotte de la Coupe du monde 1982 en Espagne ?",
+  "reponse": "Une orange",
+  "reponses_acceptees": [
+   "Orange"
+  ],
+  "anecdote": "Il a eu sa propre série de dessins animés à la télévision espagnole.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t018",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Comment s'appelait la mascotte en forme d'étoile des JO d'hiver d'Albertville, en 1992 ?",
+  "reponse": "Magique",
+  "reponses_acceptees": [
+   "Le lutin Magique"
+  ],
+  "anecdote": "Ce petit lutin en forme d'étoile devait symboliser le rêve et l'imagination.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t019",
+  "categorie": "Sport",
+  "sous_theme": "Les mascottes de Coupe du monde",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Que représentent les Phryges, mascottes des JO de Paris 2024 ?",
+  "choix": [
+   "Des bonnets phrygiens",
+   "Des coqs",
+   "Des tours Eiffel",
+   "Des marianne"
+  ],
+  "reponse": "Des bonnets phrygiens",
+  "anecdote": "Le bonnet phrygien, symbole de la liberté, coiffe Marianne. Les peluches ont été critiquées car fabriquées en Chine.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t020",
+  "categorie": "Sport",
+  "sous_theme": "Les surnoms de footballeurs",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel joueur argentin est surnommé « El Pibe de Oro », le gamin en or ?",
+  "reponse": "Diego Maradona",
+  "reponses_acceptees": [
+   "Maradona"
+  ],
+  "anecdote": "Il a marqué face à l'Angleterre en 1986 le but de la « main de Dieu », puis le « but du siècle » quatre minutes plus tard.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t021",
+  "categorie": "Sport",
+  "sous_theme": "Les surnoms de footballeurs",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel joueur est surnommé « La Pulga », la puce ?",
+  "reponse": "Lionel Messi",
+  "reponses_acceptees": [
+   "Messi"
+  ],
+  "anecdote": "Enfant, il souffrait d'un déficit d'hormone de croissance. Le FC Barcelone a accepté de payer son traitement.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t022",
+  "categorie": "Sport",
+  "sous_theme": "Les surnoms de footballeurs",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel joueur allemand était surnommé « le Kaiser » ?",
+  "choix": [
+   "Franz Beckenbauer",
+   "Gerd Müller",
+   "Lothar Matthäus",
+   "Karl-Heinz Rummenigge"
+  ],
+  "reponse": "Franz Beckenbauer",
+  "anecdote": "Il a gagné la Coupe du monde comme joueur en 1974, puis comme sélectionneur en 1990.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t023",
+  "categorie": "Sport",
+  "sous_theme": "Les surnoms de footballeurs",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel Français les supporters de Manchester United surnommaient-ils « King » ?",
+  "choix": [
+   "Eric Cantona",
+   "Zinédine Zidane",
+   "Thierry Henry",
+   "Patrice Evra"
+  ],
+  "reponse": "Eric Cantona",
+  "anecdote": "Il jouait toujours le col relevé. Il a aussi dit : « Quand les mouettes suivent un chalutier… »",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t024",
+  "categorie": "Sport",
+  "sous_theme": "Les surnoms de footballeurs",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel Italien était surnommé « Il Divin Codino », la divine petite queue de cheval ?",
+  "choix": [
+   "Roberto Baggio",
+   "Paolo Maldini",
+   "Alessandro Del Piero",
+   "Francesco Totti"
+  ],
+  "reponse": "Roberto Baggio",
+  "anecdote": "Il a raté le tir au but décisif de la finale de la Coupe du monde 1994 contre le Brésil.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t025",
+  "categorie": "Sport",
+  "sous_theme": "Les surnoms de footballeurs",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel joueur brésilien était surnommé « O Fenômeno » ?",
+  "choix": [
+   "Ronaldo",
+   "Ronaldinho",
+   "Romário",
+   "Rivaldo"
+  ],
+  "reponse": "Ronaldo",
+  "anecdote": "Ce Ronaldo-là, le brésilien, a remporté deux Coupes du monde (1994 et 2002) et deux Ballons d'or.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t026",
+  "categorie": "Sport",
+  "sous_theme": "Les surnoms de footballeurs",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel joueur était surnommé « la Saeta Rubia », la flèche blonde ?",
+  "choix": [
+   "Alfredo Di Stéfano",
+   "Ferenc Puskás",
+   "Johan Cruyff",
+   "Eusébio"
+  ],
+  "reponse": "Alfredo Di Stéfano",
+  "anecdote": "Ce génie argentin a joué pour trois sélections : l'Argentine, la Colombie et l'Espagne, mais jamais en Coupe du monde.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t027",
+  "categorie": "Sport",
+  "sous_theme": "Les surnoms de footballeurs",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel buteur allemand était surnommé « Der Bomber » ?",
+  "choix": [
+   "Gerd Müller",
+   "Jürgen Klinsmann",
+   "Miroslav Klose",
+   "Rudi Völler"
+  ],
+  "reponse": "Gerd Müller",
+  "anecdote": "Il a marqué 68 buts en 62 matchs avec la RFA, un ratio hallucinant.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t028",
+  "categorie": "Sport",
+  "sous_theme": "Les surnoms de footballeurs",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel Français était surnommé « le Napoléon du football » par la presse anglaise ?",
+  "choix": [
+   "Raymond Kopa",
+   "Just Fontaine",
+   "Michel Platini",
+   "Jean-Pierre Papin"
+  ],
+  "reponse": "Raymond Kopa",
+  "anecdote": "Fils d'immigrés polonais, il a été le premier Français Ballon d'or, en 1958.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "spo-t029",
+  "categorie": "Sport",
+  "sous_theme": "Les maillots du Tour de France",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Combien d'étapes compte habituellement le Tour de France ?",
+  "reponse": 21,
+  "unite": "étapes",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   40
+  ],
+  "anecdote": "Les coureurs parcourent environ 3 500 km en trois semaines, avec seulement deux jours de repos.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t030",
+  "categorie": "Sport",
+  "sous_theme": "Les maillots du Tour de France",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel maillot porte le leader du classement par points ?",
+  "choix": [
+   "Le maillot vert",
+   "Le maillot à pois",
+   "Le maillot blanc",
+   "Le maillot rouge"
+  ],
+  "reponse": "Le maillot vert",
+  "anecdote": "Il récompense les sprinteurs. Peter Sagan l'a gagné sept fois, un record.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t031",
+  "categorie": "Sport",
+  "sous_theme": "Les maillots du Tour de France",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "La couleur du maillot jaune vient des pages de quel journal, organisateur du Tour ?",
+  "reponse": "L'Auto",
+  "reponses_acceptees": [
+   "Auto"
+  ],
+  "anecdote": "Ce journal sportif, imprimé sur papier jaune, est l'ancêtre de L'Équipe.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t032",
+  "categorie": "Sport",
+  "sous_theme": "Les maillots du Tour de France",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année le maillot jaune a-t-il été porté pour la première fois ?",
+  "reponse": 1919,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1903,
+   1960
+  ],
+  "anecdote": "Eugène Christophe l'a enfilé à Grenoble. Les coureurs le trouvaient ridicule et le surnommaient « le canari ».",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t033",
+  "categorie": "Sport",
+  "sous_theme": "Les maillots du Tour de France",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "De quelle couleur est le dossard du coureur le plus combatif de l'étape ?",
+  "choix": [
+   "Rouge",
+   "Vert",
+   "Noir",
+   "Bleu"
+  ],
+  "reponse": "Rouge",
+  "anecdote": "Le prix de la combativité est attribué chaque jour par un jury, et un « super-combatif » est désigné à Paris.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t034",
+  "categorie": "Sport",
+  "sous_theme": "Les maillots du Tour de France",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment surnomme-t-on le dernier du classement général ?",
+  "reponse": "La lanterne rouge",
+  "reponses_acceptees": [
+   "Lanterne rouge"
+  ],
+  "anecdote": "L'expression vient de la lanterne rouge accrochée au dernier wagon des trains.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t035",
+  "categorie": "Sport",
+  "sous_theme": "Les maillots du Tour de France",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Pour porter le maillot blanc du meilleur jeune, il faut avoir moins de combien d'années ?",
+  "reponse": 26,
+  "unite": "ans",
+  "tolerance": 0,
+  "bornes": [
+   18,
+   35
+  ],
+  "anecdote": "Tadej Pogačar l'a remporté quatre fois de suite, de 2020 à 2023.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t036",
+  "categorie": "Sport",
+  "sous_theme": "Les maillots du Tour de France",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Les couleurs du maillot à pois viennent de l'emballage de quel chocolat, sponsor du classement ?",
+  "choix": [
+   "Poulain",
+   "Milka",
+   "Côte d'Or",
+   "Nestlé"
+  ],
+  "reponse": "Poulain",
+  "anecdote": "Le directeur du Tour Félix Lévitan aurait choisi ce motif en 1975 pour rappeler l'emballage du sponsor.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t037",
+  "categorie": "Sport",
+  "sous_theme": "La pétanque",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Qui doit-on embrasser, selon la tradition, quand on perd 13 à 0 ?",
+  "reponse": "Fanny",
+  "reponses_acceptees": [
+   "Les fesses de Fanny"
+  ],
+  "anecdote": "Fanny aurait été une serveuse de café lyonnaise qui consolait les perdants. Les clubs exposent souvent son postérieur en tableau.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t038",
+  "categorie": "Sport",
+  "sous_theme": "La pétanque",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Combien de points faut-il atteindre pour gagner une partie de pétanque ?",
+  "reponse": 13,
+  "unite": "points",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   30
+  ],
+  "anecdote": "On joue à 13 points, mais certains tournois se jouent en temps limité.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t039",
+  "categorie": "Sport",
+  "sous_theme": "La pétanque",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Comment appelle-t-on aussi le cochonnet dans le règlement ?",
+  "choix": [
+   "Le but",
+   "Le palet",
+   "Le pion",
+   "La cible"
+  ],
+  "reponse": "Le but",
+  "anecdote": "Il doit être en bois ou en matière synthétique, et mesurer 30 mm de diamètre.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t040",
+  "categorie": "Sport",
+  "sous_theme": "La pétanque",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment appelle-t-on le tir qui chasse la boule adverse et laisse la sienne à sa place ?",
+  "reponse": "Le carreau",
+  "reponses_acceptees": [
+   "Carreau",
+   "Un carreau"
+  ],
+  "anecdote": "Le tireur rêve du « carreau sur place » : sa boule s'arrête exactement là où était celle de l'adversaire.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t041",
+  "categorie": "Sport",
+  "sous_theme": "La pétanque",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Dans quelle ville la pétanque est-elle née, au début du XXe siècle ?",
+  "choix": [
+   "La Ciotat",
+   "Marseille",
+   "Aubagne",
+   "Toulon"
+  ],
+  "reponse": "La Ciotat",
+  "anecdote": "Un joueur de longue boule souffrant de rhumatismes ne pouvait plus prendre d'élan : on a joué « pieds tanqués », pieds joints.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t042",
+  "categorie": "Sport",
+  "sous_theme": "La pétanque",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Quel est le diamètre réglementaire du cochonnet, en millimètres ?",
+  "reponse": 30,
+  "unite": "mm",
+  "tolerance": 1,
+  "bornes": [
+   10,
+   80
+  ],
+  "anecdote": "Une tolérance de 1 mm est admise. Les boules, elles, mesurent entre 70,5 et 80 mm.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t043",
+  "categorie": "Sport",
+  "sous_theme": "La pétanque",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Comment appelle-t-on le joueur chargé d'approcher ses boules au plus près du cochonnet ?",
+  "reponse": "Le pointeur",
+  "reponses_acceptees": [
+   "Pointeur"
+  ],
+  "anecdote": "Le pointeur « pointe », le tireur « tire ». En triplette, celui du milieu doit savoir faire les deux.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t044",
+  "categorie": "Sport",
+  "sous_theme": "Le Tournoi des Six Nations",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment s'appelle la « récompense » de l'équipe qui finit dernière du Tournoi ?",
+  "reponse": "La cuillère de bois",
+  "reponses_acceptees": [
+   "Cuillère de bois",
+   "Cuillere de bois"
+  ],
+  "anecdote": "Elle n'existe pas vraiment : aucun objet n'est remis au perdant, c'est une tradition de journalistes.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t045",
+  "categorie": "Sport",
+  "sous_theme": "Le Tournoi des Six Nations",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment appelle-t-on le fait de gagner tous ses matchs du Tournoi ?",
+  "reponse": "Le Grand Chelem",
+  "reponses_acceptees": [
+   "Grand Chelem"
+  ],
+  "anecdote": "La France l'a réussi dix fois, la dernière en 2022.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t046",
+  "categorie": "Sport",
+  "sous_theme": "Le Tournoi des Six Nations",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Que gagne une nation britannique ou irlandaise qui bat les trois autres ?",
+  "choix": [
+   "La Triple Couronne",
+   "La Calcutta Cup",
+   "Le Bouclier",
+   "La Coupe Webb Ellis"
+  ],
+  "reponse": "La Triple Couronne",
+  "anecdote": "L'Angleterre, l'Écosse, le pays de Galles et l'Irlande se la disputent. Elle n'est symbolisée par un vrai trophée que depuis 2006.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t047",
+  "categorie": "Sport",
+  "sous_theme": "Le Tournoi des Six Nations",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel trophée se disputent l'Angleterre et l'Écosse ?",
+  "choix": [
+   "La Calcutta Cup",
+   "La Triple Couronne",
+   "Le trophée Garibaldi",
+   "La Millennium Cup"
+  ],
+  "reponse": "La Calcutta Cup",
+  "anecdote": "Elle a été fondue en 1878 à partir des roupies d'argent d'un club de rugby de Calcutta qui venait de fermer.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t048",
+  "categorie": "Sport",
+  "sous_theme": "Le Tournoi des Six Nations",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année l'Italie a-t-elle rejoint le Tournoi, qui est devenu celui des Six Nations ?",
+  "reponse": 2000,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1980,
+   2015
+  ],
+  "anecdote": "Pour son premier match, elle a battu l'Écosse, tenante du titre.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t049",
+  "categorie": "Sport",
+  "sous_theme": "Le Tournoi des Six Nations",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quelle équipe a remporté le tout premier Tournoi des Six Nations, en 2000 ?",
+  "choix": [
+   "L'Angleterre",
+   "La France",
+   "Le pays de Galles",
+   "L'Irlande"
+  ],
+  "reponse": "L'Angleterre",
+  "anecdote": "Elle a raté le Grand Chelem en perdant son dernier match sous la pluie, en Écosse.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "spo-t050",
+  "categorie": "Sport",
+  "sous_theme": "Le Tournoi des Six Nations",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Dans quel stade le pays de Galles reçoit-il ses adversaires ?",
+  "choix": [
+   "Le Principality Stadium",
+   "Twickenham",
+   "Murrayfield",
+   "L'Aviva Stadium"
+  ],
+  "reponse": "Le Principality Stadium",
+  "anecdote": "Ce stade de Cardiff, au cœur de la ville, possède un toit rétractable. Les Gallois aiment le fermer pour faire monter le bruit.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
  }
 ]

@@ -1740,5 +1740,517 @@
    "Newton"
   ],
   "anecdote": "Un newton correspond à peu près au poids d'une pomme de 100 g."
+ },
+ {
+  "id": "sci-t001",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les planètes du système solaire",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quelle planète suis-je ?",
+  "reponse": "Saturne",
+  "reponses_acceptees": [
+   "Saturne"
+  ],
+  "indices": [
+   "Ma densité est plus faible que celle de l'eau",
+   "Titan est ma plus grosse lune",
+   "Je suis la deuxième plus grosse planète",
+   "Je suis célèbre pour mes anneaux"
+  ],
+  "anecdote": "Si l'on trouvait une baignoire assez grande, elle flotterait. Ses anneaux sont faits de glace et de poussières.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t002",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les planètes du système solaire",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quelle planète suis-je ?",
+  "reponse": "Mercure",
+  "reponses_acceptees": [
+   "Mercure"
+  ],
+  "indices": [
+   "Je n'ai aucune lune",
+   "Une année chez moi dure 88 jours",
+   "Je porte le nom du messager des dieux",
+   "Je suis la planète la plus proche du Soleil"
+  ],
+  "anecdote": "Malgré sa proximité avec le Soleil, ce n'est pas la plus chaude : c'est Vénus, à cause de son atmosphère épaisse.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t003",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les planètes du système solaire",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En combien d'heures environ Jupiter fait-elle un tour sur elle-même ?",
+  "reponse": 10,
+  "unite": "heures",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   48
+  ],
+  "anecdote": "C'est la planète qui tourne le plus vite : sa journée dure 9 h 56. Elle en est même aplatie aux pôles.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t004",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les planètes du système solaire",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien d'années terrestres dure une année sur Neptune ?",
+  "reponse": 165,
+  "unite": "ans",
+  "tolerance": 3,
+  "bornes": [
+   20,
+   400
+  ],
+  "anecdote": "Depuis sa découverte en 1846, Neptune n'a bouclé qu'un seul tour du Soleil, en 2011.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t005",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les planètes du système solaire",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle planète l'astronome Le Verrier a-t-il découverte par le calcul, en 1846 ?",
+  "reponse": "Neptune",
+  "reponses_acceptees": [
+   "Neptune"
+  ],
+  "anecdote": "Il avait déduit sa position des perturbations de l'orbite d'Uranus. Un astronome allemand l'a observée le soir même où il a reçu ses calculs.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t006",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les planètes du système solaire",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "En quelle année Pluton a-t-elle perdu son statut de planète ?",
+  "reponse": 2006,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1990,
+   2020
+  ],
+  "anecdote": "L'Union astronomique internationale l'a reclassée en « planète naine », car elle ne domine pas son orbite.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t007",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les planètes du système solaire",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : Vénus tourne sur elle-même dans le sens inverse de la plupart des planètes.",
+  "reponse": "Vrai",
+  "anecdote": "Sur Vénus, le Soleil se lève à l'ouest et se couche à l'est. Uranus, elle, tourne couchée sur le côté.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t008",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les planètes du système solaire",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Comment s'appelle le plus haut volcan du système solaire, sur Mars ?",
+  "reponse": "Olympus Mons",
+  "reponses_acceptees": [
+   "Mont Olympe",
+   "Olympus mons"
+  ],
+  "anecdote": "Il culmine à plus de 20 km au-dessus des plaines alentour, plus de deux fois la hauteur de l'Everest.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t009",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les os du corps humain",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment s'appelle l'os de la mâchoire inférieure ?",
+  "reponse": "La mandibule",
+  "reponses_acceptees": [
+   "Mandibule",
+   "Le maxillaire inférieur",
+   "Maxillaire inférieur"
+  ],
+  "anecdote": "C'est le seul os mobile du crâne. C'est aussi le plus solide os de la tête.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t010",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les os du corps humain",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Comment appelle-t-on le petit os plat situé à l'avant du genou ?",
+  "choix": [
+   "La rotule",
+   "Le tibia",
+   "Le péroné",
+   "Le carpe"
+  ],
+  "reponse": "La rotule",
+  "anecdote": "Les anatomistes l'appellent aujourd'hui la « patella ». Les bébés naissent avec une rotule en cartilage.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t011",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les os du corps humain",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Quel os suis-je ?",
+  "reponse": "L'os hyoïde",
+  "reponses_acceptees": [
+   "Hyoïde",
+   "Hyoide",
+   "Os hyoide"
+  ],
+  "indices": [
+   "Je ne m'articule avec aucun autre os du corps",
+   "J'ai la forme d'un fer à cheval",
+   "Je soutiens la langue",
+   "Je suis situé dans le cou, juste au-dessus de la pomme d'Adam"
+  ],
+  "anecdote": "Les médecins légistes l'examinent de près : sa fracture peut révéler un étranglement.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t012",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les os du corps humain",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Comment s'appelle l'os du talon ?",
+  "choix": [
+   "Le calcanéum",
+   "L'astragale",
+   "Le cuboïde",
+   "Le scaphoïde"
+  ],
+  "reponse": "Le calcanéum",
+  "anecdote": "C'est le plus gros os du pied. Le tendon d'Achille s'y attache.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t013",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les os du corps humain",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de vertèbres cervicales l'être humain possède-t-il ?",
+  "reponse": 7,
+  "unite": "vertèbres",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   20
+  ],
+  "anecdote": "La girafe en a exactement autant que nous, mais chacune peut mesurer plus de 25 cm.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t014",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les os du corps humain",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien d'os un nouveau-né possède-t-il environ, avant que certains ne fusionnent ?",
+  "reponse": 300,
+  "unite": "os",
+  "tolerance": 6,
+  "bornes": [
+   100,
+   600
+  ],
+  "anecdote": "Beaucoup se soudent en grandissant, notamment ceux du crâne, pour aboutir aux 206 os de l'adulte.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t015",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les os du corps humain",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel os du bras va de l'épaule au coude ?",
+  "reponse": "L'humérus",
+  "reponses_acceptees": [
+   "Humérus",
+   "Humerus"
+  ],
+  "anecdote": "La décharge ressentie quand on se cogne le coude vient d'un nerf qui passe tout contre cet os.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t016",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les os du corps humain",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien d'os compte une main humaine, poignet compris ?",
+  "reponse": 27,
+  "unite": "os",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   60
+  ],
+  "anecdote": "Huit os pour le poignet, cinq pour la paume et quatorze phalanges. Les deux mains réunies contiennent plus d'un quart des os du corps.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t017",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Les os du corps humain",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel petit os du poignet, en forme de barque, se fracture souvent lors d'une chute sur la main ?",
+  "reponse": "Le scaphoïde",
+  "reponses_acceptees": [
+   "Scaphoïde",
+   "Scaphoide"
+  ],
+  "anecdote": "Cette fracture passe souvent inaperçue, car elle n'apparaît pas toujours sur la première radio.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t018",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Le tableau périodique",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel élément a pour symbole C et se trouve dans toutes les molécules du vivant ?",
+  "reponse": "Le carbone",
+  "reponses_acceptees": [
+   "Carbone"
+  ],
+  "anecdote": "Le diamant, le graphite des crayons et le charbon sont tous faits de carbone.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t019",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Le tableau périodique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel est le symbole chimique de l'argent ?",
+  "reponse": "Ag",
+  "reponses_acceptees": [
+   "AG"
+  ],
+  "anecdote": "Il vient du latin « argentum ». C'est le métal qui conduit le mieux l'électricité.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t020",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Le tableau périodique",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel élément a pour symbole K ?",
+  "choix": [
+   "Le potassium",
+   "Le krypton",
+   "Le calcium",
+   "Le cobalt"
+  ],
+  "reponse": "Le potassium",
+  "anecdote": "K vient de « kalium », son nom latin, tiré de l'arabe « al-qali », la cendre de plantes. La banane en est riche.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t021",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Le tableau périodique",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel métal lourd et toxique a pour symbole Pb ?",
+  "choix": [
+   "Le plomb",
+   "Le phosphore",
+   "Le platine",
+   "Le palladium"
+  ],
+  "reponse": "Le plomb",
+  "anecdote": "Pb vient du latin « plumbum ». Le mot « plombier » a la même origine : les canalisations étaient en plomb.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t022",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Le tableau périodique",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Quel est le numéro atomique du carbone ?",
+  "reponse": 6,
+  "unite": "numéro",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   30
+  ],
+  "anecdote": "Le numéro atomique est le nombre de protons dans le noyau. Le carbone 14 sert à dater les restes anciens.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t023",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Le tableau périodique",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel élément doit son nom à l'ancien nom latin de Paris ?",
+  "choix": [
+   "Le lutécium",
+   "Le francium",
+   "Le gallium",
+   "Le polonium"
+  ],
+  "reponse": "Le lutécium",
+  "anecdote": "Il a été découvert en 1907 par le chimiste français Georges Urbain. Le gallium, lui, doit son nom à la Gaule.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t024",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Le tableau périodique",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel élément radioactif, découvert par Marguerite Perey en 1939, porte le nom d'un pays ?",
+  "reponse": "Le francium",
+  "reponses_acceptees": [
+   "Francium"
+  ],
+  "anecdote": "Elle avait été l'assistante de Marie Curie. Le francium est si instable qu'on n'en a jamais eu plus de quelques atomes à la fois.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t025",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Le tableau périodique",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quel élément suis-je ?",
+  "reponse": "L'uranium",
+  "reponses_acceptees": [
+   "Uranium"
+  ],
+  "indices": [
+   "Mon numéro atomique est 92",
+   "Je dois mon nom à une planète découverte en 1781",
+   "Becquerel a découvert la radioactivité grâce à mes sels",
+   "On m'enrichit pour faire tourner les centrales nucléaires"
+  ],
+  "anecdote": "C'est l'élément naturel le plus lourd que l'on trouve en quantité sur Terre.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "sci-t026",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Le tableau périodique",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel élément suis-je ?",
+  "reponse": "Le silicium",
+  "reponses_acceptees": [
+   "Silicium"
+  ],
+  "indices": [
+   "Je suis le deuxième élément le plus abondant de la croûte terrestre",
+   "Mon symbole est Si",
+   "Je suis le composant principal du sable et du verre",
+   "Une vallée californienne porte mon nom en anglais"
+  ],
+  "anecdote": "La Silicon Valley doit son nom aux puces électroniques en silicium. Attention, « silicone » est un autre matériau.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
  }
 ]
