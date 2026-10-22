@@ -54,6 +54,17 @@
   const readTime = (text) => clamp(String(text || '').length * 35, 1500, 4000);
   const SPRINT_POINTS = 200;
 
+  /* Joueurs ordinateur (mode Solo) : justesse, vitesse de réponse et de buzz,
+   * niveau choisi au Thème Mystère, précision à la Fourchette. */
+  const BOT_LEVELS = {
+    facile: { name: 'Facile', icon: '🐢', acc: 0.3, speed: [7000, 12000], react: [3000, 6000], guess: 0.12, spread: 0.35, level: 3 },
+    moyen: { name: 'Moyen', icon: '🙂', acc: 0.5, speed: [5000, 9000], react: [2000, 4000], guess: 0.08, spread: 0.18, level: 5 },
+    fort: { name: 'Fort', icon: '😎', acc: 0.65, speed: [3500, 7000], react: [1400, 3000], guess: 0.05, spread: 0.1, level: 6 },
+    expert: { name: 'Expert', icon: '🧠', acc: 0.8, speed: [2500, 5000], react: [900, 2000], guess: 0.03, spread: 0.05, level: 8 },
+  };
+  PQA.BOT_LEVELS = BOT_LEVELS;
+  const BOT_NAMES = ['Bip-Bop', 'Robotine', 'HAL 9001', 'Ordinatrix', 'Calculix', 'Pixelle', 'Kilo-Octet', 'Turbo-Puce', 'Androïdette'];
+
   /* Le Sprint se joue sans choix : questions libres, plus les QCM dont la
    * réponse se tape facilement et dont l'énoncé ne dépend pas des choix. */
   const NEEDS_CHOICES = /\b(ces|parmi|suivante?s?|intrus|lequel|laquelle|lesquel(le)?s|ci-dessous|quelle proposition)\b/i;
@@ -81,7 +92,7 @@
       this.order = []; // ordre d'arrivée
       this.presenter = { connected: false };
       this.settings = {
-        mode: 'virtual', // virtual | irl | duel
+        mode: 'virtual', // virtual | irl | duel | solo (contre l'ordinateur)
         teams: 0, // 0 = sans équipes, sinon 2 à 4
         rounds: DEFAULT_ROUNDS.slice(),
         length: 'normal',
@@ -188,6 +199,7 @@
       for (const p of this.playerList()) {
         if (p.frozenUntil && t >= p.frozenUntil) { p.frozenUntil = 0; this.changed(); }
       }
+      this.botTick();
     }
 
     /* ---- Banque de questions : jamais deux fois la même ---- */
@@ -326,6 +338,85 @@
       return list.map((p) => p.id);
     }
 
+    /* ======================= Joueurs ordinateur (Solo) ============ */
+    bots() { return this.activePlayers().filter((p) => p.bot); }
+    addBot(level = 'moyen') {
+      if (this.activePlayers().length >= 10) return null;
+      const taken = new Set(this.playerList().map((p) => p.name));
+      const name = BOT_NAMES.find((n) => !taken.has(n)) || 'Robot';
+      const { p } = this.join({ name, avatar: PQA.randomAvatar() });
+      if (!p) return null;
+      p.bot = true; p.level = BOT_LEVELS[level] ? level : 'moyen'; p.rtt = 0;
+      this.changed();
+      return p;
+    }
+    setBotLevel(pid, level) {
+      const p = this.players[pid];
+      if (p && p.bot && BOT_LEVELS[level]) { p.level = level; this.changed(); }
+    }
+    removeBots() { this.bots().forEach((p) => this.kick(p.id)); }
+    /** Chance qu'un ordinateur connaisse la réponse : son niveau, corrigé par la difficulté. */
+    botSkill(p, d) { return clamp(BOT_LEVELS[p.level].acc + (5 - (d.difficulte || 5)) * 0.06, 0.05, 0.98); }
+    /** Réponse d'un ordinateur : juste s'il « sait », sinon une erreur plausible. */
+    botValue(p, q, ok) {
+      const d = q.data;
+      if (q.choices) return ok ? q.correctIdx : pickOne(q.choices.map((_, i) => i).filter((i) => i !== q.correctIdx));
+      if (d.type === 'fourchette') {
+        const [lo, hi] = d.bornes || [d.reponse * 0.5, d.reponse * 1.5];
+        const span = d.unite === 'année' ? hi - lo : Math.abs(d.reponse) || hi - lo;
+        const g = (Math.random() + Math.random() + Math.random() - 1.5) * 2; // ~ loi normale
+        let x = d.reponse + g * span * BOT_LEVELS[p.level].spread * (ok ? 0.4 : 1);
+        x = d.pas ? Math.round(x / d.pas) * d.pas : Number.isInteger(d.reponse) ? Math.round(x) : Math.round(x * 100) / 100;
+        return clamp(x, Math.min(lo, hi), Math.max(lo, hi));
+      }
+      if (ok) return String(d.reponse);
+      const other = this.bank.filter((x) => x.categorie === d.categorie && x.type === 'libre' && x.reponse !== d.reponse);
+      return other.length ? pickOne(other).reponse : 'Je ne sais pas';
+    }
+    /** Ce qui, en changeant, demande à l'ordinateur de réfléchir à nouveau. */
+    botKey(p) {
+      const q = this.q, r = this.round, b = q && q.buzz;
+      return [this.phase, q && q.id, r && r.n, r && r.player, q && q.clue, b && b.current, b && b.open, b && b.locked.length,
+        b && b.readyAt && now() >= b.readyAt, q && q.answers[p.id] ? 1 : 0].join('|');
+    }
+    botTick() {
+      if (this.phase === 'lobby' || this.phase === 'end') return;
+      const t = now();
+      for (const p of this.activePlayers()) {
+        if (!p.bot) continue;
+        const key = this.botKey(p);
+        if (key !== p.botKey) { p.botKey = key; p.botAct = this.botPlan(p); }
+        if (p.botAct && t >= p.botAct.at) { const a = p.botAct; p.botAct = null; a.fn(); }
+      }
+    }
+    botPlan(p) {
+      const L = BOT_LEVELS[p.level] || BOT_LEVELS.moyen;
+      const q = this.q, r = this.round, ph = this.phase;
+      const at = (a, b) => now() + a + Math.random() * Math.max(0, b - a);
+      const mine = r && r.player === p.id;
+      if (ph === 'level' && mine) return { at: at(1500, 3500), fn: () => this.chooseLevel(p.id, clamp(L.level + rand(3) - 1, 1, 10)) };
+      if (ph === 'board' && mine) return { at: at(1500, 3500), fn: () => { const free = r.cells.filter((c) => !c.used); if (free.length) this.tablePick(p.id, pickOne(free).i); } };
+      if (ph === 'target' && mine) return { at: at(1200, 2500), fn: () => { const v = this.ranking().find((x) => x.id !== p.id); if (v) this.tableTarget(p.id, v.id); } };
+      if (ph === 'qpick' && mine) return { at: at(1500, 3500), fn: () => { const free = r.themes.map((t, i) => (t.by ? -1 : i)).filter((i) => i >= 0); this.quatreTheme(p.id, free.length && Math.random() < 0.85 ? pickOne(free) : 'mystere'); } };
+      if (ph !== 'question' || !q || q.revealed || !q.answerers.includes(p.id)) return null;
+      if (q.kind === 'buzz') {
+        const b = q.buzz;
+        if (b.current === p.id) return q.answers[p.id] ? null : { at: at(1200, 3000), fn: () => this.answer(p.id, this.botValue(p, q, p.botKnows)) };
+        if (!b.open || b.current || b.locked.includes(p.id) || (b.readyAt && now() < b.readyAt)) return null;
+        // Avec les indices, l'ordinateur trouve de plus en plus souvent au fil des indices.
+        let chance = this.botSkill(p, q.data);
+        if (q.data.indices) chance *= (q.clue + 1) / q.data.indices.length;
+        p.botKnows = Math.random() < chance;
+        if (!p.botKnows && Math.random() > L.guess) return null;
+        return { at: at(L.react[0], L.react[1]), fn: () => this.buzz(p.id) };
+      }
+      if (q.answers[p.id]) return null;
+      const ok = Math.random() < this.botSkill(p, q.data);
+      if (q.kind === 'quatre') return { at: at(1200, 3000), fn: () => this.answer(p.id, this.botValue(p, q, ok)) };
+      const max = q.duration ? q.duration * 0.85 : L.speed[1];
+      return { at: at(Math.min(L.speed[0], max * 0.6), Math.min(L.speed[1], max)), fn: () => this.answer(p.id, this.botValue(p, q, ok)) };
+    }
+
     /* ======================= Points ============================== */
     multiplier(p) { return p.streak >= 5 ? 3 : p.streak >= 3 ? 2 : 1; }
 
@@ -409,6 +500,8 @@
         this.rounds = ['duel'];
       } else {
         if (this.activePlayers().length < 1) return 'Il faut au moins 1 joueur.';
+        if (this.settings.mode === 'solo' && !this.activePlayers().some((p) => !p.bot)) return 'Entre ton pseudo dans la manette à droite pour jouer !';
+        if (this.settings.mode === 'solo' && !this.bots().length) return 'Ajoute au moins un adversaire.';
         this.rounds = ROUND_ORDER.filter((r) => this.settings.rounds.includes(r));
         if (this.activePlayers().length < 2) this.rounds = this.rounds.filter((r) => r !== 'champions');
         if (!this.rounds.length) return this.settings.rounds.includes('champions') ? 'Il faut 2 joueurs pour le Duel des champions.' : 'Choisis au moins une manche.';
@@ -1538,7 +1631,7 @@
       this.settings = s.settings;
       this.order = s.order;
       this.players = {};
-      s.players.forEach((p) => (this.players[p.id] = { ...p, frozenUntil: 0, connected: !!p.local }));
+      s.players.forEach((p) => (this.players[p.id] = { ...p, frozenUntil: 0, connected: !!(p.local || p.bot), botKey: null, botAct: null }));
       this.used = new Set(s.used);
       this.nextId = s.nextId + 1;
       // Anciennes sauvegardes : manches disparues (Échelle, Indices) retirées.
