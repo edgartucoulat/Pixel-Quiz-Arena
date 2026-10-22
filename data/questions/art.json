@@ -999,5 +999,59 @@
    150
   ],
   "anecdote": "Sa structure interne a été conçue par Gustave Eiffel."
+ },
+ {
+  "id": "art-065",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Architecture",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel monument indien de marbre blanc est un mausolée construit par amour ?",
+  "reponse": "Le Taj Mahal",
+  "reponses_acceptees": [
+   "Taj Mahal"
+  ],
+  "anecdote": "L'empereur Shah Jahan l'a fait construire pour son épouse Mumtaz Mahal."
+ },
+ {
+  "id": "art-066",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Musées",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Dans quel musée parisien, ancienne gare, peut-on voir de nombreux impressionnistes ?",
+  "reponse": "Le musée d'Orsay",
+  "reponses_acceptees": [
+   "Orsay",
+   "Musée d'Orsay"
+  ],
+  "anecdote": "La gare avait été construite pour l'Exposition universelle de 1900."
+ },
+ {
+  "id": "art-067",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Architecture",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel monument de Rome accueillait les combats de gladiateurs ?",
+  "reponse": "Le Colisée",
+  "reponses_acceptees": [
+   "Colisée",
+   "Colisee"
+  ],
+  "anecdote": "Il pouvait accueillir environ 50 000 spectateurs."
+ },
+ {
+  "id": "art-068",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Peinture",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel peintre a coupé une partie de son oreille en 1888 ?",
+  "reponse": "Van Gogh",
+  "reponses_acceptees": [
+   "Vincent van Gogh"
+  ],
+  "anecdote": "Il n'a vendu qu'un seul tableau de son vivant, selon la légende."
  }
 ]

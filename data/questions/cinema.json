@@ -1719,5 +1719,150 @@
   "question": "Vrai ou faux : « Psychose » d'Hitchcock serait le premier film américain à montrer une chasse d'eau.",
   "reponse": "Vrai",
   "anecdote": "La censure de l'époque jugeait les toilettes trop vulgaires pour l'écran."
+ },
+ {
+  "id": "cin-113",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel sorcier à lunettes porte une cicatrice en forme d'éclair sur le front ?",
+  "reponse": "Harry Potter",
+  "reponses_acceptees": [
+   "Harry"
+  ],
+  "anecdote": "Daniel Radcliffe a usé environ 160 paires de lunettes pendant le tournage de la saga."
+ },
+ {
+  "id": "cin-114",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Dans quel film un extraterrestre veut-il « téléphone maison » ?",
+  "reponse": "E.T.",
+  "reponses_acceptees": [
+   "ET",
+   "E.T. l'extra-terrestre",
+   "E.T. l'extraterrestre"
+  ],
+  "anecdote": "Le film de Spielberg est sorti en 1982."
+ },
+ {
+  "id": "cin-115",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel dinosaure géant est la star de « Jurassic Park », avec ses petits bras ?",
+  "reponse": "Le T-rex",
+  "reponses_acceptees": [
+   "T-rex",
+   "Tyrannosaure",
+   "Tyrannosaurus",
+   "Tyrannosaurus rex"
+  ],
+  "anecdote": "Le rugissement mélange des cris d'éléphanteau, de tigre et d'alligator."
+ },
+ {
+  "id": "cin-116",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel archéologue au fouet et au chapeau est joué par Harrison Ford ?",
+  "reponse": "Indiana Jones",
+  "reponses_acceptees": [
+   "Indy",
+   "Indiana"
+  ],
+  "anecdote": "Il doit son prénom au chien de George Lucas."
+ },
+ {
+  "id": "cin-117",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films français",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel film de 2001 raconte la vie d'une serveuse de Montmartre jouée par Audrey Tautou ?",
+  "reponse": "Le Fabuleux Destin d'Amélie Poulain",
+  "reponses_acceptees": [
+   "Amélie Poulain",
+   "Amélie",
+   "Le fabuleux destin d'Amelie Poulain"
+  ],
+  "anecdote": "Le café des Deux Moulins, où elle travaille, existe vraiment."
+ },
+ {
+  "id": "cin-118",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle série suit la famille royale britannique sous Élisabeth II ?",
+  "reponse": "The Crown",
+  "reponses_acceptees": [
+   "Crown"
+  ],
+  "anecdote": "Trois actrices différentes y ont joué la reine."
+ },
+ {
+  "id": "cin-119",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel ogre vert vit dans un marais avec un âne bavard ?",
+  "reponse": "Shrek",
+  "reponses_acceptees": [],
+  "anecdote": "Son nom vient du yiddish et signifie « peur »."
+ },
+ {
+  "id": "cin-120",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle reine des neiges chante « Libérée, délivrée » ?",
+  "reponse": "Elsa",
+  "reponses_acceptees": [],
+  "anecdote": "La chanson originale s'appelle « Let It Go »."
+ },
+ {
+  "id": "cin-121",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Films",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel agent secret britannique porte le matricule 007 ?",
+  "reponse": "James Bond",
+  "reponses_acceptees": [
+   "Bond"
+  ],
+  "anecdote": "Son créateur, Ian Fleming, a emprunté le nom à un ornithologue."
+ },
+ {
+  "id": "cin-122",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Séries",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle série suit un professeur de chimie devenu fabricant de drogue ?",
+  "reponse": "Breaking Bad",
+  "reponses_acceptees": [],
+  "anecdote": "Elle se déroule à Albuquerque, au Nouveau-Mexique."
+ },
+ {
+  "id": "cin-123",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Animation",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel jouet cow-boy est le héros de « Toy Story » avec Buzz l'Éclair ?",
+  "reponse": "Woody",
+  "reponses_acceptees": [
+   "Le shérif Woody"
+  ],
+  "anecdote": "C'était le premier long métrage entièrement en images de synthèse, en 1995."
  }
 ]

@@ -1540,5 +1540,143 @@
   "question": "Vrai ou faux : la France a remporté la Coupe du monde 1998 en battant le Brésil 3-0 en finale.",
   "reponse": "Vrai",
   "anecdote": "La finale s'est jouée au Stade de France, à Saint-Denis, le 12 juillet."
+ },
+ {
+  "id": "spo-101",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Combien de joueurs compte une équipe de football sur le terrain ?",
+  "reponse": "11",
+  "reponses_acceptees": [
+   "Onze"
+  ],
+  "anecdote": "Gardien compris."
+ },
+ {
+  "id": "spo-102",
+  "categorie": "Sport",
+  "sous_theme": "Football",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel club de football joue au Parc des Princes ?",
+  "reponse": "Le PSG",
+  "reponses_acceptees": [
+   "PSG",
+   "Paris Saint-Germain",
+   "Paris SG"
+  ],
+  "anecdote": "Le stade a été inauguré en 1897, sous la forme d'un vélodrome."
+ },
+ {
+  "id": "spo-103",
+  "categorie": "Sport",
+  "sous_theme": "Tennis",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Sur quelle surface se joue le tournoi de Wimbledon ?",
+  "reponse": "Le gazon",
+  "reponses_acceptees": [
+   "Gazon",
+   "Herbe",
+   "L'herbe"
+  ],
+  "anecdote": "Le gazon y est tondu à exactement 8 mm."
+ },
+ {
+  "id": "spo-104",
+  "categorie": "Sport",
+  "sous_theme": "Cyclisme",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "De quelle couleur est le maillot du leader du Tour de France ?",
+  "reponse": "Jaune",
+  "reponses_acceptees": [
+   "Le maillot jaune"
+  ],
+  "anecdote": "C'était la couleur du papier du journal L'Auto, organisateur du Tour."
+ },
+ {
+  "id": "spo-105",
+  "categorie": "Sport",
+  "sous_theme": "Cyclisme",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel maillot récompense le meilleur grimpeur du Tour de France ?",
+  "reponse": "Le maillot à pois",
+  "reponses_acceptees": [
+   "Maillot à pois",
+   "À pois",
+   "Pois",
+   "Maillot blanc à pois rouges"
+  ],
+  "anecdote": "Ses pois rouges viennent d'une marque de chocolat qui le sponsorisait."
+ },
+ {
+  "id": "spo-106",
+  "categorie": "Sport",
+  "sous_theme": "JO",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Dans quelle ville se sont tenus les JO d'été de 2016 ?",
+  "reponse": "Rio de Janeiro",
+  "reponses_acceptees": [
+   "Rio"
+  ],
+  "anecdote": "C'étaient les premiers Jeux organisés en Amérique du Sud."
+ },
+ {
+  "id": "spo-107",
+  "categorie": "Sport",
+  "sous_theme": "Divers",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Dans quel sport utilise-t-on un volant ?",
+  "reponse": "Le badminton",
+  "reponses_acceptees": [
+   "Badminton"
+  ],
+  "anecdote": "Un volant en plumes compte 16 plumes d'oie."
+ },
+ {
+  "id": "spo-108",
+  "categorie": "Sport",
+  "sous_theme": "Divers",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel sport se pratique avec une crosse sur la glace ?",
+  "reponse": "Le hockey sur glace",
+  "reponses_acceptees": [
+   "Hockey",
+   "Hockey sur glace"
+  ],
+  "anecdote": "Le palet est congelé avant les matchs pour moins rebondir."
+ },
+ {
+  "id": "spo-109",
+  "categorie": "Sport",
+  "sous_theme": "Rugby",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Combien de joueurs compte une équipe de rugby à XV sur le terrain ?",
+  "reponse": "15",
+  "reponses_acceptees": [
+   "Quinze"
+  ],
+  "anecdote": "Le rugby à XIII et le rugby à 7 existent aussi."
+ },
+ {
+  "id": "spo-110",
+  "categorie": "Sport",
+  "sous_theme": "Divers",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Dans quel sport parle-t-on de « strike » et de « spare » ?",
+  "reponse": "Le bowling",
+  "reponses_acceptees": [
+   "Bowling"
+  ],
+  "anecdote": "Un score parfait au bowling est de 300 points."
  }
 ]

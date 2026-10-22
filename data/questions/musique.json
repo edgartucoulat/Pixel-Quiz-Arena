@@ -1594,5 +1594,56 @@
   "question": "Vrai ou faux : Jimi Hendrix était gaucher.",
   "reponse": "Vrai",
   "anecdote": "Il jouait souvent sur des guitares de droitier retournées et recordées."
+ },
+ {
+  "id": "mus-105",
+  "categorie": "Musique",
+  "sous_theme": "Groupes",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel groupe de Liverpool était composé de John, Paul, George et Ringo ?",
+  "reponse": "Les Beatles",
+  "reponses_acceptees": [
+   "Beatles",
+   "The Beatles"
+  ],
+  "anecdote": "C'est le groupe qui a vendu le plus de disques dans l'histoire."
+ },
+ {
+  "id": "mus-106",
+  "categorie": "Musique",
+  "sous_theme": "Groupes",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel groupe suédois a gagné l'Eurovision 1974 avec « Waterloo » ?",
+  "reponse": "ABBA",
+  "reponses_acceptees": [
+   "Abba"
+  ],
+  "anecdote": "Le nom vient des initiales des prénoms des quatre membres."
+ },
+ {
+  "id": "mus-107",
+  "categorie": "Musique",
+  "sous_theme": "Instruments",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel instrument à vent est le plus grave de la famille des cuivres ?",
+  "reponse": "Le tuba",
+  "reponses_acceptees": [
+   "Tuba"
+  ],
+  "anecdote": "Il est apparu au XIXe siècle, en Allemagne."
+ },
+ {
+  "id": "mus-108",
+  "categorie": "Musique",
+  "sous_theme": "Rock",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel groupe britannique a sorti « Smoke on the Water » ?",
+  "reponse": "Deep Purple",
+  "reponses_acceptees": [],
+  "anecdote": "La chanson raconte l'incendie du casino de Montreux en 1971."
  }
 ]

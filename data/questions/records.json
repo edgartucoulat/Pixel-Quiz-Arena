@@ -1030,5 +1030,91 @@
   "question": "Vrai ou faux : mesuré depuis le centre de la Terre, l'Everest est le sommet le plus éloigné.",
   "reponse": "Faux",
   "anecdote": "C'est le Chimborazo, en Équateur, grâce au renflement de la Terre au niveau de l'équateur."
+ },
+ {
+  "id": "rec-067",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel est le plus grand pays du monde par la superficie ?",
+  "reponse": "La Russie",
+  "reponses_acceptees": [
+   "Russie"
+  ],
+  "anecdote": "Il s'étend sur 11 fuseaux horaires."
+ },
+ {
+  "id": "rec-068",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Chiffres",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Combien de jours compte une année bissextile ?",
+  "reponse": "366",
+  "reponses_acceptees": [
+   "Trois cent soixante-six",
+   "366 jours"
+  ],
+  "anecdote": "Le jour en plus est le 29 février."
+ },
+ {
+  "id": "rec-069",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Chiffres",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Combien de minutes y a-t-il dans une journée ?",
+  "reponse": "1440",
+  "reponses_acceptees": [
+   "1 440",
+   "Mille quatre cent quarante"
+  ],
+  "anecdote": "24 heures fois 60 minutes."
+ },
+ {
+  "id": "rec-070",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Chiffres",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Combien de cases compte un échiquier ?",
+  "reponse": "64",
+  "reponses_acceptees": [
+   "Soixante-quatre",
+   "64 cases"
+  ],
+  "anecdote": "La légende du grain de riz doublé sur chaque case donne un nombre astronomique."
+ },
+ {
+  "id": "rec-071",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel est le plus haut sommet du monde ?",
+  "reponse": "L'Everest",
+  "reponses_acceptees": [
+   "Everest",
+   "Le mont Everest",
+   "Mont Everest"
+  ],
+  "anecdote": "Il mesure 8 849 m selon la dernière mesure officielle."
+ },
+ {
+  "id": "rec-072",
+  "categorie": "Records & chiffres",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel est l'animal terrestre le plus lourd ?",
+  "reponse": "L'éléphant d'Afrique",
+  "reponses_acceptees": [
+   "Éléphant",
+   "Elephant",
+   "L'éléphant",
+   "Éléphant d'Afrique"
+  ],
+  "anecdote": "Un mâle peut dépasser 6 tonnes."
  }
 ]

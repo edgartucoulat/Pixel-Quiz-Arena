@@ -804,5 +804,44 @@
   ],
   "reponse": "Préfet",
   "anecdote": "Nommé en 1937 dans l'Aveyron, il était alors le plus jeune préfet de France."
+ },
+ {
+  "id": "per-051",
+  "categorie": "Personnalités",
+  "sous_theme": "Explorateurs",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel astronaute a été le premier homme à marcher sur la Lune ?",
+  "reponse": "Neil Armstrong",
+  "reponses_acceptees": [
+   "Armstrong"
+  ],
+  "anecdote": "C'était le 21 juillet 1969, heure française."
+ },
+ {
+  "id": "per-052",
+  "categorie": "Personnalités",
+  "sous_theme": "Politique",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel président américain a aboli l'esclavage et a été assassiné en 1865 ?",
+  "reponse": "Abraham Lincoln",
+  "reponses_acceptees": [
+   "Lincoln"
+  ],
+  "anecdote": "Il est le président le plus grand de l'histoire des États-Unis, avec 1,93 m."
+ },
+ {
+  "id": "per-053",
+  "categorie": "Personnalités",
+  "sous_theme": "Politique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel dirigeant indien prônait la non-violence et a mené l'Inde à l'indépendance ?",
+  "reponse": "Gandhi",
+  "reponses_acceptees": [
+   "Mahatma Gandhi"
+  ],
+  "anecdote": "Il a été nommé cinq fois pour le prix Nobel de la paix, sans jamais le recevoir."
  }
 ]

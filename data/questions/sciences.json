@@ -1647,5 +1647,98 @@
   "question": "Vrai ou faux : le diamant et le graphite sont tous deux faits de carbone pur.",
   "reponse": "Vrai",
   "anecdote": "Seule la façon dont les atomes sont agencés diffère."
+ },
+ {
+  "id": "sci-108",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Astronomie",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quelle planète est surnommée la planète rouge ?",
+  "reponse": "Mars",
+  "reponses_acceptees": [],
+  "anecdote": "Sa couleur vient de l'oxyde de fer, autrement dit de la rouille, présent dans son sol."
+ },
+ {
+  "id": "sci-109",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Corps humain",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel organe filtre le sang et produit l'urine ?",
+  "reponse": "Le rein",
+  "reponses_acceptees": [
+   "Les reins",
+   "Rein",
+   "Reins"
+  ],
+  "anecdote": "Les reins filtrent environ 180 litres de sang par jour."
+ },
+ {
+  "id": "sci-110",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment appelle-t-on le petit du cerf ?",
+  "reponse": "Le faon",
+  "reponses_acceptees": [
+   "Faon"
+  ],
+  "anecdote": "Ses taches blanches le camouflent dans les sous-bois."
+ },
+ {
+  "id": "sci-111",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel oiseau australien ne vole pas et est le deuxième plus grand oiseau du monde ?",
+  "reponse": "L'émeu",
+  "reponses_acceptees": [
+   "Émeu",
+   "Emeu"
+  ],
+  "anecdote": "En 1932, l'armée australienne a mené une « guerre des émeus »… et l'a perdue."
+ },
+ {
+  "id": "sci-112",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Astronomie",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel est le seul satellite naturel de la Terre ?",
+  "reponse": "La Lune",
+  "reponses_acceptees": [
+   "Lune"
+  ],
+  "anecdote": "Elle s'éloigne de la Terre d'environ 3,8 cm par an."
+ },
+ {
+  "id": "sci-113",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel insecte fabrique le miel ?",
+  "reponse": "L'abeille",
+  "reponses_acceptees": [
+   "Abeille",
+   "Les abeilles"
+  ],
+  "anecdote": "Pour 500 g de miel, les abeilles butinent environ un million de fleurs."
+ },
+ {
+  "id": "sci-114",
+  "categorie": "Sciences & Nature",
+  "sous_theme": "Physique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle est l'unité de mesure de la force ?",
+  "reponse": "Le newton",
+  "reponses_acceptees": [
+   "Newton"
+  ],
+  "anecdote": "Un newton correspond à peu près au poids d'une pomme de 100 g."
  }
 ]

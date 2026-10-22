@@ -831,5 +831,81 @@
   "question": "Vrai ou faux : le mot « robot » vient du tchèque.",
   "reponse": "Vrai",
   "anecdote": "Il a été popularisé en 1920 par la pièce « R.U.R. » de Karel Čapek."
+ },
+ {
+  "id": "tec-056",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quels frères français ont inventé le cinématographe en 1895 ?",
+  "reponse": "Les frères Lumière",
+  "reponses_acceptees": [
+   "Lumière",
+   "Les Lumière",
+   "Frères Lumière"
+  ],
+  "anecdote": "Leur premier film montre des ouvriers sortant de leur usine à Lyon."
+ },
+ {
+  "id": "tec-057",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quels frères américains ont réalisé le premier vol motorisé en 1903 ?",
+  "reponse": "Les frères Wright",
+  "reponses_acceptees": [
+   "Wright",
+   "Les Wright",
+   "Frères Wright"
+  ],
+  "anecdote": "Le premier vol a duré 12 secondes sur 37 mètres."
+ },
+ {
+  "id": "tec-058",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Inventeurs",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel ingénieur écossais a perfectionné la machine à vapeur et a donné son nom à une unité de puissance ?",
+  "reponse": "James Watt",
+  "reponses_acceptees": [
+   "Watt"
+  ],
+  "anecdote": "Il n'a pas inventé la machine à vapeur, mais il l'a beaucoup améliorée."
+ },
+ {
+  "id": "tec-059",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle entreprise a créé l'iPhone ?",
+  "reponse": "Apple",
+  "reponses_acceptees": [],
+  "anecdote": "Le premier iPhone a été présenté en janvier 2007."
+ },
+ {
+  "id": "tec-060",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel réseau social est symbolisé par un oiseau bleu avant de devenir X ?",
+  "reponse": "Twitter",
+  "reponses_acceptees": [],
+  "anecdote": "Le changement de nom a eu lieu en 2023."
+ },
+ {
+  "id": "tec-061",
+  "categorie": "Inventions & tech",
+  "sous_theme": "Informatique",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment s'appelle l'assistant vocal d'Apple ?",
+  "reponse": "Siri",
+  "reponses_acceptees": [],
+  "anecdote": "Le nom vient d'un prénom norvégien."
  }
 ]

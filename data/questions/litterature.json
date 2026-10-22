@@ -1147,5 +1147,97 @@
    "J'ai écrit « L'Écume des jours »"
   ],
   "anecdote": "Il est mort à 39 ans, pendant la projection de l'adaptation de son roman « J'irai cracher sur vos tombes »."
+ },
+ {
+  "id": "lit-075",
+  "categorie": "Littérature",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel gentleman cambrioleur a été créé par Maurice Leblanc ?",
+  "reponse": "Arsène Lupin",
+  "reponses_acceptees": [
+   "Lupin"
+  ],
+  "anecdote": "La série Netflix « Lupin » a relancé sa popularité."
+ },
+ {
+  "id": "lit-076",
+  "categorie": "Littérature",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel commissaire de Simenon fume la pipe ?",
+  "reponse": "Maigret",
+  "reponses_acceptees": [
+   "Jules Maigret",
+   "Le commissaire Maigret"
+  ],
+  "anecdote": "Simenon a écrit 75 romans et 28 nouvelles avec lui."
+ },
+ {
+  "id": "lit-077",
+  "categorie": "Littérature",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel chevalier à la triste figure se bat contre des moulins à vent ?",
+  "reponse": "Don Quichotte",
+  "reponses_acceptees": [
+   "Don Quijote"
+  ],
+  "anecdote": "Il est accompagné de son fidèle écuyer Sancho Panza."
+ },
+ {
+  "id": "lit-078",
+  "categorie": "Littérature",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle petite fille suit un lapin blanc dans un terrier ?",
+  "reponse": "Alice",
+  "reponses_acceptees": [
+   "Alice au pays des merveilles"
+  ],
+  "anecdote": "Lewis Carroll a inventé l'histoire pour Alice Liddell, une petite fille réelle."
+ },
+ {
+  "id": "lit-079",
+  "categorie": "Littérature",
+  "sous_theme": "Jeunesse",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel garçon refuse de grandir et vit au Pays imaginaire ?",
+  "reponse": "Peter Pan",
+  "reponses_acceptees": [
+   "Peter"
+  ],
+  "anecdote": "J. M. Barrie a légué les droits de Peter Pan à un hôpital pour enfants de Londres."
+ },
+ {
+  "id": "lit-080",
+  "categorie": "Littérature",
+  "sous_theme": "Personnages",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel détective belge à moustache a été créé par Agatha Christie ?",
+  "reponse": "Hercule Poirot",
+  "reponses_acceptees": [
+   "Poirot"
+  ],
+  "anecdote": "Il soigne particulièrement ses « petites cellules grises »."
+ },
+ {
+  "id": "lit-081",
+  "categorie": "Littérature",
+  "sous_theme": "Classiques",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Qui a écrit « Les Fables », dont « Le Corbeau et le Renard » ?",
+  "reponse": "La Fontaine",
+  "reponses_acceptees": [
+   "Jean de La Fontaine"
+  ],
+  "anecdote": "Il a écrit 243 fables, souvent inspirées d'Ésope."
  }
 ]
