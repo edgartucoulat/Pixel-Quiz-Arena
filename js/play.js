@@ -205,7 +205,7 @@
     const m = v.me;
     const team = m.teamName ? `<span class="team" style="background:${m.teamColor}">${esc(m.teamName)}</span>` : '';
     patch($('#me'), `<img class="pix av" src="${PQA.avatarURL(m.avatar, m.color, 'idle', 4)}" alt="">
-      <div class="me-info"><b style="color:${m.color}">${esc(m.name)}</b>${team}<small>${m.rank}${m.rank === 1 ? 'er' : 'e'} / ${m.total}${m.streak >= 3 ? ` · 🔥x${m.mult}` : ''}${m.double ? ' · ✖️2' : ''}</small></div>
+      <div class="me-info"><b style="color:${m.color}">${esc(m.name)}</b>${team}<small>${m.rank}${m.rank === 1 ? 'er' : 'e'} / ${m.total}${m.streak >= 3 ? ` · 🔥+${m.bonus}` : ''}${m.shield ? ' · 🛡️' : ''}</small></div>
       <div class="me-score">${fmt(m.score)}<small>pts</small></div>`);
   }
 
@@ -271,7 +271,7 @@
     buzzer(v) {
       const st = v.me.frozen ? 'frozen' : v.buzz;
       const label = st === 'open' ? 'BUZZ !' : st === 'early' ? '⏳' : st === 'blocked' ? '⛔' : st === 'locked' ? '🔒' : st === 'frozen' ? '🧊' : '';
-      const miss = v.penalty === 0 ? 'Une erreur laisse la main à l’adversaire.' : `Buzz raté = −${v.penalty || 100}.`;
+      const miss = v.penalty === 0 ? 'Une erreur laisse la main à l’adversaire.' : `${v.value ? 'Bonne réponse = +' + v.value + ', buzz' : 'Buzz'} raté = −${v.penalty || 100}.`;
       const sub = st === 'locked' ? (v.penalty === 0 ? 'Raté ! La main passe à l’adversaire.' : `Raté ! −${v.penalty || 100} et bloqué pour cette question.`) : st === 'other' ? `${esc(v.buzzer)} a buzzé !`
         : st === 'frozen' ? `Gelé ! (${v.me.frozen} s)` : st === 'blocked' ? 'Faux départ ! Buzzer bloqué 2 s.'
         : st === 'early' ? 'Lis la question… Buzzer trop tôt = bloqué 2 s !'
@@ -327,10 +327,11 @@
     },
     result(v) {
       const c = v.correct;
-      const head = c === true ? `<div class="res-ok">✔ BRAVO !</div><div class="res-pts">+${fmt(v.pts)}</div>` : c === false ? `<div class="res-ko">${v.none ? '⏱ Trop tard !' : '✖ RATÉ !'}</div>` : '<div class="wtitle">Réponse :</div>';
+      const gain = v.hit ? `+1 ★ <small>(${v.stars}/${v.target})</small>` : '+' + fmt(v.pts);
+      const head = c === true ? `<div class="res-ok">✔ BRAVO !</div><div class="res-pts">${gain}</div>` : c === false ? `<div class="res-ko">${v.none ? '⏱ Trop tard !' : '✖ RATÉ !'}</div>` : '<div class="wtitle">Réponse :</div>';
       const guess = v.guess ? `<div class="wmsg">Ta réponse : <b>${esc(v.guess)}</b>${v.exact ? ' · 🎯 PILE !' : v.gap ? ' · écart : ' + esc(v.gap) : ''}</div>` : '';
       return {
-        key: 'result' + v.phase + c + v.pts + v.answer + (v.guess || ''),
+        key: 'result' + v.phase + c + v.pts + (v.stars || '') + v.answer + (v.guess || ''),
         html: `<div class="wait result ${c === true ? 'good' : c === false ? 'bad' : ''}">${head}<div class="res-answer">${esc(v.answer)}</div>${guess}${v.anecdote ? `<div class="res-anec">💡 ${esc(v.anecdote)}</div>` : ''}</div>`,
       };
     },
