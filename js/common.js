@@ -90,21 +90,21 @@
 
   /* ---- Métadonnées du jeu ---------------------------------------------- */
   PQA.ROUNDS = {
-    sprint: { name: 'Le Sprint', short: 'Sprint', icon: '🏁', desc: '10 questions au buzzer sur des thèmes au hasard. Pas de choix : buzze, puis tape ta réponse. Buzz raté = −100 !' },
+    sprint: { name: 'Le Sprint', short: 'Sprint', icon: '🏁', desc: '10 questions au buzzer sur des thèmes au hasard. Pas de choix : buzze, puis tape ta réponse. Buzz raté = la moitié de la valeur en moins !' },
     mystere: { name: 'Le Thème Mystère', short: 'Thème Mystère', icon: '🎡', desc: 'La roue choisit le thème, tu choisis ton niveau de 1 à 10. Plus c’est dur, plus ça rapporte !' },
     fourchette: { name: 'La Fourchette', short: 'La Fourchette', icon: '📏', desc: 'Donne un seul chiffre et vise pile ! Plus tu es proche de la réponse, plus tu marques.' },
     quatre: { name: 'Le 4 à la suite', short: '4 à la suite', icon: '4️⃣', desc: 'Le 1er du classement choisit son thème en premier, puis le suivant… Un thème pris n’est plus disponible ! Enchaîne 4 bonnes réponses d’affilée en 40 secondes.' },
     eclair: { name: 'Tous en même temps', short: 'QCM éclair', icon: '⚡', desc: 'Tout le monde répond en même temps. Bonus de rapidité pour les plus vifs.' },
-    table: { name: 'Les Cases mystères', short: 'Cases mystères', icon: '🎁', desc: 'Choisis une case à tour de rôle : thème et valeur restent secrets jusqu’au choix. Attention aux pièges, aux cases doubles et aux vols de points !' },
+    table: { name: 'Les Cases mystères', short: 'Cases mystères', icon: '🎁', desc: 'Choisis une case à tour de rôle : thème et niveau restent secrets jusqu’au choix. Attention aux pièges, aux cases bonus et aux vols de points !' },
     champions: { name: 'Le Duel des champions', short: 'Duel des champions', icon: '⚔️', desc: 'Les 2 meilleurs s’affrontent au buzzer : les indices tombent un à un. Le premier à 3 bonnes réponses gagne la partie !' },
     duel: { name: 'Duel', short: 'Duel', icon: '🥊', desc: 'Chaque bonne réponse inflige des dégâts à l’adversaire. Premier K.O. perdu !' },
   };
   /* Règle détaillée, affichée sur l'écran d'intro de chaque manche (on peut la passer). */
   const RULES = {
-    sprint: ['Une question à la fois, sur un thème tiré au hasard.', 'Attends la fin de la lecture, puis buzze le premier : buzzer trop tôt = bloqué 2 s.', 'Tu as 10 secondes pour taper ta réponse : bonne réponse = 200 pts.', 'Mauvaise réponse = −100 pts, et la main passe aux autres.'],
-    mystere: ['La roue tire un thème pour toi.', 'Choisis ton niveau de 1 (facile) à 10 (très dur).', 'Plus le niveau est haut, plus la question rapporte… si tu trouves !'],
-    eclair: ['Tout le monde répond en même temps sur son téléphone.', 'Une bonne réponse rapporte des points, et les plus rapides gagnent un bonus.', 'Une seule réponse possible : pas de deuxième chance !'],
-    table: ['Chacun son tour, choisis une case sur le plateau.', 'Le thème et la valeur (100 à 400 pts) sont cachés jusqu’à ton choix, puis tu réponds seul à la question.', '💣 Piège : tu perds des points. ✖️2 Double : la case vaut deux fois plus. 🦹 Vol : tu choisis à qui voler les points.'],
+    sprint: ['Une question à la fois, sur un thème tiré au hasard.', 'Attends la fin de la lecture, puis buzze le premier : buzzer trop tôt = bloqué 2 s.', 'Tu as 10 secondes pour taper ta réponse. La question vaut de 75 à 300 pts selon sa difficulté.', 'Mauvaise réponse = la moitié de sa valeur en moins, et la main passe aux autres.'],
+    mystere: ['La roue tire un thème pour toi.', 'Choisis ton niveau de 1 (facile) à 10 (très dur).', 'Plus le niveau est haut, plus la question rapporte : de 75 à 300 pts… si tu trouves !'],
+    eclair: ['Tout le monde répond en même temps sur son téléphone.', 'Une bonne réponse rapporte de 75 à 300 pts selon la difficulté, plus un bonus de rapidité (jusqu’à +50).', 'Une seule réponse possible : pas de deuxième chance !'],
+    table: ['Chacun son tour, choisis une case sur le plateau, puis réponds seul à sa question.', 'Le thème et le niveau (facile, moyen, difficile, expert) sont cachés : plus la question est dure, plus elle rapporte (75 à 300 pts).', '💣 Piège : tu perds des points. ⭐ Bonus : +100 pts si tu trouves. 🦹 Vol : si tu trouves, les points sont pris à l’adversaire de ton choix.'],
     quatre: ['Chacun son tour, en commençant par le 1er du classement, choisis un thème. Un thème pris n’est plus disponible.', 'Le « thème mystère » en tire un au hasard.', 'Tu as 40 secondes : chaque bonne réponse vaut 50 pts, une erreur remet ta série à zéro.', '💰 4 bonnes réponses d’affilée = JACKPOT de 1 000 pts, + 20 pts par seconde restante !'],
     fourchette: ['Une question dont la réponse est un nombre ou une date.', 'Donne UNE seule valeur sur ton téléphone, il faut viser pile.', '🎯 Pile = 500 pts. À côté, les points chutent très vite, et un peu trop loin = 0.', 'Le plus proche gagne un bonus de 50 pts.'],
     champions: ['Les 2 meilleurs du classement s’affrontent au buzzer.', 'Les indices tombent un à un : buzze dès que tu as trouvé.', 'Raté ? Tu reprends la main dès que ton adversaire a répondu ou qu’un nouvel indice tombe.', 'Le premier à 3 ★ gagne la partie, quel que soit son score !'],
@@ -115,8 +115,9 @@
   PQA.CARDS = {
     gel: { name: 'Gel', icon: '🧊', desc: 'Gèle le buzzer et les réponses d’un adversaire pendant 5 secondes.', target: true },
     inverse: { name: 'Miroir', icon: '🪞', desc: 'Les choix de l’adversaire s’affichent à l’envers et dans le désordre à la prochaine question.', target: true },
-    vol: { name: 'Vol de question', icon: '🦹', desc: 'Les prochains points gagnés par l’adversaire sont pour toi.', target: true },
-    double: { name: 'Double', icon: '✖️2', desc: 'Tes prochains points gagnés sont doublés.', target: false },
+    vol: { name: 'Pickpocket', icon: '🦹', desc: 'Tu empoches la moitié des prochains points que gagne l’adversaire.', target: true },
+    bombe: { name: 'Bombe', icon: '💣', desc: 'Si l’adversaire rate sa prochaine question, il perd 100 pts… et tu les gagnes. S’il trouve, la bombe est désamorcée.', target: true },
+    bouclier: { name: 'Bouclier', icon: '🛡️', desc: 'Bloque la prochaine carte qu’on joue contre toi.', target: false },
   };
 
   PQA.shuffle = function (arr) {

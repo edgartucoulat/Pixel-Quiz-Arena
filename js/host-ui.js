@@ -288,8 +288,8 @@
         if (fin && fin.includes(p.id)) { cls += ' turn'; badge += '<i>⚔️</i>'; }
         if (g.champion === p.id) badge += '<i>👑</i>';
         if (g.isFrozen(p)) badge += '<i>🧊</i>';
-        if (p.double) badge += '<i>✖️2</i>';
-        if (p.streak >= 3) badge += `<i class="fire">🔥x${g.multiplier(p)}</i>`;
+        if (p.shield) badge += '<i title="Bouclier">🛡️</i>';
+        if (p.streak >= 3) badge += `<i class="fire">🔥+${g.streakBonus(p)}</i>`;
         if (p.cards.length) badge += `<i>🃏${p.cards.length}</i>`;
         if (p.bot) badge += `<i title="Ordinateur ${PQA.BOT_LEVELS[p.level].name}">🤖${PQA.BOT_LEVELS[p.level].icon}</i>`;
         const team = g.settings.teams ? `<span class="pod-team" style="background:${PQA.PALETTE.team[p.team]}"></span>` : '';
@@ -424,7 +424,7 @@
         const txt = libre && a && a.text ? `« ${esc(a.text)} »` : libre && r.wrongAnswer ? `« ${esc(r.wrongAnswer)} »` : '';
         const ov = libre && q.kind === 'single' && a && !g.irl ? ` data-act="override" data-pid="${p.id}" title="Cliquer pour corriger la validation"` : '';
         return `<div class="res ${r.correct ? 'good' : 'bad'}" style="--pc:${p.color}"${ov}>${avatarImg(p, r.correct ? 'happy' : 'sad', 'tiny')}<b>${esc(p.name)}</b> ${txt}
-          <span class="rpts">${r.hit ? '+1 ★' : r.correct ? '+' + r.pts + (r.mult > 1 ? ` <small>x${r.mult}</small>` : '') : r.none ? '—' : '✖'}</span></div>`;
+          <span class="rpts">${r.hit ? '+1 ★' : r.correct ? '+' + r.pts + (r.bonus ? ` <small>🔥+${r.bonus}</small>` : '') : r.none ? '—' : '✖'}</span></div>`;
       }).join('')}</div>`;
     }
 
@@ -441,7 +441,7 @@
       } else if (d.type === 'libre') {
         body = `<div class="q-libre">✍️ Réponse libre${g.irl ? ' : réponds à voix haute !' : ' : tape ta réponse sur ton téléphone'}</div>`;
       } else body = this.choicesHTML(q, false) + (g.irl && q.kind === 'single' ? '<div class="q-libre">🎤 Réponds à voix haute !</div>' : '');
-      const extra = r.type === 'mystere' ? `<div class="banner-pts">Niveau ${r.level} · ${r.level * 20} pts</div>` : r.type === 'table' ? `<div class="banner-pts">${r.cell.special === 'double' ? '✖️2 ' : r.cell.special === 'vol' ? '🦹 Vol sur ' + esc(g.name(r.victim)) + ' · ' : ''}${g.round.cellValue} pts</div>` : '';
+      const extra = r.type === 'mystere' ? `<div class="banner-pts">Niveau ${r.level} · ${PQA.pointsFor(r.level)} pts</div>` : r.type === 'table' ? `<div class="banner-pts">${r.cell.special === 'bonus' ? '⭐ Bonus · ' : r.cell.special === 'vol' ? '🦹 Vol sur ' + esc(g.name(r.victim)) + ' · ' : ''}Difficulté ${d.difficulte} · ${g.round.cellValue} pts</div>` : '';
       return {
         key: 'q' + q.id,
         html: `<div class="question ${d.type}">
@@ -540,7 +540,7 @@
       const banner = revealed ? '' : cur ? `<div class="buzz-banner" style="--pc:${cur.color}">${avatarImg(cur, 'buzz', 'tiny')} ${esc(cur.name)} a buzzé !${q.pending ? ' <small>(validation...)</small>' : ` <small>(${how})</small>`}</div>`
         : b.readyAt && performance.now() < b.readyAt ? `<div class="buzz-open wait">⏳ Lisez bien… buzz trop tôt = bloqué 2 s</div>`
         : champ ? `<div class="buzz-open">🔔 Buzzers ouverts · une erreur laisse la main à l’adversaire</div>`
-        : `<div class="buzz-open">🔔 Buzzers ouverts · bonne réponse +200 · raté = −100</div>`;
+        : `<div class="buzz-open">🔔 Buzzers ouverts · bonne réponse +${PQA.pointsFor(d.difficulte)} · raté = −${Math.round(PQA.pointsFor(d.difficulte) / 50) * 25}</div>`;
       const winner = revealed && Object.keys(q.results).find((pid) => q.results[pid].correct);
       return {
         key: (revealed ? 'r' : 'q') + q.id,
@@ -634,7 +634,7 @@
       const r = this.g.round;
       const cells = r.cells.map((c) => {
         const cur = r.cell && r.cell.i === c.i;
-        const open = c.used ? `<span class="bc-icon">${c.icon}</span><small>${c.special === 'piege' ? '💣' : c.special === 'double' ? '✖️2' : c.special === 'vol' ? '🦹' : c.value}</small>` : `<span class="bc-num">${c.i + 1}</span><small>?</small>`;
+        const open = c.used ? `<span class="bc-icon">${c.icon}</span><small>${c.special === 'piege' ? '💣' : c.special === 'bonus' ? '⭐' : c.special === 'vol' ? '🦹' : '★'.repeat(c.level)}</small>` : `<span class="bc-num">${c.i + 1}</span><small>?</small>`;
         return `<div class="bc mystery ${c.used ? 'used' : ''} ${cur ? 'cur' : ''}">${open}</div>`;
       }).join('');
       return `<div class="board" style="--cols:${r.cols}">${cells}</div>`;
@@ -649,10 +649,12 @@
     }
     r_cell() {
       const g = this.g, r = g.round, c = r.cell, p = g.players[r.player];
+      const lv = PQA.CELL_LEVELS[c.level];
+      const level = `<div class="cell-val">${'★'.repeat(c.level)} ${lv.name}</div>`;
       const special = c.special === 'piege' ? `<div class="cell-sp trap">💣 PIÈGE !</div><div class="cell-val">-${r.trapLoss} pts pour ${esc(p.name)}</div>`
-        : c.special === 'double' ? `<div class="cell-sp dbl">✖️2 CASE DOUBLE !</div><div class="cell-val">${r.cellValue} pts</div>`
-        : c.special === 'vol' ? `<div class="cell-sp vol">🦹 VOL DE POINTS !</div><div class="cell-val">${c.value} pts à voler</div>`
-        : `<div class="cell-val">${c.value} pts</div>`;
+        : c.special === 'bonus' ? `<div class="cell-sp dbl">⭐ CASE BONUS : +100 pts si bonne réponse !</div>${level}`
+        : c.special === 'vol' ? `<div class="cell-sp vol">🦹 VOL DE POINTS !</div>${level}`
+        : level;
       // La case s'ouvre : on découvre enfin le thème et la valeur.
       return {
         key: 'cell' + c.i,
@@ -825,7 +827,7 @@
           break;
         case 'points': if (p && d.pts) this.popAt(p.id, (d.pts > 0 ? '+' : '') + d.pts, d.pts > 0 ? '#a7f070' : '#e43b44'); break;
         case 'pop': if (p && d.text) this.popAt(p.id, d.text, '#ffcd75'); break;
-        case 'streak': sfx.fire(); sfx.wow(); this.bigText(d.mult >= 4 ? '4 À LA SUITE !' : `ON FIRE x${d.mult} 🔥`, p ? p.color : '#ef7d57'); this.shake(2); this.audience.cheer(1); break;
+        case 'streak': sfx.fire(); sfx.wow(); this.bigText(d.jackpot ? '4 À LA SUITE !' : `SÉRIE 🔥 +${d.bonus} / réponse`, p ? p.color : '#ef7d57'); this.shake(2); this.audience.cheer(1); break;
         case 'card': { sfx.card(); const t = g.players[d.target]; this.bigText(`${PQA.CARDS[d.card].icon} ${p ? p.name : ''} ${t ? '→ ' + t.name : ''}`, '#b55088', PQA.CARDS[d.card].name.toUpperCase()); if (d.card === 'gel') sfx.freeze(); break; }
         case 'cardGain': sfx.coin(); if (p) this.popAt(p.id, '🃏 Carte !', '#73eff7'); break;
         case 'trap': sfx.explosion(); sfx.ooh(0.8); this.shake(3); this.flash('#e43b44'); break;

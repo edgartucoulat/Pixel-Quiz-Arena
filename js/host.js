@@ -169,8 +169,8 @@
         if (!res || !p) return;
         if (res.correct) { p.score -= res.pts; res.correct = false; res.pts = 0; }
         else {
-          const base = r.type === 'mystere' ? r.level * 20 : r.type === 'table' ? r.cellValue : 100;
-          p.score += base; res.correct = true; res.pts = base; res.mult = 1;
+          const base = r.type === 'mystere' ? PQA.pointsFor(r.level) : r.type === 'table' ? r.cellValue : PQA.pointsFor(q.data.difficulte);
+          p.score += base; res.correct = true; res.pts = base; res.bonus = 0;
         }
         PQA.sfx.select();
         game.changed();
@@ -185,7 +185,7 @@
         game.clearJobs(); game.stopTimer();
         game.phase = 'lobby'; game.round = null; game.q = null; game.paused = false; game.champion = game.runnerUp = null;
         game.activePlayers().forEach((p) => {
-          p.score = 0; p.streak = 0; p.bestStreak = 0; p.cards = []; p.double = false; p.stolenBy = null; p.mirror = false;
+          p.score = 0; p.streak = 0; p.bestStreak = 0; p.cards = []; p.stolenBy = null; p.bomb = null; p.shield = false; p.mirror = false;
           p.prevRank = p.curRank = null;
           Object.keys(p.stats).forEach((k) => (p.stats[k] = typeof p.stats[k] === 'boolean' ? false : k === 'fastest' ? null : k === 'worstRank' ? 1 : 0));
         });

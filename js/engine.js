@@ -56,7 +56,18 @@
   };
   /** Temps de lecture avant l'ouverture des buzzers, selon la longueur du texte. */
   const readTime = (text) => clamp(String(text || '').length * 35, 1500, 4000);
-  const SPRINT_POINTS = 200;
+  /* Barème commun : une question vaut selon sa difficulté (1 à 10), de 75 à 300 pts. */
+  const pointsFor = (d) => 50 + 25 * clamp(Math.round(d || 5), 1, 10);
+  PQA.pointsFor = pointsFor;
+  /** Buzz raté : la moitié de la valeur de la question (arrondie à 25). */
+  const buzzPenalty = (d) => Math.round(pointsFor(d) / 50) * 25;
+  /** Bonus de série (remplace les multiplicateurs, qui créaient de trop gros écarts). */
+  const streakBonus = (streak) => (streak >= 5 ? 75 : streak === 4 ? 50 : streak === 3 ? 25 : 0);
+  /* Cases mystères : niveau caché de la case → difficulté visée. */
+  const CELL_LEVELS = { 1: { name: 'Facile', diff: 3 }, 2: { name: 'Moyen', diff: 5 }, 3: { name: 'Difficile', diff: 7 }, 4: { name: 'Expert', diff: 9 } };
+  PQA.CELL_LEVELS = CELL_LEVELS;
+  const CELL_BONUS = 100; // case étoile : bonus si bonne réponse
+  const BOMB = 100;       // carte bombe : points perdus par la cible (et gagnés par le poseur)
 
   /* Joueurs ordinateur (mode Solo) : justesse, vitesse de réponse et de buzz,
    * niveau choisi au Thème Mystère, précision à la Fourchette. */
@@ -272,7 +283,7 @@
       p = {
         id, token: token || PQA.randomToken(), name: this.uniqueName(name), avatar: avatar || PQA.randomAvatar(),
         colorIdx, color: PQA.PALETTE.player[colorIdx], team: 0, score: 0, connected: true, joinedAt: Date.now(),
-        streak: 0, bestStreak: 0, cards: [], frozenUntil: 0, mirror: false, mirrorQ: null, double: false, stolenBy: null,
+        streak: 0, bestStreak: 0, cards: [], frozenUntil: 0, mirror: false, mirrorQ: null, stolenBy: null, bomb: null, shield: false,
         rtt: 120, local: false, spectator: this.phase !== 'lobby' && false,
         stats: { correct: 0, wrong: 0, answered: 0, buzzWins: 0, wrongBuzz: 0, fastest: null, fourchette: 0, cardsUsed: 0, hardCorrect: 0, worstRank: 1, points: 0 },
         fxSeq: 0,
@@ -434,38 +445,52 @@
     }
 
     /* ======================= Points ============================== */
-    multiplier(p) { return p.streak >= 5 ? 3 : p.streak >= 3 ? 2 : 1; }
+    /** Bonus de série en cours (affiché sur les podiums et la manette). */
+    streakBonus(p) { return streakBonus(p.streak); }
 
-    /** Bonne réponse : série, multiplicateur, cartes Double et Vol. Renvoie les points marqués. */
+    /** Bonne réponse : bonus de série, carte Pickpocket, bombe désamorcée. Renvoie les points marqués. */
     scoreCorrect(p, base, opts = {}) {
       p.streak++;
       p.bestStreak = Math.max(p.bestStreak, p.streak);
       p.stats.correct++;
       if (opts.diff >= 8) p.stats.hardCorrect++;
-      let pts = base;
-      const mult = opts.noCombo ? 1 : this.multiplier(p);
-      pts *= mult;
-      if (p.double && pts > 0) { pts *= 2; p.double = false; this.fx('pop', { pid: p.id, text: 'DOUBLE !' }); }
-      pts = Math.round(pts);
-      let receiver = p;
+      const bonus = opts.noCombo || base <= 0 ? 0 : streakBonus(p.streak);
+      let pts = Math.round(base + bonus);
+      if (p.bomb) { p.bomb = null; this.fx('pop', { pid: p.id, text: '💣 Bombe désamorcée !' }); }
+      // Pickpocket : la moitié des points file chez le voleur.
       if (p.stolenBy && this.players[p.stolenBy] && pts > 0) {
-        receiver = this.players[p.stolenBy];
+        const thief = this.players[p.stolenBy];
+        const half = Math.round(pts / 2);
         p.stolenBy = null;
-        this.fx('pop', { pid: p.id, text: 'VOLÉ par ' + receiver.name + ' !' });
+        pts -= half;
+        thief.score += half; thief.stats.points += half;
+        this.fx('points', { pid: thief.id, pts: half });
+        this.fx('pop', { pid: p.id, text: '🦹 ' + thief.name + ' empoche ' + half + ' pts !' });
       }
-      receiver.score += pts;
-      receiver.stats.points += pts;
+      p.score += pts;
+      p.stats.points += pts;
       if (!opts.silentStreak) {
-        if (p.streak === 3) { this.fx('streak', { pid: p.id, mult: 2 }); this.say('streak3', { name: p.name }, 'surprised'); }
-        if (p.streak === 5) { this.fx('streak', { pid: p.id, mult: 3 }); this.say('streak5', { name: p.name, n: p.streak }, 'surprised'); }
+        if (p.streak === 3) { this.fx('streak', { pid: p.id, bonus: 25 }); this.say('streak3', { name: p.name }, 'surprised'); }
+        if (p.streak === 5) { this.fx('streak', { pid: p.id, bonus: 75 }); this.say('streak5', { name: p.name, n: p.streak }, 'surprised'); }
       }
       this.maybeGiveCard(p);
-      this.fx('points', { pid: receiver.id, pts });
-      return { pts, mult, receiver: receiver.id };
+      this.fx('points', { pid: p.id, pts });
+      return { pts, bonus };
     }
+    /** Mauvaise réponse (ou pas de réponse) : fin de série, et la bombe éventuelle explose. */
     scoreWrong(p) {
       p.streak = 0;
       p.stats.wrong++;
+      if (p.bomb) {
+        const owner = this.players[p.bomb];
+        p.bomb = null;
+        const loss = Math.min(BOMB, Math.max(0, p.score));
+        p.score -= loss;
+        this.fx('points', { pid: p.id, pts: -loss });
+        this.fx('pop', { pid: p.id, text: '💥 BOUM ! −' + loss });
+        this.fx('trap', { pid: p.id });
+        if (owner && loss) { owner.score += loss; owner.stats.points += loss; this.fx('points', { pid: owner.id, pts: loss }); }
+      }
     }
     addPoints(pid, delta) {
       const p = this.players[pid];
@@ -493,6 +518,14 @@
       if (def.target && (!target || target.id === pid)) return;
       p.cards.splice(i, 1);
       p.stats.cardsUsed++;
+      if (def.target && target.shield) {
+        // Le bouclier encaisse la carte, qui est perdue.
+        target.shield = false;
+        this.fx('card', { pid, target: targetId, card });
+        this.fx('pop', { pid: target.id, text: '🛡️ Carte bloquée !' });
+        this.say('card_blocked', { name: p.name, target: target.name }, 'surprised');
+        return this.changed();
+      }
       if (card === 'gel') {
         target.frozenUntil = now() + 5000;
         this.hooks.send(target.id, { t: 'fx', fx: 'frozen' });
@@ -500,8 +533,10 @@
         target.mirror = true;
       } else if (card === 'vol') {
         target.stolenBy = pid;
-      } else if (card === 'double') {
-        p.double = true;
+      } else if (card === 'bombe') {
+        target.bomb = pid;
+      } else if (card === 'bouclier') {
+        p.shield = true;
       }
       this.fx('card', { pid, target: targetId, card });
       this.say('card_' + card, { name: p.name, target: target ? target.name : '' }, 'smug');
@@ -712,8 +747,8 @@
           const ok = q.forced && pid in q.forced ? q.forced[pid] : this.evaluate(q, a.value);
           if (ok) {
             let base = 0;
-            if (type === 'eclair') base = 100 + Math.round(100 * Math.max(0, 1 - a.t / q.duration));
-            else if (type === 'mystere') base = this.round.level * 20;
+            if (type === 'eclair') base = pointsFor(d.difficulte) + Math.round(50 * Math.max(0, 1 - a.t / q.duration)); // + bonus de rapidité
+            else if (type === 'mystere') base = pointsFor(this.round.level);
             else if (type === 'table') base = this.round.cellValue;
             if (type === 'table' && this.round.cell.special === 'vol' && this.round.victim) {
               const v = this.players[this.round.victim];
@@ -724,7 +759,7 @@
               res[pid] = { correct: true, pts: stolen, stolen: true };
             } else {
               const r = this.scoreCorrect(p, base, { diff: d.difficulte });
-              res[pid] = { correct: true, pts: r.pts, mult: r.mult };
+              res[pid] = { correct: true, pts: r.pts, bonus: r.bonus };
             }
           } else {
             this.scoreWrong(p);
@@ -844,7 +879,7 @@
         if (base < 30) { this.scoreWrong(p); q.results[it.pid] = { correct: false, pts: 0, rank, gap: it.diff }; return; }
         if (it.diff === best) { base += 50; p.stats.fourchette++; }
         const r = this.scoreCorrect(p, base, { diff: d.difficulte });
-        q.results[it.pid] = { correct: true, pts: r.pts, rank, exact: it.exact, gap: it.diff, mult: r.mult };
+        q.results[it.pid] = { correct: true, pts: r.pts, rank, exact: it.exact, gap: it.diff, bonus: r.bonus };
       });
       this.fx('drumroll');
     }
@@ -961,8 +996,8 @@
       if (ok) {
         if (this.round.type === 'duel') return this.duelHit(pid);
         if (this.round.type === 'champions') return this.championsHit(pid);
-        const r = this.scoreCorrect(p, SPRINT_POINTS, { diff: q.data.difficulte });
-        q.results[pid] = { correct: true, pts: r.pts, mult: r.mult };
+        const r = this.scoreCorrect(p, pointsFor(q.data.difficulte), { diff: q.data.difficulte });
+        q.results[pid] = { correct: true, pts: r.pts, bonus: r.bonus };
         this.say('correct', { name: p.name, pts: r.pts }, 'happy');
         return this.reveal();
       }
@@ -972,14 +1007,15 @@
       // Duel des champions : essais illimités, mais chacun son tour (seul le dernier à s'être trompé attend).
       if (this.round.type === 'champions') q.buzz.locked = [pid];
       else q.buzz.locked.push(pid);
-      let pts = -BUZZ.penalty;
+      const penalty = buzzPenalty(q.data.difficulte);
+      let pts = -penalty;
       if (this.round.type === 'duel') {
         pts = -BUZZ.duelPenalty;
         this.round.hp[pid] = Math.max(0, this.round.hp[pid] - BUZZ.duelPenalty);
       } else if (this.round.type === 'champions') {
         pts = 0; // en finale, l'erreur laisse simplement la main à l'adversaire
       } else {
-        p.score -= BUZZ.penalty;
+        p.score -= penalty;
       }
       if (pts) this.fx('points', { pid, pts });
       q.results[pid] = { correct: false, pts, wrongAnswer: q.answers[pid] && q.answers[pid].text, timeout: !!timeout };
@@ -1058,14 +1094,14 @@
       // Thèmes tirés au hasard (le moins de doublons possible), valeurs mélangées.
       let deck = [];
       while (deck.length < n0 && cats.length) deck = deck.concat(PQA.shuffle(cats));
-      const values = PQA.shuffle(Array.from({ length: n0 }, (_, i) => [100, 200, 300, 400][i % 4]));
+      const levels = PQA.shuffle(Array.from({ length: n0 }, (_, i) => (i % 4) + 1));
       const cells = [];
       for (let i = 0; i < n0 && deck.length; i++) {
-        cells.push({ i, x: i % cols, y: Math.floor(i / cols), cat: deck[i], icon: this.catIcon(deck[i]), value: values[i], special: null, used: false });
+        cells.push({ i, x: i % cols, y: Math.floor(i / cols), cat: deck[i], icon: this.catIcon(deck[i]), level: levels[i], special: null, used: false });
       }
       // Cases spéciales cachées
       const n = cells.length;
-      const specials = PQA.shuffle(['piege', 'double', 'vol', ...(n >= 12 ? ['piege', 'double', 'vol'] : [])]);
+      const specials = PQA.shuffle(['piege', 'bonus', 'vol', ...(n >= 12 ? ['piege', 'bonus', 'vol'] : [])]);
       PQA.shuffle(cells).slice(0, specials.length).forEach((c, i) => (c.special = specials[i]));
       const r = this.round;
       r.cells = cells; r.cols = cols; r.rows = rows;
@@ -1102,10 +1138,10 @@
       r.n++;
       this.stopTimer();
       this.phase = 'cell';
-      r.cellValue = cell.special === 'double' ? cell.value * 2 : cell.value;
+      r.cellValue = null; // connue quand la question est tirée : selon sa difficulté
       const p = this.players[pid];
       if (cell.special === 'piege') {
-        const loss = Math.min(cell.value, Math.max(0, p.score));
+        const loss = Math.min(pointsFor(CELL_LEVELS[cell.level].diff), Math.max(0, p.score));
         p.score -= loss;
         r.trapLoss = loss;
         this.fx('trap', { pid });
@@ -1113,8 +1149,8 @@
         this.say('trap', { name: p.name, pts: loss }, 'smug');
         if (this.auto) this.after(5000, () => this.tableNextTurn());
       } else {
-        this.fx(cell.special === 'double' ? 'double' : cell.special === 'vol' ? 'steal' : 'select', { pid });
-        if (cell.special === 'double') this.say('double', { name: p.name, pts: r.cellValue }, 'surprised');
+        this.fx(cell.special === 'bonus' ? 'double' : cell.special === 'vol' ? 'steal' : 'select', { pid });
+        if (cell.special === 'bonus') this.say('cellBonus', { name: p.name, pts: CELL_BONUS }, 'surprised');
         if (cell.special === 'vol') this.say('steal', { name: p.name }, 'smug');
         this.after(2600, () => this.tableAfterCell());
       }
@@ -1144,10 +1180,11 @@
     }
     tableQuestion() {
       const r = this.round;
-      const v = r.cell.value;
-      const diff = v <= 100 ? 3 : v <= 200 ? 5 : v <= 300 ? 7 : v <= 400 ? 8 : 10;
+      const diff = CELL_LEVELS[r.cell.level].diff;
       const data = this.pickQuestion({ types: ['qcm', 'vf', 'libre'], cat: r.cell.cat, diff }) || this.pickQuestion({ types: ['qcm', 'vf', 'libre'], diff });
       if (!data) { this.phase = 'cell'; return this.tableNextTurn(); }
+      // La case vaut ce que vaut la question : plus elle est dure, plus elle rapporte.
+      r.cellValue = pointsFor(data.difficulte) + (r.cell.special === 'bonus' ? CELL_BONUS : 0);
       const q = this.makeQ(data, 'single', [r.player]);
       q.duration = data.type === 'libre' ? TIMES.singleLibre : TIMES.single;
       this.startTimer(q.duration, () => this.reveal());
@@ -1260,7 +1297,7 @@
         r.run.bonus = bonus.pts;
         r.run.left = left;
         this.fx('points', { pid, pts: bonus.pts });
-        this.fx('streak', { pid, mult: 4 });
+        this.fx('streak', { pid, jackpot: true });
         return this.quatreEnd();
       }
       this.after(700, () => this.phase === 'question' && this.quatreQuestion());
@@ -1493,7 +1530,7 @@
       return {
         id: p.id, name: p.name, avatar: p.avatar, color: p.color, score: p.score, rank: this.rankOf(p), total: this.activePlayers().length,
         team: this.settings.teams ? p.team : null, teamName: this.settings.teams ? PQA.TEAM_NAMES[p.team] : null, teamColor: this.settings.teams ? PQA.PALETTE.team[p.team] : null,
-        streak: p.streak, mult: this.multiplier(p), cards: p.cards.slice(), double: p.double,
+        streak: p.streak, bonus: this.streakBonus(p), cards: p.cards.slice(), shield: !!p.shield,
         frozen: this.isFrozen(p) ? Math.ceil((p.frozenUntil - now()) / 1000) : 0,
       };
     }
@@ -1541,7 +1578,7 @@
           else if (r.player === pid) { v.screen = 'pick'; v.cells = r.cells.map((c) => ({ i: c.i, used: c.used, icon: c.used ? c.icon : null })); v.cols = r.cols; withTimer(); }
           else { v.screen = 'wait'; v.title = 'Cases mystères'; v.msg = this.name(r.player) + ' choisit une case...'; }
           break;
-        case 'cell': v.screen = 'wait'; v.title = r.cell.special === 'piege' ? '💣 PIÈGE !' : r.cell.special === 'double' ? '✖️2 DOUBLE !' : r.cell.special === 'vol' ? '🦹 VOL !' : r.cell.icon + ' ' + r.cell.cat; v.msg = r.cell.special === 'piege' ? '−' + r.trapLoss + ' points pour ' + this.name(r.player) : r.cell.cat + ' · ' + r.cellValue + ' points'; break;
+        case 'cell': v.screen = 'wait'; v.title = r.cell.special === 'piege' ? '💣 PIÈGE !' : r.cell.special === 'bonus' ? '⭐ CASE BONUS !' : r.cell.special === 'vol' ? '🦹 VOL !' : r.cell.icon + ' ' + r.cell.cat; v.msg = r.cell.special === 'piege' ? '−' + r.trapLoss + ' points pour ' + this.name(r.player) : r.cell.cat + ' · niveau ' + CELL_LEVELS[r.cell.level].name; break;
         case 'target':
           if (r.player === pid && this.irl) { v.screen = 'wait'; v.title = '🦹 Vol de points'; v.msg = '👉 Désigne ta victime au présentateur !'; }
           else if (r.player === pid) { v.screen = 'target'; v.title = 'Qui veux-tu voler ?'; v.targets = v.others; v.action = 'target'; withTimer(); }
@@ -1610,7 +1647,8 @@
         if (b.current) { v.buzzer = this.name(b.current); v.buzzerColor = this.players[b.current].color; }
         if (d.indices) v.clue = d.indices[q.clue];
         const duel = this.round.type === 'duel';
-        v.penalty = duel ? BUZZ.duelPenalty + ' PV' : BUZZ.penalty;
+        v.penalty = duel ? BUZZ.duelPenalty + ' PV' : buzzPenalty(d.difficulte);
+        v.value = pointsFor(d.difficulte);
         v.answerSecs = this.answerTime(q) / 1000;
         if (r.type === 'champions') { v.penalty = 0; v.cat = 'Duel des champions · ' + r.hits[pid] + '/' + r.target; }
         else if (q.typed) v.cat = this.catIcon(d.categorie) + ' ' + d.categorie;
@@ -1669,7 +1707,7 @@
       this.settings = s.settings;
       this.order = s.order;
       this.players = {};
-      s.players.forEach((p) => (this.players[p.id] = { ...p, frozenUntil: 0, connected: !!(p.local || p.bot), botKey: null, botAct: null }));
+      s.players.forEach((p) => (this.players[p.id] = { ...p, cards: (p.cards || []).filter((c) => PQA.CARDS[c]), frozenUntil: 0, connected: !!(p.local || p.bot), botKey: null, botAct: null }));
       this.used = new Set(s.used);
       this.nextId = s.nextId + 1;
       // Anciennes sauvegardes : manches disparues (Échelle, Indices) retirées.

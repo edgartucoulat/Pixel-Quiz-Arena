@@ -37,10 +37,12 @@ Par défaut, l'émission enchaîne dans cet ordre :
 
 1. 🏁 **Le Sprint** : 10 questions au buzzer sur des thèmes tirés au hasard. Pas de choix
    multiple : on buzze, puis on tape sa réponse (à l'oral en mode présentateur IRL).
-   Bonne réponse = 200 pts. Attention : buzz raté = −100 points et exclu de la question,
+   La question vaut sa difficulté (voir le barème). Attention : buzz raté = la moitié de sa
+   valeur en moins et exclu de la question,
    buzz pendant la lecture = faux départ (buzzer bloqué 2 s), et 10 secondes pour répondre.
-2. 🎁 **Les Cases mystères** : chacun choisit une case à tour de rôle. Le thème et la valeur
-   (100 à 400 pts) restent cachés jusqu'au choix, avec des pièges, des cases doubles et des vols.
+2. 🎁 **Les Cases mystères** : chacun choisit une case à tour de rôle. Le thème et le niveau
+   (facile, moyen, difficile, expert) restent cachés jusqu'au choix ; la case rapporte la valeur
+   de sa question selon le barème. Avec des pièges (💣), des cases bonus (⭐ +100 pts) et des vols (🦹).
 3. 4️⃣ **Le 4 à la suite** : le 1er du classement choisit son thème en premier, puis le 2e, etc.
    Un thème pris n'est plus disponible pour les suivants ; le « thème mystère » en tire un
    au hasard. Il faut enchaîner 4 bonnes réponses d'affilée en 40 secondes : chaque bonne
@@ -60,8 +62,28 @@ Avant chaque manche, un écran explique la règle (environ 20 s) ; le bouton « 
 En option dans le salon : 🎡 **Thème Mystère** (la roue choisit le thème, chacun choisit son
 niveau de 1 à 10) et ⚡ **QCM éclair** (tout le monde répond en même temps, bonus de rapidité).
 
-Et aussi : combos « ON FIRE » (x2, x3), cartes « coup bas » (gel, miroir, vol, double),
-anecdotes après chaque question, titres humoristiques en fin de partie. Les questions déjà
+### Barème
+
+Toutes les questions suivent le même barème : **50 + 25 × difficulté**, soit 75 pts (difficulté 1)
+à 300 pts (difficulté 10). Sprint, Cases mystères, Thème Mystère et QCM éclair (+ jusqu’à 50 pts
+de rapidité) l’utilisent. Pas de multiplicateur : une série de bonnes réponses donne un petit
+bonus par réponse (🔥 +25 à la 3e, +50 à la 4e, +75 à partir de la 5e). À part : la Fourchette
+(500 pts si pile), le 4 à la suite (50 pts par réponse, jackpot de 1 000 pts) et le Duel des
+champions (des étoiles, pas des points).
+
+### Cartes « coup bas »
+
+Une série de 3 ou 6 bonnes réponses (ou un peu de chance) donne une carte, 2 au maximum :
+
+| Carte | Effet |
+|---|---|
+| 🧊 Gel | Gèle le buzzer et les réponses d’un adversaire pendant 5 s |
+| 🪞 Miroir | Les choix de l’adversaire s’affichent à l’envers et mélangés à la prochaine question |
+| 🦹 Pickpocket | Tu empoches la moitié des prochains points de l’adversaire |
+| 💣 Bombe | Si l’adversaire rate sa prochaine question, il perd 100 pts et tu les gagnes ; s’il trouve, elle est désamorcée |
+| 🛡️ Bouclier | Bloque la prochaine carte jouée contre toi |
+
+Et aussi : anecdotes après chaque question, titres humoristiques en fin de partie. Les questions déjà
 vues sont mémorisées par le navigateur du plateau, pour ne pas retomber dessus.
 
 ### Raccourcis clavier du plateau
