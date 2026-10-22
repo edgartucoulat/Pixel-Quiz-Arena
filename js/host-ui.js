@@ -107,16 +107,10 @@
     }
 
     fit() {
-      // Mode Solo : la manette du joueur occupe une colonne à droite, le plateau se cale à gauche.
-      const pad = document.body.classList.contains('solo') ? this.padWidth() : 0;
-      const w = window.innerWidth - pad;
-      const s = Math.min(w / 1600, window.innerHeight / 900);
-      this.app.style.left = w / 2 + 'px';
+      const s = Math.min(window.innerWidth / 1600, window.innerHeight / 900);
       this.app.style.transform = `translate(-50%, -50%) scale(${s})`;
-      document.documentElement.style.setProperty('--pad-w', pad + 'px');
     }
-    padWidth() { return Math.round(Math.min(420, Math.max(320, window.innerWidth * 0.26))); }
-    /** Affiche (ou retire) la manette intégrée du mode Solo. */
+    /** Affiche (ou retire) la manette intégrée du mode Solo : une petite fenêtre dans le coin de l'écran. */
     updateSoloPad() {
       const g = this.g, on = g.settings.mode === 'solo' && !!g.code;
       let frame = document.getElementById('solo-pad');
@@ -124,13 +118,14 @@
         frame = document.createElement('iframe');
         frame.id = 'solo-pad';
         frame.title = 'Ta manette';
+        frame.dataset.size = 'large';
         frame.src = 'play.html?room=' + g.code + '&local=1' + PQA.config.passthroughQuery();
         document.body.appendChild(frame);
       } else if (!on && frame) {
         frame.remove();
         this.hooks && this.hooks.dropLocalPad && this.hooks.dropLocalPad();
       }
-      if (document.body.classList.contains('solo') !== on) { document.body.classList.toggle('solo', on); this.fit(); }
+      document.body.classList.toggle('solo', on);
     }
 
     /* ---- Interactions (souris / clavier) ---- */

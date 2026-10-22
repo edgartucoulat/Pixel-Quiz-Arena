@@ -97,6 +97,8 @@
       const m = e.data && e.data.pqaLocal;
       if (!m || !frame || e.source !== frame.contentWindow) return;
       localConn.localWin = frame.contentWindow;
+      // La manette indique la taille dont elle a besoin (petit buzzer, ou choix à afficher).
+      if (m.t === '_pad') { frame.dataset.size = m.size; return; }
       if (m.t === 'hello') { localConn._last = null; hello(localConn, m); const p = game.players[localConn.pid]; if (p) p.rtt = 0; return; }
       if (m.t === 'bye') { conns.delete(localConn); if (localConn.pid) game.setConnected(localConn.pid, false); return; }
       if (localConn.pid) game.handle(localConn.pid, m);
