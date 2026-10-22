@@ -1517,5 +1517,1194 @@
   "reponse": "Tintin",
   "reponses_acceptees": [],
   "anecdote": "Hergé l'a créé en 1929."
+ },
+ {
+  "id": "pop-t001",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment s'appelle le chien « le plus bête de l'Ouest », dans Lucky Luke ?",
+  "reponse": "Rantanplan",
+  "reponses_acceptees": [
+   "Rantanplan"
+  ],
+  "anecdote": "Il parodie Rintintin, le célèbre chien héroïque du cinéma américain.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t002",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment s'appelle le cocker roux de Boule ?",
+  "reponse": "Bill",
+  "reponses_acceptees": [
+   "Bill le cocker"
+  ],
+  "anecdote": "La série de Jean Roba a débuté en 1959 dans le journal Spirou.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t003",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel animal Gaston Lagaffe garde-t-il au bureau, en plus de son chat ?",
+  "choix": [
+   "Une mouette",
+   "Un perroquet",
+   "Un hamster",
+   "Une tortue"
+  ],
+  "reponse": "Une mouette",
+  "anecdote": "La mouette rieuse et le chat dingue mettent régulièrement la rédaction sens dessus dessous.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t004",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel beagle des Peanuts dort sur le toit de sa niche ?",
+  "reponse": "Snoopy",
+  "reponses_acceptees": [
+   "Snoopy"
+  ],
+  "anecdote": "Il s'imagine souvent en pilote de la Première Guerre mondiale, aux prises avec le Baron rouge.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t005",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Comment s'appelle le petit oiseau jaune, ami de Snoopy ?",
+  "choix": [
+   "Woodstock",
+   "Titi",
+   "Piou-Piou",
+   "Tweety"
+  ],
+  "reponse": "Woodstock",
+  "anecdote": "Il porte le nom du célèbre festival de musique de 1969.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t006",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Comment s'appelle la tortue de Boule et Bill ?",
+  "reponse": "Caroline",
+  "reponses_acceptees": [
+   "Caroline la tortue"
+  ],
+  "anecdote": "Bill en est éperdument amoureux, et la défend contre tous les dangers.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t007",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment s'appelle le chien un peu simplet, compagnon de Garfield ?",
+  "reponse": "Odie",
+  "reponses_acceptees": [
+   "Oddie"
+  ],
+  "anecdote": "Garfield passe son temps à le faire tomber de la table.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t008",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel animal suis-je ?",
+  "reponse": "Le Marsupilami",
+  "reponses_acceptees": [
+   "Marsupilami"
+  ],
+  "indices": [
+   "Je suis apparu en 1952 dans une aventure de Spirou",
+   "Mon créateur est André Franquin",
+   "Je vis dans la jungle de Palombie",
+   "Ma queue mesure plusieurs mètres",
+   "Je crie « Houba ! Houba ! »"
+  ],
+  "anecdote": "Franquin a gardé les droits du personnage quand il a quitté Spirou, ce qui était rare à l'époque.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t009",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel gros chien blanc qui parle est le héros d'une BD de Dupa ?",
+  "reponse": "Cubitus",
+  "reponses_acceptees": [
+   "Cubitus"
+  ],
+  "anecdote": "Il est apparu en 1968 dans le journal Tintin.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t010",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Comment s'appelle le chat voisin et ennemi juré de Cubitus ?",
+  "reponse": "Sénéchal",
+  "reponses_acceptees": [
+   "Senechal"
+  ],
+  "anecdote": "Ce chat aux allures de matou bagarreur passe son temps à jouer des tours au gros chien.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t011",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les animaux de BD",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel animal est Spip, le compagnon de Spirou ?",
+  "choix": [
+   "Un écureuil",
+   "Un chien",
+   "Un chat",
+   "Un singe"
+  ],
+  "reponse": "Un écureuil",
+  "anecdote": "Ses pensées sont souvent ronchonnes et apparaissent dans des bulles que personne d'autre ne lit.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t012",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Astérix",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment s'appelle le barde du village qu'on bâillonne pendant les banquets ?",
+  "reponse": "Assurancetourix",
+  "reponses_acceptees": [
+   "Assurancetourix"
+  ],
+  "anecdote": "Son nom joue sur « assurance tous risques ».",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t013",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Astérix",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment s'appelle le druide qui prépare la potion magique ?",
+  "reponse": "Panoramix",
+  "reponses_acceptees": [
+   "Panoramix"
+  ],
+  "anecdote": "Il cueille le gui avec une serpe d'or. Obélix n'a pas le droit de boire sa potion, car il est tombé dedans petit.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t014",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Astérix",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment s'appelle le chef du village gaulois ?",
+  "reponse": "Abraracourcix",
+  "reponses_acceptees": [
+   "Abraracourcix"
+  ],
+  "anecdote": "Il est porté sur un bouclier par deux porteurs, qui le font souvent tomber.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t015",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Astérix",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "De quoi les Gaulois du village ont-ils peur, selon le chef ?",
+  "reponse": "Que le ciel leur tombe sur la tête",
+  "reponses_acceptees": [
+   "Le ciel",
+   "Que le ciel tombe",
+   "Le ciel qui tombe"
+  ],
+  "anecdote": "La formule viendrait d'un témoignage antique : des Celtes auraient dit à Alexandre le Grand ne craindre que cela.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t016",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Astérix",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Lequel de ces noms est celui d'un camp romain qui entoure le village ?",
+  "choix": [
+   "Petibonum",
+   "Lugdunum",
+   "Condate",
+   "Burdigala"
+  ],
+  "reponse": "Petibonum",
+  "anecdote": "Les quatre camps sont Babaorum, Aquarium, Laudanum et Petibonum.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t017",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Astérix",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment s'appelle le poissonnier du village, dont le poisson n'est jamais frais ?",
+  "reponse": "Ordralfabétix",
+  "reponses_acceptees": [
+   "Ordralfabetix"
+  ],
+  "anecdote": "Il se dispute sans cesse avec le forgeron Cétautomatix.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t018",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Astérix",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment s'appelle la femme du chef Abraracourcix ?",
+  "reponse": "Bonemine",
+  "reponses_acceptees": [
+   "Bonemine"
+  ],
+  "anecdote": "Elle mène son mari à la baguette, et tient à se faire respecter de tout le village.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t019",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Astérix",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien d'albums d'Astérix René Goscinny a-t-il scénarisés ?",
+  "reponse": 24,
+  "unite": "albums",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   50
+  ],
+  "anecdote": "Le dernier est Astérix chez les Belges, sorti en 1979, deux ans après sa mort.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t020",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Astérix",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Comment s'appelle la vigie des pirates, qui ne prononce pas les « r » ?",
+  "reponse": "Baba",
+  "reponses_acceptees": [
+   "Baba"
+  ],
+  "anecdote": "Perché dans le nid-de-pie, il annonce l'arrivée des Gaulois, juste avant chaque naufrage. Son capitaine est Barbe-Rouge.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t021",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Astérix",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Comment s'appelle le doyen du village, qui répète que c'était mieux avant ?",
+  "reponse": "Agecanonix",
+  "reponses_acceptees": [
+   "Agecanonix"
+  ],
+  "anecdote": "Il a une femme bien plus jeune que lui, dont on ne connaît pas le nom.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t022",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Tintin",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel est le juron préféré du capitaine Haddock ?",
+  "reponse": "Mille sabords",
+  "reponses_acceptees": [
+   "Mille millions de mille sabords",
+   "Mille milliards de mille sabords"
+  ],
+  "anecdote": "Il en a lancé des centaines d'autres, comme « Bachi-bouzouk ! » ou « Ectoplasme ! ».",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t023",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Tintin",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment s'appellent les deux policiers moustachus et maladroits ?",
+  "reponse": "Dupond et Dupont",
+  "reponses_acceptees": [
+   "Dupont et Dupond",
+   "Les Dupondt",
+   "Dupondt"
+  ],
+  "anecdote": "Malgré leur ressemblance, ils ne sont ni jumeaux ni même frères, selon Hergé.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t024",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Tintin",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment s'appelle le château du capitaine Haddock ?",
+  "reponse": "Moulinsart",
+  "reponses_acceptees": [
+   "Le château de Moulinsart"
+  ],
+  "anecdote": "Il s'inspire du château de Cheverny, dont Hergé a supprimé les deux ailes.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t025",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Tintin",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel est le premier des deux albums où Tintin part sur la Lune ?",
+  "choix": [
+   "Objectif Lune",
+   "On a marché sur la Lune",
+   "Vol 714 pour Sydney",
+   "L'Étoile mystérieuse"
+  ],
+  "reponse": "Objectif Lune",
+  "anecdote": "Hergé y a imaginé une fusée à damier rouge et blanc, bien avant les premiers pas d'Armstrong.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t026",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Tintin",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année Tintin apparaît-il pour la première fois ?",
+  "reponse": 1929,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1900,
+   1960
+  ],
+  "anecdote": "Tintin au pays des Soviets a été publié dans le Petit Vingtième, le supplément jeunesse d'un journal belge.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t027",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Tintin",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle cantatrice est surnommée « le rossignol milanais » ?",
+  "reponse": "Bianca Castafiore",
+  "reponses_acceptees": [
+   "Castafiore",
+   "La Castafiore"
+  ],
+  "anecdote": "Elle chante toujours l'air des bijoux de Faust : « Ah ! je ris de me voir si belle en ce miroir. »",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t028",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Tintin",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment s'appelle le majordome du capitaine Haddock ?",
+  "reponse": "Nestor",
+  "reponses_acceptees": [
+   "Nestor"
+  ],
+  "anecdote": "Il servait d'abord les frères Loiseau, les méchants du Secret de la Licorne.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t029",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Tintin",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel est le prénom du capitaine Haddock ?",
+  "reponse": "Archibald",
+  "reponses_acceptees": [
+   "Archibald"
+  ],
+  "anecdote": "Il n'est révélé que dans le dernier album terminé, Tintin et les Picaros, en 1976.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t030",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Tintin",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Comment s'appelle l'agent d'assurances envahissant qui s'incruste à Moulinsart ?",
+  "reponse": "Séraphin Lampion",
+  "reponses_acceptees": [
+   "Lampion",
+   "Seraphin Lampion"
+  ],
+  "anecdote": "Il travaille pour la compagnie Mondass et ne cesse de raconter les histoires de son oncle Anatole.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t031",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Tintin",
+  "type": "indices",
+  "difficulte": 8,
+  "question": "Qui suis-je ?",
+  "reponse": "Rastapopoulos",
+  "reponses_acceptees": [
+   "Roberto Rastapopoulos"
+  ],
+  "indices": [
+   "Je fume le cigare",
+   "Je suis millionnaire et producteur de cinéma",
+   "Je dirige un trafic d'opium dans Les Cigares du pharaon",
+   "Dans Vol 714 pour Sydney, j'enlève un milliardaire",
+   "Je suis le grand méchant au gros nez des aventures de Tintin"
+  ],
+  "anecdote": "On le voit pour la première fois dans Les Cigares du pharaon, en 1934.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t032",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les Pokémon de première génération",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel Pokémon de départ, de type feu, est un petit lézard à la queue enflammée ?",
+  "reponse": "Salamèche",
+  "reponses_acceptees": [
+   "Salameche",
+   "Charmander"
+  ],
+  "anecdote": "Si la flamme de sa queue s'éteint, il meurt, d'après le Pokédex.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t033",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les Pokémon de première génération",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "En quel Pokémon Carapuce évolue-t-il ?",
+  "choix": [
+   "Carabaffe",
+   "Tortank",
+   "Bulbizarre",
+   "Ronflex"
+  ],
+  "reponse": "Carabaffe",
+  "anecdote": "Carabaffe évolue ensuite en Tortank, la tortue aux canons à eau.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t034",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les Pokémon de première génération",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel Pokémon suis-je ?",
+  "reponse": "Ronflex",
+  "reponses_acceptees": [
+   "Snorlax"
+  ],
+  "indices": [
+   "Je porte le numéro 143",
+   "Je pèse 460 kilos",
+   "Je bloque la route, et il faut une Pokéflûte pour me réveiller",
+   "Je passe mon temps à manger et à dormir"
+  ],
+  "anecdote": "Son créateur se serait inspiré d'un membre de l'équipe de Game Freak, réputé pour sa gourmandise.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t035",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les Pokémon de première génération",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quel Pokémon suis-je ?",
+  "reponse": "Mew",
+  "reponses_acceptees": [
+   "Mew"
+  ],
+  "indices": [
+   "Je porte le numéro 151",
+   "Un programmeur m'a ajouté en secret, juste avant la sortie du jeu",
+   "Mon ADN a servi à créer un clone surpuissant",
+   "Je suis un petit chat rose légendaire"
+  ],
+  "anecdote": "On ne pouvait l'obtenir normalement que lors d'événements Nintendo, ce qui a fait naître une foule de rumeurs.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t036",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les Pokémon de première génération",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Quel est le numéro de Pikachu dans le Pokédex ?",
+  "reponse": 25,
+  "unite": "numéro",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   151
+  ],
+  "anecdote": "Son nom vient de « pika », le crépitement de l'électricité en japonais, et de « chu », le cri de la souris.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t037",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les Pokémon de première génération",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel Pokémon porte le numéro 001 du Pokédex ?",
+  "choix": [
+   "Bulbizarre",
+   "Salamèche",
+   "Carapuce",
+   "Mew"
+  ],
+  "reponse": "Bulbizarre",
+  "anecdote": "Pourtant, le premier Pokémon créé par les développeurs serait Rhinoféros.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t038",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les Pokémon de première génération",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel Pokémon « bug » célèbre apparaissait en surfant le long de la côte de Cramois'Île ?",
+  "reponse": "MissingNo.",
+  "reponses_acceptees": [
+   "MissingNo",
+   "Missingno"
+  ],
+  "anecdote": "Il dupliquait le sixième objet du sac. Nintendo conseillait de ne pas le capturer, car il pouvait abîmer la sauvegarde.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t039",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les Pokémon de première génération",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Comment s'appelle le rival de Sacha dans le dessin animé, en version française ?",
+  "choix": [
+   "Régis",
+   "Pierre",
+   "James",
+   "Max"
+  ],
+  "reponse": "Régis",
+  "anecdote": "Il est le petit-fils du professeur Chen, qui donne leur premier Pokémon aux jeunes dresseurs.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t040",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les Pokémon de première génération",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "En quelle année le dessin animé Pokémon a-t-il été diffusé pour la première fois en France ?",
+  "reponse": 1999,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1990,
+   2010
+  ],
+  "anecdote": "Il a été lancé sur TF1, deux ans après le Japon, où un épisode avait provoqué des crises d'épilepsie.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t041",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mario Kart",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel personnage suis-je ?",
+  "reponse": "Luigi",
+  "reponses_acceptees": [
+   "Luigi"
+  ],
+  "indices": [
+   "Je suis apparu pour la première fois en 1983",
+   "Je suis plus grand et plus mince que mon frère",
+   "Je suis le héros d'un jeu de chasse aux fantômes",
+   "Je porte une casquette verte avec un L"
+  ],
+  "anecdote": "Il est né d'une contrainte technique : le second joueur de Mario Bros. avait besoin d'un personnage de couleur différente.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t042",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mario Kart",
+  "type": "indices",
+  "difficulte": 9,
+  "question": "Quel personnage suis-je ?",
+  "reponse": "Lakitu",
+  "reponses_acceptees": [
+   "Lakitu"
+  ],
+  "indices": [
+   "Je suis une tortue",
+   "Je me déplace sur un petit nuage",
+   "Dans Mario Kart, je repêche les pilotes tombés hors de la piste",
+   "Je tiens le feu de départ des courses"
+  ],
+  "anecdote": "Dans les jeux de plateforme Mario, il lance des Hériss, des petites boules à épines, sur le joueur.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t043",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mario Kart",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année est sorti Super Mario Kart, le tout premier épisode ?",
+  "reponse": 1992,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1980,
+   2010
+  ],
+  "anecdote": "Il est sorti sur Super Nintendo. Mario Kart 8 Deluxe est devenu le jeu le plus vendu de la Switch.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t044",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mario Kart",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle piste multicolore, sans barrières, termine souvent les coupes de Mario Kart ?",
+  "reponse": "La Route arc-en-ciel",
+  "reponses_acceptees": [
+   "Route arc-en-ciel",
+   "Rainbow Road",
+   "Route arc en ciel"
+  ],
+  "anecdote": "Elle est présente dans presque tous les épisodes et redoutée pour ses chutes dans le vide.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t045",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les jeux de société",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel jeu suis-je ?",
+  "reponse": "Le Cluedo",
+  "reponses_acceptees": [
+   "Cluedo"
+  ],
+  "indices": [
+   "Je suis né en Angleterre en 1949",
+   "Mon nom joue sur le mot anglais qui signifie « indice »",
+   "On y croise le colonel Moutarde et Mademoiselle Rose",
+   "Il faut trouver le coupable, l'arme et la pièce du crime"
+  ],
+  "anecdote": "Son inventeur, Anthony Pratt, l'a imaginé pendant les longues soirées du couvre-feu de la Seconde Guerre mondiale.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "pop-t046",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les jeux de société",
+  "type": "fourchette",
+  "difficulte": 3,
+  "question": "Combien de pions chaque joueur a-t-il au début d'une partie de dames ?",
+  "reponse": 20,
+  "unite": "pions",
+  "tolerance": 0,
+  "bornes": [
+   5,
+   60
+  ],
+  "anecdote": "Le jeu de dames français se joue sur un damier de 100 cases. Un pion arrivé au bout devient une dame.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "pop-t047",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les jeux de société",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de jetons compte une boîte de Scrabble en français ?",
+  "reponse": 102,
+  "unite": "jetons",
+  "tolerance": 0,
+  "bornes": [
+   50,
+   200
+  ],
+  "anecdote": "Dont deux jokers, blancs. Le E est la lettre la plus représentée, avec 15 jetons.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "pop-t048",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les jeux de société",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quelle est la case la plus chère du Monopoly français ?",
+  "choix": [
+   "La rue de la Paix",
+   "L'avenue des Champs-Élysées",
+   "L'avenue Foch",
+   "Le boulevard des Capucines"
+  ],
+  "reponse": "La rue de la Paix",
+  "anecdote": "La version française du jeu a été adaptée en 1936, avec les rues de Paris.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "pop-t049",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les jeux de société",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de points vaut la lettre Z au Scrabble français ?",
+  "reponse": 10,
+  "unite": "points",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   20
+  ],
+  "anecdote": "Le K, le W, le X et le Y valent aussi 10 points.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "pop-t050",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les jeux de société",
+  "type": "indices",
+  "difficulte": 7,
+  "question": "Quel jeu suis-je ?",
+  "reponse": "Catan",
+  "reponses_acceptees": [
+   "Les Colons de Catane",
+   "Colons de Catane",
+   "Catane"
+  ],
+  "indices": [
+   "J'ai été créé par l'Allemand Klaus Teuber en 1995",
+   "Mon plateau est fait d'hexagones",
+   "On y échange du blé, du bois, de l'argile, de la laine et du minerai",
+   "Je porte le nom d'une île imaginaire"
+  ],
+  "anecdote": "Il s'est vendu à plus de 40 millions d'exemplaires et a lancé la vague des jeux de société modernes.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "pop-t051",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les jeux de société",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de cartes compte un jeu de tarot ?",
+  "reponse": 78,
+  "unite": "cartes",
+  "tolerance": 0,
+  "bornes": [
+   30,
+   120
+  ],
+  "anecdote": "Il y a 56 cartes classiques, 21 atouts et l'Excuse. Le Petit, le 21 et l'Excuse sont les trois « bouts ».",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "pop-t052",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les jeux de société",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : la règle officielle du Monopoly prévoit une cagnotte pour celui qui tombe sur le Parc gratuit.",
+  "reponse": "Faux",
+  "anecdote": "C'est une règle « maison » très répandue. Officiellement, il ne se passe rien sur cette case.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "pop-t053",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Les jeux de société",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel jeu de cinq dés consiste à réaliser des combinaisons comme le full ou le carré ?",
+  "reponse": "Le Yam's",
+  "reponses_acceptees": [
+   "Yams",
+   "Yam's",
+   "Yahtzee",
+   "Le Yahtzee"
+  ],
+  "anecdote": "Le nom « Yahtzee » viendrait d'un couple canadien qui y jouait sur son yacht, d'où le « Yacht game ».",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "pop-t054",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Fort Boyard",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment s'appelle le vieil homme barbu qui pose des énigmes en haut du fort ?",
+  "reponse": "Le père Fouras",
+  "reponses_acceptees": [
+   "Père Fouras",
+   "Pere Fouras",
+   "Fouras"
+  ],
+  "anecdote": "Il est joué depuis 1990 par Yann Le Gac. Ses énigmes sont devenues célèbres pour leurs rimes.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t055",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Fort Boyard",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quels animaux surveillent la salle du trésor de Fort Boyard ?",
+  "choix": [
+   "Des tigres",
+   "Des lions",
+   "Des panthères",
+   "Des ours"
+  ],
+  "reponse": "Des tigres",
+  "anecdote": "Ils sont accompagnés par leurs dresseurs, prêts à intervenir si un candidat traîne trop.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t056",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Fort Boyard",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année l'émission Fort Boyard a-t-elle été diffusée pour la première fois ?",
+  "reponse": 1990,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1970,
+   2015
+  ],
+  "anecdote": "Le concept a été vendu dans plus de trente pays, mais presque toutes les versions sont tournées dans le vrai fort.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t057",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Fort Boyard",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel petit personnage aide les candidats, avec son acolyte Passe-Muraille ?",
+  "choix": [
+   "Passe-Partout",
+   "Pas-Cap",
+   "Pierrot",
+   "Le Lutin"
+  ],
+  "reponse": "Passe-Partout",
+  "anecdote": "Il est joué depuis le début par André Bouchet, et est devenu une figure culte de l'émission.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t058",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Fort Boyard",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Quelle est la longueur du fort Boyard, en mètres ?",
+  "reponse": 68,
+  "unite": "m",
+  "tolerance": 1,
+  "bornes": [
+   20,
+   300
+  ],
+  "anecdote": "Il est large de 31 mètres et ses murs montent à 20 mètres. Il est posé sur un banc de sable.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t059",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Fort Boyard",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Sous quel souverain la construction du fort Boyard a-t-elle été achevée, en 1857 ?",
+  "choix": [
+   "Napoléon III",
+   "Louis-Philippe",
+   "Napoléon Ier",
+   "Charles X"
+  ],
+  "reponse": "Napoléon III",
+  "anecdote": "Au moment de sa livraison, la portée des canons avait tellement augmenté que le fort ne servait déjà plus à rien.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t060",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Fort Boyard",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Entre l'île d'Aix et quelle autre île se dresse le fort Boyard ?",
+  "choix": [
+   "L'île d'Oléron",
+   "L'île de Ré",
+   "Belle-Île",
+   "L'île d'Yeu"
+  ],
+  "reponse": "L'île d'Oléron",
+  "anecdote": "Il devait empêcher les navires ennemis d'approcher de l'arsenal de Rochefort.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t061",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Fort Boyard",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : le fort Boyard n'a jamais participé à aucune bataille.",
+  "reponse": "Vrai",
+  "anecdote": "Il a seulement servi de prison militaire pendant quelques années, au XIXe siècle.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "pop-t062",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Fort Boyard",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment s'appelle la monnaie récoltée par les candidats dans la salle du trésor ?",
+  "reponse": "Les boyards",
+  "reponses_acceptees": [
+   "Boyards",
+   "Boyard"
+  ],
+  "anecdote": "Les candidats jouent pour une association. L'argent est versé à une cause qu'ils ont choisie.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
  }
 ]

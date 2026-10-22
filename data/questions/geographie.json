@@ -1950,5 +1950,577 @@
   "reponse": "Toulouse",
   "reponses_acceptees": [],
   "anecdote": "Elle doit ce surnom à la brique de ses façades."
+ },
+ {
+  "id": "geo-t001",
+  "categorie": "Géographie",
+  "sous_theme": "Les fleuves de France",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel fleuve suis-je ?",
+  "reponse": "La Seine",
+  "reponses_acceptees": [
+   "Seine"
+  ],
+  "indices": [
+   "Je prends ma source sur le plateau de Langres",
+   "Je me jette dans la Manche, entre Le Havre et Honfleur",
+   "Je traverse Rouen",
+   "Je coule sous le pont Mirabeau, à Paris"
+  ],
+  "anecdote": "Sa source appartient à la Ville de Paris, à plus de 250 km de la capitale.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t002",
+  "categorie": "Géographie",
+  "sous_theme": "Les fleuves de France",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel fleuve forme l'estuaire de la Gironde avec la Dordogne ?",
+  "reponse": "La Garonne",
+  "reponses_acceptees": [
+   "Garonne"
+  ],
+  "anecdote": "Il traverse Toulouse et Bordeaux. Il prend sa source en Espagne, dans le val d'Aran.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t003",
+  "categorie": "Géographie",
+  "sous_theme": "Les fleuves de France",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel fleuve côtier traverse Rennes ?",
+  "choix": [
+   "La Vilaine",
+   "La Rance",
+   "L'Odet",
+   "Le Couesnon"
+  ],
+  "reponse": "La Vilaine",
+  "anecdote": "Elle reçoit l'Ille en plein Rennes, d'où le nom du département : l'Ille-et-Vilaine.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t004",
+  "categorie": "Géographie",
+  "sous_theme": "Les fleuves de France",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel petit fleuve, selon un dicton, « dans sa folie, a mis le Mont en Normandie » ?",
+  "reponse": "Le Couesnon",
+  "reponses_acceptees": [
+   "Couesnon"
+  ],
+  "anecdote": "Il marque la frontière entre la Bretagne et la Normandie. Son embouchure se trouve juste à côté du Mont-Saint-Michel.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t005",
+  "categorie": "Géographie",
+  "sous_theme": "Les fleuves de France",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Quelle est la longueur de la Loire, en kilomètres ?",
+  "reponse": 1006,
+  "unite": "km",
+  "tolerance": 20,
+  "bornes": [
+   300,
+   2000
+  ],
+  "anecdote": "C'est le plus long fleuve de France, et l'un des derniers fleuves sauvages d'Europe, avec peu de barrages.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t006",
+  "categorie": "Géographie",
+  "sous_theme": "Les fleuves de France",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quelle rivière traverse Reims ?",
+  "choix": [
+   "La Vesle",
+   "La Marne",
+   "L'Aisne",
+   "L'Oise"
+  ],
+  "reponse": "La Vesle",
+  "anecdote": "C'est un affluent de l'Aisne, elle-même affluent de l'Oise, qui se jette dans la Seine.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t007",
+  "categorie": "Géographie",
+  "sous_theme": "Les fleuves de France",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel fleuve côtier traverse Montpellier ?",
+  "choix": [
+   "Le Lez",
+   "L'Hérault",
+   "L'Orb",
+   "Le Vidourle"
+  ],
+  "reponse": "Le Lez",
+  "anecdote": "Il prend sa source à une quinzaine de kilomètres au nord de la ville et se jette dans la Méditerranée à Palavas-les-Flots.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t008",
+  "categorie": "Géographie",
+  "sous_theme": "Les fleuves de France",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : la Seine prend sa source en Bourgogne.",
+  "reponse": "Vrai",
+  "anecdote": "Elle naît à Source-Seine, en Côte-d'Or. Une statue de nymphe y représente le fleuve.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t009",
+  "categorie": "Géographie",
+  "sous_theme": "Les départements français",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel département porte le numéro 75 ?",
+  "reponse": "Paris",
+  "reponses_acceptees": [
+   "Paris"
+  ],
+  "anecdote": "Avant 1968, le département de la Seine portait ce numéro et englobait aussi une partie de la banlieue.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t010",
+  "categorie": "Géographie",
+  "sous_theme": "Les départements français",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Quel est le numéro du département des Bouches-du-Rhône ?",
+  "reponse": 13,
+  "unite": "numéro",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   101
+  ],
+  "anecdote": "Les numéros suivent l'ordre alphabétique des noms de départements tels qu'ils étaient en 1790.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t011",
+  "categorie": "Géographie",
+  "sous_theme": "Les départements français",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Quel est le numéro du département de La Réunion ?",
+  "reponse": 974,
+  "unite": "numéro",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   999
+  ],
+  "anecdote": "Les départements d'outre-mer ont des numéros à trois chiffres : 971 pour la Guadeloupe, 972 pour la Martinique.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t012",
+  "categorie": "Géographie",
+  "sous_theme": "Les départements français",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel département porte le numéro 01, le premier de la liste ?",
+  "reponse": "L'Ain",
+  "reponses_acceptees": [
+   "Ain",
+   "01"
+  ],
+  "anecdote": "C'est le premier dans l'ordre alphabétique. Sa préfecture est Bourg-en-Bresse.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t013",
+  "categorie": "Géographie",
+  "sous_theme": "Les départements français",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle est la préfecture du Lot ?",
+  "reponse": "Cahors",
+  "reponses_acceptees": [
+   "Cahors"
+  ],
+  "anecdote": "La ville est célèbre pour son vin rouge très sombre, surnommé « vin noir », et pour son pont Valentré.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t014",
+  "categorie": "Géographie",
+  "sous_theme": "Les départements français",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel département suis-je ?",
+  "reponse": "Le Finistère",
+  "reponses_acceptees": [
+   "Finistère",
+   "Finistere"
+  ],
+  "indices": [
+   "Mon numéro est le 29",
+   "Ma préfecture est Quimper",
+   "Brest est ma plus grande ville",
+   "Mon nom signifie « la fin de la terre »"
+  ],
+  "anecdote": "C'est le département le plus à l'ouest de la France métropolitaine, avec la pointe de Corsen.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t015",
+  "categorie": "Géographie",
+  "sous_theme": "Les départements français",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "De quel département Privas est-elle la préfecture ?",
+  "choix": [
+   "L'Ardèche",
+   "La Drôme",
+   "La Lozère",
+   "La Haute-Loire"
+  ],
+  "reponse": "L'Ardèche",
+  "anecdote": "Avec environ 8 000 habitants, c'est l'une des plus petites préfectures de France.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t016",
+  "categorie": "Géographie",
+  "sous_theme": "Les départements français",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel département a pour préfecture Mont-de-Marsan ?",
+  "choix": [
+   "Les Landes",
+   "Les Pyrénées-Atlantiques",
+   "Le Gers",
+   "La Gironde"
+  ],
+  "reponse": "Les Landes",
+  "anecdote": "Les Landes abritent la plus grande forêt artificielle d'Europe occidentale, plantée de pins au XIXe siècle.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "geo-t017",
+  "categorie": "Géographie",
+  "sous_theme": "Les volcans",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel volcan suis-je ?",
+  "reponse": "Le Vésuve",
+  "reponses_acceptees": [
+   "Vésuve",
+   "Vesuve"
+  ],
+  "indices": [
+   "Ma dernière éruption date de 1944",
+   "Je suis le seul volcan actif d'Europe continentale",
+   "Je domine la baie de Naples",
+   "En 79, j'ai enseveli Pompéi"
+  ],
+  "anecdote": "Environ 600 000 personnes vivent dans la « zone rouge », la plus menacée en cas d'éruption.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t018",
+  "categorie": "Géographie",
+  "sous_theme": "Les volcans",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel volcan des îles Éoliennes, surnommé « le phare de la Méditerranée », crache des projections presque en permanence ?",
+  "reponse": "Le Stromboli",
+  "reponses_acceptees": [
+   "Stromboli"
+  ],
+  "anecdote": "Ses petites explosions, toutes les quelques minutes, ont donné leur nom aux éruptions « stromboliennes ».",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t019",
+  "categorie": "Géographie",
+  "sous_theme": "Les volcans",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel volcan de La Réunion est l'un des plus actifs du monde ?",
+  "choix": [
+   "Le piton de la Fournaise",
+   "Le piton des Neiges",
+   "La montagne Pelée",
+   "La Soufrière"
+  ],
+  "reponse": "Le piton de la Fournaise",
+  "anecdote": "Il entre en éruption presque chaque année. Ses coulées de lave atteignent parfois l'océan.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t020",
+  "categorie": "Géographie",
+  "sous_theme": "Les volcans",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel volcan a détruit la ville de Saint-Pierre, en Martinique, en 1902 ?",
+  "reponse": "La montagne Pelée",
+  "reponses_acceptees": [
+   "Montagne Pelée",
+   "Mont Pelé",
+   "La Pelée"
+  ],
+  "anecdote": "L'un des rares survivants était un prisonnier, protégé par les murs épais de son cachot.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t021",
+  "categorie": "Géographie",
+  "sous_theme": "Les volcans",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Combien de personnes environ ont péri lors de l'éruption de la montagne Pelée, en 1902 ?",
+  "reponse": 28000,
+  "unite": "morts",
+  "tolerance": 560,
+  "bornes": [
+   1000,
+   100000
+  ],
+  "anecdote": "Saint-Pierre, surnommée « le petit Paris des Antilles », était alors la capitale économique de l'île.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t022",
+  "categorie": "Géographie",
+  "sous_theme": "Les volcans",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel volcan islandais a paralysé le trafic aérien européen en 2010 ?",
+  "reponse": "L'Eyjafjallajökull",
+  "reponses_acceptees": [
+   "Eyjafjallajökull",
+   "Eyjafjallajokull"
+  ],
+  "anecdote": "Son nom signifie « glacier de la montagne des îles ». Les présentateurs du monde entier ont peiné à le prononcer.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t023",
+  "categorie": "Géographie",
+  "sous_theme": "Les volcans",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année l'éruption du Krakatoa a-t-elle eu lieu ?",
+  "reponse": 1883,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1700,
+   1990
+  ],
+  "anecdote": "L'explosion a été entendue à près de 5 000 km. C'est l'un des bruits les plus forts de l'histoire.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t024",
+  "categorie": "Géographie",
+  "sous_theme": "Les volcans",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel est le plus haut volcan de la chaîne des Puys, en Auvergne ?",
+  "choix": [
+   "Le puy de Dôme",
+   "Le puy de Sancy",
+   "Le puy Pariou",
+   "Le Plomb du Cantal"
+  ],
+  "reponse": "Le puy de Dôme",
+  "anecdote": "Le Tour de France y est revenu en 2023, après 35 ans d'absence.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t025",
+  "categorie": "Géographie",
+  "sous_theme": "Les volcans",
+  "type": "fourchette",
+  "difficulte": 10,
+  "question": "Quelle est l'altitude du puy de Dôme, en mètres ?",
+  "reponse": 1465,
+  "unite": "m",
+  "tolerance": 29,
+  "bornes": [
+   500,
+   3000
+  ],
+  "anecdote": "Les Romains y avaient construit un grand temple dédié à Mercure, dont il reste les ruines au sommet.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t026",
+  "categorie": "Géographie",
+  "sous_theme": "Les pays minuscules",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Quel pays suis-je ?",
+  "reponse": "Nauru",
+  "reponses_acceptees": [
+   "Nauru"
+  ],
+  "indices": [
+   "Je n'ai pas de capitale officielle",
+   "Mon sol était très riche en phosphate",
+   "Je suis la plus petite république du monde",
+   "Je suis une île du Pacifique de 21 km²"
+  ],
+  "anecdote": "L'exploitation du phosphate l'a rendu très riche dans les années 1970, puis a ravagé l'essentiel de son territoire.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t027",
+  "categorie": "Géographie",
+  "sous_theme": "Les pays minuscules",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Quelle « principauté » suis-je ?",
+  "reponse": "Sealand",
+  "reponses_acceptees": [
+   "Principauté de Sealand"
+  ],
+  "indices": [
+   "Je suis une ancienne plateforme militaire de la Seconde Guerre mondiale",
+   "Je me suis proclamée indépendante en 1967",
+   "J'ai mes propres timbres et ma propre monnaie",
+   "Je suis une micronation au large de l'Angleterre"
+  ],
+  "anecdote": "Aucun pays ne la reconnaît. Sa « famille princière » vend des titres de noblesse en ligne.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t028",
+  "categorie": "Géographie",
+  "sous_theme": "Les pays minuscules",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quelle est la capitale du Bhoutan ?",
+  "reponse": "Thimphou",
+  "reponses_acceptees": [
+   "Thimphu",
+   "Thimpu"
+  ],
+  "anecdote": "C'est l'une des seules capitales au monde sans feu de circulation : des policiers règlent le trafic à la main.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "geo-t029",
+  "categorie": "Géographie",
+  "sous_theme": "Les pays minuscules",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel pays suis-je ?",
+  "reponse": "Monaco",
+  "reponses_acceptees": [
+   "La principauté de Monaco"
+  ],
+  "indices": [
+   "Ma superficie est d'environ 2 km²",
+   "Ma famille princière est celle des Grimaldi",
+   "Je suis le deuxième plus petit pays du monde",
+   "J'accueille un Grand Prix de Formule 1 dans mes rues"
+  ],
+  "anecdote": "Seul le Vatican est plus petit. Une grande partie de son territoire a été gagnée sur la mer.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
  }
 ]

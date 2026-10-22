@@ -1053,5 +1053,285 @@
    "Vincent van Gogh"
   ],
   "anecdote": "Il n'a vendu qu'un seul tableau de son vivant, selon la légende."
+ },
+ {
+  "id": "art-t001",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les châteaux de la Loire",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel château enjambe le Cher grâce à une longue galerie posée sur des arches ?",
+  "reponse": "Chenonceau",
+  "reponses_acceptees": [
+   "Chenonceaux",
+   "Château de Chenonceau"
+  ],
+  "anecdote": "Pendant la Première Guerre mondiale, sa galerie a servi d'hôpital.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "art-t002",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les châteaux de la Loire",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel château, le plus grand de la Loire, possède un escalier à double révolution ?",
+  "reponse": "Chambord",
+  "reponses_acceptees": [
+   "Château de Chambord"
+  ],
+  "anecdote": "Deux personnes peuvent monter et descendre en même temps sans jamais se croiser.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "art-t003",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les châteaux de la Loire",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de cheminées compte le château de Chambord ?",
+  "reponse": 282,
+  "unite": "cheminées",
+  "tolerance": 5,
+  "bornes": [
+   50,
+   800
+  ],
+  "anecdote": "On compte aussi 426 pièces et 77 escaliers.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "art-t004",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les châteaux de la Loire",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Dans quelle demeure d'Amboise Léonard de Vinci a-t-il fini sa vie ?",
+  "choix": [
+   "Le Clos Lucé",
+   "Chambord",
+   "Le château de Blois",
+   "Chaumont"
+  ],
+  "reponse": "Le Clos Lucé",
+  "anecdote": "François Ier l'y avait invité. Il y est mort en 1519, et il est enterré dans la chapelle du château d'Amboise.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "art-t005",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les châteaux de la Loire",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel château possède un célèbre escalier à vis de François Ier, sur sa façade ?",
+  "choix": [
+   "Blois",
+   "Amboise",
+   "Azay-le-Rideau",
+   "Cheverny"
+  ],
+  "reponse": "Blois",
+  "anecdote": "Le château mêle quatre styles : gothique, Renaissance, classique et médiéval. Le duc de Guise y a été assassiné en 1588.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "art-t006",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les châteaux de la Loire",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel château Renaissance semble posé au milieu de l'Indre ?",
+  "choix": [
+   "Azay-le-Rideau",
+   "Ussé",
+   "Villandry",
+   "Langeais"
+  ],
+  "reponse": "Azay-le-Rideau",
+  "anecdote": "Balzac le décrivait comme « un diamant taillé à facettes, serti par l'Indre ».",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "art-t007",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les châteaux de la Loire",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel château aurait inspiré à Charles Perrault La Belle au bois dormant ?",
+  "choix": [
+   "Ussé",
+   "Chaumont",
+   "Villandry",
+   "Langeais"
+  ],
+  "reponse": "Ussé",
+  "anecdote": "Ses tours et ses toits pointus, au bord de la forêt de Chinon, lui donnent un vrai air de conte de fées.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "art-t008",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les châteaux de la Loire",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel château est célèbre pour ses jardins potagers Renaissance, aux légumes de toutes les couleurs ?",
+  "reponse": "Villandry",
+  "reponses_acceptees": [
+   "Château de Villandry"
+  ],
+  "anecdote": "Les jardins ont été recréés au début du XXe siècle par Joachim Carvallo, d'après des plans anciens.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "art-t009",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les châteaux de la Loire",
+  "type": "vf",
+  "difficulte": 7,
+  "question": "Vrai ou faux : Catherine de Médicis a obligé Diane de Poitiers à lui céder Chenonceau.",
+  "reponse": "Vrai",
+  "anecdote": "À la mort d'Henri II, en 1559, sa veuve a récupéré le château que le roi avait offert à sa maîtresse, en lui donnant Chaumont en échange.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "art-t010",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les châteaux de la Loire",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel château accueille chaque année un festival international des jardins ?",
+  "reponse": "Chaumont-sur-Loire",
+  "reponses_acceptees": [
+   "Chaumont",
+   "Chaumont sur Loire"
+  ],
+  "anecdote": "Le festival existe depuis 1992. Chaque année, une trentaine de jardins éphémères sont créés sur un thème.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "art-t011",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les tableaux célèbres",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel tableau suis-je ?",
+  "reponse": "La Joconde",
+  "reponses_acceptees": [
+   "Joconde",
+   "Mona Lisa"
+  ],
+  "indices": [
+   "Je suis peinte sur un panneau de bois de peuplier",
+   "On m'a volée en 1911",
+   "Une vitre blindée me protège au Louvre",
+   "Mon sourire énigmatique a été peint par Léonard de Vinci"
+  ],
+  "anecdote": "Elle mesure seulement 77 cm sur 53. La foule devant elle est souvent plus impressionnante que le tableau.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "art-t012",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les tableaux célèbres",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Quel tableau suis-je ?",
+  "reponse": "Le Sacre de Napoléon",
+  "reponses_acceptees": [
+   "Sacre de Napoléon",
+   "Le Sacre",
+   "Le Couronnement de Napoléon"
+  ],
+  "indices": [
+   "Je mesure près de dix mètres de large",
+   "Le pape Pie VII y est assis",
+   "La mère de l'empereur y figure alors qu'elle n'était pas présente",
+   "Napoléon y couronne Joséphine, peint par David"
+  ],
+  "anecdote": "Le peintre Jacques-Louis David a mis trois ans à le réaliser. Une seconde version se trouve au château de Versailles.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "art-t013",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les tableaux célèbres",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Quel tableau suis-je ?",
+  "reponse": "La Ronde de nuit",
+  "reponses_acceptees": [
+   "Ronde de nuit"
+  ],
+  "indices": [
+   "Mon vrai titre cite la compagnie du capitaine Frans Banninck Cocq",
+   "Un vernis assombri m'a valu mon surnom",
+   "J'ai été tailladé au couteau en 1975",
+   "Je suis le chef-d'œuvre de Rembrandt"
+  ],
+  "anecdote": "En réalité, la scène se passe de jour. Le tableau a même été rogné sur les côtés en 1715 pour entrer dans une salle.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "art-t014",
+  "categorie": "Art & Architecture",
+  "sous_theme": "Les tableaux célèbres",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Quel tableau suis-je ?",
+  "reponse": "La Nuit étoilée",
+  "reponses_acceptees": [
+   "Nuit étoilée",
+   "Nuit etoilee"
+  ],
+  "indices": [
+   "J'ai été peint en 1889 dans un asile de Saint-Rémy-de-Provence",
+   "Je suis exposé au MoMA, à New York",
+   "On y voit un cyprès et un village sous un ciel tourbillonnant",
+   "Je suis l'œuvre la plus célèbre de Van Gogh"
+  ],
+  "anecdote": "Van Gogh le considérait comme un échec. Il l'a peint de mémoire, en journée, d'après la vue de sa fenêtre.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
  }
 ]

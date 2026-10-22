@@ -1864,5 +1864,1052 @@
    "Le shérif Woody"
   ],
   "anecdote": "C'était le premier long métrage entièrement en images de synthèse, en 1995."
+ },
+ {
+  "id": "cin-t001",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Kaamelott",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Qui a créé la série Kaamelott et y joue le roi Arthur ?",
+  "reponse": "Alexandre Astier",
+  "reponses_acceptees": [
+   "Astier"
+  ],
+  "anecdote": "Il en signe aussi la réalisation, le montage et la musique.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t002",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Kaamelott",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel chevalier répond « C'est pas faux » quand il ne comprend pas un mot ?",
+  "choix": [
+   "Perceval",
+   "Karadoc",
+   "Lancelot",
+   "Bohort"
+  ],
+  "reponse": "Perceval",
+  "anecdote": "La réplique est devenue culte : on l'utilise pour faire semblant d'avoir compris.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t003",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Kaamelott",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel chevalier de Vannes, compère de Perceval, est obsédé par la nourriture ?",
+  "reponse": "Karadoc",
+  "reponses_acceptees": [
+   "Karadoc de Vannes"
+  ],
+  "anecdote": "« Le gras, c'est la vie » : c'est sa devise. Il est joué par Jean-Christophe Hembert.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t004",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Kaamelott",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Comment s'appelle l'épée du roi Arthur ?",
+  "choix": [
+   "Excalibur",
+   "Durandal",
+   "Joyeuse",
+   "Glamdring"
+  ],
+  "reponse": "Excalibur",
+  "anecdote": "Dans la série, elle s'enflamme quand Arthur la tient, et seulement lui.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t005",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Kaamelott",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de « livres », c'est-à-dire de saisons, compte la série télévisée Kaamelott ?",
+  "reponse": 6,
+  "unite": "livres",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   15
+  ],
+  "anecdote": "Les épisodes des premiers livres duraient environ 3 minutes 30 ; ceux du livre VI, près de 40 minutes.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t006",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Kaamelott",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Sur quelle chaîne la série Kaamelott a-t-elle été diffusée ?",
+  "choix": [
+   "M6",
+   "France 2",
+   "TF1",
+   "Canal+"
+  ],
+  "reponse": "M6",
+  "anecdote": "Elle y a été diffusée de 2005 à 2009, en programme court puis en épisodes plus longs.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t007",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Kaamelott",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment s'appelle le père de Guenièvre, roi de Carmélide ?",
+  "reponse": "Léodagan",
+  "reponses_acceptees": [
+   "Leodagan"
+  ],
+  "anecdote": "Il est joué par Lionnel Astier, le vrai père d'Alexandre Astier.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t008",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Kaamelott",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année est sorti au cinéma « Kaamelott – Premier volet » ?",
+  "reponse": 2021,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   2005,
+   2030
+  ],
+  "anecdote": "Prévu en 2020, il a été repoussé d'un an à cause de la crise sanitaire.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t009",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Kaamelott",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quel chevalier est le frère de Guenièvre ?",
+  "choix": [
+   "Yvain",
+   "Gauvain",
+   "Bohort",
+   "Calogrenant"
+  ],
+  "reponse": "Yvain",
+  "anecdote": "Fils de Léodagan et de Séli, il forme avec Gauvain, le neveu d'Arthur, un duo de jeunes chevaliers pas très courageux.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t010",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les méchants Disney",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Comment s'appelle la sorcière des mers dans La Petite Sirène ?",
+  "choix": [
+   "Ursula",
+   "Maléfique",
+   "Mère Gothel",
+   "Morgana"
+  ],
+  "reponse": "Ursula",
+  "anecdote": "Son allure s'inspire de Divine, une célèbre drag-queen américaine.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t011",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les méchants Disney",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle méchante veut se faire un manteau en fourrure de dalmatiens ?",
+  "reponse": "Cruella d'Enfer",
+  "reponses_acceptees": [
+   "Cruella",
+   "Cruella de Vil",
+   "Cruella d'enfer"
+  ],
+  "anecdote": "En version originale, son nom est Cruella De Vil, jeu de mots avec « cruel » et « devil », le diable.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t012",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les méchants Disney",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Comment s'appelle le perroquet de Jafar dans Aladdin ?",
+  "choix": [
+   "Iago",
+   "Zazu",
+   "Polly",
+   "Abu"
+  ],
+  "reponse": "Iago",
+  "anecdote": "Il porte le nom du traître de l'Othello de Shakespeare.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t013",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les méchants Disney",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle méchante garde Raiponce enfermée dans une tour ?",
+  "reponse": "Mère Gothel",
+  "reponses_acceptees": [
+   "Gothel"
+  ],
+  "anecdote": "Elle reste éternellement jeune grâce au pouvoir magique des cheveux de Raiponce.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t014",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les méchants Disney",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Comment s'appellent les deux acolytes d'Hadès dans Hercule, en version française ?",
+  "choix": [
+   "Peine et Panique",
+   "Tic et Tac",
+   "Rigolo et Grincheux",
+   "Zig et Puce"
+  ],
+  "reponse": "Peine et Panique",
+  "anecdote": "Ces deux petits démons peuvent changer de forme. Ils se transforment même en bébés serpents.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t015",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les méchants Disney",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment s'appelle le juge, méchant du Bossu de Notre-Dame ?",
+  "reponse": "Frollo",
+  "reponses_acceptees": [
+   "Claude Frollo"
+  ],
+  "anecdote": "Dans le roman de Victor Hugo, Frollo n'est pas juge, mais archidiacre de Notre-Dame.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t016",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les méchants Disney",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Comment s'appellent les deux hommes de main de Cruella dans Les 101 Dalmatiens ?",
+  "reponse": "Jasper et Horace",
+  "reponses_acceptees": [
+   "Horace et Jasper"
+  ],
+  "anecdote": "Jasper est le grand maigre, Horace le petit gros. Ils sont aussi maladroits que méchants.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t017",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les méchants Disney",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de chiots compte-t-on dans Les 101 Dalmatiens ?",
+  "reponse": 99,
+  "unite": "chiots",
+  "tolerance": 0,
+  "bornes": [
+   50,
+   150
+  ],
+  "anecdote": "Il y a 99 chiots : 15 sont les petits de Pongo et Perdita, 84 ont été achetés par Cruella. Avec les parents, on arrive à 101.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t018",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les méchants Disney",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Comment s'appelle le chat de la belle-mère de Cendrillon ?",
+  "reponse": "Lucifer",
+  "reponses_acceptees": [
+   "Le chat Lucifer"
+  ],
+  "anecdote": "Walt Disney aurait pensé au chat de son animateur Ward Kimball pour le dessiner.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t019",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les méchants Disney",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel animal est le prince Jean dans le Robin des Bois de Disney ?",
+  "reponse": "Un lion",
+  "reponses_acceptees": [
+   "Lion"
+  ],
+  "anecdote": "Ce lion sans crinière suce son pouce quand on parle de sa mère. Son conseiller, Triste Sire, est un serpent.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t020",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Friends",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel personnage de Friends joue le Dr Drake Ramoray dans un feuilleton ?",
+  "choix": [
+   "Joey",
+   "Ross",
+   "Chandler",
+   "Gunther"
+  ],
+  "reponse": "Joey",
+  "anecdote": "Joey Tribbiani a eu sa propre série dérivée, « Joey », arrêtée au bout de deux saisons.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t021",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Friends",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Comment s'appelle le serveur du café, secrètement amoureux de Rachel ?",
+  "reponse": "Gunther",
+  "reponses_acceptees": [
+   "Gunter"
+  ],
+  "anecdote": "L'acteur James Michael Tyler aurait été engagé parce qu'il savait se servir d'une machine à expresso.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t022",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Friends",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Comment s'appelle le singe capucin de Ross ?",
+  "choix": [
+   "Marcel",
+   "Bobo",
+   "Charlie",
+   "Albert"
+  ],
+  "reponse": "Marcel",
+  "anecdote": "Il a été joué par deux femelles capucins. Ross finit par le confier au zoo de San Diego.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t023",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Friends",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle chanson Phoebe chante-t-elle sur un chat qui sent mauvais ?",
+  "reponse": "Smelly Cat",
+  "reponses_acceptees": [
+   "Le chat qui pue"
+  ],
+  "anecdote": "Taylor Swift l'a chantée avec Lisa Kudrow, l'actrice de Phoebe, lors d'un concert en 2015.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t024",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Friends",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "Combien de fois Ross s'est-il marié dans la série ?",
+  "reponse": 3,
+  "unite": "mariages",
+  "tolerance": 0,
+  "bornes": [
+   0,
+   10
+  ],
+  "anecdote": "Avec Carol, avec Emily (en se trompant de prénom à l'autel) puis avec Rachel, à Las Vegas.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t025",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Friends",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel est le nom de famille de Chandler ?",
+  "reponse": "Bing",
+  "reponses_acceptees": [
+   "Chandler Bing"
+  ],
+  "anecdote": "Son père est une star de cabaret de Las Vegas.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t026",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Friends",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel est le deuxième prénom de Chandler ?",
+  "reponse": "Muriel",
+  "reponses_acceptees": [
+   "Chandler Muriel Bing"
+  ],
+  "anecdote": "Il le cache soigneusement à ses amis, qui finissent bien sûr par l'apprendre.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t027",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Friends",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment s'appelle l'ex de Chandler au rire insupportable, qui lance « Oh. My. God. » ?",
+  "reponse": "Janice",
+  "reponses_acceptees": [
+   "Janice Hosenstein"
+  ],
+  "anecdote": "Elle apparaît dans toutes les saisons, de la première à la dernière.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t028",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les comédies françaises cultes",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel agent secret joué par Jean Dujardin demande « Comment est votre blanquette ? »",
+  "reponse": "OSS 117",
+  "reponses_acceptees": [
+   "OSS 117",
+   "Hubert Bonisseur de La Bath",
+   "Hubert Bonisseur de la Bath"
+  ],
+  "anecdote": "Le personnage est né dans des romans d'espionnage de Jean Bruce, dès 1949, bien avant James Bond.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t029",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les comédies françaises cultes",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année se déroule OSS 117 : Le Caire, nid d'espions ?",
+  "reponse": 1955,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1930,
+   1990
+  ],
+  "anecdote": "Le film imite le style des films d'espionnage des années 1950 et 1960, jusqu'aux transparences en voiture.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t030",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les comédies françaises cultes",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Dans quel pays se trouve le club de vacances des Bronzés, en 1978 ?",
+  "choix": [
+   "La Côte d'Ivoire",
+   "Le Sénégal",
+   "Le Maroc",
+   "La Tunisie"
+  ],
+  "reponse": "La Côte d'Ivoire",
+  "anecdote": "Le film a été tourné dans un club de vacances près d'Abidjan. Le Splendid l'avait d'abord joué au théâtre.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t031",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les comédies françaises cultes",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Dans Le Père Noël est une ordure, quelles friandises M. Preskovic offre-t-il ?",
+  "choix": [
+   "Des doubitchous",
+   "Des loukoums",
+   "Des kipferls",
+   "Des pralines"
+  ],
+  "reponse": "Des doubitchous",
+  "anecdote": "Ce sont des « doubitchous de Sofia », roulés à la main sous les aisselles, précise-t-il.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t032",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les comédies françaises cultes",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle danse Odile Deray et Serge Karamazov font-ils dans La Cité de la peur ?",
+  "choix": [
+   "La Carioca",
+   "La Macarena",
+   "Le Madison",
+   "La Lambada"
+  ],
+  "reponse": "La Carioca",
+  "anecdote": "Le film, sorti en 1994, est signé Les Nuls : Alain Chabat, Chantal Lauby et Dominique Farrugia.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t033",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les comédies françaises cultes",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel acteur joue Godefroy de Montmirail dans Les Visiteurs ?",
+  "reponse": "Jean Reno",
+  "reponses_acceptees": [
+   "Reno"
+  ],
+  "anecdote": "Il était déjà connu pour Le Grand Bleu et Léon. Le film a attiré près de 14 millions de spectateurs.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t034",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les comédies françaises cultes",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Dans Les Tontons flingueurs, comment décrit-on l'alcool de la cuisine : « C'est du… » ?",
+  "reponse": "Brutal",
+  "reponses_acceptees": [
+   "C'est du brutal",
+   "Du brutal"
+  ],
+  "anecdote": "Les dialogues de ce film de 1963 sont signés Michel Audiard.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t035",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les comédies françaises cultes",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel acteur joue Numérobis dans Astérix et Obélix : Mission Cléopâtre ?",
+  "reponse": "Jamel Debbouze",
+  "reponses_acceptees": [
+   "Jamel",
+   "Debbouze"
+  ],
+  "anecdote": "Le film d'Alain Chabat a attiré plus de 14 millions de spectateurs en 2002.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t036",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les comédies françaises cultes",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Dans Mission Cléopâtre, comment s'appelle l'architecte rival joué par Gérard Darmon ?",
+  "choix": [
+   "Amonbofis",
+   "Otis",
+   "Ramsès",
+   "Malococsis"
+  ],
+  "reponse": "Amonbofis",
+  "anecdote": "Il passe le film à saboter le chantier du palais que Numérobis doit construire pour César.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t037",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les Simpson",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Dans quelle ville vivent les Simpson ?",
+  "choix": [
+   "Springfield",
+   "Shelbyville",
+   "Ogdenville",
+   "Capital City"
+  ],
+  "reponse": "Springfield",
+  "anecdote": "Le créateur Matt Groening a choisi ce nom car il existe des Springfield dans de nombreux États américains.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t038",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les Simpson",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment s'appelle le bar où Homer boit ses bières ?",
+  "reponse": "Chez Moe",
+  "reponses_acceptees": [
+   "Moe",
+   "Moe's",
+   "La taverne de Moe",
+   "Taverne de Moe"
+  ],
+  "anecdote": "Le patron, Moe Szyslak, est régulièrement piégé par les canulars téléphoniques de Bart.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t039",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les Simpson",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quelle marque de bière boit Homer ?",
+  "choix": [
+   "Duff",
+   "Buzz",
+   "Fudd",
+   "Bud"
+  ],
+  "reponse": "Duff",
+  "anecdote": "La série a inspiré de vraies bières Duff, vendues dans plusieurs pays.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t040",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les Simpson",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Comment s'appelle le patron d'Homer à la centrale nucléaire ?",
+  "reponse": "Monsieur Burns",
+  "reponses_acceptees": [
+   "Burns",
+   "M. Burns",
+   "Mr Burns",
+   "Charles Montgomery Burns"
+  ],
+  "anecdote": "Son assistant, Smithers, lui est dévoué corps et âme.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t041",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les Simpson",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Comment s'appelle le chien des Simpson, en version française ?",
+  "choix": [
+   "Petit Papa Noël",
+   "Boule de neige",
+   "Rantanplan",
+   "Médor"
+  ],
+  "reponse": "Petit Papa Noël",
+  "anecdote": "C'est un lévrier de course abandonné, adopté un soir de Noël dans le tout premier épisode.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t042",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les Simpson",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel est le deuxième prénom d'Homer Simpson ?",
+  "reponse": "Jay",
+  "reponses_acceptees": [
+   "Homer Jay Simpson"
+  ],
+  "anecdote": "C'est un clin d'œil à Bullwinkle J. Moose et Rocky, dont le créateur s'appelait Jay Ward.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t043",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les Simpson",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "À quel numéro d'Evergreen Terrace habitent les Simpson ?",
+  "reponse": 742,
+  "unite": "numéro",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   1000
+  ],
+  "anecdote": "L'adresse a parfois changé au fil des épisodes, mais le 742 est resté la référence.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t044",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Star Wars",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel petit maître Jedi vert parle en inversant l'ordre de ses phrases ?",
+  "reponse": "Yoda",
+  "reponses_acceptees": [
+   "Maître Yoda"
+  ],
+  "anecdote": "Il a été animé avec une marionnette, manipulée et doublée par Frank Oz, aussi voix de Miss Piggy.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t045",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Star Wars",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Sur quelle planète désertique Luke Skywalker a-t-il grandi ?",
+  "choix": [
+   "Tatooine",
+   "Hoth",
+   "Naboo",
+   "Endor"
+  ],
+  "reponse": "Tatooine",
+  "anecdote": "Les scènes ont été tournées en Tunisie, et Tatooine doit son nom à la ville de Tataouine.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t046",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Star Wars",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel est le prénom de Dark Vador avant de passer du côté obscur ?",
+  "reponse": "Anakin",
+  "reponses_acceptees": [
+   "Anakin Skywalker"
+  ],
+  "anecdote": "Hayden Christensen l'incarne dans L'Attaque des clones et La Revanche des Sith.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t047",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Star Wars",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Comment s'appelle le chasseur de primes qui livre Han Solo à Jabba ?",
+  "reponse": "Boba Fett",
+  "reponses_acceptees": [
+   "Boba"
+  ],
+  "anecdote": "Il ne parle presque pas dans la trilogie originale, mais il est devenu l'un des personnages préférés des fans.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t048",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Star Wars",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "De quelle couleur est le sabre laser de Mace Windu ?",
+  "choix": [
+   "Violet",
+   "Vert",
+   "Bleu",
+   "Jaune"
+  ],
+  "reponse": "Violet",
+  "anecdote": "C'est l'acteur Samuel L. Jackson qui l'a demandé, pour se repérer facilement au milieu des combats.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t049",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Star Wars",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "C-3PO maîtrise plus de combien de millions de formes de communication ?",
+  "reponse": 6,
+  "unite": "millions",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   50
+  ],
+  "anecdote": "Il le rappelle souvent, ce qui ne l'empêche pas d'être le droïde le plus peureux de la galaxie.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t050",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Star Wars",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Comment s'appelle la planète natale de Chewbacca ?",
+  "choix": [
+   "Kashyyyk",
+   "Kamino",
+   "Dagobah",
+   "Jakku"
+  ],
+  "reponse": "Kashyyyk",
+  "anecdote": "C'est une planète couverte de forêts d'arbres géants, où vivent les Wookies.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "cin-t051",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les animaux stars de cinéma",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment s'appelle le saint-bernard héros d'une comédie de 1992 ?",
+  "reponse": "Beethoven",
+  "reponses_acceptees": [
+   "Beethoven le chien"
+  ],
+  "anecdote": "Les enfants le baptisent ainsi car le chiot aboie en entendant une œuvre du compositeur.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "cin-t052",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les animaux stars de cinéma",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "De quelle race est Hooch, le chien de Turner et Hooch avec Tom Hanks ?",
+  "choix": [
+   "Un dogue de Bordeaux",
+   "Un saint-bernard",
+   "Un bouledogue",
+   "Un bullmastiff"
+  ],
+  "reponse": "Un dogue de Bordeaux",
+  "anecdote": "Le film de 1989 a fait connaître cette race française aux États-Unis.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "cin-t053",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les animaux stars de cinéma",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Dans le film Babe, quel métier le petit cochon apprend-il ?",
+  "reponse": "Chien de berger",
+  "reponses_acceptees": [
+   "Berger",
+   "Gardien de moutons",
+   "Garder les moutons"
+  ],
+  "anecdote": "Le film a utilisé une cinquantaine de porcelets différents, car ils grandissaient trop vite.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "cin-t054",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les animaux stars de cinéma",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Comment s'appelle le jack russell star de The Artist ?",
+  "reponse": "Uggie",
+  "reponses_acceptees": [
+   "Le chien Uggie"
+  ],
+  "anecdote": "Il a reçu une « Palm Dog » au Festival de Cannes 2011, prix décerné au meilleur chien du festival.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "cin-t055",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les animaux stars de cinéma",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Comment s'appelait l'orque qui jouait Willy dans Sauvez Willy ?",
+  "choix": [
+   "Keiko",
+   "Tilikum",
+   "Shamu",
+   "Moby"
+  ],
+  "reponse": "Keiko",
+  "anecdote": "Grâce au succès du film, il a été réhabilité puis relâché en Islande. Il est mort en Norvège en 2003.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "cin-t056",
+  "categorie": "Cinéma & Séries",
+  "sous_theme": "Les animaux stars de cinéma",
+  "type": "vf",
+  "difficulte": 8,
+  "question": "Vrai ou faux : le chat qu'Ernst Stavro Blofeld caresse dans James Bond est un persan blanc.",
+  "reponse": "Vrai",
+  "anecdote": "Il a inspiré le chat chauve de Dr Denfer dans Austin Powers, un sphynx appelé M. Bigglesworth.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
  }
 ]

@@ -1196,5 +1196,1648 @@
    "La tarte flambée"
   ],
   "anecdote": "On la cuisait autrefois pour tester la chaleur du four à pain."
+ },
+ {
+  "id": "gas-t001",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les fromages du Nord",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel fromage du Nord, à croûte orange et à l'odeur très forte, porte le nom d'un village de l'Avesnois ?",
+  "reponse": "Le maroilles",
+  "reponses_acceptees": [
+   "Maroilles",
+   "Marolles"
+  ],
+  "anecdote": "Selon la tradition, il aurait été créé par les moines de l'abbaye de Maroilles, vers l'an 1000.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t002",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les fromages du Nord",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel fromage lillois a la forme d'une boule orange, comme un boulet de canon ?",
+  "choix": [
+   "La mimolette",
+   "Le maroilles",
+   "Le dauphin",
+   "Le vieux-Lille"
+  ],
+  "reponse": "La mimolette",
+  "anecdote": "Colbert l'aurait fait fabriquer en France pour remplacer l'édam hollandais, interdit d'importation. Sa couleur vient du rocou, un colorant naturel.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t003",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les fromages du Nord",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel fromage du Nord, aux herbes et au poivre, a souvent la forme d'un poisson ?",
+  "reponse": "Le dauphin",
+  "reponses_acceptees": [
+   "Dauphin"
+  ],
+  "anecdote": "Il devrait son nom au Grand Dauphin, le fils de Louis XIV, qui l'aurait apprécié lors de ses campagnes en Flandre.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t004",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les fromages du Nord",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel fromage est surnommé « le puant de Lille » ?",
+  "choix": [
+   "Le vieux-Lille",
+   "La boulette d'Avesnes",
+   "Le maroilles",
+   "La mimolette"
+  ],
+  "reponse": "Le vieux-Lille",
+  "anecdote": "C'est un maroilles affiné longuement dans la saumure. On l'appelle aussi « puant macéré ».",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t005",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les fromages du Nord",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel fromage de l'Avesnois, en forme de cône rouge, est parfumé aux épices et enrobé de paprika ?",
+  "reponse": "La boulette d'Avesnes",
+  "reponses_acceptees": [
+   "Boulette d'Avesnes",
+   "Boulette d Avesnes"
+  ],
+  "anecdote": "Elle est faite avec du maroilles frais, mélangé à du persil, de l'estragon et du poivre.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t006",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les fromages du Nord",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Comment s'appellent les minuscules acariens qui creusent la croûte de la mimolette ?",
+  "reponse": "Les cirons",
+  "reponses_acceptees": [
+   "Cirons",
+   "Ciron",
+   "Le ciron"
+  ],
+  "anecdote": "On les introduit volontairement : ils donnent à sa croûte un aspect de surface lunaire. Les États-Unis l'ont bloquée à leurs frontières en 2013 à cause d'eux.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t007",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les fromages du Nord",
+  "type": "vf",
+  "difficulte": 3,
+  "question": "Vrai ou faux : le maroilles est un fromage de forme carrée.",
+  "reponse": "Vrai",
+  "anecdote": "On le trouve en plusieurs tailles : le maroilles, le sorbais, le mignon et le quart.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t008",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les desserts régionaux",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "De quelle région vient le kouglof, brioche en forme de couronne ?",
+  "choix": [
+   "L'Alsace",
+   "La Bretagne",
+   "La Lorraine",
+   "La Savoie"
+  ],
+  "reponse": "L'Alsace",
+  "anecdote": "Il se cuit dans un moule en terre cuite à cannelures obliques, avec un trou au milieu.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t009",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les desserts régionaux",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel petit gâteau bordelais, cannelé et caramélisé, est parfumé au rhum et à la vanille ?",
+  "reponse": "Le canelé",
+  "reponses_acceptees": [
+   "Canelé",
+   "Cannelé",
+   "Canele"
+  ],
+  "anecdote": "On raconte que les religieuses fabriquaient des canelés avec les jaunes d'œufs donnés par les viticulteurs, qui utilisaient les blancs pour clarifier leur vin.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t010",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les desserts régionaux",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quelle ville est célèbre pour ses « bêtises », des bonbons à la menthe ?",
+  "choix": [
+   "Cambrai",
+   "Vichy",
+   "Nancy",
+   "Montélimar"
+  ],
+  "reponse": "Cambrai",
+  "anecdote": "Selon la légende, elles seraient nées de l'erreur d'un apprenti confiseur, qui aurait mal dosé ses ingrédients.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t011",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les desserts régionaux",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle ville de la Drôme est célèbre pour son nougat ?",
+  "reponse": "Montélimar",
+  "reponses_acceptees": [
+   "Montelimar"
+  ],
+  "anecdote": "Le nougat de Montélimar doit contenir au moins 28 % d'amandes et 25 % de miel.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t012",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les desserts régionaux",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle confiserie d'Aix-en-Provence, en forme de losange, est faite d'amandes et de melon confit ?",
+  "reponse": "Le calisson",
+  "reponses_acceptees": [
+   "Calisson",
+   "Calissons",
+   "Calisson d'Aix"
+  ],
+  "anecdote": "Sa forme rappellerait une navette, ou un sourire. Il est recouvert d'une fine couche de glace royale.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t013",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les desserts régionaux",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle tarte du Nord et de Belgique est garnie de sucre brun, de beurre et de crème ?",
+  "reponse": "La tarte au sucre",
+  "reponses_acceptees": [
+   "Tarte au sucre"
+  ],
+  "anecdote": "Elle se fait avec de la vergeoise, un sucre de betterave typique du Nord.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t014",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les desserts régionaux",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "De quelle ville vient la tarte aux pralines roses ?",
+  "choix": [
+   "Lyon",
+   "Grenoble",
+   "Nantes",
+   "Toulouse"
+  ],
+  "reponse": "Lyon",
+  "anecdote": "Les pralines roses sont des amandes enrobées de sucre coloré. On les met aussi dans la brioche de Saint-Genix.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t015",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les desserts régionaux",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Pour quel roi, duc de Lorraine, le baba au rhum aurait-il été inventé ?",
+  "choix": [
+   "Stanislas Leszczynski",
+   "Louis XV",
+   "Henri IV",
+   "Charles X"
+  ],
+  "reponse": "Stanislas Leszczynski",
+  "anecdote": "Trouvant son kouglof trop sec, il l'aurait arrosé d'alcool. Son pâtissier Nicolas Stohrer a ensuite ouvert à Paris la plus ancienne pâtisserie de la ville.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t016",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les desserts régionaux",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle ville est célèbre pour ses biscuits roses, que l'on trempe dans le champagne ?",
+  "choix": [
+   "Reims",
+   "Épernay",
+   "Troyes",
+   "Nancy"
+  ],
+  "reponse": "Reims",
+  "anecdote": "Le biscuit est cuit deux fois. Sa couleur rose vient du carmin, et elle servait à cacher les points noirs de la vanille.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t017",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bonbons et confiseries",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle marque de bonbons, créée à Bonn, a pour mascotte un ours d'or ?",
+  "reponse": "Haribo",
+  "reponses_acceptees": [
+   "Haribo"
+  ],
+  "anecdote": "Son nom vient de son fondateur : HAns RIegel, BOnn. Les oursons ont été créés en 1922.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t018",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bonbons et confiseries",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle ville a donné son nom à des pastilles octogonales à la menthe ?",
+  "reponse": "Vichy",
+  "reponses_acceptees": [
+   "Pastille de Vichy"
+  ],
+  "anecdote": "Elles étaient fabriquées à l'origine avec les sels minéraux des sources de la ville, réputés pour aider à la digestion.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t019",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bonbons et confiseries",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle confiserie à l'anis est fabriquée depuis 1591 dans une abbaye de Côte-d'Or ?",
+  "choix": [
+   "Les anis de Flavigny",
+   "Les berlingots",
+   "Les calissons",
+   "Les dragées"
+  ],
+  "reponse": "Les anis de Flavigny",
+  "anecdote": "Chaque bonbon renferme une graine d'anis, enrobée de sucre pendant quinze jours. Le village a servi de décor au film Le Chocolat.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t020",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bonbons et confiseries",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle ville de la Meuse est célèbre pour ses dragées ?",
+  "choix": [
+   "Verdun",
+   "Metz",
+   "Nancy",
+   "Reims"
+  ],
+  "reponse": "Verdun",
+  "anecdote": "Les dragées y auraient été fabriquées dès 1220 par un apothicaire, qui enrobait des amandes de sucre pour les conserver.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t021",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bonbons et confiseries",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel bonbon rayé en forme de pyramide est une spécialité de Carpentras ?",
+  "reponse": "Le berlingot",
+  "reponses_acceptees": [
+   "Berlingot",
+   "Berlingots"
+  ],
+  "anecdote": "Il était fabriqué avec le sirop des fruits confits de la région, et sa forme est un tétraèdre.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t022",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bonbons et confiseries",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année le Carambar a-t-il été inventé, dans le Nord ?",
+  "reponse": 1954,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1900,
+   2000
+  ],
+  "anecdote": "Selon la légende, il serait né d'une machine mal réglée, qui aurait produit une barre trop longue.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t023",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bonbons et confiseries",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle confiserie lyonnaise, verte, en forme d'oreiller, est fourrée au chocolat ?",
+  "reponse": "Le coussin de Lyon",
+  "reponses_acceptees": [
+   "Coussin de Lyon",
+   "Coussin"
+  ],
+  "anecdote": "Il rappelle le coussin sur lequel les échevins avaient offert un cierge à la Vierge pour arrêter la peste de 1643.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t024",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bonbons et confiseries",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Dans quelle ville la praline (amande caramélisée) aurait-elle été inventée au XVIIe siècle ?",
+  "choix": [
+   "Montargis",
+   "Lyon",
+   "Nancy",
+   "Aix-en-Provence"
+  ],
+  "reponse": "Montargis",
+  "anecdote": "Elle doit son nom au duc de Plessis-Praslin, dont le cuisinier, Clément Jaluzot, aurait créé la recette.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t025",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les viennoiseries",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment appelle-t-on le pain au chocolat dans le Sud-Ouest ?",
+  "reponse": "La chocolatine",
+  "reponses_acceptees": [
+   "Chocolatine"
+  ],
+  "anecdote": "Le débat entre « pain au chocolat » et « chocolatine » fait rage depuis des décennies.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t026",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les viennoiseries",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle brioche à la crème de Saint-Tropez doit son nom à Brigitte Bardot ?",
+  "reponse": "La tarte tropézienne",
+  "reponses_acceptees": [
+   "Tarte tropézienne",
+   "Tropézienne",
+   "Tarte tropezienne"
+  ],
+  "anecdote": "L'actrice aurait suggéré le nom au pâtissier pendant le tournage de « Et Dieu… créa la femme », en 1956.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t027",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les viennoiseries",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel pain alsacien en forme de nœud est saupoudré de gros sel ?",
+  "reponse": "Le bretzel",
+  "reponses_acceptees": [
+   "Bretzel",
+   "Bretzels"
+  ],
+  "anecdote": "Il est trempé dans un bain de soude avant d'être cuit, ce qui lui donne sa croûte brune et brillante.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t028",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les viennoiseries",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle brioche de Pâques en forme de tresse est une spécialité de Vendée ?",
+  "reponse": "La brioche vendéenne",
+  "reponses_acceptees": [
+   "Brioche vendéenne",
+   "Brioche vendeenne"
+  ],
+  "anecdote": "Elle est parfumée à la fleur d'oranger et souvent à l'eau-de-vie. On l'offrait autrefois aux mariés.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t029",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les viennoiseries",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Quelle brioche landaise, parfumée au rhum et à la fleur d'oranger, porte le nom d'un apéritif ?",
+  "choix": [
+   "Le pastis landais",
+   "Le kir breton",
+   "Le pastis gascon",
+   "Le ricard béarnais"
+  ],
+  "reponse": "Le pastis landais",
+  "anecdote": "Il ne contient pas une goutte de pastis : son nom vient du gascon « pastis », qui veut dire pâte.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t030",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les sauces",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle sauce au jaune d'œuf, au beurre et au citron nappe les œufs Bénédicte ?",
+  "reponse": "La hollandaise",
+  "reponses_acceptees": [
+   "Hollandaise",
+   "Sauce hollandaise"
+  ],
+  "anecdote": "Malgré son nom, c'est une grande sauce de la cuisine française, l'une des cinq sauces mères d'Escoffier.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t031",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les sauces",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle sauce à l'ail et au piment accompagne la bouillabaisse ?",
+  "choix": [
+   "La rouille",
+   "L'aïoli",
+   "La rémoulade",
+   "La tapenade"
+  ],
+  "reponse": "La rouille",
+  "anecdote": "Elle doit son nom à sa couleur, due au safran et au piment.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t032",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les sauces",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quelle sauce porterait le nom d'un maître d'hôtel de Louis XIV ?",
+  "choix": [
+   "La béchamel",
+   "La mayonnaise",
+   "La béarnaise",
+   "La mornay"
+  ],
+  "reponse": "La béchamel",
+  "anecdote": "Louis de Béchameil était financier et maître d'hôtel du roi, mais il n'a sans doute jamais cuisiné cette sauce.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t033",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les sauces",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle sauce à la moutarde accompagne traditionnellement le céleri râpé ?",
+  "reponse": "La rémoulade",
+  "reponses_acceptees": [
+   "Rémoulade",
+   "Remoulade",
+   "Sauce rémoulade"
+  ],
+  "anecdote": "C'est une mayonnaise relevée de moutarde, parfois de câpres et de cornichons.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t034",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les sauces",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle sauce au vin rouge, à l'échalote et à la moelle accompagne l'entrecôte ?",
+  "choix": [
+   "La bordelaise",
+   "La normande",
+   "La lyonnaise",
+   "La périgourdine"
+  ],
+  "reponse": "La bordelaise",
+  "anecdote": "La moelle de bœuf y est ajoutée en dés à la fin, pour lui donner du moelleux.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t035",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les sauces",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Comment appelle-t-on une béchamel enrichie de fromage râpé ?",
+  "choix": [
+   "La sauce Mornay",
+   "La sauce Soubise",
+   "La sauce Aurore",
+   "La sauce Nantua"
+  ],
+  "reponse": "La sauce Mornay",
+  "anecdote": "La sauce Soubise, elle, est une béchamel aux oignons, et la Nantua une béchamel aux écrevisses.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t036",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les sauces",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quelle sauce est une béarnaise à laquelle on ajoute de la purée de tomate ?",
+  "reponse": "La sauce Choron",
+  "reponses_acceptees": [
+   "Choron",
+   "Sauce Choron"
+  ],
+  "anecdote": "Elle porte le nom d'Alexandre Choron, chef du restaurant Voisin à Paris, qui a cuisiné un éléphant du zoo pendant le siège de 1870.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t037",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les sauces",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de « sauces mères » la cuisine classique française compte-t-elle depuis Escoffier ?",
+  "reponse": 5,
+  "unite": "sauces",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   15
+  ],
+  "anecdote": "Ce sont la béchamel, le velouté, la sauce espagnole, la sauce tomate et la hollandaise.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t038",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les plats du Nord et de Lyon",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel plat lyonnais porte le nom d'un vêtement de pompier ?",
+  "choix": [
+   "Le tablier de sapeur",
+   "La cervelle de canut",
+   "Le saucisson brioché",
+   "La quenelle"
+  ],
+  "reponse": "Le tablier de sapeur",
+  "anecdote": "C'est une tranche de gras-double marinée au vin blanc, panée puis frite.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t039",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les plats du Nord et de Lyon",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel fromage frais lyonnais aux herbes porte le nom des ouvriers de la soie ?",
+  "reponse": "La cervelle de canut",
+  "reponses_acceptees": [
+   "Cervelle de canut",
+   "Claqueret"
+  ],
+  "anecdote": "Les canuts n'avaient pas les moyens de manger de la vraie cervelle, alors ils s'en moquaient avec ce fromage.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t040",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les plats du Nord et de Lyon",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel plat du Nord est fait de cheddar fondu à la bière sur du pain et du jambon ?",
+  "reponse": "Le welsh",
+  "reponses_acceptees": [
+   "Welsh",
+   "Welsh rarebit"
+  ],
+  "anecdote": "Il vient du pays de Galles, comme son nom l'indique, mais il est devenu une institution dans les estaminets du Nord.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t041",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les plats du Nord et de Lyon",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel plat flamand est un mélange de viandes blanches prises en gelée ?",
+  "reponse": "Le potjevleesch",
+  "reponses_acceptees": [
+   "Potjevleesch",
+   "Potjevlesch",
+   "Pot je vleesch"
+  ],
+  "anecdote": "Son nom signifie « petit pot de viande » en flamand. On y met du lapin, du poulet, du porc et du veau.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t042",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les plats du Nord et de Lyon",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : la quenelle de Lyon est traditionnellement faite avec du brochet.",
+  "reponse": "Vrai",
+  "anecdote": "On la sert souvent avec une sauce Nantua, aux écrevisses.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t043",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les plats du Nord et de Lyon",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien d'étoiles Michelin la cuisinière lyonnaise Eugénie Brazier a-t-elle cumulées en 1933, avec ses deux restaurants ?",
+  "reponse": 6,
+  "unite": "étoiles",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   12
+  ],
+  "anecdote": "La « mère Brazier » a été la première à obtenir trois étoiles dans deux restaurants à la fois. Paul Bocuse a été son apprenti.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "gas-t044",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel alcool sert de base au mojito ?",
+  "reponse": "Le rhum",
+  "reponses_acceptees": [
+   "Rhum",
+   "Rhum blanc"
+  ],
+  "anecdote": "Ernest Hemingway aurait popularisé le mojito à La Havane, à La Bodeguita del Medio.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t045",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel cocktail est à base de tequila, de triple sec et de citron vert, servi avec un bord de sel ?",
+  "reponse": "La margarita",
+  "reponses_acceptees": [
+   "Margarita"
+  ],
+  "anecdote": "Plusieurs barmans mexicains et américains revendiquent son invention, dans les années 1930 et 1940.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t046",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel cocktail brésilien est fait de cachaça, de citron vert et de sucre ?",
+  "reponse": "La caïpirinha",
+  "reponses_acceptees": [
+   "Caipirinha",
+   "Caïpirinha",
+   "Caipi"
+  ],
+  "anecdote": "Son nom signifie à peu près « petite paysanne ». La cachaça est une eau-de-vie de jus de canne à sucre.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t047",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel cocktail rose, popularisé par la série Sex and the City, associe vodka et jus de canneberge ?",
+  "choix": [
+   "Le cosmopolitan",
+   "Le sex on the beach",
+   "Le daiquiri",
+   "Le bellini"
+  ],
+  "reponse": "Le cosmopolitan",
+  "anecdote": "Il contient aussi de la liqueur d'orange et du citron vert, et se sert dans un verre à martini.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t048",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "indices",
+  "difficulte": 5,
+  "question": "Quel cocktail suis-je ?",
+  "reponse": "Le Bloody Mary",
+  "reponses_acceptees": [
+   "Bloody Mary"
+  ],
+  "indices": [
+   "On dit que je suis né à Paris dans les années 1920, au Harry's New York Bar",
+   "On m'assaisonne de sauce Worcestershire et de Tabasco",
+   "On me décore souvent d'une branche de céleri",
+   "Je porte le surnom d'une reine d'Angleterre sanguinaire",
+   "Je suis fait de vodka et de jus de tomate"
+  ],
+  "anecdote": "Le surnom viendrait de Marie Ire Tudor, qui fit exécuter des centaines de protestants.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t049",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel cocktail italien mélange à parts égales gin, vermouth rouge et Campari ?",
+  "choix": [
+   "Le negroni",
+   "Le spritz",
+   "L'americano",
+   "Le bellini"
+  ],
+  "reponse": "Le negroni",
+  "anecdote": "Le comte Camillo Negroni aurait demandé, à Florence vers 1919, qu'on remplace l'eau gazeuse de son americano par du gin.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t050",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel cocktail vénitien mélange prosecco et purée de pêche blanche ?",
+  "reponse": "Le bellini",
+  "reponses_acceptees": [
+   "Bellini"
+  ],
+  "anecdote": "Il a été créé au Harry's Bar de Venise par Giuseppe Cipriani, qui lui a donné le nom du peintre Giovanni Bellini.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t051",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel cocktail à la vodka et au ginger beer se sert dans une tasse en cuivre ?",
+  "choix": [
+   "Le Moscow mule",
+   "Le mint julep",
+   "Le Tom Collins",
+   "Le Dark and Stormy"
+  ],
+  "reponse": "Le Moscow mule",
+  "anecdote": "Il a été inventé aux États-Unis dans les années 1940 pour écouler un stock de vodka, alors peu connue des Américains.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t052",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "fourchette",
+  "difficulte": 7,
+  "question": "En quelle année la Prohibition, qui a fait fleurir les bars clandestins, a-t-elle pris fin aux États-Unis ?",
+  "reponse": 1933,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1900,
+   1960
+  ],
+  "anecdote": "Les cocktails se sont développés pour masquer le goût des alcools frelatés vendus dans les « speakeasies ».",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t053",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel cocktail a été inventé au Raffles Hotel, dans une grande ville d'Asie du Sud-Est ?",
+  "reponse": "Le Singapore Sling",
+  "reponses_acceptees": [
+   "Singapore sling"
+  ],
+  "anecdote": "Un barman y aurait créé ce cocktail rose au gin vers 1915, pour que les dames puissent boire en public sans que cela se voie.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t054",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel cocktail de La Nouvelle-Orléans associe whisky de seigle, absinthe, sucre et bitter Peychaud's ?",
+  "reponse": "Le Sazerac",
+  "reponses_acceptees": [
+   "Sazerac"
+  ],
+  "anecdote": "Il est souvent présenté comme l'un des plus anciens cocktails américains. Il était d'abord préparé avec du cognac de la marque Sazerac.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t055",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les cocktails",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel restaurateur californien a revendiqué l'invention du mai tai, en 1944 ?",
+  "choix": [
+   "Trader Vic",
+   "Don the Beachcomber",
+   "Harry MacElhone",
+   "Jerry Thomas"
+  ],
+  "reponse": "Trader Vic",
+  "anecdote": "Son nom viendrait de l'exclamation d'une cliente tahitienne : « Maita'i roa ae ! », c'est-à-dire « le meilleur ! ».",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t056",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les apéritifs régionaux",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle liqueur mélange-t-on au vin blanc pour faire un kir ?",
+  "reponse": "La crème de cassis",
+  "reponses_acceptees": [
+   "Crème de cassis",
+   "Cassis",
+   "Creme de cassis"
+  ],
+  "anecdote": "Il porte le nom du chanoine Félix Kir, député-maire de Dijon, qui le servait à toutes les réceptions de la mairie.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t057",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les apéritifs régionaux",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel apéritif anisé devient trouble quand on y ajoute de l'eau ?",
+  "reponse": "Le pastis",
+  "reponses_acceptees": [
+   "Pastis",
+   "Le Ricard",
+   "Ricard"
+  ],
+  "anecdote": "Paul Ricard a lancé son « vrai pastis de Marseille » en 1932. Le trouble vient de l'anéthol, qui ne se dissout pas dans l'eau.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t058",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les apéritifs régionaux",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel cocktail orange, à base d'Apérol et de prosecco, vient de Vénétie ?",
+  "reponse": "Le spritz",
+  "reponses_acceptees": [
+   "Spritz",
+   "Aperol spritz",
+   "Apérol spritz"
+  ],
+  "anecdote": "Son nom viendrait des soldats autrichiens, qui allongeaient le vin de la région avec de l'eau gazeuse : « spritzen », c'est asperger.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t059",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les apéritifs régionaux",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle boisson bretonne est faite de miel fermenté ?",
+  "reponse": "Le chouchen",
+  "reponses_acceptees": [
+   "Chouchen",
+   "Chouchenn",
+   "Hydromel"
+  ],
+  "anecdote": "C'est un hydromel, l'une des plus vieilles boissons alcoolisées du monde.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t060",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les apéritifs régionaux",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel apéritif normand mélange du jus de pomme et du calvados ?",
+  "choix": [
+   "Le pommeau",
+   "Le poiré",
+   "Le chouchen",
+   "Le cidre"
+  ],
+  "reponse": "Le pommeau",
+  "anecdote": "Il doit vieillir au moins 14 mois en fût de chêne. Il se boit frais, en apéritif ou avec le foie gras.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t061",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les apéritifs régionaux",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel apéritif charentais mélange du jus de raisin et du cognac ?",
+  "reponse": "Le pineau des Charentes",
+  "reponses_acceptees": [
+   "Pineau",
+   "Pineau des Charentes"
+  ],
+  "anecdote": "Selon la légende, un vigneron aurait versé par erreur du moût de raisin dans un fût qui contenait encore du cognac, en 1589.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t062",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les apéritifs régionaux",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel apéritif gascon mélange du jus de raisin et de l'armagnac ?",
+  "reponse": "Le floc de Gascogne",
+  "reponses_acceptees": [
+   "Floc",
+   "Floc de Gascogne"
+  ],
+  "anecdote": "« Floc » vient du gascon « lo floc », qui veut dire le bouquet de fleurs.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t063",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les apéritifs régionaux",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel apéritif à la gentiane apparaît dans un collage de Picasso de 1912 ?",
+  "choix": [
+   "La Suze",
+   "Le Byrrh",
+   "Le Lillet",
+   "Le Dubonnet"
+  ],
+  "reponse": "La Suze",
+  "anecdote": "L'œuvre s'appelle « Verre et bouteille de Suze ». La gentiane est une plante jaune des montagnes, à la racine très amère.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t064",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les apéritifs régionaux",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel apéritif au vin et au quinquina, né à Thuir dans les Pyrénées-Orientales, a été créé par deux frères drapiers en 1866 ?",
+  "reponse": "Le Byrrh",
+  "reponses_acceptees": [
+   "Byrrh"
+  ],
+  "anecdote": "Les frères Violet le vendaient d'abord en pharmacie. Leurs caves abritent l'une des plus grandes cuves en chêne du monde.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t065",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les apéritifs régionaux",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quelle ville a obtenu en 1932 la première appellation d'origine pour un vermouth ?",
+  "choix": [
+   "Chambéry",
+   "Turin",
+   "Annecy",
+   "Marseille"
+  ],
+  "reponse": "Chambéry",
+  "anecdote": "Le vermouth de Chambéry, plus sec et plus léger que les vermouths italiens, est parfumé aux plantes des Alpes.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t066",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bouteilles de vin",
+  "type": "fourchette",
+  "difficulte": 4,
+  "question": "Combien de litres contient un magnum ?",
+  "reponse": 1.5,
+  "unite": "litres",
+  "tolerance": 0,
+  "bornes": [
+   0,
+   5
+  ],
+  "anecdote": "C'est l'équivalent de deux bouteilles classiques. Les amateurs disent que le vin y vieillit mieux.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t067",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bouteilles de vin",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "En Champagne, comment appelle-t-on une bouteille de 3 litres ?",
+  "choix": [
+   "Le jéroboam",
+   "Le réhoboam",
+   "Le mathusalem",
+   "Le salmanazar"
+  ],
+  "reponse": "Le jéroboam",
+  "anecdote": "Les grandes bouteilles portent des noms de rois et de personnages de la Bible. À Bordeaux, le jéroboam contient 5 litres.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t068",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bouteilles de vin",
+  "type": "fourchette",
+  "difficulte": 9,
+  "question": "Combien de litres contient un mathusalem ?",
+  "reponse": 6,
+  "unite": "litres",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   30
+  ],
+  "anecdote": "Mathusalem est le personnage le plus âgé de la Bible : il aurait vécu 969 ans.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t069",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bouteilles de vin",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Comment s'appelle la bouteille de champagne de 9 litres, l'équivalent de douze bouteilles ?",
+  "choix": [
+   "Le salmanazar",
+   "Le balthazar",
+   "Le réhoboam",
+   "Le melchior"
+  ],
+  "reponse": "Le salmanazar",
+  "anecdote": "Elle contient l'équivalent de 12 bouteilles. Le balthazar en contient 16, le melchior 24.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t070",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bouteilles de vin",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Comment s'appelle la bouteille de 62 cl réservée au vin jaune du Jura ?",
+  "reponse": "Le clavelin",
+  "reponses_acceptees": [
+   "Clavelin"
+  ],
+  "anecdote": "C'est ce qui reste d'un litre de vin après six ans et trois mois en fût, le reste s'étant évaporé.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t071",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bouteilles de vin",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Comment s'appelle la bouteille de 46 cl à fond épais qui sert le vin dans les bouchons lyonnais ?",
+  "reponse": "Le pot lyonnais",
+  "reponses_acceptees": [
+   "Pot lyonnais",
+   "Pot"
+  ],
+  "anecdote": "Son fond très épais permettait aux cafetiers de servir un peu moins de vin, pour le même prix.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t072",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bières",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Dans quel pays se trouve l'abbaye de Chimay, célèbre pour sa bière trappiste ?",
+  "choix": [
+   "La Belgique",
+   "La France",
+   "Les Pays-Bas",
+   "L'Allemagne"
+  ],
+  "reponse": "La Belgique",
+  "anecdote": "Une bière n'est « trappiste » que si elle est brassée dans une abbaye, sous le contrôle des moines.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t073",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bières",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle grande fête de la bière a lieu chaque automne à Munich ?",
+  "reponse": "L'Oktoberfest",
+  "reponses_acceptees": [
+   "Oktoberfest",
+   "La fête de la bière"
+  ],
+  "anecdote": "Elle commence en septembre malgré son nom. Elle est née du mariage du prince Louis de Bavière, en 1810.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t074",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bières",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Comment appelle-t-on la bière à fermentation spontanée de la région de Bruxelles ?",
+  "choix": [
+   "Le lambic",
+   "La stout",
+   "La pils",
+   "L'IPA"
+  ],
+  "reponse": "Le lambic",
+  "anecdote": "Elle fermente grâce aux levures sauvages présentes dans l'air. Mélangée, elle donne la gueuze ; avec des cerises, la kriek.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t075",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bières",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Que signifient les lettres IPA, style de bière très houblonnée ?",
+  "reponse": "India Pale Ale",
+  "reponses_acceptees": [
+   "India pale ale",
+   "Indian pale ale"
+  ],
+  "anecdote": "Le houblon aidait la bière à se conserver pendant le long voyage en bateau de l'Angleterre vers l'Inde.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t076",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bières",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "En quelle année le duc de Bavière a-t-il promulgué la « loi de pureté » de la bière ?",
+  "reponse": 1516,
+  "unite": "année",
+  "tolerance": 0,
+  "bornes": [
+   1300,
+   1800
+  ],
+  "anecdote": "Le Reinheitsgebot n'autorisait que trois ingrédients : l'eau, l'orge et le houblon. La levure était alors inconnue.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t077",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bières",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quelle céréale, avec l'orge, sert à brasser la bière blanche ?",
+  "choix": [
+   "Le blé",
+   "Le seigle",
+   "Le maïs",
+   "Le riz"
+  ],
+  "reponse": "Le blé",
+  "anecdote": "Elle est dite blanche à cause de son aspect trouble et pâle. On l'appelle « Weizen » en Allemagne.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t078",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les bières",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "De quelle ville tchèque vient la bière de type pils ?",
+  "choix": [
+   "Pilsen",
+   "Prague",
+   "Brno",
+   "Budweis"
+  ],
+  "reponse": "Pilsen",
+  "anecdote": "La première pils dorée y a été brassée en 1842 par un brasseur bavarois, Josef Groll.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t079",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les spiritueux",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle eau-de-vie normande est distillée à partir de cidre ?",
+  "reponse": "Le calvados",
+  "reponses_acceptees": [
+   "Calvados",
+   "Calva"
+  ],
+  "anecdote": "On le surnomme « calva ». Il doit vieillir au moins deux ans en fût de chêne.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t080",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les spiritueux",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle eau-de-vie de vin est produite en Gascogne, rivale du cognac ?",
+  "reponse": "L'armagnac",
+  "reponses_acceptees": [
+   "Armagnac"
+  ],
+  "anecdote": "C'est la plus ancienne eau-de-vie de France : elle est mentionnée dès le début du XIVe siècle.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t081",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les spiritueux",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle « fée verte » a été interdite en France de 1915 à 2011 ?",
+  "reponse": "L'absinthe",
+  "reponses_acceptees": [
+   "Absinthe"
+  ],
+  "anecdote": "Elle était accusée de rendre fou. En réalité, c'est surtout son taux d'alcool, très élevé, qui posait problème.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t082",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les spiritueux",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quelle eau-de-vie italienne est faite à partir du marc de raisin ?",
+  "choix": [
+   "La grappa",
+   "Le limoncello",
+   "La sambuca",
+   "L'amaretto"
+  ],
+  "reponse": "La grappa",
+  "anecdote": "Le marc, ce sont les peaux, pépins et rafles qui restent après le pressage du raisin.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t083",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les spiritueux",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel alcool japonais est fabriqué à partir de riz fermenté ?",
+  "reponse": "Le saké",
+  "reponses_acceptees": [
+   "Sake",
+   "Saké",
+   "Nihonshu"
+  ],
+  "anecdote": "Au Japon, le mot « saké » désigne toutes les boissons alcoolisées. Le saké de riz s'appelle « nihonshu ».",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t084",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les spiritueux",
+  "type": "indices",
+  "difficulte": 6,
+  "question": "Quelle eau-de-vie suis-je ?",
+  "reponse": "La mirabelle",
+  "reponses_acceptees": [
+   "Mirabelle",
+   "Eau-de-vie de mirabelle"
+  ],
+  "indices": [
+   "On me distille surtout en Lorraine",
+   "Mon fruit est récolté en août",
+   "Le roi René aurait rapporté mon fruit de Provence",
+   "Je suis faite avec une petite prune jaune"
+  ],
+  "anecdote": "La Lorraine produit environ 70 % des mirabelles du monde.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t085",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les spiritueux",
+  "type": "libre",
+  "difficulte": 7,
+  "question": "Quel alcool mexicain, cousin de la tequila, est fait d'agave cuit au feu de bois ?",
+  "reponse": "Le mezcal",
+  "reponses_acceptees": [
+   "Mezcal",
+   "Mescal"
+  ],
+  "anecdote": "Certaines bouteilles contiennent un ver, une chenille de l'agave, qui relève surtout du marketing.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t086",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les spiritueux",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien d'années un whisky écossais doit-il vieillir au minimum en fût ?",
+  "reponse": 3,
+  "unite": "ans",
+  "tolerance": 0,
+  "bornes": [
+   0,
+   20
+  ],
+  "anecdote": "Le whisky écossais s'écrit « whisky », l'irlandais « whiskey ».",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
+ },
+ {
+  "id": "gas-t087",
+  "categorie": "Gastronomie",
+  "sous_theme": "Les spiritueux",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Comment appelle-t-on la part d'alcool qui s'évapore des fûts pendant le vieillissement ?",
+  "reponse": "La part des anges",
+  "reponses_acceptees": [
+   "Part des anges"
+  ],
+  "anecdote": "Pour le cognac, elle représente environ 2 % du volume par an. Un champignon noir se nourrit de ces vapeurs sur les murs des chais.",
+  "tags": [
+   "ttmc",
+   "mature"
+  ]
  }
 ]

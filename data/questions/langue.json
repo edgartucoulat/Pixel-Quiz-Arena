@@ -1138,5 +1138,334 @@
    "Les nuages"
   ],
   "anecdote": "On dit aussi « être dans la lune »."
+ },
+ {
+  "id": "lan-t001",
+  "categorie": "Langue française",
+  "sous_theme": "Les phobies",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Que redoute une personne atteinte d'agoraphobie ?",
+  "choix": [
+   "Les lieux publics et la foule",
+   "Les araignées",
+   "Les hauteurs",
+   "Le noir"
+  ],
+  "reponse": "Les lieux publics et la foule",
+  "anecdote": "« Agora » désigne la place publique en grec, où se réunissaient les citoyens.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t002",
+  "categorie": "Langue française",
+  "sous_theme": "Les phobies",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment appelle-t-on la peur des espaces clos ?",
+  "reponse": "La claustrophobie",
+  "reponses_acceptees": [
+   "Claustrophobie"
+  ],
+  "anecdote": "Le mot vient du latin « claustrum », l'endroit fermé, qui a aussi donné « cloître ».",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t003",
+  "categorie": "Langue française",
+  "sous_theme": "Les phobies",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Que craint une personne atteinte d'aquaphobie ?",
+  "choix": [
+   "L'eau",
+   "Le feu",
+   "Les oiseaux",
+   "Le noir"
+  ],
+  "reponse": "L'eau",
+  "anecdote": "À ne pas confondre avec l'hydrophobie, qui désigne en chimie ce qui repousse l'eau.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t004",
+  "categorie": "Langue française",
+  "sous_theme": "Les phobies",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Que craint une personne atteinte de coulrophobie ?",
+  "choix": [
+   "Les clowns",
+   "Les couleurs",
+   "Les poules",
+   "Les couloirs"
+  ],
+  "reponse": "Les clowns",
+  "anecdote": "Le clown tueur du roman Ça, de Stephen King, n'a rien arrangé pour les coulrophobes.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t005",
+  "categorie": "Langue française",
+  "sous_theme": "Les phobies",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Que craint, ironiquement, une personne atteinte d'hippopotomonstrosesquippedaliophobie ?",
+  "choix": [
+   "Les mots très longs",
+   "Les hippopotames",
+   "Les chevaux",
+   "Les monstres"
+  ],
+  "reponse": "Les mots très longs",
+  "anecdote": "Ce nom a été inventé en partie pour plaisanter : il n'est pas reconnu par les médecins.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t006",
+  "categorie": "Langue française",
+  "sous_theme": "Les phobies",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Comment appelle-t-on la peur d'être séparé de son téléphone portable ?",
+  "reponse": "La nomophobie",
+  "reponses_acceptees": [
+   "Nomophobie"
+  ],
+  "anecdote": "Le mot vient de l'anglais « no mobile phobia ». Il est apparu au Royaume-Uni en 2008.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t007",
+  "categorie": "Langue française",
+  "sous_theme": "Les phobies",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Que craint une personne atteinte d'omphalophobie ?",
+  "choix": [
+   "Le nombril",
+   "Les ombres",
+   "Les orages",
+   "Les œufs"
+  ],
+  "reponse": "Le nombril",
+  "anecdote": "« Omphalos » signifie nombril en grec. Delphes était surnommée l'« omphalos », le nombril du monde.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t008",
+  "categorie": "Langue française",
+  "sous_theme": "Les phobies",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Quelle phobie suis-je ?",
+  "reponse": "L'ergophobie",
+  "reponses_acceptees": [
+   "Ergophobie"
+  ],
+  "indices": [
+   "Mon nom vient d'un mot grec qui a aussi donné « ergonomie »",
+   "On m'invoque souvent pour plaisanter, le lundi matin",
+   "Je peux toucher ceux qui ont subi un épuisement professionnel",
+   "Je suis la peur du travail"
+  ],
+  "anecdote": "« Ergon » signifie le travail en grec. L'ergothérapie aide à retrouver son autonomie au quotidien.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t009",
+  "categorie": "Langue française",
+  "sous_theme": "Les phobies",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Que craint une personne atteinte de pogonophobie ?",
+  "choix": [
+   "Les barbes",
+   "Les pigeons",
+   "Les poignées",
+   "Les ponts"
+  ],
+  "reponse": "Les barbes",
+  "anecdote": "« Pogon » signifie la barbe en grec. Les hipsters barbus n'ont qu'à bien se tenir.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t010",
+  "categorie": "Langue française",
+  "sous_theme": "Les noms des petites choses",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Comment s'appelle le tube de carton au centre d'un rouleau de papier toilette ?",
+  "reponse": "Le mandrin",
+  "reponses_acceptees": [
+   "Mandrin"
+  ],
+  "anecdote": "Le même mot désigne la pièce qui tient l'outil sur une perceuse.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t011",
+  "categorie": "Langue française",
+  "sous_theme": "Les noms des petites choses",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Comment s'appelle la petite bande de tissu qui maintient la ceinture sur un pantalon ?",
+  "reponse": "Le passant",
+  "reponses_acceptees": [
+   "Passant",
+   "Les passants"
+  ],
+  "anecdote": "On l'appelle aussi parfois « passe-ceinture ».",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t012",
+  "categorie": "Langue française",
+  "sous_theme": "Les noms des petites choses",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Comment s'appelle la petite zone blanche en forme de croissant à la base de l'ongle ?",
+  "reponse": "La lunule",
+  "reponses_acceptees": [
+   "Lunule"
+  ],
+  "anecdote": "Son nom vient du latin « luna », la lune, à cause de sa forme.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t013",
+  "categorie": "Langue française",
+  "sous_theme": "Les noms des petites choses",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Quel est le nom officiel en français du symbole # ?",
+  "choix": [
+   "Le croisillon",
+   "L'astérisque",
+   "L'arobase",
+   "L'esperluette"
+  ],
+  "reponse": "Le croisillon",
+  "anecdote": "On l'appelle souvent « dièse » à tort : en musique, le dièse a des traits obliques et non horizontaux.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t014",
+  "categorie": "Langue française",
+  "sous_theme": "Les noms des petites choses",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Comment appelle-t-on l'extrémité d'une baguette de pain, que beaucoup grignotent en rentrant ?",
+  "reponse": "Le croûton",
+  "reponses_acceptees": [
+   "Croûton",
+   "Crouton",
+   "Quignon",
+   "Le quignon",
+   "Le crouton"
+  ],
+  "anecdote": "Le quignon désigne plutôt un gros morceau de pain, souvent pris au bout.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t015",
+  "categorie": "Langue française",
+  "sous_theme": "Les noms des petites choses",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Comment s'appelle le signe @, utilisé dans les adresses électroniques ?",
+  "reponse": "L'arobase",
+  "reponses_acceptees": [
+   "Arobase",
+   "Arobace",
+   "Arrobase"
+  ],
+  "anecdote": "Il servait autrefois de mesure de poids et de volume en Espagne et au Portugal.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t016",
+  "categorie": "Langue française",
+  "sous_theme": "Les noms des petites choses",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "En numismatique, comment s'appelle le côté « face » d'une pièce de monnaie ?",
+  "choix": [
+   "L'avers",
+   "Le revers",
+   "La tranche",
+   "L'exergue"
+  ],
+  "reponse": "L'avers",
+  "anecdote": "Le côté « pile » s'appelle le revers, et le bord de la pièce, la tranche.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "lan-t017",
+  "categorie": "Langue française",
+  "sous_theme": "Les noms des petites choses",
+  "type": "qcm",
+  "difficulte": 10,
+  "question": "Comment s'appelle la petite main à l'index pointé que les lecteurs dessinaient dans les marges des livres ?",
+  "choix": [
+   "La manicule",
+   "Le pied-de-mouche",
+   "Le colophon",
+   "Le paraphe"
+  ],
+  "reponse": "La manicule",
+  "anecdote": "Son nom vient du latin « manicula », la petite main. On en trouve dans de nombreux manuscrits du Moyen Âge.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
  }
 ]

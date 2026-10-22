@@ -1239,5 +1239,700 @@
    "Jean de La Fontaine"
   ],
   "anecdote": "Il a écrit 243 fables, souvent inspirées d'Ésope."
+ },
+ {
+  "id": "lit-t001",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "De quelle fable vient « Rien ne sert de courir, il faut partir à point » ?",
+  "reponse": "Le Lièvre et la Tortue",
+  "reponses_acceptees": [
+   "Le lièvre et la tortue"
+  ],
+  "anecdote": "Le lièvre, trop sûr de lui, broute et dort avant de partir. La tortue gagne à son rythme.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t002",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Dans quelle fable un insecte chante tout l'été, puis se trouve « fort dépourvu » ?",
+  "reponse": "La Cigale et la Fourmi",
+  "reponses_acceptees": [
+   "La cigale et la fourmi"
+  ],
+  "anecdote": "C'est la toute première fable du premier recueil, paru en 1668.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t003",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle fable commence par « La raison du plus fort est toujours la meilleure » ?",
+  "reponse": "Le Loup et l'Agneau",
+  "reponses_acceptees": [
+   "Le loup et l'agneau"
+  ],
+  "anecdote": "La morale est donnée dès le premier vers : le loup trouve toujours un prétexte pour dévorer l'agneau.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t004",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Dans Le Loup et le Chien, quel détail fait renoncer le loup à la vie confortable du chien ?",
+  "choix": [
+   "Le collier",
+   "La niche",
+   "La pâtée",
+   "Le maître"
+  ],
+  "reponse": "Le collier",
+  "anecdote": "Le loup remarque la marque du collier sur le cou du chien et préfère rester libre, même affamé.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t005",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel animal veut se faire aussi gros que le bœuf, et finit par éclater ?",
+  "reponse": "La grenouille",
+  "reponses_acceptees": [
+   "Grenouille"
+  ],
+  "anecdote": "La morale : « Tout bourgeois veut bâtir comme les grands seigneurs. »",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t006",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "fourchette",
+  "difficulte": 8,
+  "question": "Combien de fables La Fontaine a-t-il publiées dans ses douze livres, environ ?",
+  "reponse": 243,
+  "unite": "fables",
+  "tolerance": 10,
+  "bornes": [
+   50,
+   600
+  ],
+  "anecdote": "Elles sont parues en trois recueils, entre 1668 et 1694.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t007",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "À qui La Fontaine a-t-il dédié son premier recueil de fables, en 1668 ?",
+  "choix": [
+   "Au Grand Dauphin",
+   "À Louis XIV",
+   "À Colbert",
+   "À Fouquet"
+  ],
+  "reponse": "Au Grand Dauphin",
+  "anecdote": "Le fils de Louis XIV n'avait alors que six ans. La Fontaine, ami de Fouquet, était mal vu de Colbert.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t008",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel fabuliste grec de l'Antiquité a inspiré une grande partie des fables de La Fontaine ?",
+  "choix": [
+   "Ésope",
+   "Phèdre",
+   "Homère",
+   "Plutarque"
+  ],
+  "reponse": "Ésope",
+  "anecdote": "Phèdre, fabuliste latin, l'avait lui-même adapté en vers. La Fontaine s'inspire des deux.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t009",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle fable se termine par « Tout flatteur vit aux dépens de celui qui l'écoute » ?",
+  "reponse": "Le Corbeau et le Renard",
+  "reponses_acceptees": [
+   "Le corbeau et le renard"
+  ],
+  "anecdote": "Le corbeau, honteux et confus, jura, mais un peu tard, qu'on ne l'y prendrait plus.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t010",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Dans quelle fable lit-on « On a souvent besoin d'un plus petit que soi » ?",
+  "reponse": "Le Lion et le Rat",
+  "reponses_acceptees": [
+   "Le lion et le rat"
+  ],
+  "anecdote": "Le rat ronge les mailles du filet qui retient le lion. La fable se termine par « Patience et longueur de temps font plus que force ni que rage ».",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t011",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quelle fable conseille « Travaillez, prenez de la peine : c'est le fonds qui manque le moins » ?",
+  "reponse": "Le Laboureur et ses Enfants",
+  "reponses_acceptees": [
+   "Le laboureur et ses enfants"
+  ],
+  "anecdote": "Le père fait croire à ses fils qu'un trésor est caché dans le champ. À force de le retourner, ils obtiennent une belle récolte.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t012",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Dans quelle fable un homme rend-il cent écus pour retrouver ses chansons et son sommeil ?",
+  "reponse": "Le Savetier et le Financier",
+  "reponses_acceptees": [
+   "Le savetier et le financier"
+  ],
+  "anecdote": "Le savetier, riche d'un coup, ne dort plus de peur qu'on lui vole son argent.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t013",
+  "categorie": "Littérature",
+  "sous_theme": "Les fables de La Fontaine",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quelle fable conclut : « Selon que vous serez puissant ou misérable, les jugements de cour vous rendront blanc ou noir » ?",
+  "reponse": "Les Animaux malades de la peste",
+  "reponses_acceptees": [
+   "Les animaux malades de la peste"
+  ],
+  "anecdote": "Le lion et les prédateurs sont pardonnés, mais l'âne, qui a brouté un peu d'herbe, est condamné.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t014",
+  "categorie": "Littérature",
+  "sous_theme": "Molière",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel était le vrai nom de Molière ?",
+  "reponse": "Jean-Baptiste Poquelin",
+  "reponses_acceptees": [
+   "Poquelin",
+   "Jean Baptiste Poquelin"
+  ],
+  "anecdote": "Fils d'un tapissier du roi, il devait reprendre la charge de son père. Il a préféré le théâtre.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t015",
+  "categorie": "Littérature",
+  "sous_theme": "Molière",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment s'appelle le personnage principal de L'Avare, qui pleure sa cassette ?",
+  "reponse": "Harpagon",
+  "reponses_acceptees": [
+   "Harpagon"
+  ],
+  "anecdote": "Son nom vient du latin « harpago », le grappin, l'instrument qui sert à agripper.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t016",
+  "categorie": "Littérature",
+  "sous_theme": "Molière",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Dans quelle pièce entend-on « Que diable allait-il faire dans cette galère ? »",
+  "choix": [
+   "Les Fourberies de Scapin",
+   "Le Malade imaginaire",
+   "L'Avare",
+   "Le Misanthrope"
+  ],
+  "reponse": "Les Fourberies de Scapin",
+  "anecdote": "Le vieux Géronte répète la phrase sept fois. Molière l'a empruntée à une comédie de Cyrano de Bergerac.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t017",
+  "categorie": "Littérature",
+  "sous_theme": "Molière",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel personnage de Molière est un faux dévot hypocrite, qui a donné un nom commun ?",
+  "reponse": "Tartuffe",
+  "reponses_acceptees": [
+   "Tartufe"
+  ],
+  "anecdote": "La pièce a été interdite pendant cinq ans sous la pression des dévots.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t018",
+  "categorie": "Littérature",
+  "sous_theme": "Molière",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Dans quelle pièce Monsieur Jourdain découvre-t-il qu'il fait de la prose sans le savoir ?",
+  "reponse": "Le Bourgeois gentilhomme",
+  "reponses_acceptees": [
+   "Le bourgeois gentilhomme"
+  ],
+  "anecdote": "La musique de cette comédie-ballet est de Lully. Elle a été jouée devant Louis XIV en 1670.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t019",
+  "categorie": "Littérature",
+  "sous_theme": "Molière",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : Molière est mort sur scène, pendant une représentation.",
+  "reponse": "Faux",
+  "anecdote": "Il s'est senti mal sur scène en jouant Le Malade imaginaire, mais il est mort chez lui quelques heures plus tard.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t020",
+  "categorie": "Littérature",
+  "sous_theme": "Molière",
+  "type": "qcm",
+  "difficulte": 9,
+  "question": "Comment s'appelait la troupe fondée par Molière en 1643 ?",
+  "choix": [
+   "L'Illustre Théâtre",
+   "La Comédie-Française",
+   "Les Comédiens du Roi",
+   "Le Théâtre du Marais"
+  ],
+  "reponse": "L'Illustre Théâtre",
+  "anecdote": "La troupe a fait faillite, et Molière a même été emprisonné pour dettes. Il est ensuite parti treize ans en province.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t021",
+  "categorie": "Littérature",
+  "sous_theme": "Molière",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Comment s'appelle le personnage principal du Misanthrope ?",
+  "reponse": "Alceste",
+  "reponses_acceptees": [
+   "Alceste"
+  ],
+  "anecdote": "Il est amoureux de Célimène, une jeune veuve coquette, tout le contraire de lui.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t022",
+  "categorie": "Littérature",
+  "sous_theme": "Molière",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Dans Le Malade imaginaire, comment s'appelle la servante qui tient tête à Argan ?",
+  "reponse": "Toinette",
+  "reponses_acceptees": [
+   "Toinette"
+  ],
+  "anecdote": "Elle se déguise même en médecin pour se moquer de lui.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t023",
+  "categorie": "Littérature",
+  "sous_theme": "Harry Potter",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment s'appelle la chouette blanche d'Harry Potter ?",
+  "reponse": "Hedwige",
+  "reponses_acceptees": [
+   "Hedwig"
+  ],
+  "anecdote": "Hagrid la lui offre pour ses onze ans. Dans les films, elle a été jouée par plusieurs harfangs des neiges, tous des mâles.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "lit-t024",
+  "categorie": "Littérature",
+  "sous_theme": "Harry Potter",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel sortilège permet de désarmer son adversaire ?",
+  "reponse": "Expelliarmus",
+  "reponses_acceptees": [
+   "Expeliarmus"
+  ],
+  "anecdote": "C'est le sort préféré d'Harry, et c'est grâce à lui qu'il vainc Voldemort à la fin.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "lit-t025",
+  "categorie": "Littérature",
+  "sous_theme": "Harry Potter",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Dans quelle maison de Poudlard est Luna Lovegood ?",
+  "choix": [
+   "Serdaigle",
+   "Poufsouffle",
+   "Serpentard",
+   "Gryffondor"
+  ],
+  "reponse": "Serdaigle",
+  "anecdote": "L'emblème de Serdaigle est un aigle, et ses couleurs sont le bleu et le bronze dans les livres.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "lit-t026",
+  "categorie": "Littérature",
+  "sous_theme": "Harry Potter",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel sortilège impardonnable provoque la mort ?",
+  "reponse": "Avada Kedavra",
+  "reponses_acceptees": [
+   "Avada kedavra"
+  ],
+  "anecdote": "Les deux autres sortilèges impardonnables sont Endoloris et Impérium.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "lit-t027",
+  "categorie": "Littérature",
+  "sous_theme": "Harry Potter",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle forme prend le patronus d'Harry ?",
+  "choix": [
+   "Un cerf",
+   "Une biche",
+   "Un loup",
+   "Un chien"
+  ],
+  "reponse": "Un cerf",
+  "anecdote": "C'est l'animagus de son père, James. La biche est celle de sa mère… et de Rogue.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "lit-t028",
+  "categorie": "Littérature",
+  "sous_theme": "Harry Potter",
+  "type": "fourchette",
+  "difficulte": 6,
+  "question": "Combien de joueurs compte une équipe de Quidditch sur le terrain ?",
+  "reponse": 7,
+  "unite": "joueurs",
+  "tolerance": 0,
+  "bornes": [
+   1,
+   20
+  ],
+  "anecdote": "Trois poursuiveurs, deux batteurs, un gardien et un attrapeur. Attraper le vif d'or rapporte 150 points.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "lit-t029",
+  "categorie": "Littérature",
+  "sous_theme": "Harry Potter",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Quel est le deuxième prénom d'Harry Potter ?",
+  "reponse": "James",
+  "reponses_acceptees": [
+   "Harry James Potter"
+  ],
+  "anecdote": "C'est le prénom de son père. Son fils aîné s'appelle d'ailleurs James Sirius.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "lit-t030",
+  "categorie": "Littérature",
+  "sous_theme": "Harry Potter",
+  "type": "libre",
+  "difficulte": 8,
+  "question": "Comment s'appelle la chatte du concierge Argus Rusard ?",
+  "reponse": "Miss Teigne",
+  "reponses_acceptees": [
+   "Mrs Norris",
+   "Miss teigne"
+  ],
+  "anecdote": "En anglais, elle s'appelle Mrs Norris, d'après un personnage de Jane Austen.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "lit-t031",
+  "categorie": "Littérature",
+  "sous_theme": "Harry Potter",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Comment s'appelle la mère de Voldemort ?",
+  "reponse": "Merope Gaunt",
+  "reponses_acceptees": [
+   "Merope",
+   "Mérope",
+   "Mérope Gaunt"
+  ],
+  "anecdote": "Elle a mis au monde Tom Jedusor dans un orphelinat de Londres et y est morte peu après.",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "lit-t032",
+  "categorie": "Littérature",
+  "sous_theme": "Harry Potter",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Qui suis-je ?",
+  "reponse": "Dobby",
+  "reponses_acceptees": [
+   "Dobby l'elfe"
+  ],
+  "indices": [
+   "J'ai longtemps servi la famille Malefoy",
+   "Je me punis quand je désobéis",
+   "Je porte une vieille taie d'oreiller",
+   "Une chaussette m'a rendu ma liberté",
+   "Je suis un elfe de maison"
+  ],
+  "anecdote": "Dans les films, il meurt dans les bras d'Harry, sur une plage, en disant : « Quel bel endroit pour être avec ses amis. »",
+  "tags": [
+   "ttmc",
+   "plaisir"
+  ]
+ },
+ {
+  "id": "lit-t033",
+  "categorie": "Littérature",
+  "sous_theme": "Les héros de la mythologie",
+  "type": "indices",
+  "difficulte": 3,
+  "question": "Qui suis-je ?",
+  "reponse": "Ulysse",
+  "reponses_acceptees": [
+   "Ulysses",
+   "Odysseus"
+  ],
+  "indices": [
+   "Ma femme Pénélope m'a attendu pendant vingt ans",
+   "J'ai aveuglé le cyclope Polyphème",
+   "J'ai eu l'idée du cheval de Troie",
+   "Je suis le héros de l'Odyssée"
+  ],
+  "anecdote": "Il est roi d'Ithaque. À son retour, seul son vieux chien Argos le reconnaît.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t034",
+  "categorie": "Littérature",
+  "sous_theme": "Les héros de la mythologie",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Qui suis-je ?",
+  "reponse": "Bellérophon",
+  "reponses_acceptees": [
+   "Bellerophon"
+  ],
+  "indices": [
+   "On m'a envoyé en Lycie avec une lettre réclamant ma propre mort",
+   "J'ai vaincu la Chimère",
+   "J'ai voulu monter jusqu'à l'Olympe, et je suis tombé",
+   "J'ai dompté le cheval ailé Pégase"
+  ],
+  "anecdote": "Athéna lui avait offert une bride en or pour dompter Pégase.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t035",
+  "categorie": "Littérature",
+  "sous_theme": "Les héros de la mythologie",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Qui suis-je ?",
+  "reponse": "Thésée",
+  "reponses_acceptees": [
+   "Thesee"
+  ],
+  "indices": [
+   "J'ai abandonné Ariane sur l'île de Naxos",
+   "Mon père s'est jeté dans la mer qui porte désormais son nom",
+   "Je suis devenu roi d'Athènes",
+   "J'ai tué le Minotaure dans le labyrinthe"
+  ],
+  "anecdote": "Il avait oublié de hisser une voile blanche pour annoncer sa victoire. Son père Égée, croyant à sa mort, s'est jeté dans la mer Égée.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t036",
+  "categorie": "Littérature",
+  "sous_theme": "Les héros de la mythologie",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Qui suis-je ?",
+  "reponse": "Atalante",
+  "reponses_acceptees": [
+   "Atalante"
+  ],
+  "indices": [
+   "J'ai été allaitée par une ourse",
+   "J'ai participé à la chasse du sanglier de Calydon",
+   "J'ai perdu une course en ramassant des pommes d'or",
+   "Je suis une chasseresse qui courait plus vite que les hommes"
+  ],
+  "anecdote": "Elle avait promis d'épouser celui qui la battrait à la course. Hippomène a gagné grâce aux pommes d'Aphrodite.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
+ },
+ {
+  "id": "lit-t037",
+  "categorie": "Littérature",
+  "sous_theme": "Les héros de la mythologie",
+  "type": "indices",
+  "difficulte": 10,
+  "question": "Qui suis-je ?",
+  "reponse": "Tirésias",
+  "reponses_acceptees": [
+   "Tiresias"
+  ],
+  "indices": [
+   "J'ai vécu sept ans changé en femme",
+   "Héra m'a rendu aveugle",
+   "Ulysse vient me consulter aux Enfers",
+   "Je suis le devin aveugle de Thèbes"
+  ],
+  "anecdote": "C'est lui qui révèle à Œdipe qu'il a tué son père et épousé sa mère.",
+  "tags": [
+   "ttmc",
+   "scolaire"
+  ]
  }
 ]

@@ -843,5 +843,218 @@
    "Mahatma Gandhi"
   ],
   "anecdote": "Il a été nommé cinq fois pour le prix Nobel de la paix, sans jamais le recevoir."
+ },
+ {
+  "id": "per-t001",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle chanteuse américaine est surnommée « Queen B » ?",
+  "reponse": "Beyoncé",
+  "reponses_acceptees": [
+   "Beyonce",
+   "Beyoncé Knowles"
+  ],
+  "anecdote": "Elle a été la première femme noire à remporter le Grammy de l'album country, en 2025.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "per-t002",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel basketteur américain est surnommé « King James » ?",
+  "reponse": "LeBron James",
+  "reponses_acceptees": [
+   "Lebron",
+   "LeBron",
+   "Lebron James"
+  ],
+  "anecdote": "Il est devenu en 2023 le meilleur marqueur de l'histoire de la NBA, devant Kareem Abdul-Jabbar.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "per-t003",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Qui suis-je ?",
+  "reponse": "Yves Saint Laurent",
+  "reponses_acceptees": [
+   "Saint Laurent",
+   "YSL",
+   "Yves Saint-Laurent"
+  ],
+  "indices": [
+   "Je suis né à Oran en 1936",
+   "J'ai pris la tête de la maison Dior à 21 ans",
+   "J'ai fait porter le smoking aux femmes",
+   "Mes trois initiales forment un logo célèbre"
+  ],
+  "anecdote": "Son logo entrelacé a été dessiné en 1961 par l'affichiste Cassandre.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "per-t004",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel chanteur était surnommé « le Fou chantant » ?",
+  "reponse": "Charles Trenet",
+  "reponses_acceptees": [
+   "Trenet"
+  ],
+  "anecdote": "Il a écrit « La Mer » en quelques minutes, dans un train qui longeait l'étang de Thau, selon la légende.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "per-t005",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Qui suis-je ?",
+  "reponse": "Bourvil",
+  "reponses_acceptees": [
+   "André Raimbourg"
+  ],
+  "indices": [
+   "Mon vrai nom était André Raimbourg",
+   "Je suis né en Normandie, en 1917",
+   "J'ai chanté « La Tactique du gendarme »",
+   "J'ai été le partenaire de Louis de Funès dans Le Corniaud"
+  ],
+  "anecdote": "Son nom de scène vient de Bourville, le village de Normandie où il a grandi.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "per-t006",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel était le vrai nom de l'humoriste Coluche ?",
+  "reponse": "Michel Colucci",
+  "reponses_acceptees": [
+   "Colucci"
+  ],
+  "anecdote": "Il a fondé les Restos du cœur en 1985. Il s'était présenté à l'élection présidentielle de 1981 avant de se retirer.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "per-t007",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "libre",
+  "difficulte": 9,
+  "question": "Quel était le vrai prénom de Johnny Hallyday ?",
+  "reponse": "Jean-Philippe",
+  "reponses_acceptees": [
+   "Jean Philippe",
+   "Jean-Philippe Smet"
+  ],
+  "anecdote": "Son nom de scène vient d'un cousin par alliance, danseur américain, qui se faisait appeler Lee Halliday.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "per-t008",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel était le vrai nom de famille de la chanteuse Dalida ?",
+  "reponse": "Gigliotti",
+  "reponses_acceptees": [
+   "Iolanda Gigliotti",
+   "Yolanda Gigliotti"
+  ],
+  "anecdote": "Née au Caire de parents italiens, elle a été élue Miss Égypte en 1954 avant de conquérir la France.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "per-t009",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel est le vrai nom de famille de Mylène Farmer ?",
+  "reponse": "Gautier",
+  "reponses_acceptees": [
+   "Mylène Gautier"
+  ],
+  "anecdote": "Elle a choisi son nom de scène en hommage à l'actrice américaine Frances Farmer.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "per-t010",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "libre",
+  "difficulte": 10,
+  "question": "Quel était le vrai nom de famille d'Édith Piaf ?",
+  "reponse": "Gassion",
+  "reponses_acceptees": [
+   "Édith Gassion",
+   "Edith Gassion"
+  ],
+  "anecdote": "« Piaf » veut dire moineau en argot : c'est son premier imprésario qui l'a baptisée « la Môme Piaf ».",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
+ },
+ {
+  "id": "per-t011",
+  "categorie": "Personnalités",
+  "sous_theme": "Les surnoms de stars",
+  "type": "indices",
+  "difficulte": 4,
+  "question": "Qui suis-je ?",
+  "reponse": "Fernandel",
+  "reponses_acceptees": [
+   "Fernand Contandin"
+  ],
+  "indices": [
+   "Mon vrai nom était Fernand Contandin",
+   "Je suis né à Marseille en 1903",
+   "On plaisantait sur mon sourire chevalin",
+   "J'ai incarné don Camillo au cinéma"
+  ],
+  "anecdote": "Son nom de scène viendrait de sa belle-mère, qui l'appelait « Fernand d'elle », le Fernand de sa fille.",
+  "tags": [
+   "ttmc",
+   "improbable"
+  ]
  }
 ]
