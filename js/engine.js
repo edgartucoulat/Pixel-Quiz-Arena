@@ -338,9 +338,9 @@
       PQA.shuffle(this.activePlayers()).forEach((p, i) => (p.team = i % n));
       this.changed();
     }
-    /** Ordre de passage : alterne les équipes si besoin. */
-    turnOrder() {
-      let list = this.connectedPlayers();
+    /** Ordre de passage : alterne les équipes si besoin. Avec all, compte aussi les joueurs déconnectés. */
+    turnOrder(all) {
+      let list = all ? [] : this.connectedPlayers();
       if (!list.length) list = this.activePlayers();
       if (this.settings.teams) {
         const byTeam = [];
@@ -1061,7 +1061,6 @@
       PQA.shuffle(cells).slice(0, specials.length).forEach((c, i) => (c.special = specials[i]));
       const r = this.round;
       r.cells = cells; r.cols = cols; r.rows = rows;
-      r.turns = this.turnOrder();
       r.turn = 0;
       r.total = n;
       this.tableBoard();
@@ -1069,9 +1068,12 @@
     tableBoard() {
       const r = this.round;
       if (r.cells.every((c) => c.used)) return this.endRound();
-      r.player = r.turns[r.turn % r.turns.length];
-      r.turn++;
-      if (!this.players[r.player]) return this.tableBoard();
+      // L'ordre est recalculé à chaque tour : un téléphone en veille au début de la manche
+      // ne fait pas perdre son tour au joueur, on saute seulement ceux déconnectés à ce moment-là.
+      const order = this.turnOrder(true);
+      const here = (id) => this.players[id].connected || this.players[id].local;
+      let k = 0;
+      do { r.player = order[r.turn++ % order.length]; } while (!here(r.player) && ++k < order.length);
       r.cell = null; r.victim = null;
       this.q = null;
       this.phase = 'board';
@@ -1151,7 +1153,7 @@
     /* ---- 4 à la suite ---- */
     quatreStart(n) {
       const r = this.round;
-      r.queue = this.ranking().filter((p) => p.connected || p.local).slice(0, n).map((p) => p.id); // le 1er du classement choisit en premier
+      r.queue = this.ranking().slice(0, n).map((p) => p.id); // le 1er du classement choisit en premier
       if (!r.queue.length) return this.endRound();
       r.total = r.queue.length;
       // Une liste de thèmes commune : un thème pris n'est plus disponible pour les suivants.
@@ -1167,8 +1169,15 @@
       this.clearJobs();
       if (!r.queue.length) return this.endRound();
       r.player = r.queue.shift();
-      r.n++;
       if (!this.players[r.player]) return this.quatreNextPlayer(true);
+      const p = this.players[r.player];
+      // Téléphone déconnecté : il passe une fois en fin de file, le temps de revenir.
+      if (!p.connected && !p.local && !(r.deferred || []).includes(p.id) && r.queue.length) {
+        (r.deferred = r.deferred || []).push(p.id);
+        r.queue.push(p.id);
+        return this.quatreNextPlayer(true);
+      }
+      r.n++;
       r.run = null;
       r.mystery = false;
       this.q = null;
