@@ -156,3 +156,38 @@ body[data-screen="choices"] .you-buzzed ~ * {}
 #ice.on { display: block; animation: blink 1s infinite; }
 .ptoast { position: fixed; left: 50%; bottom: 80px; transform: translateX(-50%); background: var(--ink); border: 3px solid var(--yellow); padding: 10px 16px; z-index: 40; font-size: 24px; animation: slideUp .3s; white-space: nowrap; }
 .local-pad [data-act="leave"] { display: none; }
+
+/* Manette intégrée au plateau (mode Solo) : version compacte, la question est déjà sur la TV */
+body.local-pad { font-size: 20px; min-height: 100vh; }
+.local-pad #me { padding: 4px 8px; gap: 6px; border-bottom-width: 3px; }
+.local-pad #me .av { width: 30px; height: 30px; }
+.local-pad .me-info b { font-size: 20px; }
+.local-pad .me-info small { font-size: 15px; }
+.local-pad .me-score { font-size: 13px; }
+.local-pad #screen { padding: 8px; }
+.local-pad .pq-text, .local-pad .tv, .local-pad .res-anec, .local-pad .av-big, .local-pad #btn-edit, .local-pad .pq-cat { display: none; }
+.local-pad .pq { gap: 6px; }
+.local-pad .wait { gap: 6px; }
+.local-pad .wtitle { font-size: 12px; }
+.local-pad .wmsg { font-size: 19px; }
+.local-pad .lock-icon, .local-pad .mic { font-size: 44px; }
+.local-pad .picked-txt, .local-pad .res-answer { font-size: 20px; padding: 4px 10px; }
+.local-pad .res-ok, .local-pad .res-ko { font-size: 18px; }
+.local-pad .res-pts { font-size: 18px; }
+.local-pad .buzz-wrap { gap: 8px; }
+.local-pad .buzzer { width: min(80vw, 190px); height: min(80vw, 190px); border-width: 6px; }
+.local-pad .buzz-sub { font-size: 15px; }
+.local-pad .pchoice { min-height: 46px; font-size: 21px; border-width: 3px; padding: 4px 8px; }
+.local-pad .pchoices { gap: 6px; }
+.local-pad .you-buzzed { font-size: 16px; }
+.local-pad .ptext input { font-size: 24px; padding: 6px; }
+.local-pad .big-btn { font-size: 13px; padding: 12px; }
+.local-pad .levels button { font-size: 16px; }
+.local-pad .pthemes button { font-size: 26px; }
+.local-pad .pthemes button span { font-size: 16px; }
+.local-pad .hint { font-size: 15px; }
+.local-pad .join .logo.small { display: none; }
+.local-pad .av-prev { width: 90px; height: 90px; }
+.local-pad .join input { font-size: 22px; padding: 4px 8px; }
+.local-pad .card-btn { font-size: 18px; padding: 3px; }
+.local-pad .card-btn span { font-size: 15px; }

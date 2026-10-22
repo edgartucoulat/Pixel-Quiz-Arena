@@ -49,6 +49,13 @@
     checkHealth() {}
   }
   if (LOCAL) document.body.classList.add('local-pad');
+  /** Manette intégrée : petite tant qu'il n'y a rien à faire, plus grande pour répondre ou choisir. */
+  const PAD_SMALL = ['wait', 'lobby', 'locked', 'result', 'end', 'oral', 'kicked'];
+  let padLast = null;
+  function padSize(screen) {
+    const size = PAD_SMALL.includes(screen) ? 'small' : screen === 'buzzer' ? 'buzz' : 'large';
+    if (size !== padLast) { padLast = size; window.parent.postMessage({ pqaLocal: { t: '_pad', size } }, '*'); }
+  }
   // Au clavier (manette intégrée du mode Solo, ou téléphone avec clavier) : Espace pour buzzer.
   document.addEventListener('keydown', (e) => {
     if (e.key !== ' ' || /INPUT|TEXTAREA/.test(e.target.tagName)) return;
@@ -113,6 +120,7 @@
 
   function showJoin(error) {
     state.renderKey = 'join';
+    if (LOCAL) padSize('join');
     $('#me').innerHTML = '';
     $('#cards').innerHTML = '';
     $('#screen').innerHTML = `
@@ -182,6 +190,7 @@
     const out = screens[v.screen] ? screens[v.screen](v) : screens.wait(v);
     document.body.dataset.screen = v.screen;
     document.body.style.setProperty('--me', v.me.color);
+    if (LOCAL) padSize(v.screen);
     if (out.key !== state.renderKey) {
       state.renderKey = out.key;
       state.pressed = false;
