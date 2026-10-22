@@ -204,6 +204,7 @@
         case 'resetseen': g.resetSeen(); this.toast('Historique des questions effacé.'); g.changed(); return;
         case 'override': return this.hooks.override(d.pid);
         case 'lobby': return this.hooks.backToLobby();
+        case 'home': if (g.phase === 'end' || confirm('Quitter la partie et revenir à l’accueil ? Les scores de la partie seront perdus.')) this.hooks.backToLobby(); return;
         case 'choice': {
           // Clic sur un choix : réponse du joueur local qui a buzzé (duel sur un écran)
           const cur = g.q && g.q.buzz && g.q.buzz.current && g.players[g.q.buzz.current];
@@ -261,6 +262,7 @@
       patch($('#controls'), `
         ${canNext ? `<button class="ctl" data-act="next" title="Espace">${g.phase === 'question' ? '⏭ Révéler' : '▶ Suivant'}</button>` : ''}
         ${g.phase !== 'lobby' && g.phase !== 'end' ? `<button class="ctl" data-act="pause" title="P">${g.paused ? '▶ Reprendre' : '⏸ Pause'}</button>` : ''}
+        ${g.phase !== 'lobby' ? '<button class="ctl" data-act="home" title="Quitter la partie">🏠 Accueil</button>' : ''}
         <button class="ctl" data-act="pref" data-key="tts" title="Voix du présentateur">${this.prefs.tts ? '🗣️ Voix' : '🤐 Voix'}</button>
         <button class="ctl" data-act="pref" data-key="muted" title="Couper tous les sons">${this.prefs.muted ? '🔇 Muet' : '🔊 Son'}</button>
         <button class="ctl" data-act="sounds" title="Musique, effets, voix">🎚️ Réglages</button>
@@ -383,7 +385,9 @@
           <div class="intro-num">${r.type === 'duel' ? 'READY ?' : 'MANCHE ' + (g.roundIdx + 1) + ' / ' + g.rounds.length}</div>
           <div class="intro-icon">${R.icon}</div>
           <div class="intro-name">${esc(R.name)}</div>
-          <div class="intro-desc">${esc(R.desc)}</div>
+          ${R.rules ? '' : `<div class="intro-desc">${esc(R.desc)}</div>`}
+          ${R.rules ? `<ul class="intro-rules">${R.rules.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+          <button class="big-btn intro-skip" data-act="next">⏭ Passer la règle</button>
         </div>`,
       };
     }
@@ -420,7 +424,7 @@
         const txt = libre && a && a.text ? `« ${esc(a.text)} »` : libre && r.wrongAnswer ? `« ${esc(r.wrongAnswer)} »` : '';
         const ov = libre && q.kind === 'single' && a && !g.irl ? ` data-act="override" data-pid="${p.id}" title="Cliquer pour corriger la validation"` : '';
         return `<div class="res ${r.correct ? 'good' : 'bad'}" style="--pc:${p.color}"${ov}>${avatarImg(p, r.correct ? 'happy' : 'sad', 'tiny')}<b>${esc(p.name)}</b> ${txt}
-          <span class="rpts">${r.correct ? '+' + r.pts + (r.mult > 1 ? ` <small>x${r.mult}</small>` : '') : r.none ? '—' : '✖'}</span></div>`;
+          <span class="rpts">${r.hit ? '+1 ★' : r.correct ? '+' + r.pts + (r.mult > 1 ? ` <small>x${r.mult}</small>` : '') : r.none ? '—' : '✖'}</span></div>`;
       }).join('')}</div>`;
     }
 
@@ -691,8 +695,8 @@
       return {
         key: 'qres' + r.n,
         html: `<div class="center-card">${avatarImg(p, run.won ? 'happy' : 'idle', 'huge')}
-          <div class="cc-title">${run.won ? '🏆 4 À LA SUITE !' : '⏱ Temps écoulé'}</div>
-          <div class="cc-sub">${esc(p.name)} : ${run.correct} bonne${run.correct > 1 ? 's' : ''} réponse${run.correct > 1 ? 's' : ''}, meilleure série ${run.best}/4${run.won ? ' · bonus +' + run.bonus : ''}</div></div>`,
+          <div class="cc-title">${run.won ? '💰 JACKPOT !' : '⏱ Temps écoulé'}</div>
+          ${run.won ? `<div class="cc-jackpot">+${run.bonus} pts</div><div class="cc-sub">${esc(p.name)} : 1 000 pts + ${run.left} s d’avance × 20 pts</div>` : `<div class="cc-sub">${esc(p.name)} : ${run.correct} bonne${run.correct > 1 ? 's' : ''} réponse${run.correct > 1 ? 's' : ''}, meilleure série ${run.best}/4</div>`}</div>`,
       };
     }
 

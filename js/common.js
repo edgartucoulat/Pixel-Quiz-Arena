@@ -99,6 +99,18 @@
     champions: { name: 'Le Duel des champions', short: 'Duel des champions', icon: '⚔️', desc: 'Les 2 meilleurs s’affrontent au buzzer : les indices tombent un à un. Le premier à 3 bonnes réponses gagne la partie !' },
     duel: { name: 'Duel', short: 'Duel', icon: '🥊', desc: 'Chaque bonne réponse inflige des dégâts à l’adversaire. Premier K.O. perdu !' },
   };
+  /* Règle détaillée, affichée sur l'écran d'intro de chaque manche (on peut la passer). */
+  const RULES = {
+    sprint: ['Une question à la fois, sur un thème tiré au hasard.', 'Attends la fin de la lecture, puis buzze le premier : buzzer trop tôt = bloqué 2 s.', 'Tu as 10 secondes pour taper ta réponse : bonne réponse = 200 pts.', 'Mauvaise réponse = −100 pts, et la main passe aux autres.'],
+    mystere: ['La roue tire un thème pour toi.', 'Choisis ton niveau de 1 (facile) à 10 (très dur).', 'Plus le niveau est haut, plus la question rapporte… si tu trouves !'],
+    eclair: ['Tout le monde répond en même temps sur son téléphone.', 'Une bonne réponse rapporte des points, et les plus rapides gagnent un bonus.', 'Une seule réponse possible : pas de deuxième chance !'],
+    table: ['Chacun son tour, choisis une case sur le plateau.', 'Le thème et la valeur (100 à 400 pts) sont cachés jusqu’à ton choix, puis tu réponds seul à la question.', '💣 Piège : tu perds des points. ✖️2 Double : la case vaut deux fois plus. 🦹 Vol : tu choisis à qui voler les points.'],
+    quatre: ['Chacun son tour, en commençant par le 1er du classement, choisis un thème. Un thème pris n’est plus disponible.', 'Le « thème mystère » en tire un au hasard.', 'Tu as 40 secondes : chaque bonne réponse vaut 50 pts, une erreur remet ta série à zéro.', '💰 4 bonnes réponses d’affilée = JACKPOT de 1 000 pts, + 20 pts par seconde restante !'],
+    fourchette: ['Une question dont la réponse est un nombre ou une date.', 'Donne UNE seule valeur sur ton téléphone, il faut viser pile.', '🎯 Pile = 500 pts. À côté, les points chutent très vite, et un peu trop loin = 0.', 'Le plus proche gagne un bonus de 50 pts.'],
+    champions: ['Les 2 meilleurs du classement s’affrontent au buzzer.', 'Les indices tombent un à un : buzze dès que tu as trouvé.', 'Raté ? Tu reprends la main dès que ton adversaire a répondu ou qu’un nouvel indice tombe.', 'Le premier à 3 ★ gagne la partie, quel que soit son score !'],
+    duel: ['Buzze le premier et réponds juste pour frapper ton adversaire.', 'Une erreur te fait perdre de la vie.', 'Le premier K.O. a perdu !'],
+  };
+  Object.keys(RULES).forEach((k) => (PQA.ROUNDS[k].rules = RULES[k]));
 
   PQA.CARDS = {
     gel: { name: 'Gel', icon: '🧊', desc: 'Gèle le buzzer et les réponses d’un adversaire pendant 5 secondes.', target: true },

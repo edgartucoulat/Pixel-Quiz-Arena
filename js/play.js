@@ -327,10 +327,11 @@
     },
     result(v) {
       const c = v.correct;
-      const head = c === true ? `<div class="res-ok">✔ BRAVO !</div><div class="res-pts">+${fmt(v.pts)}</div>` : c === false ? `<div class="res-ko">${v.none ? '⏱ Trop tard !' : '✖ RATÉ !'}</div>` : '<div class="wtitle">Réponse :</div>';
+      const gain = v.hit ? `+1 ★ <small>(${v.stars}/${v.target})</small>` : '+' + fmt(v.pts);
+      const head = c === true ? `<div class="res-ok">✔ BRAVO !</div><div class="res-pts">${gain}</div>` : c === false ? `<div class="res-ko">${v.none ? '⏱ Trop tard !' : '✖ RATÉ !'}</div>` : '<div class="wtitle">Réponse :</div>';
       const guess = v.guess ? `<div class="wmsg">Ta réponse : <b>${esc(v.guess)}</b>${v.exact ? ' · 🎯 PILE !' : v.gap ? ' · écart : ' + esc(v.gap) : ''}</div>` : '';
       return {
-        key: 'result' + v.phase + c + v.pts + v.answer + (v.guess || ''),
+        key: 'result' + v.phase + c + v.pts + (v.stars || '') + v.answer + (v.guess || ''),
         html: `<div class="wait result ${c === true ? 'good' : c === false ? 'bad' : ''}">${head}<div class="res-answer">${esc(v.answer)}</div>${guess}${v.anecdote ? `<div class="res-anec">💡 ${esc(v.anecdote)}</div>` : ''}</div>`,
       };
     },

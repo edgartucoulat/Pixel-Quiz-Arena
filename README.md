@@ -43,11 +43,19 @@ Par défaut, l'émission enchaîne dans cet ordre :
    (100 à 400 pts) restent cachés jusqu'au choix, avec des pièges, des cases doubles et des vols.
 3. 4️⃣ **Le 4 à la suite** : le 1er du classement choisit son thème en premier, puis le 2e, etc.
    Un thème pris n'est plus disponible pour les suivants ; le « thème mystère » en tire un
-   au hasard. Il faut enchaîner 4 bonnes réponses d'affilée en 40 secondes.
-4. 📏 **La Fourchette** : donne une seule valeur et vise pile. Réponse exacte = 400 pts, puis les points baissent avec l’écart (le plus proche gagne un bonus de 50 pts, trop loin = 0).
+   au hasard. Il faut enchaîner 4 bonnes réponses d'affilée en 40 secondes : chaque bonne
+   réponse vaut 50 pts, et réussir les 4 à la suite décroche le **jackpot** de 1 000 pts,
+   plus 20 pts par seconde restante au chrono.
+4. 📏 **La Fourchette** : donne une seule valeur et vise pile. Réponse exacte = 500 pts. À côté, les points chutent vite : environ 150 pts à 1 près sur une réponse de 47, et 0 dès qu’on est un peu trop loin (le plus proche gagne un bonus de 50 pts s’il a marqué).
 5. ⚔️ **Le Duel des champions** (toujours en dernier) : les 2 meilleurs du classement
-   s'affrontent au buzzer à indices, les indices tombant un à un. Le premier à 3 bonnes
-   réponses **gagne la partie**, quel que soit son score (en équipes, son équipe gagne).
+   s'affrontent au buzzer à indices, les indices tombant un à un (le 1er vite, les 2e et 3e
+   lentement, le dernier vite). Essais illimités, mais chacun son tour : après une erreur, on
+   reprend la main dès que l'adversaire a répondu ou qu'un nouvel indice tombe. Le premier à
+   3 étoiles (bonnes réponses) **gagne la partie**, quel que soit son score (en équipes, son
+   équipe gagne).
+
+Avant chaque manche, un écran explique la règle (environ 20 s) ; le bouton « Passer » ou
+« ▶ Suivant » la saute si tout le monde la connaît déjà.
 
 En option dans le salon : 🎡 **Thème Mystère** (la roue choisit le thème, chacun choisit son
 niveau de 1 à 10) et ⚡ **QCM éclair** (tout le monde répond en même temps, bonus de rapidité).

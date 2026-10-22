@@ -183,7 +183,7 @@
       },
       backToLobby() {
         game.clearJobs(); game.stopTimer();
-        game.phase = 'lobby'; game.round = null; game.q = null;
+        game.phase = 'lobby'; game.round = null; game.q = null; game.paused = false; game.champion = game.runnerUp = null;
         game.activePlayers().forEach((p) => {
           p.score = 0; p.streak = 0; p.bestStreak = 0; p.cards = []; p.double = false; p.stolenBy = null; p.mirror = false;
           p.prevRank = p.curRank = null;

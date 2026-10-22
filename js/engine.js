@@ -38,10 +38,12 @@
 
   const TIMES = {
     eclair: 15000, fourchette: 30000, single: 25000, singleLibre: 35000,
-    level: 20000, buzzAnswer: 15000, buzzAnswerIRL: 20000, clue: 6500, afterLastClue: 9000,
+    level: 20000, buzzAnswer: 15000, buzzAnswerIRL: 20000, clues: [5000, 11000, 11000], afterLastClue: 6000,
     sprint: 12000, quatre: 40000, board: 25000, target: 15000, theme: 20000,
-    duelBuzz: 15000, duelAnswer: 8000,
+    duelBuzz: 15000, duelAnswer: 8000, intro: 20000,
   };
+
+  const QUATRE_JACKPOT = 1000;
 
   /* Anti-buzz au hasard : buzz raté = pénalité, faux départ = buzzer bloqué,
    * et peu de temps pour répondre une fois qu'on a buzzé. */
@@ -390,7 +392,7 @@
     /** Ce qui, en changeant, demande à l'ordinateur de réfléchir à nouveau. */
     botKey(p) {
       const q = this.q, r = this.round, b = q && q.buzz;
-      return [this.phase, q && q.id, r && r.n, r && r.player, q && q.clue, b && b.current, b && b.open, b && b.locked.length,
+      return [this.phase, q && q.id, r && r.n, r && r.player, q && q.clue, b && b.current, b && b.open, b && b.locked.join(),
         b && b.readyAt && now() >= b.readyAt, q && q.answers[p.id] ? 1 : 0].join('|');
     }
     botTick() {
@@ -542,13 +544,15 @@
       const leader = this.ranking()[0];
       this.fx('roundIntro', { type });
       this.say('round_' + type, { name: leader ? leader.name : '' }, 'happy');
-      if (this.auto) this.after(6000, () => this.beginRound());
+      // Le temps de lire la règle ; « Passer » (ou Suivant) lance la manche tout de suite.
+      if (this.auto) this.startTimer(TIMES.intro, () => this.beginRound());
       this.changed();
     }
 
     beginRound() {
       if (this.phase !== 'intro') return;
       this.clearJobs();
+      this.stopTimer();
       const t = this.round.type;
       const L = LENGTH[this.settings.length];
       if (t === 'eclair' || t === 'fourchette') { this.round.total = L[t]; this.nextSimple(); }
@@ -804,11 +808,11 @@
 
     /**
      * Fourchette : chacun donne UNE valeur et doit viser pile.
-     *  - pile (écart ≤ tolérance, plafonnée à 2 % de la réponse) : 400 pts
-     *  - sinon 300 × exp(-écart / échelle) :
+     *  - pile (écart ≤ tolérance, plafonnée à 2 % de la réponse) : 500 pts
+     *  - sinon 200 × exp(-2,5 × écart / échelle), ça chute vite (à 1 près sur 47 : ~150 pts) :
      *      dates : écart rapporté à l'amplitude des bornes, échelle 5 %
      *      quantités : plus petit écart relatif (à la réponse ou aux bornes), échelle 10 %
-     *  - le plus proche touche +50 ; moins de 30 pts = raté
+     *  - moins de 30 pts = raté (0) ; sinon le plus proche touche +50
      */
     fourchetteGap(d, x) {
       const [lo, hi] = d.bornes || [0, 0];
@@ -828,7 +832,7 @@
         if (!a) { q.results[pid] = { correct: false, pts: 0, none: true }; continue; }
         const diff = Math.abs(a.value - d.reponse);
         const exact = diff <= tol;
-        const base = exact ? 400 : Math.round(300 * Math.exp(-this.fourchetteGap(d, a.value)));
+        const base = exact ? 500 : Math.round(200 * Math.exp(-2.5 * this.fourchetteGap(d, a.value)));
         scored.push({ pid, diff, exact, base });
       }
       scored.sort((a, b) => a.diff - b.diff);
@@ -876,15 +880,17 @@
       this.changed();
     }
     scheduleClue(q) {
+      // Indice 1 vite, 2 et 3 longs (on réfléchit), le dernier vite : il donne presque la réponse.
       const last = q.clue >= q.data.indices.length - 1;
       if (last) this.startTimer(TIMES.afterLastClue, () => this.buzzTimeout());
-      else this.startTimer(TIMES.clue, () => this.nextClue());
+      else this.startTimer(TIMES.clues[Math.min(q.clue, TIMES.clues.length - 1)], () => this.nextClue());
     }
     nextClue() {
       const q = this.q;
       if (!q || q.kind !== 'buzz' || q.revealed || !q.data.indices) return;
       if (q.buzz.current) return;
       if (q.clue < q.data.indices.length - 1) { q.clue++; this.fx('clue'); }
+      if (this.round.type === 'champions') q.buzz.locked = []; // nouvel indice : tout le monde peut retenter
       this.scheduleClue(q);
       this.changed();
     }
@@ -963,7 +969,9 @@
       // Erreur : pénalité, joueur bloqué, le buzzer se rouvre pour les autres.
       this.scoreWrong(p);
       p.stats.wrongBuzz++;
-      q.buzz.locked.push(pid);
+      // Duel des champions : essais illimités, mais chacun son tour (seul le dernier à s'être trompé attend).
+      if (this.round.type === 'champions') q.buzz.locked = [pid];
+      else q.buzz.locked.push(pid);
       let pts = -BUZZ.penalty;
       if (this.round.type === 'duel') {
         pts = -BUZZ.duelPenalty;
@@ -1246,8 +1254,12 @@
       r.run.last = { ok, answer: q.choices[q.correctIdx] };
       if (r.run.streak >= 4) {
         r.run.won = true;
-        const bonus = this.scoreCorrect(p, 200, { noCombo: true, silentStreak: true });
+        // Le jackpot : 1 000 pts, +20 pts par seconde restante au chrono.
+        const left = Math.ceil(this.timerLeft() / 1000);
+        const bonus = this.scoreCorrect(p, QUATRE_JACKPOT + left * 20, { noCombo: true, silentStreak: true });
         r.run.bonus = bonus.pts;
+        r.run.left = left;
+        this.fx('points', { pid, pts: bonus.pts });
         this.fx('streak', { pid, mult: 4 });
         return this.quatreEnd();
       }
@@ -1290,7 +1302,7 @@
       this.clearJobs();
       const [a, b] = r.finalists;
       if (r.hits[a] >= r.target || r.hits[b] >= r.target || r.n >= r.max) return this.championsEnd();
-      const diff = clamp(4 + r.n, 4, 9);
+      const diff = clamp(3 + Math.floor(r.n / 2), 3, 7); // difficulté qui monte doucement
       const data = this.pickQuestion({ types: ['indices'], diff })
         || this.pickQuestion({ types: ['libre', 'qcm'], diff, exclude: (q) => !sprintable(q) });
       if (!data) return this.championsEnd();
@@ -1501,7 +1513,10 @@
       const result = () => {
         const res = q && q.results[pid];
         v.screen = 'result';
-        if (q && q.answerers.includes(pid) && res) { v.correct = res.correct; v.pts = res.pts; v.none = res.none; }
+        if (q && q.answerers.includes(pid) && res) {
+          v.correct = res.correct; v.pts = res.pts; v.none = res.none;
+          if (res.hit) { v.hit = true; v.stars = this.round.hits[pid]; v.target = this.round.target; }
+        }
         else v.correct = null;
         v.answer = q ? this.answerText(q) : '';
         if (q && q.data.type === 'fourchette' && q.answers[pid]) {
@@ -1537,7 +1552,7 @@
           else if (r.player === pid) { v.screen = 'themes'; v.themes = r.themes.map((t) => ({ name: t.name, icon: t.icon, by: t.by ? this.name(t.by) : null })); withTimer(); }
           else { v.screen = 'wait'; v.title = '4 à la suite'; v.msg = this.name(r.player) + ' choisit son thème...'; }
           break;
-        case 'qresult': v.screen = 'wait'; v.title = r.run.won ? '4 À LA SUITE !' : 'Fin du chrono'; v.msg = this.name(r.player) + ' : meilleure série ' + r.run.best + '/4'; break;
+        case 'qresult': v.screen = 'wait'; v.title = r.run.won ? '💰 JACKPOT !' : 'Fin du chrono'; v.msg = r.run.won ? this.name(r.player) + ' remporte le jackpot : +' + r.run.bonus + ' pts !' : this.name(r.player) + ' : meilleure série ' + r.run.best + '/4'; break;
         case 'faceoff': v.screen = 'wait'; v.title = '⚔️ Duel des champions';
           v.msg = r.finalists.includes(pid) ? 'Tu es en finale ! Le premier à ' + r.target + ' bonnes réponses gagne la partie.' : this.name(r.finalists[0]) + ' contre ' + this.name(r.finalists[1]) + ' : le vainqueur gagne la partie !'; break;
         case 'champion': v.screen = 'wait'; v.title = '👑 ' + this.name(this.champion); v.msg = this.champion === pid ? 'Tu remportes le Duel des champions et la partie !' : this.name(this.champion) + ' remporte le Duel des champions !'; break;
