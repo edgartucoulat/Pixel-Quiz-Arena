@@ -1504,5 +1504,62 @@
   "question": "Vrai ou faux : il existe en France une commune nommée « Y ».",
   "reponse": "Vrai",
   "anecdote": "Ce village de la Somme porte le nom le plus court de France."
+ },
+ {
+  "id": "ins-100",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel animal possède trois cœurs et du sang bleu, comme le poulpe ?",
+  "reponse": "Le calamar",
+  "reponses_acceptees": [
+   "Calamar",
+   "Calmar",
+   "La seiche",
+   "Seiche"
+  ],
+  "anecdote": "Le sang bleu vient de l'hémocyanine, une protéine riche en cuivre."
+ },
+ {
+  "id": "ins-101",
+  "categorie": "Insolite",
+  "sous_theme": "Inventions",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel jouet de briques danois tire son nom de « leg godt », « joue bien » ?",
+  "reponse": "Lego",
+  "reponses_acceptees": [
+   "Les Lego",
+   "Legos"
+  ],
+  "anecdote": "Une brique de 1958 s'emboîte encore avec une brique d'aujourd'hui."
+ },
+ {
+  "id": "ins-102",
+  "categorie": "Insolite",
+  "sous_theme": "Animaux",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel oiseau rose doit sa couleur aux crevettes qu'il mange ?",
+  "reponse": "Le flamant rose",
+  "reponses_acceptees": [
+   "Flamant",
+   "Flamant rose"
+  ],
+  "anecdote": "Il dort souvent sur une seule patte."
+ },
+ {
+  "id": "ins-103",
+  "categorie": "Insolite",
+  "sous_theme": "Curiosités",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel est l'unique aliment qui ne se périme presque jamais ?",
+  "reponse": "Le miel",
+  "reponses_acceptees": [
+   "Miel"
+  ],
+  "anecdote": "On a retrouvé du miel encore comestible dans des tombes égyptiennes."
  }
 ]

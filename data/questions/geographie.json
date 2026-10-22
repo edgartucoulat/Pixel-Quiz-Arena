@@ -1809,5 +1809,146 @@
   "question": "Vrai ou faux : la Russie et les États-Unis ne sont séparés que d'environ 4 km, dans le détroit de Béring.",
   "reponse": "Vrai",
   "anecdote": "Cet écart sépare les deux îles Diomède, l'une russe, l'autre américaine."
+ },
+ {
+  "id": "geo-120",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle est la capitale de la Slovénie ?",
+  "reponse": "Ljubljana",
+  "reponses_acceptees": [
+   "Lioubliana"
+  ],
+  "anecdote": "Son symbole est un dragon, que l'on retrouve sur le pont des Dragons."
+ },
+ {
+  "id": "geo-121",
+  "categorie": "Géographie",
+  "sous_theme": "Fleuves",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel fleuve traverse Le Caire ?",
+  "reponse": "Le Nil",
+  "reponses_acceptees": [
+   "Nil"
+  ],
+  "anecdote": "Il traverse ou longe onze pays avant de se jeter dans la Méditerranée."
+ },
+ {
+  "id": "geo-122",
+  "categorie": "Géographie",
+  "sous_theme": "Fleuves",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel fleuve traverse Lyon avec la Saône ?",
+  "reponse": "Le Rhône",
+  "reponses_acceptees": [
+   "Rhône",
+   "Rhone"
+  ],
+  "anecdote": "Il naît en Suisse, dans le glacier du Rhône."
+ },
+ {
+  "id": "geo-123",
+  "categorie": "Géographie",
+  "sous_theme": "Montagnes",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle chaîne de montagnes sépare la France de l'Espagne ?",
+  "reponse": "Les Pyrénées",
+  "reponses_acceptees": [
+   "Pyrénées",
+   "Pyrenees"
+  ],
+  "anecdote": "Le petit État d'Andorre est niché en plein milieu."
+ },
+ {
+  "id": "geo-124",
+  "categorie": "Géographie",
+  "sous_theme": "France",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle île française de l'océan Indien a pour chef-lieu Saint-Denis ?",
+  "reponse": "La Réunion",
+  "reponses_acceptees": [
+   "Réunion",
+   "L'île de la Réunion"
+  ],
+  "anecdote": "Son piton de la Fournaise est l'un des volcans les plus actifs du monde."
+ },
+ {
+  "id": "geo-125",
+  "categorie": "Géographie",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel détroit sépare l'Espagne du Maroc ?",
+  "reponse": "Le détroit de Gibraltar",
+  "reponses_acceptees": [
+   "Gibraltar",
+   "Détroit de Gibraltar"
+  ],
+  "anecdote": "Il ne mesure qu'environ 14 km à son point le plus étroit."
+ },
+ {
+  "id": "geo-126",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle est la capitale de l'Irlande ?",
+  "reponse": "Dublin",
+  "reponses_acceptees": [],
+  "anecdote": "Son nom vient de l'irlandais « dubh linn », l'étang noir."
+ },
+ {
+  "id": "geo-127",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle est la capitale de la Hongrie ?",
+  "reponse": "Budapest",
+  "reponses_acceptees": [],
+  "anecdote": "La ville est née en 1873 de la fusion de Buda, Óbuda et Pest."
+ },
+ {
+  "id": "geo-128",
+  "categorie": "Géographie",
+  "sous_theme": "Capitales",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle est la capitale du Sénégal ?",
+  "reponse": "Dakar",
+  "reponses_acceptees": [],
+  "anecdote": "C'est la ville la plus à l'ouest de l'Afrique continentale."
+ },
+ {
+  "id": "geo-129",
+  "categorie": "Géographie",
+  "sous_theme": "Monde",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel océan borde la côte ouest de la France ?",
+  "reponse": "L'Atlantique",
+  "reponses_acceptees": [
+   "Atlantique",
+   "L'océan Atlantique",
+   "Océan Atlantique"
+  ],
+  "anecdote": "C'est le deuxième plus grand océan du monde."
+ },
+ {
+  "id": "geo-130",
+  "categorie": "Géographie",
+  "sous_theme": "France",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle ville française est surnommée la « Ville rose » ?",
+  "reponse": "Toulouse",
+  "reponses_acceptees": [],
+  "anecdote": "Elle doit ce surnom à la brique de ses façades."
  }
 ]

@@ -18,6 +18,8 @@
   const now = () => performance.now();
   const rand = (n) => Math.floor(Math.random() * n);
   const pickOne = (arr) => arr[rand(arr.length)];
+  /** Réponse d'une question, pour éviter deux fois la même réponse dans une partie (pas pour Vrai/Faux ni Fourchette). */
+  const answerKey = (q) => (['libre', 'qcm', 'indices'].includes(q.type) ? PQA.normalize(q.reponse) : null);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
   // Ordre de l'émission : le Sprint ouvre, le Duel des champions conclut toujours.
@@ -220,12 +222,24 @@
       if (!pool.length) return null;
       const unseen = pool.filter((q) => !this.seen.has(q.id));
       if (unseen.length) pool = unseen;
+      else {
+        // Tout a déjà été vu sur cet appareil : on reprend le tiers vu il y a le plus longtemps.
+        const order = new Map();
+        let i = 0;
+        for (const id of this.seen) order.set(id, i++);
+        pool = pool.slice().sort((a, b) => order.get(a.id) - order.get(b.id)).slice(0, Math.ceil(pool.length / 3));
+      }
+      const taken = new Set();
+      for (const x of this.bank) if (this.used.has(x.id)) { const k = answerKey(x); if (k) taken.add(k); }
+      const fresh = pool.filter((x) => !taken.has(answerKey(x)));
+      if (fresh.length) pool = fresh;
       if (diff) {
         const best = Math.min(...pool.map((q) => Math.abs(q.difficulte - diff)));
         pool = pool.filter((q) => Math.abs(q.difficulte - diff) <= best + 1);
       }
       const q = pickOne(pool);
       this.used.add(q.id);
+      this.seen.delete(q.id); // l'ordre du Set = ordre de passage, le plus récent à la fin
       this.seen.add(q.id);
       this.saveSeen();
       return q;

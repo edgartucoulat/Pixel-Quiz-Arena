@@ -1047,5 +1047,154 @@
   "question": "Vrai ou faux : le croissant serait d'origine autrichienne.",
   "reponse": "Vrai",
   "anecdote": "Il descend du « kipferl » viennois, popularisé à Paris au XIXe siècle."
+ },
+ {
+  "id": "gas-070",
+  "categorie": "Gastronomie",
+  "sous_theme": "Spécialités",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quelle spécialité italienne est une galette garnie, cuite au four, souvent à la mozzarella ?",
+  "reponse": "La pizza",
+  "reponses_acceptees": [
+   "Pizza"
+  ],
+  "anecdote": "La margherita aurait été nommée en l'honneur de la reine Marguerite."
+ },
+ {
+  "id": "gas-071",
+  "categorie": "Gastronomie",
+  "sous_theme": "Spécialités",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel plat suisse consiste à faire fondre du fromage pour y tremper du pain ?",
+  "reponse": "La fondue",
+  "reponses_acceptees": [
+   "Fondue",
+   "La fondue savoyarde",
+   "Fondue suisse"
+  ],
+  "anecdote": "Celui qui perd son pain dans le caquelon doit souvent payer une tournée."
+ },
+ {
+  "id": "gas-072",
+  "categorie": "Gastronomie",
+  "sous_theme": "Spécialités",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel plat japonais associe du riz vinaigré et du poisson cru ?",
+  "reponse": "Les sushis",
+  "reponses_acceptees": [
+   "Sushi",
+   "Sushis"
+  ],
+  "anecdote": "Au départ, le riz servait seulement à conserver le poisson."
+ },
+ {
+  "id": "gas-073",
+  "categorie": "Gastronomie",
+  "sous_theme": "Spécialités",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quelle soupe provençale de poissons est la fierté de Marseille ?",
+  "reponse": "La bouillabaisse",
+  "reponses_acceptees": [
+   "Bouillabaisse"
+  ],
+  "anecdote": "Le nom viendrait de « quand ça bout, tu abaisses » le feu."
+ },
+ {
+  "id": "gas-074",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel fromage normand est vendu dans une boîte ronde en bois ?",
+  "reponse": "Le camembert",
+  "reponses_acceptees": [
+   "Camembert"
+  ],
+  "anecdote": "La boîte a été inventée en 1890 pour le transporter plus loin."
+ },
+ {
+  "id": "gas-075",
+  "categorie": "Gastronomie",
+  "sous_theme": "Fromages",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel fromage à pâte persillée vieillit dans des caves de l'Aveyron ?",
+  "reponse": "Le roquefort",
+  "reponses_acceptees": [
+   "Roquefort"
+  ],
+  "anecdote": "C'est le premier fromage français à avoir obtenu une appellation, en 1925."
+ },
+ {
+  "id": "gas-076",
+  "categorie": "Gastronomie",
+  "sous_theme": "Desserts",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle viennoiserie en forme de croissant de lune est le symbole du petit-déjeuner français ?",
+  "reponse": "Le croissant",
+  "reponses_acceptees": [
+   "Croissant"
+  ],
+  "anecdote": "Il serait d'origine autrichienne, inspiré du kipferl viennois."
+ },
+ {
+  "id": "gas-077",
+  "categorie": "Gastronomie",
+  "sous_theme": "Desserts",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel dessert italien au café et au mascarpone signifie « remonte-moi » ?",
+  "reponse": "Le tiramisu",
+  "reponses_acceptees": [
+   "Tiramisu",
+   "Tiramisù"
+  ],
+  "anecdote": "Sa recette actuelle date des années 1960, en Vénétie."
+ },
+ {
+  "id": "gas-078",
+  "categorie": "Gastronomie",
+  "sous_theme": "Boissons",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle région française produit le vin effervescent le plus célèbre du monde ?",
+  "reponse": "La Champagne",
+  "reponses_acceptees": [
+   "Champagne"
+  ],
+  "anecdote": "Seuls les vins produits dans cette région peuvent porter ce nom."
+ },
+ {
+  "id": "gas-079",
+  "categorie": "Gastronomie",
+  "sous_theme": "Spécialités",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel plat espagnol à base de riz et de safran vient de Valence ?",
+  "reponse": "La paella",
+  "reponses_acceptees": [
+   "Paella"
+  ],
+  "anecdote": "Le nom désigne d'abord la poêle dans laquelle on la cuit."
+ },
+ {
+  "id": "gas-080",
+  "categorie": "Gastronomie",
+  "sous_theme": "Spécialités",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel plat alsacien est une fine pâte garnie de crème, d'oignons et de lardons ?",
+  "reponse": "La flammekueche",
+  "reponses_acceptees": [
+   "Flammekueche",
+   "Tarte flambée",
+   "La tarte flambée"
+  ],
+  "anecdote": "On la cuisait autrefois pour tester la chaleur du four à pain."
  }
 ]

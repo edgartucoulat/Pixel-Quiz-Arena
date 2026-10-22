@@ -1402,5 +1402,120 @@
   "question": "Vrai ou faux : « Les Simpson » ont été créés par Matt Groening.",
   "reponse": "Vrai",
   "anecdote": "Ils sont apparus d'abord en 1987, en courtes séquences dans une émission de variétés."
+ },
+ {
+  "id": "pop-093",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel jeu fait tomber des pièces de quatre carrés qu'il faut aligner ?",
+  "reponse": "Tetris",
+  "reponses_acceptees": [],
+  "anecdote": "Il a été créé en 1984 par le Soviétique Alexeï Pajitnov."
+ },
+ {
+  "id": "pop-094",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Jeux vidéo",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel jeu de course de Nintendo fait lancer des carapaces bleues ?",
+  "reponse": "Mario Kart",
+  "reponses_acceptees": [],
+  "anecdote": "La carapace bleue vise toujours le joueur en tête."
+ },
+ {
+  "id": "pop-095",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "BD",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel petit Gaulois boit de la potion magique ?",
+  "reponse": "Astérix",
+  "reponses_acceptees": [
+   "Asterix"
+  ],
+  "anecdote": "Il a été créé par Goscinny et Uderzo en 1959."
+ },
+ {
+  "id": "pop-096",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "BD",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel cow-boy « tire plus vite que son ombre » ?",
+  "reponse": "Lucky Luke",
+  "reponses_acceptees": [
+   "Luke"
+  ],
+  "anecdote": "Il a abandonné la cigarette pour un brin d'herbe en 1983."
+ },
+ {
+  "id": "pop-097",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Mangas",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel jeune pirate au chapeau de paille rêve de devenir le roi des pirates ?",
+  "reponse": "Luffy",
+  "reponses_acceptees": [
+   "Monkey D. Luffy",
+   "Monkey D Luffy"
+  ],
+  "anecdote": "Son corps est en caoutchouc depuis qu'il a mangé un fruit du démon."
+ },
+ {
+  "id": "pop-098",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Super-héros",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel super-héros est l'alter ego de Peter Parker ?",
+  "reponse": "Spider-Man",
+  "reponses_acceptees": [
+   "Spiderman",
+   "L'homme-araignée"
+  ],
+  "anecdote": "Il a été créé par Stan Lee et Steve Ditko en 1962."
+ },
+ {
+  "id": "pop-099",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Super-héros",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel milliardaire en armure est l'alter ego de Tony Stark ?",
+  "reponse": "Iron Man",
+  "reponses_acceptees": [
+   "Ironman"
+  ],
+  "anecdote": "Robert Downey Jr. l'a incarné au cinéma de 2008 à 2019."
+ },
+ {
+  "id": "pop-100",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "Dessins animés",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quelle famille jaune vit à Springfield ?",
+  "reponse": "Les Simpson",
+  "reponses_acceptees": [
+   "Simpson",
+   "Simpsons",
+   "Les Simpsons"
+  ],
+  "anecdote": "C'est la série animée la plus longue de la télévision américaine."
+ },
+ {
+  "id": "pop-101",
+  "categorie": "Pop culture & jeux vidéo",
+  "sous_theme": "BD",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel reporter à la houppe est accompagné de son chien Milou ?",
+  "reponse": "Tintin",
+  "reponses_acceptees": [],
+  "anecdote": "Hergé l'a créé en 1929."
  }
 ]

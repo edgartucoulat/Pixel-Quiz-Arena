@@ -1970,5 +1970,187 @@
    1700
   ],
   "anecdote": "Il accordait la liberté de culte aux protestants dans certaines places."
+ },
+ {
+  "id": "his-128",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "libre",
+  "difficulte": 2,
+  "question": "Quel général romain a été assassiné aux ides de mars, en 44 av. J.-C. ?",
+  "reponse": "Jules César",
+  "reponses_acceptees": [
+   "César",
+   "Julius Caesar"
+  ],
+  "anecdote": "Il aurait reçu 23 coups de poignard au Sénat, dont celui de son protégé Brutus."
+ },
+ {
+  "id": "his-129",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel roi de Macédoine a conquis un empire allant de la Grèce jusqu'à l'Indus ?",
+  "reponse": "Alexandre le Grand",
+  "reponses_acceptees": [
+   "Alexandre",
+   "Alexandre III"
+  ],
+  "anecdote": "Il est mort à 32 ans à Babylone, sans avoir perdu une seule bataille."
+ },
+ {
+  "id": "his-130",
+  "categorie": "Histoire",
+  "sous_theme": "Égypte",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel pharaon a vu son tombeau découvert presque intact par Howard Carter en 1922 ?",
+  "reponse": "Toutânkhamon",
+  "reponses_acceptees": [
+   "Toutankhamon",
+   "Tutankhamon"
+  ],
+  "anecdote": "Le masque funéraire en or pèse environ 10 kg."
+ },
+ {
+  "id": "his-131",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel roi des Francs a été couronné empereur à Rome le jour de Noël de l'an 800 ?",
+  "reponse": "Charlemagne",
+  "reponses_acceptees": [
+   "Charles le Grand",
+   "Charles Ier"
+  ],
+  "anecdote": "Contrairement à la légende, il n'a pas « inventé l'école », mais il a beaucoup développé les écoles monastiques."
+ },
+ {
+  "id": "his-132",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel duc de Normandie a conquis l'Angleterre en 1066 ?",
+  "reponse": "Guillaume le Conquérant",
+  "reponses_acceptees": [
+   "Guillaume",
+   "Guillaume de Normandie",
+   "Guillaume le Bâtard"
+  ],
+  "anecdote": "Avant sa victoire à Hastings, on le surnommait « le Bâtard »."
+ },
+ {
+  "id": "his-133",
+  "categorie": "Histoire",
+  "sous_theme": "Révolution",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Quel révolutionnaire, surnommé « l'Incorruptible », a été guillotiné en juillet 1794 ?",
+  "reponse": "Robespierre",
+  "reponses_acceptees": [
+   "Maximilien de Robespierre",
+   "Maximilien Robespierre"
+  ],
+  "anecdote": "Il a été exécuté le 10 thermidor an II, au lendemain de sa chute."
+ },
+ {
+  "id": "his-134",
+  "categorie": "Histoire",
+  "sous_theme": "XIXe siècle",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel empereur, neveu de Napoléon Ier, a régné sur la France de 1852 à 1870 ?",
+  "reponse": "Napoléon III",
+  "reponses_acceptees": [
+   "Louis-Napoléon Bonaparte",
+   "Louis Napoléon",
+   "Napoléon 3"
+  ],
+  "anecdote": "Il fut d'abord le premier président de la République élu au suffrage universel, en 1848."
+ },
+ {
+  "id": "his-135",
+  "categorie": "Histoire",
+  "sous_theme": "XXe siècle",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Quel général a lancé l'appel du 18 juin 1940 depuis Londres ?",
+  "reponse": "Charles de Gaulle",
+  "reponses_acceptees": [
+   "De Gaulle",
+   "Le général de Gaulle"
+  ],
+  "anecdote": "Très peu de Français l'ont entendu en direct ; il n'en existe d'ailleurs aucun enregistrement."
+ },
+ {
+  "id": "his-136",
+  "categorie": "Histoire",
+  "sous_theme": "XXe siècle",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel navire a amené en 1947 des rescapés juifs vers la Palestine, avant d'être refoulé par les Britanniques ?",
+  "reponse": "L'Exodus",
+  "reponses_acceptees": [
+   "Exodus",
+   "Exodus 1947"
+  ],
+  "anecdote": "Il était parti de Sète avec plus de 4 500 passagers."
+ },
+ {
+  "id": "his-137",
+  "categorie": "Histoire",
+  "sous_theme": "Grandes découvertes",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel explorateur malouin a remonté le Saint-Laurent et pris possession du Canada pour François Ier ?",
+  "reponse": "Jacques Cartier",
+  "reponses_acceptees": [
+   "Cartier"
+  ],
+  "anecdote": "Le mot « Canada » vient d'un mot iroquoien qui signifie « village »."
+ },
+ {
+  "id": "his-138",
+  "categorie": "Histoire",
+  "sous_theme": "Antiquité",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quelle cité antique a été ensevelie par l'éruption du Vésuve en 79 ?",
+  "reponse": "Pompéi",
+  "reponses_acceptees": [
+   "Pompei",
+   "Pompeii"
+  ],
+  "anecdote": "Les corps ont laissé des creux dans la cendre, que l'on a remplis de plâtre au XIXe siècle."
+ },
+ {
+  "id": "his-139",
+  "categorie": "Histoire",
+  "sous_theme": "Moyen Âge",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quel roi de France est parti en croisade et a été canonisé sous le nom de Saint Louis ?",
+  "reponse": "Louis IX",
+  "reponses_acceptees": [
+   "Saint Louis",
+   "Louis 9"
+  ],
+  "anecdote": "Il est mort de la dysenterie devant Tunis, en 1270."
+ },
+ {
+  "id": "his-140",
+  "categorie": "Histoire",
+  "sous_theme": "XXe siècle",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Quel dirigeant soviétique a lancé la perestroïka ?",
+  "reponse": "Mikhaïl Gorbatchev",
+  "reponses_acceptees": [
+   "Gorbatchev"
+  ],
+  "anecdote": "Il a reçu le prix Nobel de la paix en 1990."
  }
 ]

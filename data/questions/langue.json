@@ -1032,5 +1032,111 @@
   "question": "Vrai ou faux : le mot « oiseau » contient les cinq voyelles a, e, i, o et u.",
   "reponse": "Vrai",
   "anecdote": "C'est le plus court mot français à toutes les contenir."
+ },
+ {
+  "id": "lan-069",
+  "categorie": "Langue française",
+  "sous_theme": "Vocabulaire",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Comment appelle-t-on un mot formé en mélangeant les lettres d'un autre, comme « chien » et « niche » ?",
+  "reponse": "Une anagramme",
+  "reponses_acceptees": [
+   "Anagramme"
+  ],
+  "anecdote": "Le mot anagramme est féminin."
+ },
+ {
+  "id": "lan-070",
+  "categorie": "Langue française",
+  "sous_theme": "Vocabulaire",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment appelle-t-on un mot de même sens qu'un autre ?",
+  "reponse": "Un synonyme",
+  "reponses_acceptees": [
+   "Synonyme"
+  ],
+  "anecdote": "Les vrais synonymes parfaits sont très rares."
+ },
+ {
+  "id": "lan-071",
+  "categorie": "Langue française",
+  "sous_theme": "Expressions",
+  "type": "libre",
+  "difficulte": 3,
+  "question": "Complétez l'expression : « Avoir un poil dans la… »",
+  "reponse": "Main",
+  "reponses_acceptees": [
+   "La main"
+  ],
+  "anecdote": "Elle désigne une personne paresseuse."
+ },
+ {
+  "id": "lan-072",
+  "categorie": "Langue française",
+  "sous_theme": "Expressions",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Complétez l'expression : « Poser un… » quand on ne vient pas à un rendez-vous.",
+  "reponse": "Lapin",
+  "reponses_acceptees": [
+   "Un lapin"
+  ],
+  "anecdote": "Au XIXe siècle, « poser un lapin » voulait dire ne pas payer une fille de joie."
+ },
+ {
+  "id": "lan-073",
+  "categorie": "Langue française",
+  "sous_theme": "Expressions",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Complétez l'expression : « Tomber dans les… » pour s'évanouir.",
+  "reponse": "Pommes",
+  "reponses_acceptees": [
+   "Les pommes"
+  ],
+  "anecdote": "Elle viendrait de « tomber dans les pâmes », c'est-à-dire se pâmer."
+ },
+ {
+  "id": "lan-074",
+  "categorie": "Langue française",
+  "sous_theme": "Orthographe",
+  "type": "libre",
+  "difficulte": 6,
+  "question": "Quelle lettre est la plus utilisée en français ?",
+  "reponse": "E",
+  "reponses_acceptees": [
+   "La lettre E",
+   "Le e"
+  ],
+  "anecdote": "Georges Perec a écrit « La Disparition », un roman entier sans aucun e."
+ },
+ {
+  "id": "lan-075",
+  "categorie": "Langue française",
+  "sous_theme": "Vocabulaire",
+  "type": "libre",
+  "difficulte": 5,
+  "question": "Comment appelle-t-on un mot qui imite un son, comme « boum » ou « miaou » ?",
+  "reponse": "Une onomatopée",
+  "reponses_acceptees": [
+   "Onomatopée",
+   "Onomatopee"
+  ],
+  "anecdote": "Le chien fait « ouaf » en français mais « woof » en anglais."
+ },
+ {
+  "id": "lan-076",
+  "categorie": "Langue française",
+  "sous_theme": "Expressions",
+  "type": "libre",
+  "difficulte": 4,
+  "question": "Complétez l'expression : « Avoir la tête dans les… » quand on rêvasse.",
+  "reponse": "Nuages",
+  "reponses_acceptees": [
+   "Les nuages"
+  ],
+  "anecdote": "On dit aussi « être dans la lune »."
  }
 ]
