@@ -253,7 +253,7 @@
 
     renderControls() {
       const g = this.g;
-      const canNext = ['intro', 'reveal', 'leaderboard', 'faceoff', 'champion', 'cell', 'qresult', 'ko', 'wheel', 'question'].includes(g.phase);
+      const canNext = ['intro', 'reveal', 'leaderboard', 'faceoff', 'champion', 'cell', 'qresult', 'ko', 'wheel', 'question', 'trap'].includes(g.phase);
       patch($('#controls'), `
         ${canNext ? `<button class="ctl" data-act="next" title="Espace">${g.phase === 'question' ? '⏭ Révéler' : '▶ Suivant'}</button>` : ''}
         ${g.phase !== 'lobby' && g.phase !== 'end' ? `<button class="ctl" data-act="pause" title="P">${g.paused ? '▶ Reprendre' : '⏸ Pause'}</button>` : ''}
@@ -277,15 +277,14 @@
         if (q && q.kind === 'all' && g.phase === 'question' && q.answers[p.id]) badge += '<i class="ok">✔</i>';
         if (g.phase === 'reveal' && q && q.results[p.id]) { pose = q.results[p.id].correct ? 'happy' : q.results[p.id].none ? 'idle' : 'sad'; }
         if (g.phase === 'end' && g.ranking()[0] === p) pose = 'happy';
-        const cur = g.round && (g.phase === 'level' || g.phase === 'board' || g.phase === 'target' || g.phase === 'qpick' || (g.phase === 'question' && q && (q.kind === 'single' || q.kind === 'quatre'))) && (g.round.player === p.id);
+        const cur = g.round && (g.phase === 'level' || g.phase === 'board' || g.phase === 'target' || g.phase === 'qpick' || (g.phase === 'question' && q && (q.kind === 'single' || q.kind === 'quatre'))) && ((q && q.trap ? q.answerers[0] : g.round.player) === p.id);
         if (cur) cls += ' turn';
         const fin = g.round && g.round.type === 'champions' && g.round.finalists;
         if (fin && fin.includes(p.id)) { cls += ' turn'; badge += '<i>⚔️</i>'; }
         if (g.champion === p.id) badge += '<i>👑</i>';
         if (g.isFrozen(p)) badge += '<i>🧊</i>';
-        if (p.shield) badge += '<i title="Bouclier">🛡️</i>';
         if (p.streak >= 3) badge += `<i class="fire">🔥+${g.streakBonus(p)}</i>`;
-        if (p.cards.length) badge += `<i>🃏${p.cards.length}</i>`;
+        if (p.cards.length && g.phase !== 'lobby') badge += `<i title="${p.cards.map((c) => PQA.CARDS[c] ? PQA.CARDS[c].name : c).join(', ')}">${p.cards.map((c) => PQA.CARDS[c] ? PQA.CARDS[c].icon : '🃏').join('')}</i>`;
         if (p.bot) badge += `<i title="Ordinateur ${PQA.BOT_LEVELS[p.level].name}">🤖${PQA.BOT_LEVELS[p.level].icon}</i>`;
         const team = g.settings.teams ? `<span class="pod-team" style="background:${PQA.PALETTE.team[p.team]}"></span>` : '';
         const lobbyBtns = g.phase === 'lobby' ? `<button class="pod-x" data-act="kick" data-pid="${p.id}" title="Retirer">✖</button>` : '';
@@ -421,7 +420,7 @@
         const txt = libre && a && a.text ? `« ${esc(a.text)} »` : libre && r.wrongAnswer ? `« ${esc(r.wrongAnswer)} »` : '';
         const ov = libre && q.kind === 'single' && a && !g.irl ? ` data-act="override" data-pid="${p.id}" title="Cliquer pour corriger la validation"` : '';
         return `<div class="res ${r.correct ? 'good' : 'bad'}" style="--pc:${p.color}"${ov}>${avatarImg(p, r.correct ? 'happy' : 'sad', 'tiny')}<b>${esc(p.name)}</b> ${txt}
-          <span class="rpts">${r.hit ? '+1 ★' : r.correct ? '+' + r.pts + (r.bonus ? ` <small>🔥+${r.bonus}</small>` : '') : r.none ? '—' : '✖'}</span></div>`;
+          <span class="rpts">${r.hit ? '+1 ★' : r.trap && !r.correct ? r.pts : r.correct ? '+' + r.pts + (r.bonus ? ` <small>🔥+${r.bonus}</small>` : '') : r.none ? '—' : '✖'}</span></div>`;
       }).join('')}</div>`;
     }
 
@@ -438,7 +437,7 @@
       } else if (d.type === 'libre') {
         body = `<div class="q-libre">✍️ Réponse libre${g.irl ? ' : réponds à voix haute !' : ' : tape ta réponse sur ton téléphone'}</div>`;
       } else body = this.choicesHTML(q, false) + (g.irl && q.kind === 'single' ? '<div class="q-libre">🎤 Réponds à voix haute !</div>' : '');
-      const extra = r.type === 'mystere' ? `<div class="banner-pts">Niveau ${r.level} · ${PQA.pointsFor(r.level)} pts</div>` : r.type === 'table' ? `<div class="banner-pts">${r.cell.special === 'bonus' ? '⭐ Bonus · ' : r.cell.special === 'vol' ? '🦹 Vol sur ' + esc(g.name(r.victim)) + ' · ' : ''}Difficulté ${d.difficulte} · ${g.round.cellValue} pts</div>` : '';
+      const extra = q.trap ? `<div class="banner-pts">🪤 Question piégée par ${esc(g.name(q.trap.from))} · ${esc(q.trap.cat)} · +${PQA.TRAP.win} / −${PQA.TRAP.loss} pts</div>` : r.type === 'mystere' ? `<div class="banner-pts">Niveau ${r.level} · ${PQA.pointsFor(r.level)} pts</div>` : r.type === 'table' ? `<div class="banner-pts">${r.cell.special === 'bonus' ? '⭐ Bonus · ' : r.cell.special === 'vol' ? '🦹 Vol sur ' + esc(g.name(r.victim)) + ' · ' : ''}Difficulté ${d.difficulte} · ${g.round.cellValue} pts</div>` : '';
       return {
         key: 'q' + q.id,
         html: `<div class="question ${d.type}">
@@ -534,7 +533,9 @@
       const clues = n ? d.indices.map((c, i) => `<li class="${i < shown ? 'on' : ''} ${i === q.clue && !revealed ? 'cur' : ''}"><span class="cn">${i + 1}</span>${i < shown ? esc(c) : '? ? ?'}</li>`).join('') : '';
       const cur = b.current && g.players[b.current];
       const how = g.irl ? 'réponse à voix haute' : 'réponse à taper';
-      const banner = revealed ? '' : cur ? `<div class="buzz-banner" style="--pc:${cur.color}">${avatarImg(cur, 'buzz', 'tiny')} ${esc(cur.name)} a buzzé !${q.pending ? ' <small>(validation...)</small>' : ` <small>(${how})</small>`}</div>`
+      const friend = b.proxy && g.players[b.proxy];
+      const banner = revealed ? '' : cur && friend ? `<div class="buzz-banner" style="--pc:${friend.color}">📞 ${avatarImg(friend, 'buzz', 'tiny')} ${esc(friend.name)} répond pour ${esc(cur.name)} !${q.pending ? ' <small>(validation...)</small>' : ''}</div>`
+        : cur ? `<div class="buzz-banner" style="--pc:${cur.color}">${avatarImg(cur, 'buzz', 'tiny')} ${esc(cur.name)} a buzzé !${q.pending ? ' <small>(validation...)</small>' : ` <small>(${how})</small>`}</div>`
         : b.readyAt && performance.now() < b.readyAt ? `<div class="buzz-open wait">⏳ Lisez bien… buzz trop tôt = bloqué 2 s</div>`
         : champ ? `<div class="buzz-open">🔔 Buzzers ouverts · une erreur laisse la main à l’adversaire</div>`
         : `<div class="buzz-open">🔔 Buzzers ouverts · bonne réponse +${PQA.pointsFor(d.difficulte)} · raté = −${Math.round(PQA.pointsFor(d.difficulte) / 50) * 25}</div>`;
@@ -657,6 +658,19 @@
         key: 'cell' + c.i,
         html: `<div class="table-wrap"><div id="board"></div><div class="cell-card ${c.special || ''}"><div class="cell-cat">${c.icon} ${esc(c.cat)}</div>${special}</div></div>`,
         parts: { board: this.boardHTML() },
+      };
+    }
+    /* ---- Question piégée : l'annonce, avant la question ---- */
+    r_trap() {
+      const g = this.g, t = g.trap;
+      if (!t) return this.r_wait();
+      const from = g.players[t.from], to = g.players[t.target];
+      return {
+        key: 'trap' + t.from + t.target + t.cat,
+        html: `<div class="center-card">${to ? avatarImg(to, 'sad', 'huge') : ''}
+          <div class="cc-title">🪤 QUESTION PIÉGÉE !</div>
+          <div class="cc-sub">${from ? `<b style="color:${from.color}">${esc(from.name)}</b>` : '?'} piège ${to ? `<b style="color:${to.color}">${esc(to.name)}</b>` : '?'} en ${g.catIcon(t.cat)} ${esc(t.cat)}</div>
+          <div class="cc-sub">Niveau moyen · bonne réponse <b>+${PQA.TRAP.win}</b> · erreur <b>−${PQA.TRAP.loss}</b></div></div>`,
       };
     }
     r_target() {
@@ -847,8 +861,9 @@
         case 'points': if (p && d.pts) this.popAt(p.id, (d.pts > 0 ? '+' : '') + d.pts, d.pts > 0 ? '#a7f070' : '#e43b44'); break;
         case 'pop': if (p && d.text) this.popAt(p.id, d.text, '#ffcd75'); break;
         case 'streak': sfx.fire(); sfx.wow(); this.bigText(d.jackpot ? '4 À LA SUITE !' : `SÉRIE 🔥 +${d.bonus} / réponse`, p ? p.color : '#ef7d57'); this.shake(2); this.audience.cheer(1); break;
-        case 'card': { sfx.card(); const t = g.players[d.target]; this.bigText(`${PQA.CARDS[d.card].icon} ${p ? p.name : ''} ${t ? '→ ' + t.name : ''}`, '#b55088', PQA.CARDS[d.card].name.toUpperCase()); if (d.card === 'gel') sfx.freeze(); break; }
-        case 'cardGain': sfx.coin(); if (p) this.popAt(p.id, '🃏 Carte !', '#73eff7'); break;
+        case 'card': { sfx.card(); const t = g.players[d.target]; this.bigText(`${PQA.CARDS[d.card].icon} ${p ? p.name : ''} ${t ? '→ ' + t.name : ''}`, '#b55088', PQA.CARDS[d.card].name.toUpperCase() + (d.cat ? ' · ' + d.cat : '')); if (d.card === 'gel') sfx.freeze(); break; }
+        case 'trapIntro': music.sting('transition'); sfx.whoosh(); sfx.ooh(0.6); this.shake(1); break;
+        case 'friendCall': sfx.card(); this.audience.cheer(0.8); { const f = g.players[d.friend]; if (f) this.bigText('📞 ' + f.name, f.color, 'APPEL À UN AMI'); } break;
         case 'trap': sfx.explosion(); sfx.ooh(0.8); this.shake(3); this.flash('#e43b44'); break;
         case 'double': sfx.coin(); sfx.wow(0.8); this.audience.cheer(1); break;
         case 'steal': sfx.card(); break;

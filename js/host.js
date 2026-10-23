@@ -236,6 +236,13 @@
         if (!q || game.phase !== 'reveal') return;
         const res = q.results[pid], p = game.players[pid];
         if (!res || !p) return;
+        if (q.trap) {
+          // Question piégée : on bascule entre +300 et −200.
+          const T = PQA.TRAP, pts = res.correct ? -T.loss : T.win;
+          p.score += pts - res.pts; res.correct = !res.correct; res.pts = pts; res.none = false;
+          PQA.sfx.select();
+          return game.changed();
+        }
         if (res.correct) { p.score -= res.pts; res.correct = false; res.pts = 0; }
         else {
           const base = r.type === 'mystere' ? PQA.pointsFor(r.level) : r.type === 'table' ? r.cellValue : PQA.pointsFor(q.data.difficulte);
@@ -252,9 +259,9 @@
       },
       backToLobby() {
         game.clearJobs(); game.stopTimer();
-        game.phase = 'lobby'; game.round = null; game.q = null; game.paused = false; game.champion = game.runnerUp = null;
+        game.phase = 'lobby'; game.round = null; game.q = null; game.traps = []; game.trap = null; game.trapNext = null; game.paused = false; game.champion = game.runnerUp = null;
         game.activePlayers().forEach((p) => {
-          p.score = 0; p.streak = 0; p.bestStreak = 0; p.cards = []; p.stolenBy = null; p.bomb = null; p.shield = false; p.mirror = false;
+          p.score = 0; p.streak = 0; p.bestStreak = 0; p.cards = [];
           p.prevRank = p.curRank = null;
           Object.keys(p.stats).forEach((k) => (p.stats[k] = typeof p.stats[k] === 'boolean' ? false : k === 'fastest' ? null : k === 'worstRank' ? 1 : 0));
         });

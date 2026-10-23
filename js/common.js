@@ -107,17 +107,15 @@
     table: ['Chacun son tour, choisis une case sur le plateau, puis réponds seul à sa question.', 'Le thème et le niveau (facile, moyen, difficile, expert) sont cachés : plus la question est dure, plus elle rapporte (75 à 300 pts).', '💣 Piège : tu perds des points. ⭐ Bonus : +100 pts si tu trouves. 🦹 Vol : si tu trouves, les points sont pris à l’adversaire de ton choix.'],
     quatre: ['Chacun son tour, en commençant par le 1er du classement, choisis un thème. Un thème pris n’est plus disponible.', 'Le « thème mystère » en tire un au hasard.', 'Tu as 40 secondes : chaque bonne réponse vaut 50 pts, une erreur remet ta série à zéro.', '💰 4 bonnes réponses d’affilée = JACKPOT de 200 pts !'],
     fourchette: ['Une question dont la réponse est un nombre ou une date.', 'Donne UNE seule valeur sur ton téléphone, il faut viser pile.', 'Le plus proche marque 200 pts, le 2e 100, le 3e 50, le 4e 25.', '🎯 Pile = +500 pts en bonus ! Ex æquo = mêmes points.'],
-    champions: ['Les 2 meilleurs du classement s’affrontent au buzzer.', 'Les indices tombent un à un : buzze dès que tu as trouvé.', 'Raté ? Tu reprends la main dès que ton adversaire a répondu ou qu’un nouvel indice tombe.', 'Le premier à 3 ★ gagne la partie, quel que soit son score !'],
+    champions: ['Les 2 meilleurs du classement s’affrontent au buzzer.', 'Les indices tombent un à un : buzze dès que tu as trouvé.', 'Raté ? Tu reprends la main dès que ton adversaire a répondu ou qu’un nouvel indice tombe.', '📞 Appel à un ami : une fois dans le duel, après avoir buzzé, tu peux laisser un joueur éliminé répondre à ta place.', 'Le premier à 3 ★ gagne la partie, quel que soit son score !'],
     duel: ['Buzze le premier et réponds juste pour frapper ton adversaire.', 'Une erreur te fait perdre de la vie.', 'Le premier K.O. a perdu !'],
   };
   Object.keys(RULES).forEach((k) => (PQA.ROUNDS[k].rules = RULES[k]));
 
+  /* Cartes : chaque joueur commence la partie avec les deux, et chacune ne sert qu'une fois. */
   PQA.CARDS = {
-    gel: { name: 'Gel', icon: '🧊', desc: 'Gèle le buzzer et les réponses d’un adversaire pendant 5 secondes.', target: true },
-    inverse: { name: 'Miroir', icon: '🪞', desc: 'Les choix de l’adversaire s’affichent à l’envers et dans le désordre à la prochaine question.', target: true },
-    vol: { name: 'Pickpocket', icon: '🦹', desc: 'Tu empoches la moitié des prochains points que gagne l’adversaire.', target: true },
-    bombe: { name: 'Bombe', icon: '💣', desc: 'Si l’adversaire rate sa prochaine question, il perd 100 pts… et tu les gagnes. S’il trouve, la bombe est désamorcée.', target: true },
-    bouclier: { name: 'Bouclier', icon: '🛡️', desc: 'Bloque la prochaine carte qu’on joue contre toi.', target: false },
+    gel: { name: 'Gel', icon: '🧊', desc: 'Gèle le buzzer et les réponses d’un adversaire pendant 5 secondes.' },
+    piege: { name: 'Question piégée', icon: '🪤', desc: 'Envoie à l’adversaire de ton choix une question de niveau moyen, sur le thème que tu choisis : +300 pts pour lui s’il trouve, −200 s’il se trompe.' },
   };
 
   PQA.shuffle = function (arr) {
