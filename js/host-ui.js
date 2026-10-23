@@ -783,13 +783,19 @@
     }
 
     /* ======================= Présentateur virtuel ================== */
-    say(text, expr) {
+    /** `spoken` : texte à dire s'il diffère du texte affiché (répliques du chat). */
+    say(text, expr, spoken) {
       this.expr = expr || 'neutral';
       this.typing = { text, i: 0, last: 0 };
       // Deux répliques d'affilée (« C'est parti ! » puis l'annonce de la manche) : on dit les deux.
       const t = performance.now(), same = t - (this.lastSay || 0) < 50;
       this.lastSay = t;
-      if (this.g.settings.mode !== 'irl') voice.speak(text, { queue: same });
+      if (this.g.settings.mode !== 'irl') voice.speak(spoken || text, { queue: same });
+    }
+    /** Dit une réplique sans rien couper : seulement si Pixou est silencieux. */
+    sayAside(text) {
+      if (this.g.settings.mode === 'irl' || voice.playing || voice.queue.length) return;
+      voice.speak(text, { queue: true });
     }
     /** Lit la question (ou le nouvel indice) juste après la réplique du présentateur. */
     readAloud(fn) {

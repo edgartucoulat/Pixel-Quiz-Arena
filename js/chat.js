@@ -156,13 +156,28 @@
       'Range ta grossièreté, {name}, et sors ton cerveau. Ah, tu n’en as pas pris ?', 'Insulter le présentateur ? Audacieux, {name}. Débile, mais audacieux.',
     ],
   };
+  /**
+   * Version dite à voix haute : sans le prénom quand Pixou interpelle (« Personne n’a demandé, {name}. »),
+   * pour que la phrase soit enregistrée une fois pour toutes dans la banque de voix.
+   */
+  function spoken(line) {
+    const s = line
+      .replace(/^\{name\}\s*,\s*/, '')
+      .replace(/(:\s*)\{name\}\s*,\s*/g, '$1')
+      .replace(/([.!?…]\s+)\{name\}\s*,\s*(\S)/g, (_, a, c) => a + c.toUpperCase())
+      .replace(/\s*,\s*\{name\}(?=\s*[,.!?…:])/g, '')
+      .replace(/\b(Pardon|pardon|Oui|Salut|Coucou|Bonjour|Wesh|Bienvenue|Allez|Attention) \{name\}/g, '$1');
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+  const fill = (line, vars) => line.replace(/\{(\w+)\}/g, (_, k) => (vars[k] != null ? vars[k] : ''));
   const recent = [];
+  /** Une réplique au hasard : { text } pour le chat, { spoken } pour la voix. */
   function canned(kind, vars) {
     const list = CANNED[kind] || CANNED.generic;
     const pool = list.filter((l) => !recent.includes(l));
     const line = (pool.length ? pool : list)[Math.floor(Math.random() * (pool.length || list.length))];
     recent.push(line); if (recent.length > 40) recent.shift();
-    return line.replace(/\{(\w+)\}/g, (_, k) => (vars[k] != null ? vars[k] : ''));
+    return { text: fill(line, vars), spoken: fill(spoken(line), vars) };
   }
   /** Devine le genre de message, pour choisir une réplique toute faite. */
   const pick = (a, b) => (Math.random() < 0.4 ? a : b);
@@ -191,7 +206,7 @@
   }
 
   class Chat {
-    /** hooks : { broadcast(msg), pixouSpeak(text) } */
+    /** hooks : { broadcast(msg), pixouSpeak(text, spoken) } */
     constructor(game, hooks) {
       this.g = game;
       this.hooks = hooks;
@@ -242,13 +257,13 @@
       if (bad) want = since > 3000;
       if (!want) return;
       this.busy = true;
-      const done = (text) => {
+      const done = (line) => {
         this.busy = false;
-        text = text && PQA.cleanChat(text, 240);
+        const text = line && PQA.cleanChat(line.text, 240);
         if (!text) return;
         this.lastPixou = Date.now();
         this.add({ who: 'pixou', name: 'Pixou', text });
-        this.hooks.pixouSpeak && this.hooks.pixouSpeak(text);
+        this.hooks.pixouSpeak && this.hooks.pixouSpeak(text, line.spoken);
       };
       const rank = this.g.ranking(), p = this.g.players[entry.pid];
       const vars = { name: entry.name, leader: rank[0] ? rank[0].name : entry.name, score: p ? p.score : 0, rank: p ? this.g.rankOf(p) : 1, total: this.g.phase === 'lobby' ? 0 : rank.length };
@@ -260,4 +275,6 @@
 
   PQA.Chat = Chat;
   PQA.pixouCanned = canned;
+  PQA.CHAT_LINES = CANNED; // pour scripts/voice-lines.js
+  PQA.chatSpoken = spoken;
 })();
