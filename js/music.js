@@ -108,20 +108,18 @@
     /** Réessaie la piste courante depuis un geste, sans attendre un changement de phase. */
     resume() {
       const c = this.cur;
-      if (!c) {
-        // Appelé par sfx.unlock() dans le clic de création de salle, avant
-        // les chargements réseau. Le gain reste nul : aucun son parasite.
-        if (this.player && !this.primed && !this.priming) {
-          this.priming = true;
-          this.player.play().then(() => {
-            this.primed = true;
-            if (!this.cur) this.player.pause();
-          }).catch((e) => console.warn('Activation musique impossible', e))
-            .finally(() => { this.priming = false; });
-        }
-        return;
+      // Appelé par sfx.unlock() depuis un geste. Le lecteur doit être amorcé
+      // dans ce geste même si une piste attend déjà son départ (minuterie) :
+      // sinon son play() différé serait refusé sur iPhone. Gain nul : aucun son parasite.
+      if (this.player && !this.primed && !this.priming && (!c || c.timer != null)) {
+        this.priming = true;
+        this.player.play().then(() => {
+          this.primed = true;
+          if (!this.cur) this.player.pause();
+        }).catch((e) => console.warn('Activation musique impossible', e))
+          .finally(() => { this.priming = false; });
       }
-      if (c.timer != null || !c.audio.paused) return;
+      if (!c || c.timer != null || !c.audio.paused) return;
       c.audio.play().catch((e) => console.warn('Musique bloquée', e));
     }
     fadeOut() {

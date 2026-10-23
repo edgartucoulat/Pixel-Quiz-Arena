@@ -185,12 +185,37 @@
       if (!this.buffers.has(id)) {
         const pending = fetch(BANK_DIR + id + '.webm')
           .then((r) => { if (!r.ok) throw new Error('Voix HTTP ' + r.status); return r.arrayBuffer(); })
-          .then((bytes) => new Promise((resolve, reject) => ctx.decodeAudioData(bytes, resolve, reject)))
+          .then((bytes) => new Promise((resolve, reject) => ctx.decodeAudioData(bytes, resolve,
+            (e) => reject(Object.assign(new Error('Voix non décodable'), { name: 'DecodeError', cause: e })))))
           .catch((e) => { this.buffers.delete(id); throw e; });
         this.buffers.set(id, pending);
         if (this.buffers.size > 12) this.buffers.delete(this.buffers.keys().next().value);
       }
       return this.buffers.get(id);
+    },
+    /** Joue un morceau enregistré avec un lecteur <audio> (sans Web Audio, ou s'il ne décode pas le fichier). */
+    playElement(seg, p, done) {
+      const a = (p.audio = new Audio(BANK_DIR + seg.id + '.webm'));
+      a.volume = Math.min(1, this.volume);
+      a.onended = done;
+      // Fichier illisible (navigateur sans Opus, réseau) : on tente le direct.
+      a.onerror = () => { if (this.playing !== p) return; if (this.mode.live) { delete seg.id; this.queue.unshift({ text: prepare(seg.text, seg.kind), kind: seg.kind }); } done(); };
+      p.retry = () => {
+        p.blocked = false;
+        a.play().catch((e) => {
+          if (this.playing !== p) return;
+          if (e.name === 'NotAllowedError') {
+            p.blocked = true;
+            this.setTalking(false);
+          } else if (a.onerror) a.onerror();
+        });
+      };
+      a.onplaying = () => { if (this.playing === p) this.setTalking(true); };
+      p.retry();
+      p.watch = setTimeout(done, 30000);
+      // Précharge le morceau suivant.
+      const nx = this.queue[0];
+      if (nx && nx.id) { const pre = new Audio(BANK_DIR + nx.id + '.webm'); pre.preload = 'auto'; }
     },
     next() {
       const seg = this.queue.shift();
@@ -198,7 +223,7 @@
       this.setTalking(true);
       const p = (this.playing = { seg });
       const done = () => { if (this.playing === p) { clearTimeout(p.watch); this.next(); } };
-      if (seg.id && PQA.sfx && PQA.sfx.ctx) {
+      if (seg.id && PQA.sfx && PQA.sfx.ctx && !this.decodeBroken) {
         // Le contexte des effets est déverrouillé au toucher. Contrairement à un
         // nouvel élément Audio par phrase, les voix suivantes partagent ce contexte.
         const ctx = PQA.sfx.ctx;
@@ -216,36 +241,16 @@
         }).catch((e) => {
           if (this.playing !== p) return;
           console.warn('Lecture de voix impossible', e);
-          if (this.mode.live) this.queue.unshift({ text: prepare(seg.text, seg.kind), kind: seg.kind });
-          done();
+          clearTimeout(p.watch);
+          // Décodage refusé (WebM non pris en charge par le Web Audio de ce
+          // navigateur) : le lecteur <audio> sait souvent lire le même fichier.
+          if (e && e.name === 'DecodeError') this.decodeBroken = true;
+          this.playElement(seg, p, done);
         });
         p.watch = setTimeout(done, 30000); // garde-fou réseau, annulé une fois décodé
         return;
       }
-      if (seg.id) {
-        const a = (p.audio = new Audio(BANK_DIR + seg.id + '.webm'));
-        a.volume = Math.min(1, this.volume);
-        a.onended = done;
-        // Fichier illisible (navigateur sans Opus, réseau) : on tente le direct.
-        a.onerror = () => { if (this.playing !== p) return; if (this.mode.live) { delete seg.id; this.queue.unshift({ text: prepare(seg.text, seg.kind), kind: seg.kind }); } done(); };
-        p.retry = () => {
-          p.blocked = false;
-          a.play().catch((e) => {
-            if (this.playing !== p) return;
-            if (e.name === 'NotAllowedError') {
-              p.blocked = true;
-              this.setTalking(false);
-            } else if (a.onerror) a.onerror();
-          });
-        };
-        a.onplaying = () => { if (this.playing === p) this.setTalking(true); };
-        p.retry();
-        p.watch = setTimeout(done, 30000);
-        // Précharge le morceau suivant.
-        const nx = this.queue[0];
-        if (nx && nx.id) { const pre = new Audio(BANK_DIR + nx.id + '.webm'); pre.preload = 'auto'; }
-        return;
-      }
+      if (seg.id) return this.playElement(seg, p, done);
       if (!('speechSynthesis' in window) || !this.live) return done();
       const u = (p.utter = new SpeechSynthesisUtterance(seg.text));
       u.voice = this.live;
