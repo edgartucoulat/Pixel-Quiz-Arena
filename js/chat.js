@@ -273,8 +273,31 @@
     }
   }
 
+  // Piques de partie : phrases déjà présentes dans la banque vocale du chat.
+  const GAME_ROASTS = {
+    wrong: [
+      'Bel effort, {name}. Inutile, mais bel effort.',
+      'Ta culture générale tient sur un post-it, {name}. Et il reste de la place.',
+      '{name}, si la bêtise rapportait des points, tu aurais le titre mondial.',
+      'Concentre-toi, nullos. Enfin, essaie.',
+    ],
+    timeout: [
+      '{name}, ton cerveau est en mode avion ?',
+      'Et sinon, {name}, tu joues de temps en temps ?',
+      'Concentre-toi, nullos. Enfin, essaie.',
+    ],
+  };
+  PQA.GAME_ROASTS = GAME_ROASTS;
+  PQA.gameRoast = (kind, name, previous) => {
+    const lines = GAME_ROASTS[kind] || GAME_ROASTS.wrong;
+    const candidates = lines.filter((line) => spoken(line) !== previous);
+    const line = candidates[Math.floor(Math.random() * candidates.length)];
+    return { text: `${name} : ${spoken(line)}`, spoken: spoken(line) };
+  };
+
   PQA.Chat = Chat;
   PQA.pixouCanned = canned;
   PQA.CHAT_LINES = CANNED; // pour scripts/voice-lines.js
   PQA.chatSpoken = spoken;
 })();
+
