@@ -73,6 +73,8 @@
   const CELL_LEVELS = { 1: { name: 'Facile', diff: 3 }, 2: { name: 'Moyen', diff: 5 }, 3: { name: 'Difficile', diff: 7 }, 4: { name: 'Expert', diff: 9 } };
   PQA.CELL_LEVELS = CELL_LEVELS;
   const CELL_BONUS = 100; // case étoile : bonus si bonne réponse
+  const FOURCHETTE_RANK_PTS = [200, 100, 50, 25]; // Fourchette : points selon le rang (1er, 2e...)
+  const FOURCHETTE_PILE = 500; // Fourchette : bonus pour une réponse pile
   const BOMB = 100;       // carte bombe : points perdus par la cible (et gagnés par le poseur)
 
   /* Joueurs ordinateur (mode Solo) : justesse, vitesse de réponse et de buzz,
@@ -886,19 +888,10 @@
 
     /**
      * Fourchette : chacun donne UNE valeur et doit viser pile.
-     *  - pile (écart ≤ tolérance, plafonnée à 2 % de la réponse) : 500 pts
-     *  - sinon 200 × exp(-2,5 × écart / échelle), ça chute vite (à 1 près sur 47 : ~150 pts) :
-     *      dates : écart rapporté à l'amplitude des bornes, échelle 5 %
-     *      quantités : plus petit écart relatif (à la réponse ou aux bornes), échelle 10 %
-     *  - moins de 30 pts = raté (0) ; sinon le plus proche touche +50
+     * Points au classement : le plus proche 200, le 2e 100, le 3e 50, le 4e 25, au-delà 0 (= raté).
+     * Ex æquo : même rang, mêmes points (deux 1ers à 200, le suivant est 3e).
+     * Pile (écart ≤ tolérance, plafonnée à 2 % de la réponse) : +500 en plus, et compte comme écart nul.
      */
-    fourchetteGap(d, x) {
-      const [lo, hi] = d.bornes || [0, 0];
-      const gap = Math.abs(x - d.reponse);
-      const span = hi - lo || Math.abs(d.reponse) || 1;
-      if (d.unite === 'année') return gap / span / 0.05;
-      return Math.min(d.reponse ? gap / Math.abs(d.reponse) : Infinity, gap / span) / 0.1;
-    }
     scoreFourchette(q) {
       const d = q.data;
       const tol = Math.min(d.tolerance || 0, Math.abs(d.reponse) * 0.02);
@@ -908,21 +901,19 @@
         const a = q.answers[pid];
         if (!p) continue;
         if (!a) { q.results[pid] = { correct: false, pts: 0, none: true }; continue; }
-        const diff = Math.abs(a.value - d.reponse);
-        const exact = diff <= tol;
-        const base = exact ? 500 : Math.round(200 * Math.exp(-2.5 * this.fourchetteGap(d, a.value)));
-        scored.push({ pid, diff, exact, base });
+        const gap = Math.abs(a.value - d.reponse);
+        const exact = gap <= tol;
+        scored.push({ pid, gap, diff: exact ? 0 : gap, exact });
       }
       scored.sort((a, b) => a.diff - b.diff);
-      const best = scored.length ? scored[0].diff : null;
       scored.forEach((it) => {
         const p = this.players[it.pid];
         const rank = scored.findIndex((x) => x.diff === it.diff) + 1;
-        let base = it.base;
-        if (base < 30) { this.scoreWrong(p); q.results[it.pid] = { correct: false, pts: 0, rank, gap: it.diff }; return; }
-        if (it.diff === best) { base += 50; p.stats.fourchette++; }
+        const base = (FOURCHETTE_RANK_PTS[rank - 1] || 0) + (it.exact ? FOURCHETTE_PILE : 0);
+        if (!base) { this.scoreWrong(p); q.results[it.pid] = { correct: false, pts: 0, rank, gap: it.gap }; return; }
+        if (rank === 1) p.stats.fourchette++;
         const r = this.scoreCorrect(p, base, { diff: d.difficulte });
-        q.results[it.pid] = { correct: true, pts: r.pts, rank, exact: it.exact, gap: it.diff, bonus: r.bonus };
+        q.results[it.pid] = { correct: true, pts: r.pts, rank, exact: it.exact, gap: it.gap, bonus: r.bonus };
       });
       this.fx('drumroll');
     }
