@@ -88,6 +88,7 @@
     queue: [],
     playing: null,
     talking: false,
+    buffers: new Map(), // Courtes voix décodées : cache borné, pas toute la banque en mémoire.
 
     init() {
       if (this.inited) return;
@@ -171,6 +172,7 @@
       const p = this.playing;
       this.playing = null;
       if (p) { if (p.audio) { p.audio.onended = p.audio.onerror = null; p.audio.pause(); } clearTimeout(p.watch); }
+      if (p && p.source) { p.source.onended = null; p.source.stop(); p.source.disconnect(); p.gain.disconnect(); }
       if ('speechSynthesis' in window) speechSynthesis.cancel();
       this.setTalking(false);
     },
@@ -179,12 +181,47 @@
       this.talking = on;
       if (this.onTalk) this.onTalk(on);
     },
+    loadRecorded(id, ctx) {
+      if (!this.buffers.has(id)) {
+        const pending = fetch(BANK_DIR + id + '.webm')
+          .then((r) => { if (!r.ok) throw new Error('Voix HTTP ' + r.status); return r.arrayBuffer(); })
+          .then((bytes) => new Promise((resolve, reject) => ctx.decodeAudioData(bytes, resolve, reject)))
+          .catch((e) => { this.buffers.delete(id); throw e; });
+        this.buffers.set(id, pending);
+        if (this.buffers.size > 12) this.buffers.delete(this.buffers.keys().next().value);
+      }
+      return this.buffers.get(id);
+    },
     next() {
       const seg = this.queue.shift();
       if (!seg) { this.playing = null; this.setTalking(false); return; }
       this.setTalking(true);
       const p = (this.playing = { seg });
       const done = () => { if (this.playing === p) { clearTimeout(p.watch); this.next(); } };
+      if (seg.id && PQA.sfx && PQA.sfx.ctx) {
+        // Le contexte des effets est déverrouillé au toucher. Contrairement à un
+        // nouvel élément Audio par phrase, les voix suivantes partagent ce contexte.
+        const ctx = PQA.sfx.ctx;
+        this.loadRecorded(seg.id, ctx).then((buffer) => {
+          if (this.playing !== p) return; // question remplacée pendant le chargement
+          clearTimeout(p.watch);
+          const source = (p.source = ctx.createBufferSource());
+          const gain = (p.gain = ctx.createGain());
+          gain.gain.value = Math.max(0, Math.min(1, this.volume));
+          source.buffer = buffer;
+          source.connect(gain); gain.connect(ctx.destination);
+          source.onended = () => { source.disconnect(); gain.disconnect(); done(); };
+          source.start();
+          // Pas de minuterie murale : un contexte suspendu reprend au prochain geste.
+        }).catch((e) => {
+          if (this.playing !== p) return;
+          console.warn('Lecture de voix impossible', e);
+          if (this.mode.live) this.queue.unshift({ text: prepare(seg.text, seg.kind), kind: seg.kind });
+          done();
+        });
+        p.watch = setTimeout(done, 30000); // garde-fou réseau, annulé une fois décodé
+        return;
+      }
       if (seg.id) {
         const a = (p.audio = new Audio(BANK_DIR + seg.id + '.webm'));
         a.volume = Math.min(1, this.volume);
@@ -242,4 +279,5 @@
     init: () => V.init(), speak: (t) => V.speak(t), stop: () => V.stop(),
   };
 })();
+
 
