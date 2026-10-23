@@ -26,11 +26,14 @@ test('ties share the rank and the points', () => {
   assert.deepEqual(pts(r), { a: 200, b: 200, c: 50 });
   assert.equal(r.c.rank, 3);
 });
-test('an exact answer adds the 500 bonus; answers within tolerance count as exact', () => {
+test('an exact answer scores a flat 500; answers within tolerance count as exact', () => {
   const r = score({ a: 100, b: 101, c: 90 }, { tolerance: 1 });
-  assert.deepEqual(pts(r), { a: 700, b: 700, c: 50 });
+  assert.deepEqual(pts(r), { a: 500, b: 500, c: 50 });
   assert.equal(r.a.exact, true);
 });
 test('no answer scores nothing', () => {
   assert.deepEqual(pts(score({ a: 50, b: null })), { a: 200, b: 0 });
+});
+test('after a single exact answer, the next closest is 2nd with 100', () => {
+  assert.deepEqual(pts(score({ a: 100, b: 90, c: 80 })), { a: 500, b: 100, c: 50 });
 });

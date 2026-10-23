@@ -76,7 +76,7 @@
   PQA.CELL_LEVELS = CELL_LEVELS;
   const CELL_BONUS = 100; // case étoile : bonus si bonne réponse
   const FOURCHETTE_RANK_PTS = [200, 100, 50, 25]; // Fourchette : points selon le rang (1er, 2e...)
-  const FOURCHETTE_PILE = 500; // Fourchette : bonus pour une réponse pile
+  const FOURCHETTE_PILE = 500; // Fourchette : points d'une réponse pile (à la place des points de rang)
   /* Carte Question piégée : une question de niveau moyen, sur le thème choisi par l'envoyeur. */
   const TRAP = { win: 300, loss: 200, diff: 5 };
   PQA.TRAP = TRAP;
@@ -889,7 +889,7 @@
      * Fourchette : chacun donne UNE valeur et doit viser pile.
      * Points au classement : le plus proche 200, le 2e 100, le 3e 50, le 4e 25, au-delà 0 (= raté).
      * Ex æquo : même rang, mêmes points (deux 1ers à 200, le suivant est 3e).
-     * Pile (écart ≤ tolérance, plafonnée à 2 % de la réponse) : +500 en plus, et compte comme écart nul.
+     * Pile (écart ≤ tolérance, plafonnée à 2 % de la réponse) : 500 fixes au lieu des 200, et compte comme écart nul.
      */
     scoreFourchette(q) {
       const d = q.data;
@@ -908,7 +908,7 @@
       scored.forEach((it) => {
         const p = this.players[it.pid];
         const rank = scored.findIndex((x) => x.diff === it.diff) + 1;
-        const base = (FOURCHETTE_RANK_PTS[rank - 1] || 0) + (it.exact ? FOURCHETTE_PILE : 0);
+        const base = it.exact ? FOURCHETTE_PILE : FOURCHETTE_RANK_PTS[rank - 1] || 0;
         if (!base) { this.scoreWrong(p); q.results[it.pid] = { correct: false, pts: 0, rank, gap: it.gap }; return; }
         if (rank === 1) p.stats.fourchette++;
         const r = this.scoreCorrect(p, base, { diff: d.difficulte });
