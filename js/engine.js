@@ -147,6 +147,27 @@
       if (text) { this.lastSay = { text, at: now() }; this.hooks.say(text, expr || 'neutral'); }
       return text;
     }
+    /** Une pique occasionnelle, ciblée sur un résultat réel, sans retarder le jeu. */
+    maybeRoast(candidates, q = this.q) {
+      const t = now();
+      if (this.irl || this.paused || this.settings.pixou === 'off' || !PQA.gameRoast || (q && q.roasted)) return false;
+      if (this.lastRoastAt != null && t - this.lastRoastAt < 25000) return false;
+      this.roastTargets = this.roastTargets || {};
+      const eligible = candidates.filter(({ pid }) => {
+        const p = this.players[pid];
+        return p && !p.spectator && (p.connected || p.local || p.bot)
+          && (this.roastTargets[pid] == null || t - this.roastTargets[pid] >= 60000);
+      });
+      if (!eligible.length || Math.random() >= 0.3) return false;
+      const target = pickOne(eligible);
+      const line = PQA.gameRoast(target.kind, this.name(target.pid), this.lastRoastSpoken);
+      this.lastRoastAt = t; this.roastTargets[target.pid] = t; this.lastRoastSpoken = line.spoken;
+      if (q) q.roasted = true;
+      this.lastSay = { text: line.text, at: t };
+      this.hooks.say(line.text, 'smug', line.spoken);
+      if (this.chat) this.chat.add({ who: 'pixou', name: 'Pixou', text: line.text });
+      return true;
+    }
     playerList() { return this.order.map((id) => this.players[id]).filter(Boolean); }
     activePlayers() { return this.playerList().filter((p) => !p.spectator); }
     connectedPlayers() { return this.activePlayers().filter((p) => p.connected || p.local); }
@@ -792,6 +813,13 @@
     }
 
     commentReveal(q, winners) {
+      const candidates = Object.entries(q.results).filter(([, r]) => !r.correct)
+        .map(([pid, r]) => ({ pid, kind: r.none || r.timeout ? 'timeout' : 'wrong' }));
+      // Ne pas reprocher de ne pas buzzer quand un autre a déjà gagné la question.
+      if (q.kind === 'buzz' && !winners.length) {
+        q.answerers.filter((pid) => !q.results[pid]).forEach((pid) => candidates.push({ pid, kind: 'timeout' }));
+      }
+      if (this.maybeRoast(candidates, q)) { q.tellAnecdote = false; return; }
       const vars = { text: q.data.anecdote };
       if (q.data.type === 'fourchette') {
         const w = Object.keys(q.results).find((pid) => q.results[pid].rank === 1 && q.results[pid].correct);
@@ -1037,7 +1065,8 @@
       delete q.answers[pid];
       this.fx('wrong', { pid });
       this.hooks.send(pid, { t: 'fx', fx: 'wrong' });
-      this.say(timeout ? 'timeout' : 'wrong', { name: p.name }, 'sad');
+      if (!this.maybeRoast([{ pid, kind: timeout ? 'timeout' : 'wrong' }], q))
+        this.say(timeout ? 'timeout' : 'wrong', { name: p.name }, 'sad');
       const remaining = q.answerers.filter((id) => !q.buzz.locked.includes(id) && this.players[id] && (this.players[id].connected || this.players[id].local));
       if (!remaining.length) { this.after(1200, () => this.reveal()); this.changed(); return; }
       q.buzz.open = true;
@@ -1304,6 +1333,7 @@
         this.fx('wrong', { pid });
         this.hooks.send(pid, { t: 'fx', fx: 'wrong' });
       }
+      if (!ok) r.run.hadWrong = true;
       r.run.last = { ok, answer: q.choices[q.correctIdx] };
       if (r.run.streak >= 4) {
         r.run.won = true;
@@ -1328,7 +1358,7 @@
       this.phase = 'qresult';
       this.q = null;
       if (r.run.won) this.say('streak5', { name: this.name(r.player), n: 4 }, 'surprised');
-      else this.say(r.run.best >= 2 ? 'correct' : 'teaseLast', { name: this.name(r.player), pts: r.run.correct * 50, last: this.name(r.player) }, r.run.best >= 2 ? 'happy' : 'smug');
+      else if (!this.maybeRoast([{ pid: r.player, kind: r.run.hadWrong ? 'wrong' : 'timeout' }])) this.say(r.run.best >= 2 ? 'correct' : 'teaseLast', { name: this.name(r.player), pts: r.run.correct * 50, last: this.name(r.player) }, r.run.best >= 2 ? 'happy' : 'smug');
       if (this.auto) this.after(5000, () => this.quatreNextPlayer());
       this.changed();
     }
@@ -1769,3 +1799,4 @@
   PQA.Game = Game;
   PQA.TIMES = TIMES;
 })();
+

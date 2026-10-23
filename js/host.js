@@ -64,7 +64,7 @@
     const game = new PQA.Game(data.bank, data.categories, {
       changed: () => scheduleFlush(),
       fx: (n, d) => ui && ui.fx(n, d),
-      say: (text, expr) => { if (ui) ui.say(text, expr); },
+      say: (text, expr, spoken) => { if (ui) ui.say(text, expr, spoken); },
       send: (pid, msg) => conns.forEach((c) => c.pid === pid && send(c, msg)),
       toast: (t) => ui && ui.toast(t),
     });
@@ -267,4 +267,5 @@
 
   boot();
 })();
+
 
