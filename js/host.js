@@ -119,10 +119,13 @@
         conns.forEach((c) => c.role !== 'presenter' && send(c, msg));
         if (ui && !PHONES) ui.chatFeed(msg.m);
       },
-      pixouSpeak(text) {
+      pixouSpeak(text, spoken) {
         if (!ui || PHONES) return;
-        // Sur la TV : la réplique s'affiche dans le fil du chat, et Pixou la dit quand il ne lit pas de question.
-        if (['lobby', 'leaderboard', 'end'].includes(game.phase)) ui.say(text, 'smug');
+        // Sur la TV : la réplique s'affiche dans le fil du chat et Pixou la dit à voix haute.
+        // Entre deux questions, il la dit dans sa bulle ; pendant une question, seulement s'il ne parle pas déjà,
+        // et sans couper la lecture de la question.
+        if (['lobby', 'leaderboard', 'end'].includes(game.phase)) ui.say(text, 'smug', spoken);
+        else ui.sayAside(spoken || text);
       },
     });
     game.chat = chat;
