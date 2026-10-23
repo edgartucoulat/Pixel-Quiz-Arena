@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""PIXEL QUIZ ARENA - Compose et enregistre la musique de l'émission.
+"""PIXEL QUIZ ARENA - Compose et enregistre les jingles de l'émission.
 
     pip install mido      (et fluidsynth + ffmpeg installés)
     python3 scripts/compose_music.py [chemin/vers/banque.sf2]
@@ -7,11 +7,13 @@
 Toutes les musiques sont composées ici (aucune reprise), puis jouées par de
 vrais instruments échantillonnés : la banque de sons libre FluidR3_GM
 (licence MIT, paquet Debian/Ubuntu « fluid-soundfont-gm »). Le résultat est
-écrit dans audio/music/ en Opus : des boucles d'ambiance (sans couture) et
-des jingles joués une fois.
+écrit dans audio/music/ en Opus : les jingles joués une fois (ouverture,
+annonce de chaque manche, victoire). Les musiques de fond sont de vrais
+morceaux enregistrés : voir scripts/import_music.py.
 """
 import json
 import os
+import random
 import subprocess
 import sys
 import tempfile
@@ -49,12 +51,14 @@ def chord(sym, octave=3):
 
 
 # Instruments General MIDI
-PIANO, EPIANO, CELESTA, VIBES, ORGAN = 0, 4, 8, 11, 16
-ABASS, FBASS, SYNBASS = 32, 33, 38
-STRINGS, SLOWSTR, PIZZ, HARP, TIMP, TREM = 48, 49, 45, 46, 47, 44
+PIANO, BPIANO, EPIANO, CLAV, CELESTA, VIBES, ORGAN = 0, 1, 4, 7, 8, 11, 16
+ABASS, FBASS, SLAPBASS, SYNBASS = 32, 33, 36, 38
+STRINGS, SLOWSTR, SYNSTR, PIZZ, HARP, TIMP, TREM = 48, 49, 50, 45, 46, 47, 44
 CHOIR, TRUMPET, TROMBONE, HORN, BRASS, FLUTE, PAD = 52, 56, 57, 60, 61, 73, 89
+SQLEAD, SAWLEAD = 80, 81
 DR = 9  # canal batterie
-KICK, SIDE, SNARE, HAT, PHAT, OHAT, CRASH, RIDE, LTOM, MTOM, HTOM, WOOD, SHAKER, TRI = 36, 37, 38, 42, 44, 46, 49, 51, 45, 47, 50, 76, 70, 81
+KICK, SIDE, SNARE, CLAP, HAT, PHAT, OHAT, CRASH, RIDE, TAMB = 36, 37, 38, 39, 42, 44, 46, 49, 51, 54
+LTOM, MTOM, HTOM, WOOD, SHAKER, TRI = 45, 47, 50, 76, 70, 81
 
 
 class Song:
@@ -62,6 +66,7 @@ class Song:
         self.bpm = bpm
         self.beats = beats  # longueur de boucle (en temps) ; None = jingle
         self.ev = []
+        self.rng = random.Random(bpm * 1000 + (beats or 0))  # même partition à chaque fois
         self.progs = {}
         self.vols = {}
 
@@ -70,7 +75,11 @@ class Song:
         self.vols[ch] = vol
 
     def n(self, ch, t, pitch, dur, vel=80):
-        self.ev.append((t, ch, pitch, dur, vel))
+        # Un vrai musicien n'est jamais pile sur la grille : un poil de décalage
+        # et de nuance rend le tout vivant au lieu de mécanique.
+        r = self.rng
+        t = max(0, t + r.uniform(-0.012, 0.012))
+        self.ev.append((t, ch, pitch, dur, vel + r.randint(-7, 7)))
 
     def ch(self, ch, t, pitches, dur, vel=70):
         for p in pitches:
@@ -92,7 +101,7 @@ class Song:
         for c, p in self.progs.items():
             msgs.append((0, mido.Message('program_change', channel=c, program=p)))
             msgs.append((0, mido.Message('control_change', channel=c, control=7, value=self.vols[c])))
-            msgs.append((0, mido.Message('control_change', channel=c, control=91, value=50)))  # réverbération
+            msgs.append((0, mido.Message('control_change', channel=c, control=91, value=32)))  # réverbération (sèche = plus punchy)
         span = self.beats or 0
         for r in range(repeat):
             for t, c, p, d, v in self.ev:
@@ -122,143 +131,19 @@ def render(song, name, loudness):
         subprocess.run(['fluidsynth', '-ni', '-q', '-g', '0.6', '-r', str(RATE), '-F', wav, SF2, mid],
                        check=True, capture_output=True)
         dest = os.path.join(OUT, name + '.webm')
+        # Mastering façon émission de télé : compresseur (ça colle et ça pousse),
+        # un peu plus de grave et de brillance.
+        master = 'acompressor=threshold=-20dB:ratio=3.5:attack=8:release=140:makeup=3,bass=g=3:f=90,treble=g=3:f=7000'
         if loop:
             L = song.seconds(song.beats)
-            af = f'atrim=start={L:.4f}:end={2 * L:.4f},asetpts=PTS-STARTPTS,loudnorm=I={loudness}:TP=-2:LRA=11'
+            af = f'{master},atrim=start={L:.4f}:end={2 * L:.4f},asetpts=PTS-STARTPTS,loudnorm=I={loudness}:TP=-1.5:LRA=8'
         else:
             af = (f'silenceremove=start_periods=1:start_threshold=-60dB,areverse,'
                   f'silenceremove=start_periods=1:start_threshold=-55dB,afade=t=in:d=0.4,areverse,'
-                  f'loudnorm=I={loudness}:TP=-1.5:LRA=11')
+                  f'{master},loudnorm=I={loudness}:TP=-1:LRA=8')
         subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', wav, '-af', af, '-ar', str(RATE),
                         '-c:a', 'libopus', '-b:a', '64k', dest], check=True)
     return dest
-
-
-# ======================================================================
-# Boucles d'ambiance
-# ======================================================================
-
-def theme():
-    """Accueil : lounge jazzy, piano électrique, contrebasse, balais."""
-    s = Song(100, beats=64)
-    s.inst(0, EPIANO, 90); s.inst(1, ABASS, 100); s.inst(2, VIBES, 75); s.inst(DR, 0, 70)
-    prog = ['Gm7', 'C7', 'Fmaj7', 'Dm7'] * 2 + ['Bbmaj7', 'Am7', 'Gm7', 'C7']*2
-    walk = {'Gm7': ['G2', 'A2', 'Bb2', 'B2'], 'C7': ['C3', 'E3', 'G2', 'E2'], 'Fmaj7': ['F2', 'A2', 'C3', 'E3'],
-            'Dm7': ['D3', 'C3', 'A2', 'Ab2'], 'Bbmaj7': ['Bb2', 'D3', 'F3', 'D3'], 'Am7': ['A2', 'G2', 'E2', 'Eb2']}
-    for bar, c in enumerate(prog):
-        t = bar * 4
-        notes = [p + 12 for p in chord(c, 3)[1:]]
-        s.ch(0, t + 0.0, notes, 1.4, 55)
-        s.ch(0, t + 2.5, notes, 1.2, 48)
-        s.seq(1, t, walk[c], 1, 85, 0.85)
-        for b in range(4):
-            s.n(DR, t + b, RIDE, 0.3, 45)
-            s.n(DR, t + b + 0.66, RIDE, 0.2, 30)
-        s.n(DR, t + 1, SIDE, 0.2, 40); s.n(DR, t + 3, SIDE, 0.2, 40)
-        s.n(DR, t, KICK, 0.3, 40)
-    mel = [('A4', 0, 1.5), ('C5', 1.5, 0.5), ('D5', 2, 2), ('E5', 4, 1), ('G5', 5, 1), ('F5', 6, 2),
-           ('E5', 8, 1.5), ('D5', 9.5, 0.5), ('C5', 10, 2), ('A4', 12, 4)]
-    for off in (16, 48):
-        for p, t, d in mel:
-            s.n(2, off + t, N(p), d, 60)
-    return s
-
-
-def bed(key):
-    """Fonds discrets pendant les manches."""
-    if key == 1:  # pizzicati et nappe, mystérieux mais léger
-        s = Song(108, beats=32)
-        s.inst(0, PIZZ, 95); s.inst(1, SLOWSTR, 60); s.inst(2, ABASS, 85); s.inst(DR, 0, 55)
-        for bar, c in enumerate(['Am', 'F', 'C', 'G'] * 2):
-            t = bar * 4
-            tones = chord(c, 4)
-            s.seq(0, t, [tones[0], tones[1], tones[2], tones[1], tones[0] + 12, tones[2], tones[1], tones[2]], 0.5, 70, 0.5)
-            s.ch(1, t, chord(c, 3), 4, 45)
-            s.n(2, t, chord(c, 2)[0], 1.8, 75); s.n(2, t + 2, chord(c, 2)[0] + 7, 1.8, 65)
-            for b in range(8):
-                s.n(DR, t + b * 0.5, SHAKER, 0.2, 35 if b % 2 else 50)
-    elif key == 2:  # piano en arpèges, chaleureux
-        s = Song(92, beats=32)
-        s.inst(0, PIANO, 85); s.inst(1, STRINGS, 55); s.inst(2, ABASS, 80); s.inst(DR, 0, 50)
-        for bar, c in enumerate(['D', 'Bm', 'G', 'A', 'D', 'Bm', 'Em', 'A']):
-            t = bar * 4
-            tones = chord(c, 4)
-            s.seq(0, t, [tones[0] - 12, tones[2] - 12, tones[0], tones[1], tones[2], tones[1], tones[0], tones[2] - 12], 0.5, 58, 1.6)
-            s.ch(1, t, chord(c, 3), 4, 40)
-            s.n(2, t, chord(c, 2)[0], 3.5, 70)
-            s.n(DR, t + 1, PHAT, 0.2, 30); s.n(DR, t + 3, PHAT, 0.2, 30)
-    else:  # pulsation « journal télé », basse synthé
-        s = Song(118, beats=32)
-        s.inst(0, SYNBASS, 85); s.inst(1, PAD, 70); s.inst(2, BRASS, 55); s.inst(DR, 0, 60)
-        for bar, c in enumerate(['Em', 'C', 'G', 'D'] * 2):
-            t = bar * 4
-            r = chord(c, 2)[0]
-            s.seq(0, t, [r, r, r + 12, r, r, r, r + 12, r + 7], 0.5, 75, 0.6)
-            s.ch(1, t, chord(c, 4), 4, 50)
-            if bar % 4 == 3:
-                s.ch(2, t + 3.5, chord(c, 4), 0.4, 60)
-            for b in range(4):
-                s.n(DR, t + b, KICK if b % 2 == 0 else SIDE, 0.2, 55 if b % 2 == 0 else 35)
-                s.n(DR, t + b + 0.5, HAT, 0.1, 30)
-    return s
-
-
-def leaderboard():
-    """Classement : piano et cordes, posé."""
-    s = Song(80, beats=32)
-    s.inst(0, PIANO, 90); s.inst(1, SLOWSTR, 60); s.inst(2, ABASS, 75); s.inst(3, FLUTE, 60)
-    for bar, c in enumerate(['C', 'Am', 'F', 'G', 'C', 'Em', 'F', 'G']):
-        t = bar * 4
-        s.ch(0, t, [p + 12 for p in chord(c, 3)], 1.9, 50)
-        s.ch(0, t + 2, [p + 12 for p in chord(c, 3)], 1.9, 42)
-        s.ch(1, t, chord(c, 3), 4, 45)
-        s.n(2, t, chord(c, 2)[0], 3.8, 65)
-    s.seq(3, 16, ['E5', 'G5', 'A5', None, 'G5', 'E5', 'D5', None, 'C5', 'D5', 'E5', None, 'D5', None, None, None], 1, 55)
-    return s
-
-
-def suspense(intense):
-    """Réflexion : deux versions calées l'une sur l'autre, le jeu passe de l'une à l'autre."""
-    s = Song(112, beats=32)
-    s.inst(0, STRINGS, 90); s.inst(1, TIMP, 90); s.inst(2, BRASS, 70); s.inst(3, TREM, 65); s.inst(DR, 0, 70)
-    for bar, c in enumerate(['Dm', 'Dm', 'Bb', 'A', 'Dm', 'Dm', 'Gm', 'A']):
-        t = bar * 4
-        r = chord(c, 2)[0] + 12
-        s.seq(0, t, [r, r, r + 12, r, r, r + 1 if c == 'A' else r, r + 12, r], 0.5, 72 if intense else 58, 0.5)
-        for b in range(4):
-            s.n(DR, t + b, WOOD, 0.1, 55 if b == 0 else 40)  # tic-tac
-        s.n(1, t, chord(c, 1)[0] + 12, 1.5, 70 if intense else 50)
-        if intense:
-            s.ch(3, t, chord(c, 4), 4, 55)
-            for b in range(8):
-                s.n(DR, t + b * 0.5, HAT, 0.1, 38)
-            s.n(DR, t, KICK, 0.3, 70); s.n(DR, t + 2, KICK, 0.3, 60)
-            if bar % 2 == 1:
-                s.ch(2, t + 3.5, chord(c, 3), 0.45, 75)
-                s.seq(DR, t + 3, [LTOM, MTOM, HTOM, None], 0.25, 70)
-    return s
-
-
-def finale():
-    """Après la victoire : fête, cuivres et batterie."""
-    s = Song(124, beats=32)
-    s.inst(0, BRASS, 85); s.inst(1, STRINGS, 70); s.inst(2, FBASS, 90); s.inst(3, PIANO, 70); s.inst(DR, 0, 80)
-    for bar, c in enumerate(['C', 'G', 'Am', 'F'] * 2):
-        t = bar * 4
-        s.ch(1, t, chord(c, 4), 4, 55)
-        s.seq(2, t, [chord(c, 2)[0], None, chord(c, 2)[0], chord(c, 2)[0] + 12] * 2, 0.5, 85, 0.8)
-        s.ch(3, t + 0.5, chord(c, 4), 0.4, 55); s.ch(3, t + 1.5, chord(c, 4), 0.4, 50)
-        s.ch(3, t + 2.5, chord(c, 4), 0.4, 55); s.ch(3, t + 3.5, chord(c, 4), 0.4, 50)
-        for b in range(4):
-            s.n(DR, t + b, KICK if b % 2 == 0 else SNARE, 0.2, 70)
-            s.n(DR, t + b + 0.5, HAT, 0.1, 45)
-            s.n(DR, t + b, HAT, 0.1, 35)
-        if bar == 0:
-            s.n(DR, t, CRASH, 1, 70)
-    mel = ['E5', 'G5', 'C6', 'B5', 'G5', None, 'D5', 'G5', 'C6', 'A5', 'E5', None, 'F5', 'A5', 'C6', 'A5']
-    s.seq(0, 0, mel, 1, 70, 0.85)
-    s.seq(0, 16, mel, 1, 75, 0.85)
-    return s
 
 
 # ======================================================================
@@ -398,28 +283,27 @@ def round_jingle(kind):
 
 
 CUES = {
-    # boucles (volume plus bas : c'est un fond)
-    'theme': (theme, -24), 'bed1': (lambda: bed(1), -26), 'bed2': (lambda: bed(2), -26), 'bed3': (lambda: bed(3), -26),
-    'leaderboard': (leaderboard, -25), 'suspense1': (lambda: suspense(False), -25), 'suspense2': (lambda: suspense(True), -25),
-    'finale': (finale, -22),
-    # jingles
-    'opening': (opening, -16), 'victory': (victory, -16), 'transition': (transition, -18),
+    'opening': (opening, -13), 'victory': (victory, -13), 'transition': (transition, -15),
 }
 for k in ['sprint', 'mystere', 'eclair', 'table', 'quatre', 'fourchette', 'champions', 'duel']:
-    CUES['round_' + k] = ((lambda k=k: round_jingle(k)), -17)
+    CUES['round_' + k] = ((lambda k=k: round_jingle(k)), -14)
 
 
 def main():
-    loops = {}
     for name, (make, lufs) in CUES.items():
-        song = make()
-        dest = render(song, name, lufs)
-        if song.beats:
-            loops[name] = round(song.seconds(song.beats), 4)
+        dest = render(make(), name, lufs)
         print(f'{name:18s} {os.path.getsize(dest) // 1024:4d} Ko', flush=True)
-    # Durée exacte des boucles : le lecteur boucle pile dessus (l'Opus ajoute un peu de remplissage).
-    with open(os.path.join(OUT, 'manifest.json'), 'w', encoding='utf-8') as f:
-        json.dump({'loops': loops, 'cues': sorted(CUES)}, f, indent=1)
+    # Les boucles de fond (scripts/import_music.py) sont gardées dans le manifeste.
+    path = os.path.join(OUT, 'manifest.json')
+    manifest = {}
+    if os.path.exists(path):
+        with open(path, encoding='utf-8') as f:
+            manifest = json.load(f)
+    loops = manifest.get('loops', {})
+    manifest['cues'] = sorted(set(CUES) | set(loops))
+    manifest['loops'] = loops
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(manifest, f, indent=1)
         f.write('\n')
 
 

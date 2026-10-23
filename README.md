@@ -117,7 +117,7 @@ Les insultes des joueurs sont masquées et le flood est limité. Pixou reste tou
 moque du score et des messages, jamais de la personne elle-même, et ne donne jamais la
 réponse d'une question en cours.
 
-Et aussi : anecdotes après chaque question, titres humoristiques en fin de partie. Les questions déjà
+Et aussi : anecdotes à l'écran après chaque question (Pixou en raconte une de temps en temps), titres humoristiques en fin de partie. Les questions déjà
 vues sont mémorisées par le navigateur du plateau, pour ne pas retomber dessus.
 
 ### Raccourcis clavier du plateau
@@ -154,7 +154,7 @@ presenter.html  Télécommande du présentateur IRL
 js/engine.js    Moteur de jeu : manches, scores, règles
 js/host-ui.js   Rendu du plateau, animations, sons
 js/audio.js     Effets sonores 8-bit synthétisés (buzzers, public, tambour…)
-js/music.js     Lecteur de musique (ambiances en boucle, jingles, suspense)
+js/music.js     Lecteur de musique (fonds en boucle, jingles, suspense)
 audio/music/    Musiques originales (générées par scripts/compose_music.py)
 js/voice.js     Voix du présentateur (enregistrements + voix naturelles du navigateur)
 audio/voice/    Voix enregistrée, générée automatiquement (ne pas modifier à la main)
@@ -220,15 +220,15 @@ Options d'URL utiles pour le développement :
 Tout est gratuit et sans serveur. Le bouton **🎚️ Réglages** du plateau règle séparément la
 **musique**, les **effets** et la **voix**, et indique quelle voix est utilisée.
 
-- **Musique** : des compositions originales jouées par de vrais instruments (orchestre,
-  cuivres, piano, timbales) : ambiance lounge à l'accueil, trois fonds discrets pendant les
-  manches, musique de réflexion qui se tend quand le chrono s'épuise, un **jingle d'annonce
-  différent pour chaque manche**, fanfares d'ouverture et de victoire. Elle baisse
-  automatiquement quand Pixou parle.
-  Les partitions sont écrites dans `scripts/compose_music.py` et jouées avec la banque de
-  sons libre **FluidR3_GM** (Frank Wen, licence MIT) :
-  `pip install mido && python3 scripts/compose_music.py` (fluidsynth, ffmpeg et le paquet
-  `fluid-soundfont-gm` requis). Aucune musique d'un tiers n'est utilisée.
+- **Musique** : de vrais morceaux enregistrés de **Kevin MacLeod** ([incompetech.com](https://incompetech.com),
+  licence [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/), crédit dans le panneau Sons et dans
+  `audio/music/CREDITS.txt`) : *Rollin at 5* à l'accueil et (accéléré) pendant les manches d'action,
+  *Spy Glass* (Thème mystère, Cases mystères), *Funky Chunk* (4 à la suite, Fourchette),
+  *Thinking Music* pendant les questions (il accélère quand le chrono s'épuise), *Hot Swing* au
+  classement et *Disco con Tutti* en fin de partie. Elle baisse automatiquement quand Pixou parle.
+  Le choix des morceaux est dans `scripts/import_music.py` (`python3 scripts/import_music.py`,
+  ffmpeg requis). Les jingles courts (ouverture, annonce de chaque manche, victoire) sont des
+  compositions originales (`scripts/compose_music.py`, banque de sons libre **FluidR3_GM**, MIT).
 - **Effets** : un buzzer différent par joueur, faux départ, roulement de tambour,
   applaudissements, « ooooh » déçu et « wouah » du public.
 - **Voix de Pixou** : pour éviter l'effet robot, deux sources sont combinées.

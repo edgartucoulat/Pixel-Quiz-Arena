@@ -77,7 +77,8 @@
         <label class="sp-row">Voix de Pixou <select data-k="voice"></select></label>
         <label class="sp-check"><input type="checkbox" data-k="robot"> Voix robotique en secours</label>
         <div class="sp-info"></div>
-        <button class="ctl" data-sp="test">▶ Tester la voix</button>`;
+        <button class="ctl" data-sp="test">▶ Tester la voix</button>
+        <div class="sp-info sp-credit">Musiques : Kevin MacLeod (incompetech.com), licence CC BY 4.0</div>`;
       this.app.appendChild(el);
       el.addEventListener('input', (e) => {
         const k = e.target.dataset.k;
