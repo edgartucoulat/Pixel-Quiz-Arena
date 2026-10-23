@@ -348,7 +348,7 @@
         <div class="set-row"><label>Durée</label>${seg('length', [['court', 'Courte'], ['normal', 'Normale'], ['long', 'Longue']], s.length)}</div>
         `}
         <div class="set-row"><label>Options</label><div class="seg toggles">${duel ? '' : `<button data-act="set" data-key="cards" data-val="${s.cards ? 0 : 1}" class="${s.cards ? 'on' : ''}">🃏 Coups bas</button>`}${s.mode === 'solo' || s.localDuel ? '' : `<button data-act="set" data-key="hostPlays" data-val="${s.hostPlays ? 0 : 1}" class="${s.hostPlays ? 'on' : ''}" title="Une manette s’affiche dans le coin de cet écran">🎮 Je joue aussi sur cet écran</button>`}</div></div>
-        <div class="set-row"><label>Chat</label>${seg('pixou', [['ai', '🧠 Pixou IA'], ['canned', '🎲 Répliques'], ['off', '🤐 Muet']], g.chat ? g.chat.pixouMode : s.pixou)}<span class="set-note">${g.chat && g.chat.aiURL ? 'Pixou répond aux messages des joueurs' : 'IA non configurée (voir worker/pixou)'}</span></div>
+        <div class="set-row"><label>Chat</label>${seg('pixou', [['on', '🎙️ Pixou clashe'], ['off', '🤐 Pixou se tait']], g.chat ? g.chat.pixouMode : s.pixou)}<span class="set-note">Il répond aux joueurs qui lui parlent</span></div>
         <div class="set-row small"><label>Questions</label><span>${g.bank.length} au total · ${g.seen.size} déjà vues sur cet écran</span><button class="mini" data-act="resetseen">Oublier</button></div>`;
       const n = g.activePlayers().length;
       const canStart = duel ? n === 2 : n >= 1;

@@ -115,7 +115,7 @@
         localDuel: false,
         phones: false, // mode « Jouer sur téléphones » : pas d'écran TV, chaque téléphone affiche tout
         hostPlays: false, // l'écran plateau a sa propre manette (l'hôte joue aussi)
-        pixou: 'ai', // réponses de Pixou dans le chat : ai | canned | off
+        pixou: 'on', // Pixou répond dans le chat : on | off
       };
       this.phase = 'lobby';
       this.round = null;

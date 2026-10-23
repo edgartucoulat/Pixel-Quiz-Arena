@@ -141,7 +141,7 @@
       return {
         code: game.code,
         url: PQA.baseURL() + 'play.html?room=' + game.code + PQA.config.passthroughQuery(),
-        mode: s.mode, teams: s.teams, rounds: s.rounds, length: s.length, cards: s.cards, pixou: s.pixou || 'ai', ai: !!chat.aiURL,
+        mode: s.mode, teams: s.teams, rounds: s.rounds, length: s.length, cards: s.cards, pixou: chat.pixouMode,
         allRounds: PQA.ROUND_ORDER.map((r) => ({ id: r, icon: PQA.ROUNDS[r].icon, name: PQA.ROUNDS[r].short })),
         levels: Object.entries(PQA.BOT_LEVELS).map(([id, L]) => ({ id, icon: L.icon, name: L.name })),
         bots: game.bots().map((b) => ({ id: b.id, name: b.name, color: b.color, level: b.level })),

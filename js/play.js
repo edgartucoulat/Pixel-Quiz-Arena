@@ -449,7 +449,7 @@
           ${duel ? '' : `<div class="orow"><label>Manches</label><div class="ochips">${o.allRounds.map((r) => `<button data-own="round" data-val="${r.id}" class="${o.rounds.includes(r.id) ? 'on' : ''}">${r.icon} ${esc(r.name)}</button>`).join('')}</div></div>
           <div class="orow"><label>Durée</label>${seg('length', [['court', 'Courte'], ['normal', 'Normale'], ['long', 'Longue']], o.length)}</div>
           <div class="orow"><label>Coups bas</label>${seg('cards', [['1', '🃏 Oui'], ['0', 'Non']], o.cards ? '1' : '0')}</div>`}
-          <div class="orow"><label>Pixou dans le chat</label>${seg('pixou', [['ai', '🧠 IA'], ['canned', '🎲 Répliques'], ['off', '🤐 Muet']], o.ai || o.pixou !== 'ai' ? o.pixou : 'canned', o.ai ? [] : ['ai'])}</div>
+          <div class="orow"><label>Pixou dans le chat</label>${seg('pixou', [['on', '🎙️ Il clashe'], ['off', '🤐 Il se tait']], o.pixou)}</div>
         </div>
         <button class="big-btn green ${canStart ? '' : 'disabled'}" data-own="start">▶ LANCER LA PARTIE</button>
         <button class="small-btn" id="btn-edit">✏️ Modifier mon profil</button>

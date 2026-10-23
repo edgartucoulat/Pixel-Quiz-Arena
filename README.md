@@ -104,12 +104,9 @@ Le bouton 💬 de chaque téléphone ouvre le chat de la partie (messages et ré
 Les messages s'affichent aussi en haut à gauche de l'écran TV. Pixou y réagit de temps en
 temps, et toujours quand on l'appelle par son nom. Dans ce cas, il ne répond jamais à la
 question : il « bâche » la personne avec une vanne ou une petite insulte de cour de récré
-(patate, andouille, cornichon...), en s'appuyant sur son message ou son classement :
-
-- **🧠 Pixou IA** : il répond vraiment à ce qui se dit, grâce à Claude (Anthropic), via un petit
-  relais gratuit qui garde la clé API secrète. Installation : [`worker/pixou/README.md`](worker/pixou/README.md).
-- **🎲 Répliques** : sans IA, il pioche dans des répliques toutes faites selon le message.
-- **🤐 Muet** : il ne répond pas.
+(patate, andouille, cornichon...), en s'appuyant sur son message ou son classement. Les
+répliques sont toutes faites (`js/chat.js`) et choisies selon le message. Dans le salon,
+**🤐 Pixou se tait** le fait taire.
 
 Les insultes des joueurs sont masquées et le flood est limité. Pixou reste tout public : il se
 moque du score et des messages, jamais de la personne elle-même, et ne donne jamais la
@@ -156,12 +153,11 @@ js/music.js     Lecteur de musique (ambiances en boucle, jingles, suspense)
 audio/music/    Musiques originales (générées par scripts/compose_music.py)
 js/voice.js     Voix du présentateur (enregistrements + voix naturelles du navigateur)
 audio/voice/    Voix enregistrée, générée automatiquement (ne pas modifier à la main)
-js/chat.js      Chat de la partie, filtre, répliques de Pixou (IA ou toutes faites)
+js/chat.js      Chat de la partie, filtre, répliques de Pixou
 js/net.js       Réseau PeerJS + reconnexion automatique
 js/relay.js     Relais de secours MQTT (client minimal sans dépendance)
 data/questions/ Banque de questions (un fichier JSON par catégorie)
 scripts/        Outils de développement (serveur local, validation des questions)
-worker/pixou/   Relais IA de Pixou (Cloudflare Worker, optionnel)
 ```
 
 En mode téléphones, `host.html?phones=1` fait tourner le même moteur sur le téléphone de
