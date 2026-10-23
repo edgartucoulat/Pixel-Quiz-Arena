@@ -51,6 +51,16 @@
   /** Mode « Jouer sur téléphones » : la manette de l'hôte prend tout l'écran et règle la partie. */
   const OWNER = LOCAL && qs.get('phones') === '1';
   if (LOCAL) document.body.classList.add(OWNER ? 'owner' : 'local-pad');
+  // Appel synchrone depuis le geste : postMessage perdrait ce contexte.
+  // Seule la manette intégrée, de même origine, réveille le son du plateau.
+  if (LOCAL) {
+    const unlockHostAudio = () => {
+      try { window.parent.PQA.sfx.unlock(); } catch (e) { /* parent inaccessible */ }
+    };
+    document.addEventListener('click', unlockHostAudio, true);
+    document.addEventListener('touchend', unlockHostAudio, { capture: true, passive: true });
+    document.addEventListener('keydown', unlockHostAudio, true);
+  }
   /** Manette intégrée : petite tant qu'il n'y a rien à faire, plus grande pour répondre ou choisir. */
   const PAD_SMALL = ['wait', 'lobby', 'locked', 'result', 'end', 'oral', 'kicked'];
   let padLast = null;
@@ -482,6 +492,7 @@
         <button data-own="next">⏭ Suivant</button>
         <button data-own="quit">🏠 Quitter</button>`;
     }
+    if (o) html += `<button data-own="sound" aria-pressed="${!o.muted}">${o.muted ? '🔇 Activer le son' : '🔊 Couper le son'}</button>`;
     patch($('#ownerbar'), html);
   }
   document.addEventListener('click', (e) => {
@@ -675,3 +686,4 @@
     net.connect(state.room);
   } else showJoin();
 })();
+

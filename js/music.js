@@ -90,11 +90,18 @@
       const wait = Math.max(0.05 + delay, this.hold - this.ctx.currentTime);
       c.timer = setTimeout(() => {
         if (this.cur !== c) return;
-        a.play().catch(() => {});
+        c.timer = null;
+        a.play().catch((e) => console.warn('Musique bloquée ; toucher l’écran pour réessayer', e));
         const t = this.ctx.currentTime;
         g.gain.setValueAtTime(0, t);
         g.gain.linearRampToValueAtTime(1, t + 1.2);
       }, wait * 1000);
+    }
+    /** Réessaie la piste courante depuis un geste, sans attendre un changement de phase. */
+    resume() {
+      const c = this.cur;
+      if (!c || c.timer != null || !c.audio.paused) return;
+      c.audio.play().catch((e) => console.warn('Musique bloquée', e));
     }
     fadeOut() {
       const c = this.cur;
@@ -116,7 +123,7 @@
       this.fadeOut();
       this.hold = this.ctx.currentTime + 1; // en attendant le décodage
       this.load(name).then((buf) => {
-        if (!buf) { this.hold = 0; return; }
+        if (!buf) { this.hold = 0; if (this.wanted) this.play(this.wanted); return; }
         const src = this.ctx.createBufferSource();
         src.buffer = buf;
         src.connect(this.out);
@@ -132,3 +139,4 @@
 
   PQA.music = new Music();
 })();
+
