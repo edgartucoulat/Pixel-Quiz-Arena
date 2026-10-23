@@ -90,7 +90,7 @@
 
   /* ---- Métadonnées du jeu ---------------------------------------------- */
   PQA.ROUNDS = {
-    sprint: { name: 'Le Sprint', short: 'Sprint', icon: '🏁', desc: '10 questions au buzzer sur des thèmes au hasard. Pas de choix : buzze, puis tape ta réponse. Buzz raté = la moitié de la valeur en moins !' },
+    sprint: { name: 'Le Sprint', short: 'Sprint', icon: '🏁', desc: 'Une rafale de questions au buzzer sur des thèmes au hasard. Pas de choix : buzze, puis tape ta réponse. Buzz raté = la moitié de la valeur en moins !' },
     mystere: { name: 'Le Thème Mystère', short: 'Thème Mystère', icon: '🎡', desc: 'La roue choisit le thème, tu choisis ton niveau de 1 à 10. Plus c’est dur, plus ça rapporte !' },
     fourchette: { name: 'La Fourchette', short: 'La Fourchette', icon: '📏', desc: 'Donne un seul chiffre et vise pile ! Plus tu es proche de la réponse, plus tu marques.' },
     quatre: { name: 'Le 4 à la suite', short: '4 à la suite', icon: '4️⃣', desc: 'Le 1er du classement choisit son thème en premier, puis le suivant… Un thème pris n’est plus disponible ! Enchaîne 4 bonnes réponses d’affilée en 40 secondes.' },

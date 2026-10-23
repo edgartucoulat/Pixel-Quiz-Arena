@@ -50,7 +50,7 @@ son score. Si le plateau est rechargé, il propose de **reprendre la partie**.
 
 Par défaut, l'émission enchaîne dans cet ordre :
 
-1. 🏁 **Le Sprint** : 10 questions au buzzer sur des thèmes tirés au hasard. Pas de choix
+1. 🏁 **Le Sprint** : 8 questions au buzzer (6 en partie courte, 11 en longue) sur des thèmes tirés au hasard. Pas de choix
    multiple : on buzze, puis on tape sa réponse (à l'oral en mode présentateur IRL).
    La question vaut sa difficulté (voir le barème). Attention : buzz raté = la moitié de sa
    valeur en moins et exclu de la question,
@@ -70,6 +70,11 @@ Par défaut, l'émission enchaîne dans cet ordre :
    reprend la main dès que l'adversaire a répondu ou qu'un nouvel indice tombe. Le premier à
    3 étoiles (bonnes réponses) **gagne la partie**, quel que soit son score (en équipes, son
    équipe gagne).
+
+Toutes les manches durent à peu près le même temps : environ 2 min en partie courte,
+3 min en normale et 4 min 30 en longue. Les manches où l'on joue chacun son tour s'adaptent au
+nombre de joueurs : en partie normale, les Cases mystères comptent environ 6 cases (2 par joueur
+à 3 ou 4 joueurs, 1 seule à partir de 5) et le 4 à la suite se joue à 4 joueurs maximum.
 
 Avant chaque manche, un écran explique la règle (environ 20 s) ; le bouton « Passer » ou
 « ▶ Suivant » la saute si tout le monde la connaît déjà.

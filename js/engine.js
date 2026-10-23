@@ -28,13 +28,19 @@
   const DEFAULT_ROUNDS = ['sprint', 'table', 'quatre', 'fourchette', 'champions'];
 
   // Nombre de questions / tours par manche selon la durée choisie.
+  /* Toutes les manches visent à peu près la même durée : ~2 min (courte), ~3 min (normale),
+   * ~4 min 30 (longue), écran de règle compris. Mesuré sur une partie normale (2 et 4 joueurs) :
+   * question du Sprint ~21 s, QCM éclair ~21 s, Fourchette ~25 s, case mystère ~22 s,
+   * tour de Thème Mystère ~30 s, passage au 4 à la suite ~40 s, Duel des champions ~2 min 20.
+   * table / mystere : nombre visé de cases / tours, arrondi pour que chacun joue autant de fois ;
+   * quatre : nombre max de joueurs ; champions : bonnes réponses pour remporter le duel final. */
   const LENGTH = {
-    // table : [colonnes, lignes] de cases mystères ; quatre : nombre max de joueurs ;
-    // champions : bonnes réponses pour remporter le duel final.
-    court: { sprint: 10, eclair: 5, fourchette: 3, mystereTurns: 1, table: [3, 3], quatre: 4, champions: 3 },
-    normal: { sprint: 10, eclair: 8, fourchette: 5, mystereTurns: 1, table: [4, 3], quatre: 6, champions: 3 },
-    long: { sprint: 10, eclair: 12, fourchette: 7, mystereTurns: 2, table: [4, 4], quatre: 10, champions: 3 },
+    court: { sprint: 6, eclair: 5, fourchette: 4, mystere: 3, table: 4, quatre: 3, champions: 3 },
+    normal: { sprint: 8, eclair: 7, fourchette: 6, mystere: 5, table: 6, quatre: 4, champions: 3 },
+    long: { sprint: 11, eclair: 10, fourchette: 8, mystere: 7, table: 9, quatre: 6, champions: 3 },
   };
+  /** Tours par joueur pour approcher une cible tout en jouant chacun autant de fois. */
+  const perPlayer = (target, players) => Math.max(1, Math.round(target / Math.max(1, players)));
 
   const TIMES = {
     eclair: 15000, fourchette: 30000, single: 25000, singleLibre: 35000,
@@ -595,8 +601,8 @@
       const L = LENGTH[this.settings.length];
       if (t === 'eclair' || t === 'fourchette') { this.round.total = L[t]; this.nextSimple(); }
       else if (t === 'sprint') { this.round.total = L.sprint; this.round.cats = []; this.sprintNext(); }
-      else if (t === 'mystere') { this.round.turns = []; for (let i = 0; i < L.mystereTurns; i++) this.round.turns.push(...this.turnOrder()); this.round.total = this.round.turns.length; this.mystereNext(); }
-      else if (t === 'table') this.tableStart(L.table);
+      else if (t === 'mystere') { this.round.turns = []; const k = perPlayer(L.mystere, this.turnOrder().length); for (let i = 0; i < k; i++) this.round.turns.push(...this.turnOrder()); this.round.total = this.round.turns.length; this.mystereNext(); }
+      else if (t === 'table') this.tableStart(Math.min(16, perPlayer(L.table, this.turnOrder(true).length) * this.turnOrder(true).length));
       else if (t === 'quatre') this.quatreStart(L.quatre);
       else if (t === 'champions') this.championsStart(L.champions);
       else if (t === 'duel') this.duelStart();
@@ -887,7 +893,7 @@
       this.fx('drumroll');
     }
 
-    /* ---- Le Sprint : 10 questions au buzzer, thèmes au hasard, réponse à taper ---- */
+    /* ---- Le Sprint : une rafale de questions au buzzer, thèmes au hasard, réponse à taper ---- */
     sprintNext() {
       const r = this.round;
       if (r.n >= r.total) return this.endRound();
@@ -1090,9 +1096,10 @@
     }
 
     /* ---- Cases mystères : thème, valeur et surprise cachés jusqu'au choix ---- */
-    tableStart([cols, rows]) {
+    tableStart(n0) {
       const types = ['qcm', 'vf', 'libre'];
-      const n0 = cols * rows;
+      const cols = n0 <= 3 ? n0 : n0 === 4 ? 2 : n0 <= 9 ? 3 : 4;
+      const rows = Math.ceil(n0 / cols);
       const cats = this.categories.map((c) => c.name).filter((c) => this.countAvailable(types, c) >= 2);
       // Thèmes tirés au hasard (le moins de doublons possible), valeurs mélangées.
       let deck = [];
@@ -1104,7 +1111,7 @@
       }
       // Cases spéciales cachées
       const n = cells.length;
-      const specials = PQA.shuffle(['piege', 'bonus', 'vol', ...(n >= 12 ? ['piege', 'bonus', 'vol'] : [])]);
+      const specials = PQA.shuffle(n >= 12 ? ['piege', 'bonus', 'vol', 'piege', 'bonus', 'vol'] : n >= 6 ? ['piege', 'bonus', 'vol'] : n >= 3 ? ['piege', 'bonus'] : ['bonus']);
       PQA.shuffle(cells).slice(0, specials.length).forEach((c, i) => (c.special = specials[i]));
       const r = this.round;
       r.cells = cells; r.cols = cols; r.rows = rows;
