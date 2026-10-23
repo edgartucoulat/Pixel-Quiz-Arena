@@ -48,7 +48,9 @@
     stop() { this.send({ t: 'bye' }); }
     checkHealth() {}
   }
-  if (LOCAL) document.body.classList.add('local-pad');
+  /** Mode « Jouer sur téléphones » : la manette de l'hôte prend tout l'écran et règle la partie. */
+  const OWNER = LOCAL && qs.get('phones') === '1';
+  if (LOCAL) document.body.classList.add(OWNER ? 'owner' : 'local-pad');
   /** Manette intégrée : petite tant qu'il n'y a rien à faire, plus grande pour répondre ou choisir. */
   const PAD_SMALL = ['wait', 'lobby', 'locked', 'result', 'end', 'oral', 'kicked'];
   let padLast = null;
@@ -78,6 +80,8 @@
     onMessage(m) {
       if (m.t === 'welcome') {
         state.token = m.token; state.joined = true; save();
+        state.myId = m.id;
+        document.body.classList.add('joined');
         PQA._wantAwake = true; PQA.keepAwake();
         return;
       }
@@ -91,6 +95,8 @@
       }
       if (m.t === 'fx') return fx(m);
       if (m.t === 'toast') return toast(m.text);
+      if (m.t === 'chatlog') { chat.list = []; (m.list || []).forEach((x) => chatAdd(x, true)); chatRender(); return; }
+      if (m.t === 'chat') return chatAdd(m.m);
     },
   });
 
@@ -187,14 +193,19 @@
     if (v.screen === 'kicked') { net.stop(); state.token = null; save(); showJoin('Tu as été retiré de la partie.'); return; }
     renderMe(v);
     renderCards(v);
-    const out = screens[v.screen] ? screens[v.screen](v) : screens.wait(v);
+    renderTV(v);
+    renderOwnerBar(v);
+    const out = v.screen === 'lobby' && v.owner ? ownerLobby(v) : screens[v.screen] ? screens[v.screen](v) : screens.wait(v);
     document.body.dataset.screen = v.screen;
     document.body.style.setProperty('--me', v.me.color);
     if (LOCAL) padSize(v.screen);
     if (out.key !== state.renderKey) {
+      // Le panneau de l'hôte est long : on garde la position de défilement quand il se met à jour.
+      const scroll = out.keepScroll && state.renderKey && state.renderKey.startsWith('owner') ? $('#screen').scrollTop : 0;
       state.renderKey = out.key;
       state.pressed = false;
       $('#screen').innerHTML = out.html;
+      $('#screen').scrollTop = scroll;
       out.after && out.after();
     } else if (out.parts) {
       for (const id in out.parts) patch(document.getElementById(id), out.parts[id]);
@@ -227,24 +238,34 @@
     lobby(v) {
       const m = v.me;
       return {
-        key: 'lobby' + m.name + JSON.stringify(m.avatar) + m.team + m.color,
+        key: 'lobby' + m.name + JSON.stringify(m.avatar) + m.team + m.color + (v.tv ? v.tv.rank.map((p) => p.name).join() : ''),
         html: `<div class="wait lobby">
           <img class="pix av-big" src="${PQA.avatarURL(m.avatar, m.color, 'happy', 8)}" alt="">
-          <div class="wtitle">Tu es sur le plateau !</div>
+          <div class="wtitle">${v.tv ? 'Tu es dans la salle !' : 'Tu es sur le plateau !'}</div>
           ${m.teamName ? `<div class="team big" style="background:${m.teamColor}">Équipe des ${esc(m.teamName)}</div>` : ''}
-          <div class="wmsg">Regarde l’écran, l’émission va commencer.</div>
+          <div class="wmsg">${v.tv ? 'L’hôte lance la partie dès que tout le monde est là. En attendant, viens papoter dans le chat 💬' : 'Regarde l’écran, l’émission va commencer.'}</div>
+          ${v.tv ? `<div class="tv-who">${v.tv.rank.map((p) => `<span style="--pc:${p.color}">${p.bot ? '🤖 ' : ''}${esc(p.name)}</span>`).join('')}</div>` : ''}
           <button class="small-btn" id="btn-edit">✏️ Modifier mon profil</button>
         </div>`,
         after() { $('#btn-edit').onclick = () => { state.editing = true; showJoin(); }; },
       };
     },
     wait(v) {
+      if (v.tv) {
+        const t = v.tv, board = v.phase === 'leaderboard';
+        const msg = (v.msg || '').replace('Regarde l’écran !', '');
+        return {
+          key: 'wait' + v.title + msg + v.phase + tvKey(v) + (board ? JSON.stringify(t.rank) : ''),
+          html: `${v.timer ? timerBar() : ''}<div class="wait tvwait"><div class="wtitle">${esc(v.title || '')}</div>${msg ? `<div class="wmsg">${esc(msg)}</div>` : ''}
+            ${t.rules ? `<ul class="tv-rules">${t.rules.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}${tvQuestion(v)}${board ? tvRanking(v) : ''}</div>`,
+        };
+      }
       return { key: 'wait' + v.title + v.msg + v.phase, html: `<div class="wait"><div class="wtitle">${esc(v.title || 'Regarde l’écran !')}</div><div class="wmsg">${esc(v.msg || '')}</div><div class="tv">📺</div></div>` };
     },
     locked(v) {
       const pick = v.choices && v.picked != null ? v.choices.list.find((c) => c.i === v.picked) : null;
       const range = v.type === 'fourchette' && typeof v.picked === 'number' ? PQA.fmtVal(v.picked, v.unite) : '';
-      return { key: 'locked' + v.qid + v.msg, html: `${timerBar()}<div class="wait"><div class="lock-icon">🔒</div><div class="wtitle">${esc(v.msg)}</div>${pick ? `<div class="picked-txt c${pick.i}">${esc(pick.text)}</div>` : ''}${range ? `<div class="picked-txt">${range}</div>` : ''}</div>` };
+      return { key: 'locked' + v.qid + v.msg + tvKey(v), html: `${timerBar()}${tvQuestion(v, false)}<div class="wait"><div class="lock-icon">🔒</div><div class="wtitle">${esc(v.msg)}</div>${pick ? `<div class="picked-txt c${pick.i}">${esc(pick.text)}</div>` : ''}${range ? `<div class="picked-txt">${range}</div>` : ''}</div>` };
     },
     choices(v) {
       return {
@@ -277,8 +298,8 @@
         : st === 'early' ? 'Lis la question… Buzzer trop tôt = bloqué 2 s !'
         : (v.clue ? `Indice : ${esc(v.clue)}<br>` : '') + `${miss} Tu auras ${v.answerSecs || 5} s pour répondre.`;
       return {
-        key: 'buzz' + v.qid + st + (v.buzzer || '') + (st === 'frozen' ? v.me.frozen : ''),
-        html: `${timerBar()}${v.cat ? `<div class="pq-cat">${esc(v.cat)}</div>` : ''}<div class="buzz-wrap ${st}" ${st === 'other' ? `style="--oc:${v.buzzerColor}"` : ''}>
+        key: 'buzz' + v.qid + st + (v.buzzer || '') + (st === 'frozen' ? v.me.frozen : '') + tvKey(v),
+        html: `${timerBar()}${v.cat && !v.tv ? `<div class="pq-cat">${esc(v.cat)}</div>` : ''}${tvQuestion(v)}<div class="buzz-wrap ${st}" ${st === 'other' ? `style="--oc:${v.buzzerColor}"` : ''}>
           <button class="buzzer ${st}" id="buzzer" ${st !== 'open' && st !== 'early' ? 'disabled' : ''}><span>${label}</span></button>
           <div class="buzz-sub" id="buzz-sub">${sub}</div></div>`,
         after() {
@@ -331,8 +352,8 @@
       const head = c === true ? `<div class="res-ok">✔ BRAVO !</div><div class="res-pts">${gain}</div>` : c === false ? `<div class="res-ko">${v.none ? '⏱ Trop tard !' : '✖ RATÉ !'}</div>` : '<div class="wtitle">Réponse :</div>';
       const guess = v.guess ? `<div class="wmsg">Ta réponse : <b>${esc(v.guess)}</b>${v.exact ? ' · 🎯 PILE !' : v.gap ? ' · écart : ' + esc(v.gap) : ''}</div>` : '';
       return {
-        key: 'result' + v.phase + c + v.pts + (v.stars || '') + v.answer + (v.guess || ''),
-        html: `<div class="wait result ${c === true ? 'good' : c === false ? 'bad' : ''}">${head}<div class="res-answer">${esc(v.answer)}</div>${guess}${v.anecdote ? `<div class="res-anec">💡 ${esc(v.anecdote)}</div>` : ''}</div>`,
+        key: 'result' + v.phase + c + v.pts + (v.stars || '') + v.answer + (v.guess || '') + tvKey(v),
+        html: `<div class="wait result ${c === true ? 'good' : c === false ? 'bad' : ''}">${v.tv && v.tv.q ? `<div class="tvq-text small">${esc(v.tv.q.question)}</div>` : ''}${head}<div class="res-answer">${esc(v.answer)}</div>${guess}${tvResults(v)}${v.anecdote ? `<div class="res-anec">💡 ${esc(v.anecdote)}</div>` : ''}</div>`,
       };
     },
     end(v) {
@@ -342,10 +363,190 @@
         html: `<div class="wait end"><div class="end-rank">${m.rank === 1 ? '🏆' : m.rank === 2 ? '🥈' : m.rank === 3 ? '🥉' : '🎖️'} ${m.rank}${m.rank === 1 ? 'er' : 'e'}</div>
           <img class="pix av-big" src="${PQA.avatarURL(m.avatar, m.color, m.rank === 1 ? 'happy' : 'idle', 8)}" alt="">
           <div class="wtitle">« ${esc(v.title)} »</div><div class="wmsg">${esc(v.desc)}</div><div class="res-pts">${fmt(m.score)} pts</div>
-          ${v.winnerTeam ? `<div class="wmsg">Victoire des ${esc(v.winnerTeam)} !</div>` : ''}</div>`,
+          ${v.winnerTeam ? `<div class="wmsg">Victoire des ${esc(v.winnerTeam)} !</div>` : ''}${v.tv ? tvRanking(v) : ''}</div>`,
       };
     },
   };
+
+  /* ======================= Mode téléphones : ce que montrerait la TV ======== */
+  const tvKey = (v) => (v.tv ? JSON.stringify([v.tv.q, v.tv.rules, v.tv.results]) : '');
+  function tvQuestion(v, withChoices = true) {
+    const t = v.tv && v.tv.q;
+    if (!t) return '';
+    const n = t.choices ? t.choices.length : 0;
+    const shown = t.correctIdx != null;
+    return `<div class="tvq"><div class="tvq-cat">${esc(t.cat)}</div><div class="tvq-text">${esc(t.question)}</div>
+      ${t.clues ? `<ol class="tvq-clues">${t.clues.map((c) => `<li>${esc(c)}</li>`).join('')}</ol>` : ''}
+      ${withChoices && n ? `<div class="tvq-choices n${n}">${t.choices.map((c, i) => `<span class="c${i} ${shown ? (i === t.correctIdx ? 'good' : 'bad') : ''}"><b>${n === 2 ? (i === 0 ? '✔' : '✖') : LETTERS[i]}</b>${esc(c)}</span>`).join('')}</div>` : ''}</div>`;
+  }
+  function tvRanking(v) {
+    const t = v.tv;
+    const teams = t.teams ? `<div class="tv-rank teams">${t.teams.map((x, i) => `<div style="--pc:${x.color}"><i>${i + 1}</i><span>Équipe des ${esc(x.name)}</span><b>${fmt(x.score)}</b></div>`).join('')}</div>` : '';
+    return teams + `<div class="tv-rank">${t.rank.map((p, i) => `<div class="${p.id === v.me.id ? 'me' : ''}" style="--pc:${p.color}"><i>${i + 1}</i><span>${p.bot ? '🤖 ' : ''}${esc(p.name)}</span><b>${fmt(p.score)}</b></div>`).join('')}</div>`;
+  }
+  function tvResults(v) {
+    const r = v.tv && v.tv.results;
+    if (!r || !r.length) return '';
+    return `<div class="tv-res">${r.map((x) => `<span class="${x.ok ? 'ok' : x.none ? 'none' : 'ko'}" style="--pc:${x.color}">${x.ok ? '✔' : x.none ? '⏱' : '✖'} ${esc(x.name)}${x.ok && x.pts ? ' +' + fmt(x.pts) : ''}</span>`).join('')}</div>`;
+  }
+  let pixouSrc = null;
+  function pixouImg() {
+    if (pixouSrc == null) {
+      try { const c = document.createElement('canvas'); c.width = 52; c.height = 70; PQA.drawPresenter(c.getContext('2d'), 0, 0, 2, 'happy', false, 0); pixouSrc = c.toDataURL(); } catch (e) { pixouSrc = ''; }
+    }
+    return pixouSrc;
+  }
+  /** Bandeau des scores et bulle de Pixou, en haut de l'écran (mode téléphones). */
+  function renderTV(v) {
+    const t = v.tv;
+    const strip = t && v.phase !== 'lobby' ? (t.teams || t.rank).map((p, i) => `<span class="${p.id === v.me.id ? 'me' : ''}" style="--pc:${p.color}">${i + 1}. ${esc(t.teams ? p.name : p.name)} <b>${fmt(p.score)}</b></span>`).join('') : '';
+    patch($('#scores'), strip);
+    const say = t && t.say && v.phase !== 'lobby' ? t.say : '';
+    const el = $('#pixou-say');
+    if (el.dataset.say !== say) {
+      el.dataset.say = say;
+      el.innerHTML = say ? `<img class="pix" src="${pixouImg()}" alt=""><span>${esc(say)}</span>` : '';
+      el.classList.remove('pop'); void el.offsetWidth; if (say) el.classList.add('pop');
+    }
+  }
+
+  /* ======================= Mode téléphones : panneau de l'hôte ============== */
+  const ownSend = (act, extra = {}) => { net.send({ t: 'owner', act, ...extra }); PQA.vibrate(15); };
+  function ownerLobby(v) {
+    const o = v.owner;
+    const seg = (key, opts, cur, disabled = []) => `<div class="oseg">${opts.map(([val, l]) => `<button data-own="set" data-key="${key}" data-val="${val}" class="${String(cur) === String(val) ? 'on' : ''}" ${disabled.includes(val) ? 'disabled' : ''}>${l}</button>`).join('')}</div>`;
+    const duel = o.mode === 'duel', solo = o.mode === 'solo';
+    const humans = o.players.length, n = humans + o.bots.length;
+    const share = `Viens jouer à PIXEL QUIZ ARENA avec moi ! Code de la salle : ${o.code}`;
+    const players = o.players.map((p) => `<div class="oplayer" style="--pc:${p.color}">
+        ${o.teams ? `<button class="oteam" data-own="team" data-pid="${p.id}" style="background:${TEAM_COLORS[p.team] || '#888'}" title="Changer d’équipe"></button>` : ''}
+        <span>${esc(p.name)}${p.me ? ' (toi)' : ''}${p.on ? '' : ' 💤'}</span>${p.me ? '' : `<button class="ox" data-own="kick" data-pid="${p.id}" data-name="${esc(p.name)}">✖</button>`}</div>`).join('');
+    const bots = solo ? `<div class="orow"><label>Ordis</label><div class="obots">${o.bots.map((b) => `<div class="obot" style="--pc:${b.color}"><b>🤖 ${esc(b.name)}</b><div class="oseg">${o.levels.map((L) => `<button data-own="botlevel" data-pid="${b.id}" data-val="${L.id}" class="${b.level === L.id ? 'on' : ''}" title="${esc(L.name)}">${L.icon}</button>`).join('')}</div><button class="ox" data-own="kick" data-pid="${b.id}">✖</button></div>`).join('')}
+        <button class="oadd" data-own="botadd">＋ Ajouter un ordi</button></div></div>` : '';
+    const canStart = duel ? n === 2 : solo ? o.bots.length > 0 : n >= 1;
+    return {
+      key: 'owner' + JSON.stringify(o) + JSON.stringify(v.me.avatar) + v.me.name,
+      keepScroll: true,
+      html: `<div class="opanel">
+        <div class="obox share">
+          <div class="olbl">Invite tes amis</div>
+          <div class="ocode">${esc(o.code)}</div>
+          <div class="ohint">Ils ouvrent le lien (même à distance), ou scannent le QR code, ou tapent le code sur <b>${esc(o.url.replace(/^https?:\/\//, '').replace(/play\.html.*$/, 'play'))}</b></div>
+          <div class="oshare">
+            <button data-share="native">📤 Partager</button>
+            <a href="https://wa.me/?text=${encodeURIComponent(share + ' ' + o.url)}" target="_blank" rel="noopener">🟢 WhatsApp</a>
+            <button data-share="copy">📋 Copier le lien</button>
+            <button data-share="qr">🔳 QR code</button>
+          </div>
+          <div class="oqr" id="oqr"></div>
+        </div>
+        <div class="obox"><div class="olbl">Joueurs (${n} / ${duel ? 2 : 10})</div><div class="oplayers">${players}</div>
+          ${o.teams ? '<button class="oadd" data-own="shuffleteams">🔀 Mélanger les équipes</button>' : ''}</div>
+        <div class="obox">
+          <div class="orow"><label>Mode</label>${seg('mode', [['virtual', '🎯 Classique'], ['duel', '🥊 Duel'], ['solo', '🎮 Avec des ordis']], o.mode)}</div>
+          ${bots}
+          ${duel || solo ? '' : `<div class="orow"><label>Équipes</label>${seg('teams', [[0, 'Non'], [2, '2'], [3, '3'], [4, '4']], o.teams)}</div>`}
+          ${duel ? '' : `<div class="orow"><label>Manches</label><div class="ochips">${o.allRounds.map((r) => `<button data-own="round" data-val="${r.id}" class="${o.rounds.includes(r.id) ? 'on' : ''}">${r.icon} ${esc(r.name)}</button>`).join('')}</div></div>
+          <div class="orow"><label>Durée</label>${seg('length', [['court', 'Courte'], ['normal', 'Normale'], ['long', 'Longue']], o.length)}</div>
+          <div class="orow"><label>Coups bas</label>${seg('cards', [['1', '🃏 Oui'], ['0', 'Non']], o.cards ? '1' : '0')}</div>`}
+          <div class="orow"><label>Pixou dans le chat</label>${seg('pixou', [['ai', '🧠 IA'], ['canned', '🎲 Répliques'], ['off', '🤐 Muet']], o.ai || o.pixou !== 'ai' ? o.pixou : 'canned', o.ai ? [] : ['ai'])}</div>
+        </div>
+        <button class="big-btn green ${canStart ? '' : 'disabled'}" data-own="start">▶ LANCER LA PARTIE</button>
+        <button class="small-btn" id="btn-edit">✏️ Modifier mon profil</button>
+      </div>`,
+      after() {
+        $('#btn-edit').onclick = () => { state.editing = true; showJoin(); };
+        $$('[data-share]').forEach((b) => (b.onclick = async () => {
+          const how = b.dataset.share;
+          if (how === 'native' && navigator.share) { try { await navigator.share({ title: 'PIXEL QUIZ ARENA', text: share, url: o.url }); } catch (e) {} return; }
+          if (how === 'qr') {
+            const box = $('#oqr');
+            if (box.innerHTML) { box.innerHTML = ''; return; }
+            try { const q = qrcode(0, 'M'); q.addData(o.url); q.make(); box.innerHTML = `<img src="${q.createDataURL(6, 2)}" alt="QR code">`; } catch (e) { toast('QR code indisponible'); }
+            return;
+          }
+          try { await navigator.clipboard.writeText(o.url); toast('Lien copié ! Colle-le dans ta conversation.'); }
+          catch (e) { window.prompt('Copie ce lien :', o.url); }
+        }));
+      },
+    };
+  }
+  const TEAM_COLORS = (PQA.PALETTE && PQA.PALETTE.team) || [];
+  /** Commandes de l'hôte pendant la partie (mode téléphones). */
+  function renderOwnerBar(v) {
+    const o = v.owner;
+    let html = '';
+    if (o && v.phase === 'end') html = '<button data-own="lobby">🔁 Nouvelle partie</button>';
+    else if (o && v.phase !== 'lobby') {
+      html = `<button data-own="pause">${o.paused ? '▶ Reprendre' : '⏸ Pause'}</button>
+        <button data-own="next">⏭ Suivant</button>
+        <button data-own="quit">🏠 Quitter</button>`;
+    }
+    patch($('#ownerbar'), html);
+  }
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-own]');
+    if (!b || b.disabled) return;
+    const act = b.dataset.own;
+    if (act === 'kick' && b.dataset.name && !confirm('Retirer ' + b.dataset.name + ' de la partie ?')) return;
+    if (act === 'quit') { if (confirm('Quitter la partie et revenir au salon ? Les scores seront perdus.')) ownSend('lobby'); return; }
+    ownSend(act, { key: b.dataset.key, val: b.dataset.val, pid: b.dataset.pid });
+  });
+
+  /* ======================= Chat ===================================== */
+  const EMOJIS = ['👏', '😂', '😱', '🔥', '🤔', '😭', '👀', '🍿'];
+  const chat = { list: [], open: false, unread: 0 };
+  function chatLine(m) {
+    const mine = m.pid && m.pid === state.myId;
+    return `<div class="cmsg ${m.who === 'pixou' ? 'pixou' : ''} ${mine ? 'mine' : ''}" style="--pc:${m.color || 'var(--yellow)'}">
+      ${m.who === 'pixou' ? `<img class="pix" src="${pixouImg()}" alt="">` : ''}<div><b>${m.who === 'pixou' ? 'PIXOU' : esc(m.name)}</b><span>${esc(m.text)}</span></div></div>`;
+  }
+  function chatRender() {
+    const el = $('#chat-list');
+    el.innerHTML = chat.list.length ? chat.list.map(chatLine).join('') : '<div class="cempty">Aucun message pour l’instant. Dis bonjour… Pixou adore qu’on lui parle.</div>';
+    el.scrollTop = el.scrollHeight;
+    const badge = $('#chat-badge');
+    badge.textContent = chat.unread > 9 ? '9+' : chat.unread || '';
+    badge.classList.toggle('on', chat.unread > 0);
+  }
+  function chatAdd(m, quiet) {
+    if (!m || chat.list.some((x) => x.id === m.id)) return;
+    chat.list.push(m);
+    if (chat.list.length > 60) chat.list.shift();
+    if (quiet) return;
+    if (!chat.open && m.pid !== state.myId) {
+      chat.unread++;
+      if (m.who === 'pixou' || chat.unread === 1) peek(m);
+    }
+    chatRender();
+  }
+  let peekTimer = null;
+  function peek(m) {
+    const el = $('#chat-peek');
+    el.innerHTML = chatLine(m);
+    el.classList.add('on');
+    clearTimeout(peekTimer);
+    peekTimer = setTimeout(() => el.classList.remove('on'), m.who === 'pixou' ? 6000 : 3500);
+  }
+  function chatOpen(on) {
+    chat.open = on;
+    document.body.classList.toggle('chat-open', on);
+    $('#chat').setAttribute('aria-hidden', on ? 'false' : 'true');
+    if (on) { chat.unread = 0; $('#chat-peek').classList.remove('on'); }
+    chatRender();
+  }
+  function chatSend(text) {
+    text = String(text || '').trim();
+    if (!text) return;
+    net.send({ t: 'chat', text: text.slice(0, 140) });
+    PQA.vibrate(10);
+  }
+  $('#chat-emojis').innerHTML = EMOJIS.map((x) => `<button data-emo="${x}">${x}</button>`).join('');
+  $('#chat-emojis').addEventListener('click', (e) => { const b = e.target.closest('[data-emo]'); if (b) chatSend(b.dataset.emo); });
+  $('#chat-btn').onclick = () => chatOpen(!chat.open);
+  $('#chat-peek').onclick = () => chatOpen(true);
+  $('#chat-close').onclick = () => chatOpen(false);
+  $('#chat-form').onsubmit = (e) => { e.preventDefault(); const i = $('#chat-in'); chatSend(i.value); i.value = ''; };
 
   /* ---- Fourchette : une seule valeur, il faut viser pile ---- */
   function niceStep(raw) {

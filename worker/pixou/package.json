@@ -1,0 +1,17 @@
+{
+  "name": "pixou-chat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Relais IA de Pixou (chat de Pixel Quiz Arena) : garde la clé API Claude côté serveur.",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.1.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.152.0"
+  }
+}

@@ -113,6 +113,9 @@
         length: 'normal',
         cards: true,
         localDuel: false,
+        phones: false, // mode « Jouer sur téléphones » : pas d'écran TV, chaque téléphone affiche tout
+        hostPlays: false, // l'écran plateau a sa propre manette (l'hôte joue aussi)
+        pixou: 'ai', // réponses de Pixou dans le chat : ai | canned | off
       };
       this.phase = 'lobby';
       this.round = null;
@@ -135,7 +138,7 @@
     fx(name, data) { this.hooks.fx(name, data || {}); }
     say(key, vars, expr) {
       const text = PQA.line(key, vars);
-      if (text) this.hooks.say(text, expr || 'neutral');
+      if (text) { this.lastSay = { text, at: now() }; this.hooks.say(text, expr || 'neutral'); }
       return text;
     }
     playerList() { return this.order.map((id) => this.players[id]).filter(Boolean); }
@@ -1606,7 +1609,31 @@
         case 'question': this.questionView(p, v, withTimer); break;
         default: v.screen = 'wait';
       }
+      if (this.settings.phones) {
+        v.tv = this.tvInfo();
+        if (this.timer && !v.timer) withTimer();
+      }
       return v;
+    }
+    /** Mode « Jouer sur téléphones » : ce que l'écran TV aurait montré (question, scores, Pixou...). */
+    tvInfo() {
+      const q = this.q, r = this.round;
+      const t = {
+        rank: this.ranking().map((x) => ({ id: x.id, name: x.name, color: x.color, score: x.score, bot: !!x.bot, off: !x.connected && !x.local })),
+        say: this.lastSay && now() - this.lastSay.at < 15000 ? this.lastSay.text : '',
+      };
+      if (this.settings.teams) t.teams = this.teamScores().map((s) => ({ name: s.name, color: s.color, score: s.score }));
+      if (r && this.phase === 'intro') { const R = PQA.ROUNDS[r.type]; t.rules = R.rules || [R.desc]; }
+      if (q && (this.phase === 'question' || this.phase === 'reveal')) {
+        const d = q.data;
+        t.q = { id: q.id, cat: this.catIcon(d.categorie) + ' ' + d.categorie + (d.sous_theme ? ' · ' + d.sous_theme : ''), diff: d.difficulte, question: d.question, choices: q.choices || null };
+        if (d.indices && q.kind === 'buzz') t.q.clues = d.indices.slice(0, (q.clue || 0) + 1);
+        if (this.phase === 'reveal') {
+          t.q.correctIdx = q.correctIdx;
+          t.results = Object.keys(q.results).map((pid) => this.players[pid] && { name: this.name(pid), color: this.players[pid].color, ok: q.results[pid].correct, none: !!q.results[pid].none, pts: q.results[pid].pts || 0 }).filter(Boolean);
+        }
+      }
+      return t;
     }
     questionView(p, v, withTimer) {
       const q = this.q, r = this.round, pid = p.id;

@@ -8,6 +8,9 @@
   const PQA = window.PQA;
   const { $, esc } = PQA;
   const SAVE_KEY = 'pqa_host_save';
+  /** Mode « Jouer sur téléphones » : ce téléphone héberge la partie et y joue, sans écran TV. */
+  const PHONES = new URLSearchParams(location.search).get('phones') === '1';
+  if (PHONES) document.body.classList.add('phones');
 
   /** Charge data/questions/index.json puis chaque fichier de catégorie. */
   async function loadQuestions() {
@@ -33,6 +36,11 @@
       return;
     }
     status.textContent = data.bank.length + ' questions chargées.';
+    if (PHONES) {
+      $('#btn-open').textContent = '📱 CRÉER LA SALLE';
+      $('.boot-sub').textContent = 'Pas besoin de TV : chacun joue sur son téléphone, dans la même pièce ou à distance.';
+      $('.boot-tip').textContent = 'Ton téléphone héberge la partie : garde cette page ouverte et l’écran allumé.';
+    }
     let saved = null;
     try { saved = JSON.parse(localStorage.getItem(SAVE_KEY) || 'null'); } catch (e) {}
     if (saved && Date.now() - saved.at < 3 * 3600 * 1000 && saved.players && saved.players.length) {
@@ -56,7 +64,7 @@
     const game = new PQA.Game(data.bank, data.categories, {
       changed: () => scheduleFlush(),
       fx: (n, d) => ui && ui.fx(n, d),
-      say: (text, expr) => ui && ui.say(text, expr),
+      say: (text, expr) => { if (ui && !PHONES) ui.say(text, expr); },
       send: (pid, msg) => conns.forEach((c) => c.pid === pid && send(c, msg)),
       toast: (t) => ui && ui.toast(t),
     });
@@ -73,7 +81,7 @@
         }
         if (m.t === 'hello') return hello(conn, m);
         if (conn.role === 'presenter') { if (m.t === 'pcmd') game.handlePresenter(m); return; }
-        if (conn.pid) game.handle(conn.pid, m);
+        if (conn.pid) fromPlayer(conn, m);
       },
       onClose(conn) {
         conns.delete(conn);
@@ -101,8 +109,54 @@
       if (m.t === '_pad') { frame.dataset.size = m.size; return; }
       if (m.t === 'hello') { localConn._last = null; hello(localConn, m); const p = game.players[localConn.pid]; if (p) p.rtt = 0; return; }
       if (m.t === 'bye') { conns.delete(localConn); if (localConn.pid) game.setConnected(localConn.pid, false); return; }
-      if (localConn.pid) game.handle(localConn.pid, m);
+      if (m.t === 'owner') return ownerCmd(m);
+      if (localConn.pid) fromPlayer(localConn, m);
     });
+
+    // Chat de la partie : le plateau le relaie à tout le monde, et Pixou y met son grain de sel.
+    const chat = new PQA.Chat(game, {
+      broadcast(msg) {
+        conns.forEach((c) => c.role !== 'presenter' && send(c, msg));
+        if (ui && !PHONES) ui.chatFeed(msg.m);
+      },
+      pixouSpeak(text) {
+        if (!ui || PHONES) return;
+        // Sur la TV : la réplique s'affiche dans le fil du chat, et Pixou la dit quand il ne lit pas de question.
+        if (['lobby', 'leaderboard', 'end'].includes(game.phase)) ui.say(text, 'smug');
+      },
+    });
+    game.chat = chat;
+    function fromPlayer(conn, m) {
+      if (m.t === 'chat') {
+        const err = chat.fromPlayer(conn.pid, m.text);
+        if (err) send(conn, { t: 'toast', text: err });
+        return;
+      }
+      game.handle(conn.pid, m);
+    }
+
+    /* ---- Mode téléphones : la manette de l'hôte règle la partie (à la place du plateau) ---- */
+    function ownerInfo() {
+      const s = game.settings;
+      return {
+        code: game.code,
+        url: PQA.baseURL() + 'play.html?room=' + game.code + PQA.config.passthroughQuery(),
+        mode: s.mode, teams: s.teams, rounds: s.rounds, length: s.length, cards: s.cards, pixou: s.pixou || 'ai', ai: !!chat.aiURL,
+        allRounds: PQA.ROUND_ORDER.map((r) => ({ id: r, icon: PQA.ROUNDS[r].icon, name: PQA.ROUNDS[r].short })),
+        levels: Object.entries(PQA.BOT_LEVELS).map(([id, L]) => ({ id, icon: L.icon, name: L.name })),
+        bots: game.bots().map((b) => ({ id: b.id, name: b.name, color: b.color, level: b.level })),
+        players: game.activePlayers().filter((p) => !p.bot).map((p) => ({ id: p.id, name: p.name, color: p.color, team: s.teams ? p.team : null, on: !!(p.connected || p.local), me: p.id === localConn.pid })),
+        paused: game.paused,
+      };
+    }
+    const OWNER_ACTS = ['set', 'round', 'botadd', 'botlevel', 'start', 'next', 'pause', 'team', 'shuffleteams', 'lobby'];
+    function ownerCmd(m) {
+      if (!PHONES || !ui) return;
+      if (m.act === 'kick') { if (m.pid !== localConn.pid) game.kick(m.pid); return; }
+      if (!OWNER_ACTS.includes(m.act)) return;
+      ui.action(m.act, { key: m.key, val: m.val, pid: m.pid });
+      game.changed();
+    }
 
     function hello(conn, m) {
       conns.add(conn);
@@ -120,6 +174,7 @@
       conn.pid = res.p.id;
       conn._last = null;
       send(conn, { t: 'welcome', role: 'player', token: res.p.token, id: res.p.id, code: game.code, rejoined: res.rejoined });
+      send(conn, chat.backlog());
       game.changed();
     }
 
@@ -136,6 +191,7 @@
       for (const conn of conns) {
         const view = conn.role === 'presenter' ? game.presenterView() : conn.pid ? game.viewFor(conn.pid) : null;
         if (!view) continue;
+        if (PHONES && conn === localConn) view.owner = ownerInfo();
         const json = JSON.stringify(view);
         if (json === conn._last) continue;
         conn._last = json;
@@ -157,7 +213,15 @@
     }
     game.code = code;
     if (saved) game.restore(saved);
+    game.settings.phones = PHONES;
+    if (PHONES) { game.settings.hostPlays = false; game.settings.localDuel = false; if (game.settings.mode === 'irl') game.settings.mode = 'virtual'; }
     ui = new PQA.HostUI(game);
+    if (PHONES) {
+      // Pas de TV : le son et la voix restent coupés, et les messages du plateau vont sur la manette de l'hôte.
+      ui.prefs.muted = true; ui.applyPrefs();
+      ui.toast = (text) => localConn.localWin && send(localConn, { t: 'toast', text });
+      PQA._wantAwake = true; PQA.keepAwake();
+    }
     document.body.classList.add('live');
     $('#boot').classList.add('hide');
     ui.hooks = {
@@ -193,7 +257,7 @@
       },
     };
     if (!saved) game.say('welcome', {}, 'happy');
-    setInterval(() => { if (game.phase === 'lobby' && Math.random() < 0.35) game.say('lobbyIdle', {}, 'neutral'); }, 20000);
+    setInterval(() => { if (game.phase === 'lobby' && !PHONES && Math.random() < 0.35) game.say('lobbyIdle', {}, 'neutral'); }, 20000);
     game.changed();
   }
 
