@@ -62,7 +62,7 @@ Par défaut, l'émission enchaîne dans cet ordre :
    Un thème pris n'est plus disponible pour les suivants ; le « thème mystère » en tire un
    au hasard. Il faut enchaîner 4 bonnes réponses d'affilée en 40 secondes : chaque bonne
    réponse vaut 50 pts, et réussir les 4 à la suite décroche le **jackpot** de 200 pts.
-4. 📏 **La Fourchette** : donne une seule valeur et vise pile. Les points dépendent du classement : le plus proche marque 200 pts, le 2e 100, le 3e 50, le 4e 25, les suivants 0. Ex æquo = même rang, mêmes points. Réponse pile = +500 pts de bonus.
+4. 📏 **La Fourchette** : donne une seule valeur et vise pile. Les points dépendent du classement : le plus proche marque 200 pts, le 2e 100, le 3e 50, le 4e 25, les suivants 0. Ex æquo = même rang, mêmes points. Réponse pile = 500 pts (à la place des 200).
 5. ⚔️ **Le Duel des champions** (toujours en dernier) : les 2 meilleurs du classement
    s'affrontent au buzzer à indices, les indices tombant un à un (le 1er vite, les 2e et 3e
    lentement, le dernier vite). Essais illimités, mais chacun son tour : après une erreur, on
@@ -90,7 +90,7 @@ Toutes les questions suivent le même barème : **50 + 25 × difficulté**, soit
 à 300 pts (difficulté 10). Sprint, Cases mystères, Thème Mystère et QCM éclair (+ jusqu’à 50 pts
 de rapidité) l’utilisent. Pas de multiplicateur : une série de bonnes réponses donne un petit
 bonus par réponse (🔥 +25 à la 3e, +50 à la 4e, +75 à partir de la 5e). À part : la Fourchette
-(200, 100, 50, 25 pts selon le rang, +500 si pile), le 4 à la suite (50 pts par réponse, jackpot de 200 pts) et le Duel des
+(200, 100, 50, 25 pts selon le rang, 500 si pile), le 4 à la suite (50 pts par réponse, jackpot de 200 pts) et le Duel des
 champions (des étoiles, pas des points).
 
 ### Cartes « coup bas »
