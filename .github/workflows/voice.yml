@@ -9,6 +9,7 @@ on:
     paths:
       - js/announcer.js
       - js/voice.js
+      - js/chat.js
       - data/questions/**
       - scripts/voice-lines.js
       - scripts/gen_voice.py
