@@ -177,6 +177,7 @@
       conns.forEach((c) => { if (c !== conn && c.pid === res.p.id) { conns.delete(c); try { c.close(); } catch (e) {} } });
       conn.pid = res.p.id;
       conn._last = null;
+      game.notePlayerSeen(res.p.id, m.seen);
       send(conn, { t: 'welcome', role: 'player', token: res.p.token, id: res.p.id, code: game.code, rejoined: res.rejoined });
       send(conn, chat.backlog());
       game.changed();

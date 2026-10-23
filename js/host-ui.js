@@ -392,7 +392,7 @@
     /* ---- Question (commune à plusieurs manches) ---- */
     qHeader(q) {
       const d = q.data;
-      return `<div class="q-head"><span class="cat">${this.g.catIcon(d.categorie)} ${esc(d.categorie)}${d.sous_theme ? ' · ' + esc(d.sous_theme) : ''}</span>${diffBar(d.difficulte)}</div>`;
+      return `<div class="q-head"><div class="cat"><span class="cat-name">${this.g.catIcon(d.categorie)} ${esc(d.categorie)}</span>${d.sous_theme ? `<span class="cat-sub">${esc(d.sous_theme)}</span>` : ''}</div>${diffBar(d.difficulte)}</div>`;
     }
     choicesHTML(q, revealed, hidden = []) {
       if (!q.choices) return '';

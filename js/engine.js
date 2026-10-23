@@ -21,6 +21,8 @@
   /** Réponse d'une question, pour éviter deux fois la même réponse dans une partie (pas pour Vrai/Faux ni Fourchette). */
   const answerKey = (q) => (['libre', 'qcm', 'indices'].includes(q.type) ? PQA.normalize(q.reponse) : null);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const PLAYER_SEEN_MAX = 3000; // questions retenues par téléphone
+  const RECENT_THEMES = 6; // on évite de reprendre un des 6 derniers sous-thèmes
 
   // Ordre de l'émission : le Sprint ouvre, le Duel des champions conclut toujours.
   const ROUND_ORDER = ['sprint', 'mystere', 'eclair', 'table', 'quatre', 'fourchette', 'champions'];
@@ -130,6 +132,8 @@
       this.jobs = [];
       this.paused = false;
       this.used = new Set();
+      this.playerSeen = {}; // pid -> questions déjà vues sur le téléphone de ce joueur
+      this.recentThemes = []; // sous-thèmes des dernières questions, pour varier
       this.nextId = 1;
       this.seq = 0; // compteur de changements (clé de rendu)
       this.log = [];
@@ -255,33 +259,46 @@
       try { localStorage.setItem('pqa_seen', JSON.stringify(Array.from(this.seen).slice(-5000))); } catch (e) {}
     }
     resetSeen() { this.seen = new Set(); this.saveSeen(); }
+    /** Historique envoyé par le téléphone d'un joueur à sa connexion (parties jouées ailleurs comprises). */
+    notePlayerSeen(pid, ids) {
+      if (!Array.isArray(ids)) return;
+      this.playerSeen[pid] = new Set(ids.filter((x) => typeof x === 'string').slice(-PLAYER_SEEN_MAX));
+    }
     /**
      * Tire une question non utilisée dans la partie, de préférence jamais vue
-     * sur cet appareil, la plus proche possible de la difficulté visée.
+     * ni sur cet appareil ni par les joueurs présents, d'un sous-thème différent
+     * des dernières, la plus proche possible de la difficulté visée.
      */
     pickQuestion({ types, cat, diff, diffMin = 1, diffMax = 10, exclude }) {
       let pool = this.bank.filter((q) => !this.used.has(q.id) && types.includes(q.type) && (!cat || q.categorie === cat) && q.difficulte >= diffMin && q.difficulte <= diffMax && (!exclude || !exclude(q)));
       if (!pool.length && (diffMin > 1 || diffMax < 10)) return this.pickQuestion({ types, cat, diff });
       if (!pool.length) return null;
-      const unseen = pool.filter((q) => !this.seen.has(q.id));
-      if (unseen.length) pool = unseen;
-      else {
-        // Tout a déjà été vu sur cet appareil : on reprend le tiers vu il y a le plus longtemps.
+      // Nombre de fois où la question a déjà été vue : sur cet écran et sur les téléphones des joueurs présents.
+      const phones = this.activePlayers().map((p) => this.playerSeen[p.id]).filter(Boolean);
+      const views = (q) => (this.seen.has(q.id) ? 1 : 0) + phones.reduce((n, s) => n + (s.has(q.id) ? 1 : 0), 0);
+      const fewest = Math.min(...pool.map(views));
+      pool = pool.filter((q) => views(q) === fewest);
+      if (fewest > 0) {
+        // Tout a déjà été vu : on reprend le tiers vu il y a le plus longtemps sur cet écran.
         const order = new Map();
         let i = 0;
         for (const id of this.seen) order.set(id, i++);
-        pool = pool.slice().sort((a, b) => order.get(a.id) - order.get(b.id)).slice(0, Math.ceil(pool.length / 3));
+        const age = (q) => (order.has(q.id) ? order.get(q.id) : -1);
+        pool = pool.slice().sort((a, b) => age(a) - age(b)).slice(0, Math.ceil(pool.length / 3));
       }
       const taken = new Set();
       for (const x of this.bank) if (this.used.has(x.id)) { const k = answerKey(x); if (k) taken.add(k); }
       const fresh = pool.filter((x) => !taken.has(answerKey(x)));
       if (fresh.length) pool = fresh;
+      const varied = pool.filter((x) => !x.sous_theme || !this.recentThemes.includes(x.sous_theme));
+      if (varied.length) pool = varied;
       if (diff) {
         const best = Math.min(...pool.map((q) => Math.abs(q.difficulte - diff)));
         pool = pool.filter((q) => Math.abs(q.difficulte - diff) <= best + 1);
       }
       const q = pickOne(pool);
       this.used.add(q.id);
+      if (q.sous_theme) this.recentThemes = this.recentThemes.concat(q.sous_theme).slice(-RECENT_THEMES);
       this.seen.delete(q.id); // l'ordre du Set = ordre de passage, le plus récent à la fin
       this.seen.add(q.id);
       this.saveSeen();
@@ -1593,6 +1610,7 @@
       if (!p) return { screen: 'kicked' };
       const v = { me: this.meInfo(p), phase: this.phase, mode: this.settings.mode, round: this.round ? this.round.type : null, others: this.activePlayers().filter((x) => x.id !== pid).map((x) => ({ id: x.id, name: x.name, color: x.color })), canCard: this.phase !== 'lobby' && this.phase !== 'end' && this.settings.mode !== 'duel', paused: this.paused };
       const q = this.q, r = this.round;
+      if (q && q.data && q.data.id && (this.phase === 'question' || this.phase === 'reveal')) v.seenId = q.data.id;
       const withTimer = () => { if (this.timer) v.timer = { key: this.timer.key, total: this.timer.total }; };
       const result = () => {
         const res = q && q.results[pid];
@@ -1670,7 +1688,7 @@
       if (r && this.phase === 'intro') { const R = PQA.ROUNDS[r.type]; t.rules = R.rules || [R.desc]; }
       if (q && (this.phase === 'question' || this.phase === 'reveal')) {
         const d = q.data;
-        t.q = { id: q.id, cat: this.catIcon(d.categorie) + ' ' + d.categorie + (d.sous_theme ? ' · ' + d.sous_theme : ''), diff: d.difficulte, question: d.question, choices: q.choices || null };
+        t.q = { id: q.id, cat: this.catIcon(d.categorie) + ' ' + d.categorie, sub: d.sous_theme || null, diff: d.difficulte, question: d.question, choices: q.choices || null };
         if (d.indices && q.kind === 'buzz') t.q.clues = d.indices.slice(0, (q.clue || 0) + 1);
         if (this.phase === 'reveal') {
           t.q.correctIdx = q.correctIdx;
@@ -1722,7 +1740,7 @@
         v.value = pointsFor(d.difficulte);
         v.answerSecs = this.answerTime(q) / 1000;
         if (r.type === 'champions') { v.penalty = 0; v.cat = 'Duel des champions · ' + r.hits[pid] + '/' + r.target; }
-        else if (q.typed) v.cat = this.catIcon(d.categorie) + ' ' + d.categorie;
+        else if (q.typed) { v.cat = this.catIcon(d.categorie) + ' ' + d.categorie; v.sub = d.sous_theme || null; }
         return;
       }
     }
