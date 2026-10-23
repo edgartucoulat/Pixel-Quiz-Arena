@@ -12,7 +12,7 @@ function score(values, data = {}) {
     players[id] = { id, name: id, score: 0, streak: 0, bestStreak: 0, cards: [], stats: { correct: 0, wrong: 0, fourchette: 0, points: 0, hardCorrect: 0 } };
     if (v != null) answers[id] = { value: v };
   }
-  Object.assign(g, { players, fx() {}, say() {}, maybeGiveCard() {} });
+  Object.assign(g, { players, fx() {}, say() {} });
   const q = { data: { reponse: 100, tolerance: 0, ...data }, answerers: Object.keys(values), answers, results: {} };
   g.scoreFourchette(q);
   return q.results;

@@ -69,6 +69,9 @@ Par défaut, l'émission enchaîne dans cet ordre :
    reprend la main dès que l'adversaire a répondu ou qu'un nouvel indice tombe. Le premier à
    3 étoiles (bonnes réponses) **gagne la partie**, quel que soit son score (en équipes, son
    équipe gagne).
+   📞 **Appel à un ami** : une fois dans le duel, chaque finaliste peut, après avoir buzzé,
+   choisir un joueur éliminé qui répond à sa place (avec le temps de réponse complet). Si l'ami
+   trouve, l'étoile va au finaliste.
 
 Toutes les manches durent à peu près le même temps : environ 2 min en partie courte,
 3 min en normale et 4 min 30 en longue. Les manches où l'on joue chacun son tour s'adaptent au
@@ -92,15 +95,17 @@ champions (des étoiles, pas des points).
 
 ### Cartes « coup bas »
 
-Une série de 3 ou 6 bonnes réponses (ou un peu de chance) donne une carte, 2 au maximum :
+Chaque joueur commence la partie avec les deux cartes en main, et chacune ne sert qu'une fois.
+On n'en gagne pas d'autres en cours de partie. Option « 🃏 Coups bas » dans le salon (pas en mode Duel).
 
 | Carte | Effet |
 |---|---|
 | 🧊 Gel | Gèle le buzzer et les réponses d’un adversaire pendant 5 s |
-| 🪞 Miroir | Les choix de l’adversaire s’affichent à l’envers et mélangés à la prochaine question |
-| 🦹 Pickpocket | Tu empoches la moitié des prochains points de l’adversaire |
-| 💣 Bombe | Si l’adversaire rate sa prochaine question, il perd 100 pts et tu les gagnes ; s’il trouve, elle est désamorcée |
-| 🛡️ Bouclier | Bloque la prochaine carte jouée contre toi |
+| 🪤 Question piégée | Tu choisis un adversaire et un thème : il reçoit une question de niveau moyen (difficulté 4 à 6) sur ce thème. Bonne réponse : +300 pts pour lui ; mauvaise réponse ou pas de réponse : −200 pts |
+
+La Question piégée se joue juste après la question en cours (ou avant la manche suivante),
+puis l'émission reprend où elle en était. Elle ne peut pas être envoyée pendant le Duel des
+champions.
 
 ### 💬 Le chat et Pixou
 

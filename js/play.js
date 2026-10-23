@@ -239,23 +239,28 @@
     const m = v.me;
     const team = m.teamName ? `<span class="team" style="background:${m.teamColor}">${esc(m.teamName)}</span>` : '';
     patch($('#me'), `<img class="pix av" src="${PQA.avatarURL(m.avatar, m.color, 'idle', 4)}" alt="">
-      <div class="me-info"><b style="color:${m.color}">${esc(m.name)}</b>${team}<small>${m.rank}${m.rank === 1 ? 'er' : 'e'} / ${m.total}${m.streak >= 3 ? ` · 🔥+${m.bonus}` : ''}${m.shield ? ' · 🛡️' : ''}</small></div>
+      <div class="me-info"><b style="color:${m.color}">${esc(m.name)}</b>${team}<small>${m.rank}${m.rank === 1 ? 'er' : 'e'} / ${m.total}${m.streak >= 3 ? ` · 🔥+${m.bonus}` : ''}</small></div>
       <div class="me-score">${fmt(m.score)}<small>pts</small></div>`);
   }
 
   function renderCards(v) {
-    const cards = v.me.cards || [];
-    patch($('#cards'), cards.length && v.canCard ? cards.map((c, i) => `<button class="card-btn" data-card="${c}" data-i="${i}">${PQA.CARDS[c].icon}<span>${esc(PQA.CARDS[c].name)}</span></button>`).join('') : '');
+    const cards = (v.me.cards || []).filter((c) => PQA.CARDS[c] && (c === 'piege' ? v.canTrap : v.canCard));
+    patch($('#cards'), cards.length ? cards.map((c, i) => `<button class="card-btn" data-card="${c}" data-i="${i}">${PQA.CARDS[c].icon}<span>${esc(PQA.CARDS[c].name)}</span></button>`).join('') : '');
   }
 
   const timerBar = () => '<div class="ptimer"><div id="ptimer-fill"></div></div>';
   const choiceBtns = (v, action, picked, extraCls = '') => {
     if (!v.choices) return '';
     const n = v.choices.list.length;
-    return `<div class="pchoices n${n} ${v.choices.mirror ? 'mirror' : ''} ${extraCls}">${v.choices.list.map((c, k) => `
+    return `<div class="pchoices n${n} ${extraCls}">${v.choices.list.map((c, k) => `
       <button class="pchoice c${c.i} ${picked === c.i ? 'picked' : ''} ${c.hidden ? 'hidden' : ''}" data-act="${action}" data-val="${c.i}" ${c.hidden ? 'disabled' : ''}>
         <span class="letter">${n === 2 ? (c.i === 0 ? '✔' : '✖') : LETTERS[c.i]}</span><span class="ctext">${esc(c.text)}</span></button>`).join('')}</div>`;
   };
+
+  const banner = (v) => (v.banner ? `<div class="pq-cat">${esc(v.banner)}</div>` : '');
+  /* Duel des champions : après avoir buzzé, le finaliste peut appeler un joueur éliminé (une fois). */
+  const friendKey = (v) => (v.friends ? v.friends.map((f) => f.id).join() : '');
+  const friendBtn = (v) => (v.friends ? '<button class="small-btn friend-btn" data-act="friend">📞 Appel à un ami</button>' : '');
 
   const screens = {
     lobby(v) {
@@ -293,14 +298,14 @@
     choices(v) {
       return {
         key: 'choices' + v.qid + JSON.stringify(v.choices),
-        html: `${timerBar()}<div class="pq">${v.buzzed ? '<div class="you-buzzed">🔔 À toi ! Choisis vite !</div>' : ''}<div class="pq-text">${esc(v.question)}</div>${choiceBtns(v, 'answer')}</div>`,
+        html: `${timerBar()}<div class="pq">${banner(v)}${v.buzzed ? '<div class="you-buzzed">🔔 À toi ! Choisis vite !</div>' : ''}<div class="pq-text">${esc(v.question)}</div>${choiceBtns(v, 'answer')}</div>`,
       };
     },
     text(v) {
       return {
-        key: 'text' + v.qid,
-        html: `${timerBar()}<div class="pq">${v.buzzed ? '<div class="you-buzzed">🔔 À toi ! Quelle est ta réponse ?</div>' : ''}<div class="pq-text">${esc(v.question)}</div>
-          <form id="f-text" class="ptext"><input id="in-answer" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="60" placeholder="Ta réponse..."><button class="big-btn green">ENVOYER</button></form></div>`,
+        key: 'text' + v.qid + (v.banner || '') + friendKey(v),
+        html: `${timerBar()}<div class="pq">${banner(v)}${v.buzzed ? '<div class="you-buzzed">🔔 À toi ! Quelle est ta réponse ?</div>' : ''}<div class="pq-text">${esc(v.question)}</div>
+          <form id="f-text" class="ptext"><input id="in-answer" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="60" placeholder="Ta réponse..."><button class="big-btn green">ENVOYER</button></form>${friendBtn(v)}</div>`,
         after() {
           const inp = $('#in-answer');
           setTimeout(() => inp.focus(), 50);
@@ -309,7 +314,7 @@
       };
     },
     oral(v) {
-      return { key: 'oral' + v.qid, html: `${timerBar()}<div class="wait"><div class="mic">🎤</div><div class="wtitle">Réponds à voix haute !</div><div class="wmsg">Le présentateur valide ta réponse.</div></div>` };
+      return { key: 'oral' + v.qid + (v.banner || '') + friendKey(v), html: `${timerBar()}<div class="wait">${banner(v)}<div class="mic">🎤</div><div class="wtitle">Réponds à voix haute !</div><div class="wmsg">Le présentateur valide ta réponse.</div>${friendBtn(v)}</div>` };
     },
     range(v) { return rangeScreen(v); },
     buzzer(v) {
@@ -372,7 +377,7 @@
     result(v) {
       const c = v.correct;
       const gain = v.hit ? `+1 ★ <small>(${v.stars}/${v.target})</small>` : '+' + fmt(v.pts);
-      const head = c === true ? `<div class="res-ok">✔ BRAVO !</div><div class="res-pts">${gain}</div>` : c === false ? `<div class="res-ko">${v.none ? '⏱ Trop tard !' : '✖ RATÉ !'}</div>` : '<div class="wtitle">Réponse :</div>';
+      const head = c === true ? `<div class="res-ok">✔ BRAVO !</div><div class="res-pts">${gain}</div>` : c === false ? `<div class="res-ko">${v.none ? '⏱ Trop tard !' : '✖ RATÉ !'}</div>${v.pts < 0 ? `<div class="res-pts">${fmt(v.pts)}</div>` : ''}` : '<div class="wtitle">Réponse :</div>';
       const guess = v.guess ? `<div class="wmsg">Ta réponse : <b>${esc(v.guess)}</b>${v.exact ? ' · 🎯 PILE !' : v.gap ? ' · écart : ' + esc(v.gap) : ''}</div>` : '';
       return {
         key: 'result' + v.phase + c + v.pts + (v.stars || '') + v.answer + (v.guess || '') + tvKey(v),
@@ -634,6 +639,7 @@
       else if (act === 'pick') { net.send({ t: 'pick', value: num }); PQA.vibrate(30); }
       else if (act === 'theme') { net.send({ t: 'theme', value: num }); PQA.vibrate(30); }
       else if (act === 'target') { net.send({ t: 'target', value: val }); PQA.vibrate(30); }
+      else if (act === 'friend') openFriend();
       return;
     }
     const c = e.target.closest('.card-btn');
@@ -643,10 +649,29 @@
   function openCard(card) {
     const def = PQA.CARDS[card];
     const v = state.view;
-    if (!v) return;
-    const targets = def.target ? `<div class="plist">${v.others.map((o) => `<button data-target="${o.id}" style="--oc:${o.color}">${esc(o.name)}</button>`).join('')}</div>` : '<button class="big-btn" data-target="">UTILISER</button>';
-    modal(`<div class="m-title">${def.icon} ${esc(def.name)}</div><div class="m-desc">${esc(def.desc)}</div>${def.target ? '<div class="m-desc">Sur qui ?</div>' : ''}${targets}<button class="small-btn" data-close>Garder pour plus tard</button>`, (el) => {
-      el.querySelectorAll('[data-target]').forEach((b) => (b.onclick = () => { net.send({ t: 'card', card, target: b.dataset.target || null }); PQA.vibrate([30, 30, 60]); closeModal(); }));
+    if (!v || !def) return;
+    const send = (msg) => { net.send({ t: 'card', card, ...msg }); PQA.vibrate([30, 30, 60]); closeModal(); };
+    const targets = `<div class="plist">${v.others.map((o) => `<button data-target="${o.id}" style="--oc:${o.color}">${esc(o.name)}</button>`).join('')}</div>`;
+    modal(`<div class="m-title">${def.icon} ${esc(def.name)}</div><div class="m-desc">${esc(def.desc)}</div><div class="m-desc">Sur qui ?</div>${targets}<button class="small-btn" data-close>Garder pour plus tard</button>`, (el) => {
+      el.querySelectorAll('[data-target]').forEach((b) => (b.onclick = () => {
+        const target = b.dataset.target;
+        if (card !== 'piege') return send({ target });
+        // Question piégée : on choisit ensuite le thème.
+        const name = (v.others.find((o) => o.id === target) || {}).name || '';
+        modal(`<div class="m-title">${def.icon} Piège pour ${esc(name)}</div><div class="m-desc">Sur quel thème ?</div>
+          <div class="pthemes">${(v.trapThemes || []).map((t, i) => `<button data-theme="${i}">${t.icon}<span>${esc(t.name)}</span></button>`).join('')}</div>
+          <button class="small-btn" data-close>Annuler</button>`, (el2) => {
+          el2.querySelectorAll('[data-theme]').forEach((t) => (t.onclick = () => send({ target, theme: v.trapThemes[Number(t.dataset.theme)].name })));
+        });
+      }));
+    });
+  }
+  function openFriend() {
+    const v = state.view;
+    if (!v || !v.friends) return;
+    modal(`<div class="m-title">📞 Appel à un ami</div><div class="m-desc">Un seul appel par partie : le joueur choisi répond à ta place.</div>
+      <div class="plist">${v.friends.map((f) => `<button data-friend="${f.id}" style="--oc:${f.color}">${esc(f.name)}</button>`).join('')}</div><button class="small-btn" data-close>Je réponds moi-même</button>`, (el) => {
+      el.querySelectorAll('[data-friend]').forEach((b) => (b.onclick = () => { net.send({ t: 'friend', target: b.dataset.friend }); PQA.vibrate([30, 30, 60]); closeModal(); }));
     });
   }
   function modal(html, bind) {
@@ -670,7 +695,6 @@
     else if (m.fx === 'buzzwin') { flash(state.view ? state.view.me.color : '#fff'); PQA.vibrate([100, 50, 150]); }
     else if (m.fx === 'falsestart') { flash('#e43b44'); PQA.vibrate([200, 80, 200]); }
     else if (m.fx === 'frozen') { $('#ice').classList.add('on'); PQA.vibrate([20, 20, 20, 20, 20]); setTimeout(() => $('#ice').classList.remove('on'), 5000); }
-    else if (m.fx === 'card') { toast('🃏 Nouvelle carte : ' + PQA.CARDS[m.card].name + ' !'); PQA.vibrate([30, 30, 30]); }
   }
   function toast(text) {
     const el = document.createElement('div');

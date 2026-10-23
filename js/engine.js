@@ -77,7 +77,11 @@
   const CELL_BONUS = 100; // case étoile : bonus si bonne réponse
   const FOURCHETTE_RANK_PTS = [200, 100, 50, 25]; // Fourchette : points selon le rang (1er, 2e...)
   const FOURCHETTE_PILE = 500; // Fourchette : bonus pour une réponse pile
-  const BOMB = 100;       // carte bombe : points perdus par la cible (et gagnés par le poseur)
+  /* Carte Question piégée : une question de niveau moyen, sur le thème choisi par l'envoyeur. */
+  const TRAP = { win: 300, loss: 200, diff: 5 };
+  PQA.TRAP = TRAP;
+  /** Cartes en main au début de la partie : une de chaque, à usage unique. */
+  const START_CARDS = ['gel', 'piege'];
 
   /* Joueurs ordinateur (mode Solo) : justesse, vitesse de réponse et de buzz,
    * niveau choisi au Thème Mystère, précision à la Fourchette. */
@@ -136,6 +140,7 @@
       this.used = new Set();
       this.playerSeen = {}; // pid -> questions déjà vues sur le téléphone de ce joueur
       this.recentThemes = []; // sous-thèmes des dernières questions, pour varier
+      this.traps = []; // Questions piégées en attente : { from, target, cat }
       this.nextId = 1;
       this.seq = 0; // compteur de changements (clé de rendu)
       this.log = [];
@@ -332,7 +337,7 @@
       p = {
         id, token: token || PQA.randomToken(), name: this.uniqueName(name), avatar: avatar || PQA.randomAvatar(),
         colorIdx, color: PQA.PALETTE.player[colorIdx], team: 0, score: 0, connected: true, joinedAt: Date.now(),
-        streak: 0, bestStreak: 0, cards: [], frozenUntil: 0, mirror: false, mirrorQ: null, stolenBy: null, bomb: null, shield: false,
+        streak: 0, bestStreak: 0, cards: [], frozenUntil: 0,
         rtt: 120, local: false, spectator: this.phase !== 'lobby' && false,
         stats: { correct: 0, wrong: 0, answered: 0, buzzWins: 0, wrongBuzz: 0, fastest: null, fourchette: 0, cardsUsed: 0, hardCorrect: 0, worstRank: 1, points: 0 },
         fxSeq: 0,
@@ -452,7 +457,7 @@
     /** Ce qui, en changeant, demande à l'ordinateur de réfléchir à nouveau. */
     botKey(p) {
       const q = this.q, r = this.round, b = q && q.buzz;
-      return [this.phase, q && q.id, r && r.n, r && r.player, q && q.clue, b && b.current, b && b.open, b && b.locked.join(),
+      return [this.phase, q && q.id, r && r.n, r && r.player, q && q.clue, b && b.current, b && b.proxy, b && b.open, b && b.locked.join(),
         b && b.readyAt && now() >= b.readyAt, q && q.answers[p.id] ? 1 : 0].join('|');
     }
     botTick() {
@@ -474,6 +479,13 @@
       if (ph === 'board' && mine) return { at: at(1500, 3500), fn: () => { const free = r.cells.filter((c) => !c.used); if (free.length) this.tablePick(p.id, pickOne(free).i); } };
       if (ph === 'target' && mine) return { at: at(1200, 2500), fn: () => { const v = this.ranking().find((x) => x.id !== p.id); if (v) this.tableTarget(p.id, v.id); } };
       if (ph === 'qpick' && mine) return { at: at(1500, 3500), fn: () => { const free = r.themes.map((t, i) => (t.by ? -1 : i)).filter((i) => i >= 0); this.quatreTheme(p.id, free.length && Math.random() < 0.85 ? pickOne(free) : 'mystere'); } };
+      // Appelé à l'aide pendant le Duel des champions : il répond pour le finaliste.
+      if (ph === 'question' && q && !q.revealed && q.buzz && q.buzz.proxy === p.id && q.buzz.current && !q.answers[q.buzz.current]) {
+        let chance = this.botSkill(p, q.data);
+        if (q.data.indices) chance *= (q.clue + 1) / q.data.indices.length;
+        const ok = Math.random() < chance;
+        return { at: at(1500, 3500), fn: () => this.answer(p.id, this.botValue(p, q, ok)) };
+      }
       if (ph !== 'question' || !q || q.revealed || !q.answerers.includes(p.id)) return null;
       if (q.kind === 'buzz') {
         const b = q.buzz;
@@ -497,49 +509,27 @@
     /** Bonus de série en cours (affiché sur les podiums et la manette). */
     streakBonus(p) { return streakBonus(p.streak); }
 
-    /** Bonne réponse : bonus de série, carte Pickpocket, bombe désamorcée. Renvoie les points marqués. */
+    /** Bonne réponse : bonus de série. Renvoie les points marqués. */
     scoreCorrect(p, base, opts = {}) {
       p.streak++;
       p.bestStreak = Math.max(p.bestStreak, p.streak);
       p.stats.correct++;
       if (opts.diff >= 8) p.stats.hardCorrect++;
       const bonus = opts.noCombo || base <= 0 ? 0 : streakBonus(p.streak);
-      let pts = Math.round(base + bonus);
-      if (p.bomb) { p.bomb = null; this.fx('pop', { pid: p.id, text: '💣 Bombe désamorcée !' }); }
-      // Pickpocket : la moitié des points file chez le voleur.
-      if (p.stolenBy && this.players[p.stolenBy] && pts > 0) {
-        const thief = this.players[p.stolenBy];
-        const half = Math.round(pts / 2);
-        p.stolenBy = null;
-        pts -= half;
-        thief.score += half; thief.stats.points += half;
-        this.fx('points', { pid: thief.id, pts: half });
-        this.fx('pop', { pid: p.id, text: '🦹 ' + thief.name + ' empoche ' + half + ' pts !' });
-      }
+      const pts = Math.round(base + bonus);
       p.score += pts;
       p.stats.points += pts;
       if (!opts.silentStreak) {
         if (p.streak === 3) { this.fx('streak', { pid: p.id, bonus: 25 }); this.say('streak3', { name: p.name }, 'surprised'); }
         if (p.streak === 5) { this.fx('streak', { pid: p.id, bonus: 75 }); this.say('streak5', { name: p.name, n: p.streak }, 'surprised'); }
       }
-      this.maybeGiveCard(p);
       this.fx('points', { pid: p.id, pts });
       return { pts, bonus };
     }
-    /** Mauvaise réponse (ou pas de réponse) : fin de série, et la bombe éventuelle explose. */
+    /** Mauvaise réponse (ou pas de réponse) : fin de série. */
     scoreWrong(p) {
       p.streak = 0;
       p.stats.wrong++;
-      if (p.bomb) {
-        const owner = this.players[p.bomb];
-        p.bomb = null;
-        const loss = Math.min(BOMB, Math.max(0, p.score));
-        p.score -= loss;
-        this.fx('points', { pid: p.id, pts: -loss });
-        this.fx('pop', { pid: p.id, text: '💥 BOUM ! −' + loss });
-        this.fx('trap', { pid: p.id });
-        if (owner && loss) { owner.score += loss; owner.stats.points += loss; this.fx('points', { pid: owner.id, pts: loss }); }
-      }
     }
     addPoints(pid, delta) {
       const p = this.players[pid];
@@ -548,47 +538,33 @@
       this.fx('points', { pid, pts: delta });
       this.changed();
     }
-    maybeGiveCard(p) {
-      if (!this.settings.cards || this.settings.mode === 'duel' || p.cards.length >= 2) return;
-      if (p.streak === 3 || p.streak === 6 || Math.random() < 0.1) {
-        const card = pickOne(Object.keys(PQA.CARDS));
-        p.cards.push(card);
-        this.fx('cardGain', { pid: p.id, card });
-        this.hooks.send(p.id, { t: 'fx', fx: 'card', card });
-      }
+    /** Une carte peut-elle être jouée maintenant ? La Question piégée ne part plus pendant le Duel des champions. */
+    canPlayCard(card) {
+      if (!this.settings.cards || this.settings.mode === 'duel' || this.phase === 'lobby' || this.phase === 'end') return false;
+      if (card === 'piege') return !(this.round && this.round.type === 'champions');
+      return true;
     }
-    useCard(pid, card, targetId) {
+    useCard(pid, card, targetId, theme) {
       const p = this.players[pid];
-      if (!p || this.phase === 'lobby' || this.phase === 'end') return;
+      if (!p || !PQA.CARDS[card] || !this.canPlayCard(card)) return;
       const i = p.cards.indexOf(card);
       if (i < 0) return;
-      const def = PQA.CARDS[card];
       const target = this.players[targetId];
-      if (def.target && (!target || target.id === pid)) return;
-      p.cards.splice(i, 1);
-      p.stats.cardsUsed++;
-      if (def.target && target.shield) {
-        // Le bouclier encaisse la carte, qui est perdue.
-        target.shield = false;
-        this.fx('card', { pid, target: targetId, card });
-        this.fx('pop', { pid: target.id, text: '🛡️ Carte bloquée !' });
-        this.say('card_blocked', { name: p.name, target: target.name }, 'surprised');
-        return this.changed();
-      }
-      if (card === 'gel') {
+      if (!target || target.id === pid || target.spectator) return;
+      if (card === 'piege') {
+        const cat = this.categories.find((c) => c.name === theme);
+        if (!cat) return;
+        this.traps.push({ from: pid, target: target.id, cat: cat.name });
+        this.fx('card', { pid, target: target.id, card, cat: cat.name });
+        this.say('card_piege', { name: p.name, target: target.name, cat: cat.name }, 'smug');
+      } else if (card === 'gel') {
         target.frozenUntil = now() + 5000;
         this.hooks.send(target.id, { t: 'fx', fx: 'frozen' });
-      } else if (card === 'inverse') {
-        target.mirror = true;
-      } else if (card === 'vol') {
-        target.stolenBy = pid;
-      } else if (card === 'bombe') {
-        target.bomb = pid;
-      } else if (card === 'bouclier') {
-        p.shield = true;
+        this.fx('card', { pid, target: target.id, card });
+        this.say('card_gel', { name: p.name, target: target.name }, 'smug');
       }
-      this.fx('card', { pid, target: targetId, card });
-      this.say('card_' + card, { name: p.name, target: target ? target.name : '' }, 'smug');
+      p.cards.splice(i, 1);
+      p.stats.cardsUsed++;
       this.changed();
     }
     isFrozen(p) { return p.frozenUntil && now() < p.frozenUntil; }
@@ -608,7 +584,9 @@
       }
       this.champion = this.runnerUp = null;
       if (this.settings.teams) this.activePlayers().forEach((p) => p.team >= this.settings.teams && this.autoTeam(p));
-      this.activePlayers().forEach((p) => { p.score = 0; p.streak = 0; p.cards = []; });
+      this.traps = []; this.trapNext = null;
+      const cards = this.settings.cards && this.settings.mode !== 'duel' ? START_CARDS : [];
+      this.activePlayers().forEach((p) => { p.score = 0; p.streak = 0; p.cards = cards.slice(); });
       this.roundIdx = -1;
       this.fx('start');
       this.say('start', {}, 'happy');
@@ -617,6 +595,7 @@
     }
 
     nextRound() {
+      if (this.trapGate(() => this.nextRound())) return;
       this.clearJobs();
       this.stopTimer();
       this.q = null;
@@ -651,6 +630,7 @@
 
     /** Fin d'une manche : classement intermédiaire (ou fin de partie). */
     endRound() {
+      if (this.trapGate(() => this.endRound())) return;
       this.clearJobs();
       this.stopTimer();
       this.q = null;
@@ -686,6 +666,7 @@
         case 'faceoff': return this.championsNext();
         case 'ko': case 'champion': return this.endGame();
         case 'wheel': return this.mystereLevel();
+        case 'trap': return this.trapQuestion();
         default: return;
       }
     }
@@ -712,11 +693,6 @@
         q.choices = ['Vrai', 'Faux'];
         q.correctIdx = data.reponse === 'Vrai' ? 0 : 1;
       }
-      // Effet "Miroir" : appliqué à la prochaine question de la cible.
-      this.playerList().forEach((p) => {
-        p.mirrorQ = null;
-        if (p.mirror && answerers.includes(p.id) && q.choices) { p.mirror = false; p.mirrorQ = q.id; p.mirrorOrder = PQA.shuffle(q.choices.map((_, i) => i)); }
-      });
       this.q = q;
       this.phase = 'question';
       return q;
@@ -786,7 +762,8 @@
       const d = q.data;
       const type = this.round.type;
       const res = q.results;
-      if (d.type === 'fourchette') this.scoreFourchette(q);
+      if (q.trap) this.scoreTrap(q);
+      else if (d.type === 'fourchette') this.scoreFourchette(q);
       else if (q.kind === 'all' || q.kind === 'single') {
         for (const pid of q.answerers) {
           const p = this.players[pid];
@@ -870,7 +847,12 @@
     afterReveal() {
       if (this.phase !== 'reveal') return;
       this.clearJobs();
-      this.playerList().forEach((p) => (p.mirrorQ = null));
+      if (this.q && this.q.trap) return this.trapDone();
+      this.continueRound();
+    }
+    /** Question suivante de la manche (après une éventuelle Question piégée). */
+    continueRound() {
+      if (this.trapGate(() => this.continueRound())) return;
       const t = this.round.type;
       if (t === 'mystere') return this.mystereNext();
       if (t === 'table') return this.tableNextTurn();
@@ -933,6 +915,68 @@
         q.results[it.pid] = { correct: true, pts: r.pts, rank, exact: it.exact, gap: it.gap, bonus: r.bonus };
       });
       this.fx('drumroll');
+    }
+
+    /* ---- Question piégée : jouée entre deux questions, avant de reprendre le déroulé ---- */
+    /** S'il y a une Question piégée en attente, elle prend la main ; next reprend l'émission ensuite. */
+    trapGate(next) {
+      while (this.traps && this.traps.length) {
+        const t = this.traps.shift();
+        const target = this.players[t.target];
+        if (!target || !(target.connected || target.local || target.bot)) continue; // cible partie : la carte est perdue
+        this.trapNext = next;
+        this.clearJobs();
+        this.stopTimer();
+        this.q = null;
+        this.trap = t;
+        this.phase = 'trap';
+        this.fx('trapIntro', { pid: t.target, from: t.from });
+        this.say('trapIntro', { name: this.name(t.from), target: target.name, cat: t.cat }, 'smug');
+        if (this.auto) this.after(4000, () => this.trapQuestion());
+        this.changed();
+        return true;
+      }
+      return false;
+    }
+    trapQuestion() {
+      if (this.phase !== 'trap') return;
+      this.clearJobs();
+      const t = this.trap, types = ['qcm', 'vf', 'libre'];
+      const data = this.pickQuestion({ types, cat: t.cat, diff: TRAP.diff, diffMin: TRAP.diff - 1, diffMax: TRAP.diff + 1 })
+        || this.pickQuestion({ types, diff: TRAP.diff, diffMin: TRAP.diff - 1, diffMax: TRAP.diff + 1 });
+      if (!data) return this.trapDone();
+      const q = this.makeQ(data, 'single', [t.target], { trap: t });
+      q.duration = data.type === 'libre' ? TIMES.singleLibre : TIMES.single;
+      this.startTimer(q.duration, () => this.reveal());
+      this.fx('question');
+      this.changed();
+    }
+    /** +300 si bonne réponse, −200 sinon (pas de réponse comprise). */
+    scoreTrap(q) {
+      const pid = q.answerers[0], p = this.players[pid];
+      if (!p) return;
+      const a = q.answers[pid];
+      const ok = !!a && (q.forced && pid in q.forced ? q.forced[pid] : this.evaluate(q, a.value));
+      if (ok) {
+        const r = this.scoreCorrect(p, TRAP.win, { noCombo: true, diff: q.data.difficulte });
+        q.results[pid] = { correct: true, pts: r.pts, trap: true };
+      } else {
+        this.scoreWrong(p);
+        p.score -= TRAP.loss;
+        this.fx('points', { pid, pts: -TRAP.loss });
+        q.results[pid] = { correct: false, pts: -TRAP.loss, none: !a, trap: true };
+      }
+    }
+    trapDone() {
+      const next = this.trapNext;
+      this.trapNext = null;
+      this.trap = null;
+      this.q = null;
+      this.phase = 'reveal'; // la suite repart comme après une question normale
+      this.clearJobs();
+      this.stopTimer();
+      if (next) next();
+      else this.changed();
     }
 
     /* ---- Le Sprint : une rafale de questions au buzzer, thèmes au hasard, réponse à taper ---- */
@@ -1031,12 +1075,13 @@
     answerTime(q) { return q.typed ? (this.irl ? TIMES.buzzAnswerIRL : BUZZ.answerText) : BUZZ.answer; }
     buzzAnswer(pid, value) {
       const q = this.q;
-      if (q.buzz.current !== pid || q.buzzAnswered) return;
-      const p = this.players[pid];
-      p.stats.answered++;
-      q.answers[pid] = { value, t: now() - q.startedAt, text: typeof value === 'string' ? value.slice(0, 60) : undefined };
-      if (this.irl && q.typed) { q.pending = { pid, text: q.answers[pid].text }; this.changed(); return; }
-      this.resolveBuzz(pid, this.evaluate(q, value));
+      // Appel à un ami : c'est l'ami qui répond, la réponse compte pour le finaliste.
+      const owner = q.buzz.proxy ? (q.buzz.proxy === pid ? q.buzz.current : null) : pid;
+      if (!owner || q.buzz.current !== owner || q.buzzAnswered || q.answers[owner]) return;
+      this.players[pid].stats.answered++;
+      q.answers[owner] = { value, t: now() - q.startedAt, text: typeof value === 'string' ? value.slice(0, 60) : undefined, by: q.buzz.proxy || undefined };
+      if (this.irl && q.typed) { q.pending = { pid: owner, text: q.answers[owner].text }; this.changed(); return; }
+      this.resolveBuzz(owner, this.evaluate(q, value));
     }
     resolveBuzz(pid, ok, timeout) {
       const q = this.q;
@@ -1044,6 +1089,7 @@
       const p = this.players[pid];
       q.pending = null;
       q.buzz.current = null;
+      q.buzz.proxy = null;
       if (ok) {
         if (this.round.type === 'duel') return this.duelHit(pid);
         if (this.round.type === 'champions') return this.championsHit(pid);
@@ -1264,6 +1310,7 @@
     quatreNextPlayer(first) {
       const r = this.round;
       if (!first && this.phase !== 'qresult') return;
+      if (!first && this.trapGate(() => this.quatreNextPlayer(true))) return;
       this.clearJobs();
       if (!r.queue.length) return this.endRound();
       r.player = r.queue.shift();
@@ -1377,6 +1424,7 @@
       if (rk.length < 2) return this.endRound();
       r.finalists = rk.slice(0, 2).map((p) => p.id);
       r.hits = { [r.finalists[0]]: 0, [r.finalists[1]]: 0 };
+      r.calls = { [r.finalists[0]]: true, [r.finalists[1]]: true }; // un Appel à un ami chacun
       r.target = target;
       r.max = target * 4; // garde-fou si personne ne trouve
       r.total = 0;
@@ -1398,6 +1446,28 @@
       if (!data) return this.championsEnd();
       r.n++;
       this.startBuzz(asTyped(data), r.finalists.slice());
+    }
+    /** Joueurs éliminés qu'un finaliste peut appeler à l'aide. */
+    friendsFor(pid) {
+      const r = this.round;
+      if (!r || r.type !== 'champions' || !r.calls || !r.calls[pid]) return [];
+      return this.activePlayers().filter((p) => !r.finalists.includes(p.id) && (p.connected || p.local || p.bot));
+    }
+    /** Appel à un ami : après avoir buzzé, le finaliste laisse un joueur éliminé répondre à sa place (une fois par partie). */
+    callFriend(pid, friendId) {
+      const q = this.q, r = this.round;
+      if (!q || this.phase !== 'question' || q.kind !== 'buzz' || r.type !== 'champions' || q.revealed) return;
+      if (q.buzz.current !== pid || q.buzz.proxy || q.answers[pid] || q.pending) return;
+      const friend = this.friendsFor(pid).find((p) => p.id === friendId);
+      if (!friend) return;
+      r.calls[pid] = false;
+      q.buzz.proxy = friend.id;
+      // L'ami repart avec le temps de réponse complet.
+      this.startTimer(this.answerTime(q), () => this.resolveBuzz(pid, false, true));
+      this.fx('friendCall', { pid, friend: friend.id });
+      this.hooks.send(friend.id, { t: 'fx', fx: 'buzzwin' });
+      this.say('friendCall', { name: this.name(pid), friend: friend.name }, 'surprised');
+      this.changed();
     }
     championsHit(pid) {
       const r = this.round, q = this.q, p = this.players[pid];
@@ -1545,7 +1615,8 @@
         case 'pick': return !this.irl && this.tablePick(pid, m.value);
         case 'target': return !this.irl && this.tableTarget(pid, m.value);
         case 'theme': return !this.irl && this.quatreTheme(pid, m.value);
-        case 'card': return this.useCard(pid, m.card, m.target);
+        case 'card': return this.useCard(pid, m.card, m.target, m.theme);
+        case 'friend': return this.callFriend(pid, m.target);
         case 'profile': return this.updateProfile(pid, m);
       }
     }
@@ -1583,21 +1654,19 @@
       return {
         id: p.id, name: p.name, avatar: p.avatar, color: p.color, score: p.score, rank: this.rankOf(p), total: this.activePlayers().length,
         team: this.settings.teams ? p.team : null, teamName: this.settings.teams ? PQA.TEAM_NAMES[p.team] : null, teamColor: this.settings.teams ? PQA.PALETTE.team[p.team] : null,
-        streak: p.streak, bonus: this.streakBonus(p), cards: p.cards.slice(), shield: !!p.shield,
+        streak: p.streak, bonus: this.streakBonus(p), cards: p.cards.slice(),
         frozen: this.isFrozen(p) ? Math.ceil((p.frozenUntil - now()) / 1000) : 0,
       };
     }
     choicesFor(p, q, hidden = []) {
       if (!q.choices) return null;
-      let order = q.choices.map((_, i) => i);
-      const mirror = p.mirrorQ === q.id;
-      if (mirror) order = p.mirrorOrder;
-      return { mirror, list: order.map((i) => ({ i, text: q.choices[i], hidden: hidden.includes(i) })) };
+      return { list: q.choices.map((text, i) => ({ i, text, hidden: hidden.includes(i) })) };
     }
     viewFor(pid) {
       const p = this.players[pid];
       if (!p) return { screen: 'kicked' };
-      const v = { me: this.meInfo(p), phase: this.phase, mode: this.settings.mode, round: this.round ? this.round.type : null, others: this.activePlayers().filter((x) => x.id !== pid).map((x) => ({ id: x.id, name: x.name, color: x.color })), canCard: this.phase !== 'lobby' && this.phase !== 'end' && this.settings.mode !== 'duel', paused: this.paused };
+      const v = { me: this.meInfo(p), phase: this.phase, mode: this.settings.mode, round: this.round ? this.round.type : null, others: this.activePlayers().filter((x) => x.id !== pid).map((x) => ({ id: x.id, name: x.name, color: x.color })), canCard: this.canPlayCard('gel'), canTrap: this.canPlayCard('piege'), paused: this.paused };
+      if (p.cards.includes('piege')) v.trapThemes = this.categories.map((c) => ({ name: c.name, icon: c.icon }));
       const q = this.q, r = this.round;
       if (q && q.data && q.data.id && (this.phase === 'question' || this.phase === 'reveal')) v.seenId = q.data.id;
       const withTimer = () => { if (this.timer) v.timer = { key: this.timer.key, total: this.timer.total }; };
@@ -1643,6 +1712,13 @@
           else if (r.player === pid) { v.screen = 'themes'; v.themes = r.themes.map((t) => ({ name: t.name, icon: t.icon, by: t.by ? this.name(t.by) : null })); withTimer(); }
           else { v.screen = 'wait'; v.title = '4 à la suite'; v.msg = this.name(r.player) + ' choisit son thème...'; }
           break;
+        case 'trap': {
+          const t = this.trap;
+          v.screen = 'wait'; v.title = '🪤 Question piégée !';
+          v.msg = t.target === pid ? this.name(t.from) + ' te tend un piège en ' + t.cat + ' ! +' + TRAP.win + ' si tu trouves, −' + TRAP.loss + ' sinon.'
+            : this.name(t.from) + ' piège ' + this.name(t.target) + ' en ' + t.cat + ' !';
+          break;
+        }
         case 'qresult': v.screen = 'wait'; v.title = r.run.won ? '💰 JACKPOT !' : 'Fin du chrono'; v.msg = r.run.won ? this.name(r.player) + ' remporte le jackpot : +' + r.run.bonus + ' pts !' : this.name(r.player) + ' : meilleure série ' + r.run.best + '/4'; break;
         case 'faceoff': v.screen = 'wait'; v.title = '⚔️ Duel des champions';
           v.msg = r.finalists.includes(pid) ? 'Tu es en finale ! Le premier à ' + r.target + ' bonnes réponses gagne la partie.' : this.name(r.finalists[0]) + ' contre ' + this.name(r.finalists[1]) + ' : le vainqueur gagne la partie !'; break;
@@ -1699,7 +1775,8 @@
         v.screen = 'choices'; v.choices = this.choicesFor(p, q); return;
       }
       if (q.kind === 'single' || q.kind === 'quatre') {
-        if (!q.answerers.includes(pid)) { v.screen = 'wait'; v.title = d.type === 'libre' ? 'Question libre' : 'Question'; v.msg = 'À ' + this.name(q.answerers[0]) + ' de jouer !'; return; }
+        if (!q.answerers.includes(pid)) { v.screen = 'wait'; v.title = q.trap ? '🪤 Question piégée' : d.type === 'libre' ? 'Question libre' : 'Question'; v.msg = 'À ' + this.name(q.answerers[0]) + ' de jouer !'; return; }
+        if (q.trap) v.banner = '🪤 Piège de ' + this.name(q.trap.from) + ' · ' + q.trap.cat + ' · +' + TRAP.win + ' / −' + TRAP.loss;
         if (q.kind === 'quatre') { v.run = { streak: r.run.streak, best: r.run.best, last: r.run.last }; v.cat = r.cat; }
         if (q.answers[pid] && q.kind !== 'quatre') { v.screen = 'locked'; v.msg = q.pending ? 'Le présentateur valide...' : 'Réponse enregistrée !'; return; }
         if (this.irl) { v.screen = 'oral'; return; } // en IRL : tout se dit à voix haute
@@ -1708,8 +1785,16 @@
       }
       if (q.kind === 'buzz') {
         const b = q.buzz;
+        // Appel à un ami : l'ami répond, le finaliste attend.
+        if (b.current && b.proxy === pid) {
+          v.buzzed = true; v.banner = '📞 Tu réponds à la place de ' + this.name(b.current) + ' !';
+          v.screen = q.pending ? 'locked' : this.irl ? 'oral' : 'text'; v.msg = 'Le présentateur valide...';
+          return;
+        }
+        if (b.current === pid && b.proxy) { v.screen = 'wait'; v.title = '📞 Appel à un ami'; v.msg = this.name(b.proxy) + ' répond à ta place...'; return; }
         if (b.current === pid) {
           v.buzzed = true;
+          if (r.type === 'champions' && !q.pending) { const f = this.friendsFor(pid); if (f.length) v.friends = f.map((x) => ({ id: x.id, name: x.name, color: x.color })); }
           if (q.typed) { v.screen = this.irl ? 'oral' : 'text'; if (q.pending) { v.screen = 'locked'; v.msg = 'Le présentateur valide...'; } return; }
           v.screen = 'choices'; v.choices = this.choicesFor(p, q); return;
         }
@@ -1770,6 +1855,9 @@
       if (r && this.phase === 'board') v.info = this.name(r.player) + ' choisit une case';
       if (r && this.phase === 'qpick') v.info = this.name(r.player) + ' choisit son thème';
       if (r && this.phase === 'faceoff') v.info = 'Duel des champions : ' + this.name(r.finalists[0]) + ' contre ' + this.name(r.finalists[1]);
+      if (this.phase === 'trap' && this.trap) v.info = '🪤 Question piégée : ' + this.name(this.trap.from) + ' → ' + this.name(this.trap.target) + ' (' + this.trap.cat + ')';
+      if (q && q.trap) v.info = '🪤 Question piégée pour ' + this.name(q.answerers[0]) + ' : +' + TRAP.win + ' / −' + TRAP.loss;
+      if (q && q.kind === 'buzz' && q.buzz.proxy) v.info = '📞 ' + this.name(q.buzz.proxy) + ' répond pour ' + this.name(q.buzz.current);
       if (r && r.type === 'champions' && r.hits) v.info = (v.info ? v.info + ' · ' : '') + r.finalists.map((id) => this.name(id) + ' ' + r.hits[id]).join(' – ') + ' (premier à ' + r.target + ')';
       return v;
     }
