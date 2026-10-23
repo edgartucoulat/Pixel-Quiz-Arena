@@ -102,15 +102,18 @@ Une série de 3 ou 6 bonnes réponses (ou un peu de chance) donne une carte, 2 a
 
 Le bouton 💬 de chaque téléphone ouvre le chat de la partie (messages et réactions emoji).
 Les messages s'affichent aussi en haut à gauche de l'écran TV. Pixou y réagit de temps en
-temps, toujours quand on l'appelle par son nom, avec un sarcasme bienveillant :
+temps, et toujours quand on l'appelle par son nom. Dans ce cas, il ne répond jamais à la
+question : il « bâche » la personne avec une vanne ou une petite insulte de cour de récré
+(patate, andouille, cornichon...), en s'appuyant sur son message ou son classement :
 
 - **🧠 Pixou IA** : il répond vraiment à ce qui se dit, grâce à Claude (Anthropic), via un petit
   relais gratuit qui garde la clé API secrète. Installation : [`worker/pixou/README.md`](worker/pixou/README.md).
 - **🎲 Répliques** : sans IA, il pioche dans des répliques toutes faites selon le message.
 - **🤐 Muet** : il ne répond pas.
 
-Les insultes sont masquées et le flood est limité. Pixou ne donne jamais la réponse d'une
-question en cours.
+Les insultes des joueurs sont masquées et le flood est limité. Pixou reste tout public : il se
+moque du score et des messages, jamais de la personne elle-même, et ne donne jamais la
+réponse d'une question en cours.
 
 Et aussi : anecdotes après chaque question, titres humoristiques en fin de partie. Les questions déjà
 vues sont mémorisées par le navigateur du plateau, pour ne pas retomber dessus.

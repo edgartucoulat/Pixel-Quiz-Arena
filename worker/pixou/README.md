@@ -1,6 +1,6 @@
 # 🎙️ Pixou IA : le relais du chat
 
-Dans le chat de la partie, Pixou répond aux joueurs avec un sarcasme bienveillant.
+Dans le chat de la partie, Pixou répond aux joueurs : quand on lui parle, il ne répond pas, il les clashe.
 Sans configuration, il pioche dans des répliques toutes faites (`js/chat.js`).
 Pour qu'il réponde vraiment à ce qui se dit, il lui faut une IA (Claude, d'Anthropic).
 
@@ -73,7 +73,7 @@ Dans `wrangler.toml` :
 - La clé n'est jamais envoyée aux téléphones ni écrite dans le dépôt.
 - Le relais refuse les autres sites, limite chaque adresse IP à 20 répliques par minute,
   et coupe les messages trop longs.
-- Pixou a pour consigne de rester taquin sans méchanceté, tout public, de ne jamais donner
+- Pixou clashe les joueurs (vannes, petites insultes de cour de récré) mais reste tout public : il se moque du score et des messages, jamais de la personne elle-même, de ne jamais donner
   la réponse d'une question en cours, et de ne pas se laisser détourner par les joueurs.
 - Les messages des joueurs sont filtrés par le jeu (insultes masquées, anti-flood) avant
   d'être affichés ou envoyés à l'IA ; la réplique de Pixou passe par le même filtre.
