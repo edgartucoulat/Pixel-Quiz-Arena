@@ -231,21 +231,21 @@ Tout est gratuit et sans serveur. Le bouton **🎚️ Réglages** du plateau rè
   compositions originales (`scripts/compose_music.py`, banque de sons libre **FluidR3_GM**, MIT).
 - **Effets** : un buzzer différent par joueur, faux départ, roulement de tambour,
   applaudissements, « ooooh » déçu et « wouah » du public.
-- **Voix de Pixou** : pour éviter l'effet robot, deux sources sont combinées.
+- **Voix de Pixou** : une seule voix, grave, *Fabrice* de Microsoft. Deux sources sont combinées.
   1. **Une voix neuronale enregistrée** (`audio/voice/`) : répliques, questions, indices et
-     anecdotes sont pré-enregistrés avec la voix *Rémy* de Microsoft (gratuite, via
-     [edge-tts](https://github.com/rany2/edge-tts)), compressés en Opus. L'action GitHub
+     anecdotes sont pré-enregistrés avec la voix *Fabrice* (gratuite, via
+     [edge-tts](https://github.com/rany2/edge-tts)), un ton plus bas, avec des répliques plus
+     enlevées que les questions et un son « plateau télé » (voir `STYLES` et `PLATEAU` dans
+     `scripts/gen_voice.py`), compressés en Opus. L'action GitHub
      **« Voix du présentateur »** (`.github/workflows/voice.yml`) ré-enregistre
      automatiquement ce qui change à chaque modification des questions ou des répliques.
      On peut aussi la lancer à la main depuis l'onglet *Actions*, ou en local :
      `pip install edge-tts && python3 scripts/gen_voice.py` (ffmpeg requis).
   2. **Les voix naturelles du navigateur**, pour ce qui ne peut pas être enregistré (les
      pseudos des joueurs). **Microsoft Edge** fournit gratuitement les mêmes voix neuronales
-     (« Microsoft Rémy/Henri Online (Natural) ») : c'est le navigateur conseillé pour le
-     plateau. Sur les autres navigateurs, Pixou s'en tient aux phrases enregistrées.
-
-  Les voix système robotiques ne sont jamais utilisées, sauf si l'on coche
-  « Voix robotique en secours ».
+     (« Microsoft Fabrice Online (Natural) ») : c'est le navigateur conseillé pour le
+     plateau. Sur les autres navigateurs, Pixou s'en tient aux phrases enregistrées, pour
+     ne jamais parler avec une autre voix.
 
 ---
 

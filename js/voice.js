@@ -20,7 +20,7 @@
   const BANK_DIR = 'audio/voice/';
   // Doit correspondre à la voix de scripts/gen_voice.py : en direct, on
   // préfère la même voix pour que les deux sources ne s'entendent pas.
-  const BANK_VOICE = /r[ée]my/i;
+  const BANK_VOICE = /fabrice/i;
 
   const norm = (text) => String(text || '').replace(/\s+/g, ' ').trim();
 
@@ -44,7 +44,11 @@
       .replace(/\bx(\d)\b/g, (_, n) => 'fois ' + (['zéro', 'un', 'deux', 'trois', 'quatre', 'cinq'][n] || n))
       .replace(/\b50\/50\b/g, 'cinquante-cinquante');
     if (kind !== 'question') {
-      s = s.replace(/(?<!\p{L})\p{Lu}{3,}(?!\p{L})/gu, (w) => (w === 'QCM' ? w : w.toLowerCase()))
+      // « Désolé… enfin, pas tant que ça » : les points de suspension font une
+      // longue pause qui casse la phrase. Une virgule enchaîne naturellement.
+      // (Pas dans les questions : « Complétez : … » y marque un blanc.)
+      s = s.replace(/\s*…\s*(?=\p{Ll})/gu, ', ').replace(/\s*…\s*$/u, '.')
+        .replace(/(?<!\p{L})\p{Lu}{3,}(?!\p{L})/gu, (w) => (w === 'QCM' ? w : w.toLowerCase()))
         .replace(/(^|[.!?…]\s+)(\p{Ll})/gu, (_, a, b) => a + b.toUpperCase());
     }
     return norm(s);
@@ -52,7 +56,9 @@
 
   /** Découpe en phrases (on peut ainsi enchaîner « Le saviez-vous ? » + anecdote). */
   function chunks(text) {
-    return norm(text).split(/(?<=[.!?:…»])\s+(?=\S)/).filter(Boolean);
+    // On ne coupe pas devant une minuscule (« Désolé... enfin, pas tant que ça. ») :
+    // c'est la même phrase, dite d'un seul souffle.
+    return norm(text).split(/(?<=[.!?:…»])\s+(?=[^\s\p{Ll}])/u).filter(Boolean);
   }
 
   /** Note d'une voix du navigateur : plus c'est haut, plus elle est naturelle. */
@@ -65,8 +71,6 @@
     else if (/google/i.test(n)) s += 40;
     if (/fr[-_]FR/i.test(v.lang)) s += 10;
     if (BANK_VOICE.test(n)) s += 30; // même voix que la banque
-    else if (/henri/i.test(n)) s += 20; // voix d'homme pour Pixou
-    else if (/thomas|daniel|paul|antoine|jerome|maxime|alain|guillaume/i.test(n)) s += 8;
     return s;
   }
   const NATURAL = 80;
@@ -108,17 +112,15 @@
     },
     has(text) { return !!(this.bank && this.bank.has(key(text))); },
 
-    /** Comment parler en ce moment. */
+    /**
+     * Comment parler en ce moment. Pixou n'a qu'une voix (Fabrice) : avec la
+     * banque enregistrée, le navigateur ne parle que s'il a cette même voix.
+     */
     get mode() {
       const live = !this.liveBroken && this.live;
-      const natural = live && score(live) >= NATURAL;
-      const forced = live && this.choice !== 'auto';
       const bank = this.bank && this.bank.size > 0;
-      // Voix choisie à la main, ou voix naturelle différente de la banque :
-      // tout en direct, pour ne pas faire parler deux présentateurs.
-      if (forced || (natural && !(bank && BANK_VOICE.test(live.name)))) return { bank: false, live: true };
-      if (natural) return { bank: true, live: true };
-      return { bank, live: !!live && (this.fallback || !bank) && (this.fallback || score(live) >= 40) };
+      if (bank) return { bank: true, live: !!live && BANK_VOICE.test(live.name) && score(live) >= NATURAL };
+      return { bank: false, live: !!live && (this.fallback || score(live) >= 40) };
     },
     /** Vrai quand les prénoms ne peuvent pas être dits joliment : on préfère alors les répliques enregistrées. */
     get preferRecorded() {
@@ -144,7 +146,7 @@
         if (m.bank) for (let j = parts.length; j > i; j--) if (this.has(parts.slice(i, j).join(' '))) { found = j; break; }
         if (found > 0) { segs.push({ id: key(parts.slice(i, found).join(' ')), text: parts.slice(i, found).join(' '), kind }); i = found; continue; }
         if (!m.live) return null;
-        segs.push({ text: prepare(parts[i], kind) });
+        segs.push({ text: prepare(parts[i], kind), kind });
         i++;
       }
       return segs.length ? segs : null;
@@ -183,7 +185,7 @@
         a.volume = Math.min(1, this.volume);
         a.onended = done;
         // Fichier illisible (navigateur sans Opus, réseau) : on tente le direct.
-        a.onerror = () => { if (this.playing !== p) return; if (this.mode.live) { delete seg.id; this.queue.unshift({ text: prepare(seg.text, seg.kind) }); } done(); };
+        a.onerror = () => { if (this.playing !== p) return; if (this.mode.live) { delete seg.id; this.queue.unshift({ text: prepare(seg.text, seg.kind), kind: seg.kind }); } done(); };
         a.play().catch(() => a.onerror && a.onerror());
         p.watch = setTimeout(done, 30000);
         // Précharge le morceau suivant.
@@ -196,9 +198,10 @@
       u.voice = this.live;
       u.lang = this.live.lang;
       // Les voix neuronales sonnent faux dès qu'on touche à la hauteur :
-      // on garde le ton naturel et on accélère juste un peu le débit.
+      // on garde le ton naturel et on accélère un peu le débit, davantage
+      // pour les répliques que pour les questions (comme la banque).
       const natural = score(this.live) >= NATURAL;
-      u.rate = natural ? 1.06 : 1.0;
+      u.rate = natural ? (seg.kind === 'question' ? 1.04 : 1.1) : 1.0;
       u.pitch = 1;
       u.volume = Math.min(1, this.volume);
       u.onend = done;
