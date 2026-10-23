@@ -79,3 +79,39 @@ test('a stopped announcement is never replayed on the next gesture', async () =>
   assert.equal(f.audios[0].calls, 1);
   assert.equal(v.playing, null);
 });
+
+
+test('initial gesture primes one streaming player reused for the question countdown', async () => {
+  const f = fixture('music.js'), m = f.PQA.music;
+  m.attach(f.ctx);
+  const player = f.audios[0]; player.blocked = false;
+  m.resume(); await flush();
+  assert.equal(m.primed, true);
+  assert.equal(player.paused, true);
+  m.play('theme'); f.timers.get(m.cur.timer)(); await flush();
+  m.play('suspense'); f.timers.get(m.cur.timer)(); await flush();
+  assert.equal(f.audios.length, 1);
+  assert.equal(m.cur.audio, player);
+  assert.equal(player.src, 'audio/music/suspense.webm');
+  assert.equal(player.paused, false);
+});
+
+test('old fade cleanup cannot pause countdown music; pause still silences it', async () => {
+  const f = fixture('music.js'), m = f.PQA.music;
+  m.attach(f.ctx); f.audios[0].blocked = false;
+  m.play('theme'); f.timers.get(m.cur.timer)(); await flush();
+  m.play('suspense');
+  const cleanup = [...f.timers.entries()].filter(([id]) => id !== m.cur.timer).at(-1)[1];
+  f.timers.get(m.cur.timer)(); await flush(); cleanup();
+  assert.equal(m.cur.audio.paused, false);
+  m.play(null);
+  [...f.timers.values()].at(-1)();
+  assert.equal(f.audios[0].paused, true);
+});
+
+test('leaving suspense resets the accelerated playback rate', () => {
+  const f = fixture('music.js'), m = f.PQA.music;
+  m.attach(f.ctx); m.play('suspense'); m.tempo = 1.85;
+  assert.ok(m.player.playbackRate > 1);
+  m.play('leaderboard'); assert.equal(m.player.playbackRate, 1);
+});

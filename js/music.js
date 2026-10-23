@@ -35,6 +35,16 @@
       this.duckG = ctx.createGain();
       this.out.connect(this.duckG);
       this.duckG.connect(ctx.destination);
+      // Un seul lecteur pour toute la partie : déverrouillé depuis le geste
+      // initial, puis réutilisé pour les transitions automatiques du chrono.
+      this.player = new Audio(DIR + 'theme.webm');
+      this.player.loop = true;
+      this.player.preload = 'auto';
+      this.playerGain = ctx.createGain();
+      this.playerGain.gain.value = 0;
+      this.playerSource = ctx.createMediaElementSource(this.player);
+      this.playerSource.connect(this.playerGain);
+      this.playerGain.connect(this.out);
       this.ready = fetch(DIR + 'manifest.json')
         .then((r) => r.json())
         .then((m) => { this.loops = m.loops || {}; (m.cues || []).filter((n) => !this.loops[n]).forEach((n) => this.load(n)); })
@@ -77,16 +87,14 @@
       this.fadeOut();
       if (!name) return;
       const file = name.startsWith('round_') ? BEDS[name.slice(6)] || 'bed1' : name;
-      const a = new Audio(DIR + file + '.webm');
-      a.loop = true;
-      a.preload = 'auto';
-      if (name === 'suspense') a.playbackRate = 1 + this.intensity * 0.06;
+      const a = this.player;
+      a.pause();
+      a.src = DIR + file + '.webm';
+      a.playbackRate = name === 'suspense' ? 1 + this.intensity * 0.06 : 1;
       const c = (this.cur = { name, audio: a });
-      const g = (c.gain = this.ctx.createGain());
-      g.gain.value = 0;
-      c.src = this.ctx.createMediaElementSource(a);
-      c.src.connect(g);
-      g.connect(this.out);
+      const g = (c.gain = this.playerGain);
+      g.gain.cancelScheduledValues(this.ctx.currentTime);
+      g.gain.setValueAtTime(0, this.ctx.currentTime);
       const wait = Math.max(0.05 + delay, this.hold - this.ctx.currentTime);
       c.timer = setTimeout(() => {
         if (this.cur !== c) return;
@@ -100,7 +108,20 @@
     /** Réessaie la piste courante depuis un geste, sans attendre un changement de phase. */
     resume() {
       const c = this.cur;
-      if (!c || c.timer != null || !c.audio.paused) return;
+      if (!c) {
+        // Appelé par sfx.unlock() dans le clic de création de salle, avant
+        // les chargements réseau. Le gain reste nul : aucun son parasite.
+        if (this.player && !this.primed && !this.priming) {
+          this.priming = true;
+          this.player.play().then(() => {
+            this.primed = true;
+            if (!this.cur) this.player.pause();
+          }).catch((e) => console.warn('Activation musique impossible', e))
+            .finally(() => { this.priming = false; });
+        }
+        return;
+      }
+      if (c.timer != null || !c.audio.paused) return;
       c.audio.play().catch((e) => console.warn('Musique bloquée', e));
     }
     fadeOut() {
@@ -112,7 +133,10 @@
       gg.cancelScheduledValues(t);
       gg.setValueAtTime(gg.value, t);
       gg.linearRampToValueAtTime(0, t + 0.6);
-      setTimeout(() => { c.audio.pause(); c.audio.removeAttribute('src'); c.audio.load(); c.src.disconnect(); c.gain.disconnect(); }, 900);
+      setTimeout(() => {
+        // Un ancien fondu ne doit jamais arrêter le lecteur déjà réutilisé.
+        if (!this.cur) c.audio.pause();
+      }, 900);
     }
 
     /** Jingle joué une fois (ouverture, annonce de manche, victoire...) ; l'ambiance reprend après. */
@@ -139,4 +163,5 @@
 
   PQA.music = new Music();
 })();
+
 

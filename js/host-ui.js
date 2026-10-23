@@ -782,7 +782,9 @@
       // Deux répliques d'affilée (« C'est parti ! » puis l'annonce de la manche) : on dit les deux.
       const t = performance.now(), same = t - (this.lastSay || 0) < 50;
       this.lastSay = t;
-      if (this.g.settings.mode !== 'irl') voice.speak(spoken || text, { queue: same });
+      // Un buzz ou une pique ne doit pas couper une question en cours de lecture.
+      const reading = (voice.playing && voice.playing.seg.kind === 'question') || voice.queue.some((seg) => seg.kind === 'question');
+      if (this.g.settings.mode !== 'irl') voice.speak(spoken || text, { queue: same || reading });
     }
     /** Dit une réplique sans rien couper : seulement si Pixou est silencieux. */
     sayAside(text) {
@@ -790,10 +792,10 @@
       voice.speak(text, { queue: true });
     }
     /** Lit la question (ou le nouvel indice) juste après la réplique du présentateur. */
-    readAloud(fn) {
+    readAloud(fn, priority = false) {
       if (this.g.settings.mode === 'irl') return;
       // La réplique (« Question suivante ! ») est dite juste après l'effet : on passe derrière.
-      Promise.resolve().then(() => { const t = fn(); if (t) voice.speak(t, { queue: true, kind: 'question' }); });
+      Promise.resolve().then(() => { const t = fn(); if (t) voice.speak(t, { queue: !priority, kind: 'question' }); });
     }
 
     /** Choisit la musique selon la phase de jeu (appelé à chaque image). */
@@ -823,7 +825,7 @@
         case 'question': {
           sfx.whoosh(); voice.stop();
           const q = g.q;
-          this.readAloud(() => q && g.q === q && q.data && [q.data.question, q.data.indices && q.data.indices[0]].filter(Boolean).join(' '));
+          this.readAloud(() => q && g.q === q && q.data && [q.data.question, q.data.indices && q.data.indices[0]].filter(Boolean).join(' '), true);
           break;
         }
         case 'lock': sfx.lock(); break;
@@ -964,3 +966,4 @@
 
   PQA.HostUI = HostUI;
 })();
+

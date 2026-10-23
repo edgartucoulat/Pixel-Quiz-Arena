@@ -1311,6 +1311,7 @@
       const q = this.makeQ(data, 'quatre', [r.player]);
       this.timer = keepTimer;
       q.startedAt = now();
+      this.fx('question');
       this.changed();
     }
     /** Réponse au 4 à la suite : choix sur le téléphone, ou verdict du présentateur IRL (forced). */
@@ -1799,4 +1800,5 @@
   PQA.Game = Game;
   PQA.TIMES = TIMES;
 })();
+
 
