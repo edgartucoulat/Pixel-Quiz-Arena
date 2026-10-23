@@ -695,7 +695,7 @@
         key: 'qres' + r.n,
         html: `<div class="center-card">${avatarImg(p, run.won ? 'happy' : 'idle', 'huge')}
           <div class="cc-title">${run.won ? '💰 JACKPOT !' : '⏱ Temps écoulé'}</div>
-          ${run.won ? `<div class="cc-jackpot">+${run.bonus} pts</div><div class="cc-sub">${esc(p.name)} : 1 000 pts + ${run.left} s d’avance × 20 pts</div>` : `<div class="cc-sub">${esc(p.name)} : ${run.correct} bonne${run.correct > 1 ? 's' : ''} réponse${run.correct > 1 ? 's' : ''}, meilleure série ${run.best}/4</div>`}</div>`,
+          ${run.won ? `<div class="cc-jackpot">+${run.bonus} pts</div><div class="cc-sub">${esc(p.name)} réussit le 4 à la suite !</div>` : `<div class="cc-sub">${esc(p.name)} : ${run.correct} bonne${run.correct > 1 ? 's' : ''} réponse${run.correct > 1 ? 's' : ''}, meilleure série ${run.best}/4</div>`}</div>`,
       };
     }
 

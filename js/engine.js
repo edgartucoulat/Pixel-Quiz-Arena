@@ -51,7 +51,7 @@
     duelBuzz: 15000, duelAnswer: 8000, intro: 20000,
   };
 
-  const QUATRE_JACKPOT = 1000;
+  const QUATRE_JACKPOT = 200;
 
   /* Anti-buzz au hasard : buzz raté = pénalité, faux départ = buzzer bloqué,
    * et peu de temps pour répondre une fois qu'on a buzzé. */
@@ -1346,11 +1346,9 @@
       r.run.last = { ok, answer: q.choices[q.correctIdx] };
       if (r.run.streak >= 4) {
         r.run.won = true;
-        // Le jackpot : 1 000 pts, +20 pts par seconde restante au chrono.
-        const left = Math.ceil(this.timerLeft() / 1000);
-        const bonus = this.scoreCorrect(p, QUATRE_JACKPOT + left * 20, { noCombo: true, silentStreak: true });
+        // Le jackpot : 200 pts fixes.
+        const bonus = this.scoreCorrect(p, QUATRE_JACKPOT, { noCombo: true, silentStreak: true });
         r.run.bonus = bonus.pts;
-        r.run.left = left;
         this.fx('points', { pid, pts: bonus.pts });
         this.fx('streak', { pid, jackpot: true });
         return this.quatreEnd();
