@@ -161,6 +161,11 @@
       this.queue.push(...segs);
       if (!this.playing) this.next();
     },
+    /** Une voix bloquée attend le prochain geste, tant que sa réplique est actuelle. */
+    resume() {
+      const p = this.playing;
+      if (p && p.blocked && p.retry) p.retry();
+    },
     stop() {
       this.queue = [];
       const p = this.playing;
@@ -186,7 +191,18 @@
         a.onended = done;
         // Fichier illisible (navigateur sans Opus, réseau) : on tente le direct.
         a.onerror = () => { if (this.playing !== p) return; if (this.mode.live) { delete seg.id; this.queue.unshift({ text: prepare(seg.text, seg.kind), kind: seg.kind }); } done(); };
-        a.play().catch(() => a.onerror && a.onerror());
+        p.retry = () => {
+          p.blocked = false;
+          a.play().catch((e) => {
+            if (this.playing !== p) return;
+            if (e.name === 'NotAllowedError') {
+              p.blocked = true;
+              this.setTalking(false);
+            } else if (a.onerror) a.onerror();
+          });
+        };
+        a.onplaying = () => { if (this.playing === p) this.setTalking(true); };
+        p.retry();
         p.watch = setTimeout(done, 30000);
         // Précharge le morceau suivant.
         const nx = this.queue[0];
@@ -226,3 +242,4 @@
     init: () => V.init(), speak: (t) => V.speak(t), stop: () => V.stop(),
   };
 })();
+

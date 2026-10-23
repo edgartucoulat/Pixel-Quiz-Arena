@@ -64,7 +64,7 @@
     const game = new PQA.Game(data.bank, data.categories, {
       changed: () => scheduleFlush(),
       fx: (n, d) => ui && ui.fx(n, d),
-      say: (text, expr) => { if (ui && !PHONES) ui.say(text, expr); },
+      say: (text, expr) => { if (ui) ui.say(text, expr); },
       send: (pid, msg) => conns.forEach((c) => c.pid === pid && send(c, msg)),
       toast: (t) => ui && ui.toast(t),
     });
@@ -120,7 +120,7 @@
         if (ui && !PHONES) ui.chatFeed(msg.m);
       },
       pixouSpeak(text, spoken) {
-        if (!ui || PHONES) return;
+        if (!ui) return;
         // Sur la TV : la réplique s'affiche dans le fil du chat et Pixou la dit à voix haute.
         // Entre deux questions, il la dit dans sa bulle ; pendant une question, seulement s'il ne parle pas déjà,
         // et sans couper la lecture de la question.
@@ -149,12 +149,13 @@
         levels: Object.entries(PQA.BOT_LEVELS).map(([id, L]) => ({ id, icon: L.icon, name: L.name })),
         bots: game.bots().map((b) => ({ id: b.id, name: b.name, color: b.color, level: b.level })),
         players: game.activePlayers().filter((p) => !p.bot).map((p) => ({ id: p.id, name: p.name, color: p.color, team: s.teams ? p.team : null, on: !!(p.connected || p.local), me: p.id === localConn.pid })),
-        paused: game.paused,
+        paused: game.paused, muted: !!(ui && ui.prefs.muted),
       };
     }
     const OWNER_ACTS = ['set', 'round', 'botadd', 'botlevel', 'start', 'next', 'pause', 'team', 'shuffleteams', 'lobby'];
     function ownerCmd(m) {
       if (!PHONES || !ui) return;
+      if (m.act === 'sound') { ui.prefs.muted = !ui.prefs.muted; ui.savePrefs(); game.changed(); return; }
       if (m.act === 'kick') { if (m.pid !== localConn.pid) game.kick(m.pid); return; }
       if (!OWNER_ACTS.includes(m.act)) return;
       ui.action(m.act, { key: m.key, val: m.val, pid: m.pid });
@@ -220,8 +221,8 @@
     if (PHONES) { game.settings.hostPlays = false; game.settings.localDuel = false; if (game.settings.mode === 'irl') game.settings.mode = 'virtual'; }
     ui = new PQA.HostUI(game);
     if (PHONES) {
-      // Pas de TV : le son et la voix restent coupés, et les messages du plateau vont sur la manette de l'hôte.
-      ui.prefs.muted = true; ui.applyPrefs();
+      // Le téléphone hôte joue le son ; les autres manettes restent silencieuses.
+      // Respecter les préférences choisies au lieu de forcer le mode muet.
       ui.toast = (text) => localConn.localWin && send(localConn, { t: 'toast', text });
       PQA._wantAwake = true; PQA.keepAwake();
     }
@@ -266,3 +267,4 @@
 
   boot();
 })();
+

@@ -29,7 +29,11 @@
         for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
         if (PQA.music) PQA.music.attach(this.ctx);
       }
-      if (this.ctx.state === 'suspended') this.ctx.resume();
+      if (this.ctx.state === 'suspended' || this.ctx.state === 'interrupted') {
+        this.ctx.resume().catch((e) => console.warn('Reprise audio impossible', e));
+      }
+      if (PQA.music) PQA.music.resume();
+      if (PQA.voice) PQA.voice.resume();
     }
     setVolume(v) { this.volume = v; this.muted = v === 0; if (this.master) this.master.gain.value = v; }
     get ok() { return this.ctx && !this.muted; }
@@ -228,3 +232,4 @@
 
   PQA.sfx = new Sfx();
 })();
+
