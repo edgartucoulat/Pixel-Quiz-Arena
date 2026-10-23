@@ -1,8 +1,8 @@
 # 🎮 PIXEL QUIZ ARENA
 
 Jeu télé rétro de culture générale, en pixel art 16 bits, multijoueur en temps réel.
-Un écran (TV, vidéoprojecteur, ordinateur) sert de **plateau**, et chaque joueur joue
-avec **son téléphone** comme manette. Pas de compte, pas d'installation, pas de serveur
+On joue **tout sur téléphones** (même à distance), ou en **soirée TV** : un écran (TV,
+vidéoprojecteur, ordinateur) sert de **plateau** et chaque téléphone de manette. Pas de compte, pas d'installation, pas de serveur
 à payer : c'est un site statique, gratuit, hébergé sur GitHub Pages.
 
 👉 **Jouer : https://edgartucoulat.github.io/Pixel-Quiz-Arena/**
@@ -11,12 +11,27 @@ avec **son téléphone** comme manette. Pas de compte, pas d'installation, pas d
 
 ## Comment jouer
 
+### 📱 Sur téléphones (sans TV)
+
+1. Sur l'accueil, touche **« Jouer sur téléphones »** (ou ouvre `…/host.html?phones=1`) puis
+   **« Créer la salle »**. Ton téléphone héberge la partie : garde la page ouverte.
+2. Choisis ton pseudo, puis invite tes amis avec **📤 Partager**, **WhatsApp**, **Copier le lien**
+   ou le **QR code**. Ça marche dans la même pièce comme à distance.
+3. Règle le mode, les manches et la durée, puis **« Lancer la partie »**. Chaque téléphone
+   affiche la question, le chrono, les scores et les répliques de Pixou. L'hôte garde les
+   boutons Pause, Suivant et Quitter.
+
+### 📺 En soirée TV
+
 1. Sur l'écran principal (TV, PC, vidéoprojecteur), ouvre
    **https://edgartucoulat.github.io/Pixel-Quiz-Arena/host.html** puis clique sur
    **« Ouvrir le plateau »**. Touche **F** pour le plein écran.
 2. Les joueurs (2 à 10) scannent le **QR code** avec leur téléphone, ou vont sur
    `…/play.html` et tapent le **code à 4 lettres**. Chacun choisit son pseudo et son avatar.
 3. Sur le plateau, choisis le mode, les manches, la durée, puis **« Lancer l'émission »**.
+
+Dans les options du salon, **🎮 Je joue aussi sur cet écran** affiche une manette dans le coin
+du plateau : celui qui a créé la partie sur son PC ou sa tablette joue sans téléphone.
 
 Si un téléphone se met en veille ou perd le réseau, il se reconnecte tout seul et garde
 son score. Si le plateau est rechargé, il propose de **reprendre la partie**.
@@ -88,6 +103,20 @@ Une série de 3 ou 6 bonnes réponses (ou un peu de chance) donne une carte, 2 a
 | 💣 Bombe | Si l’adversaire rate sa prochaine question, il perd 100 pts et tu les gagnes ; s’il trouve, elle est désamorcée |
 | 🛡️ Bouclier | Bloque la prochaine carte jouée contre toi |
 
+### 💬 Le chat et Pixou
+
+Le bouton 💬 de chaque téléphone ouvre le chat de la partie (messages et réactions emoji).
+Les messages s'affichent aussi en haut à gauche de l'écran TV. Pixou y réagit de temps en
+temps, et toujours quand on l'appelle par son nom. Dans ce cas, il ne répond jamais à la
+question : il « bâche » la personne avec une vanne ou une petite insulte de cour de récré
+(patate, andouille, cornichon...), en s'appuyant sur son message ou son classement. Les
+répliques sont toutes faites (`js/chat.js`) et choisies selon le message. Dans le salon,
+**🤐 Pixou se tait** le fait taire.
+
+Les insultes des joueurs sont masquées et le flood est limité. Pixou reste tout public : il se
+moque du score et des messages, jamais de la personne elle-même, et ne donne jamais la
+réponse d'une question en cours.
+
 Et aussi : anecdotes après chaque question, titres humoristiques en fin de partie. Les questions déjà
 vues sont mémorisées par le navigateur du plateau, pour ne pas retomber dessus.
 
@@ -129,11 +158,15 @@ js/music.js     Lecteur de musique (ambiances en boucle, jingles, suspense)
 audio/music/    Musiques originales (générées par scripts/compose_music.py)
 js/voice.js     Voix du présentateur (enregistrements + voix naturelles du navigateur)
 audio/voice/    Voix enregistrée, générée automatiquement (ne pas modifier à la main)
+js/chat.js      Chat de la partie, filtre, répliques de Pixou
 js/net.js       Réseau PeerJS + reconnexion automatique
 js/relay.js     Relais de secours MQTT (client minimal sans dépendance)
 data/questions/ Banque de questions (un fichier JSON par catégorie)
 scripts/        Outils de développement (serveur local, validation des questions)
 ```
+
+En mode téléphones, `host.html?phones=1` fait tourner le même moteur sur le téléphone de
+l'hôte, plateau caché, et sa manette (`play.html` dans un cadre) prend tout l'écran.
 
 ---
 

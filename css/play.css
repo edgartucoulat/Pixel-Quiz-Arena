@@ -191,3 +191,103 @@ body.local-pad { font-size: 20px; min-height: 100vh; }
 .local-pad .join input { font-size: 22px; padding: 4px 8px; }
 .local-pad .card-btn { font-size: 18px; padding: 3px; }
 .local-pad .card-btn span { font-size: 15px; }
+
+/* ======================= Mode « Jouer sur téléphones » ======================= */
+#scores { display: flex; gap: 6px; overflow-x: auto; padding: 4px 8px; background: rgba(0,0,0,.45); scrollbar-width: none; }
+#scores:empty { display: none; }
+#scores span { flex: none; font-size: 18px; padding: 0 8px; border-left: 5px solid var(--pc); background: var(--g3); white-space: nowrap; }
+#scores span.me { background: var(--navy); outline: 2px solid var(--yellow); }
+#scores b { color: var(--yellow); }
+#pixou-say { display: flex; gap: 8px; align-items: center; padding: 4px 10px; background: var(--plum); border-bottom: 3px solid #000; font-size: 19px; line-height: 1.05; }
+#pixou-say:empty { display: none; }
+#pixou-say img { width: 30px; height: 40px; flex: none; }
+#pixou-say.pop { animation: popIn .35s; }
+.tvq { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.tvq-cat { font-size: 18px; color: var(--cyan); }
+.tvq-text { font-size: 25px; line-height: 1.1; background: rgba(0,0,0,.35); border: 3px solid #000; padding: 8px 10px; }
+.tvq-text.small { font-size: 20px; }
+.tvq-clues { margin: 0; padding-left: 26px; font-size: 21px; color: var(--yellow); }
+.tvq-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.tvq-choices span { font-size: 20px; line-height: 1.05; padding: 5px 8px; border: 3px solid #000; background: var(--g3); }
+.tvq-choices span b { margin-right: 6px; color: var(--yellow); }
+.tvq-choices .good { background: var(--green); }
+.tvq-choices .bad { opacity: .45; }
+.tvwait { justify-content: flex-start; width: 100%; }
+.tvwait .tvq { width: 100%; text-align: left; }
+.tv-rules { text-align: left; font-size: 21px; margin: 0; padding-left: 22px; }
+.tv-rank { width: 100%; display: flex; flex-direction: column; gap: 4px; }
+.tv-rank div { display: flex; align-items: center; gap: 8px; padding: 3px 8px; background: var(--g3); border-left: 7px solid var(--pc); font-size: 22px; }
+.tv-rank div.me { outline: 3px solid var(--yellow); }
+.tv-rank i { font-style: normal; font-family: var(--font-title); font-size: 12px; color: var(--yellow); width: 22px; }
+.tv-rank span { flex: 1; text-align: left; }
+.tv-rank b { font-family: var(--font-title); font-size: 13px; color: var(--yellow); }
+.tv-rank.teams { margin-bottom: 6px; }
+.tv-res { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
+.tv-res span { font-size: 18px; padding: 1px 8px; border-left: 5px solid var(--pc); background: var(--g3); }
+.tv-res .ok { background: #1d4d32; } .tv-res .ko { background: #5a1e24; }
+.tv-who { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.tv-who span { font-size: 21px; padding: 2px 10px; border-left: 6px solid var(--pc); background: var(--g3); }
+
+/* Manette de l'hôte (mode téléphones) */
+body.owner [data-act="leave"] { display: none; }
+.opanel { display: flex; flex-direction: column; gap: 10px; max-width: 560px; width: 100%; margin: 0 auto; padding-bottom: 70px; }
+.obox { background: rgba(0,0,0,.35); border: 3px solid #000; padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+.olbl, .orow > label { font-family: var(--font-title); font-size: 11px; color: var(--yellow); }
+.ocode { font-family: var(--font-title); font-size: 34px; letter-spacing: 8px; text-align: center; color: var(--white); text-shadow: 3px 3px 0 #000; }
+.ohint { font-size: 19px; color: var(--g1); text-align: center; }
+.oshare { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.oshare button, .oshare a { background: var(--blue); color: var(--white); border: 3px solid #000; font-size: 20px; padding: 6px; text-align: center; text-decoration: none; font-family: var(--font-text); }
+.oshare a { background: #25a35a; }
+.oqr { display: flex; justify-content: center; }
+.oqr img { image-rendering: pixelated; border: 4px solid #000; max-width: 70vw; }
+.oplayers { display: flex; flex-direction: column; gap: 4px; }
+.oplayer { display: flex; align-items: center; gap: 8px; background: var(--g3); border-left: 7px solid var(--pc); padding: 2px 8px; font-size: 22px; }
+.oplayer span { flex: 1; }
+.oteam { width: 26px; height: 26px; border: 3px solid #000; }
+.ox { background: var(--red2); border: 3px solid #000; color: var(--white); font-size: 16px; padding: 0 8px; }
+.orow { display: flex; flex-direction: column; gap: 4px; }
+.oseg, .ochips { display: flex; flex-wrap: wrap; gap: 5px; }
+.oseg button, .ochips button, .oadd { background: var(--navy); border: 3px solid #000; color: var(--white); font-size: 19px; padding: 4px 10px; font-family: var(--font-text); }
+.oseg button.on, .ochips button.on { background: var(--blue); border-color: var(--yellow); }
+.oseg button:disabled { opacity: .4; }
+.oadd { align-self: flex-start; }
+.obots { display: flex; flex-direction: column; gap: 5px; }
+.obot { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; border-left: 6px solid var(--pc); padding-left: 6px; }
+.obot b { font-size: 20px; min-width: 110px; }
+.opanel .big-btn.disabled { opacity: .5; }
+#ownerbar { display: flex; gap: 6px; padding: 4px 8px; background: rgba(0,0,0,.45); }
+#ownerbar:empty { display: none; }
+#ownerbar button { flex: 1; background: var(--g3); border: 3px solid #000; color: var(--white); font-size: 18px; padding: 4px; font-family: var(--font-text); }
+
+/* ======================= Chat ======================= */
+#chat-btn { display: none; position: fixed; right: 10px; bottom: max(70px, calc(env(safe-area-inset-bottom) + 70px)); z-index: 40; width: 46px; height: 46px; font-size: 22px; opacity: .92;
+  background: var(--plum); border: 3px solid #000; box-shadow: 0 4px 0 #000; }
+body.joined #chat-btn { display: block; }
+body.local-pad #chat-btn, body.local-pad #chat, body.local-pad #chat-peek { display: none !important; }
+#chat-badge { position: absolute; top: -8px; right: -8px; background: var(--red); color: var(--white); font-style: normal; font-size: 15px; padding: 0 5px; border: 2px solid #000; display: none; }
+#chat-badge.on { display: block; }
+#chat { position: fixed; left: 0; right: 0; bottom: 0; height: 62vh; height: 62dvh; z-index: 60; background: var(--ink); border-top: 4px solid var(--yellow); display: flex; flex-direction: column;
+  transform: translateY(105%); transition: transform .2s; padding-bottom: env(safe-area-inset-bottom); }
+body.chat-open #chat { transform: none; }
+body.chat-open #chat-btn { display: none; }
+.chat-head { display: flex; align-items: center; justify-content: space-between; padding: 6px 10px; background: var(--plum); }
+.chat-head b { font-family: var(--font-title); font-size: 12px; color: var(--yellow); }
+#chat-close { background: none; border: 0; color: var(--white); font-size: 22px; }
+#chat-list { flex: 1; overflow-y: auto; padding: 8px; display: flex; flex-direction: column; gap: 6px; user-select: text; -webkit-user-select: text; }
+.cmsg { display: flex; gap: 6px; align-items: flex-start; font-size: 21px; line-height: 1.1; }
+.cmsg > div { background: var(--g3); border-left: 5px solid var(--pc); padding: 3px 8px; max-width: 85%; word-wrap: break-word; }
+.cmsg b { display: block; font-size: 16px; color: var(--pc); }
+.cmsg.mine { justify-content: flex-end; }
+.cmsg.mine > div { background: var(--navy); border-left: 0; border-right: 5px solid var(--pc); }
+.cmsg.pixou > div { background: var(--plum); border-left-color: var(--yellow); }
+.cmsg.pixou b { color: var(--yellow); }
+.cmsg img { width: 26px; height: 35px; flex: none; }
+.cempty { color: var(--g1); font-size: 19px; text-align: center; margin-top: 20px; }
+.chat-emojis { display: flex; gap: 4px; padding: 4px 8px; overflow-x: auto; }
+.chat-emojis button { flex: none; font-size: 24px; background: var(--g3); border: 2px solid #000; padding: 2px 6px; }
+#chat-form { display: flex; gap: 6px; padding: 6px 8px 8px; }
+#chat-in { flex: 1; font-family: var(--font-text); font-size: 22px; padding: 6px 8px; border: 3px solid #000; background: var(--white); color: var(--ink); user-select: text; -webkit-user-select: text; min-width: 0; }
+#chat-form button { background: var(--green); border: 3px solid #000; color: var(--white); font-size: 22px; padding: 0 14px; }
+#chat-peek { position: fixed; left: 10px; right: 70px; top: 8px; z-index: 55; pointer-events: none; opacity: 0; transform: translateY(-20px); transition: opacity .25s, transform .25s; }
+#chat-peek.on { opacity: 1; transform: none; pointer-events: auto; }
+#chat-peek .cmsg > div { box-shadow: 0 4px 0 #000; border: 2px solid #000; }

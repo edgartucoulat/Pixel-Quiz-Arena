@@ -112,14 +112,17 @@
     }
     /** Affiche (ou retire) la manette intégrée du mode Solo : une petite fenêtre dans le coin de l'écran. */
     updateSoloPad() {
-      const g = this.g, on = g.settings.mode === 'solo' && !!g.code;
+      const g = this.g, s = g.settings;
+      // Mode Solo, « l'hôte joue aussi », ou mode téléphones (la manette prend alors tout l'écran).
+      const on = (s.mode === 'solo' || s.hostPlays || s.phones) && !s.localDuel && !!g.code;
       let frame = document.getElementById('solo-pad');
       if (on && !frame) {
         frame = document.createElement('iframe');
         frame.id = 'solo-pad';
         frame.title = 'Ta manette';
         frame.dataset.size = 'large';
-        frame.src = 'play.html?room=' + g.code + '&local=1' + PQA.config.passthroughQuery();
+        frame.allow = 'web-share; clipboard-write; screen-wake-lock';
+        frame.src = 'play.html?room=' + g.code + '&local=1' + (s.phones ? '&phones=1' : '') + PQA.config.passthroughQuery();
         document.body.appendChild(frame);
       } else if (!on && frame) {
         frame.remove();
@@ -168,7 +171,7 @@
         case 'set': {
           let v = d.val;
           if (d.key === 'teams') { g.setTeams(Number(v)); sfx.select(); return; }
-          if (d.key === 'cards') v = v === '1';
+          if (d.key === 'cards' || d.key === 'hostPlays') v = v === '1';
           if (d.key === 'mode') {
             s.localDuel = false;
             if (v === 'duel' && g.activePlayers().length > 2) { this.toast('Le duel se joue à 2 : retire des joueurs d’abord.'); return; }
@@ -343,7 +346,9 @@
         ${s.mode === 'solo' ? '' : `<div class="set-row"><label>Équipes</label>${seg('teams', [[0, 'Chacun pour soi'], [2, '2'], [3, '3'], [4, '4']], s.teams)}${s.teams ? '<button class="mini" data-act="shuffleteams">🔀 Mélanger</button>' : ''}</div>`}
         <div class="set-row"><label>Manches</label><div class="chips">${PQA.ROUND_ORDER.map((r) => `<button data-act="round" data-val="${r}" class="${s.rounds.includes(r) ? 'on' : ''}">${PQA.ROUNDS[r].icon} ${esc(PQA.ROUNDS[r].short)}</button>`).join('')}</div></div>
         <div class="set-row"><label>Durée</label>${seg('length', [['court', 'Courte'], ['normal', 'Normale'], ['long', 'Longue']], s.length)}</div>
-        <div class="set-row"><label>Coups bas</label>${seg('cards', [['1', '🃏 Oui'], ['0', 'Non']], s.cards ? '1' : '0')}</div>`}
+        `}
+        <div class="set-row"><label>Options</label><div class="seg toggles">${duel ? '' : `<button data-act="set" data-key="cards" data-val="${s.cards ? 0 : 1}" class="${s.cards ? 'on' : ''}">🃏 Coups bas</button>`}${s.mode === 'solo' || s.localDuel ? '' : `<button data-act="set" data-key="hostPlays" data-val="${s.hostPlays ? 0 : 1}" class="${s.hostPlays ? 'on' : ''}" title="Une manette s’affiche dans le coin de cet écran">🎮 Je joue aussi sur cet écran</button>`}</div></div>
+        <div class="set-row"><label>Chat</label>${seg('pixou', [['on', '🎙️ Pixou clashe'], ['off', '🤐 Pixou se tait']], g.chat ? g.chat.pixouMode : s.pixou)}<span class="set-note">Il répond aux joueurs qui lui parlent</span></div>
         <div class="set-row small"><label>Questions</label><span>${g.bank.length} au total · ${g.seen.size} déjà vues sur cet écran</span><button class="mini" data-act="resetseen">Oublier</button></div>`;
       const n = g.activePlayers().length;
       const canStart = duel ? n === 2 : n >= 1;
@@ -761,6 +766,20 @@
           <div class="end-btns"><button class="big-btn" data-act="lobby">🔁 Nouvelle partie</button></div>
         </div>`,
       };
+    }
+
+    /* ======================= Chat (fil sur l'écran TV) ============== */
+    chatFeed(m) {
+      if (!m) return;
+      let feed = document.getElementById('chat-feed');
+      if (!feed) { feed = document.createElement('div'); feed.id = 'chat-feed'; this.app.appendChild(feed); }
+      const el = document.createElement('div');
+      el.className = 'cf-msg' + (m.who === 'pixou' ? ' pixou' : '');
+      el.style.setProperty('--pc', m.color || 'var(--yellow)');
+      el.innerHTML = `<b>${m.who === 'pixou' ? '🎙️ PIXOU' : esc(m.name)}</b> ${esc(m.text)}`;
+      feed.appendChild(el);
+      while (feed.children.length > 4) feed.firstChild.remove();
+      setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 600); }, m.who === 'pixou' ? 14000 : 10000);
     }
 
     /* ======================= Présentateur virtuel ================== */

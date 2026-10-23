@@ -401,3 +401,23 @@ body[data-mode="irl"] #host-area { display: none; }
 .bot-line b { min-width: 170px; font-size: 22px; }
 .bot-line button:not(.mini) { background: var(--navy); border: 3px solid #000; color: var(--white); font-size: 18px; padding: 2px 8px; font-family: var(--font-text); }
 .bot-line button.on { background: var(--blue); border-color: var(--yellow); }
+
+/* Chat : les derniers messages défilent en haut à droite de l'écran TV */
+#chat-feed { position: absolute; left: 12px; top: 96px; width: 250px; z-index: 8; display: flex; flex-direction: column; gap: 6px; pointer-events: none; }
+.cf-msg { background: rgba(26,28,44,.92); border: 3px solid #000; border-left: 8px solid var(--pc); padding: 4px 8px; font-size: 20px; line-height: 1.05; animation: slideUp .3s; transition: opacity .6s; word-wrap: break-word; }
+.cf-msg b { color: var(--pc); }
+.cf-msg.pixou { border-left-color: var(--yellow); background: rgba(93,39,93,.95); }
+.cf-msg.pixou b { color: var(--yellow); }
+.cf-msg.out { opacity: 0; }
+.set-note { font-size: 16px; color: var(--g1); }
+
+/* Mode « Jouer sur téléphones » : la manette de l'hôte prend tout l'écran, le plateau reste caché */
+body.phones.live #app, body.phones.live #crt-overlay { display: none; }
+body.phones #solo-pad, body.phones #solo-pad[data-size] { inset: 0; width: 100%; height: 100%; border: 0; outline: 0; box-shadow: none; transition: none; }
+body.phones #boot .boot-box { max-width: 92vw; }
+body.phones .boot-box { font-size: 21px; }
+body.phones .boot-box .logo { font-size: clamp(14px, 6vw, 32px); }
+
+.panel.settings { overflow-y: auto; }
+.set-row { margin-bottom: 4px; }
+.seg.toggles button:not(.on) { opacity: .75; }
