@@ -1,13 +1,12 @@
 {
  "loops": {
-  "theme": 38.4,
-  "bed1": 17.7778,
-  "bed2": 20.8696,
-  "bed3": 16.2712,
-  "leaderboard": 24.0,
-  "suspense1": 17.1429,
-  "suspense2": 17.1429,
-  "finale": 15.4839
+  "theme": 128.44,
+  "bed1": 223.6526,
+  "bed2": 235.3377,
+  "bed3": 114.6886,
+  "suspense": 192.372,
+  "leaderboard": 47.1023,
+  "finale": 234.7343
  },
  "cues": [
   "bed1",
@@ -24,8 +23,7 @@
   "round_quatre",
   "round_sprint",
   "round_table",
-  "suspense1",
-  "suspense2",
+  "suspense",
   "theme",
   "transition",
   "victory"

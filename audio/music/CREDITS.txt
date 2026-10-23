@@ -1,0 +1,12 @@
+Musiques de fond : Kevin MacLeod (incompetech.com)
+Licence Creative Commons Attribution 4.0 : http://creativecommons.org/licenses/by/4.0/
+
+theme        « Rollin at 5 »
+bed1         « Spy Glass »
+bed2         « Funky Chunk »
+bed3         « Rollin at 5 »
+suspense     « Thinking Music »
+leaderboard  « Hot Swing »
+finale       « Disco con Tutti »
+
+Jingles : compositions originales (scripts/compose_music.py), banque FluidR3_GM (MIT).

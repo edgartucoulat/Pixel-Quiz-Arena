@@ -806,12 +806,18 @@
       } else if (winners.length === 0) this.say('correctNone', {}, 'sad');
       else if (winners.length === 1) this.say('correct', { name: this.name(winners[0]), pts: q.results[winners[0]].pts }, 'happy');
       else this.say('correctMany', { n: winners.length }, 'happy');
-      // L'anecdote "Le saviez-vous ?" arrive juste après.
-      if (q.data.anecdote) this.after(2600, () => this.say('anecdote', vars, 'wink'), { keep: false });
+      // L'anecdote "Le saviez-vous ?" de temps en temps seulement (environ une question sur quatre) :
+      // à chaque réponse, ça devient vite lassant.
+      this.sinceAnecdote = (this.sinceAnecdote || 0) + 1;
+      q.tellAnecdote = !!q.data.anecdote && this.sinceAnecdote >= 3 && Math.random() < 0.5;
+      if (q.tellAnecdote) {
+        this.sinceAnecdote = 0;
+        this.after(2600, () => this.say('anecdote', vars, 'wink'), { keep: false });
+      }
     }
     revealDelay(q) {
-      const len = (q.data.anecdote || '').length;
-      return clamp(7000 + len * 45, 8000, 15000) + (q.data.type === 'fourchette' ? 3500 : 0);
+      const len = q.tellAnecdote ? (q.data.anecdote || '').length : 0;
+      return clamp(7000 + len * 45, 6500, 15000) + (q.data.type === 'fourchette' ? 3500 : 0);
     }
 
     afterReveal() {

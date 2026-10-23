@@ -1,11 +1,10 @@
 /* =========================================================================
  * PIXEL QUIZ ARENA - Musique de l'émission (Web Audio API)
  *
- * Musiques originales jouées par de vrais instruments (orchestre, cuivres,
- * piano), composées et enregistrées par scripts/compose_music.py dans
- * audio/music/ : des ambiances discrètes en boucle et des jingles télé
- * (ouverture, annonce de chaque manche, victoire).
- * La musique de réflexion se tend quand le chrono s'épuise, et tout baisse
+ * Fonds musicaux : de vrais morceaux enregistrés (Kevin MacLeod, CC BY 4.0,
+ * scripts/import_music.py), joués en boucle. Jingles télé (ouverture, annonce
+ * de chaque manche, victoire) composés par scripts/compose_music.py.
+ * La musique de réflexion accélère quand le chrono s'épuise, et tout baisse
  * quand le présentateur parle.
  * ========================================================================= */
 (function () {
@@ -38,7 +37,7 @@
       this.duckG.connect(ctx.destination);
       this.ready = fetch(DIR + 'manifest.json')
         .then((r) => r.json())
-        .then((m) => { this.loops = m.loops || {}; (m.cues || []).forEach((n) => this.load(n)); })
+        .then((m) => { this.loops = m.loops || {}; (m.cues || []).filter((n) => !this.loops[n]).forEach((n) => this.load(n)); })
         .catch(() => {});
       if (this.wanted) this.play(this.wanted);
     }
@@ -53,7 +52,7 @@
     }
     setVolume(v) { this.volume = v; if (this.out) this.out.gain.setTargetAtTime(v, this.ctx.currentTime, 0.05); }
     /** Baisse la musique sous la voix du présentateur. */
-    setDuck(on) { if (this.ctx) this.duckG.gain.setTargetAtTime(on ? 0.3 : 1, this.ctx.currentTime, on ? 0.08 : 0.5); }
+    setDuck(on) { if (this.ctx) this.duckG.gain.setTargetAtTime(on ? 0.35 : 1, this.ctx.currentTime, on ? 0.06 : 0.3); }
 
     /** 1 = calme ... ~1.85 = chrono presque écoulé (réglé à chaque image par le plateau). */
     set tempo(v) {
@@ -62,52 +61,51 @@
       this.intensity = k;
       const c = this.cur;
       if (!c || c.name !== 'suspense' || !this.ctx) return;
-      const t = this.ctx.currentTime;
-      // La version tendue monte, et le tout accélère légèrement.
-      c.layers[0].g.gain.setTargetAtTime(1 - k * 0.6, t, 0.3);
-      c.layers[1].g.gain.setTargetAtTime(k, t, 0.3);
-      c.layers.forEach((l) => l.src.playbackRate.setTargetAtTime(1 + k * 0.07, t, 0.5));
+      // Le morceau accélère quand le chrono s'épuise.
+      c.audio.playbackRate = 1 + k * 0.06;
     }
     get tempo() { return 1 + this.intensity * 0.85; }
 
-    /** Lance une ambiance en boucle (null = silence). Ne fait rien si c'est déjà elle. */
+    /**
+     * Lance une ambiance en boucle (null = silence). Ne fait rien si c'est déjà elle.
+     * Les fonds sont de longs morceaux : lus en flux par un <audio> plutôt que
+     * décodés en entier (des centaines de Mo en mémoire sur un téléphone).
+     */
     play(name, delay = 0) {
       this.wanted = name;
       if (!this.ctx || (this.cur && this.cur.name === name) || (!this.cur && !name)) return;
       this.fadeOut();
       if (!name) return;
-      const files = name === 'suspense' ? ['suspense1', 'suspense2'] : [name.startsWith('round_') ? BEDS[name.slice(6)] || 'bed1' : name];
-      const c = (this.cur = { name, layers: [] });
+      const file = name.startsWith('round_') ? BEDS[name.slice(6)] || 'bed1' : name;
+      const a = new Audio(DIR + file + '.webm');
+      a.loop = true;
+      a.preload = 'auto';
+      if (name === 'suspense') a.playbackRate = 1 + this.intensity * 0.06;
+      const c = (this.cur = { name, audio: a });
       const g = (c.gain = this.ctx.createGain());
       g.gain.value = 0;
+      c.src = this.ctx.createMediaElementSource(a);
+      c.src.connect(g);
       g.connect(this.out);
-      Promise.all(files.map((f) => this.load(f))).then((bufs) => {
-        if (this.cur !== c || bufs.some((b) => !b)) return;
+      const wait = Math.max(0.05 + delay, this.hold - this.ctx.currentTime);
+      c.timer = setTimeout(() => {
+        if (this.cur !== c) return;
+        a.play().catch(() => {});
         const t = this.ctx.currentTime;
-        const start = Math.max(t + 0.05 + delay, this.hold);
-        bufs.forEach((buf, i) => {
-          const src = this.ctx.createBufferSource(), lg = this.ctx.createGain();
-          src.buffer = buf;
-          src.loop = true;
-          src.loopEnd = Math.min(buf.duration, this.loops[files[i]] || buf.duration);
-          lg.gain.value = name === 'suspense' ? (i ? this.intensity : 1 - this.intensity * 0.6) : 1;
-          src.connect(lg); lg.connect(g);
-          src.start(start);
-          c.layers.push({ src, g: lg });
-        });
-        g.gain.setValueAtTime(0, start);
-        g.gain.linearRampToValueAtTime(1, start + 1.2);
-      });
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(1, t + 1.2);
+      }, wait * 1000);
     }
     fadeOut() {
       const c = this.cur;
       this.cur = null;
       if (!c) return;
+      clearTimeout(c.timer);
       const t = this.ctx.currentTime, gg = c.gain.gain;
       gg.cancelScheduledValues(t);
       gg.setValueAtTime(gg.value, t);
       gg.linearRampToValueAtTime(0, t + 0.6);
-      setTimeout(() => { c.layers.forEach((l) => { try { l.src.stop(); } catch (e) {} }); c.gain.disconnect(); }, 900);
+      setTimeout(() => { c.audio.pause(); c.audio.removeAttribute('src'); c.audio.load(); c.src.disconnect(); c.gain.disconnect(); }, 900);
     }
 
     /** Jingle joué une fois (ouverture, annonce de manche, victoire...) ; l'ambiance reprend après. */
