@@ -18,6 +18,9 @@
       if (!this.ctx) {
         const AC = window.AudioContext || window.webkitAudioContext;
         if (!AC) return;
+        // iPhone : sans ce réglage, le bouton silencieux coupe tout le Web Audio
+        // (voix enregistrées, musique, effets), alors qu'un <audio> passait.
+        try { if (typeof navigator !== 'undefined' && navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) { /* Safari < 16.4 */ }
         this.ctx = new AC();
         this.master = this.ctx.createGain();
         this.master.gain.value = this.volume;
