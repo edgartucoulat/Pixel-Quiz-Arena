@@ -204,7 +204,7 @@ body.local-pad { font-size: 20px; min-height: 100vh; }
 #pixou-say img { width: 30px; height: 40px; flex: none; }
 #pixou-say.pop { animation: popIn .35s; }
 .tvq { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
-.tvq-cat { display: flex; flex-direction: column; gap: 2px; font-size: 20px; color: var(--cyan); background: var(--plum); border: 3px solid #000; padding: 6px 10px; }
+.tvq-cat { display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; font-size: 20px; color: var(--cyan); background: var(--plum); border: 3px solid #000; padding: 6px 10px; }
 .tvq-sub { font-size: 28px; line-height: 1; color: var(--yellow); }
 .tvq-text { font-size: 25px; line-height: 1.1; background: rgba(0,0,0,.35); border: 3px solid #000; padding: 8px 10px; }
 .tvq-text.small { font-size: 20px; }
