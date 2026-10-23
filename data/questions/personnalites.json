@@ -1056,5 +1056,533 @@
    "ttmc",
    "improbable"
   ]
+ },
+ {
+  "id": "per-101",
+  "categorie": "Personnalités",
+  "sous_theme": "Science",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quelle scientifique a reçu deux prix Nobel, en physique (1903) puis en chimie (1911) ?",
+  "choix": [
+   "Marie Curie",
+   "Irène Joliot-Curie",
+   "Rosalind Franklin",
+   "Lise Meitner"
+  ],
+  "reponse": "Marie Curie",
+  "anecdote": "Ses carnets de laboratoire sont encore radioactifs et sont conservés dans des boîtes plombées."
+ },
+ {
+  "id": "per-104",
+  "categorie": "Personnalités",
+  "sous_theme": "Entrepreneurs",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel entrepreneur dirige à la fois Tesla et SpaceX ?",
+  "choix": [
+   "Elon Musk",
+   "Jeff Bezos",
+   "Mark Zuckerberg",
+   "Richard Branson"
+  ],
+  "reponse": "Elon Musk",
+  "anecdote": "Né en Afrique du Sud en 1971, il a vendu son premier jeu vidéo, Blastar, à 12 ans."
+ },
+ {
+  "id": "per-106",
+  "categorie": "Personnalités",
+  "sous_theme": "Mode",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel couturier allemand a dirigé la maison Chanel de 1983 jusqu'à sa mort, en 2019 ?",
+  "choix": [
+   "Karl Lagerfeld",
+   "Jean Paul Gaultier",
+   "Hubert de Givenchy",
+   "Christian Lacroix"
+  ],
+  "reponse": "Karl Lagerfeld",
+  "anecdote": "Sa chatte birmane, Choupette, avait ses propres comptes sur les réseaux sociaux."
+ },
+ {
+  "id": "per-107",
+  "categorie": "Personnalités",
+  "sous_theme": "Exploration",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Quel navigateur génois a atteint l'Amérique en 1492, pour le compte de l'Espagne ?",
+  "choix": [
+   "Christophe Colomb",
+   "Amerigo Vespucci",
+   "Vasco de Gama",
+   "Fernand de Magellan"
+  ],
+  "reponse": "Christophe Colomb",
+  "anecdote": "Il est mort persuadé d'avoir atteint l'Asie."
+ },
+ {
+  "id": "per-108",
+  "categorie": "Personnalités",
+  "sous_theme": "Espace",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel astronaute français a séjourné dans la Station spatiale internationale en 2016-2017, puis en 2021 ?",
+  "choix": [
+   "Thomas Pesquet",
+   "Jean-Loup Chrétien",
+   "Patrick Baudry",
+   "Philippe Perrin"
+  ],
+  "reponse": "Thomas Pesquet",
+  "anecdote": "Ses photos de la Terre prises depuis l'ISS ont été partagées par millions sur les réseaux sociaux."
+ },
+ {
+  "id": "per-109",
+  "categorie": "Personnalités",
+  "sous_theme": "Espace",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Qui a été le premier Français à aller dans l'espace, en 1982 ?",
+  "choix": [
+   "Jean-Loup Chrétien",
+   "Thomas Pesquet",
+   "Patrick Baudry",
+   "Michel Tognini"
+  ],
+  "reponse": "Jean-Loup Chrétien",
+  "anecdote": "Il a volé à bord d'une mission soviétique, Soyouz T-6."
+ },
+ {
+  "id": "per-110",
+  "categorie": "Personnalités",
+  "sous_theme": "Espace",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quelle cosmonaute soviétique a été la première femme dans l'espace, en 1963 ?",
+  "choix": [
+   "Valentina Terechkova",
+   "Svetlana Savitskaïa",
+   "Sally Ride",
+   "Claudie Haigneré"
+  ],
+  "reponse": "Valentina Terechkova",
+  "anecdote": "Ouvrière dans une usine textile, elle pratiquait le parachutisme en amateur."
+ },
+ {
+  "id": "per-111",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel médecin a cofondé Médecins sans frontières en 1971, puis Médecins du monde ?",
+  "choix": [
+   "Bernard Kouchner",
+   "Xavier Emmanuelli",
+   "Rony Brauman",
+   "Albert Schweitzer"
+  ],
+  "reponse": "Bernard Kouchner",
+  "anecdote": "Il a ensuite été ministre des Affaires étrangères, de 2007 à 2010."
+ },
+ {
+  "id": "per-114",
+  "categorie": "Personnalités",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Quelle femme a été chancelière d'Allemagne de 2005 à 2021 ?",
+  "choix": [
+   "Angela Merkel",
+   "Ursula von der Leyen",
+   "Annegret Kramp-Karrenbauer",
+   "Theresa May"
+  ],
+  "reponse": "Angela Merkel",
+  "anecdote": "Avant la politique, elle était docteure en chimie quantique."
+ },
+ {
+  "id": "per-115",
+  "categorie": "Personnalités",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quelle Première ministre britannique était surnommée « la Dame de fer » ?",
+  "choix": [
+   "Margaret Thatcher",
+   "Theresa May",
+   "Liz Truss",
+   "Indira Gandhi"
+  ],
+  "reponse": "Margaret Thatcher",
+  "anecdote": "Le surnom lui a été donné en 1976 par un journal de l'armée soviétique."
+ },
+ {
+  "id": "per-116",
+  "categorie": "Personnalités",
+  "sous_theme": "Science",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle mathématicienne anglaise est considérée comme la première programmeuse de l'histoire, au XIXe siècle ?",
+  "choix": [
+   "Ada Lovelace",
+   "Mary Somerville",
+   "Grace Hopper",
+   "Emmy Noether"
+  ],
+  "reponse": "Ada Lovelace",
+  "anecdote": "Elle était la fille du poète Lord Byron."
+ },
+ {
+  "id": "per-117",
+  "categorie": "Personnalités",
+  "sous_theme": "Exploration",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel navigateur portugais a dirigé la première expédition autour du monde, partie en 1519 ?",
+  "choix": [
+   "Fernand de Magellan",
+   "Vasco de Gama",
+   "Bartolomeu Dias",
+   "Juan Sebastián Elcano"
+  ],
+  "reponse": "Fernand de Magellan",
+  "anecdote": "Il est mort aux Philippines en 1521 ; c'est Elcano qui a achevé le tour du monde."
+ },
+ {
+  "id": "per-118",
+  "categorie": "Personnalités",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel garde des Sceaux a porté l'abolition de la peine de mort en France, en 1981 ?",
+  "choix": [
+   "Robert Badinter",
+   "Alain Peyrefitte",
+   "Gaston Defferre",
+   "Pierre Mauroy"
+  ],
+  "reponse": "Robert Badinter",
+  "anecdote": "Il est entré au Panthéon en octobre 2025."
+ },
+ {
+  "id": "per-119",
+  "categorie": "Personnalités",
+  "sous_theme": "Mode",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel créateur français est célèbre pour ses marinières et le corset conique de Madonna ?",
+  "choix": [
+   "Jean Paul Gaultier",
+   "Thierry Mugler",
+   "Christian Lacroix",
+   "Pierre Cardin"
+  ],
+  "reponse": "Jean Paul Gaultier",
+  "anecdote": "Il a aussi animé l'émission britannique « Eurotrash » dans les années 1990."
+ },
+ {
+  "id": "per-120",
+  "categorie": "Personnalités",
+  "sous_theme": "Entrepreneurs",
+  "type": "qcm",
+  "difficulte": 4,
+  "question": "Quel chef lyonnais a donné son nom à un célèbre concours mondial de cuisine, créé en 1987 ?",
+  "choix": [
+   "Paul Bocuse",
+   "Joël Robuchon",
+   "Alain Ducasse",
+   "Michel Guérard"
+  ],
+  "reponse": "Paul Bocuse",
+  "anecdote": "Son restaurant de Collonges-au-Mont-d'Or a gardé trois étoiles Michelin de 1965 à 2019."
+ },
+ {
+  "id": "per-121",
+  "categorie": "Personnalités",
+  "sous_theme": "Politique",
+  "type": "qcm",
+  "difficulte": 2,
+  "question": "Qui a été le premier président noir des États-Unis ?",
+  "choix": [
+   "Barack Obama",
+   "Joe Biden",
+   "Colin Powell",
+   "Kamala Harris"
+  ],
+  "reponse": "Barack Obama",
+  "anecdote": "Il a reçu le prix Nobel de la paix en 2009, moins d'un an après son élection."
+ },
+ {
+  "id": "per-122",
+  "categorie": "Personnalités",
+  "sous_theme": "Exploration",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel alpiniste néo-zélandais a atteint le sommet de l'Everest en 1953, avec Tenzing Norgay ?",
+  "choix": [
+   "Edmund Hillary",
+   "George Mallory",
+   "Reinhold Messner",
+   "Maurice Herzog"
+  ],
+  "reponse": "Edmund Hillary",
+  "anecdote": "Apiculteur de métier, il a ensuite consacré sa vie à construire des écoles au Népal."
+ },
+ {
+  "id": "per-123",
+  "categorie": "Personnalités",
+  "sous_theme": "Exploration",
+  "type": "qcm",
+  "difficulte": 7,
+  "question": "Quel alpiniste français a mené la première ascension d'un sommet de plus de 8 000 m, l'Annapurna, en 1950 ?",
+  "choix": [
+   "Maurice Herzog",
+   "Lionel Terray",
+   "Edmund Hillary",
+   "Gaston Rébuffat"
+  ],
+  "reponse": "Maurice Herzog",
+  "anecdote": "Il y a perdu presque tous ses doigts et ses orteils, gelés pendant la descente."
+ },
+ {
+  "id": "per-124",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quelle Kényane, fondatrice du mouvement de la Ceinture verte, a été la première Africaine prix Nobel de la paix, en 2004 ?",
+  "choix": [
+   "Wangari Maathai",
+   "Ellen Johnson Sirleaf",
+   "Leymah Gbowee",
+   "Graça Machel"
+  ],
+  "reponse": "Wangari Maathai",
+  "anecdote": "Son mouvement a fait planter plus de 50 millions d'arbres au Kenya."
+ },
+ {
+  "id": "per-126",
+  "categorie": "Personnalités",
+  "sous_theme": "Science",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel ingénieur d'origine serbe a défendu le courant alternatif face à Edison ?",
+  "choix": [
+   "Nikola Tesla",
+   "Michael Faraday",
+   "George Westinghouse",
+   "Guglielmo Marconi"
+  ],
+  "reponse": "Nikola Tesla",
+  "anecdote": "L'unité de mesure du champ magnétique, le tesla, porte son nom."
+ },
+ {
+  "id": "per-127",
+  "categorie": "Personnalités",
+  "sous_theme": "Mode",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle styliste britannique a popularisé la minijupe dans les années 1960 ?",
+  "choix": [
+   "Mary Quant",
+   "Vivienne Westwood",
+   "Twiggy",
+   "Stella McCartney"
+  ],
+  "reponse": "Mary Quant",
+  "anecdote": "Elle aurait baptisé la minijupe d'après sa voiture préférée, la Mini."
+ },
+ {
+  "id": "per-128",
+  "categorie": "Personnalités",
+  "sous_theme": "Engagement",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quelle écrivaine a été la première femme élue à l'Académie française, en 1980 ?",
+  "choix": [
+   "Marguerite Yourcenar",
+   "Simone Veil",
+   "Jacqueline de Romilly",
+   "Hélène Carrère d'Encausse"
+  ],
+  "reponse": "Marguerite Yourcenar",
+  "anecdote": "Elle vivait aux États-Unis, sur l'île des Monts-Déserts, dans le Maine."
+ },
+ {
+  "id": "per-129",
+  "categorie": "Personnalités",
+  "sous_theme": "Science",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel chirurgien a réalisé la première greffe du cœur humain, en 1967 en Afrique du Sud ?",
+  "choix": [
+   "Christiaan Barnard",
+   "Norman Shumway",
+   "Christian Cabrol",
+   "Michael DeBakey"
+  ],
+  "reponse": "Christiaan Barnard",
+  "anecdote": "Le patient, Louis Washkansky, a survécu 18 jours."
+ },
+ {
+  "id": "per-130",
+  "categorie": "Personnalités",
+  "sous_theme": "Entrepreneurs",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel industriel français a fondé en 1919 la marque automobile aux chevrons qui porte son nom ?",
+  "choix": [
+   "André Citroën",
+   "Louis Renault",
+   "Armand Peugeot",
+   "Ettore Bugatti"
+  ],
+  "reponse": "André Citroën",
+  "anecdote": "Il a fait illuminer la tour Eiffel avec son nom, de 1925 à 1934."
+ },
+ {
+  "id": "per-131",
+  "categorie": "Personnalités",
+  "sous_theme": "Entrepreneurs",
+  "type": "qcm",
+  "difficulte": 8,
+  "question": "Quel chimiste a fondé L'Oréal en 1909 ?",
+  "choix": [
+   "Eugène Schueller",
+   "François Coty",
+   "Marcel Bich",
+   "Louis Vuitton"
+  ],
+  "reponse": "Eugène Schueller",
+  "anecdote": "Sa fille, Liliane Bettencourt, a longtemps été la femme la plus riche du monde."
+ },
+ {
+  "id": "per-132",
+  "categorie": "Personnalités",
+  "sous_theme": "Entrepreneurs",
+  "type": "qcm",
+  "difficulte": 6,
+  "question": "Quel industriel a lancé en 1950 le stylo à bille Cristal ?",
+  "choix": [
+   "Marcel Bich",
+   "László Biró",
+   "Eugène Schueller",
+   "Jean Mantelet"
+  ],
+  "reponse": "Marcel Bich",
+  "anecdote": "Le nom de la marque Bic vient du sien, dont il a retiré le « h »."
+ },
+ {
+  "id": "per-133",
+  "categorie": "Personnalités",
+  "sous_theme": "Sport",
+  "type": "qcm",
+  "difficulte": 3,
+  "question": "Quel boxeur américain disait « Vole comme un papillon, pique comme une abeille » ?",
+  "choix": [
+   "Muhammad Ali",
+   "Mike Tyson",
+   "Joe Frazier",
+   "George Foreman"
+  ],
+  "reponse": "Muhammad Ali",
+  "anecdote": "Né Cassius Clay, il a changé de nom en 1964."
+ },
+ {
+  "id": "per-135",
+  "categorie": "Personnalités",
+  "sous_theme": "Exploration",
+  "type": "qcm",
+  "difficulte": 5,
+  "question": "Quel officier de marine a mis au point le scaphandre autonome moderne avec Émile Gagnan, en 1943 ?",
+  "choix": [
+   "Jacques-Yves Cousteau",
+   "Philippe Tailliez",
+   "Frédéric Dumas",
+   "Haroun Tazieff"
+  ],
+  "reponse": "Jacques-Yves Cousteau",
+  "anecdote": "Leur invention, l'« aqualung », a ouvert la plongée sous-marine au grand public."
+ },
+ {
+  "id": "per-136",
+  "categorie": "Personnalités",
+  "sous_theme": "Science",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : Marie Curie a été la première femme à recevoir un prix Nobel.",
+  "reponse": "Vrai",
+  "anecdote": "Elle reste la seule personne récompensée dans deux sciences différentes, la physique et la chimie."
+ },
+ {
+  "id": "per-137",
+  "categorie": "Personnalités",
+  "sous_theme": "Politique",
+  "type": "vf",
+  "difficulte": 4,
+  "question": "Vrai ou faux : Napoléon Bonaparte était particulièrement petit pour son époque.",
+  "reponse": "Faux",
+  "anecdote": "Il mesurait environ 1,69 m, une taille dans la moyenne ; la légende doit beaucoup à la propagande anglaise."
+ },
+ {
+  "id": "per-138",
+  "categorie": "Personnalités",
+  "sous_theme": "Science",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : Albert Einstein a échoué en mathématiques à l'école.",
+  "reponse": "Faux",
+  "anecdote": "Il maîtrisait le calcul différentiel et intégral avant ses 15 ans."
+ },
+ {
+  "id": "per-139",
+  "categorie": "Personnalités",
+  "sous_theme": "Entrepreneurs",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : Walt Disney a lui-même prêté sa voix à Mickey Mouse.",
+  "reponse": "Vrai",
+  "anecdote": "Il l'a doublé de 1928 à 1947."
+ },
+ {
+  "id": "per-140",
+  "categorie": "Personnalités",
+  "sous_theme": "Science",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : Gustave Eiffel a aussi conçu la structure de la statue de la Liberté.",
+  "reponse": "Vrai",
+  "anecdote": "Il a imaginé son armature métallique intérieure, sur laquelle est fixée la peau de cuivre."
+ },
+ {
+  "id": "per-141",
+  "categorie": "Personnalités",
+  "sous_theme": "Politique",
+  "type": "vf",
+  "difficulte": 6,
+  "question": "Vrai ou faux : Charles de Gaulle est né à Colombey-les-Deux-Églises.",
+  "reponse": "Faux",
+  "anecdote": "Il est né à Lille en 1890 ; Colombey est le village où il vivait et où il est enterré."
+ },
+ {
+  "id": "per-142",
+  "categorie": "Personnalités",
+  "sous_theme": "Science",
+  "type": "vf",
+  "difficulte": 5,
+  "question": "Vrai ou faux : Léonard de Vinci était gaucher.",
+  "reponse": "Vrai",
+  "anecdote": "Il écrivait souvent de droite à gauche, en écriture inversée lisible dans un miroir."
+ },
+ {
+  "id": "per-143",
+  "categorie": "Personnalités",
+  "sous_theme": "Entrepreneurs",
+  "type": "vf",
+  "difficulte": 2,
+  "question": "Vrai ou faux : Steve Jobs a fondé Microsoft.",
+  "reponse": "Faux",
+  "anecdote": "Microsoft a été fondé par Bill Gates et Paul Allen, en 1975."
  }
 ]
