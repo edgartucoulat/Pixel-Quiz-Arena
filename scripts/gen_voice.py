@@ -16,17 +16,26 @@ import subprocess
 import sys
 import tempfile
 
-import edge_tts
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 OUT = os.path.join(ROOT, 'audio', 'voice')
 # Changer de voix ré-enregistre tout. Garder js/voice.js (BANK_VOICE) d'accord.
-VOICE = os.environ.get('PQA_VOICE', 'fr-FR-RemyMultilingualNeural')
-RATE = os.environ.get('PQA_RATE', '+6%')
+VOICE = os.environ.get('PQA_VOICE', 'fr-CH-FabriceNeural')
 JOBS = int(os.environ.get('PQA_JOBS', '6'))
+# Ton par type de phrase (débit, hauteur) : une voix grave, des répliques
+# plus enlevées que les questions, qui restent claires et posées.
+STYLES = {'line': ('+10%', '-8Hz'), 'question': ('+4%', '-10Hz')}
+# Son « plateau télé » : du corps dans le grave, voix plus présente (aigus de la parole), compressée
+# comme à la radio, avec une toute petite salle autour.
+PLATEAU = ('highpass=f=90,equalizer=f=130:t=q:w=1:g=3,equalizer=f=250:t=q:w=1:g=-2,equalizer=f=3200:t=q:w=1.2:g=3.5,'
+           'acompressor=threshold=-20dB:ratio=3.5:attack=4:release=90:makeup=3,'
+           'aecho=0.85:0.6:23|41:0.10|0.06,alimiter=limit=0.95')
 # Coupe les silences de début et de fin, garde une petite respiration.
 FILTER = ('silenceremove=start_periods=1:start_threshold=-50dB,areverse,'
-          'silenceremove=start_periods=1:start_threshold=-50dB,areverse,apad=pad_dur=0.12')
+          'silenceremove=start_periods=1:start_threshold=-50dB,areverse,'
+          + PLATEAU + ',apad=pad_dur=0.12')
+# Changer ceci (voix, ton ou traitement) ré-enregistre toute la banque.
+SIGNATURE = f'{VOICE}|{STYLES}|{FILTER}'
 
 
 def load_lines():
@@ -36,12 +45,14 @@ def load_lines():
 
 
 async def synth(item, sem, tmp, stats):
+    import edge_tts
     dest = os.path.join(OUT, item['id'] + '.webm')
     async with sem:
         for attempt in range(5):
             try:
                 mp3 = os.path.join(tmp, item['id'] + '.mp3')
-                await edge_tts.Communicate(item['text'], VOICE, rate=RATE).save(mp3)
+                rate, pitch = STYLES['question' if item['kind'] == 'question' else 'line']
+                await edge_tts.Communicate(item['text'], VOICE, rate=rate, pitch=pitch).save(mp3)
                 subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', mp3, '-af', FILTER, '-ac', '1',
                                 '-c:a', 'libopus', '-b:a', '20k', '-application', 'voip', dest], check=True)
                 os.remove(mp3)
@@ -64,7 +75,7 @@ async def main():
     if os.path.exists(manifest_path):
         with open(manifest_path, encoding='utf-8') as f:
             old = json.load(f)
-    redo = old.get('voice') != VOICE or old.get('rate') != RATE
+    redo = old.get('voice') != VOICE or old.get('style') != SIGNATURE
     wanted = {it['id'] for it in lines}
     have = {f[:-5] for f in os.listdir(OUT) if f.endswith('.webm')}
     for stale in have - wanted:
@@ -77,7 +88,7 @@ async def main():
         await asyncio.gather(*(synth(it, sem, tmp, stats) for it in todo))
     ids = sorted(i for i in wanted if os.path.exists(os.path.join(OUT, i + '.webm')))
     with open(manifest_path, 'w', encoding='utf-8') as f:
-        json.dump({'voice': VOICE, 'rate': RATE, 'ids': ids}, f, separators=(',', ':'))
+        json.dump({'voice': VOICE, 'style': SIGNATURE, 'ids': ids}, f, separators=(',', ':'))
         f.write('\n')
     print(f"{stats['done']} enregistrées, {stats['failed']} échecs, {len(ids)} au total", flush=True)
     # Quelques échecs ne bloquent pas : ces phrases seront dites en direct.

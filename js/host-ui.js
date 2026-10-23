@@ -44,7 +44,7 @@
 
     /* ---- Préférences locales de l'écran (son, CRT, voix) ---- */
     loadPrefs() {
-      const def = { crt: true, tts: true, muted: false, volume: 0.6, music: 0.45, voiceVol: 1, voice: 'auto', robot: false };
+      const def = { crt: true, tts: true, muted: false, volume: 0.6, music: 0.45, voiceVol: 1 };
       let saved = {};
       try { saved = JSON.parse(localStorage.getItem('pqa_prefs') || '{}') || {}; } catch (e) {}
       // Anciennes préférences : la voix était coupée par défaut car robotique.
@@ -58,8 +58,6 @@
       sfx.setVolume(off ? 0 : pr.volume);
       music.setVolume(off ? 0 : pr.music);
       voice.volume = pr.voiceVol;
-      voice.choice = pr.voice;
-      voice.fallback = !!pr.robot;
       voice.pickLive();
       PQA.tts.enabled = !!pr.tts && !off && pr.voiceVol > 0;
       this.refreshSoundPanel();
@@ -74,8 +72,6 @@
         <label>🎵 Musique <input type="range" min="0" max="1" step="0.05" data-k="music"></label>
         <label>💥 Effets <input type="range" min="0" max="1" step="0.05" data-k="volume"></label>
         <label>🗣️ Voix <input type="range" min="0" max="1" step="0.05" data-k="voiceVol"></label>
-        <label class="sp-row">Voix de Pixou <select data-k="voice"></select></label>
-        <label class="sp-check"><input type="checkbox" data-k="robot"> Voix robotique en secours</label>
         <div class="sp-info"></div>
         <button class="ctl" data-sp="test">▶ Tester la voix</button>
         <div class="sp-info sp-credit">Musiques : Kevin MacLeod (incompetech.com), licence CC BY 4.0</div>`;
@@ -99,11 +95,6 @@
       if (!el) return;
       const pr = this.prefs;
       el.querySelectorAll('input[type=range]').forEach((i) => (i.value = pr[i.dataset.k]));
-      el.querySelector('[data-k=robot]').checked = !!pr.robot;
-      const sel = el.querySelector('select');
-      const opts = [['auto', 'Automatique (la plus naturelle)']].concat(voice.voices.map((v) => [v.name, v.name + (voice.score(v) >= 80 ? ' ★' : '')]));
-      sel.innerHTML = opts.map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join('');
-      sel.value = opts.some(([v]) => v === pr.voice) ? pr.voice : 'auto';
       el.querySelector('.sp-info').textContent = 'En ce moment : ' + voice.description;
     }
 
