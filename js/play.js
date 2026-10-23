@@ -32,6 +32,18 @@
     state.room = saved.room;
     state.token = saved.token;
   }
+  // Questions déjà vues sur ce téléphone, envoyées au plateau pour qu'il ne les repose pas,
+  // même si la partie est hébergée sur un autre écran.
+  const SEEN_STORE = 'pqa_player_seen';
+  const SEEN_MAX = 1500;
+  let seenQ = [];
+  try { seenQ = JSON.parse(localStorage.getItem(SEEN_STORE) || '[]'); } catch (e) {}
+  if (!Array.isArray(seenQ)) seenQ = [];
+  function noteSeen(id) {
+    if (!id || seenQ[seenQ.length - 1] === id) return;
+    seenQ = seenQ.filter((x) => x !== id).concat(id).slice(-SEEN_MAX);
+    try { localStorage.setItem(SEEN_STORE, JSON.stringify(seenQ)); } catch (e) {}
+  }
   function save() {
     try { localStorage.setItem(STORE, JSON.stringify({ room: state.room, token: state.token, name: state.name, avatar: state.avatar })); } catch (e) {}
   }
@@ -78,7 +90,7 @@
   let netStatus = 'idle';
   PQA.onNetDiag = () => net && net.h.onStatus(netStatus);
   const net = new (LOCAL ? LocalNet : PQA.ClientNet)({
-    getHello: () => ({ t: 'hello', role: 'player', token: state.token, name: state.name, avatar: state.avatar, v: 1 }),
+    getHello: () => ({ t: 'hello', role: 'player', token: state.token, name: state.name, avatar: state.avatar, seen: seenQ, v: 1 }),
     onStatus(s) {
       netStatus = s;
       const txt = { connecting: '⏳ Connexion au plateau...', reconnecting: '🔄 Reconnexion...', noroom: '❓ Salle introuvable : vérifie le code (nouvelle tentative...)', connected: '' }[s] || '';
@@ -98,6 +110,7 @@
       if (m.t === 'error') { net.stop(); state.joined = false; showJoin(m.text); return; }
       if (m.t === 'view') {
         state.view = m.v;
+        noteSeen(m.v.seenId);
         if (m.left != null) { state.deadline = performance.now() + m.left; state.total = m.v.timer ? m.v.timer.total : 0; }
         else state.deadline = 0;
         render();
@@ -309,7 +322,7 @@
         : (v.clue ? `Indice : ${esc(v.clue)}<br>` : '') + `${miss} Tu auras ${v.answerSecs || 5} s pour répondre.`;
       return {
         key: 'buzz' + v.qid + st + (v.buzzer || '') + (st === 'frozen' ? v.me.frozen : '') + tvKey(v),
-        html: `${timerBar()}${v.cat && !v.tv ? `<div class="pq-cat">${esc(v.cat)}</div>` : ''}${tvQuestion(v)}<div class="buzz-wrap ${st}" ${st === 'other' ? `style="--oc:${v.buzzerColor}"` : ''}>
+        html: `${timerBar()}${v.cat && !v.tv ? `<div class="pq-cat">${esc(v.cat)}${v.sub ? `<span class="pq-sub">${esc(v.sub)}</span>` : ''}</div>` : ''}${tvQuestion(v)}<div class="buzz-wrap ${st}" ${st === 'other' ? `style="--oc:${v.buzzerColor}"` : ''}>
           <button class="buzzer ${st}" id="buzzer" ${st !== 'open' && st !== 'early' ? 'disabled' : ''}><span>${label}</span></button>
           <div class="buzz-sub" id="buzz-sub">${sub}</div></div>`,
         after() {
@@ -385,7 +398,7 @@
     if (!t) return '';
     const n = t.choices ? t.choices.length : 0;
     const shown = t.correctIdx != null;
-    return `<div class="tvq"><div class="tvq-cat">${esc(t.cat)}</div><div class="tvq-text">${esc(t.question)}</div>
+    return `<div class="tvq"><div class="tvq-cat">${esc(t.cat)}${t.sub ? `<span class="tvq-sub">${esc(t.sub)}</span>` : ''}</div><div class="tvq-text">${esc(t.question)}</div>
       ${t.clues ? `<ol class="tvq-clues">${t.clues.map((c) => `<li>${esc(c)}</li>`).join('')}</ol>` : ''}
       ${withChoices && n ? `<div class="tvq-choices n${n}">${t.choices.map((c, i) => `<span class="c${i} ${shown ? (i === t.correctIdx ? 'good' : 'bad') : ''}"><b>${n === 2 ? (i === 0 ? '✔' : '✖') : LETTERS[i]}</b>${esc(c)}</span>`).join('')}</div>` : ''}</div>`;
   }

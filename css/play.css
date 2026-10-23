@@ -69,6 +69,7 @@ body.play.shake { animation: pshake .35s; }
 .pq { display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .pq-text { font-size: 28px; line-height: 1.05; background: rgba(0,0,0,.4); padding: 10px; border: 3px solid #000; }
 .pq-cat { font-family: var(--font-title); font-size: 13px; color: var(--cyan); text-align: center; line-height: 1.4; }
+.pq-sub { display: block; margin-top: 4px; font-family: var(--font-text); font-size: 28px; line-height: 1; color: var(--yellow); }
 .pchoices { display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .pchoice { flex: 1; min-height: 66px; display: flex; align-items: center; gap: 10px; border: 4px solid #000; font-size: 28px; text-align: left; padding: 6px 12px; line-height: 1;
   box-shadow: inset -4px -4px 0 rgba(0,0,0,.3), inset 4px 4px 0 rgba(255,255,255,.15), 0 5px 0 #000; }
@@ -203,7 +204,8 @@ body.local-pad { font-size: 20px; min-height: 100vh; }
 #pixou-say img { width: 30px; height: 40px; flex: none; }
 #pixou-say.pop { animation: popIn .35s; }
 .tvq { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
-.tvq-cat { font-size: 18px; color: var(--cyan); }
+.tvq-cat { display: flex; flex-direction: column; gap: 2px; font-size: 20px; color: var(--cyan); background: var(--plum); border: 3px solid #000; padding: 6px 10px; }
+.tvq-sub { font-size: 28px; line-height: 1; color: var(--yellow); }
 .tvq-text { font-size: 25px; line-height: 1.1; background: rgba(0,0,0,.35); border: 3px solid #000; padding: 8px 10px; }
 .tvq-text.small { font-size: 20px; }
 .tvq-clues { margin: 0; padding-left: 26px; font-size: 21px; color: var(--yellow); }
