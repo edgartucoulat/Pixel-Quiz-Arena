@@ -35,11 +35,11 @@
    * question du Sprint ~21 s, QCM éclair ~21 s, Fourchette ~25 s, case mystère ~22 s,
    * tour de Thème Mystère ~30 s, passage au 4 à la suite ~40 s, Duel des champions ~2 min 20.
    * table / mystere : nombre visé de cases / tours, arrondi pour que chacun joue autant de fois ;
-   * quatre : nombre max de joueurs ; champions : bonnes réponses pour remporter le duel final. */
+   * champions : bonnes réponses pour remporter le duel final. */
   const LENGTH = {
-    court: { sprint: 6, eclair: 5, fourchette: 4, mystere: 3, table: 4, quatre: 3, champions: 3 },
-    normal: { sprint: 8, eclair: 7, fourchette: 6, mystere: 5, table: 6, quatre: 4, champions: 3 },
-    long: { sprint: 11, eclair: 10, fourchette: 8, mystere: 7, table: 9, quatre: 6, champions: 3 },
+    court: { sprint: 6, eclair: 5, fourchette: 4, mystere: 3, table: 4, champions: 3 },
+    normal: { sprint: 8, eclair: 7, fourchette: 6, mystere: 5, table: 6, champions: 3 },
+    long: { sprint: 11, eclair: 10, fourchette: 8, mystere: 7, table: 9, champions: 3 },
   };
   /** Tours par joueur pour approcher une cible tout en jouant chacun autant de fois. */
   const perPlayer = (target, players) => Math.max(1, Math.round(target / Math.max(1, players)));
@@ -54,6 +54,8 @@
   const GEL_QUATRE = 5000;
 
   const QUATRE_JACKPOT = 200;
+  /** 4 à la suite : temps d'affichage de la réponse du joueur sur la TV avant la question suivante (rendu au chrono). */
+  const QUATRE_SHOW = 1800;
 
   /* Anti-buzz au hasard : buzz raté = pénalité, faux départ = buzzer bloqué,
    * et peu de temps pour répondre une fois qu'on a buzzé. */
@@ -660,7 +662,7 @@
       else if (t === 'sprint') { this.round.total = L.sprint; this.round.cats = []; this.sprintNext(); }
       else if (t === 'mystere') { this.round.turns = []; const k = perPlayer(L.mystere, this.turnOrder().length); for (let i = 0; i < k; i++) this.round.turns.push(...this.turnOrder()); this.round.total = this.round.turns.length; this.mystereNext(); }
       else if (t === 'table') this.tableStart(Math.min(16, perPlayer(L.table, this.turnOrder(true).length) * this.turnOrder(true).length));
-      else if (t === 'quatre') this.quatreStart(L.quatre);
+      else if (t === 'quatre') this.quatreStart();
       else if (t === 'champions') this.championsStart(L.champions);
       else if (t === 'duel') this.duelStart();
       this.changed();
@@ -1342,9 +1344,9 @@
     }
 
     /* ---- 4 à la suite ---- */
-    quatreStart(n) {
+    quatreStart() {
       const r = this.round;
-      r.queue = this.ranking().slice(0, n).map((p) => p.id); // le 1er du classement choisit en premier
+      r.queue = this.ranking().map((p) => p.id); // tout le monde joue, le 1er du classement choisit en premier
       if (!r.queue.length) return this.endRound();
       r.total = r.queue.length;
       // Une liste de thèmes commune : un thème pris n'est plus disponible pour les suivants.
@@ -1423,7 +1425,9 @@
       const r = this.round, q = this.q;
       if (pid !== r.player || !r.run || r.run.done || q.answers[pid]) return;
       if (this.irl && forced == null) return; // en IRL, c'est le présentateur qui juge la réponse orale
-      q.answers[pid] = { value };
+      // Choix fait sur le téléphone (absent quand le présentateur juge une réponse orale).
+      const picked = forced == null && value !== '' && value != null && q.choices && q.choices[Number(value)] != null ? Number(value) : null;
+      q.answers[pid] = { value: picked != null ? picked : value };
       const ok = forced != null ? !!forced : this.evaluate(q, value);
       const p = this.players[pid];
       if (ok) {
@@ -1439,7 +1443,7 @@
         this.hooks.send(pid, { t: 'fx', fx: 'wrong' });
       }
       if (!ok) r.run.hadWrong = true;
-      r.run.last = { ok, answer: q.choices[q.correctIdx] };
+      r.run.last = { ok, answer: q.choices[q.correctIdx], picked, pickedText: picked != null ? q.choices[picked] : null, qid: q.id };
       if (r.run.streak >= 4) {
         r.run.won = true;
         // Le jackpot : 200 pts fixes.
@@ -1449,7 +1453,10 @@
         this.fx('streak', { pid, jackpot: true });
         return this.quatreEnd();
       }
-      this.after(700, () => this.phase === 'question' && this.quatreQuestion());
+      // On laisse la réponse affichée sur la TV pour que tout le monde la voie, sans la décompter du chrono.
+      const show = picked != null ? QUATRE_SHOW : 700;
+      if (this.timer) this.timer.end += show - 700;
+      this.after(show, () => this.phase === 'question' && this.quatreQuestion());
       this.changed();
     }
     quatreEnd() {

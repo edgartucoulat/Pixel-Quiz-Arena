@@ -392,7 +392,7 @@
       const d = q.data;
       return `<div class="q-head"><div class="cat"><span class="cat-name">${this.g.catIcon(d.categorie)} ${esc(d.categorie)}</span>${d.sous_theme ? `<span class="cat-sub">${esc(d.sous_theme)}</span>` : ''}</div>${diffBar(d.difficulte)}</div>`;
     }
-    choicesHTML(q, revealed, hidden = []) {
+    choicesHTML(q, revealed, hidden = [], picked = null) {
       if (!q.choices) return '';
       const n = q.choices.length;
       const total = q.dist ? q.dist.reduce((a, b) => a + b, 0) : 0;
@@ -400,7 +400,7 @@
         const isOk = i === q.correctIdx;
         const pct = revealed && q.dist && total ? Math.round((q.dist[i] / total) * 100) : null;
         const who = revealed ? Object.keys(q.answers).filter((pid) => q.answers[pid].value === i).map((pid) => this.g.players[pid]).filter(Boolean) : [];
-        return `<div class="choice c${i} ${revealed ? (isOk ? 'good' : 'bad') : ''} ${hidden.includes(i) ? 'hidden' : ''}" data-act="choice" data-i="${i}">
+        return `<div class="choice c${i} ${revealed ? (isOk ? 'good' : 'bad') : ''} ${i === picked ? 'picked' : ''} ${hidden.includes(i) ? 'hidden' : ''}" data-act="choice" data-i="${i}">
           <span class="letter">${n === 2 ? (i === 0 ? '✔' : '✖') : LETTERS[i]}</span><span class="ctext">${esc(c)}</span>
           ${pct != null ? `<span class="pctbar" style="width:${pct}%"></span><span class="pcttxt">${pct}%</span>` : ''}
           ${who.length ? `<span class="who">${who.map((p) => avatarImg(p, isOk ? 'happy' : 'sad', 'tiny')).join('')}</span>` : ''}
@@ -690,16 +690,21 @@
     quatreQ() {
       const g = this.g, q = g.q, r = g.round, p = g.players[r.player];
       const meter = Array.from({ length: 4 }, (_, i) => `<span class="${i < r.run.streak ? 'on' : ''}">${i + 1}</span>`).join('');
+      // Réponse du joueur à cette question : on montre son choix à tout le monde (et la bonne réponse s'il s'est trompé).
+      const last = r.run.last, cur = last && last.qid === q.id ? last : null;
+      let lastHTML = '';
+      if (cur && cur.pickedText != null) lastHTML = `<div class="q4-last ${cur.ok ? 'good' : 'bad'}">${esc(p.name)} répond « ${esc(cur.pickedText)} » : ${cur.ok ? '✔ Bonne réponse !' : '✖ Raté, c’était « ' + esc(cur.answer) + ' »'}</div>`;
+      else if (last) lastHTML = `<div class="q4-last ${last.ok ? 'good' : 'bad'}">${last.ok ? '✔ Bonne réponse !' : '✖ Raté : c’était « ' + esc(last.answer) + ' »'}</div>`;
       return {
         key: 'quatre' + q.id,
         html: `<div class="quatre">
           <div class="turn-banner" style="--pc:${p.color}">${avatarImg(p, 'idle', 'tiny')} ${esc(p.name)} · ${r.mystery ? '❓ ' : ''}${esc(r.cat)}</div>
           <div class="q4-meter" id="q4-meter"></div>
           <div class="q-text">${esc(q.data.question)}</div>
-          ${this.choicesHTML(q, false)}
+          <div class="q4-choices" id="q4-choices"></div>
           <div id="q4-last"></div>
         </div>`,
-        parts: { 'q4-meter': meter, 'q4-last': r.run.last ? `<div class="q4-last ${r.run.last.ok ? 'good' : 'bad'}">${r.run.last.ok ? '✔ Bonne réponse !' : '✖ Raté : c’était « ' + esc(r.run.last.answer) + ' »'}</div>` : '' },
+        parts: { 'q4-meter': meter, 'q4-choices': cur ? this.choicesHTML(q, true, [], cur.picked) : this.choicesHTML(q, false), 'q4-last': lastHTML },
       };
     }
     r_qresult() {

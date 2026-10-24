@@ -201,6 +201,8 @@ body[data-mode="irl"] #host-area { display: none; }
 .choice.good { outline: 6px solid var(--lime); box-shadow: 0 0 40px var(--lime); animation: pulse .6s 2; z-index: 1; }
 .choice.bad { filter: grayscale(.7) brightness(.55); }
 .choice.hidden { visibility: hidden; }
+.choice.picked { outline: 6px dashed #fff; outline-offset: -2px; z-index: 2; }
+.choice.picked.bad { filter: grayscale(.3) brightness(.8); }
 .pctbar { position: absolute; left: 0; bottom: 0; height: 8px; background: rgba(255,255,255,.85); }
 .pcttxt { margin-left: auto; font-family: var(--font-title); font-size: 16px; background: var(--ink); padding: 4px 6px; z-index: 1; }
 .who { position: absolute; right: 8px; top: 4px; display: flex; gap: 2px; }
@@ -333,6 +335,7 @@ body[data-mode="irl"] #host-area { display: none; }
 .q4-last { font-size: 30px; animation: popIn .3s; }
 .q4-last.good { color: var(--lime); } .q4-last.bad { color: var(--red2); }
 .quatre .q-text { font-size: 36px; padding: 10px; }
+.quatre .q4-choices { width: 100%; }
 .quatre .choice { min-height: 64px; }
 .center-card { text-align: center; animation: popIn .5s; }
 .cc-title { font-family: var(--font-title); font-size: 38px; color: var(--yellow); text-shadow: 4px 4px 0 var(--red); margin: 10px; }

@@ -76,7 +76,7 @@ Par défaut, l'émission enchaîne dans cet ordre :
 Toutes les manches durent à peu près le même temps : environ 2 min en partie courte,
 3 min en normale et 4 min 30 en longue. Les manches où l'on joue chacun son tour s'adaptent au
 nombre de joueurs : en partie normale, les Cases mystères comptent environ 6 cases (2 par joueur
-à 3 ou 4 joueurs, 1 seule à partir de 5) et le 4 à la suite se joue à 4 joueurs maximum.
+à 3 ou 4 joueurs, 1 seule à partir de 5). Au 4 à la suite, tous les joueurs passent, chacun son tour.
 
 Avant chaque manche, un écran explique la règle (environ 20 s, 5 s seulement quand l'écran
 plateau l'a déjà montrée lors d'une partie précédente) ; le bouton « Passer » ou
