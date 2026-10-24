@@ -59,10 +59,10 @@ Par défaut, l'émission enchaîne dans cet ordre :
    (facile, moyen, difficile, expert) restent cachés jusqu'au choix ; la case rapporte la valeur
    de sa question selon le barème. Avec des pièges (💣), des cases bonus (⭐ +100 pts) et des vols (🦹).
 3. 4️⃣ **Le 4 à la suite** : le 1er du classement choisit son thème en premier, puis le 2e, etc.
-   Un thème pris n'est plus disponible pour les suivants ; le « thème mystère » en tire un
-   au hasard. Il faut enchaîner 4 bonnes réponses d'affilée en 40 secondes : chaque bonne
+   Un thème pris n'est plus disponible pour les suivants ; le « thème mystère » est un
+   thème caché, absent de la liste, révélé une fois choisi. Il faut enchaîner 4 bonnes réponses d'affilée en 40 secondes : chaque bonne
    réponse vaut 50 pts, et réussir les 4 à la suite décroche le **jackpot** de 200 pts.
-4. 📏 **La Fourchette** : donne une seule valeur et vise pile. Les points dépendent du classement : le plus proche marque 200 pts, le 2e 100, le 3e 50, le 4e 25, les suivants 0. Ex æquo = même rang, mêmes points. Réponse pile = 500 pts (à la place des 200).
+4. 📏 **La Fourchette** : donne une seule valeur et vise pile. Les points dépendent du classement : le plus proche marque 100 pts, le 2e 50, le 3e 25, le 4e 10, les suivants 0. Ex æquo = même rang, mêmes points. Réponse pile = 200 pts (à la place des 100). On tape sa valeur dans une case vide : pas de curseur ni de valeur de départ qui orienterait la réponse.
 5. ⚔️ **Le Duel des champions** (toujours en dernier) : les 2 meilleurs du classement
    s'affrontent au buzzer à indices, les indices tombant un à un (le 1er vite, les 2e et 3e
    lentement, le dernier vite). Essais illimités, mais chacun son tour : après une erreur, on
@@ -78,7 +78,8 @@ Toutes les manches durent à peu près le même temps : environ 2 min en partie 
 nombre de joueurs : en partie normale, les Cases mystères comptent environ 6 cases (2 par joueur
 à 3 ou 4 joueurs, 1 seule à partir de 5) et le 4 à la suite se joue à 4 joueurs maximum.
 
-Avant chaque manche, un écran explique la règle (environ 20 s) ; le bouton « Passer » ou
+Avant chaque manche, un écran explique la règle (environ 20 s, 5 s seulement quand l'écran
+plateau l'a déjà montrée lors d'une partie précédente) ; le bouton « Passer » ou
 « ▶ Suivant » la saute si tout le monde la connaît déjà.
 
 En option dans le salon : 🎡 **Thème Mystère** (la roue choisit le thème, chacun choisit son
@@ -88,9 +89,8 @@ niveau de 1 à 10) et ⚡ **QCM éclair** (tout le monde répond en même temps,
 
 Toutes les questions suivent le même barème : **50 + 25 × difficulté**, soit 75 pts (difficulté 1)
 à 300 pts (difficulté 10). Sprint, Cases mystères, Thème Mystère et QCM éclair (+ jusqu’à 50 pts
-de rapidité) l’utilisent. Pas de multiplicateur : une série de bonnes réponses donne un petit
-bonus par réponse (🔥 +25 à la 3e, +50 à la 4e, +75 à partir de la 5e). À part : la Fourchette
-(200, 100, 50, 25 pts selon le rang, 500 si pile), le 4 à la suite (50 pts par réponse, jackpot de 200 pts) et le Duel des
+de rapidité) l’utilisent. Pas de multiplicateur ni de bonus de série. À part : la Fourchette
+(100, 50, 25, 10 pts selon le rang, 200 si pile), le 4 à la suite (50 pts par réponse, jackpot de 200 pts) et le Duel des
 champions (des étoiles, pas des points).
 
 ### Cartes « coup bas »
@@ -100,8 +100,8 @@ On n'en gagne pas d'autres en cours de partie. Option « 🃏 Coups bas » dans 
 
 | Carte | Effet |
 |---|---|
-| 🧊 Gel | Gèle le buzzer et les réponses d’un adversaire pendant 5 s |
-| 🪤 Question piégée | Tu choisis un adversaire et un thème : il reçoit une question de niveau moyen (difficulté 4 à 6) sur ce thème. Bonne réponse : +300 pts pour lui ; mauvaise réponse ou pas de réponse : −200 pts |
+| 🧊 Gel | Pas de cible à choisir : gèle le joueur en train de répondre seul (après son buzz, au Thème Mystère, aux Cases mystères…), qui ne peut plus répondre à la question, sans pénalité. Au 4 à la suite, il est bloqué 5 s pendant que son chrono tourne. Inutilisable quand tout le monde répond en même temps et pendant une Question piégée |
+| 🪤 Question piégée | Tu choisis un adversaire et un thème : il reçoit une question de niveau moyen (difficulté 4 à 6) sur ce thème. Bonne réponse : il te prend 100 pts ; mauvaise réponse ou pas de réponse : il t’en donne 100 |
 
 La Question piégée se joue juste après la question en cours (ou avant la manche suivante),
 puis l'émission reprend où elle en était. Elle ne peut pas être envoyée pendant le Duel des
@@ -317,7 +317,7 @@ Selon le type :
 |---|---|
 | `qcm` | `choix` : 4 propositions distinctes, dont la `reponse` |
 | `vf` | `reponse` : `"Vrai"` ou `"Faux"` |
-| `fourchette` | `reponse` numérique, `unite` (`"année"` pour une date, négatif = av. J.-C.), `tolerance` (écart encore compté « pile », plafonné à 2 % de la réponse), `bornes` : `[min, max]` du curseur |
+| `fourchette` | `reponse` numérique, `unite` (`"année"` pour une date, négatif = av. J.-C.), `tolerance` (écart encore compté « pile », plafonné à 2 % de la réponse), `bornes` : `[min, max]` plausibles (réponses des ordinateurs, bouton ± si négatif) |
 | `indices` | `indices` : 3 à 5 indices du plus dur au plus facile, `reponses_acceptees` |
 | `libre` | `reponses_acceptees` : variantes acceptées (les accents, articles et petites fautes sont tolérés automatiquement) |
 

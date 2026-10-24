@@ -237,16 +237,16 @@
         const res = q.results[pid], p = game.players[pid];
         if (!res || !p) return;
         if (q.trap) {
-          // Question piégée : on bascule entre +300 et −200.
-          const T = PQA.TRAP, pts = res.correct ? -T.loss : T.win;
-          p.score += pts - res.pts; res.correct = !res.correct; res.pts = pts; res.none = false;
+          // Question piégée : on bascule le transfert de points entre la cible et l'envoyeur.
+          const pts = res.correct ? -PQA.TRAP.transfer : PQA.TRAP.transfer;
+          game.trapTransfer(q, pts - res.pts); res.correct = !res.correct; res.pts = pts; res.none = false;
           PQA.sfx.select();
           return game.changed();
         }
         if (res.correct) { p.score -= res.pts; res.correct = false; res.pts = 0; }
         else {
           const base = r.type === 'mystere' ? PQA.pointsFor(r.level) : r.type === 'table' ? r.cellValue : PQA.pointsFor(q.data.difficulte);
-          p.score += base; res.correct = true; res.pts = base; res.bonus = 0;
+          p.score += base; res.correct = true; res.pts = base;
         }
         PQA.sfx.select();
         game.changed();

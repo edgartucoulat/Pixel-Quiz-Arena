@@ -30,6 +30,7 @@ body.play.shake { animation: pshake .35s; }
 #cards:empty { display: none; }
 .card-btn { flex: 1; background: var(--pink); border: 3px solid #000; padding: 6px; font-size: 24px; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: inset -3px -3px 0 rgba(0,0,0,.3), 0 4px 0 #000; animation: popIn .4s; }
 .card-btn span { font-size: 20px; }
+.card-btn:disabled { opacity: .35; filter: grayscale(1); animation: none; }
 
 /* Connexion */
 .join { display: flex; flex-direction: column; gap: 8px; max-width: 460px; width: 100%; margin: 0 auto; }
@@ -125,10 +126,7 @@ body[data-screen="choices"] .you-buzzed ~ * {}
 .pr-big { display: flex; align-items: baseline; justify-content: center; gap: 8px; font-size: 26px; }
 .pr-big input { width: 70%; font-family: var(--font-text); font-size: 44px; text-align: center; padding: 4px; border: 3px solid #000; background: var(--white); color: var(--ink); user-select: text; -webkit-user-select: text; }
 .pr-row label { font-family: var(--font-title); font-size: 10px; width: 46px; }
-.pr-row input[type=range] { flex: 1; height: 40px; accent-color: var(--yellow); }
 .pr-row input:not([type]) , .pr-row input[inputmode] { width: 110px; font-family: var(--font-text); font-size: 24px; padding: 4px; border: 3px solid #000; background: var(--white); color: var(--ink); user-select: text; -webkit-user-select: text; }
-.pr-fine { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-.pr-fine button { background: var(--g3); border: 3px solid #000; font-size: 20px; padding: 6px 0; }
 .pr-sum { font-size: 28px; text-align: center; }
 .pr-sum b { color: var(--yellow); }
 

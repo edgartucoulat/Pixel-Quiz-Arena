@@ -282,8 +282,7 @@
         const fin = g.round && g.round.type === 'champions' && g.round.finalists;
         if (fin && fin.includes(p.id)) { cls += ' turn'; badge += '<i>⚔️</i>'; }
         if (g.champion === p.id) badge += '<i>👑</i>';
-        if (g.isFrozen(p)) badge += '<i>🧊</i>';
-        if (p.streak >= 3) badge += `<i class="fire">🔥+${g.streakBonus(p)}</i>`;
+        if (g.isFrozen(p) || g.frozenOnQ(p.id)) badge += '<i>🧊</i>';
         if (p.cards.length && g.phase !== 'lobby') badge += `<i title="${p.cards.map((c) => PQA.CARDS[c] ? PQA.CARDS[c].name : c).join(', ')}">${p.cards.map((c) => PQA.CARDS[c] ? PQA.CARDS[c].icon : '🃏').join('')}</i>`;
         if (p.bot) badge += `<i title="Ordinateur ${PQA.BOT_LEVELS[p.level].name}">🤖${PQA.BOT_LEVELS[p.level].icon}</i>`;
         const team = g.settings.teams ? `<span class="pod-team" style="background:${PQA.PALETTE.team[p.team]}"></span>` : '';
@@ -420,7 +419,7 @@
         const txt = libre && a && a.text ? `« ${esc(a.text)} »` : libre && r.wrongAnswer ? `« ${esc(r.wrongAnswer)} »` : '';
         const ov = libre && q.kind === 'single' && a && !g.irl ? ` data-act="override" data-pid="${p.id}" title="Cliquer pour corriger la validation"` : '';
         return `<div class="res ${r.correct ? 'good' : 'bad'}" style="--pc:${p.color}"${ov}>${avatarImg(p, r.correct ? 'happy' : 'sad', 'tiny')}<b>${esc(p.name)}</b> ${txt}
-          <span class="rpts">${r.hit ? '+1 ★' : r.trap && !r.correct ? r.pts : r.correct ? '+' + r.pts + (r.bonus ? ` <small>🔥+${r.bonus}</small>` : '') : r.none ? '—' : '✖'}</span></div>`;
+          <span class="rpts">${r.hit ? '+1 ★' : r.trap && !r.correct ? r.pts : r.correct ? '+' + r.pts : r.none ? '—' : '✖'}</span></div>`;
       }).join('')}</div>`;
     }
 
@@ -437,7 +436,7 @@
       } else if (d.type === 'libre') {
         body = `<div class="q-libre">✍️ Réponse libre${g.irl ? ' : réponds à voix haute !' : ' : tape ta réponse sur ton téléphone'}</div>`;
       } else body = this.choicesHTML(q, false) + (g.irl && q.kind === 'single' ? '<div class="q-libre">🎤 Réponds à voix haute !</div>' : '');
-      const extra = q.trap ? `<div class="banner-pts">🪤 Question piégée par ${esc(g.name(q.trap.from))} · ${esc(q.trap.cat)} · +${PQA.TRAP.win} / −${PQA.TRAP.loss} pts</div>` : r.type === 'mystere' ? `<div class="banner-pts">Niveau ${r.level} · ${PQA.pointsFor(r.level)} pts</div>` : r.type === 'table' ? `<div class="banner-pts">${r.cell.special === 'bonus' ? '⭐ Bonus · ' : r.cell.special === 'vol' ? '🦹 Vol sur ' + esc(g.name(r.victim)) + ' · ' : ''}Difficulté ${d.difficulte} · ${g.round.cellValue} pts</div>` : '';
+      const extra = q.trap ? `<div class="banner-pts">🪤 Question piégée par ${esc(g.name(q.trap.from))} · ${esc(q.trap.cat)} · ${PQA.TRAP.transfer} pts en jeu entre eux</div>` : r.type === 'mystere' ? `<div class="banner-pts">Niveau ${r.level} · ${PQA.pointsFor(r.level)} pts</div>` : r.type === 'table' ? `<div class="banner-pts">${r.cell.special === 'bonus' ? '⭐ Bonus · ' : r.cell.special === 'vol' ? '🦹 Vol sur ' + esc(g.name(r.victim)) + ' · ' : ''}Difficulté ${d.difficulte} · ${g.round.cellValue} pts</div>` : '';
       return {
         key: 'q' + q.id,
         html: `<div class="question ${d.type}">
@@ -670,7 +669,7 @@
         html: `<div class="center-card">${to ? avatarImg(to, 'sad', 'huge') : ''}
           <div class="cc-title">🪤 QUESTION PIÉGÉE !</div>
           <div class="cc-sub">${from ? `<b style="color:${from.color}">${esc(from.name)}</b>` : '?'} piège ${to ? `<b style="color:${to.color}">${esc(to.name)}</b>` : '?'} en ${g.catIcon(t.cat)} ${esc(t.cat)}</div>
-          <div class="cc-sub">Niveau moyen · bonne réponse <b>+${PQA.TRAP.win}</b> · erreur <b>−${PQA.TRAP.loss}</b></div></div>`,
+          <div class="cc-sub">Niveau moyen · bonne réponse : <b>${PQA.TRAP.transfer} pts pris à ${esc(from ? from.name : '')}</b> · erreur : <b>${PQA.TRAP.transfer} pts donnés à ${esc(from ? from.name : '')}</b></div></div>`,
       };
     }
     r_target() {
@@ -860,7 +859,7 @@
           break;
         case 'points': if (p && d.pts) this.popAt(p.id, (d.pts > 0 ? '+' : '') + d.pts, d.pts > 0 ? '#a7f070' : '#e43b44'); break;
         case 'pop': if (p && d.text) this.popAt(p.id, d.text, '#ffcd75'); break;
-        case 'streak': sfx.fire(); sfx.wow(); this.bigText(d.jackpot ? '4 À LA SUITE !' : `SÉRIE 🔥 +${d.bonus} / réponse`, p ? p.color : '#ef7d57'); this.shake(2); this.audience.cheer(1); break;
+        case 'streak': sfx.fire(); sfx.wow(); this.bigText('4 À LA SUITE !', p ? p.color : '#ef7d57'); this.shake(2); this.audience.cheer(1); break;
         case 'card': { sfx.card(); const t = g.players[d.target]; this.bigText(`${PQA.CARDS[d.card].icon} ${p ? p.name : ''} ${t ? '→ ' + t.name : ''}`, '#b55088', PQA.CARDS[d.card].name.toUpperCase() + (d.cat ? ' · ' + d.cat : '')); if (d.card === 'gel') sfx.freeze(); break; }
         case 'trapIntro': music.sting('transition'); sfx.whoosh(); sfx.ooh(0.6); this.shake(1); break;
         case 'friendCall': sfx.card(); this.audience.cheer(0.8); { const f = g.players[d.friend]; if (f) this.bigText('📞 ' + f.name, f.color, 'APPEL À UN AMI'); } break;

@@ -55,17 +55,82 @@ test('only Gel and Question piégée exist', () => {
   eq(Object.keys(PQA.CARDS), ['gel', 'piege']);
 });
 
-test('each card is single use, and nobody earns new ones by answering', () => {
-  const { g } = game();
+/** Sprint lancé, lecture terminée, b a buzzé. */
+function sprintBuzzed() {
+  const env = game();
+  const { g, clock } = env;
   g.start();
-  g.useCard('a', 'gel', 'b');
-  assert.ok(g.isFrozen(g.players.b));
-  g.players.b.frozenUntil = 0;
-  g.useCard('a', 'gel', 'b');
-  assert.equal(g.isFrozen(g.players.b), 0);
+  g.beginRound();
+  clock.t += 10000;
+  g.buzz('b'); g.decideBuzz(g.q);
+  return env;
+}
+
+test('each card is single use, and nobody earns new ones by answering', () => {
+  const { g } = sprintBuzzed();
+  g.useCard('a', 'gel');
   eq(g.players.a.cards, ['piege']);
+  g.buzz('c'); g.decideBuzz(g.q);
+  g.useCard('a', 'gel');
+  assert.equal(g.q.buzz.current, 'c', 'plus de Gel en main');
   for (let i = 0; i < 8; i++) g.scoreCorrect(g.players.a, 100);
   eq(g.players.a.cards, ['piege']);
+});
+
+test('no streak bonus: each right answer scores only its base points', () => {
+  const { g } = game();
+  g.start();
+  for (let i = 0; i < 6; i++) g.scoreCorrect(g.players.a, 100);
+  assert.equal(g.players.a.score, 600);
+});
+
+test('Gel freezes whoever is answering, with no target to choose', () => {
+  const { g } = sprintBuzzed();
+  assert.equal(g.viewFor('a').gel.name, 'B');
+  assert.equal(g.viewFor('b').gel, null, 'on ne se gèle pas soi-même');
+  g.useCard('a', 'gel', 'c'); // la cible envoyée est ignorée
+  assert.equal(g.frozenOnQ('c'), false);
+  assert.ok(g.frozenOnQ('b'));
+  assert.equal(g.q.buzz.current, null, 'b perd la main');
+  assert.equal(g.players.b.score, 0, 'sans pénalité');
+  assert.ok(g.q.buzz.open, 'le buzzer se rouvre pour les autres');
+  g.buzz('b'); g.decideBuzz(g.q);
+  assert.notEqual(g.q.buzz.current, 'b', 'b ne peut plus buzzer sur cette question');
+  g.answer('b', g.q.data.reponse);
+  assert.equal(g.players.b.score, 0);
+  assert.equal(g.viewFor('b').title, '🧊 Gelé !');
+});
+
+test('Gel cannot be played when nobody answers alone', () => {
+  const { g } = game();
+  g.start();
+  g.beginRound(); // Sprint, personne n'a buzzé
+  assert.equal(g.viewFor('a').gel, null);
+  g.useCard('a', 'gel', 'b');
+  eq(g.players.a.cards, ['gel', 'piege'], 'la carte reste en main');
+});
+
+test('Gel on a single answerer ends their question; at the 4 à la suite it blocks 5 s', () => {
+  const { g, clock } = game();
+  g.start();
+  g.round = { type: 'mystere', n: 1, player: 'b', level: 5 };
+  g.makeQ(BANK[0], 'single', ['b']);
+  g.useCard('a', 'gel');
+  g.answer('b', BANK[0].reponse);
+  assert.equal(g.q.answers.b, undefined, 'b ne peut plus répondre');
+  clock.t += 2000; g.tick();
+  assert.equal(g.phase, 'reveal');
+  assert.equal(g.q.results.b.correct, false);
+
+  g.round = { type: 'quatre', n: 1, player: 'c', run: { streak: 0, best: 0, correct: 0, done: false, last: null } };
+  g.makeQ({ id: 'v1', type: 'vf', reponse: 'Vrai', question: '?', difficulte: 4, categorie: 'Sport' }, 'quatre', ['c']);
+  g.useCard('b', 'gel');
+  assert.ok(g.isFrozen(g.players.c));
+  g.answer('c', 0);
+  assert.equal(g.round.run.correct, 0, 'bloqué pendant le gel');
+  clock.t += 5001; g.tick();
+  g.answer('c', 0);
+  assert.equal(g.round.run.correct, 1, 'il répond à nouveau après 5 s');
 });
 
 test('Question piégée: needs a target other than yourself and a real theme', () => {
@@ -96,14 +161,15 @@ test('Question piégée is played after the current question, then the round goe
   assert.equal(g.q.data.categorie, 'Histoire');
   assert.ok(Math.abs(g.q.data.difficulte - 5) <= 1, 'niveau moyen');
   g.answer('b', g.q.data.reponse);
-  assert.equal(g.players.b.score, 300);
+  assert.equal(g.players.b.score, 100, 'la cible prend 100 pts…');
+  assert.equal(g.players.a.score, -100, '… à celui qui a envoyé le piège');
   g.afterReveal();
   assert.equal(g.round.type, 'sprint');
   assert.equal(g.round.n, before + 1, 'le Sprint reprend à la question suivante');
   assert.equal(g.q.kind, 'buzz');
 });
 
-test('Question piégée: −200 for a wrong answer or no answer', () => {
+test('Question piégée: a wrong answer or no answer gives 100 pts to the sender', () => {
   const { g } = game();
   g.start();
   g.beginRound();
@@ -113,12 +179,14 @@ test('Question piégée: −200 for a wrong answer or no answer', () => {
   g.afterReveal();
   g.advance();
   g.answer('b', 'pas du tout');
-  assert.equal(g.players.b.score, -200);
+  assert.equal(g.players.b.score, -100);
+  assert.equal(g.players.a.score, 100);
   g.afterReveal();
   assert.equal(g.phase, 'trap', 'le deuxième piège suit');
   g.advance();
   g.reveal(); // temps écoulé sans réponse
-  assert.equal(g.players.d.score, -200);
+  assert.equal(g.players.d.score, -100);
+  assert.equal(g.players.c.score, 100);
   g.afterReveal();
   assert.equal(g.round.type, 'sprint');
 });

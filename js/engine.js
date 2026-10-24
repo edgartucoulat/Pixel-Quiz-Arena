@@ -48,8 +48,10 @@
     eclair: 15000, fourchette: 30000, single: 25000, singleLibre: 35000,
     level: 20000, buzzAnswer: 15000, buzzAnswerIRL: 20000, clues: [5000, 11000, 11000], afterLastClue: 6000,
     sprint: 12000, quatre: 40000, board: 25000, target: 15000, theme: 20000,
-    duelBuzz: 15000, duelAnswer: 8000, intro: 20000,
+    duelBuzz: 15000, duelAnswer: 8000, intro: 20000, introSeen: 5000,
   };
+  /** Gel pendant le 4 à la suite : le joueur est bloqué 5 s (son chrono continue). */
+  const GEL_QUATRE = 5000;
 
   const QUATRE_JACKPOT = 200;
 
@@ -69,16 +71,17 @@
   PQA.pointsFor = pointsFor;
   /** Buzz raté : la moitié de la valeur de la question (arrondie à 25). */
   const buzzPenalty = (d) => Math.round(pointsFor(d) / 50) * 25;
-  /** Bonus de série (remplace les multiplicateurs, qui créaient de trop gros écarts). */
-  const streakBonus = (streak) => (streak >= 5 ? 75 : streak === 4 ? 50 : streak === 3 ? 25 : 0);
   /* Cases mystères : niveau caché de la case → difficulté visée. */
   const CELL_LEVELS = { 1: { name: 'Facile', diff: 3 }, 2: { name: 'Moyen', diff: 5 }, 3: { name: 'Difficile', diff: 7 }, 4: { name: 'Expert', diff: 9 } };
   PQA.CELL_LEVELS = CELL_LEVELS;
   const CELL_BONUS = 100; // case étoile : bonus si bonne réponse
-  const FOURCHETTE_RANK_PTS = [200, 100, 50, 25]; // Fourchette : points selon le rang (1er, 2e...)
-  const FOURCHETTE_PILE = 500; // Fourchette : points d'une réponse pile (à la place des points de rang)
-  /* Carte Question piégée : une question de niveau moyen, sur le thème choisi par l'envoyeur. */
-  const TRAP = { win: 300, loss: 200, diff: 5 };
+  const FOURCHETTE_RANK_PTS = [100, 50, 25, 10]; // Fourchette : points selon le rang (1er, 2e...)
+  const FOURCHETTE_PILE = 200; // Fourchette : points d'une réponse pile (à la place des points de rang)
+  PQA.FOURCHETTE = { ranks: FOURCHETTE_RANK_PTS, pile: FOURCHETTE_PILE };
+  /* Carte Question piégée : une question de niveau moyen, sur le thème choisi par l'envoyeur.
+   * Les points passent d'un joueur à l'autre : bonne réponse = la cible prend 100 pts à l'envoyeur,
+   * erreur (ou pas de réponse) = la cible donne 100 pts à l'envoyeur. */
+  const TRAP = { transfer: 100, diff: 5 };
   PQA.TRAP = TRAP;
   /** Cartes en main au début de la partie : une de chaque, à usage unique. */
   const START_CARDS = ['gel', 'piege'];
@@ -266,6 +269,15 @@
       try { localStorage.setItem('pqa_seen', JSON.stringify(Array.from(this.seen).slice(-5000))); } catch (e) {}
     }
     resetSeen() { this.seen = new Set(); this.saveSeen(); }
+    /** L'écran de règle de cette manche a-t-il déjà été montré sur cet appareil ? (le note au passage) */
+    rulesSeen(type) {
+      try {
+        const list = JSON.parse(localStorage.getItem('pqa_rules_seen') || '[]');
+        if (list.includes(type)) return true;
+        localStorage.setItem('pqa_rules_seen', JSON.stringify(list.concat(type)));
+      } catch (e) {}
+      return false;
+    }
     /** Historique envoyé par le téléphone d'un joueur à sa connexion (parties jouées ailleurs comprises). */
     notePlayerSeen(pid, ids) {
       if (!Array.isArray(ids)) return;
@@ -458,7 +470,7 @@
     botKey(p) {
       const q = this.q, r = this.round, b = q && q.buzz;
       return [this.phase, q && q.id, r && r.n, r && r.player, q && q.clue, b && b.current, b && b.proxy, b && b.open, b && b.locked.join(),
-        b && b.readyAt && now() >= b.readyAt, q && q.answers[p.id] ? 1 : 0].join('|');
+        b && b.readyAt && now() >= b.readyAt, q && q.answers[p.id] ? 1 : 0, this.isFrozen(p) ? 1 : 0, q && q.frozen ? q.frozen.join() : ''].join('|');
     }
     botTick() {
       if (this.phase === 'lobby' || this.phase === 'end') return;
@@ -506,25 +518,17 @@
     }
 
     /* ======================= Points ============================== */
-    /** Bonus de série en cours (affiché sur les podiums et la manette). */
-    streakBonus(p) { return streakBonus(p.streak); }
-
-    /** Bonne réponse : bonus de série. Renvoie les points marqués. */
+    /** Bonne réponse : pas de bonus de série (la série ne sert plus qu'aux statistiques). Renvoie les points marqués. */
     scoreCorrect(p, base, opts = {}) {
       p.streak++;
       p.bestStreak = Math.max(p.bestStreak, p.streak);
       p.stats.correct++;
       if (opts.diff >= 8) p.stats.hardCorrect++;
-      const bonus = opts.noCombo || base <= 0 ? 0 : streakBonus(p.streak);
-      const pts = Math.round(base + bonus);
+      const pts = Math.round(base);
       p.score += pts;
       p.stats.points += pts;
-      if (!opts.silentStreak) {
-        if (p.streak === 3) { this.fx('streak', { pid: p.id, bonus: 25 }); this.say('streak3', { name: p.name }, 'surprised'); }
-        if (p.streak === 5) { this.fx('streak', { pid: p.id, bonus: 75 }); this.say('streak5', { name: p.name, n: p.streak }, 'surprised'); }
-      }
       this.fx('points', { pid: p.id, pts });
-      return { pts, bonus };
+      return { pts, bonus: 0 };
     }
     /** Mauvaise réponse (ou pas de réponse) : fin de série. */
     scoreWrong(p) {
@@ -544,12 +548,42 @@
       if (card === 'piege') return !(this.round && this.round.type === 'champions');
       return true;
     }
+    /**
+     * Joueur que le Gel viserait maintenant : celui qui est en train de répondre seul
+     * (buzz gagné, Thème Mystère, Cases mystères, 4 à la suite). Personne quand tout le monde
+     * répond en même temps, ni pendant une Question piégée.
+     */
+    gelTarget() {
+      const q = this.q, r = this.round;
+      if (this.phase !== 'question' || !q || q.revealed || q.trap || q.pending) return null;
+      let pid = null;
+      if (q.kind === 'buzz') pid = q.buzz.current && !q.answers[q.buzz.current] ? q.buzz.proxy || q.buzz.current : null;
+      else if (q.kind === 'single') pid = !q.answers[q.answerers[0]] ? q.answerers[0] : null;
+      else if (q.kind === 'quatre') pid = r.run && !r.run.done ? r.player : null;
+      const p = pid && this.players[pid];
+      return p && !this.isFrozen(p) && !this.frozenOnQ(p.id) ? p : null;
+    }
+    canGel(pid) {
+      const t = this.gelTarget();
+      return !!t && t.id !== pid && this.canPlayCard('gel');
+    }
+    /** Gel : le joueur en train de répondre ne peut plus répondre à la question (4 à la suite : bloqué 5 s). */
+    gel(target) {
+      const q = this.q;
+      this.hooks.send(target.id, { t: 'fx', fx: 'frozen' });
+      if (q.kind === 'quatre') { target.frozenUntil = now() + GEL_QUATRE; return; }
+      q.frozen = (q.frozen || []).concat(target.id);
+      // Gelé après avoir buzzé : il perd la main (sans pénalité), le buzzer se rouvre pour les autres.
+      if (q.kind === 'buzz') this.resolveBuzz(q.buzz.current, false, false, true);
+      else this.after(1500, () => this.q === q && this.phase === 'question' && this.reveal());
+    }
     useCard(pid, card, targetId, theme) {
       const p = this.players[pid];
       if (!p || !PQA.CARDS[card] || !this.canPlayCard(card)) return;
       const i = p.cards.indexOf(card);
       if (i < 0) return;
-      const target = this.players[targetId];
+      // Le Gel vise toujours le joueur en train de répondre : pas de choix de cible.
+      const target = card === 'gel' ? (this.canGel(pid) ? this.gelTarget() : null) : this.players[targetId];
       if (!target || target.id === pid || target.spectator) return;
       if (card === 'piege') {
         const cat = this.categories.find((c) => c.name === theme);
@@ -558,8 +592,7 @@
         this.fx('card', { pid, target: target.id, card, cat: cat.name });
         this.say('card_piege', { name: p.name, target: target.name, cat: cat.name }, 'smug');
       } else if (card === 'gel') {
-        target.frozenUntil = now() + 5000;
-        this.hooks.send(target.id, { t: 'fx', fx: 'frozen' });
+        this.gel(target);
         this.fx('card', { pid, target: target.id, card });
         this.say('card_gel', { name: p.name, target: target.name }, 'smug');
       }
@@ -568,6 +601,8 @@
       this.changed();
     }
     isFrozen(p) { return p.frozenUntil && now() < p.frozenUntil; }
+    /** Gelé sur la question en cours : il ne peut plus y répondre. */
+    frozenOnQ(pid, q = this.q) { return !!(q && q.frozen && q.frozen.includes(pid)); }
 
     /* ======================= Déroulé ============================== */
     start() {
@@ -608,7 +643,10 @@
       this.fx('roundIntro', { type });
       this.say('round_' + type, { name: leader ? leader.name : '' }, 'happy');
       // Le temps de lire la règle ; « Passer » (ou Suivant) lance la manche tout de suite.
-      if (this.auto) this.startTimer(TIMES.intro, () => this.beginRound());
+      // Règle déjà vue sur cet appareil : 5 s suffisent.
+      const seen = this.rulesSeen(type);
+      this.round.rulesSeen = seen;
+      if (this.auto) this.startTimer(seen ? TIMES.introSeen : TIMES.intro, () => this.beginRound());
       this.changed();
     }
 
@@ -709,7 +747,7 @@
     answer(pid, value) {
       const q = this.q, p = this.players[pid];
       if (!q || !p || this.phase !== 'question') return;
-      if (this.isFrozen(p)) return this.hooks.send(pid, { t: 'fx', fx: 'frozen' });
+      if (this.isFrozen(p) || this.frozenOnQ(pid)) return this.hooks.send(pid, { t: 'fx', fx: 'frozen' });
       if (q.kind === 'buzz') return this.buzzAnswer(pid, value);
       if (q.kind === 'quatre') return this.quatreAnswer(pid, value);
       if (!q.answerers.includes(pid) || q.answers[pid]) return;
@@ -785,7 +823,7 @@
               res[pid] = { correct: true, pts: stolen, stolen: true };
             } else {
               const r = this.scoreCorrect(p, base, { diff: d.difficulte });
-              res[pid] = { correct: true, pts: r.pts, bonus: r.bonus };
+              res[pid] = { correct: true, pts: r.pts };
             }
           } else {
             this.scoreWrong(p);
@@ -887,9 +925,9 @@
 
     /**
      * Fourchette : chacun donne UNE valeur et doit viser pile.
-     * Points au classement : le plus proche 200, le 2e 100, le 3e 50, le 4e 25, au-delà 0 (= raté).
-     * Ex æquo : même rang, mêmes points (deux 1ers à 200, le suivant est 3e).
-     * Pile (écart ≤ tolérance, plafonnée à 2 % de la réponse) : 500 fixes au lieu des 200, et compte comme écart nul.
+     * Points au classement : le plus proche 100, le 2e 50, le 3e 25, le 4e 10, au-delà 0 (= raté).
+     * Ex æquo : même rang, mêmes points (deux 1ers à 100, le suivant est 3e).
+     * Pile (écart ≤ tolérance, plafonnée à 2 % de la réponse) : 200 fixes au lieu des 100, et compte comme écart nul.
      */
     scoreFourchette(q) {
       const d = q.data;
@@ -912,7 +950,7 @@
         if (!base) { this.scoreWrong(p); q.results[it.pid] = { correct: false, pts: 0, rank, gap: it.gap }; return; }
         if (rank === 1) p.stats.fourchette++;
         const r = this.scoreCorrect(p, base, { diff: d.difficulte });
-        q.results[it.pid] = { correct: true, pts: r.pts, rank, exact: it.exact, gap: it.gap, bonus: r.bonus };
+        q.results[it.pid] = { correct: true, pts: r.pts, rank, exact: it.exact, gap: it.gap };
       });
       this.fx('drumroll');
     }
@@ -951,21 +989,24 @@
       this.fx('question');
       this.changed();
     }
-    /** +300 si bonne réponse, −200 sinon (pas de réponse comprise). */
+    /** Bonne réponse : la cible prend 100 pts à l'envoyeur. Sinon (pas de réponse comprise) : elle lui en donne 100. */
     scoreTrap(q) {
       const pid = q.answerers[0], p = this.players[pid];
       if (!p) return;
       const a = q.answers[pid];
       const ok = !!a && (q.forced && pid in q.forced ? q.forced[pid] : this.evaluate(q, a.value));
       if (ok) {
-        const r = this.scoreCorrect(p, TRAP.win, { noCombo: true, diff: q.data.difficulte });
-        q.results[pid] = { correct: true, pts: r.pts, trap: true };
-      } else {
-        this.scoreWrong(p);
-        p.score -= TRAP.loss;
-        this.fx('points', { pid, pts: -TRAP.loss });
-        q.results[pid] = { correct: false, pts: -TRAP.loss, none: !a, trap: true };
-      }
+        p.streak++; p.bestStreak = Math.max(p.bestStreak, p.streak); p.stats.correct++;
+      } else this.scoreWrong(p);
+      const pts = ok ? TRAP.transfer : -TRAP.transfer;
+      q.results[pid] = { correct: ok, pts, none: !a, trap: true };
+      this.trapTransfer(q, pts);
+    }
+    /** Points de la Question piégée : ce que gagne la cible, l'envoyeur le perd (et inversement). */
+    trapTransfer(q, pts) {
+      const p = this.players[q.answerers[0]], from = this.players[q.trap.from];
+      if (p) { p.score += pts; this.fx('points', { pid: p.id, pts }); }
+      if (from) { from.score -= pts; this.fx('points', { pid: from.id, pts: -pts }); }
     }
     trapDone() {
       const next = this.trapNext;
@@ -1020,7 +1061,7 @@
       if (!q || q.kind !== 'buzz' || q.revealed || !q.data.indices) return;
       if (q.buzz.current) return;
       if (q.clue < q.data.indices.length - 1) { q.clue++; this.fx('clue'); }
-      if (this.round.type === 'champions') q.buzz.locked = []; // nouvel indice : tout le monde peut retenter
+      if (this.round.type === 'champions') q.buzz.locked = (q.frozen || []).slice(); // nouvel indice : tout le monde peut retenter (sauf un joueur gelé)
       this.scheduleClue(q);
       this.changed();
     }
@@ -1032,7 +1073,7 @@
       const q = this.q, p = this.players[pid];
       if (!q || !p || q.kind !== 'buzz' || this.phase !== 'question' || q.revealed) return;
       if (!q.buzz.open || q.buzz.locked.includes(pid) || !q.answerers.includes(pid)) return;
-      if (this.isFrozen(p)) return this.hooks.send(pid, { t: 'fx', fx: 'frozen' });
+      if (this.isFrozen(p) || this.frozenOnQ(pid)) return this.hooks.send(pid, { t: 'fx', fx: 'frozen' });
       if (p.buzzBlockedUntil && now() < p.buzzBlockedUntil) return;
       // Faux départ : buzz avant la fin de la lecture de la question.
       if (q.buzz.readyAt && now() < q.buzz.readyAt) {
@@ -1083,7 +1124,7 @@
       if (this.irl && q.typed) { q.pending = { pid: owner, text: q.answers[owner].text }; this.changed(); return; }
       this.resolveBuzz(owner, this.evaluate(q, value));
     }
-    resolveBuzz(pid, ok, timeout) {
+    resolveBuzz(pid, ok, timeout, frozen) {
       const q = this.q;
       if (!q || q.buzz.current !== pid || q.revealed) return;
       const p = this.players[pid];
@@ -1094,19 +1135,23 @@
         if (this.round.type === 'duel') return this.duelHit(pid);
         if (this.round.type === 'champions') return this.championsHit(pid);
         const r = this.scoreCorrect(p, pointsFor(q.data.difficulte), { diff: q.data.difficulte });
-        q.results[pid] = { correct: true, pts: r.pts, bonus: r.bonus };
+        q.results[pid] = { correct: true, pts: r.pts };
         this.say('correct', { name: p.name, pts: r.pts }, 'happy');
         return this.reveal();
       }
       // Erreur : pénalité, joueur bloqué, le buzzer se rouvre pour les autres.
+      // Gelé : pas de pénalité, mais il ne peut plus répondre à cette question.
       this.scoreWrong(p);
-      p.stats.wrongBuzz++;
+      if (!frozen) p.stats.wrongBuzz++;
       // Duel des champions : essais illimités, mais chacun son tour (seul le dernier à s'être trompé attend).
-      if (this.round.type === 'champions') q.buzz.locked = [pid];
+      if (this.round.type === 'champions' && !frozen) q.buzz.locked = [pid];
       else q.buzz.locked.push(pid);
+      if (frozen) q.frozen = (q.frozen || []).concat(pid);
       const penalty = buzzPenalty(q.data.difficulte);
       let pts = -penalty;
-      if (this.round.type === 'duel') {
+      if (frozen) {
+        pts = 0;
+      } else if (this.round.type === 'duel') {
         pts = -BUZZ.duelPenalty;
         this.round.hp[pid] = Math.max(0, this.round.hp[pid] - BUZZ.duelPenalty);
       } else if (this.round.type === 'champions') {
@@ -1115,12 +1160,14 @@
         p.score -= penalty;
       }
       if (pts) this.fx('points', { pid, pts });
-      q.results[pid] = { correct: false, pts, wrongAnswer: q.answers[pid] && q.answers[pid].text, timeout: !!timeout };
+      q.results[pid] = { correct: false, pts, wrongAnswer: q.answers[pid] && q.answers[pid].text, timeout: !!timeout, frozen: !!frozen };
       delete q.answers[pid];
-      this.fx('wrong', { pid });
-      this.hooks.send(pid, { t: 'fx', fx: 'wrong' });
-      if (!this.maybeRoast([{ pid, kind: timeout ? 'timeout' : 'wrong' }], q))
-        this.say(timeout ? 'timeout' : 'wrong', { name: p.name }, 'sad');
+      if (!frozen) {
+        this.fx('wrong', { pid });
+        this.hooks.send(pid, { t: 'fx', fx: 'wrong' });
+        if (!this.maybeRoast([{ pid, kind: timeout ? 'timeout' : 'wrong' }], q))
+          this.say(timeout ? 'timeout' : 'wrong', { name: p.name }, 'sad');
+      }
       const remaining = q.answerers.filter((id) => !q.buzz.locked.includes(id) && this.players[id] && (this.players[id].connected || this.players[id].local));
       if (!remaining.length) { this.after(1200, () => this.reveal()); this.changed(); return; }
       q.buzz.open = true;
@@ -1303,8 +1350,10 @@
       // Une liste de thèmes commune : un thème pris n'est plus disponible pour les suivants.
       const types = ['qcm', 'vf'];
       const cats = PQA.shuffle(this.categories.map((c) => c.name).filter((c) => this.countAvailable(types, c) >= 8));
-      r.themes = cats.slice(0, clamp(r.queue.length + 2, 4, 9)).map((c) => ({ name: c, icon: this.catIcon(c), by: null }));
-      r.spare = cats.slice(r.themes.length); // réserve du thème mystère
+      // On garde au moins un thème hors de la liste : le thème mystère est caché, jamais un des thèmes affichés.
+      const shown = Math.max(1, Math.min(clamp(r.queue.length + 2, 4, 9), cats.length - 1));
+      r.themes = cats.slice(0, shown).map((c) => ({ name: c, icon: this.catIcon(c), by: null }));
+      r.spare = cats.slice(shown); // thèmes cachés : le premier est le thème mystère, le suivant le remplace une fois joué
       this.quatreNextPlayer(true);
     }
     quatreNextPlayer(first) {
@@ -1331,17 +1380,17 @@
       this.startTimer(this.chooseTime(TIMES.theme), () => this.quatreTheme(r.player, 'mystere'));
       this.changed();
     }
-    /** Choix du thème : un index de la liste, ou 'mystere' (thème libre tiré au hasard et révélé après). */
+    /** Choix du thème : un index de la liste, ou 'mystere' (thème caché, absent de la liste, révélé après le choix). */
     quatreTheme(pid, idx) {
       const r = this.round;
       if (this.phase !== 'qpick' || pid !== r.player) return;
       let theme;
       if (idx === 'mystere' || idx === -1) {
-        const pool = r.themes.filter((t) => !t.by).map((t) => t.name).concat(r.spare);
-        if (!pool.length) return;
-        const name = pickOne(pool);
+        // Plus aucun thème caché (très peu de thèmes) : on se rabat sur un thème libre de la liste.
+        const name = r.spare.length ? r.spare.shift() : (r.themes.find((t) => !t.by) || {}).name;
+        if (!name) return;
         theme = r.themes.find((t) => t.name === name);
-        if (!theme) { r.spare = r.spare.filter((c) => c !== name); theme = { name, icon: this.catIcon(name), by: null }; r.themes.push(theme); }
+        if (!theme) { theme = { name, icon: this.catIcon(name), by: null, mystery: true }; r.themes.push(theme); }
         r.mystery = true;
       } else {
         theme = r.themes[idx];
@@ -1380,7 +1429,7 @@
       if (ok) {
         r.run.streak++; r.run.correct++;
         r.run.best = Math.max(r.run.best, r.run.streak);
-        const res = this.scoreCorrect(p, 50, { diff: q.data.difficulte, noCombo: true, silentStreak: true });
+        const res = this.scoreCorrect(p, 50, { diff: q.data.difficulte });
         this.fx('correct', { pid, pts: res.pts });
         this.hooks.send(pid, { t: 'fx', fx: 'good' });
       } else {
@@ -1394,7 +1443,7 @@
       if (r.run.streak >= 4) {
         r.run.won = true;
         // Le jackpot : 200 pts fixes.
-        const bonus = this.scoreCorrect(p, QUATRE_JACKPOT, { noCombo: true, silentStreak: true });
+        const bonus = this.scoreCorrect(p, QUATRE_JACKPOT);
         r.run.bonus = bonus.pts;
         this.fx('points', { pid, pts: bonus.pts });
         this.fx('streak', { pid, jackpot: true });
@@ -1654,7 +1703,7 @@
       return {
         id: p.id, name: p.name, avatar: p.avatar, color: p.color, score: p.score, rank: this.rankOf(p), total: this.activePlayers().length,
         team: this.settings.teams ? p.team : null, teamName: this.settings.teams ? PQA.TEAM_NAMES[p.team] : null, teamColor: this.settings.teams ? PQA.PALETTE.team[p.team] : null,
-        streak: p.streak, bonus: this.streakBonus(p), cards: p.cards.slice(),
+        cards: p.cards.slice(),
         frozen: this.isFrozen(p) ? Math.ceil((p.frozenUntil - now()) / 1000) : 0,
       };
     }
@@ -1666,6 +1715,7 @@
       const p = this.players[pid];
       if (!p) return { screen: 'kicked' };
       const v = { me: this.meInfo(p), phase: this.phase, mode: this.settings.mode, round: this.round ? this.round.type : null, others: this.activePlayers().filter((x) => x.id !== pid).map((x) => ({ id: x.id, name: x.name, color: x.color })), canCard: this.canPlayCard('gel'), canTrap: this.canPlayCard('piege'), paused: this.paused };
+      if (v.canCard) { const gt = this.gelTarget(); v.gel = gt && gt.id !== pid ? { name: gt.name, color: gt.color } : null; }
       if (p.cards.includes('piege')) v.trapThemes = this.categories.map((c) => ({ name: c.name, icon: c.icon }));
       const q = this.q, r = this.round;
       if (q && q.data && q.data.id && (this.phase === 'question' || this.phase === 'reveal')) v.seenId = q.data.id;
@@ -1715,7 +1765,7 @@
         case 'trap': {
           const t = this.trap;
           v.screen = 'wait'; v.title = '🪤 Question piégée !';
-          v.msg = t.target === pid ? this.name(t.from) + ' te tend un piège en ' + t.cat + ' ! +' + TRAP.win + ' si tu trouves, −' + TRAP.loss + ' sinon.'
+          v.msg = t.target === pid ? this.name(t.from) + ' te tend un piège en ' + t.cat + ' ! Trouve et tu lui prends ' + TRAP.transfer + ' pts, sinon tu lui en donnes ' + TRAP.transfer + '.'
             : this.name(t.from) + ' piège ' + this.name(t.target) + ' en ' + t.cat + ' !';
           break;
         }
@@ -1769,6 +1819,8 @@
       v.question = d.question;
       v.type = d.type;
       withTimer();
+      if (this.frozenOnQ(pid, q)) { v.screen = 'wait'; v.title = '🧊 Gelé !'; v.msg = 'Tu ne peux plus répondre à cette question.'; return; }
+      if (q.kind === 'quatre' && q.answerers.includes(pid) && this.isFrozen(p)) { v.screen = 'wait'; v.title = '🧊 Gelé !'; v.msg = 'Bloqué 5 secondes… et le chrono tourne !'; return; }
       if (q.kind === 'all') {
         if (q.answers[pid]) { v.screen = 'locked'; v.msg = 'Réponse enregistrée !'; v.picked = q.answers[pid].value; v.unite = d.unite; v.choices = this.choicesFor(p, q); return; }
         if (d.type === 'fourchette') { v.screen = 'range'; v.unite = d.unite || ''; v.bornes = d.bornes; v.step = d.pas || null; return; }
@@ -1776,7 +1828,7 @@
       }
       if (q.kind === 'single' || q.kind === 'quatre') {
         if (!q.answerers.includes(pid)) { v.screen = 'wait'; v.title = q.trap ? '🪤 Question piégée' : d.type === 'libre' ? 'Question libre' : 'Question'; v.msg = 'À ' + this.name(q.answerers[0]) + ' de jouer !'; return; }
-        if (q.trap) v.banner = '🪤 Piège de ' + this.name(q.trap.from) + ' · ' + q.trap.cat + ' · +' + TRAP.win + ' / −' + TRAP.loss;
+        if (q.trap) v.banner = '🪤 Piège de ' + this.name(q.trap.from) + ' · ' + q.trap.cat + ' · ±' + TRAP.transfer + ' pts avec ' + this.name(q.trap.from);
         if (q.kind === 'quatre') { v.run = { streak: r.run.streak, best: r.run.best, last: r.run.last }; v.cat = r.cat; }
         if (q.answers[pid] && q.kind !== 'quatre') { v.screen = 'locked'; v.msg = q.pending ? 'Le présentateur valide...' : 'Réponse enregistrée !'; return; }
         if (this.irl) { v.screen = 'oral'; return; } // en IRL : tout se dit à voix haute
@@ -1856,7 +1908,7 @@
       if (r && this.phase === 'qpick') v.info = this.name(r.player) + ' choisit son thème';
       if (r && this.phase === 'faceoff') v.info = 'Duel des champions : ' + this.name(r.finalists[0]) + ' contre ' + this.name(r.finalists[1]);
       if (this.phase === 'trap' && this.trap) v.info = '🪤 Question piégée : ' + this.name(this.trap.from) + ' → ' + this.name(this.trap.target) + ' (' + this.trap.cat + ')';
-      if (q && q.trap) v.info = '🪤 Question piégée pour ' + this.name(q.answerers[0]) + ' : +' + TRAP.win + ' / −' + TRAP.loss;
+      if (q && q.trap) v.info = '🪤 Question piégée pour ' + this.name(q.answerers[0]) + ' : ±' + TRAP.transfer + ' pts avec ' + this.name(q.trap.from);
       if (q && q.kind === 'buzz' && q.buzz.proxy) v.info = '📞 ' + this.name(q.buzz.proxy) + ' répond pour ' + this.name(q.buzz.current);
       if (r && r.type === 'champions' && r.hits) v.info = (v.info ? v.info + ' · ' : '') + r.finalists.map((id) => this.name(id) + ' ' + r.hits[id]).join(' – ') + ' (premier à ' + r.target + ')';
       return v;
