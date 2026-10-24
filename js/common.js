@@ -105,8 +105,8 @@
     mystere: ['La roue tire un thème pour toi.', 'Choisis ton niveau de 1 (facile) à 10 (très dur).', 'Plus le niveau est haut, plus la question rapporte : de 75 à 300 pts… si tu trouves !'],
     eclair: ['Tout le monde répond en même temps sur son téléphone.', 'Une bonne réponse rapporte de 75 à 300 pts selon la difficulté, plus un bonus de rapidité (jusqu’à +50).', 'Une seule réponse possible : pas de deuxième chance !'],
     table: ['Chacun son tour, choisis une case sur le plateau, puis réponds seul à sa question.', 'Le thème et le niveau (facile, moyen, difficile, expert) sont cachés : plus la question est dure, plus elle rapporte (75 à 300 pts).', '💣 Piège : tu perds des points. ⭐ Bonus : +100 pts si tu trouves. 🦹 Vol : si tu trouves, les points sont pris à l’adversaire de ton choix.'],
-    quatre: ['Chacun son tour, en commençant par le 1er du classement, choisis un thème. Un thème pris n’est plus disponible.', 'Le « thème mystère » en tire un au hasard.', 'Tu as 40 secondes : chaque bonne réponse vaut 50 pts, une erreur remet ta série à zéro.', '💰 4 bonnes réponses d’affilée = JACKPOT de 200 pts !'],
-    fourchette: ['Une question dont la réponse est un nombre ou une date.', 'Donne UNE seule valeur sur ton téléphone, il faut viser pile.', 'Le plus proche marque 200 pts, le 2e 100, le 3e 50, le 4e 25.', '🎯 Pile = 500 pts ! Ex æquo = mêmes points.'],
+    quatre: ['Chacun son tour, en commençant par le 1er du classement, choisis un thème. Un thème pris n’est plus disponible.', 'Le « thème mystère » est un thème caché, absent de la liste : tu le découvres en jouant.', 'Tu as 40 secondes : chaque bonne réponse vaut 50 pts, une erreur remet ta série à zéro.', '💰 4 bonnes réponses d’affilée = JACKPOT de 200 pts !'],
+    fourchette: ['Une question dont la réponse est un nombre ou une date.', 'Donne UNE seule valeur sur ton téléphone, il faut viser pile.', 'Le plus proche marque 100 pts, le 2e 50, le 3e 25, le 4e 10.', '🎯 Pile = 200 pts ! Ex æquo = mêmes points.'],
     champions: ['Les 2 meilleurs du classement s’affrontent au buzzer.', 'Les indices tombent un à un : buzze dès que tu as trouvé.', 'Raté ? Tu reprends la main dès que ton adversaire a répondu ou qu’un nouvel indice tombe.', '📞 Appel à un ami : une fois dans le duel, après avoir buzzé, tu peux laisser un joueur éliminé répondre à ta place.', 'Le premier à 3 ★ gagne la partie, quel que soit son score !'],
     duel: ['Buzze le premier et réponds juste pour frapper ton adversaire.', 'Une erreur te fait perdre de la vie.', 'Le premier K.O. a perdu !'],
   };
@@ -114,8 +114,8 @@
 
   /* Cartes : chaque joueur commence la partie avec les deux, et chacune ne sert qu'une fois. */
   PQA.CARDS = {
-    gel: { name: 'Gel', icon: '🧊', desc: 'Gèle le buzzer et les réponses d’un adversaire pendant 5 secondes.' },
-    piege: { name: 'Question piégée', icon: '🪤', desc: 'Envoie à l’adversaire de ton choix une question de niveau moyen, sur le thème que tu choisis : +300 pts pour lui s’il trouve, −200 s’il se trompe.' },
+    gel: { name: 'Gel', icon: '🧊', desc: 'Gèle le joueur en train de répondre : il ne peut plus répondre à la question (au 4 à la suite : bloqué 5 secondes).' },
+    piege: { name: 'Question piégée', icon: '🪤', desc: 'Envoie à l’adversaire de ton choix une question de niveau moyen, sur le thème que tu choisis : s’il trouve, il te prend 100 pts ; s’il se trompe, il t’en donne 100.' },
   };
 
   PQA.shuffle = function (arr) {

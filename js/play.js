@@ -239,13 +239,14 @@
     const m = v.me;
     const team = m.teamName ? `<span class="team" style="background:${m.teamColor}">${esc(m.teamName)}</span>` : '';
     patch($('#me'), `<img class="pix av" src="${PQA.avatarURL(m.avatar, m.color, 'idle', 4)}" alt="">
-      <div class="me-info"><b style="color:${m.color}">${esc(m.name)}</b>${team}<small>${m.rank}${m.rank === 1 ? 'er' : 'e'} / ${m.total}${m.streak >= 3 ? ` · 🔥+${m.bonus}` : ''}</small></div>
+      <div class="me-info"><b style="color:${m.color}">${esc(m.name)}</b>${team}<small>${m.rank}${m.rank === 1 ? 'er' : 'e'} / ${m.total}</small></div>
       <div class="me-score">${fmt(m.score)}<small>pts</small></div>`);
   }
 
   function renderCards(v) {
     const cards = (v.me.cards || []).filter((c) => PQA.CARDS[c] && (c === 'piege' ? v.canTrap : v.canCard));
-    patch($('#cards'), cards.length ? cards.map((c, i) => `<button class="card-btn" data-card="${c}" data-i="${i}">${PQA.CARDS[c].icon}<span>${esc(PQA.CARDS[c].name)}</span></button>`).join('') : '');
+    // Le Gel ne s'active que quand un adversaire est en train de répondre seul.
+    patch($('#cards'), cards.length ? cards.map((c, i) => `<button class="card-btn" data-card="${c}" data-i="${i}" ${c === 'gel' && !v.gel ? 'disabled' : ''}>${PQA.CARDS[c].icon}<span>${esc(c === 'gel' && v.gel ? 'Geler ' + v.gel.name : PQA.CARDS[c].name)}</span></button>`).join('') : '');
   }
 
   const timerBar = () => '<div class="ptimer"><div id="ptimer-fill"></div></div>';
@@ -577,53 +578,29 @@
   $('#chat-close').onclick = () => chatOpen(false);
   $('#chat-form').onsubmit = (e) => { e.preventDefault(); const i = $('#chat-in'); chatSend(i.value); i.value = ''; };
 
-  /* ---- Fourchette : une seule valeur, il faut viser pile ---- */
-  function niceStep(raw) {
-    const p = Math.pow(10, Math.floor(Math.log10(raw)));
-    const n = raw / p;
-    return (n < 1.5 ? 1 : n < 3.5 ? 2 : n < 7.5 ? 5 : 10) * p;
-  }
+  /* ---- Fourchette : une seule valeur, il faut viser pile ----
+   * Une case vide, sans curseur ni valeur de départ : rien n'oriente la réponse. */
   function rangeScreen(v) {
-    const [lo, hi] = v.bornes || [0, 1000];
-    const span = hi - lo;
-    const log = lo > 0 && hi / lo >= 1000; // échelle logarithmique pour les très grands écarts
-    const step = v.step || (span <= 3000 && Number.isInteger(lo) && Number.isInteger(hi) ? 1 : niceStep(span / 1000));
-    const SL = 1000;
-    const toVal = (s) => {
-      let x = log ? lo * Math.pow(hi / lo, s / SL) : lo + (span * s) / SL;
-      x = Math.round(x / step) * step;
-      if (log) { const mag = Math.pow(10, Math.floor(Math.log10(Math.max(1, x))) - 1); x = Math.round(x / mag) * mag; }
-      return Math.max(lo, Math.min(hi, Number(x.toFixed(6))));
-    };
-    const toSl = (x) => (log ? (Math.log(x / lo) / Math.log(hi / lo)) * SL : ((x - lo) / span) * SL);
+    // Le clavier numérique des téléphones n'a pas toujours de signe moins : bouton ± quand la réponse peut être négative.
+    const neg = v.bornes && v.bornes[0] < 0;
     return {
       key: 'range' + v.qid,
       html: `${timerBar()}<div class="pq"><div class="pq-text">${esc(v.question)}</div>
         <div class="prange">
-          <div class="pr-big"><input id="n-val" inputmode="decimal"><span>${v.unite && v.unite !== 'année' ? esc(v.unite) : ''}</span></div>
-          <div class="pr-row"><input type="range" id="r-val" min="0" max="${SL}" value="${SL / 2}"></div>
-          <div class="pr-fine"><button data-d="-10">−−</button><button data-d="-1">−</button><button data-d="1">+</button><button data-d="10">++</button></div>
+          <div class="pr-big"><input id="n-val" inputmode="decimal" autocomplete="off" placeholder="?">${neg ? '<button class="small-btn" id="btn-sign" type="button">±</button>' : ''}<span>${v.unite && v.unite !== 'année' ? esc(v.unite) : ''}</span></div>
           <div class="hint">Vise pile ! Plus tu es proche de la réponse, plus tu marques.${v.unite ? ' Unité : <b>' + esc(v.unite) + '</b>' : ''}</div>
-          <button class="big-btn green" id="btn-range">VALIDER</button>
+          <button class="big-btn green" id="btn-range" disabled>VALIDER</button>
         </div></div>`,
       after() {
-        const rv = $('#r-val'), nv = $('#n-val');
-        let val = toVal(Number(rv.value));
-        const show = (from) => {
-          if (from !== 'num') nv.value = v.unite === 'année' ? String(val) : fmt(val).replace(/[\u202f\u00a0]/g, ' ');
-          rv.value = toSl(val);
-        };
-        rv.oninput = () => { val = toVal(Number(rv.value)); show(); };
-        const parse = (s) => Number(String(s).replace(/\s/g, '').replace(',', '.'));
-        nv.oninput = () => { const x = parse(nv.value); if (isFinite(x) && nv.value.trim() !== '') { val = x; show('num'); } };
-        nv.onchange = () => { const x = parse(nv.value); if (isFinite(x)) val = x; show(); };
-        $$('.pr-fine button').forEach((b) => (b.onclick = () => {
-          const st = log ? Math.max(step, Math.pow(10, Math.floor(Math.log10(Math.max(1, Math.abs(val)))) - 1)) : step;
-          val = Number((val + st * Number(b.dataset.d)).toFixed(6));
-          show(); PQA.vibrate(8);
-        }));
-        $('#btn-range').onclick = () => { const x = parse(nv.value); if (isFinite(x)) val = x; net.send({ t: 'answer', value: val }); PQA.vibrate(40); };
-        show();
+        const nv = $('#n-val'), btn = $('#btn-range');
+        const parse = (s) => (String(s).trim() === '' ? NaN : Number(String(s).replace(/\s/g, '').replace(',', '.')));
+        const ok = () => isFinite(parse(nv.value));
+        nv.oninput = () => { btn.disabled = !ok(); };
+        const submit = () => { if (!ok()) return; net.send({ t: 'answer', value: parse(nv.value) }); PQA.vibrate(40); };
+        nv.onkeydown = (e) => { if (e.key === 'Enter') submit(); };
+        if (neg) $('#btn-sign').onclick = () => { const t = nv.value.trim(); nv.value = t.startsWith('-') ? t.slice(1) : '-' + t; nv.oninput(); nv.focus(); };
+        btn.onclick = submit;
+        try { nv.focus(); } catch (e) {}
       },
     };
   }
@@ -643,7 +620,7 @@
       return;
     }
     const c = e.target.closest('.card-btn');
-    if (c) openCard(c.dataset.card);
+    if (c && !c.disabled) openCard(c.dataset.card);
   });
 
   function openCard(card) {
@@ -651,6 +628,8 @@
     const v = state.view;
     if (!v || !def) return;
     const send = (msg) => { net.send({ t: 'card', card, ...msg }); PQA.vibrate([30, 30, 60]); closeModal(); };
+    // Gel : pas de cible à choisir, il frappe le joueur en train de répondre. Un seul geste pour ne pas rater le moment.
+    if (card === 'gel') { if (v.gel) send({}); return; }
     const targets = `<div class="plist">${v.others.map((o) => `<button data-target="${o.id}" style="--oc:${o.color}">${esc(o.name)}</button>`).join('')}</div>`;
     modal(`<div class="m-title">${def.icon} ${esc(def.name)}</div><div class="m-desc">${esc(def.desc)}</div><div class="m-desc">Sur qui ?</div>${targets}<button class="small-btn" data-close>Garder pour plus tard</button>`, (el) => {
       el.querySelectorAll('[data-target]').forEach((b) => (b.onclick = () => {
