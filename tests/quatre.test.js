@@ -71,3 +71,24 @@ test('rules screen: 20 s the first time on this device, 5 s once already seen', 
   g.start();
   assert.equal(g.timer.total, 5000);
 });
+
+test('4 à la suite : tout le monde joue, même à 6 joueurs', () => {
+  const { g } = realGame(12);
+  for (const id of ['c', 'd', 'e', 'f']) { g.players[id] = { ...g.players.a, id, name: id, stats: { ...g.players.a.stats } }; g.order.push(id); }
+  g.start(); g.beginRound();
+  assert.equal(g.round.total, 6);
+  assert.equal(g.round.queue.length + 1, 6);
+});
+
+test('4 à la suite : la réponse choisie est gardée pour être affichée sur la TV', () => {
+  const { g } = realGame(8);
+  g.start(); g.beginRound();
+  g.quatreTheme(g.round.player, 0);
+  const q = g.q, wrong = (q.correctIdx + 1) % q.choices.length;
+  g.answer(g.round.player, wrong);
+  const last = g.round.run.last;
+  assert.equal(last.picked, wrong);
+  assert.equal(last.pickedText, q.choices[wrong]);
+  assert.equal(last.qid, q.id);
+  assert.equal(last.ok, false);
+});
